@@ -1,0 +1,71 @@
+{% if section.settings.show_block %}
+<div class="Parkinson-banner-container">
+{% if section.settings.image %}
+  <img class="small-hide" src="{{ section.settings.image | img_url:'master' }}"/>
+  <img class="medium--up-hide" src="{{ section.settings.image_mb | img_url:'master' }}"/>
+{% endif %}
+  <div class="Parkinson-bannertext">
+  {% if section.settings.title != blank %}
+  <div class="Parkinson-banner-title">{{ section.settings.title }}</div>
+  {% endif %}
+      {% if section.settings.title02 != blank %}
+  <div class="Parkinson-banner-title02">{{ section.settings.title02 }}</div>
+  {% endif %}
+    
+  {% if section.settings.content != blank %}
+  <div class="Parkinson-banner-content">{{ section.settings.content }}</div>
+  {% endif %}
+  {% if section.settings.btntext != blank %}
+  <a class="Parkinson-banner-btn" href="{{ section.settings.btnurl }}">{{ section.settings.btntext }}</a>
+  {% endif %} 
+  </div>
+</div>
+{% endif %}
+{% schema %}
+  {
+    "name": "Parkinson Banner",
+    "settings": [
+          {
+            "type": "checkbox",
+            "id": "show_block",
+            "label": "show this block?",
+            "default": true
+          },{
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image(Recommended size：1920*500px)"
+          },{
+            "type": "image_picker",
+            "id": "image_mb",
+            "label": "Image Mobile(Recommended size：700*536px)"
+          },{
+            "type": "text",
+            "id": "title",
+            "label": "title"
+          },{
+            "type": "text",
+            "id": "title02",
+            "label": "title02"
+          },{
+            "type": "html",
+            "id": "content",
+            "label": "content"
+          },{
+            "type": "text",
+            "id": "btntext",
+            "label": "btntext"
+          },{
+            "type": "url",
+            "id": "btnurl",
+            "label": "btnurl"
+          }
+    ],
+
+    "presets": [
+      {
+        "name": "Parkinson Banner",
+        "category": "Ho-Advance"
+      }
+    ]
+  }
+{% endschema %}

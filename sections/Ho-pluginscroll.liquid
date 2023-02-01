@@ -1,0 +1,1254 @@
+<script src="{{ 'jquery.min.js' | asset_url }}" ></script>   
+<script src="{{ 'TweenMax.min.js' | asset_url }}" defer ></script>
+  <script src="{{ 'ScrollMagic.js' | asset_url }}" defer></script>
+  <script src="{{ 'animation.gsap.js' | asset_url }}" defer ></script> 
+<script src="{{ 'vue.min.js' | asset_url }}"></script> 
+<div id="v-box_scroll">
+<div class="scroll_animation_ho_outbox" v-if="pcSeenslidemo()">
+
+  <div id="scroll_anima_container"> 
+    <div id="scroll_anima_box" >
+   <img src="https://cdn.shopifycdn.net/s/files/1/0077/3953/9515/files/background.png?v=1635402118" alt="">
+      
+   <div id="scroll_anima_frame00"> 
+     <div class="swiper-container frame00swiper">
+       <div class="swiper-wrapper">
+    {% for block in section.blocks %}
+      <div class="swiper-slide">
+        {% if block.settings.url %}<a target="_blank" href="{{ block.settings.url }}">{% endif %}
+      {% if block.settings.image %}<img class="img_heightfix" alt src="{{ block.settings.image | img_url:'master' }}"/>{% endif %}
+        {% if block.settings.url %}</a>{% endif %}
+    {% if block.settings.show_overbtn %}<a target="_blank"  href="{{ section.settings.video10_btn_url }}" class="sc_00buybtn"><img src="{{ section.settings.video10_bgbtn | img_url:'master' }}"/><span>Shop</span></a>{% endif %}
+     </div>
+     {% endfor %}
+       </div>
+       {% if section.blocks.size > 1 %}
+       <div class="swiper-button-prev"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
+        <div class="swiper-button-next"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+       {% endif %}
+     </div>
+   
+  </div>   
+  <div id="scroll_anima_frame01"> 
+    
+    <video width="100%" class="scroll_an_video01" muted preload="metadata">
+    <source src="{{ section.settings.video02_pc }}"/>
+    </video>
+    <div class="scroll_an_text01">Sparkle and shine<br>Give your floor a brand new look</div>
+  </div>
+  <div id="scroll_anima_frame02">
+    <video width="100%" class="scroll_an_video02" muted preload="metadata">
+    <source src="{{ section.settings.video03_pc }}"/>
+    </video>
+    <div class="frame02-text1 frame02-text">
+      <div class="frame02-text-title">10N</div>
+      <div class="frame02-text-subtitle">Strong downward force<br>for a thorough,deep clean.</div>
+    </div>
+    <div class="frame02-text2 frame02-text">
+      <div class="frame02-text-title">45db</div>
+      <div class="frame02-text-subtitle">As quiet as sitting in a library.</div>
+    </div>
+    <div class="frame02-text frame02-text3">
+      <div class="frame02-text-title">180RPM</div>
+      <div class="frame02-text-subtitle">High-speed rotation <br> for powerful stain removal.</div>
+    </div>
+    <div class="frame02-text frame02-text4">
+      <div class="frame02-text-title">Rounded triangular mops</div>
+      <div class="frame02-text-subtitle">Staggered rotation <br>leaves no spot unclean.</div>
+    </div>
+    
+  </div> 
+      
+    <div id="scroll_anima_frame02_co">
+        <video width="100%" class="scroll_an_video02_co" muted preload="metadata">
+    <source src="{{ section.settings.video04_pc }}"/>
+    </video>
+          <div class="frame03-text1 frame03-text"  style="text-align:center;padding-left:0">
+      <div class="frame02-text-title">Two 1.3-gallon tanks</div>
+      <div class="frame02-text-subtitle" style="padding-left:0">Cleans up to 3000 sq ft of flooring.</div>
+    </div>
+          <div class="frame03-text2 frame03-text"  style="text-align:center;padding-left:0">
+      <div class="frame02-text-title">Self-cleaning</div>
+      <div class="frame02-text-subtitle" style="padding-left:0">Automatically identifies <br>dirty mops,then cleans itself.</div>
+    </div>
+      </div>
+      
+     <div id="scroll_anima_frame03">
+    <video width="100%" class="scroll_an_video03" muted preload="metadata">
+    <source src="{{ section.settings.video05_pc }}"/>
+    </video>
+       
+       <div class="frame03_co-text1 frame03_co-text"  style="text-align:center;padding-left:0">
+      <div class="frame02-text-title">Vacuums from front<br>to back of map</div>
+      <div class="frame02-text-subtitle" style="padding-left:0">Efficient and effective.</div>
+    </div>
+       
+       <div class="frame03_co-text2 frame03_co-text"  style="text-align:center">
+      <div class="frame02-text-title">Mops from back <br>to front of map</div>
+      <div class="frame02-text-subtitle" style="padding-left:0">Avoids re-contamination.</div>
+    </div>
+       
+  </div>   
+    <div id="scroll_anima_frame04">
+      <img alt src="{{ section.settings.image06_pc | img_url:'20x' }}" data-src="{{section.settings.image06_pc | img_url: 'master'}}" class="lazyload" />
+             <div class="frame04-text1 frame04-text"  style="text-align:center">
+      <div class="frame02-text-title">1800pa of vacuuming <br>suction and 65db</div>
+      <div class="frame02-text-subtitle" style="padding-left:0">Just powerful enough for family.</div>
+    </div>
+             <div class="frame04-text2 frame04-text"  style="text-align:center">
+      <div class="frame02-text-title">Three-legged <br>side brushes</div>
+      <div class="frame02-text-subtitle" style="padding-left:0">Prevents dust from spreading <br>and reduces jams caused by tangled hair.</div>
+    </div>
+      
+   </div>  
+      
+   <div id="scroll_anima_frame06">
+    <video width="100%" class="scroll_an_video06" muted preload="metadata">
+    <source src="{{ section.settings.video07_pc }}"/>
+    </video>
+     <div class="frame06-text">
+      <div class="frame02-text-title">High-efficiency Filter</div>
+      <div class="frame02-text-subtitle">Captures small particles and <br>invisible allergens efficiently.</div>
+    </div>
+  </div>   
+       <div id="scroll_anima_frame06_co">
+    <video width="100%" class="scroll_an_video06_co" muted preload="metadata">
+    <source src="{{ section.settings.video08_pc }}"/>
+    </video>
+              <div class="frame06_co-text">
+      <div class="frame02-text-title">Intelligent recharging</div>
+      <div class="frame02-text-subtitle">Narwal T10 recharges itself automatically when power falls <br>below 20%.</div>
+    </div>
+  </div>    
+      
+      
+  <div id="scroll_anima_frame07">
+    
+     <img class="frame07-img01 lazyload" alt src="{{ section.settings.image091_pc | img_url:'20x' }}" data-src="{{section.settings.image091_pc | img_url: 'master'}}" />
+    <img class="frame07-img02 lazyload" alt src="{{ section.settings.image092_pc | img_url:'20x' }}" data-src="{{section.settings.image092_pc | img_url: 'master'}}" />
+ 
+    <div class="frame07_1-text">0.1 kWh battery supports 3hrs of battery life <br>2.5hr quick charge <br>5200mAh battery capacity</div>
+     <div class="frame07_2-text">
+      <div class="frame02-text-title">Automatic air-drying</div>
+      <div class="frame02-text-subtitle">Keeps the mop dry and prevents bacterial growth.</div>
+    </div>
+  </div>  
+     
+  <div id="scroll_anima_frame10">
+
+    <a href="{{  section.settings.image10url_pc }}"><img class="frame10-img01 lazyload" alt src="{{ section.settings.image10_pc | img_url:'10x' }}" data-src="{{section.settings.image10_pc | img_url: 'master'}}"/>
+  <video width="100%" class="scroll_an_video10" muted preload="metadata">
+    <source src="{{ section.settings.video10_pc }}"/>
+  </video>
+      </a>
+    <a href="{{ section.settings.video10_btn_url }}" class="sc_10buybtn"><img src="{{ section.settings.video10_bgbtn | img_url:'master' }}"/><span>Shop</span></a>
+  </div>   
+      
+      
+      
+    </div>
+
+    
+  </div>
+  
+</div> 
+  
+  
+<!--  Mobile Design  -->
+  <div class="scroll_animation_ho_outbox" v-if="mobileSeenslidemo()">
+ <script src="{{ 'lazysizes.min.js' | asset_url }}"></script>
+  <div id="scroll_anima_container_mb">
+    
+    
+     <div id="mb_scroll_anima_box" >
+   <img src="https://cdn.shopifycdn.net/s/files/1/0077/3953/9515/files/mbbg.jpg?v=1636081415" alt="">
+      <div id="mb_scroll_anima_frame00">
+         <div class="swiper-container frame00swiper">
+       <div class="swiper-wrapper">
+    {% for block in section.blocks %}
+      <div class="swiper-slide">
+        {% if block.settings.url %}<a href="{{ block.settings.url }}">{% endif %}
+      {% if block.settings.image_mb %}<img alt src="{{ block.settings.image_mb | img_url:'master' }}"/>{% endif %}
+        {% if block.settings.url %}</a>{% endif %}
+   {% if block.settings.show_overbtn %} <a href="{{ section.settings.video10_btn_url }}" class="sc_10buybtnmb"><img src="{{ section.settings.video10_bgbtn | img_url:'master' }}"/><span>Shop</span></a>{% endif %}
+     </div>
+     {% endfor %}
+       </div>
+       {% if section.blocks.size > 1 %}
+       <div class="swiper-button-prev"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
+        <div class="swiper-button-next"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+       {% endif %}
+     </div>
+        
+  </div>  
+  <div id="mb_scroll_anima_frame01">
+     <img src="{{ section.settings.image02_mb | img_url:'20x' }}" data-src="{{section.settings.image02_mb | img_url: 'master'}}" alt class="mb_scroll_image01 lazyload"/>
+  </div>
+  <div id="mb_scroll_anima_frame02">
+<img src="{{ section.settings.image03_mb | img_url:'20x' }}" alt data-src="{{section.settings.image03_mb | img_url: 'master'}}" class="mb_scroll_image02 lazyload"/>
+        <div class="frame02-text1 frame02-text">
+      <div class="frame02-text-title">10N</div>
+      <div class="frame02-text-subtitle">Force plus application<br>for a thorough deep clean.</div>
+    </div>
+    <div class="frame02-text2 frame02-text">
+      <div class="frame02-text-title">45db</div>
+      <div class="frame02-text-subtitle">As quiet as sitting in a library.</div>
+    </div>
+    <div class="frame02-text frame02-text3">
+      <div class="frame02-text-title">180RPM</div>
+      <div class="frame02-text-subtitle">High-speed rotation <br>and powerful stain removal.</div>
+    </div>
+    <div class="frame02-text frame02-text4">
+      <div class="frame02-text-title">Round triangular mops</div>
+      <div class="frame02-text-subtitle">Staggered rotation <br>leaves no dead spots.</div>
+    </div>
+  </div>   
+       
+  <div id="mb_scroll_anima_frame02_co">
+  <img  class="mb_frame10-img02_co lazyload"  src="{{ section.settings.image04_mb | img_url:'20x' }}" data-src="{{section.settings.image04_mb | img_url: 'master'}}" alt/>  
+              <div class="frame03-text1 frame03-text"  style="text-align:center;padding-left:0">
+      <div class="frame02-text-title">Two 1.3-gallon tanks</div>
+      <div class="frame02-text-subtitle" style="padding-left:0">Cleans up to 3000 ft of floor area.</div>
+    </div>
+          <div class="frame03-text2 frame03-text"  style="text-align:center;padding-left:0">
+      <div class="frame02-text-title">Self-cleaning</div>
+      <div class="frame02-text-subtitle" style="padding-left:0">Automatically identifies <br>dirty mops then cleans itself.</div>
+    </div>
+  </div>      
+    
+       
+     <div id="mb_scroll_anima_frame03">
+<img src="{{ section.settings.image05_mbbegin | img_url:'20x' }}" alt data-src="{{section.settings.image05_mbbegin | img_url: 'master'}}" class="mb_scroll_image03 lazyload"/>
+              <div class="frame03_co-text1 frame03_co-text"  style="text-align:center;padding-left:0">
+      <div class="frame02-text-title">Mops from <br>back of map to front</div>
+      <div class="frame02-text-subtitle" style="padding-left:0">Avoids re-contamination.</div>
+    </div>
+       
+       <div class="frame03_co-text2 frame03_co-text"  style="text-align:center">
+      <div class="frame02-text-title">Vacuums from <br>front of map to back</div>
+      <div class="frame02-text-subtitle" style="padding-left:0">Efficient and effective.</div>
+    </div>
+  </div>   
+    <div id="mb_scroll_anima_frame04">
+      <img alt src="{{ section.settings.image06_mb | img_url:'20x' }}" data-src="{{section.settings.image06_mb | img_url: 'master'}}" class="lazyload"/>
+      
+      <img class="mb_frame04_img02 lazyload" alt src="{{ section.settings.image06_2_mb | img_url:'20x' }}" data-src="{{section.settings.image06_2_mb | img_url: 'master'}}" />
+<!--              <div class="mb_frame04-textwrapper">
+               <div class="mb_frame04-title">Three-legged side brushes</div>
+               
+              <div class="mb_frame04-subtitle">Three-legged side brushes can prevent dust from spreading and reduce jams caused by tangled hair.</div>
+             </div>      -->
+   </div>  
+      
+   <div id="mb_scroll_anima_frame06">
+    <img src="{{ section.settings.image07_mb | img_url:'20x' }}" alt data-src="{{section.settings.image07_mb | img_url: 'master'}}" class="mb_scroll_image06 lazyload"/> 
+          <div class="frame06-text">
+      <div class="frame02-text-title">High-efficiency filter</div>
+      <div class="frame02-text-subtitle">The fiilter captures small particles and invisible allergens efficiently.</div>
+    </div>
+  </div>   
+      <div id="mb_scroll_anima_frame06_co">
+    <img src="{{ section.settings.image08_mb | img_url:'20x' }}" alt data-src="{{section.settings.image08_mb | img_url: 'master'}}" class="mb_scroll_image06_co lazyload"/> 
+                      <div class="frame06_co-text">
+      <div class="frame02-text-title">Intelligent recharging</div>
+      <div class="frame02-text-subtitle">Narwal T10 recharges itself automatically <br>when power falls below 20%.</div>
+    </div>
+  </div>       
+       
+  <div id="mb_scroll_anima_frame07">
+     <img class="mb_frame07-img01 lazyload" alt src="{{ section.settings.image091_mb | img_url:'20x' }}" data-src="{{section.settings.image091_mb | img_url: 'master'}}"/>
+    <img class="mb_frame07-img02 lazyload" alt src="{{ section.settings.image092_mb | img_url:'20x' }}" data-src="{{section.settings.image092_mb | img_url: 'master'}}"/>
+<!--     <img class="mb_frame07-img03" alt src="https://cdn.shopifycdn.net/s/files/1/0077/3953/9515/files/0928_0090-2.jpg?v=1636080045"/> -->
+  </div>  
+     
+  <div id="mb_scroll_anima_frame10">
+    <a href="{{  section.settings.image10url_pc }}"><img  class="mb_frame10-img03 lazyload"  src="{{ section.settings.image10_mb | img_url:'20x' }}" data-src="{{section.settings.image10_mb | img_url: 'master'}}" alt/></a> 
+    <a href="{{ section.settings.video10_btn_url }}" class="sc_lastbuybtnmb"><img src="{{ section.settings.video10_bgbtn | img_url:'master' }}"/><span>Shop</span></a>
+  </div>   
+      
+      
+    </div> 
+    
+    
+
+    
+  </div>
+  
+</div> 
+  <!--   End Mobile Design --> 
+  
+  
+</div>  
+
+<script>  
+      $(function(){
+    
+      if($(window).width() > 768){
+  var frame00swiper = new Swiper ('.frame00swiper', {
+    {% if section.blocks.size > 1 %}
+    loop: true, 
+    autoplay:true,
+    {% endif %}
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  })  
+  }else{
+  var frame00swiper = new Swiper ('.frame00swiper', {
+     {% if section.blocks.size > 1 %}
+    loop: true, 
+    autoplay:true,
+    {% endif %}
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  }) 
+  }
+      });
+  </script>
+
+<script> 
+    $(function(){
+    if($(window).width() > 768){
+      if( $(".scroll_an_video01")){
+      $(".scroll_an_video01").trigger('play');
+      $(".scroll_an_video01")[0].currentTime = 0;
+       $(".scroll_an_video01").trigger('pause');
+      }
+      
+      if( $(".scroll_an_video02")){
+       $(".scroll_an_video02").trigger('play');
+      $(".scroll_an_video02")[0].currentTime = 0;
+       $(".scroll_an_video02").trigger('pause');
+      }
+                                            
+        if( $(".scroll_an_video02_co")){
+      $(".scroll_an_video02_co").trigger('play');
+      $(".scroll_an_video02_co")[0].currentTime = 0;
+       $(".scroll_an_video02_co").trigger('pause');
+      }
+      
+    if( $(".scroll_an_video03")){
+        $(".scroll_an_video03").trigger('play');
+      $(".scroll_an_video03")[0].currentTime = 0;
+       $(".scroll_an_video03").trigger('pause');
+      }
+                                            
+      if( $(".scroll_an_video06")){
+       $(".scroll_an_video06").trigger('play');
+      $(".scroll_an_video06")[0].currentTime = 0;
+       $(".scroll_an_video06").trigger('pause');
+      }                                      
+      
+      if( $(".scroll_an_video06_co")){
+       $(".scroll_an_video06_co").trigger('play');
+      $(".scroll_an_video06_co")[0].currentTime = 0;
+       $(".scroll_an_video06_co").trigger('pause');
+      }
+      
+      if( $(".scroll_an_video10")){
+        $(".scroll_an_video10").trigger('play');
+      $(".scroll_an_video10")[0].currentTime = 0;
+       $(".scroll_an_video10").trigger('pause');
+      }
+  
+    }
+   });
+</script> 
+
+<!-- <script> 
+    $(function(){
+    if($(window).width() > 768){
+      if( $(".scroll_an_video01")){
+        $(".scroll_an_video01 source").prop("src",{{ section.settings.video02_pc }})
+      }
+      
+      if( $(".scroll_an_video01")){
+        $(".scroll_an_video02 source").prop("src",{{ section.settings.video03_pc }})
+      }
+                                            
+        if( $(".scroll_an_video01")){
+        $(".scroll_an_video02_co source").prop("src",{{ section.settings.video04_pc }})
+      }
+      
+    if( $(".scroll_an_video01")){
+        $(".scroll_an_video03 source").prop("src",{{ section.settings.video05_pc }})
+      }
+                                            
+      if( $(".scroll_an_video01")){
+        $(".scroll_an_video06 source").prop("src",{{ section.settings.video07_pc }})
+      }                                      
+      
+      if( $(".scroll_an_video01")){
+        $(".scroll_an_video06_co source").prop("src",{{ section.settings.video08_pc }})
+      }
+      
+      if( $(".scroll_an_video01")){
+        $(".scroll_an_video10 source").prop("src",{{ section.settings.video10_pc }})
+      }
+  
+    }
+   });
+</script>  -->
+
+
+
+
+<script> 
+    $(function(){
+    
+ 
+      if($(window).width() > 768){
+        
+        
+        var controller = new ScrollMagic.Controller();
+   var tweenmax_01 = new TimelineMax()
+        .add([
+          TweenMax.to("#shopify-section-header", 1, { className: "+=header_bo"}),
+           
+      
+       ])
+        .add([
+         TweenMax.to("#scroll_anima_frame00", 2, {className: "+=to_tophide"}),  
+      TweenMax.to("#scroll_anima_frame01", 2, {className: "+=to_centershow",
+									onStart: function () {
+                                      console.log("onStart");
+                                      if($(".scroll_an_video01")){
+//                                      $(".scroll_an_video01")[0].play();
+                                          setTimeout(function(){
+                                          $(".scroll_an_video01").trigger('play');
+                                          }, 300 );
+                                        
+                                         setTimeout(function(){
+                                          $(".scroll_an_text01").addClass('cus_opacity1');
+                                          }, 1500 );
+                                        
+                                      }
+                                    },
+									onReverseComplete: function () {
+                                       console.log("onReverseComplete");
+                                    $(".scroll_an_video01")[0].currentTime = 0;
+                                       $(".scroll_an_text01").removeClass('cus_opacity1');
+                                    
+                                    }}),
+      
+      
+       ]);
+          
+          
+          
+         var tweenmax_02 = new TimelineMax()
+        .add([
+       
+          TweenMax.to("#scroll_anima_frame01", 2, {className: "+=to_tophide"}),  
+          TweenMax.to("#scroll_anima_frame02", 2, {className: "+=to_centershow",
+                                                    onStart: function () {
+                                             
+                                      if($(".scroll_an_video02")){
+                                      setTimeout(function(){
+                                      $(".scroll_an_video02").trigger('play');
+                                      }, 500 );
+                                      }
+
+
+                                      },
+									onReverseComplete: function () {
+                                    $(".scroll_an_video02")[0].currentTime = 0;
+                                    
+                                    }}),  
+       ]).add([
+       
+          TweenMax.to(".frame02-text1", 2, {className: "+=cus_opacity1"}),  
+
+       ])
+         .add([
+       
+          TweenMax.to(".frame02-text2", 2, {className: "+=cus_opacity1"}),  
+
+       ])
+         .add([
+       
+          TweenMax.to(".frame02-text3", 2, {className: "+=cus_opacity1"}),  
+
+       ])
+         .add([
+       
+          TweenMax.to(".frame02-text4", 2, {className: "+=cus_opacity1"}),  
+
+       ]);      
+         
+        
+         var tweenmax_03 = new TimelineMax()
+        .add([
+       
+          TweenMax.to("#scroll_anima_frame02", 3, {className: "+=to_tophide"}),  
+          TweenMax.to("#scroll_anima_frame02_co", 3, {className: "+=to_centershow",
+                                         onStart: function () {
+                                             
+                                      if($(".scroll_an_video02_co")){
+                                      setTimeout(function(){
+                                      $(".scroll_an_video02_co").trigger('play');
+                                      }, 500 );
+                                      }
+
+
+                                      },
+									onReverseComplete: function () {
+                                    $(".scroll_an_video02_co")[0].currentTime = 0;
+                                    
+                                    }}),  
+       ]) 
+          .add([
+       
+          TweenMax.to(".frame03-text1", 2, {className: "+=cus_opacity1"}),  
+        TweenMax.to(".frame03-text2", 2, {className: "+=cus_opacity1"}),  
+       ]);  
+          
+          
+          
+      var tweenmax_04 = new TimelineMax()
+        .add([
+          TweenMax.to("#scroll_anima_frame02_co", 2, {className: "+=to_tophide"}),  
+          TweenMax.to("#scroll_anima_frame03", 2, {className: "+=to_centershow"}),  
+       ])
+
+      .add([
+          TweenMax.to("#scroll_anima_frame03", 2, {
+                                                    onStart: function () {
+                                             
+                                                   if($(".scroll_an_video03")){
+                                                 
+                                                        $(".scroll_an_video03").trigger('play');
+                                                     
+                                                      setTimeout(function(){
+                                                        $(".frame03_co-text2").addClass('cus_opacity1');
+                                                          }, 1300 );
+                                                      
+                                                     }
+
+
+                                                    },
+									onReverseComplete: function () {
+                                    $(".scroll_an_video03")[0].currentTime = 0;
+                                     $(".frame03_co-text2").removeClass('cus_opacity1');
+                                    }}), 
+       ]);  
+          
+          
+        var tweenmax_05 = new TimelineMax()
+        .add([
+          TweenMax.to("#scroll_anima_frame03", 2, {className: "+=to_tophide"}),  
+          TweenMax.to("#scroll_anima_frame04", 2, {className: "+=to_centershow"}),
+          
+          
+       ])
+          .add([
+       
+          TweenMax.to(".frame04-text1", 2, {className: "+=cus_opacity1"}),  
+        TweenMax.to(".frame04-text2", 2, {className: "+=cus_opacity1"}),  
+       ]);  
+      
+      
+//         var tweenmax_06 = new TimelineMax()
+//         .add([
+//           TweenMax.to(".frame04-textwrapper", 2, {className: "+=ifram_movemid"}),  
+          
+//        ]); 
+          
+       var tweenmax_06 = new TimelineMax()
+        .add([
+          TweenMax.to("#scroll_anima_frame04", 2, {className: "+=to_tophide"}),  
+          TweenMax.to("#scroll_anima_frame06", 2, {className: "+=to_centershow",
+                                                    onStart: function () {
+                                             
+                                                   if($(".scroll_an_video06")){
+                                                    setTimeout(function(){
+                                                       $(".scroll_an_video06").trigger('play');
+                                                     }, 500 );
+                                                     
+                                                    }
+
+
+                                                    },
+									onReverseComplete: function () {
+                                    $(".scroll_an_video06")[0].currentTime = 0;
+                                    
+                                    }}),  
+       ])
+          .add([
+       
+          TweenMax.to(".frame06-text", 2, {className: "+=cus_opacity1"}),  
+       ]);   
+          
+                var tweenmax_07 = new TimelineMax()
+        .add([
+          TweenMax.to("#scroll_anima_frame06", 2, {className: "+=to_tophide"}),  
+          TweenMax.to("#scroll_anima_frame06_co", 2, {className: "+=to_centershow",
+                                                    onStart: function () {
+                                             
+                                                   if($(".scroll_an_video06_co")){
+                                                    setTimeout(function(){
+                                                       $(".scroll_an_video06_co").trigger('play');
+                                                     }, 500 );
+                                                     
+                                                    }
+
+
+                                                    },
+									onReverseComplete: function () {
+                                    $(".scroll_an_video06_co")[0].currentTime = 0;
+                                    
+                                    }}),  
+       ])
+          .add([
+       
+          TweenMax.to(".frame06_co-text", 2, {className: "+=cus_opacity1"}),  
+       ]);   
+        
+          
+       var tweenmax_08 = new TimelineMax()
+        .add([
+          TweenMax.to("#scroll_anima_frame06_co", 2, {className: "+=to_tophide"}),  
+          TweenMax.to("#scroll_anima_frame07", 2, {className: "+=to_centershow"}),  
+       ]);            
+          
+         var tweenmax_09 = new TimelineMax()
+        .add([
+          TweenMax.to(".frame07-img01", 2, {className: "+=cus_opacity0"}),
+          TweenMax.to(".frame07_1-text", 2, {className: "+=cus_opacity0"}), 
+          TweenMax.to(".frame07-img02", 2, {className: "+=cus_opacity1"}),  
+       ])
+         .add([
+          TweenMax.to(".frame07_2-text", 2, {className: "+=cus_opacity1"}),  
+       ]) 
+          ;   
+          
+      
+        var tweenmax_10 = new TimelineMax()
+        .add([
+          TweenMax.to("#scroll_anima_frame07", 2, {className: "+=to_tophide"}),  
+          TweenMax.to("#scroll_anima_frame10", 2, {className: "+=to_centershow"}),  
+       ])
+          .add([
+        TweenMax.to(".sc_10buybtn", 2, {className: "+=cus_opacity1"}), 
+          TweenMax.to(".scroll_an_video10", 2, {className: "+=cus_opacity1",
+                                                    onStart: function () {
+                                             
+                                                   if($(".scroll_an_video10")){
+                                                       $(".scroll_an_video10").trigger('play');
+                                                    }
+
+
+                                                    },
+									onReverseComplete: function () {
+                                    $(".scroll_an_video10")[0].currentTime = 0;
+                                    
+                                    }}),  
+       ]); 
+          
+   
+      
+//             var arr= [];
+//       for(var i =1;i<52;i++){
+//         arr.push("https://cdn.shopifycdn.net/s/files/1/0077/3953/9515/files/jiqitupian_"+i+".png?v=1629105718");
+        
+//       };
+    
+//       var images = arr;
+
+//       // TweenMax can tween any property of any object. We use this object to cycle through the array
+//       var obj = {curImg: 0};
+
+//       // create tween
+//       var tweenmax_11 = TweenMax.to(obj, 0.5,
+//                                    {
+//         curImg: images.length - 1,	// animate propery curImg to number of images
+//         roundProps: "curImg",				// only integers so it can be used as an array index
+//         repeat: 0,									// repeat 3 times
+//         immediateRender: true,			// load first image automatically
+//         ease: Linear.easeNone,			// show every image the same ammount of time
+//         onUpdate: function () {
+
+//           $(".frame10-img01").attr("src", images[obj.curImg]); // set the image source
+//         }
+//       }
+//         );
+        
+        
+        
+        
+        
+      
+         var beishu_nine = $(window).width()/1920;
+          
+          var n_beshu = beishu_nine*550; //偏移量
+          
+          var offsetho = 1200;  //滚动快慢
+          
+        
+          
+     $(window).resize(function() {
+         var beishu_nine = $(window).width()/1920;
+          
+          var n_beshu = beishu_nine*550;
+          
+   
+});
+      
+      
+       new ScrollMagic.Scene({triggerElement: "#scroll_anima_container", duration: offsetho*2,offset: n_beshu})
+        .setTween(tweenmax_01)
+//         .setClassToggle("#shopify-section-header","header_bo")
+		.setPin("#scroll_anima_container")
+         .on("enter", function(e) {
+        })
+        .on("leave", function(e) {
+          
+        })
+        .addTo(controller); 
+      
+      
+      	new ScrollMagic.Scene({triggerElement: "#scroll_anima_container", duration: offsetho*5.5,offset: 2*offsetho + n_beshu})
+        .setTween(tweenmax_02)
+		.setPin("#scroll_anima_container")
+		.addTo(controller);
+          
+        new ScrollMagic.Scene({triggerElement: "#scroll_anima_container", duration: offsetho*2.5,offset: 7.5*offsetho + n_beshu})
+        .setTween(tweenmax_03)
+		.setPin("#scroll_anima_container")
+		.addTo(controller);
+      
+          new ScrollMagic.Scene({triggerElement: "#scroll_anima_container", duration: offsetho*2,offset: 10*offsetho + n_beshu})
+        .setTween(tweenmax_04)
+		.setPin("#scroll_anima_container")
+		.addTo(controller);
+           
+         new ScrollMagic.Scene({triggerElement: "#scroll_anima_container", duration: offsetho*2,offset: 12*offsetho + n_beshu})
+        .setTween(tweenmax_05)
+		.setPin("#scroll_anima_container")
+		.addTo(controller);
+      
+         new ScrollMagic.Scene({triggerElement: "#scroll_anima_container", duration: offsetho*2,offset: 14*offsetho + n_beshu})
+        .setTween(tweenmax_06)
+		.setPin("#scroll_anima_container")
+		.addTo(controller);
+      
+      
+         new ScrollMagic.Scene({triggerElement: "#scroll_anima_container", duration: offsetho*2,offset: 16*offsetho + n_beshu})
+        .setTween(tweenmax_07)
+		.setPin("#scroll_anima_container")
+		.addTo(controller);
+      
+       new ScrollMagic.Scene({triggerElement: "#scroll_anima_container", duration: offsetho,offset: 18*offsetho + n_beshu})
+        .setTween(tweenmax_08)
+		.setPin("#scroll_anima_container")
+		.addTo(controller);
+      
+       new ScrollMagic.Scene({triggerElement: "#scroll_anima_container", duration: offsetho*2,offset: 19*offsetho + n_beshu})
+        .setTween(tweenmax_09)
+		.setPin("#scroll_anima_container")
+		.addTo(controller);
+      
+       new ScrollMagic.Scene({triggerElement: "#scroll_anima_container", duration: offsetho*2,offset: 21*offsetho + n_beshu})
+        .setTween(tweenmax_10)
+		.setPin("#scroll_anima_container")
+		.addTo(controller);
+      
+
+//       new ScrollMagic.Scene({triggerElement: "#scroll_anima_container", duration: offsetho,offset: 16*offsetho + n_beshu})
+//         .setTween(tweenmax_11)
+//         .setPin("#scroll_anima_container")
+//         .addTo(controller); 
+        
+        
+      
+    //     移动端滚动   
+        
+      }else{
+
+        var controller_mb = new ScrollMagic.Controller();
+   var tweenmax_01 = new TimelineMax()
+        .add([
+          TweenMax.to("#shopify-section-header", 2, { className: "+=header_bo"}),
+       ])
+          .add([
+         TweenMax.to("#mb_scroll_anima_frame00", 2, { className: "+=to_tophide"}),   
+      TweenMax.to("#mb_scroll_anima_frame01", 2, {className: "+=to_centershow",
+									onStart: function () {
+                                      $("#mb_scroll_anima_frame01 img").attr("src","{{ section.settings.image02_mb | img_url:'master' }}")
+                                    },
+									onReverseComplete: function () {
+                      
+                                    }}),   
+      
+       ]);
+          
+          
+         var tweenmax_02 = new TimelineMax()
+        .add([
+       
+          TweenMax.to("#mb_scroll_anima_frame01", 2, {className: "+=to_tophide"}),  
+          TweenMax.to("#mb_scroll_anima_frame02", 2, {className: "+=to_centershow",
+                                                    onStart: function () {
+          											  setTimeout(function(){
+                                                          $("#mb_scroll_anima_frame02 img").attr("src","{{ section.settings.image03_mb | img_url:'master' }}")
+                                                        }, 300 );
+                                             
+                                                    },
+									                onReverseComplete: function () {
+
+                                                    }}),
+
+       ])
+         .add([
+       
+          TweenMax.to(".frame02-text1", 2, {className: "+=cus_opacity1"}),  
+
+       ]).add([
+        TweenMax.to(".frame02-text1", 2, {className: "+=cus_opacity0"}),  
+          TweenMax.to(".frame02-text3", 2, {className: "+=cus_opacity1"}),  
+
+       ]).add([
+        TweenMax.to(".frame02-text3", 2, {className: "+=cus_opacity0"}),  
+          TweenMax.to(".frame02-text2", 2, {className: "+=cus_opacity1"}),  
+
+       ]).add([
+       
+        TweenMax.to(".frame02-text2", 2, {className: "+=cus_opacity0"}),  
+          TweenMax.to(".frame02-text4", 2, {className: "+=cus_opacity1"}),   
+
+       ]);      
+          
+          var tweenmax_03 = new TimelineMax()
+        .add([
+       
+          TweenMax.to("#mb_scroll_anima_frame02", 2, {className: "+=to_tophide"}),  
+          TweenMax.to("#mb_scroll_anima_frame02_co", 2, {className: "+=to_centershow",
+                                                    onStart: function () {
+          											  setTimeout(function(){
+                                                          $("#mb_scroll_anima_frame02_co img").attr("src","{{ section.settings.image04_mb | img_url:'master' }}")
+                                                        }, 300 );
+                                                    },
+									                onReverseComplete: function () {
+
+                                                    }}),
+
+       ]).add([
+       
+          TweenMax.to(".frame03-text1", 2, {className: "+=cus_opacity1"}),  
+
+       ]).add([
+        TweenMax.to(".frame03-text1", 2, {className: "+=cus_opacity0"}),  
+          TweenMax.to(".frame03-text2", 2, {className: "+=cus_opacity1"}),  
+
+       ]); 
+          
+          
+                 var tweenmax_04 = new TimelineMax()
+        .add([
+          TweenMax.to("#mb_scroll_anima_frame02_co", 2, {className: "+=to_tophide"}),  
+          TweenMax.to("#mb_scroll_anima_frame03", 2, {className: "+=to_centershow"}),  
+       ]).add([
+        TweenMax.to(".frame03_co-text1", 2, {className: "+=cus_opacity0"}),    
+          TweenMax.to(".frame03_co-text2", 2, {
+                                                    onStart: function () {
+                                                     $("#mb_scroll_anima_frame03 img").attr("src","{{ section.settings.image05_mb | img_url:'master' }}")
+                                                     setTimeout(function(){
+                                                      $(".frame03_co-text2").addClass("cus_opacity1");
+                                                        }, 1300);
+          
+                                                    },
+									                onReverseComplete: function () {
+                                                      $("#mb_scroll_anima_frame03 img").attr("src","{{ section.settings.image05_mbbegin | img_url:'master' }}")
+ 													$(".frame03_co-text2").removeClass("cus_opacity1");
+                                                    }}),  
+
+       ]);  
+          
+          
+        var tweenmax_05 = new TimelineMax()
+        .add([
+          TweenMax.to("#mb_scroll_anima_frame03", 2, {className: "+=to_tophide"}),  
+          TweenMax.to("#mb_scroll_anima_frame04", 2, {className: "+=to_centershow"}),
+          
+          
+       ]).add([
+          TweenMax.to(".mb_frame04_img02", 2, {className: "+=cus_opacity1"}),  
+          
+          
+       ]);  
+      
+      
+
+          
+       var tweenmax_06 = new TimelineMax()
+        .add([
+          TweenMax.to("#mb_scroll_anima_frame04", 2, {className: "+=to_tophide"}),  
+          TweenMax.to("#mb_scroll_anima_frame06", 2, {className: "+=to_centershow",
+                                                    onStart: function () {
+                                                    
+                                                          $("#mb_scroll_anima_frame06 img").attr("src","{{ section.settings.image07_mb | img_url:'master' }}")
+                                                 
+                                             
+                                                   },
+									                onReverseComplete: function () { 
+
+
+                                                    }}),  
+       ]).add([
+          TweenMax.to(".frame06-text", 2, {className: "+=cus_opacity1"}),  
+
+       ]); 
+          
+          
+          
+        var tweenmax_07 = new TimelineMax()
+        .add([
+          TweenMax.to("#mb_scroll_anima_frame06", 2, {className: "+=to_tophide"}),  
+          TweenMax.to("#mb_scroll_anima_frame06_co", 2, {className: "+=to_centershow",
+                                                    onStart: function () {
+                                                        setTimeout(function(){
+                                                          $("#mb_scroll_anima_frame06_co img").attr("src","{{ section.settings.image08_mb | img_url:'master' }}")
+                                                        }, 300 );
+                                                  
+                                                   },
+									                onReverseComplete: function () {
+
+
+                                                    }}),  
+       ]).add([
+          TweenMax.to(".frame06_co-text", 2, {className: "+=cus_opacity1"}),  
+
+       ]);   
+          
+       var tweenmax_08 = new TimelineMax()
+        .add([
+          TweenMax.to("#mb_scroll_anima_frame06_co", 2, {className: "+=to_tophide"}),  
+          TweenMax.to("#mb_scroll_anima_frame07", 2, {className: "+=to_centershow"}),  
+       ]);            
+          
+         var tweenmax_09 = new TimelineMax()
+        .add([
+          TweenMax.to(".mb_frame07-img01", 2, {className: "+=cus_opacity0"}),  
+          TweenMax.to(".mb_frame07-img02", 2, {className: "+=cus_opacity1"}),  
+       ]);   
+          
+      
+        var tweenmax_10 = new TimelineMax()
+        .add([
+          TweenMax.to("#mb_scroll_anima_frame07", 2, {className: "+=to_tophide"}),  
+          TweenMax.to("#mb_scroll_anima_frame10", 2, {className: "+=to_centershow"}),  
+       ]); 
+ 
+        var tweenmax_11 = new TimelineMax()
+        .add([
+          TweenMax.to("#mb_scroll_anima_frame10", 2, {
+                                                    onStart: function () {
+                                                    
+                                                           $(".mb_frame10-img03").attr("src","{{ section.settings.image10gif_mb | img_url:'master' }}")
+                                                  
+                                                      setTimeout(function(){
+                                                           $(".sc_lastbuybtnmb").addClass("cus_opacity1");
+                                                        }, 1300 );
+          
+                                            
+                                                   },
+									                onReverseComplete: function () {
+                                                       $(".mb_frame10-img03").attr("src","{{ section.settings.image10_mb | img_url:'master' }}")
+ 														$(".sc_lastbuybtnmb").removeClass("cus_opacity1");
+                                                    }}),  
+       ]); 
+        
+         var beishu_nine = $(window).width()/1920;
+          
+          var n_beshu = beishu_nine*1600;
+          
+          var offsetho = 700;
+          
+        
+          
+     $(window).resize(function() {
+         var beishu_nine = $(window).width()/1920;
+         
+          var n_beshu = beishu_nine*1600;
+          
+   
+});
+      
+      
+       new ScrollMagic.Scene({triggerElement: "#scroll_anima_container_mb", duration: offsetho*2,offset: n_beshu})
+        .setTween(tweenmax_01)
+//         .setClassToggle("#shopify-section-header","header_bo")
+		.setPin("#scroll_anima_container_mb")
+         .on("enter", function(e) {
+        })
+        .on("leave", function(e) {
+          
+        })
+        .addTo(controller_mb); 
+      
+      
+      	new ScrollMagic.Scene({triggerElement: "#scroll_anima_container_mb", duration: offsetho*5.5,offset: n_beshu + offsetho*2})
+        .setTween(tweenmax_02)
+		.setPin("#scroll_anima_container_mb")
+		.addTo(controller_mb);
+          
+        new ScrollMagic.Scene({triggerElement: "#scroll_anima_container_mb", duration: offsetho*3.5,offset: 7.5*offsetho + n_beshu})
+        .setTween(tweenmax_03)
+		.setPin("#scroll_anima_container_mb")
+		.addTo(controller_mb);
+      
+          new ScrollMagic.Scene({triggerElement: "#scroll_anima_container_mb", duration: offsetho*2,offset: 11*offsetho + n_beshu})
+        .setTween(tweenmax_04)
+		.setPin("#scroll_anima_container_mb")
+		.addTo(controller_mb);
+          
+         new ScrollMagic.Scene({triggerElement: "#scroll_anima_container_mb", duration: offsetho*2,offset: 13*offsetho + n_beshu})
+        .setTween(tweenmax_05)
+		.setPin("#scroll_anima_container_mb")
+		.addTo(controller_mb);
+      
+      
+      
+         new ScrollMagic.Scene({triggerElement: "#scroll_anima_container_mb", duration: offsetho*2.5,offset: 15*offsetho + n_beshu})
+        .setTween(tweenmax_06)
+		.setPin("#scroll_anima_container_mb")
+		.addTo(controller_mb);
+      
+       new ScrollMagic.Scene({triggerElement: "#scroll_anima_container_mb", duration: offsetho*2.5,offset: 17.5*offsetho + n_beshu})
+        .setTween(tweenmax_07)
+		.setPin("#scroll_anima_container_mb")
+		.addTo(controller_mb);
+      
+       new ScrollMagic.Scene({triggerElement: "#scroll_anima_container_mb", duration: offsetho,offset: 20*offsetho + n_beshu})
+        .setTween(tweenmax_08)
+		.setPin("#scroll_anima_container_mb")
+		.addTo(controller_mb);
+      
+
+      new ScrollMagic.Scene({triggerElement: "#scroll_anima_container_mb", duration: offsetho*1.5,offset: 21*offsetho + n_beshu})
+        .setTween(tweenmax_09)
+		.setPin("#scroll_anima_container_mb")
+		.addTo(controller_mb);     
+      
+      new ScrollMagic.Scene({triggerElement: "#scroll_anima_container_mb", duration: offsetho,offset: 22.5*offsetho + n_beshu})
+        .setTween(tweenmax_10)
+        .setPin("#scroll_anima_container_mb")
+        .addTo(controller_mb);  
+      
+       new ScrollMagic.Scene({triggerElement: "#scroll_anima_container_mb", duration: offsetho,offset: 23.5*offsetho + n_beshu})
+        .setTween(tweenmax_11)
+        .setPin("#scroll_anima_container_mb")
+        .addTo(controller_mb);  
+         
+        
+      }
+      
+      
+      
+      
+    });
+            
+    
+</script>
+
+
+  <script type="text/javascript">
+    var vmslide = new  Vue({
+      el:"#v-box_scroll",
+//       data:{
+//       },
+      methods:{
+       
+        pcSeenslidemo: function(){
+          if (screen.width > 768){
+          return true
+          }else {
+          return false
+          }
+        },
+        mobileSeenslidemo: function(){
+          if (screen.width <= 768){
+          return true
+          }else {
+          return false
+          }
+        }
+      }
+    
+    });
+  </script> 
+
+
+
+{% schema %}
+  {
+    "name": "scroll_animation",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Image Resouce",
+        "info": "The picture size of all mobile terminals is：700*1244px,The size of all PC side pictures is: 1920*1080px"
+      },{
+        "type": "header",
+        "content": "PC Resouce"
+      },{
+        "type": "text",
+        "id": "video02_pc",
+        "label": "video02 url(PC)"
+      },{
+        "type": "text",
+        "id": "video03_pc",
+        "label": "video03 url(PC)"
+      },{
+        "type": "text",
+        "id": "video04_pc",
+        "label": "video04 url(PC)"
+      },{
+        "type": "text",
+        "id": "video05_pc",
+        "label": "video05 url(PC)"
+      },{
+        "type": "image_picker",
+        "id": "image06_pc",
+        "label": "image06(PC)"
+      },{
+        "type": "text",
+        "id": "video07_pc",
+        "label": "video07 url(PC)"
+      },{
+        "type": "text",
+        "id": "video08_pc",
+        "label": "video08 url(PC)"
+      },{
+        "type": "image_picker",
+        "id": "image091_pc",
+        "label": "image09_1(PC)"
+      },{
+        "type": "image_picker",
+        "id": "image092_pc",
+        "label": "image09_2(PC)"
+      },{
+        "type": "image_picker",
+        "id": "image10_pc",
+        "label": "image10(PC)"
+      },{
+        "type": "url",
+        "id": "image10url_pc",
+        "label": "image10 url(PC)"
+      },{
+        "type": "text",
+        "id": "video10_pc",
+        "label": "video10 url(PC)"
+      },{
+        "type": "image_picker",
+        "id": "video10_bgbtn",
+        "label": "video10 button"
+      },{
+        "type": "url",
+        "id": "video10_btn_url",
+        "label": "video10 button url"
+      },{
+        "type": "header",
+        "content": "Mobile Resouce"
+      },{
+        "type": "image_picker",
+        "id": "image01_mb",
+        "label": "image01(Mobile)"
+      },{
+        "type": "image_picker",
+        "id": "image02_mb",
+        "label": "image02(Mobile)"
+      },{
+        "type": "image_picker",
+        "id": "image03_mb",
+        "label": "image03(Mobile)"
+      },{
+        "type": "image_picker",
+        "id": "image04_mb",
+        "label": "image04(Mobile)"
+      },{
+        "type": "image_picker",
+        "id": "image05_mbbegin",
+        "label": "image05(Mobile)"
+      },{
+        "type": "image_picker",
+        "id": "image05_mb",
+        "label": "image05(Mobile)"
+      },{
+        "type": "image_picker",
+        "id": "image06_mb",
+        "label": "image06(Mobile)"
+      },{
+        "type": "image_picker",
+        "id": "image06_2_mb",
+        "label": "image06_2(Mobile)"
+      },{
+        "type": "image_picker",
+        "id": "image07_mb",
+        "label": "image07(Mobile)"
+      },{
+        "type": "image_picker",
+        "id": "image08_mb",
+        "label": "image08(Mobile)"
+      },{
+        "type": "image_picker",
+        "id": "image091_mb",
+        "label": "image09_1(Mobile)"
+      },{
+        "type": "image_picker",
+        "id": "image092_mb",
+        "label": "image09_2(Mobile)"
+      },{
+        "type": "image_picker",
+        "id": "image10_mb",
+        "label": "image10(Mobile)"
+      },{
+        "type": "image_picker",
+        "id": "image10gif_mb",
+        "label": "image10gif(Mobile)"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "image"
+          },{
+            "type": "image_picker",
+            "id": "image_mb",
+            "label": "image(Mobile)"
+          },
+          {
+            "type": "url",
+            "id": "url",
+            "label": "url"
+          },
+          {
+            "type": "checkbox",
+            "id": "show_overbtn",
+            "label": "show over button?",
+            "default": false
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "scroll_animation_ho",
+        "category": "Advance Block"
+      }
+    ]
+  }
+{% endschema %}
+
+
+
+
+

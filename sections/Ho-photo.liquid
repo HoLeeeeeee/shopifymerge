@@ -1,0 +1,60 @@
+
+  <div class="paphoto-box">
+   {% for block in section.blocks %}
+    {% if block.type == 'image' %}
+  <div class="paphoto-item">
+    {% if block.settings.image %}
+    <img alt src="{{ block.settings.image | img_url:'master' }}"/> 
+   {% endif %}
+   </div>
+    {% else %}
+    <div class="paphoto-item paphoto-item-text"> 
+    {{block.settings.html}}
+   </div>
+    {% endif %}
+   {% endfor %}
+  </div>
+
+
+
+
+
+{% schema %}
+  {
+    "name": "Parkinson Photo",
+    "settings": [
+
+    ],
+    "blocks": [
+      {
+        "type": "image",
+        "name": "image",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image(Recommended size：540*540px)"
+          }
+        ]
+      },{
+        "type": "html",
+        "name": "html",
+        "settings": [
+          {
+            "type": "html",
+            "id": "html",
+            "label": "html"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Parkinson Photo",
+        "category": "Ho-Advance"
+ 
+      }
+    ]
+  }
+{% endschema %}
+
