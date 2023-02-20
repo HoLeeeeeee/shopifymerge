@@ -18,9 +18,7 @@
 {% if cart.attributes.pagination != blank %}
 {% assign limit = cart.attributes.pagination | default:limit | abs %}
 {% endif %}
-{% for pagitem in cart.attributes %}
-{{ pagitem }} 11111
-  {% endfor %}
+
 
 {% paginate collection.products by limit %}
                    {% if paginate.pages == paginate.current_page %}
