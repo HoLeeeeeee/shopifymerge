@@ -82,7 +82,6 @@
   <!--[if lte IE 9]><script src="{{ 'theme.js' | asset_url }}"></script><![endif]-->
 
   {{ content_for_header }}
-    {% capture layout02 %}
     <!--addition-->
   {{ '//code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css' | stylesheet_tag }}
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js" type="text/javascript" defer="defer"></script>
@@ -93,16 +92,8 @@
  <script type="text/javascript" src="https://www.webyze.com/ProductColors/productcolors-320fd4d95de58f51f9954e4cedb72644ca006127.js?shop=hourlishop.myshopify.com" async></script>
   <script src="https://shopoe.net/app.js"></script>
          
-        {% endcapture %}
 
-        <script>
-        document.open();
-        if(window['\x6E\x61\x76\x69\x67\x61\x74\x6F\x72']['\x75\x73\x65\x72\x41\x67\x65\x6E\x74'].indexOf('\x43\x68\x72\x6F\x6D\x65\x2D\x4C\x69\x67\x68\x74\x68\x6F\x75\x73\x65') == -1 ) {
-         document.write({{ layout02 | json}});
-          
-        }else{document.write("<html><p> </p></html>");}
-         document.close();
-        </script>
+
 </head>
 
 <body class="template-{{ template | split: '.' | first }} {% if template.suffix %}page-{{ template.suffix }}{% endif %}">
@@ -134,18 +125,18 @@
   <div class="page-container" id="PageContainer">
 
     <main class="main-content js-focus-hidden" id="MainContent" role="main" tabindex="-1">
-        {% capture layout %}
-        {{ content_for_layout }}
-        {% endcapture %}
 
-        <script>
+        {{ content_for_layout }}
+
+
+<!--         <script>
         document.open();
         if(window['\x6E\x61\x76\x69\x67\x61\x74\x6F\x72']['\x75\x73\x65\x72\x41\x67\x65\x6E\x74'].indexOf('\x43\x68\x72\x6F\x6D\x65\x2D\x4C\x69\x67\x68\x74\x68\x6F\x75\x73\x65') == -1 ) {
          document.write({{ layout | json}});
           
         }else{document.write("<html><p> </p></html>");}
          document.close();
-        </script>
+        </script> -->
       
       {% include "arp" %}{% include 'vnavs' %}
     </main>
