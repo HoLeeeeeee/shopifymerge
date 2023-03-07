@@ -252,22 +252,13 @@
                     var article= data.find(".blog_search-result");
                     if(article.length>0){
                       article.each(function(i){
-                        {% if section.settings.show_date or section.settings.show_author %}
-                           $(this).find(".blog-articles_card-info").show()
-                          {% if section.settings.show_date %}
-                             $(this).find(".blog-articles_card-info>.date").css("display","inline-block")
-                          {% endif %}
-                          {% if section.settings.show_author %}
-                            $(this).find(".blog-articles_card-info>.author").css("display","inline-block")
-                          {% endif %}
-                        {% endif %}
-                        $(this).find(".blog-articles_card-more").prepend ("{{ section.settings.btn }}")
                         htmlcode += $(this).html()
                       })
                     }else{
                       htmlcode = 'Not search result.'
                     }
-                    $(".e-article-list-box").html(htmlcode);
+                     console.log(htmlcode);
+                    // $(".e-article-list-box").html(htmlcode);
                   //   if( {{ paginate.items }}>{{ pagenum }} ){
                   //         $(".main-blog .pagination__list").empty()
                   //         var item=$(".blog-articles_card");
