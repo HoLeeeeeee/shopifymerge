@@ -112,7 +112,31 @@
       </ul>
     </div>
   {% else %}
+            <form
+          action="{{ routes.search_url }}"
+          method="get"
+          id="blog-search-form"
+          class=" blog-search-form"
+          role="search"
+        >
+          <input type="hidden" name="type" value="article">
+          <input type="hidden" name="options[prefix]" value="last">
+          <input
+            type="search"
+            class="new-search-bar"
+            name="q"
+            value="{{ search.terms | escape | replace: '*', '' }}"
+            placeholder="Search"
+            class="input-group-field"
+          >
+          <button type="submit" class="input-group-btn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21 21.0001L16.514 16.5061M19 10.5001C19 12.7545 18.1045 14.9165 16.5104 16.5105C14.9163 18.1046 12.7543 19.0001 10.5 19.0001C8.24566 19.0001 6.08365 18.1046 4.48959 16.5105C2.89553 14.9165 2 12.7545 2 10.5001C2 8.24578 2.89553 6.08377 4.48959 4.48971C6.08365 2.89566 8.24566 2.00012 10.5 2.00012C12.7543 2.00012 14.9163 2.89566 16.5104 4.48971C18.1045 6.08377 19 8.24578 19 10.5001V10.5001Z" stroke="black" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </form>
     <ul class="blog-list-view" >
+    
       {% for article in blog.articles %}
         <li class="border-top">
           <div class="page-width">
@@ -210,7 +234,155 @@
           </div>
         </li>
       {% endfor %}
+
     </ul>
+        <script>
+          $('#blog-search-form').submit(function (event) {
+                event.preventDefault();
+                var form = $(this);
+                var htmlcode=""
+                  $.ajax({
+                    type: form.attr('method'),
+                    url: form.attr('action'),
+                    data: form.serialize()
+                  }).success(function (msg) {
+                    // console.log(msg);
+                    var data=$('<div></div>');
+                    data.html(msg);
+                    var article= data.find(".blog_search-result");
+                    if(article.length>0){
+                      article.each(function(i){
+                        {% if section.settings.show_date or section.settings.show_author %}
+                           $(this).find(".blog-articles_card-info").show()
+                          {% if section.settings.show_date %}
+                             $(this).find(".blog-articles_card-info>.date").css("display","inline-block")
+                          {% endif %}
+                          {% if section.settings.show_author %}
+                            $(this).find(".blog-articles_card-info>.author").css("display","inline-block")
+                          {% endif %}
+                        {% endif %}
+                        $(this).find(".blog-articles_card-more").prepend ("{{ section.settings.btn }}")
+                        htmlcode += $(this).html()
+                      })
+                    }else{
+                      htmlcode = 'Not search result.'
+                    }
+                    $(".e-article-list-box").html(htmlcode);
+                  //   if( {{ paginate.items }}>{{ pagenum }} ){
+                  //         $(".main-blog .pagination__list").empty()
+                  //         var item=$(".blog-articles_card");
+                  //         if(item.length>{{ pagenum }}){
+                  //           var every_page = {{ pagenum }};    // per page length
+                  //           var total_all = item.length;    // total length
+                  //           var page_num = Math.ceil(total_all/every_page)//page number（2.5 ==> 3）
+                  //           item.each(function(i){  if(i>(every_page-1)){$(this).hide();}})
+                  //           for(var i=1;i<=page_num;i++ ){
+
+                  //               if(i==1){
+                  //                 $(".main-blog .pagination__list").append('<li><span class="pagination__item e-pagination_num pagination__item--current" aria-current="page" data-label="'+i+'">'+i+'</span></li>')
+                  //               }else{
+                  //                 $(".main-blog .pagination__list").append('<li><span class="pagination__num e-pagination_num pagination__item" aria-current="page" data-label="'+i+'">'+i+'</span></li>')
+                  //               }
+              
+                  //           }
+                  //           $(".main-blog .pagination__list").prepend('<li id="pre_page"><a class="blog_pagination--prev pagination__item pagination__item--next pagination__item-arrow link motion-reduce" aria-label="Previous page"><svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 1L1 6L6 11" stroke="#B6B6B6"/></svg></a></li>')
+                  //           $("#pre_page").find("a").addClass("pagination_unset")
+                  //           $(".main-blog .pagination__list").append('<li id="next_page"><a class="blog_pagination--next pagination__item pagination__item--prev pagination__item-arrow link motion-reduce" aria-label="Next page"><svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L6 6L1 11" stroke="#B6B6B6"/></svg></a></li>')
+                  //          var $current_page = ($(".pagination__item--current").text());//$current page number
+                  //          var flagdot=true;
+                  //          var flagdot01=true;
+                            
+                  //             $("#next_page").click(function(){
+                  //             if($current_page <page_num){
+                  //                $(".pagination__item[data-label='"+$current_page+"']").removeClass("pagination__item--current");
+                  //                 $current_page++;
+                  //                 $(".pagination__item[data-label='"+$current_page+"']").addClass("pagination__item--current");
+                  //                 $.each(item,function(index,item){
+                  //                     //get next page index
+                  //                     var start = ($current_page-1)*every_page;
+                  //                     if(index>=start&& index<start+every_page){
+                  //                         $(this).show();
+                  //                     }else{
+                  //                         $(this).hide();
+                  //                     }
+                  //                 })
+                  //               if($current_page > 1){
+                  //               $("#pre_page").find("a").removeClass("pagination_unset")
+                  //               }
+                  //               if($current_page == page_num){
+                  //                 $(this).find("a").addClass("pagination_unset")
+                  //               }else{
+                  //                 $(this).find("a").removeClass("pagination_unset")
+                  //               }
+                  //             }else{
+                  //                 return false;
+                  //             }
+                  //         })
+                  //       $("#pre_page").click(function(){
+                  //         $current_page = ($(".pagination__item--current").text());
+                  //         if($current_page > 1){
+                  //             $(".pagination__item[data-label='"+$current_page+"']").removeClass("pagination__item--current");
+                  //                 $current_page--;
+                            
+                  //                 $(".pagination__item[data-label='"+$current_page+"']").addClass("pagination__item--current");
+                  //             $.each(item,function(index,item){
+                  //                 var start = ($current_page-1)*every_page;
+                  //                 if(index>=start&& index<start+every_page){
+                  //                     $(this).show();
+                  //                 }else{
+                  //                     $(this).hide();
+                  //                 }
+                  //             })
+                  //             if($current_page <= 1){
+                  //               $(this).find("a").addClass("pagination_unset")
+                  //             }else{
+                  //               $(this).find("a").removeClass("pagination_unset")
+                  //             }
+                  //             if($current_page <= page_num){
+                  //                $("#next_page").find("a").removeClass("pagination_unset")
+                  //             }
+                  //         }else{
+                  //             return false;
+                  //         }
+                  //     })
+                  //   $(document).on("click","span.e-pagination_num",function(){
+                  //             var that=$(this);
+                  //       if(that.hasClass("pagination__item--current")) return false;
+                  //       $current_page = parseInt((that.text()));
+
+                  //       $("span.e-pagination_num").each(function(){
+                  //         $(this).removeClass("pagination__item--current");
+                  //       })
+                  //       that.addClass("pagination__item--current");
+                  //        $.each(item,function(index,item){
+                  //             var start = ($current_page-1)*every_page;
+                  //             if(index>=start&& index<start+every_page){
+                  //                 $(this).show();
+                  //             }else{
+                  //                 $(this).hide();
+                  //             }
+                  //         })
+                  //       if($current_page <= 1){
+                  //           $("#pre_page").find("a").addClass("pagination_unset")
+                  //         }else{
+                  //           $("#pre_page").find("a").removeClass("pagination_unset")
+                  //       }
+                  //       if($current_page >= page_num){
+                  //          $("#next_page").find("a").addClass("pagination_unset")
+                  //       }else{
+                  //          $("#next_page").find("a").removeClass("pagination_unset")
+                  //       }
+                  //     })
+
+                  // }
+                  //     }
+                  })
+
+              });
+        </script>
+                
+
+                
   {% endif %}
 
   {% if paginate.pages > 1 %}
