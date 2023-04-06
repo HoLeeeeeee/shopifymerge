@@ -180,20 +180,20 @@
         
   </script> -->
   <script>
-        var a=10;
-     console.log('外部a1:',a)
+        var b=10;
+
        {
-
-            a=2;
-
-            a=3;
-
-            a=4;
-
-            a=6;
-            console.log('内部a-->:',a)
+            function a(){}
+            b=2;
+            function a(){}
+            b=3;
+            function a(){}
+            b=4;
+            function a(){}
+            b=6;
+            console.log('内部b-->:',b)
         }
-        console.log('外部a2:',a)
+        console.log('外部b2:',b)
     </script>
  </body>
 </html>
