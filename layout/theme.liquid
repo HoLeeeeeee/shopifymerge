@@ -97,12 +97,12 @@
 </head>
 
 <body class="template-{{ template | split: '.' | first }} {% if template.suffix %}page-{{ template.suffix }}{% endif %}">
-  <img 
-  src="//cdn.shopify.com/s/files/1/0077/3953/9515/files/5-4_dcf0afc2-0e5e-4d20-822c-9edfaeda6dee.jpg?v=1632477182"
-  srcset="
-    //cdn.shopify.com/s/files/1/0077/3953/9515/files/5-4_dcf0afc2-0e5e-4d20-822c-9edfaeda6dee.jpg?v=1632477182 768w,
-    //cdn.shopify.com/s/files/1/0077/3953/9515/files/5.jpg?v=1632477339 1440w,
-    //cdn.shopify.com/s/files/1/0077/3953/9515/files/banner.jpg?v=1632476541 1920w">
+
+  <picture>
+  <source srcset="//cdn.shopify.com/s/files/1/0077/3953/9515/files/5.jpg?v=1632477339" media="(min-width: 1200px)" />
+  <source srcset="//cdn.shopify.com/s/files/1/0077/3953/9515/files/banner.jpg?v=1632476541" media="(min-width: 800px)" />
+  <img src="//cdn.shopify.com/s/files/1/0077/3953/9515/files/5-4_dcf0afc2-0e5e-4d20-822c-9edfaeda6dee.jpg?v=1632477182" />
+</picture>
   
   <a class="in-page-link visually-hidden skip-link" href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a>
 <!-- <img src="https://cdn.shopify.com/s/files/1/0077/3953/9515/files/student-bean_1500x_fee48f81-779a-4333-b6be-03e78a27a3a6.webp?v=1670479327"> -->
