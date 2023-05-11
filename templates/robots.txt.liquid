@@ -6,7 +6,9 @@
   {{- group.user_agent -}}
 
   {% for rule in group.rules %}
-    {{- rule -}}
+    {%- unless rule.directive == 'Disallow' and rule.value == '/policies/' -%}
+      {{- rule -}}
+    {%- endunless -%}
   {% endfor %}
   
   {%- if group.user_agent.value == '*' -%}
@@ -14,7 +16,7 @@
 {{ 'Disallow: /pages/user' }}
 {{ 'Disallow: /pages/user02' }}
   {%- endif -%}
-  
+  /search
   {%- if group.sitemap != blank -%}
     {{ group.sitemap }}
   {%- endif -%}
