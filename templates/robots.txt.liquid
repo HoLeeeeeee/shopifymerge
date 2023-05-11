@@ -4,13 +4,13 @@
 {% endcomment %}
 {% for group in robots.default_groups %}
   {{- group.user_agent -}}
-<!-- 移除默认的规则 -->
+
   {% for rule in group.rules %}
     {%- unless rule.directive == 'Disallow' and rule.value == '/policies/' -%}
 {{- rule -}}
     {%- endunless -%}
   {% endfor %}
-  <!-- 添加新规则 -->
+
   {%- if group.user_agent.value == '*' -%}
 {{ 'Disallow: /*?q=参数' }}
 {{ 'Disallow: /pages/user02' }}
