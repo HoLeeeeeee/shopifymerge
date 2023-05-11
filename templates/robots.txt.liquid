@@ -9,8 +9,8 @@
     {{- rule -}}
   {% endfor %}
   
-  {%- if group.user_agent.value -%}
-<div class="test001">{{ group.user_agent.value }}</div>
+  {%- if group.user_agent.value == '*' -%}
+   8527 {{ 'Disallow: /*?q=/pages/user' }}
   {%- endif -%}
   
   {%- if group.sitemap != blank -%}
