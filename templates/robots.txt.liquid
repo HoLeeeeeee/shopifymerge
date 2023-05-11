@@ -8,7 +8,11 @@
   {% for rule in group.rules %}
     {{- rule -}}
   {% endfor %}
-
+  
+  {%- if group.user_agent.value == '/page/user' -%}
+    {{ 'Disallow: /*?q=/page/user' }}
+  {%- endif -%}
+  
   {%- if group.sitemap != blank -%}
     {{ group.sitemap }}
   {%- endif -%}
