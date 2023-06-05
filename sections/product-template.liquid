@@ -285,6 +285,7 @@ $(function(){
   let requestUrl ="https://hourlishop.myshopify.com/collections/all/products/vee-princess-style-jewelry-box-with-mirror";
  $(".product-single__title").click(function(){
    console.log("click");
+     history.replaceState('', '', requestUrl); 
    fetch(requestUrl, {
 			credentials: 'same-origin',
 			method: 'GET'
