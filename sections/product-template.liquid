@@ -291,6 +291,7 @@ fetch(requestUrl, {
 		response.text().then(function(content) {
 		var tempElement = document.createElement('div');
 		tempElement.innerHTML = content;
+          console.log(tempElement);
 		document.querySelector('.product-single__meta').innerHTML = tempElement.querySelector('.product-single__meta').innerHTML;
           
 		})
