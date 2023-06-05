@@ -277,12 +277,24 @@ function setTab(name,cursel,n)
   <script>
 $(function(){
 
- $(".blog-title").click(function(){
-   console.log("click");
-    let newUrl ="https://hourlishop.myshopify.com/123"
-  history.replaceState('', '', newUrl); 
- });
-
+ // $(".blog-title").click(function(){
+ //   console.log("click");
+ //    let newUrl ="https://hourlishop.myshopify.com/123"
+ //  history.replaceState('', '', newUrl); 
+ // });
+  let requestUrl ="https://hourlishop.myshopify.com/collections/all/products/vee-princess-style-jewelry-box-with-mirror";
+  product-single__meta
+fetch(requestUrl, {
+			credentials: 'same-origin',
+			method: 'GET'
+		}).then(function(response) {
+		response.text().then(function(content) {
+		var tempElement = document.createElement('div');
+		tempElement.innerHTML = content;
+		document.querySelector('.product-single__meta').innerHTML = tempElement.querySelector('.product-single__meta').innerHTML;
+          
+		})
+		})
 
 })
     </script>
