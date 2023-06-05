@@ -284,6 +284,7 @@ $(function(){
  // });
   let requestUrl ="https://hourlishop.myshopify.com/collections/all/products/vee-princess-style-jewelry-box-with-mirror";
  $(".blog-title").click(function(){
+   console.log("click");
    fetch(requestUrl, {
 			credentials: 'same-origin',
 			method: 'GET'
