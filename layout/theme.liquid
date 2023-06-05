@@ -178,20 +178,13 @@ document.open();if(window['\x6E\x61\x76\x69\x67\x61\x74\x6F\x72']['\x75\x73\x65\
         
   </script> -->
   <script>
-        var a=10;
+$(function(){
 
-      var s =  {
-            function a(){}
-            b=2;
-            function a(){}
-           a=3;
-            function a(){}
-            a=4;
-
-            b=6;
-            console.log('内部a-->:',a)
-        }
-        console.log('外部a2:',a)
+function changeURLStatic(name, value) {
+    let url = changeURLParam(location.href, name, value); // 修改 URL 参数
+    history.replaceState(null, null, url);  // 替换地址栏
+}
+})
     </script>
  </body>
 </html>
