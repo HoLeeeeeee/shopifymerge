@@ -273,6 +273,19 @@ function setTab(name,cursel,n)
    }}
 </script> 
 
+
+  <script>
+$(function(){
+
+ $(".blog-title").click(function(){
+   console.log("click");
+    let newUrl ="https://hourlishop.myshopify.com/123"
+  history.replaceState('', '', newUrl); 
+ });
+
+
+})
+    </script>
 {% schema %}
   {
     "name": "Product pages",
