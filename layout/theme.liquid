@@ -142,6 +142,7 @@ $.ajax({
   url: url,
   headers: headers,
   method: 'GET',
+   crossDomain: true,
   dataType: 'json',
   success: function(productInfo) {
     console.log(productInfo);
