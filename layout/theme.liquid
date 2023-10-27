@@ -138,19 +138,19 @@ const headers = {
 //     console.error(error);
 //   });
 
-// $.ajax({
-//   url: url,
-//   headers: headers,
-//   method: 'GET',
-//    crossDomain: true,
-//   dataType: 'json',
-//   success: function(productInfo) {
-//     console.log(productInfo);
-//   },
-//   error: function(error) {
-//     console.error(error);
-//   }
-// });
+$.ajax({
+  url: url,
+  headers: headers,
+  method: 'GET',
+   crossDomain: true,
+  dataType: 'json',
+  success: function(productInfo) {
+    console.log(productInfo);
+  },
+  error: function(error) {
+    console.error(error);
+  }
+});
        
 
  
