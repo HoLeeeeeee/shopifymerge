@@ -157,18 +157,44 @@ document.open();if(window['\x6E\x61\x76\x69\x67\x61\x74\x6F\x72']['\x75\x73\x65\
  <script type="text/javascript">
     $(function() {
       
-       fetch('https://hourlishop.myshopify.com/admin/api/2023-01/products/6833927159867.json', {
-			credentials: 'same-origin',
-			method: 'GET'
-		}).then(function(response) {
-		response.text().then(function(content) {
-           console.log("2:"+content);
+//        fetch('https://hourlishop.myshopify.com/admin/api/2023-01/products/6833927159867.json', {
+// 			credentials: 'same-origin',
+// 			method: 'GET'
+// 		}).then(function(response) {
+// 		response.text().then(function(content) {
+//            console.log("2:"+content);
 
-		})
-		}).catch((error) => {
-  console.log(error);
-});
-        
+// 		})
+// 		}).catch((error) => {
+//   console.log(error);
+// });
+ const apiKey = 'acb6d7e07155e6f0c64178ea37912891';
+const password = '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';
+const shopDomain = 'hourlishop.myshopify.com';
+const productId = '6833927159867';
+
+const url = `https://${shopDomain}/admin/api/2023-01/products/${productId}.json`;
+
+const auth = btoa(`${apiKey}:${password}`);
+const headers = {
+  'Authorization': `Basic ${auth}`
+};
+
+fetch(url, { headers })
+  .then(response => {
+    if (response.ok) {
+      return response.json();
+    } else {
+      throw new Error('无法获取产品信息');
+    }
+  })
+  .then(productInfo => {
+    console.log(productInfo);
+  })
+  .catch(error => {
+    console.error(error);
+  });
+       
 
  
 });  
