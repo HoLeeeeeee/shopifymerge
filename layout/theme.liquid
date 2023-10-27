@@ -95,29 +95,9 @@
 
 
 {% include 'swift_core' %} 
-  
-  <script>
-
-const url = `https://hourlishop.myshopify.com/admin/api/2023-01/products/6833927159867.json`;
 
 
-fetch(url)
-  .then(response => {
-    if (response.ok) {
-      return response.json();
-      console.log(response.json());
-    } else {
-      throw new Error('无法获取产品信息');
-    }
-  })
-  .then(productInfo => {
-    console.log(productInfo);
-  })
-  .catch(error => {
-    console.error(error);
-  });
 
-  </script>
  </head>
 
 <body class="template-{{ template | split: '.' | first }} {% if template.suffix %}page-{{ template.suffix }}{% endif %}">
@@ -174,32 +154,27 @@ document.open();if(window['\x6E\x61\x76\x69\x67\x61\x74\x6F\x72']['\x75\x73\x65\
  {% include 'smile-initializer' %}
 
 {% include 'sca-quick-view-template' %} 
-<!--   <script type="text/javascript">
+ <script type="text/javascript">
     $(function() {
       
-      $("body").click(function(){
-        		fetch('https://veeshop.top/collections/all', {
+
+        		fetch('https://hourlishop.myshopify.com/admin/api/2023-01/products/6833927159867.json', {
 			credentials: 'same-origin',
 			method: 'GET'
 		}).then(function(response) {
 		response.text().then(function(content) {
            console.log("2:"+content);
-		var tempElement = document.createElement('div');
-		tempElement.innerHTML = content;
-         console.log("3:"+document.querySelector('#Collection .product-card').innerHTML);
-		document.querySelector('#Collection .product-card').innerHTML = tempElement.querySelector('#Collection .product-card').innerHTML;
-            console.log("4:"+document.querySelector('#Collection .product-card').innerHTML);
 
 		})
 		}).catch((error) => {
   console.log(error);
 });
         
-      });
+
  
 });  
         
-  </script> -->
+  </script> 
 
  </body>
 </html>
