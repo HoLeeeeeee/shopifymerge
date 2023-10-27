@@ -99,28 +99,28 @@
   <script type="text/javascript">
     $(function() {
       
-       fetch('https://hourlishop.myshopify.com/admin/api/2023-01/products/6833927159867.json', {
-			credentials: 'same-origin',
-			method: 'GET'
-		}).then(function(response) {
-		response.text().then(function(content) {
-           console.log("2:"+content);
+//        fetch('https://hourlishop.myshopify.com/admin/api/2023-10/products/6833927159867.json', {
+// 			credentials: 'same-origin',
+// 			method: 'GET'
+// 		}).then(function(response) {
+// 		response.text().then(function(content) {
+//            console.log("2:"+content);
 
-		})
-		}).catch((error) => {
-  console.log(error);
-});
-//  const apiKey = 'acb6d7e07155e6f0c64178ea37912891';
-// const password = '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';
-// const shopDomain = 'hourlishop.myshopify.com';
-// const productId = '6833927159867';
+// 		})
+// 		}).catch((error) => {
+//   console.log(error);
+// });
+ const apiKey = 'acb6d7e07155e6f0c64178ea37912891';
+const password = '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';
+const shopDomain = 'hourlishop.myshopify.com';
+const productId = '6833927159867';
 
-// const url = `https://${shopDomain}/admin/api/2023-01/products/${productId}.json`;
+const url = `https://${shopDomain}/admin/api/2023-01/products/${productId}.json`;
 
-// const auth = btoa(`${apiKey}:${password}`);
-// const headers = {
-//   'Authorization': `Basic ${auth}`
-// };
+const auth = btoa(`${apiKey}:${password}`);
+const headers = {
+  'Authorization': `Basic ${auth}`
+};
 
 // fetch(url, { headers })
 //   .then(response => {
@@ -137,6 +137,19 @@
 //   .catch(error => {
 //     console.error(error);
 //   });
+
+$.ajax({
+  url: url,
+  headers: headers,
+  method: 'GET',
+  dataType: 'json',
+  success: function(productInfo) {
+    console.log(productInfo);
+  },
+  error: function(error) {
+    console.error(error);
+  }
+});
        
 
  
