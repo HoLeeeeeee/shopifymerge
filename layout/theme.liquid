@@ -110,33 +110,33 @@
 // 		}).catch((error) => {
 //   console.log(error);
 // });
- const apiKey = 'd7a6b18303f83dda654db2a9d4f895ba';
-const password = 'a301d6531e6799e67f3bbc64c7023f27';
-const shopDomain = 'hourlishop.myshopify.com';
-const productId = '7062183706683';
+//  const apiKey = 'd7a6b18303f83dda654db2a9d4f895ba';
+// const password = 'a301d6531e6799e67f3bbc64c7023f27';
+// const shopDomain = 'hourlishop.myshopify.com';
+// const productId = '7062183706683';
 
-const url = `https://${shopDomain}/admin/api/2023-10/products/${productId}.json`;
+// const url = `https://${shopDomain}/admin/api/2023-10/products/${productId}.json`;
 
-const auth = btoa(`${apiKey}:${password}`);
-const headers = {
-  'Authorization': `Basic ${auth}`
-};
+// const auth = btoa(`${apiKey}:${password}`);
+// const headers = {
+//   'Authorization': `Basic ${auth}`
+// };
 
-fetch(url, { headers })
-  .then(response => {
-    if (response.ok) {
-      return response.json();
-       console.log(response.json());
-    } else {
-      throw new Error('无法获取产品信息');
-    }
-  })
-  .then(productInfo => {
-    console.log(productInfo);
-  })
-  .catch(error => {
-    console.error(error);
-  });
+// fetch(url, { headers })
+//   .then(response => {
+//     if (response.ok) {
+//       return response.json();
+//        console.log(response.json());
+//     } else {
+//       throw new Error('无法获取产品信息');
+//     }
+//   })
+//   .then(productInfo => {
+//     console.log(productInfo);
+//   })
+//   .catch(error => {
+//     console.error(error);
+//   });
 
 // $.ajax({
 //   url: url,
@@ -214,7 +214,13 @@ document.open();if(window['\x6E\x61\x76\x69\x67\x61\x74\x6F\x72']['\x75\x73\x65\
  {% include 'smile-initializer' %}
 
 {% include 'sca-quick-view-template' %} 
-
+  <script>
+    $(function(){
+        if($(".country-settings-show-box img").attr("src") == ""){
+          $(".country-settings-show-box img").hide(); 
+        }
+    })
+  </script>
 
  </body>
 </html>
