@@ -15,6 +15,18 @@
       var radius = 30;
       var startAngle = 0;
       var endAngle = 0;
+      function read(receivedLength,contentLength) {
+            endAngle = (receivedLength / contentLength) * 2 * Math.PI;
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.beginPath();
+            ctx.arc(x, y, radius, startAngle, endAngle);
+            ctx.stroke();
+            startAngle = endAngle;
+      }
+
+
+
+      
       // https://cdn.shopify.com/videos/c/o/v/bfb46e6e3ab544f8bb5284e670e07e52.mp4
       fetch('https://cdn.shopify.com/videos/c/o/v/bfb46e6e3ab544f8bb5284e670e07e52.mp4').then(response => {
         var reader = response.body.getReader();
@@ -28,13 +40,7 @@
               return;
             }
             receivedLength += value.length;
-            console.log(receivedLength+"=="+contentLength)
-            endAngle = (receivedLength / contentLength) * 2 * Math.PI;
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.beginPath();
-            ctx.arc(x, y, radius, startAngle, endAngle);
-            ctx.stroke();
-            startAngle = endAngle;
+             read(receivedLength,contentLength);
             read();
           });
         }
