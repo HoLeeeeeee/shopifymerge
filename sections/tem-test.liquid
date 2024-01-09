@@ -2,7 +2,7 @@
   <div id="progress"></div>
   <script>
     function makeRequest() {
-      fetch('https://hourlishop.myshopify.com/pages/demo').then(response => {
+      fetch('https://hourlishop.myshopify.com/collections/all').then(response => {
         const reader = response.body.getReader();
         const contentLength = +response.headers.get('content-length');
         let receivedLength = 0; // 已接收的数据长度
