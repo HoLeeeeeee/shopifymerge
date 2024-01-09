@@ -29,7 +29,7 @@
             }
             receivedLength += value.length;
             console.log(receivedLength+"=="+contentLength)
-            endAngle = (receivedLength / contentLength) * 2 * Math.PI;
+            endAngle = (receivedLength / 142063) * 2 * Math.PI;
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             ctx.beginPath();
             ctx.arc(x, y, radius, startAngle, endAngle);
