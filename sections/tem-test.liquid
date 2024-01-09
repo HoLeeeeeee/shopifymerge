@@ -16,7 +16,7 @@
       let startAngle = 0;
       let endAngle = 0;
 
-      fetch('your-url').then(response => {
+      fetch('https://hourlishop.myshopify.com/collections/all/products/demo').then(response => {
         const reader = response.body.getReader();
         const contentLength = +response.headers.get('content-length');
         let receivedLength = 0;
