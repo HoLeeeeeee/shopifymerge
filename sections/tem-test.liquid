@@ -1,5 +1,6 @@
  <button onclick="makeRequest()">发起请求</button>
   <div id="progress"></div>
+    <div id="content"></div>
   <script>
     function makeRequest() {
       fetch('https://hourlishop.myshopify.com/collections/all').then(response => {
@@ -11,6 +12,7 @@
           reader.read().then(({ done, value }) => {
             if (done) {
               return;
+              
             }
             receivedLength += value.length;
             console.log(receivedLength+"=="+contentLength);
