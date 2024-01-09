@@ -12,7 +12,7 @@
           reader.read().then(({ done, value }) => {
             if (done) {
               return;
-              
+             
             }
             receivedLength += value.length;
             console.log(receivedLength+"=="+contentLength);
@@ -22,7 +22,10 @@
         }
 
         read();
-      });
+      }).then(data => {
+    console.log(data);
+         document.getElementById('content').innerhtml = data
+  });
     }
   </script> 
 
