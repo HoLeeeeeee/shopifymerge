@@ -50,7 +50,6 @@
         "type": "header",
         "settings": {
           "align_logo": "center",
-          "logo": "shopify:\/\/shop_images\/7ce2d81e407da40b320a33a8e461378_2c252377-7fff-4ab6-b266-b64f3c1b923e.png",
           "logo_max_width": 130,
           "main_linklist": "menu01",
           "sub_linklist": "menu02",
