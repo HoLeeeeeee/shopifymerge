@@ -7,8 +7,10 @@
 
 <script>
 
-var xhr = new XMLHttpRequest();
-
+  
+  
+function launchRequest(url){
+ var xhr = new XMLHttpRequest();
 // 监听进度事件
 xhr.onprogress = function(e) {
   if (e.lengthComputable) {
@@ -29,10 +31,24 @@ xhr.onload = function() {
     console.error('请求出错: ' + xhr.status);
   }
 };
-
 // 发送请求
-xhr.open('GET', 'https://hourlishop.myshopify.com/pages/demo', true);
-xhr.send();
+xhr.open('GET', url , true);
+xhr.send(); 
+} 
 
+$(".btn-testbox").click(()=>{
+  console.log("click");
+});
+  
   
 </script>
+
+
+
+
+
+
+
+
+
+
