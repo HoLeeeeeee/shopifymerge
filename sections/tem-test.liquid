@@ -11,10 +11,10 @@
         function read() {
           reader.read().then(({ done, value }) => {
             if (done) {
-              console.log('请求完成');
               return;
             }
             receivedLength += value.length;
+            console.log(receivedLength+"=="+contentLength);
             document.getElementById('progress').innerText = '进度: ' + Math.round((receivedLength / contentLength) * 100) + '% 完成';
             read();
           });
