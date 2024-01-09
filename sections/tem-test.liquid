@@ -1,23 +1,20 @@
-
-
-  <button onclick="makeRequest()">发起请求</button>
+ <button onclick="makeRequest()">发起请求</button>
   <div id="progress"></div>
-
   <script>
     function makeRequest() {
       fetch('https://hourlishop.myshopify.com/pages/demo').then(response => {
         const reader = response.body.getReader();
+        const contentLength = +response.headers.get('content-length');
         let receivedLength = 0; // 已接收的数据长度
 
         function read() {
           reader.read().then(({ done, value }) => {
             if (done) {
-              console.log('请求完成');
               return;
             }
             receivedLength += value.length;
-            // 在这里使用已接收的数据长度来估算进度
-            document.getElementById('progress').innerText = '已接收数据长度: ' + receivedLength;
+            console.log(receivedLength+"=="+contentLength);
+            document.getElementById('progress').innerText = '进度: ' + Math.round((receivedLength / contentLength) * 100) + '% 完成';
             read();
           });
         }
@@ -25,4 +22,6 @@
         read();
       });
     }
-  </script>
+  </script> 
+
+
