@@ -1,48 +1,43 @@
-<div class="testboxde">
-<span class="btn-testbox">
-    Launch a request
-</span>
-<span id="range-s"></span>  
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AJAX进度请求示例</title>
+  <script>
+    function makeRequest() {
+      var xhr = new XMLHttpRequest();
 
-<script>
+      // 监听进度事件
+      xhr.onprogress = function(e) {
+        if (e.lengthComputable) {
+          var percentComplete = (e.loaded / e.total) * 100;
+          document.getElementById('progress').innerText = '进度: ' + percentComplete + '% 完成';
+        }
+      };
 
-  
-  
-function launchRequest(url){
- var xhr = new XMLHttpRequest();
-// 监听进度事件
-xhr.onprogress = function(e) {
-  if (e.lengthComputable) {
-    var percentComplete = (e.loaded / e.total) * 100;
-    console.log('进度: ' + percentComplete + '% 完成');
-    // 在这里更新进度条或其他UI元素
-  }
-};
+      // 定义请求完成时的处理
+      xhr.onload = function() {
+        if (xhr.status >= 200 && xhr.status < 300) {
+          // 请求成功完成
+          var responseData = xhr.responseText;
+          // 在这里处理返回的数据
+        } else {
+          // 请求出错
+          console.error('请求出错: ' + xhr.status);
+        }
+      };
 
-// 定义请求完成时的处理
-xhr.onload = function() {
-  if (xhr.status >= 200 && xhr.status < 300) {
-    // 请求成功完成
-    var responseData = xhr.responseText;
-    // 在这里处理返回的数据
-  } else {
-    // 请求出错
-    console.error('请求出错: ' + xhr.status);
-  }
-};
-// 发送请求
-xhr.open('GET', 'https://hourlishop.myshopify.com/pages/demo' , true);
-xhr.send(); 
-} 
+      // 发送请求
+      xhr.open('GET', 'your-url', true);
+      xhr.send();
+    }
+  </script>
+</head>
+<body>
+  <button onclick="makeRequest()">发起请求</button>
+  <div id="progress"></div>
+</body>
+</html>
 
-$(".btn-testbox").click(()=>{
-  console.log("run");
-   launchRequest();
-});
-  
-  
-</script>
 
 
 
