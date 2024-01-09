@@ -1,18 +1,47 @@
- <button onclick="makeRequest()">发起请求</button>
-  <div id="progress"></div>
-    <div id="content"></div>
+  <button onclick="makeRequest()">发起请求</button>
+  <canvas id="canvas" width="100" height="100"></canvas>
+  <style>
+    canvas {
+      border: 1px solid #000;
+    }
+  </style>
   <script>
     function makeRequest() {
-      fetch('https://hourlishop.myshopify.com/collections/all').then(response => {
+      const progressBar = document.getElementById('progress');
+      const canvas = document.getElementById('canvas');
+      const ctx = canvas.getContext('2d');
+      const x = canvas.width / 2;
+      const y = canvas.height / 2;
+      const radius = 30;
+      let startAngle = 0;
+      let endAngle = 0;
 
-       response.text().then(html => {
-      // 在这里处理返回的HTML内容
-      console.log(html);
-      // 将HTML内容插入到页面中
-      document.getElementById('content').innerHTML = html;
-    })
+      fetch('your-url').then(response => {
+        const reader = response.body.getReader();
+        const contentLength = +response.headers.get('content-length');
+        let receivedLength = 0;
+
+        function read() {
+          reader.read().then(({ done, value }) => {
+            if (done) {
+              console.log('请求完成');
+              return;
+            }
+            receivedLength += value.length;
+            endAngle = (receivedLength / contentLength) * 2 * Math.PI;
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.beginPath();
+            ctx.arc(x, y, radius, startAngle, endAngle);
+            ctx.stroke();
+            startAngle = endAngle;
+            read();
+          });
+        }
+
+        read();
       });
     }
-  </script> 
+  </script>
+
 
 
