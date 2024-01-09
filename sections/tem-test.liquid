@@ -32,13 +32,13 @@ xhr.onload = function() {
   }
 };
 // 发送请求
-xhr.open('GET', url , true);
+xhr.open('GET', 'https://hourlishop.myshopify.com/pages/demo' , true);
 xhr.send(); 
 } 
 
 $(".btn-testbox").click(()=>{
   console.log("run");
-   launchRequest('https://hourlishop.myshopify.com/pages/demo');
+   launchRequest();
 });
   
   
