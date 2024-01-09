@@ -4,24 +4,7 @@
   <script>
     function makeRequest() {
       fetch('https://hourlishop.myshopify.com/collections/all').then(response => {
-        const reader = response.body.getReader();
-        const contentLength = +response.headers.get('content-length');
-        let receivedLength = 0; // 已接收的数据长度
 
-        function read() {
-          reader.read().then(({ done, value }) => {
-            if (done) {
-              return;
-             
-            }
-            receivedLength += value.length;
-            console.log(receivedLength+"=="+contentLength);
-            document.getElementById('progress').innerText = '进度: ' + Math.round((receivedLength / contentLength) * 100) + '% 完成';
-            read();
-          });
-        }
-
-        read();
        response.text().then(html => {
       // 在这里处理返回的HTML内容
       console.log(html);
