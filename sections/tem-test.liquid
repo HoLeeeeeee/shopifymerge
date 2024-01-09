@@ -16,14 +16,7 @@
       var radius = 30;
       var startAngle = 0;
       var endAngle = 0;
-      function read(receivedLength,contentLength) {
-            endAngle = (receivedLength / contentLength) * 2 * Math.PI;
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.beginPath();
-            ctx.arc(x, y, radius, startAngle, endAngle);
-            ctx.stroke();
-            startAngle = endAngle;
-      }
+
 
 
 
@@ -42,7 +35,12 @@
             }
             receivedLength += value.length;
             document.getElementById('value').innerText = (receivedLength / contentLength) * 100+"%";
-             read(receivedLength,contentLength);
+            endAngle = (receivedLength / contentLength) * 2 * Math.PI;
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.beginPath();
+            ctx.arc(x, y, radius, startAngle, endAngle);
+            ctx.stroke();
+            startAngle = endAngle;
             read();
           });
         }
