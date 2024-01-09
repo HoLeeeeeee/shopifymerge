@@ -7,19 +7,19 @@
   </style>
   <script>
     function makeRequest() {
-      const progressBar = document.getElementById('progress');
-      const canvas = document.getElementById('canvas');
-      const ctx = canvas.getContext('2d');
-      const x = canvas.width / 2;
-      const y = canvas.height / 2;
-      const radius = 30;
-      let startAngle = 0;
-      let endAngle = 0;
+      var progressBar = document.getElementById('progress');
+      var canvas = document.getElementById('canvas');
+      var ctx = canvas.getContext('2d');
+      var x = canvas.width / 2;
+      var y = canvas.height / 2;
+      var radius = 30;
+      var startAngle = 0;
+      var endAngle = 0;
       // https://cdn.shopify.com/videos/c/o/v/bfb46e6e3ab544f8bb5284e670e07e52.mp4
       fetch('https://cdn.shopify.com/videos/c/o/v/bfb46e6e3ab544f8bb5284e670e07e52.mp4').then(response => {
-        const reader = response.body.getReader();
-        const contentLength = +response.headers.get('content-length');
-        let receivedLength = 0;
+        var reader = response.body.getReader();
+        var contentLength = +response.headers.get('content-length');
+        var receivedLength = 0;
 
         function read() {
           reader.read().then(({ done, value }) => {
