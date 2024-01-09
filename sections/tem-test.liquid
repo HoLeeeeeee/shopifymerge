@@ -40,10 +40,10 @@
             ctx.beginPath();
             console.log(ctx);
             ctx.arc(x, y, radius, startAngle, endAngle);
-         ctx.strokeStyle = 'blue'; // 设置描边颜色
+            ctx.strokeStyle = 'blue'; // 设置描边颜色
+            ctx.lineWidth = 3; // 设置线条粗细
       ctx.lineWidth = 10; // 设置线条粗细
       ctx.lineCap = 'round'; // 设置线条末端样式为圆形
-      ctx.lineJoin = 'bevel'; 
             ctx.stroke();
             startAngle = endAngle;
             read();
