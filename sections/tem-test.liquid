@@ -38,6 +38,7 @@
             endAngle = (receivedLength / contentLength) * 2 * Math.PI;
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             ctx.beginPath();
+            console.log(ctx);
             ctx.arc(x, y, radius, startAngle, endAngle);
             ctx.strokeStyle = 'blue'; // 设置描边颜色
             ctx.lineWidth = 3; // 设置线条粗细
