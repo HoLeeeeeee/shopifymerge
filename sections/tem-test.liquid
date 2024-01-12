@@ -38,7 +38,7 @@
               return;
             }
             receivedLength += value.length;
-            document.getElementById('value').innerText = (receivedLength / contentLength) * 100+"%";
+            document.getElementById('value').innerText = (receivedLength / contentLength).toFixed(4) * 100+"%";
             console.log(receivedLength+"/"+contentLength);
             endAngle = (receivedLength / contentLength) * 2 * Math.PI;
             ctx.clearRect(0, 0, canvas.width, canvas.height);
