@@ -32,7 +32,6 @@
       fetch('https://cdn.shopify.com/s/files/1/0560/0162/6273/files/2_c67442bb-8f7f-4f7e-ab0c-720f20fe5c34.png?v=1688022306').then(response => {
         var reader = response.body.getReader();
         var contentLength = +response.headers.get('content-length');
-        console.log(contentLength);
         var receivedLength = 0;
 
         function read() {
@@ -43,6 +42,7 @@
             }
             receivedLength += value.length;
             document.getElementById('value').innerText = (receivedLength / contentLength) * 100+"%";
+            console.log(receivedLength+"/"+contentLength);
             endAngle = (receivedLength / contentLength) * 2 * Math.PI;
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             ctx.beginPath();
