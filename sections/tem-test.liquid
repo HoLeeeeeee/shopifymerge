@@ -1,9 +1,14 @@
-  <button onclick="makeRequest()">发起请求</button>
-  <canvas id="canvas" width="100" height="100"></canvas>
-  <div id="value"></div>
+<div class="demo-01">
+ <canvas id="canvas" width="100" height="100"></canvas>
+ <div id="value"></div>
+ <button onclick="makeRequest()">发起请求</button>
+</div>  
   <style>
     canvas {
       border: 1px solid #000;
+    }
+    .demo-01{
+      
     }
   </style>
   <script>
@@ -16,11 +21,6 @@
       var radius = 30;
       var startAngle = 0;
       var endAngle = 0;
-
-
-
-
-      
       // https://cdn.shopify.com/videos/c/o/v/bfb46e6e3ab544f8bb5284e670e07e52.mp4
       // https://cdn.shopify.com/s/files/1/0560/0162/6273/files/2_c67442bb-8f7f-4f7e-ab0c-720f20fe5c34.png?v=1688022306
       fetch('https://cdn.shopify.com/videos/c/o/v/d70396ff65a64077b3dbc87e0e454441.mp4').then(response => {
@@ -43,8 +43,8 @@
             ctx.arc(x, y, radius, startAngle, endAngle);
             ctx.strokeStyle = 'blue'; // 设置描边颜色
             ctx.lineWidth = 3; // 设置线条粗细
-      ctx.lineWidth = 10; // 设置线条粗细
-      ctx.lineCap = 'round'; // 设置线条末端样式为圆形
+            ctx.lineWidth = 10; // 设置线条粗细
+            ctx.lineCap = 'round'; // 设置线条末端样式为圆形
             ctx.stroke();
             // startAngle = endAngle;
             read();
