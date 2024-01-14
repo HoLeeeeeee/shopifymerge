@@ -1,9 +1,31 @@
 {
   "type": "header",
-  "name": "Group name",
+  "name": "Test Group",
   "sections": {
+    "product-template": {
+      "type": "product-template",
+      "settings": {
+        "image_size": "large",
+        "show_quantity_selector": true,
+        "show_variant_labels": true,
+        "show_vendor": true,
+        "enable_zoom": true,
+        "enable_payment_button": true,
+        "show_share_buttons": true
+      }
+    },
+    "62fc7f50-9b24-4d8c-b84d-9ebeb56eef30": {
+      "type": "rich-text",
+      "settings": {
+        "full_width": false,
+        "section_title": "Talk about your brand",
+        "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
+        "text_size": "medium"
+      }
+    }
   },
   "order": [
-
+    "product-template",
+    "62fc7f50-9b24-4d8c-b84d-9ebeb56eef30"
   ]
 }
