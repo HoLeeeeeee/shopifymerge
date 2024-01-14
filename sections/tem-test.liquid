@@ -47,9 +47,9 @@
       var endAngle = 0;
       // https://cdn.shopify.com/videos/c/o/v/bfb46e6e3ab544f8bb5284e670e07e52.mp4
       // https://cdn.shopify.com/s/files/1/0560/0162/6273/files/2_c67442bb-8f7f-4f7e-ab0c-720f20fe5c34.png?v=1688022306
-      fetch('https://cdn.shopify.com/videos/c/o/v/bfb46e6e3ab544f8bb5284e670e07e52.mp4').then(response => { //在fetch的then方法中，定义一个处理响应的回调函数,在这个回调函数中，使用了response.body.getReader()来获取响应的数据流
-        var reader = response.body.getReader();
-        var contentLength = +response.headers.get('content-length'); //在read函数中，通过不断地读取数据流，计算接收到的数据长度，并根据接收到的数据长度和总长度来更新下载进度的圆形进度条的状态
+      fetch('https://cdn.shopify.com/videos/c/o/v/bfb46e6e3ab544f8bb5284e670e07e52.mp4').then(response => { 
+        var reader = response.body.getReader();//在fetch的then方法中，定义一个处理响应的回调函数,在这个回调函数中，使用了response.body.getReader()来获取响应的数据流
+        var contentLength = +response.headers.get('content-length'); 
         var receivedLength = 0;
 
         function read() {  //定义了一个read函数来读取数据流。
