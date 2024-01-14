@@ -47,29 +47,29 @@
       var endAngle = 0;
       // https://cdn.shopify.com/videos/c/o/v/bfb46e6e3ab544f8bb5284e670e07e52.mp4
       // https://cdn.shopify.com/s/files/1/0560/0162/6273/files/2_c67442bb-8f7f-4f7e-ab0c-720f20fe5c34.png?v=1688022306
-      fetch('https://cdn.shopify.com/videos/c/o/v/bfb46e6e3ab544f8bb5284e670e07e52.mp4').then(response => {
+      fetch('https://cdn.shopify.com/videos/c/o/v/bfb46e6e3ab544f8bb5284e670e07e52.mp4').then(response => { //在fetch的then方法中，定义一个处理响应的回调函数,在这个回调函数中，使用了response.body.getReader()来获取响应的数据流
         var reader = response.body.getReader();
-        var contentLength = +response.headers.get('content-length');
+        var contentLength = +response.headers.get('content-length'); //在read函数中，通过不断地读取数据流，计算接收到的数据长度，并根据接收到的数据长度和总长度来更新下载进度的圆形进度条的状态
         var receivedLength = 0;
 
-        function read() {
+        function read() {  //定义了一个read函数来读取数据流。
           reader.read().then(({ done, value }) => {
             if (done) {
               console.log('请求完成');
               return;
             }
             receivedLength += value.length;
-            document.getElementById('value').innerText = ((receivedLength / contentLength) * 100).toFixed(2)+"%";
+            document.getElementById('value').innerText = ((receivedLength / contentLength) * 100).toFixed(2)+"%"; //在read函数中，通过不断地读取数据流，计算接收到的数据长度，并根据接收到的数据长度和总长度来更新下载进度的圆形进度条的状态。
             console.log(receivedLength+"/"+contentLength);
             endAngle = (receivedLength / contentLength) * 2 * Math.PI;
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             ctx.beginPath();
-            ctx.arc(x, y, radius, startAngle, endAngle);
+            ctx.arc(x, y, radius, startAngle, endAngle); //ctx.arc方法来绘制圆形进度条
             ctx.strokeStyle = '#a7fff8'; // 设置描边颜色
             ctx.lineWidth = 3; // 设置线条粗细
             ctx.lineWidth = 10; // 设置线条粗细
             ctx.lineCap = 'round'; // 设置线条末端样式为圆形
-            ctx.stroke();
+            ctx.stroke();  
             // startAngle = endAngle;
             read();
           });
