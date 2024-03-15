@@ -17,7 +17,6 @@
           {% else %}
             {{ 'logo' | placeholder_svg_tag: 'placeholder-svg' }}
           {% endif %}
-          {{ block.settings.title }}
           {% if block.settings.link != blank %}
             </a>
           {% endif %}
@@ -115,12 +114,7 @@
               "es": "Opcional",
               "pt-BR": "Opcional"
             }
-          },{
-        "type": "text",
-        "id": "title",
-        "label": "title"
-        
-      }
+          }
         ]
       }
     ],

@@ -1,5 +1,3 @@
-
-
 <div data-section-id="{{ section.id }}" data-section-type="slideshow-section">
 
   {% if section.blocks.size > 0 %}
@@ -15,7 +13,7 @@
         </span>
       </button>
 
-      <div class="slideshow slideshow-{{ section.settings.slideshow_height }} " id="Slideshow-{{ section.id }}" data-autoplay="{{ section.settings.autoplay }}" data-speed="{{ section.settings.autoplay_speed }}">
+      <div class="slideshow " id="Slideshow-{{ section.id }}" data-autoplay="{{ section.settings.autoplay }}" data-speed="{{ section.settings.autoplay_speed }}">
         {% for block in section.blocks %}
           {%- assign is_background_video = false -%}
           {% if block.type == 'video' %}
@@ -91,8 +89,8 @@
                       <div class="slideshow__video-control--play-wrapper{% if block.settings.title != blank or block.settings.subheading != blank %} slideshow__video-control--play-wrapper--push{% endif %}">
                         <button type="button" class="text-link slideshow__video-control slideshow__video-control--play" data-controls="SlideshowVideo-{{ block.id }}">
                           <p class="text-center"> <img style="    position: relative;
-    left: 23%;" src="{{  'pause002.png' |asset_img_url }}" /></p>
-                          <p class="text-center" style="color:#fff">{{ 'sections.slideshow.play_video' | t }}</p>
+    left: 23%;" src="{{  'pausebutton001.png' |asset_img_url }}" /></p>
+                          <p class="text-center">{{ 'sections.slideshow.play_video' | t }}</p>
                         </button>
                       </div>
                     {% endunless %}
@@ -187,7 +185,7 @@
           {
             "type": "image_picker",
             "id": "image",
-            "label": "Image Size:1920px *"
+            "label": "Image Size:1920px * 500px"
           },
           {
             "type": "select",

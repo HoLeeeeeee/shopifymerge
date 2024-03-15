@@ -1,3 +1,5 @@
+<a href="https://veeshop.top/collections/all/products/leica-s-typ-002#testid">点我</a>
+
 <div class="page-width home-blog">
   {% if section.settings.title != blank %}
     <header class="section-header02 text-center">
@@ -51,7 +53,17 @@
 
           <div class="article__grid-meta{% if article.image %} article__grid-meta--has-image{% endif %}">
             <h4 class="article__title">
-              <a href="{{ article.url }}">{{ article.title }}</a>
+              <a href="{{ article.url }}">{{ article.title | downcase }}</a>
+              {{ '【STORY】A GIRL SHOULD BE TWO THINGS: WHO AND WHAT SHE WANTS' | downcase }}
+              {% assign strs_original = article.title | downcase %}
+                {% assign strs =  '【STORY】A GIRL SHOULD BE TWO THINGS: WHO AND WHAT SHE WANTS' | downcase %}
+              
+              {% if strs_original == strs %}
+                 yes
+              {% else %}
+              
+              no
+              {% endif %}
             </h4>
      {% if section.settings.blog_show_descri %}
             <div class="rte article__grid-excerpt">
@@ -118,8 +130,6 @@
   {% endunless %}
 
 </div>
-
-
 
 {% schema %}
   {

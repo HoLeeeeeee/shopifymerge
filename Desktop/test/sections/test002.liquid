@@ -1,0 +1,320 @@
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.4/css/swiper.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.4/js/swiper.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+<script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+{% liquid
+  assign secid = section.id | split:"__" 
+  assign secidlast = secid[1] | replace: "-","_"
+%}
+<div class="exhmediawp-container">
+
+   {% if section.settings.title != blank  %}
+    <div class="exhmediawp-title animate-js">{{ section.settings.title }}</div>
+   {% endif %}
+  
+
+   <div class="swiper-container swiper-containerp-spcon exhmediawp-spcon-{{ secidlast }}">
+<div class="exhmediawp-prev exhmediawp-btn exhmediawpprev-{{secidlast}}"><svg width="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M27 18L10 18" stroke="currentColor" stroke-linecap="round"/>
+<path d="M17 11L10 18" stroke="currentColor" stroke-linecap="round"/>
+<path d="M17 25L10 18" stroke="currentColor" stroke-linecap="round"/>
+<circle cx="17.5" cy="17.5" r="17" transform="matrix(-1 0 0 1 35 0)" stroke="currentColor"/>
+</svg>
+</div>
+      <div class="exhmediawp-next exhmediawp-btn exhmediawpnext-{{secidlast}}"><svg width="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8 18L25 18" stroke="currentColor" stroke-linecap="round"/>
+<path d="M18 11L25 18" stroke="currentColor" stroke-linecap="round"/>
+<path d="M18 25L25 18" stroke="currentColor" stroke-linecap="round"/>
+<circle cx="17.5" cy="17.5" r="17" stroke="currentColor"/>
+</svg>
+</div>
+         <div class="swiper-wrapper">
+   {% for block in section.blocks %}
+    <div class="swiper-slide">     
+        {% if block.settings.media_type == 'image'  %}
+          {% if forloop.first %}
+         <img class="lazyload {% if block.settings.imagemb  %}hide-mb{% endif %}"  src="{{ block.settings.image | img_url:'master' }}" alt=" " />
+          {% if block.settings.imagemb  %}
+             <img class="hide-pc"  src="{{ block.settings.imagemb | img_url:'master' }}" alt=" " />
+          {% endif %}
+        {% else %}
+           <img class="lazyload {% if block.settings.imagemb  %}hide-mb{% endif %}"  src="{{ block.settings.image | img_url:'100x' }}" data-src="{{ block.settings.image | img_url:'master' }}" alt=" " />
+          {% if block.settings.imagemb  %}
+             <img class="lazyload hide-pc"  src="{{ block.settings.imagemb | img_url:'100x' }}" data-src="{{ block.settings.imagemb | img_url:'master' }}" alt=" " />
+          {% endif %}
+        {% endif %}
+        {% elsif block.settings.media_type == 'video' %}
+         {% assign urlv = block.settings.video.sources %}
+          {% assign urlvmb = block.settings.video_mb.sources %}
+        <video  class="hide-mb exhmswvideo" width="100%" autoplay="autoplay" loop="loop" muted="muted" preload="metadata" webkit-playsinline="true" playsinline="true" x5-playsinline="true" x-webkit-airplay='allow' >
+        <source src="{{ urlv[1].url }}"/>
+        </video>
+        <video  class="hide-pc exhmswvideo" width="100%"  autoplay="autoplay" loop="loop" muted="muted" preload="metadata" webkit-playsinline="true" playsinline="true" x5-playsinline="true" x-webkit-airplay='allow' >
+        <source src="{{ urlvmb[1].url }}"/>
+        </video>
+       {% else %}
+       <div class="hide-mb exhmswvideo" id="playerlistvideo-{{forloop.index0}}" data-plyr-provider="vimeo" data-plyr-embed-id="{{ block.settings.vimeourl.id  }}"></div>
+      <div class="hide-pc exhmswvideo"  id="playerlistvideomb-{{forloop.index0}}" data-plyr-provider="vimeo" data-plyr-embed-id="{{ block.settings.vimeourlmb.id  }}"></div> 
+        <script>
+        $(function(){
+
+        if($(window).width() > 768){
+
+   // This is the bare minimum JavaScript. You can opt to pass no arguments to setup.
+  var player02_{{forloop.index0}} = new Plyr('#playerlistvideo-{{forloop.index0}}',{
+    muted: true,
+    autoplay: true,
+    controls: false,
+    captions: {active: true},
+      loop: {
+        active: true
+      },
+      playsinline:true,
+      youtube:{
+        autoplay:1,
+        muted:1,
+      },
+      tooltips:{
+        controls: false, 
+        seek: true,
+        muted: true,
+      },
+      ratio:"1920:628",
+      quality: 
+        { default: 1080, options: [4320, 2880, 2160, 1440, 1080, 720, 576, 480, 360, 240] }
+  });          
+ setTimeout(function(){   
+  // Expose
+  window.player02_{{forloop.index0}} = player02_{{forloop.index0}}; 
+        player02_{{forloop.index0}}.on('ready', (event) => {
+          // player02_{{forloop.index0}}.load();
+          //  player02_{{forloop.index0}}.muted=true;
+          // $(player02_{{forloop.index0}}).trigger("play"); 
+          console.log("run");
+          player02_{{forloop.index0}}.options.muted = true;
+          player02_{{forloop.index0}}.options.autoplay = true;
+       
+      })      
+},1500)
+
+
+
+}else{
+    setTimeout(function(){
+        // This is the bare minimum JavaScript. You can opt to pass no arguments to setup.
+  var player02_{{forloop.index0}} = new Plyr('#playerlistvideomb-{{forloop.index0}}',{
+    muted: true,
+    controls: true,
+    autoplay:false,
+      loop: {
+        active: true
+      },
+      playsinline:true,
+      tooltips:{
+        controls: false, 
+        seek: true
+      },
+      ratio:"1920:628",
+      quality: 
+        { default: 1080, options: [4320, 2880, 2160, 1440, 1080, 720, 576, 480, 360, 240] }
+  });
+    
+      
+},1000);
+
+}
+});
+ </script>  
+          
+       {% endif %}         
+   </div>
+   {% endfor %}
+      </div>
+    </div>
+
+  
+  <div class="swipereshtext-wrapper">
+    <div class="swipereshtext-{{ secidlast }} swiper-container">
+      <div class="swiper-wrapper">
+      {% for block in section.blocks %}
+      <div class=" swiper-slide{% if forloop.first %} active{% endif %}">
+         <div class="cleanlogo-item">
+        {% if block.settings.title != blank  %}
+        <div class="swipereshtext-title">{{ block.settings.title }}</div>
+        {% endif %}
+        {% if block.settings.content != blank  %}
+        <div class="swipereshtext-content">{{ block.settings.content }}</div>  
+        {% endif %}
+        </div>
+     </div>
+      {% endfor %}
+        </div>
+
+     </div>
+
+  </div>
+       <div class="swiper-pagination swiper-pag{{ secidlast }} hide-pc"></div>
+</div>
+
+
+
+<script>
+    $(function() {
+    if($(window).width() > 768){
+      $(".exhmswvideo.hide-pc").remove();
+    }else{
+      $(".exhmswvideo.hide-mb").remove();
+    }
+    });
+</script>  
+<script>
+    $(function() {
+    var swipereshtext_{{secidlast}} = new Swiper('.swipereshtext-{{ secidlast }}', {
+      slidesPerView: 4,
+      observer:true,
+      centeredSlides : false,
+    observeParents:true,
+      // freeMode: true,
+      watchSlidesProgress: true,
+        on:{
+    slideChange: function(){ 
+     if($(window).width() < 769){
+       exhmediawp_{{secidlast}}.slideTo(this.activeIndex);      
+     }
+    },
+  },
+       breakpoints: { 
+      300: {
+        slidesPerView : 1
+      }, 
+      500: { 
+        slidesPerView : 1.3,centeredSlides : true
+      }, 
+      769: { 
+        slidesPerView : 1.8
+      }, 
+      1200: {    
+      slidesPerView : 3
+      } 
+    },
+    });
+      
+    var exhmediawp_{{secidlast}} = new Swiper('.exhmediawp-spcon-{{ secidlast }}', {
+      thumbs: {
+        swiper: swipereshtext_{{secidlast}},
+      },
+    //     autoplay: {
+    // delay: 4000,
+    // stopOnLastSlide: false,
+    // disableOnInteraction: true,
+    // },
+     slidesPerView : 1,
+      observer:true,
+    observeParents:true,
+            pagination: {
+      el: '.swiper-pag{{ secidlast }}',clickable:true,
+    },
+     navigation: {
+      nextEl: '.exhmediawpnext-{{secidlast}}',
+      prevEl: '.exhmediawpprev-{{secidlast}}',   
+
+    }, on:{
+    slideChange: function(){ 
+      $('.swipereshtext-wrapper .swiper-slide').removeClass('active'); 
+      $('.swipereshtext-wrapper .swiper-slide').eq(this.activeIndex).addClass('active');
+       swipereshtext_{{ secidlast }}.slideTo(this.activeIndex, 100);
+      // if($("player02_"+this.activeIndex)){
+      //   console.log()
+      //   $(".player02_"+this.activeIndex).trigger("play")
+      // }
+    },
+  },
+      
+    });
+
+    });
+</script>
+
+
+
+{% schema %}
+  {
+    "name": "CES ImageChange",
+"settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      }
+    ],
+    "blocks": [
+     {
+        "type": "block",
+        "name": "block",
+        "settings": [
+       {
+        "type": "select",
+        "id": "media_type",
+        "label": "Media Type",
+        "options": [
+          {
+            "value": "image",
+            "label": "Image"
+          },{
+            "value": "video",
+            "label": "Video"
+          },{
+            "value": "vimeo_video",
+            "label": "Vimeo Video"
+          }
+        ],
+        "default": "image"
+      },{
+        "type":"video",
+        "id":"video",
+        "label":"Video"
+      },{
+        "type":"video",
+        "id":"video_mb",
+        "label":"Video(mobile)"
+      },{
+        "type": "image_picker",
+        "id": "image",
+        "label": "image"
+      },{
+        "type": "image_picker",
+        "id": "imagemb",
+        "label": "image(mobile)"
+      },{
+            "type": "video_url",
+            "id": "vimeourl",
+            "label": "vimeo link",
+            "accept": ["vimeo"]
+          },{
+            "type": "video_url",
+            "id": "vimeourlmb",
+            "label": "vimeo link",
+            "accept": ["vimeo"]
+          },{
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },{
+        "type": "richtext",
+        "id": "content",
+        "label": "content"
+      }
+          
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "CES ImageChange",
+        "category": "HO-layout"
+      }
+    ]
+  }
+{% endschema %}

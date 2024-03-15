@@ -1,0 +1,111 @@
+<div class="page-width" style="margin-bottom:200px">
+	<div class="grid">
+		<div class="grid__item medium-up--five-sixths medium-up--push-one-twelfth">
+			<div class="section-header text-center">
+				<!--         <h1>{{ page.title }}</h1> -->
+			</div>
+
+			<h1 style="
+    text-align: center;
+    margin-bottom: 100px;
+    font-weight: bold;">按钮组和文字效果</h1>
+			<div class="trantext_03" id="typetext"></div>
+
+			<p style="margin-top:20px"> -webkit-text-stroke: 1px #ff8100;<br>
+				-webkit-text-fill-color: transparent;</p>
+
+			<div class="trantext_01">THIS IS THE TEST TEXT</div>
+			<p style="margin-top:20px"> background: linear-gradient();<br>
+				-webkit-background-clip: text;<br>
+				-webkit-text-fill-color: transparent;<br>
+				background-clip: text;<br>
+				text-fill-color: transparent;<br>
+				color: transparent;
+			</p>
+
+
+			<div class="trantext_02">
+				<h2>THIS IS THE TEST TEXT</h2>
+			</div>
+			<p style="margin-top:20px"> 混合模式mix-blend-mode: hard-light;</p>
+
+
+			<svg width="600" height="300" class="trantext_04">
+				<defs>
+					<linearGradient id="linear" x1="0%" y1="0%" x2="100%" y2="0%">
+						<stop offset="0%" stop-color="#FF0000"></stop>
+						<stop offset="50%" stop-color="#00FF00"></stop>
+						<stop offset="100%" stop-color="#0000FF"></stop>
+					</linearGradient>
+				</defs>
+				<text x="30" y="150" fill="transparent" stroke="url(#linear)">THIS IS THE TEST TEXT</text>
+
+			</svg>
+
+
+			<div class="demobutton_06">
+				<p>BUTTON</p>
+			</div>
+			<p style="margin-top:20px"> 背景和文案颜色区分：mix-blend-mode: difference;</p>
+
+
+
+			<div class="demobutton_01">BUTTON</div>
+			<p style="margin-top:20px"> 文字和元素的内外阴影结合使用
+				<br> box-shadow: 0 0 #0006, 0 0 #3a7fb5, inset -5px -5px 9px #3a7fb5, inset 5px 5px 9px #0006;
+				<br> text-shadow: 1.5px 1.5px 1.5px #000, -1.5px -1.5px 1.5px #fff;
+			</p>
+
+
+
+			<div class="demobutton_02"><span>BUTTON</span></div>
+			<p style="margin-top:20px"> 伪元素+角向渐变+动画 background-image:
+				linear-gradient(#399953,#399953),linear-gradient(#fbb300,#fbb300),linear-gradient(#d53e33,#d53e33),linear-gradient(#377af5,#377af5);
+			</p>
+			<div class="demobutton_05"><span>BUTTON</span></div>
+			<div class="demobutton_03">BUTTON</div>
+			<p style="margin-top:20px"> box-shadow+动画 </p>
+			<div style="margin-top:50px;text-align:center"><button class="demobutton_09"><span>BUTTON</span></button>
+			</div>
+			<p style="margin-top:20px"> 伪类线条使用 </p>
+			<div
+				style="margin-top:50px;display: flex;justify-content: center;height: 200px;background: #fff;align-items: center;">
+				<button class="demobutton_10"><span>Click!</span><span>BUTTON</span></button></div>
+			<p style="margin-top:20px"> 景深perspective+3D旋转</p>
+
+			<a href="" class="demobutton_04" style="color: #ffffff; background-color: #3d663f">
+				<span>SHOP NOW</span>
+			</a>
+			<p style="margin-top:20px"> 伪元素按钮效果</p>
+			<a href="" class="demobutton_07" style="color: #ffffff; background-color: #3d663f">
+				<span>SHOP NOW</span>
+			</a>
+			<a href="" class="demobutton_08" style="color: #ffffff; background-color: #3d663f">
+				<span>SHOP NOW</span>
+			</a>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	var i = 1;
+
+	function write() {
+		var id = document.getElementById("typetext");
+		var msg = "THIS IS THE TEST TEXT，THIS IS THE TEST TEXT，THIS IS THE TEST TEXT，THIS IS THE TEST TEXT.";
+		var len = msg.length;
+		var msg1 = msg.substring(0, i);
+		id.innerHTML = msg1;
+		if (i == len) {
+
+		} else
+			i++;
+	}
+
+	function time1() {
+		var tre = setInterval(function() {
+			write()
+		}, 50);
+	}
+	time1();
+</script>

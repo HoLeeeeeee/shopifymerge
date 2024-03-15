@@ -172,6 +172,7 @@
 
 .sca-fancybox-lock body {
     overflow: hidden !important;
+	position: fixed !important;
 }
 
 .sca-fancybox-lock-test {
