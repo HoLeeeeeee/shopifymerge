@@ -336,7 +336,12 @@
           "1546580945129",
           "1546581033772"
         ],
+<<<<<<< HEAD
         "settings": {}
+=======
+        "settings": {
+        }
+>>>>>>> cb3e1f2eb7edf608f042f446ded47367a5d25150
       },
       "b74e0eaa-d53b-4dc8-a560-01ac54c0f8a4": {
         "type": "newsletter",
@@ -437,7 +442,12 @@
       "sections": {
         "header": {
           "type": "header",
+<<<<<<< HEAD
           "settings": {}
+=======
+          "settings": {
+          }
+>>>>>>> cb3e1f2eb7edf608f042f446ded47367a5d25150
         },
         "hero": {
           "type": "hero",
@@ -450,18 +460,33 @@
           "blocks": {
             "slideshow-0": {
               "type": "image",
+<<<<<<< HEAD
               "settings": {}
             },
             "slideshow-1": {
               "type": "image",
               "settings": {}
+=======
+              "settings": {
+              }
+            },
+            "slideshow-1": {
+              "type": "image",
+              "settings": {
+              }
+>>>>>>> cb3e1f2eb7edf608f042f446ded47367a5d25150
             }
           },
           "block_order": [
             "slideshow-0",
             "slideshow-1"
           ],
+<<<<<<< HEAD
           "settings": {}
+=======
+          "settings": {
+          }
+>>>>>>> cb3e1f2eb7edf608f042f446ded47367a5d25150
         },
         "featured-collections": {
           "type": "collection",
@@ -471,7 +496,12 @@
         },
         "feature-row": {
           "type": "feature-row",
+<<<<<<< HEAD
           "settings": {}
+=======
+          "settings": {
+          }
+>>>>>>> cb3e1f2eb7edf608f042f446ded47367a5d25150
         }
       },
       "content_for_index": [
@@ -609,20 +639,35 @@
         },
         "1492033809691": {
           "type": "map",
+<<<<<<< HEAD
           "settings": {}
+=======
+          "settings": {
+          }
+>>>>>>> cb3e1f2eb7edf608f042f446ded47367a5d25150
         },
         "1492033877875": {
           "type": "quotes",
           "blocks": {
             "1492033877875-0": {
               "type": "quote",
+<<<<<<< HEAD
               "settings": {}
+=======
+              "settings": {
+              }
+>>>>>>> cb3e1f2eb7edf608f042f446ded47367a5d25150
             }
           },
           "block_order": [
             "1492033877875-0"
           ],
+<<<<<<< HEAD
           "settings": {}
+=======
+          "settings": {
+          }
+>>>>>>> cb3e1f2eb7edf608f042f446ded47367a5d25150
         },
         "1492033924902": {
           "type": "custom-content",
@@ -648,6 +693,7 @@
           "blocks": {
             "1492096252560-0": {
               "type": "featured_collection",
+<<<<<<< HEAD
               "settings": {}
             },
             "1492096252560-1": {
@@ -657,6 +703,20 @@
             "1492096252560-2": {
               "type": "featured_collection",
               "settings": {}
+=======
+              "settings": {
+              }
+            },
+            "1492096252560-1": {
+              "type": "featured_collection",
+              "settings": {
+              }
+            },
+            "1492096252560-2": {
+              "type": "featured_collection",
+              "settings": {
+              }
+>>>>>>> cb3e1f2eb7edf608f042f446ded47367a5d25150
             }
           },
           "block_order": [
@@ -702,4 +762,8 @@
       ]
     }
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> cb3e1f2eb7edf608f042f446ded47367a5d25150

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!-- Start : SEOAnt BrokenLink Redirect -->
         <script type='text/javascript'>
             let req_url = "https://api-app.seoant.com/api/v1/receive_url?shop=hourlishop.myshopify.com&url=";
@@ -12,4 +13,20 @@
                     }
                 ).catch()
         </script>
+=======
+<!-- Start : SEOAnt BrokenLink Redirect -->
+        <script type='text/javascript'>
+            let req_url = "https://api-app.seoant.com/api/v1/receive_url?shop=hourlishop.myshopify.com&url=";
+            let url = window.location.pathname.replace(/%20/g,"-^-") + window.location.search.replace(/&/g,"-@-");
+            window.fetch(req_url + url).then(
+                    response => response.json()
+                ).then(
+                    data => {
+                        if(data.code == 200){
+                            window.location.href = data.data
+                        }
+                    }
+                ).catch()
+        </script>
+>>>>>>> cb3e1f2eb7edf608f042f446ded47367a5d25150
 <!-- END : SEOAnt BrokenLink Redirect -->

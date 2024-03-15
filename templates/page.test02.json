@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "sections": {
     "tem-test": {
@@ -9,3 +10,6 @@
     "tem-test"
   ]
 }
+=======
+{"sections":{"tem-test":{"type":"tem-test","settings":{}}},"order":["tem-test"]}
+>>>>>>> cb3e1f2eb7edf608f042f446ded47367a5d25150
