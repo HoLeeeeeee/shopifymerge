@@ -1,0 +1,270 @@
+<div id= "feedback-page">
+   <!--page header-->
+{% if section.settings.title != blank %}
+<div class="section-header text-center">
+  <h1>{{ section.settings.title | escape }}</h1>
+    <img style="width:10px" class="icoico2" src="{{'ys.png'|asset_img_url}}"  alt="" />
+    <img style="width:10px" class="icoico2" src="{{'ys.png'|asset_img_url}}"  alt="" />
+    <img style="width:10px" class="icoico2" src="{{'ys.png'|asset_img_url}}"  alt="" />
+  <p>{{ section.settings.small_title | escape }}</p>
+</div>
+{% endif %} 
+  
+    <!--page body -->
+  
+  <div class="  grid {% unless section.blocks.size == 3 %}grid--uniform{% endunless %} grid--flush-bottom">
+    {%- assign grid_item_width = 'medium-up--one-third' -%}
+    {%- assign max_height = 345 -%}
+    {% for block in section.blocks %}
+      {%- assign column_width = grid_item_width -%}
+            <div class="addmouseon grid__item {{ column_width }} text-{{ section.settings.align_text }}" {{ block.shopify_attributes }}>
+                  {% if block.settings.image != blank %}
+      {%- assign img_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+      {% include 'image-style' with image: block.settings.image, width: max_height, height: max_height, small_style: true, wrapper_id: wrapper_id, img_id: img_id %}
+      <div id="{{ wrapper_id }}" class="  feature-row__image-wrapper js">
+        <div style="padding-top:{{ 1 | divided_by: block.settings.image.aspect_ratio | times: 100}}%;">
+          <a target="_blank" href="{{ block.settings.button_link }}">
+            <img class="feature-row__image lazyload"
+                 src="{{ block.settings.image | img_url: '300x300' }}"
+                 data-src="{{ img_url }}"
+                 data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                 data-aspectratio="{{ block.settings.image.aspect_ratio }}"
+                 data-sizes="auto"
+                 alt="{{ block.settings.image.alt | escape }}">
+          </a>
+        </div>
+      </div>
+      <noscript>
+        <p>
+          {{ block.settings.image | img_url: '480x480', scale: 2 | img_tag: block.settings.image.alt, 'feature-row__image' }}
+        </p>
+      </noscript>
+      {% else %}
+      <p>
+        {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+      </p>
+      {% endif %}
+
+
+      <div class="feedback-box">
+        {% if block.settings.title != blank %}
+        <h3 class="h4" title="{{ block.settings.title | escape }}">{{ block.settings.title | escape }}</h3>
+       
+        {% endif %}
+        
+        {% if block.settings.text != blank %}
+        <div class="words">{{ block.settings.text }}</div>
+        {% endif %}
+
+        <div class="feed-info-logo">
+          <div class="customer-info">
+            {% if block.settings.small_image != blank %}
+
+            {%- assign img_url = block.settings.small_image | img_url: '49x49' | replace: '_1x1.', '_{width}x.' -%}
+            {% include 'image-style' with small_image: block.settings.small_image, width: max_width, height: max_height, small_style: true, wrapper_id: wrapper_id, img_id: img_id %}
+            <div id="{{ wrapper_id }}" class="feature-row__small_image-wrapper js">
+              <div style="padding-top:{{ 1 | divided_by: block.settings.ismall_image.aspect_ratio | times: 100}}%;">
+                <img id="{{ img_id }}"
+                     class="feature-row__small_image lazyload"
+                     src="{{ block.settings.small_image | img_url: '300x300' }}"
+                     data-src="{{ img_url }}"
+                     data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                     data-aspectratio="{{ block.settings.small_image.aspect_ratio }}"
+                     data-sizes="auto"
+                     alt="{{ block.settings.small_image.alt | escape }}">
+                
+           {% if block.settings.name_text != blank %}
+          <span class="name-info"> {{ block.settings.name_text }}</span>
+          {% endif %}
+
+          {% if block.settings.date_text != blank %}
+          <span class="date-info"> {{ block.settings.date_text }}</span>
+          {% endif %}
+              </div>
+            </div>
+            {% else %}
+            <img src="https://cdn.shopify.com/s/files/1/0033/1828/4343/files/feed-defaut-customer.png?8259085006067166196">
+            {% endif %}
+          </div>
+
+        
+           <div class="clear"></div>
+        </div>
+      </div>
+              
+     </div>
+    
+    
+    
+    
+    
+    
+    {% endfor %}
+    
+  </div>
+
+</div>
+
+<div id="insta-feed"></div>
+
+  <!---->
+
+
+
+<script type="text/javascript">
+  $(function(){
+    $(".addmouseon").onmouseover(function(){
+      $(this).Attr({opacity："0.5";color:"orange");
+	})
+  
+  
+  });
+  
+</script>
+
+
+
+
+{% schema %}
+   {
+    "name": "Feedback",
+    "settings": [
+     {
+   "type":      "header",
+   "content":   "Text",
+   "info":      "Text"
+},{
+   "type": "paragraph",
+   "content": "Thanks for buying my theme.  Please contact me at support@theme.com for support details."
+}, {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Feedback"
+      },
+      {
+        "type": "text",
+        "id": "small_title",
+        "label": "Subheading"
+      },
+      {
+   "type": "color",
+   "id": "background_color",
+   "label": "Background color",
+   "default": "#ffffff"
+    },        {
+            "type":    "font_picker",
+            "label":   "Heading font",
+            "id":      "heading_font",
+            "default": "helvetica_n4"
+        },{
+   "type": "collection",
+   "id": "feature_collection",
+   "label": "Feature collection"
+},{
+   "type": "product",
+   "id": "feature_product",
+   "label": "Feature product"
+},{
+   "type": "blog",
+   "id": "sidebar_blog",
+   "label": "Blog for sidebar"
+},{
+   "type": "page",
+   "id": "homepage",
+   "label": "Front page"
+},{
+   "id": "video_url",
+   "type": "video_url",
+   "label": "Video URL",
+   "accept": ["youtube", "vimeo"],
+   "default": "https://www.youtube.com/watch?v=_9VUPq3SxOc"
+},{
+   "type": "html",
+   "id": "html_area",
+   "label": "Custom HTML",
+   "default": "<div><p>Some HTML content</p></div>"
+},{
+   "type": "article",
+   "id": "featured_article",
+   "label": "Article to feature on the home page"
+}
+    ],
+    "blocks": [
+      {
+        "type": "text_block",
+        "name": "Column",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "Add a title or tagline"
+          },
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text",
+            "default": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.</p>"
+          },
+          {
+            "type": "image_picker",
+            "id": "small_image",
+            "label": "Customer Image"
+          },
+          {
+            "type": "richtext",
+            "id": "name_text",
+            "label": "Customer Name",
+            "default": "<p></p>"
+          },
+		  {
+            "type": "richtext",
+            "id": "date_text",
+            "label": "Release Date",
+            "default": "<p></p>"
+          },
+          {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button link"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Feedback",
+        "category": "Text",
+        "blocks": [
+          {
+            "type": "text_block"
+          },
+          {
+            "type": "text_block"
+          },
+          {
+            "type": "text_block"
+          },
+		  {
+            "type": "text_block"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+
+
+
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
