@@ -18,13 +18,9 @@
 {% if cart.attributes.pagination != blank %}
 {% assign limit = cart.attributes.pagination | default:limit | abs %}
 {% endif %}
-<<<<<<< HEAD
 {% for pagitem in cart.attributes %}
 {{ pagitem }} 
   {% endfor %}
-=======
-
->>>>>>> cb3e1f2eb7edf608f042f446ded47367a5d25150
 
 {% paginate collection.products by limit %}
                    {% if paginate.pages == paginate.current_page %}

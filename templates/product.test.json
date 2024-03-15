@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {
   "sections": {
     "product-template": {
@@ -18,6 +17,3 @@
     "product-template"
   ]
 }
-=======
-{"sections":{"product-template":{"type":"product-template","settings":{"image_size":"large","show_quantity_selector":true,"show_variant_labels":true,"show_vendor":true,"enable_zoom":true,"enable_payment_button":true,"show_share_buttons":true}}},"order":["product-template"]}
->>>>>>> cb3e1f2eb7edf608f042f446ded47367a5d25150
