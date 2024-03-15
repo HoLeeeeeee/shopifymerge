@@ -1,0 +1,114 @@
+<div class="Parkinsonvideo-container">
+  
+  <div class="Parkinsonvideo-box">
+
+ <div class="Parkinsonvideo-imgwrapper">
+     {% if section.settings.image_mb %}
+     <img class="small-hide" src="{{ section.settings.image | img_url:'master' }}"/>
+    <img class="medium--up-hide" src="{{ section.settings.image_mb | img_url:'master' }}"/>
+    {% else %}
+  <img src="{{ section.settings.image | img_url:'master' }}"/>
+    {% endif %}
+   
+   <div class="Parkinsonvideo-text-con">
+    {% if section.settings.title != blank %}
+  <div class="Parkinsonvideo-img-title">
+    {{ section.settings.title }}
+    </div>
+   {% endif %}
+       {% if section.settings.subtitle != blank %}
+  <div class="Parkinsonvideo-img-subtitle">
+    {{ section.settings.subtitle }}
+    </div>
+   {% endif %}
+       {% if section.settings.content != blank %}
+  <div class="Parkinsonvideo-img-content">
+    {{ section.settings.content }}
+    </div>
+   {% endif %}
+    {% if section.settings.btntext != blank %}
+    <span class="Parkinsonvideo-img-btn">
+    {{ section.settings.btntext }}<img src="https://cdn.shopifycdn.net/s/files/1/0559/5788/1006/files/Rectangle_555_1.png?v=1649664177" alt />
+    </span>
+   {% endif %}
+   </div>
+  </div>
+    
+    
+   {% if section.settings.video_url != blank %}
+    <div class="Parkinsonvideo-wrapper">
+   <video id="video_Parkinson" width="100%" loop="loop" controls webkit-playsinline="true" playsinline="true" mute>
+    <source src="{{  section.settings.video_url }}">
+  </video>
+    </div>
+   {% endif %}
+    
+  </div>
+
+<script defer>
+  $(function(){
+    $(".Parkinsonvideo-img-btn").click(function(){
+      $(".Parkinsonvideo-wrapper").show();
+      $("#video_Parkinson").trigger('play');
+
+    });
+
+       $("body").bind("click",function(evt){ 
+  if($(evt.target).closest("#video_Parkinson").length==0 && $(evt.target).closest(".Parkinsonvideo-img-btn").length==0)
+  { 
+      $(".Parkinsonvideo-wrapper").hide();
+    $("#video_Parkinson").trigger('pause');
+  } 
+}); 
+  });
+  </script>
+
+
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "Parkinson Video",
+    "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "image(Recommended size：1920*648px)"
+          },{
+            "type": "image_picker",
+            "id": "image_mb",
+            "label": "image Mobile(Recommended size：768*650px)"
+          },{
+            "type": "text",
+            "id": "video_url",
+            "label": "video_url"
+          },{
+            "type": "text",
+            "id": "title",
+            "label": "title"
+          },{
+            "type": "text",
+            "id": "subtitle",
+            "label": "subtitle"
+          },{
+            "type": "html",
+            "id": "content",
+            "label": "content"
+          },{
+            "type": "text",
+            "id": "btntext",
+            "label": "btntext"
+          }
+    ],
+    "presets": [
+      {
+        "name": "Parkinson Video",
+        "category": "Ho-Advance"
+ 
+      }
+    ]
+  }
+{% endschema %}
+

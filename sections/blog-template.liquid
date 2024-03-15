@@ -1,0 +1,464 @@
+{% paginate blog.articles by 2 %}
+
+  <div class="page-width">
+    <header class="section-header text-center">
+      <h1>{{ page_title }}</h1>
+      {% if blog.tags.size > 0 %}
+        <div class="select-group">
+          <label for="BlogTagFilter">{{ 'collections.filters.title_tags' | t }}</label>
+          <select id="BlogTagFilter" aria-describedby="warning-text">
+            <option value="/blogs/{{ blog.handle }}">{{ 'blogs.article.all_topics' | t }}</option>
+            {% for tag in blog.all_tags %}
+              <option value="/blogs/{{ blog.handle }}/tagged/{{ tag | handleize }}" {% if current_tags contains tag %}selected{% endif %}>{{ tag }}</option>
+            {% endfor %}
+          </select>
+          {% include 'icon-chevron-down' %}
+          <div id="warning-text" hidden>{{ 'collections.sorting.warning_message' | t }}</div>
+        </div>
+      {% endif %}
+    </header>
+  </div>
+
+
+  {% if section.settings.layout == 'grid' %}
+    <div class="page-width">
+      <ul class="grid grid--uniform grid--blog">
+        {% for article in blog.articles %}
+          <li class="grid__item medium-up--one-third">
+            <a href="{{ article.url }}" class="article__link">
+              {% if article.image %}
+                {% capture img_id %}ArticleImage-{{ article.image.id }}{% endcapture %}
+                {% capture img_wrapper_id %}ArticleImageWrapper-{{ article.image.id }}{% endcapture %}
+                {%- assign img_url = article.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+
+                {% include 'image-style' with image: article.image, small_style: true, width: 345, height: 345, wrapper_id: img_wrapper_id, img_id: img_id %}
+                <div id="{{ img_wrapper_id }}" class="article__grid-image-wrapper js">
+                  <div class="article__grid-image-container" style="padding-top:{{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;">
+                    <img id="{{ img_id }}"class="article__grid-image lazyload"src="{{ article.image | img_url: '300x300' }}"data-src="{{ img_url }}"data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"data-aspectratio="{{ article.image.aspect_ratio }}"data-sizes="auto"alt="">
+                  </div>
+                </div>
+                <noscript>
+                  <div class="article__grid-image-wrapper">
+                    {{ article | img_url: '345x345', scale: 2 | img_tag: article.title, 'article__grid-image' }}
+                  </div>
+                </noscript>
+              {% endif %}
+
+              <h2 class="article__title h3{% if article.image %} article__title--has-image{% endif %}">
+                {{ article.title | escape }}
+              </h2>
+            </a>
+
+            <div class="article__grid-meta{% if article.image %} article__grid-meta--has-image{% endif %}">
+              {% if section.settings.blog_show_author %}
+                <span class="article__author">{{ 'blogs.article.by_author' | t: author: article.author }}</span>
+              {% endif %}
+
+              {% if section.settings.blog_show_date %}
+                <span class="article__date">
+                  {{ article.published_at | time_tag: format: 'month_day_year' }}
+                </span>
+              {% endif %}
+
+              <div class="rte article__grid-excerpt">
+                {% if article.excerpt.size > 0 %}
+                  {{ article.excerpt }}
+                {% else %}
+                  {{ article.content | strip_html | truncate: 150 }}
+                {% endif %}
+              </div>
+
+              {% if article.tags.size > 0 %}
+                <div class="article__tags rte">
+                  <ul class="list--inline" aria-label="{{ 'blogs.article.tags' | t }}">
+                    {% for tag in article.tags %}
+                      <li>
+                        <a href="{{ blog.url }}/tagged/{{ tag | handle }}" class="article__grid-tag">{{ tag }}</a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </div>
+              {% endif %}
+
+              <ul class="list--inline article__meta-buttons">
+                <li>
+                  <a
+                    href="{{ article.url }}"
+                    class="btn btn--secondary btn--small"
+                    aria-label="{{ 'blogs.article.read_more_title' | t: title: article.title }}">
+                    {{ 'blogs.article.read_more' | t }}
+                  </a>
+                </li>
+
+                <ul class="list--inline article__meta-buttons">
+                  <li>
+                    <a href="{{ article.url }}" class="btn btn--tertiary btn--small">
+                      {{ 'blogs.article.read_more' | t }}
+                    </a>
+                  </li>
+
+                  {% if blog.comments_enabled? and article.comments_count > 0 %}
+                    <li>
+                      <a href="{{ article.url }}#comments" class="article__comment-count btn btn--tertiary btn--small">
+                        {{ 'blogs.comments.comments_with_count' | t: count: article.comments_count }}
+                      </a>
+                    </li>
+                  {% endif %}
+                </ul>
+              </div>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% else %}
+            <form
+          action="{{ routes.search_url }}"
+          method="get"
+          id="blog-search-form"
+          class=" blog-search-form"
+          role="search"
+        >
+          <input type="hidden" name="type" value="article">
+          <input type="hidden" name="options[prefix]" value="last">
+          <input
+            type="search"
+            class="new-search-bar"
+            name="q"
+            value="{{ search.terms | escape | replace: '*', '' }}"
+            placeholder="Search"
+            class="input-group-field"
+          >
+          <button type="submit" class="input-group-btn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21 21.0001L16.514 16.5061M19 10.5001C19 12.7545 18.1045 14.9165 16.5104 16.5105C14.9163 18.1046 12.7543 19.0001 10.5 19.0001C8.24566 19.0001 6.08365 18.1046 4.48959 16.5105C2.89553 14.9165 2 12.7545 2 10.5001C2 8.24578 2.89553 6.08377 4.48959 4.48971C6.08365 2.89566 8.24566 2.00012 10.5 2.00012C12.7543 2.00012 14.9163 2.89566 16.5104 4.48971C18.1045 6.08377 19 8.24578 19 10.5001V10.5001Z" stroke="black" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </form>
+    <ul class="blog-list-view" >
+    
+      {% for article in blog.articles %}
+        <li class="border-top">
+          <div class="page-width">
+            <div class="grid">
+              <div class="grid__item medium-up--five-sixths medium-up--push-one-twelfth">
+                <div class="article-listing">
+                  <h2 class="article__title h3">
+                    <a href="{{ article.url }}">{{ article.title }}</a>
+                  </h2>
+                  {% if section.settings.blog_show_author %}
+                    <span class="article__author">{{ 'blogs.article.by_author' | t: author: article.author }}</span>
+                  {% endif %}
+
+                  {% if section.settings.blog_show_date %}
+                    <span class="article__date">
+                      {{ article.published_at | time_tag: format: 'month_day_year' }}
+                    </span>
+                  {% endif %}
+
+                  {% if article.image %}
+                    {% capture img_id %}ArticleImage-{{ article.image.id }}{% endcapture %}
+                    {% capture img_wrapper_id %}ArticleImageWrapper-{{ article.image.id }}{% endcapture %}
+                    {%- assign img_url = article.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+
+                    {% include 'image-style' with image: article.image, small_style: false, width: 905, height: 600, wrapper_id: img_wrapper_id, img_id: img_id %}
+
+                    <div id="{{ img_wrapper_id }}" class="article__list-image-wrapper js">
+                      <a
+                        href="{{ article.url }}"
+                        style="padding-top:{{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;"
+                        class="article__list-image-container">
+                        <img id="{{ img_id }}"class="article__list-image lazyload"src="{{ article.image | img_url: '300x300' }}"data-src="{{ img_url }}"data-widths="[180, 360, 540, 720, 905, 1090, 1296, 1512, 1728, 2048]"data-aspectratio="{{ article.image.aspect_ratio }}"data-sizes="auto"alt="">
+                      </a>
+                    </div>
+
+                    <noscript>
+                      <p>
+                        <a href="{{ article.url }}">
+                          {{ article | img_url: '455x300', scale: 2 | img_tag: article.title }}
+                        </a>
+                      </p>
+                    </noscript>
+                  {% endif %}
+
+                  <div class="rte">
+                    {% if article.excerpt.size > 0 %}
+                      {{ article.excerpt }}
+                    {% else %}
+                      {{ article.content | strip_html | truncate: 150 }}
+                    {% endif %}
+                  </div>
+
+                  {% if article.tags.size > 0 %}
+                    <div class="article__tags article__tags--list rte">
+                      {{ 'blogs.article.posted_in' | t }}
+                      {% for tag in article.tags %}
+                        <a href="{{ blog.url }}/tagged/{{ tag | handle }}">{{ tag }}</a>
+                        {% unless forloop.last %},
+                        {% endunless %}
+                      {% endfor %}
+                    </div>
+                  {% endif %}
+
+                  <ul class="list--inline article__meta-buttons">
+                    {% if article.excerpt.size > 0 %}
+                      <li>
+                        <a
+                          href="{{ article.url }}"
+                          class="btn btn--tertiary btn--small"
+                          aria-label="{{ 'blogs.article.read_more_title' | t: title: article.title }}">
+                          {{ 'blogs.article.read_more' | t }}
+                        </a>
+                      </li>
+                    {% endif %}
+
+                    {% if blog.comments_enabled? and article.comments_count == 0 %}
+                      <li>
+                        <a href="{{ article.url }}#comment_form" class="btn btn--secondary btn--small">
+                          {{ 'blogs.comments.title' | t }}
+                        </a>
+                      </li>
+                    {% endif %}
+
+                    {% if blog.comments_enabled? and article.comments_count > 0 %}
+                      <li>
+                        <a href="{{ article.url }}#comments" class="article__comment-count btn btn--tertiary btn--small">
+                          {{ 'blogs.comments.comments_with_count' | t: count: article.comments_count }}
+                        </a>
+                      </li>
+                    {% endif %}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      {% endfor %}
+
+    </ul>
+        <script>
+          $('#blog-search-form').submit(function (event) {
+                event.preventDefault();
+                var form = $(this);
+                var htmlcode=""
+                  $.ajax({
+                    type: form.attr('method'),
+                    url: form.attr('action'),
+                    data: form.serialize()
+                  }).success(function (msg) {
+                    // console.log(msg);
+                    var data=$('<div></div>');
+                    data.html(msg);
+                    var article= data.find(".blog_search-result");
+                    if(article.length>0){
+                      article.each(function(i){
+                        htmlcode += $(this).html()
+                      })
+                    }else{
+                      htmlcode = 'Not search result.'
+                    }
+                     console.log(htmlcode);
+                    // $(".e-article-list-box").html(htmlcode);
+                  //   if( {{ paginate.items }}>{{ pagenum }} ){
+                  //         $(".main-blog .pagination__list").empty()
+                  //         var item=$(".blog-articles_card");
+                  //         if(item.length>{{ pagenum }}){
+                  //           var every_page = {{ pagenum }};    // per page length
+                  //           var total_all = item.length;    // total length
+                  //           var page_num = Math.ceil(total_all/every_page)//page number（2.5 ==> 3）
+                  //           item.each(function(i){  if(i>(every_page-1)){$(this).hide();}})
+                  //           for(var i=1;i<=page_num;i++ ){
+
+                  //               if(i==1){
+                  //                 $(".main-blog .pagination__list").append('<li><span class="pagination__item e-pagination_num pagination__item--current" aria-current="page" data-label="'+i+'">'+i+'</span></li>')
+                  //               }else{
+                  //                 $(".main-blog .pagination__list").append('<li><span class="pagination__num e-pagination_num pagination__item" aria-current="page" data-label="'+i+'">'+i+'</span></li>')
+                  //               }
+              
+                  //           }
+                  //           $(".main-blog .pagination__list").prepend('<li id="pre_page"><a class="blog_pagination--prev pagination__item pagination__item--next pagination__item-arrow link motion-reduce" aria-label="Previous page"><svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 1L1 6L6 11" stroke="#B6B6B6"/></svg></a></li>')
+                  //           $("#pre_page").find("a").addClass("pagination_unset")
+                  //           $(".main-blog .pagination__list").append('<li id="next_page"><a class="blog_pagination--next pagination__item pagination__item--prev pagination__item-arrow link motion-reduce" aria-label="Next page"><svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L6 6L1 11" stroke="#B6B6B6"/></svg></a></li>')
+                  //          var $current_page = ($(".pagination__item--current").text());//$current page number
+                  //          var flagdot=true;
+                  //          var flagdot01=true;
+                            
+                  //             $("#next_page").click(function(){
+                  //             if($current_page <page_num){
+                  //                $(".pagination__item[data-label='"+$current_page+"']").removeClass("pagination__item--current");
+                  //                 $current_page++;
+                  //                 $(".pagination__item[data-label='"+$current_page+"']").addClass("pagination__item--current");
+                  //                 $.each(item,function(index,item){
+                  //                     //get next page index
+                  //                     var start = ($current_page-1)*every_page;
+                  //                     if(index>=start&& index<start+every_page){
+                  //                         $(this).show();
+                  //                     }else{
+                  //                         $(this).hide();
+                  //                     }
+                  //                 })
+                  //               if($current_page > 1){
+                  //               $("#pre_page").find("a").removeClass("pagination_unset")
+                  //               }
+                  //               if($current_page == page_num){
+                  //                 $(this).find("a").addClass("pagination_unset")
+                  //               }else{
+                  //                 $(this).find("a").removeClass("pagination_unset")
+                  //               }
+                  //             }else{
+                  //                 return false;
+                  //             }
+                  //         })
+                  //       $("#pre_page").click(function(){
+                  //         $current_page = ($(".pagination__item--current").text());
+                  //         if($current_page > 1){
+                  //             $(".pagination__item[data-label='"+$current_page+"']").removeClass("pagination__item--current");
+                  //                 $current_page--;
+                            
+                  //                 $(".pagination__item[data-label='"+$current_page+"']").addClass("pagination__item--current");
+                  //             $.each(item,function(index,item){
+                  //                 var start = ($current_page-1)*every_page;
+                  //                 if(index>=start&& index<start+every_page){
+                  //                     $(this).show();
+                  //                 }else{
+                  //                     $(this).hide();
+                  //                 }
+                  //             })
+                  //             if($current_page <= 1){
+                  //               $(this).find("a").addClass("pagination_unset")
+                  //             }else{
+                  //               $(this).find("a").removeClass("pagination_unset")
+                  //             }
+                  //             if($current_page <= page_num){
+                  //                $("#next_page").find("a").removeClass("pagination_unset")
+                  //             }
+                  //         }else{
+                  //             return false;
+                  //         }
+                  //     })
+                  //   $(document).on("click","span.e-pagination_num",function(){
+                  //             var that=$(this);
+                  //       if(that.hasClass("pagination__item--current")) return false;
+                  //       $current_page = parseInt((that.text()));
+
+                  //       $("span.e-pagination_num").each(function(){
+                  //         $(this).removeClass("pagination__item--current");
+                  //       })
+                  //       that.addClass("pagination__item--current");
+                  //        $.each(item,function(index,item){
+                  //             var start = ($current_page-1)*every_page;
+                  //             if(index>=start&& index<start+every_page){
+                  //                 $(this).show();
+                  //             }else{
+                  //                 $(this).hide();
+                  //             }
+                  //         })
+                  //       if($current_page <= 1){
+                  //           $("#pre_page").find("a").addClass("pagination_unset")
+                  //         }else{
+                  //           $("#pre_page").find("a").removeClass("pagination_unset")
+                  //       }
+                  //       if($current_page >= page_num){
+                  //          $("#next_page").find("a").addClass("pagination_unset")
+                  //       }else{
+                  //          $("#next_page").find("a").removeClass("pagination_unset")
+                  //       }
+                  //     })
+
+                  // }
+                  //     }
+                  })
+
+              });
+        </script>
+                
+
+                
+  {% endif %}
+
+  {% if paginate.pages > 1 %}
+    {% include 'pagination' %}
+  {% endif %}
+
+{% endpaginate %}
+
+{% schema %}
+  {
+    "name": {
+      "en": "Blog pages",
+      "de": "Blogseiten",
+      "fr": "Pages du blog",
+      "it": "Pagine del blog",
+      "ja": "ブログページ",
+      "es": "Páginas del blog",
+      "pt-BR": "Páginas do blog"
+    },
+    "settings": [
+      {
+        "type": "select",
+        "id": "layout",
+        "label": {
+          "en": "Layout",
+          "de": "Layout",
+          "fr": "Mise en page",
+          "it": "Layout",
+          "ja": "レイアウト",
+          "es": "Diseño",
+          "pt-BR": "Layout"
+        },
+        "default": "list",
+        "options": [
+          {
+            "value": "grid",
+            "label": {
+              "en": "Grid",
+              "de": "Raster",
+              "fr": "Grille",
+              "it": "Griglia",
+              "ja": "グリッド",
+              "es": "Cuadrícula",
+              "pt-BR": "Grade"
+            }
+          }, {
+            "value": "list",
+            "label": {
+              "en": "List",
+              "de": "Liste",
+              "fr": "Liste",
+              "it": "Elenco",
+              "ja": "リスト",
+              "es": "Lista",
+              "pt-BR": "Lista"
+            }
+          }
+        ]
+      }, {
+        "type": "checkbox",
+        "id": "blog_show_author",
+        "label": {
+          "en": "Show author",
+          "de": "Autor anzeigen",
+          "fr": "Afficher l'auteur",
+          "it": "Mostra autore",
+          "ja": "執筆者を表示する",
+          "es": "Mostrar autor",
+          "pt-BR": "Exibir autor(a)"
+        },
+        "default": true
+      }, {
+        "type": "checkbox",
+        "id": "blog_show_date",
+        "label": {
+          "en": "Show date",
+          "de": "Datum anzeigen",
+          "fr": "Afficher la date",
+          "it": "Mostra data",
+          "ja": "日付を表示する",
+          "es": "Mostrar fecha",
+          "pt-BR": "Exibir data"
+        },
+        "default": true
+      }
+    ]
+  }
+{% endschema %}

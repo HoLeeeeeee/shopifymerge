@@ -1,0 +1,51 @@
+ <div class="palogo-container">
+{% if section.settings.title != blank %}
+  <div class="palogo-title">{{ section.settings.title }}</div>
+   {% endif %}
+  <div class="palogo-box">
+   {% for block in section.blocks %}
+  <div class="palogo-item">
+    {% if block.settings.image %}
+    <img alt src="{{ block.settings.image | img_url:'master' }}"/> 
+   {% endif %}
+   </div>
+   {% endfor %}
+  </div>
+
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "Logo",
+    "settings": [
+            {
+            "type": "text",
+            "id": "title",
+            "label": "title"
+          }
+    ],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image(Recommended size：144*70px)"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Logo",
+        "category": "Ho-Advance"
+ 
+      }
+    ]
+  }
+{% endschema %}
+
