@@ -1,0 +1,175 @@
+{{ assign 'secidlast' (replace section.id '-' '_') }}
+{{ assign 'urlv'  section.settings.video }}
+{{ assign 'urlvmb'  section.settings.video_mb }}
+<div class="tnv30scrollimg-container" id="tnv30scrollimg-{{secidlast}}">
+<div class="tnv30scrollimg-box container-ho">
+  <div class="tnv30scrollimg-box-img">
+    {{#if section.settings.media_type '==' 'image' }}
+      {{#if section.settings.image }}
+       <img class="{{#if section.settings.image_mb }}hide-mb{{/if}}" alt src="{{ image_url section.settings.image }}"/>
+      {{#if section.settings.image_mb }}
+      <img class="hide-pc" alt src="{{ image_url section.settings.image_mb }}"/>
+      {{/if}}
+      {{/if}}
+       {{else}}
+        <video class="hide-mb" width="100%" autoplay="autoplay"  loop="loop" muted="muted" preload="metadata" webkit-playsinline="true" playsinline="true" x5-playsinline="true" x-webkit-airplay='allow' >
+        <source src="{{ urlv }}"/>
+        </video>
+        <video class="hide-pc" width="100%" autoplay="autoplay" loop="loop" muted="muted" preload="metadata" webkit-playsinline="true" playsinline="true" x5-playsinline="true" x-webkit-airplay='allow' >
+        <source src="{{ urlvmb }}"/>
+        </video>
+      {{/if}}
+
+  </div>
+  <div class="tnv30scrollimg-mengceng"></div>
+  <div class="tnv30scrollimg-box-text">
+    <div class="tnv30scrollimg-box-title">{{{section.settings.title}}}</div>
+    <div class="tnv30scrollimg-box-content">{{{section.settings.content}}}</div>
+  </div>
+  
+</div>
+
+</div>
+
+<script> 
+    $(function(){
+      if($(window).width() > 768){
+        {{#or product.template_suffix '==' 'dtx10-2024' product.template_suffix '==' 'dtx10-202'}}
+        var perc_es = "25%"
+        {{else}}
+        var perc_es = "55%"
+        {{/or}}
+        
+      }else if($(window).width() <= 768 && $(window).width() > 550){
+         var perc_es = "10%"
+      }else{
+        var perc_es = "20%"
+      } 
+      
+       var controller_{{secidlast}} = new ScrollMagic.Controller();
+       var tweenmaxthr_{{secidlast}} = new TimelineMax()
+       .add([
+         TweenMax.to("#shopline-section-header,#shopline-section-announcement-bar", 0.5, {className: "+=hidehd"}),            
+       ])
+       .add([
+          TweenMax.to(".tnv30scrollimg-box-img", 3, { transform: "scale(1)"}),
+        
+       ])
+      .add([
+         TweenMax.to("#shopline-section-header,#shopline-section-announcement-bar", 0.5, {className: "+=hidehd"}),            
+       ])
+
+      var tweenmaxthr02_{{secidlast}} = new TimelineMax()
+         .add([
+         TweenMax.to("#shopline-section-header,#shopline-section-announcement-bar", 1, {className: "+=hidehd"}),  
+         TweenMax.to(".tnv30scrollimg-box-img img", 2, { borderRadius: "0px"}),
+       ])
+       .add([
+          TweenMax.to(".tnv30scrollimg-mengceng", 2, { top: "20%"}),
+        ])
+       .add([
+         TweenMax.to("#shopline-section-header,#shopline-section-announcement-bar", 1, {className: "+=hidehd"}),            
+       ])
+       .add([
+         TweenMax.to(".tnv30scrollimg-mengceng", 2, { top: "0%"}),
+         TweenMax.to(".tnv30scrollimg-box-text", 2, { top: perc_es,opacity: "1"}),
+        ])
+       .add([
+         TweenMax.to("#shopline-section-header,#shopline-section-announcement-bar", 2, {className: "+=hidehd"}),            
+       ])
+      
+     var beishu_nine = $(window).width()/1920;
+      if($(window).width() > 768){
+        var n_beshu = beishu_nine*560; 
+        var offsetho = 680;  
+      }else if($(window).width() <= 768 && $(window).width() > 550){
+           var n_beshu = beishu_nine*1050; 
+         var offsetho = 300;
+      }else{
+         var n_beshu = beishu_nine*1800; 
+         var offsetho = 300;
+      } 
+                         
+     $(window).resize(function() {      
+        if($(window).width() > 768){
+        var n_beshu = beishu_nine*560; 
+             var offsetho = 680;   
+      }else if($(window).width() <= 768 && $(window).width() > 550){
+           var n_beshu = beishu_nine*1050; 
+         var offsetho = 300;
+      }else{
+         var n_beshu = beishu_nine*1800; 
+         var offsetho = 300;
+      }       
+      });
+ 
+       new ScrollMagic.Scene({triggerElement: "#tnv30scrollimg-{{secidlast}}",          
+                             triggerHook: "onEnter",
+							duration: "100%", 
+							offset: 50
+                             })
+        .setTween(tweenmaxthr_{{secidlast}})
+        .addTo(controller_{{secidlast}}); 
+  
+     new ScrollMagic.Scene({triggerElement: "#tnv30scrollimg-{{secidlast}}", duration: offsetho*2,offset: n_beshu})
+        .setTween(tweenmaxthr02_{{secidlast}})
+		.setPin("#tnv30scrollimg-{{secidlast}}")
+        .addTo(controller_{{secidlast}}); 
+
+
+      
+   });           
+</script>
+
+{{#schema}}
+  {
+    "name": "Product ScrollImage",
+    "settings": [
+      {
+        "type": "select",
+        "id": "media_type",
+        "label": "Media Type",
+        "options": [
+          {
+            "value": "image",
+            "label": "Image"
+          },{
+            "value": "video",
+            "label": "Video"
+          }
+        ],
+        "default": "image"
+      },{
+        "type":"video",
+        "id":"video",
+        "label":"Video"
+      },{
+        "type":"video",
+        "id":"video_mb",
+        "label":"Video(mobile)"
+      },{
+        "type":"image_picker",
+        "id":"image",
+        "label":"Image"
+      },{
+        "type":"image_picker",
+        "id":"image_mb",
+        "label":"Image(mobile)"
+      },{
+        "type":"text",
+        "id":"title",
+        "label":"title"
+      },{
+        "type":"richtext",
+        "id":"content",
+        "label":"content"
+      }
+      
+	],
+	"presets": [
+      {
+        "name": "Product ScrollImage","category": "Ho-Advance"
+      }
+    ]
+  }
+{{/schema}}

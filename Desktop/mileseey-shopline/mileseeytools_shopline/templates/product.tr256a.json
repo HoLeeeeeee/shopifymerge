@@ -1,0 +1,920 @@
+{
+  "sections": {
+    "f48aa03f-f9e1-4943-a2f3-abc756228367": {
+      "type": "product-diver",
+      "disabled": false,
+      "settings": {},
+      "blocks": {}
+    },
+    "fa675739-fd6f-4424-819e-6d1bee5d2b4c": {
+      "type": "animate-prosettings",
+      "disabled": false,
+      "settings": {},
+      "blocks": {}
+    },
+    "49d8137d-8a2f-4152-8eb8-7913fbf27a0e": {
+      "type": "product-diver",
+      "disabled": false,
+      "settings": {},
+      "blocks": {}
+    },
+    "363618ec-e44d-4b05-b9e6-3961f0cd3a16": {
+      "type": "product-diver",
+      "disabled": false,
+      "settings": {},
+      "blocks": {}
+    },
+    "b2b24c13-7c5b-4556-92aa-a3df195c5e15": {
+      "type": "product-diver",
+      "disabled": false,
+      "settings": {},
+      "blocks": {}
+    },
+    "tnv30_keyframe04_FcyXYD": {
+      "type": "tnv30-keyframe04",
+      "disabled": false,
+      "settings": {
+        "image_leaderurl": "https://cdn.shopify.com/s/files/1/0560/0162/6273/files/trjtxzs",
+        "url_parameter": "?v=1707009179",
+        "image_number": "26",
+        "image_type": "webp",
+        "toptitle": "High IR Resolution",
+        "topcontent": "The TR256A is an advanced handheld thermal camera with a high-resolution thermal sensor of 256*192 pixels, offering outstanding image quality and  facilitating efficient fault area inspections.",
+        "lenspec": "Thermal Imaging Camera",
+        "top_dis": 100,
+        "bottom_dis": 100,
+        "spec01": "",
+        "spec02": "",
+        "spec03": "",
+        "bg_image": null,
+        "image": null
+      },
+      "blocks": {},
+      "custom_css": []
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": false,
+      "settings": {
+        "show_product_number": 6,
+        "pc_cols": 4,
+        "md_cols": 2,
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "product_image_ratio": "150",
+        "product_fill_type": "contain",
+        "product_hover_show_next": true,
+        "notice_style": ""
+      },
+      "blocks": {
+        "block-1": {
+          "type": "image",
+          "settings": {}
+        },
+        "block-2": {
+          "type": "title",
+          "settings": {}
+        },
+        "block-3": {
+          "type": "price",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "block-1",
+        "block-2",
+        "block-3"
+      ]
+    },
+    "tnv30_imageswiper_4eKjh7": {
+      "type": "tnv30-imageswiper",
+      "disabled": true,
+      "settings": {
+        "position_te": "over"
+      },
+      "blocks": {
+        "item_LaUyeL": {
+          "type": "item",
+          "settings": {
+            "media_type": "image",
+            "position": "top-center",
+            "title": "Temperature measuring range",
+            "content": "With a wide temperature measuring range of -20℃-550℃（-4℉-1022℉），the TR256i boasts unrivaled versatility and accommodates a wide array of using scenarios, from extreme cold to high-heat conditions.",
+            "contentcolor": "",
+            "image": "shopify://shop_images/TR256A-pic001.jpg",
+            "imagemb": "shopify://shop_images/TR256A-pic002.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "item_LaUyeL"
+      ]
+    },
+    "1710752964166857b581": {
+      "type": "sign-up-and-save",
+      "disabled": false,
+      "settings": {
+        "full_screen_width": true,
+        "color_scheme": "none",
+        "padding_top": 80,
+        "padding_bottom": 80
+      },
+      "blocks": {
+        "17107529641663402edc": {
+          "type": "title",
+          "settings": {
+            "title": "SERVICE SUPPORT",
+            "fontSize": "title3"
+          },
+          "blockId": "17107529641663402edc"
+        },
+        "17107529641662daa800": {
+          "type": "desc",
+          "settings": {
+            "description": "Be the first to find out about our newest offerings and hottest deals, and what’s new."
+          },
+          "blockId": "17107529641662daa800"
+        },
+        "1710752964166e359026": {
+          "type": "button",
+          "settings": {
+            "button_text": "Submit",
+            "placeholder": "Your email address"
+          },
+          "blockId": "1710752964166e359026"
+        }
+      },
+      "block_order": [
+        "17107529641663402edc",
+        "17107529641662daa800",
+        "1710752964166e359026"
+      ],
+      "custom_css": []
+    },
+    "main-product-info": {
+      "type": "main-product",
+      "disabled": false,
+      "settings": {
+        "product_info_sticky": true,
+        "product_image_pc_show_style": "carousel",
+        "product_image_pc_thumbnail_postion": "bottom",
+        "product_image_size": "medium",
+        "product_mobile_thumbnail_image_hide": "hide",
+        "video_loop": false,
+        "video_autoplay": false,
+        "pc_magnifier_type": "click",
+        "padding_top": 60,
+        "padding_bottom": 60
+      },
+      "blocks": {
+        "block_1": {
+          "type": "title",
+          "settings": {}
+        },
+        "1712569224305aa72d31": {
+          "blockId": "1712569224305aa72d31",
+          "type": "shopline://apps/商品评价/blocks/comment-start/bd4a09d9-7542-4e11-931c-19fe441576aa",
+          "settings": {}
+        },
+        "block_2": {
+          "type": "price",
+          "settings": {
+            "show_order": "sale_origin",
+            "sale_font_size": "font_size_big",
+            "regular_font_size": "font_size_medium",
+            "save_font_size": "font_size_small",
+            "font_size_flexible": false,
+            "sale_price_pc_font_size": 20,
+            "sale_price_mobile_font_size": 18,
+            "regular_price_pc_font_size": 20,
+            "regular_price_mobile_font_size": 16,
+            "save_price_pc_font_size": 20,
+            "save_price_mobile_font_size": 16,
+            "sale_font_bold": false
+          }
+        },
+        "block_3": {
+          "type": "dividing_line",
+          "settings": {
+            "dividing_line_color": "#000000",
+            "dividing_line_height": 1
+          }
+        },
+        "block_7": {
+          "type": "description",
+          "settings": {
+            "location": "image_right",
+            "is_fold": false
+          }
+        },
+        "block_4": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "flatten",
+            "enabled_color_swatch": true,
+            "color_swatch_type": "square",
+            "sizes": "medium",
+            "layout_direction": "row"
+          }
+        },
+        "block_5": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "block_6": {
+          "type": "buy_buttons",
+          "settings": {}
+        },
+        "block_12": {
+          "type": "share",
+          "settings": {},
+          "disabled": true
+        },
+        "1711779871530f7f852f": {
+          "type": "html",
+          "settings": {
+            "html": "<br>"
+          },
+          "disabled": false
+        },
+        "1711779741237a8b189b": {
+          "type": "icon",
+          "settings": {
+            "icon1": "logistics",
+            "title1": "Free Shipping",
+            "sub_title1": "",
+            "icon2": "medal",
+            "title2": "30-Day Money-Back",
+            "sub_title2": "",
+            "icon3": "customer",
+            "title3": "Lifetime Customer Support",
+            "sub_title3": ""
+          }
+        },
+        "171177975701628af788": {
+          "type": "html",
+          "settings": {
+            "html": "<div class=\"payment-icon-wrapper\">\n    \n      <img class=\" lazyloaded\" src=\"//7egoaboyt7vy3efy-56001626273.shopifypreview.com/cdn/shop/files/f2.png?v=1679398209\" data-src=\"//7egoaboyt7vy3efy-56001626273.shopifypreview.com/cdn/shop/files/f2.png?v=1679398209\" width=\"548\" "
+          },
+          "disabled": true
+        },
+        "17127176492997a3d36c": {
+          "blockId": "17127176492997a3d36c",
+          "type": "shopline://apps/商品评价/blocks/comment-list/bd4a09d9-7542-4e11-931c-19fe441576aa",
+          "settings": {
+            "padding_config": {
+              "pc": {
+                "left": 0,
+                "right": 0,
+                "top": 0,
+                "bottom": 0
+              },
+              "mobile": {
+                "left": 0,
+                "right": 0,
+                "top": 0,
+                "bottom": 0
+              }
+            },
+            "pc_comment_num": "1",
+            "mb_comment_num": "1",
+            "pc_header_size": "3",
+            "mb_header_size": "3",
+            "head_text_align": "left",
+            "pc_turn_page": "2",
+            "mb_turn_page": "2",
+            "hide_component": false
+          },
+          "disabled": true
+        }
+      },
+      "block_order": [
+        "block_1",
+        "1712569224305aa72d31",
+        "block_2",
+        "block_3",
+        "block_7",
+        "block_4",
+        "block_5",
+        "block_6",
+        "block_12",
+        "1711779871530f7f852f",
+        "1711779741237a8b189b",
+        "171177975701628af788",
+        "17127176492997a3d36c"
+      ],
+      "custom_css": []
+    },
+    "4cd6a823-5707-4a0c-8890-5bd5ce773912": {
+      "type": "tnv30-packlist",
+      "disabled": true,
+      "settings": {
+        "toptitle": "Package List",
+        "title": "",
+        "content": "",
+        "grid_style": "style2",
+        "show_lefttext": false,
+        "clickcg": false,
+        "image": "shopify://shop_images/pc9.png"
+      },
+      "blocks": {
+        "7c72fb9f-3c54-4af8-8523-59f2b7f7c6f1": {
+          "type": "item",
+          "settings": {
+            "title": "TR256A",
+            "content": "<p>Boasts a perfect blend of of leading-edge design and marvelous performance</p>",
+            "icon": "shopify://shop_images/pc9-5.png",
+            "image": "shopify://shop_images/pc9-5.png"
+          }
+        },
+        "af808ee0-ab89-4938-b9d1-739e608e71f9": {
+          "type": "item",
+          "settings": {
+            "title": "Waterproof Storage Case",
+            "content": "<p>Boasts a perfect blend of of leading-edge design and marvelous performance02</p>",
+            "icon": "shopify://shop_images/pc9-1.png",
+            "image": "shopify://shop_images/pc9-1.png"
+          }
+        },
+        "7dae7394-e56d-4d11-b6dc-46f229c9d749": {
+          "type": "item",
+          "settings": {
+            "title": "Lens Cleaning Cloth",
+            "content": "<p>Boasts a perfect blend of of leading-edge design and marvelous performance03</p>",
+            "icon": "shopify://shop_images/pc9-2.png",
+            "image": "shopify://shop_images/pc9-2.png"
+          }
+        },
+        "31a73a1a-cea0-49fa-a4a8-b536270d23fc": {
+          "type": "item",
+          "settings": {
+            "title": "HDMI Cable",
+            "content": "<p>Boasts a perfect blend of of leading-edge design and marvelous performance04</p>",
+            "icon": "shopify://shop_images/pc9-6.png",
+            "image": "shopify://shop_images/pc9-6.png"
+          }
+        },
+        "7ec2540b-8500-42d2-a5e3-40807a6bdf0e": {
+          "type": "item",
+          "settings": {
+            "title": "Expansion Accessories",
+            "content": "<p>Boasts a perfect blend of of leading-edge design and marvelous performance05</p>",
+            "icon": "shopify://shop_images/pc9-4.png",
+            "image": "shopify://shop_images/pc9-4.png"
+          }
+        },
+        "f9781f64-0d79-4967-95c2-6de83d3a8c59": {
+          "type": "item",
+          "settings": {
+            "title": "User Manual",
+            "content": "<p>Boasts a perfect blend of of leading-edge design and marvelous performance06</p>",
+            "icon": "shopify://shop_images/pc9-3.png",
+            "image": "shopify://shop_images/pc9-3.png"
+          }
+        },
+        "f51a850d-8862-4a44-9b9f-b04755cbd2eb": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "title": "accessory07",
+            "content": "<p>Boasts a perfect blend of of leading-edge design and marvelous performance07</p>",
+            "icon": "shopify://shop_images/product06.png",
+            "image": "shopify://shop_images/product06.png"
+          }
+        },
+        "437dcda4-40d0-408f-941f-65806656c62b": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "title": "accessory08",
+            "content": "<p>Boasts a perfect blend of of leading-edge design and marvelous performance08</p>",
+            "icon": "shopify://shop_images/product06.png",
+            "image": "shopify://shop_images/product06.png"
+          }
+        }
+      },
+      "block_order": [
+        "7c72fb9f-3c54-4af8-8523-59f2b7f7c6f1",
+        "af808ee0-ab89-4938-b9d1-739e608e71f9",
+        "7dae7394-e56d-4d11-b6dc-46f229c9d749",
+        "31a73a1a-cea0-49fa-a4a8-b536270d23fc",
+        "7ec2540b-8500-42d2-a5e3-40807a6bdf0e",
+        "f9781f64-0d79-4967-95c2-6de83d3a8c59",
+        "f51a850d-8862-4a44-9b9f-b04755cbd2eb",
+        "437dcda4-40d0-408f-941f-65806656c62b"
+      ]
+    },
+    "debc4e9b-331b-44e0-ab62-17daeb50c0de": {
+      "type": "animate-frame01",
+      "disabled": false,
+      "settings": {
+        "media_type": "image",
+        "video": "shopify://files/videos/video(1)(1).mp4",
+        "video_mb": "shopify://files/videos/video(1)(1).mp4",
+        "title": "TR256A Thermal lmaging Camera",
+        "content": "<p>The TR256A handheld thermal camera with wide temperature measuring range, outstanding image quality, and large 3.5\" HD screen that provides a spacious display area.</p>",
+        "image_mb": "shopline://shop_images/3-banner-n-2.jpg",
+        "bg_image": "shopline://shop_images/pc1.png",
+        "image": "shopline://shop_images/3-banner-n-2.jpg",
+        "bg_imagemb": "shopline://shop_images/1_6382258631513788449.png"
+      },
+      "blocks": {},
+      "custom_css": []
+    },
+    "e1c8a755-3904-4c5b-b89b-6b308233019f": {
+      "type": "tnv30-scrollimg",
+      "disabled": false,
+      "settings": {
+        "media_type": "image",
+        "title": "Capturing The Invisible And  Defining Detail in Every Degree",
+        "content": "",
+        "image": "shopline://shop_images/TR256A-pic003_6383473562150031451.jpg",
+        "image_mb": "shopline://shop_images/5_6382294123394994190.jpg"
+      },
+      "blocks": {},
+      "custom_css": []
+    },
+    "tnv30_textwithmedia_8MA6aU": {
+      "type": "tnv30-textwithmedia",
+      "disabled": false,
+      "settings": {
+        "title": "Multiple Color Palettes",
+        "content": "<p>The TR256A offers in total 6 high-resolution color palettes—Rainbow, White Hot, Iron, Arctic, Lava, Medical Treatment, allowing for easy display customization, clearer view, and more nuanced temperature interpretations in different scenarios.</p>",
+        "media_type": "image",
+        "image_mb": "shopline://shop_images/7_6382295768854074435.jpg",
+        "image": "shopline://shop_images/6-0_6382295522816135251.png"
+      },
+      "blocks": {},
+      "custom_css": []
+    },
+    "tnv30_textwithmedia_rhnEc8": {
+      "type": "tnv30-textwithmedia",
+      "disabled": false,
+      "settings": {
+        "title": "Extensive Temperature Range",
+        "content": "<p>This extensive temperature range ensures accurate temperature monitoring in both routine and challenging scenarios.</p>",
+        "media_type": "image",
+        "image": "shopline://shop_images/3-0_6382289414383259687.png",
+        "image_mb": "shopline://shop_images/m-1_6382289768499549203.jpg"
+      },
+      "blocks": {},
+      "custom_css": []
+    },
+    "tnv30_textwithmedia_8BpjK3": {
+      "type": "tnv30-textwithmedia",
+      "disabled": false,
+      "settings": {
+        "title": "Exceptional Durability",
+        "content": "<p>Engineered with IP65 protection, the TR256A maintains optimal performance, robustness and longevity, enabling it to withstand the exposure to dust, moisture, and other elements, ensuring consistent and reliable thermal imaging results. The exceptional resilience makes it a perfect choice for professionals in harsh environments. </p>",
+        "media_type": "image",
+        "image": "shopline://shop_images/7-0_6382296362952478750.png",
+        "image_mb": "shopline://shop_images/8_6382296183570076698.jpg"
+      },
+      "blocks": {},
+      "custom_css": []
+    },
+    "183f88cf-267f-43ae-9c91-6a774fb3bda8": {
+      "type": "tnv30-snapshot",
+      "disabled": false,
+      "settings": {
+        "aside_bgcolor": "#000000",
+        "aside_opacity": 100,
+        "title": "",
+        "content": ""
+      },
+      "blocks": {
+        "203fa744-a527-4720-b822-6345c7702ecc": {
+          "type": "item",
+          "settings": {
+            "media_type": "image",
+            "title": "Clear Thermal Images",
+            "content": "<p>The clear thermal pictures provides deeper insights into the conditions of various systems, contributing to more effective maintenance and troubleshooting.</p>",
+            "image": "shopline://shop_images/2-0_6382266171496648777.png",
+            "image_mb": "shopline://shop_images/m-1_6382289768499549203.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "203fa744-a527-4720-b822-6345c7702ecc"
+      ],
+      "custom_css": []
+    },
+    "tnv30_keyframe06_n8pgtN": {
+      "type": "tnv30-keyframe06",
+      "disabled": false,
+      "settings": {
+        "title": "Temperature measuring range",
+        "content": "<p>With a wide temperature measuring range of -20℃-550℃（-4℉-1022℉），the TR256i boasts unrivaled versatility and accommodates a wide array of using scenarios, from extreme cold to high-heat conditions.</p>",
+        "bg_imagemb": "shopline://shop_images/2-0_6382276904971767816.png",
+        "image": "shopline://shop_images/tr256a2-1_6382277905967649863.png",
+        "bg_image": "shopline://shop_images/tr256a2-0_6382276680727565320.png",
+        "imagemb": "shopline://shop_images/3-1 拷贝.png"
+      },
+      "blocks": {},
+      "custom_css": []
+    },
+    "299e9842-c9f3-4d67-9e77-9d715b2f8fda": {
+      "type": "tnv30-specs",
+      "disabled": false,
+      "settings": {
+        "title": "TR256A Thermal Imaging Camera",
+        "specs": "SPECS",
+        "specification": "User Manual",
+        "specification_url": "https://cdn.shopifycdn.net/s/files/1/0560/0162/6273/files/TR256A-EN.pdf?v=1672899953&ref=ericnestor",
+        "media_type": "image",
+        "model_link": "",
+        "shop_label": "<p>Early Bird Deal Up to <strong>60% OFF</strong></p>",
+        "image": "shopline://shop_images/8_6382296183570076698.jpg"
+      },
+      "blocks": {
+        "8fa9849f-bb65-4245-b18c-096c218ce35a": {
+          "type": "item",
+          "settings": {
+            "title": "Model Number",
+            "content": "<p>TR256A</p>"
+          }
+        },
+        "b8344e29-6ece-446e-99ed-252415ac87b8": {
+          "type": "item",
+          "settings": {
+            "title": "Thermal Resolution",
+            "content": "<p>256*192</p>"
+          }
+        },
+        "a56b4139-a239-4e7e-92bd-0fff2087ed13": {
+          "type": "item",
+          "settings": {
+            "title": "Measurable Distance Range",
+            "content": "<p>0.5m~1.2m</p>"
+          }
+        },
+        "7055bfec-59ad-4b31-ac2b-85ab3a2f8787": {
+          "type": "item",
+          "settings": {
+            "title": "Visible Light Resolution",
+            "content": "<p>N/A</p>"
+          }
+        },
+        "item_66UeTM": {
+          "type": "item",
+          "settings": {
+            "title": "Wavelength Coverage",
+            "content": "<p>8-14um</p>"
+          }
+        },
+        "item_wicfXf": {
+          "type": "item",
+          "settings": {
+            "title": "Temperature Range",
+            "content": "<p>-20℃～550℃ (-4℉～1022℉)</p>"
+          }
+        },
+        "a77b97b6-0ce7-44ff-9b2a-420370f9cb15": {
+          "type": "item",
+          "settings": {
+            "title": "Color Palettes",
+            "content": "<p>6 Color Palettes</p>"
+          }
+        },
+        "e632eece-1b15-4257-aaf5-e7c1310dba9a": {
+          "type": "item",
+          "settings": {
+            "title": "Frame Rate",
+            "content": "<p>&lt;20 Hz</p>"
+          }
+        },
+        "71a8b51c-42be-4ac5-a4bd-e143a77f6bd9": {
+          "type": "item",
+          "settings": {
+            "title": "Infrared Spectral Band",
+            "content": "<p>12um</p>"
+          }
+        },
+        "item_aDNpfa": {
+          "type": "item",
+          "settings": {
+            "title": "Battery",
+            "content": "<p>5000mAh rechargeable lithium battery</p>"
+          }
+        },
+        "item_nwiwwb": {
+          "type": "item",
+          "settings": {
+            "title": "Weight",
+            "content": "540g"
+          }
+        },
+        "1712744486766404069f": {
+          "type": "item",
+          "settings": {
+            "title": "Dimension",
+            "content": "23.8*9.5*8.5cm"
+          }
+        }
+      },
+      "block_order": [
+        "8fa9849f-bb65-4245-b18c-096c218ce35a",
+        "b8344e29-6ece-446e-99ed-252415ac87b8",
+        "a56b4139-a239-4e7e-92bd-0fff2087ed13",
+        "7055bfec-59ad-4b31-ac2b-85ab3a2f8787",
+        "item_66UeTM",
+        "item_wicfXf",
+        "a77b97b6-0ce7-44ff-9b2a-420370f9cb15",
+        "e632eece-1b15-4257-aaf5-e7c1310dba9a",
+        "71a8b51c-42be-4ac5-a4bd-e143a77f6bd9",
+        "item_aDNpfa",
+        "item_nwiwwb",
+        "1712744486766404069f"
+      ],
+      "custom_css": []
+    },
+    "95c0aab3-bf74-41de-97d3-dade34b38a45": {
+      "type": "tnv30-textwithmedia",
+      "disabled": false,
+      "settings": {
+        "title": "Emissivity Adjustment",
+        "content": "<p>By fine-tuning the emissivity, the TR256A adapts to different surface materials and provides more accurate temperature readings and thermal image analysis. This feature is particularly useful when measuring the temperature of objects of diverse emissivity properties.</p>",
+        "media_type": "image",
+        "image": "shopline://shop_images/5-0_6382295045034644495.png",
+        "image_mb": "shopline://shop_images/6_6382294783075127327.jpg"
+      },
+      "blocks": {},
+      "custom_css": []
+    },
+    "tnv30_snapshot_9bCLF9": {
+      "type": "tnv30-snapshot",
+      "disabled": false,
+      "settings": {
+        "aside_bgcolor": "#000000",
+        "aside_opacity": 100,
+        "title": "Extreme termperature alarm",
+        "content": "<p>The TR256A features automatic tracking of coldest and hottest spots, and effectively detects and locks min and max temperature. Users have the flexibility to personalize the threshold of high and low extreme temperature alarming points, allowing for tailored response to specific temperature environments.</p>"
+      },
+      "blocks": {
+        "item_mmAxFw": {
+          "type": "item",
+          "settings": {
+            "media_type": "image",
+            "title": "Enhanced DDE Algorithm",
+            "content": "",
+            "image": "shopline://shop_images/3-1_6382290961678307341.png",
+            "image_mb": "shopline://shop_images/m-2_6382291779919908893.jpg"
+          }
+        },
+        "item_CHJnag": {
+          "type": "item",
+          "settings": {
+            "media_type": "image",
+            "title": "Customization of Temperature Alarming Threshold",
+            "content": "",
+            "image": "shopline://shop_images/3-1_6382290961678307341.png",
+            "image_mb": "shopline://shop_images/m-2_6382291779919908893.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "item_mmAxFw",
+        "item_CHJnag"
+      ],
+      "custom_css": []
+    },
+    "tnv30_snapshot_TzR6pL": {
+      "type": "tnv30-snapshot",
+      "disabled": false,
+      "settings": {
+        "aside_bgcolor": "#000000",
+        "aside_opacity": 100,
+        "title": "Versatile Uses",
+        "content": "<p>The TR256A is an excellent choice for conducting  thorough house inspections, detecting issues such as missing insulation, air leaks, and water damages, and conducting facility maintenance. It is also highly suitable for HVAC troubleshooting and conducting professional inspections of electrical and mechanical systems.</p>"
+      },
+      "blocks": {
+        "item_4AMMqY": {
+          "type": "item",
+          "settings": {
+            "media_type": "image",
+            "title": "House inspections",
+            "content": "",
+            "image": "shopline://shop_images/8-0_6382297091704410133.png",
+            "image_mb": "shopline://shop_images/9_6382297460484395031.jpg"
+          }
+        },
+        "item_EPXaHw": {
+          "type": "item",
+          "settings": {
+            "media_type": "image",
+            "title": "HVAC",
+            "content": "",
+            "image_mb": "shopline://shop_images/HVAC-M.jpg",
+            "image": "shopline://shop_images/HVAC_6405297305532315721.png"
+          }
+        },
+        "item_zMr7Uf": {
+          "type": "item",
+          "settings": {
+            "media_type": "image",
+            "title": "Electrical Inspections",
+            "content": "",
+            "image_mb": "shopline://shop_images/Electrical Inspections M.jpg",
+            "image": "shopline://shop_images/Electrical Inspections-PC.png"
+          }
+        },
+        "item_wYpjUk": {
+          "type": "item",
+          "settings": {
+            "media_type": "image",
+            "title": "Mechanical Inspections",
+            "content": "",
+            "image_mb": "shopline://shop_images/Mechanical Inspections -M.jpg",
+            "image": "shopline://shop_images/Mechanical Inspections PC.png"
+          }
+        }
+      },
+      "block_order": [
+        "item_4AMMqY",
+        "item_EPXaHw",
+        "item_zMr7Uf",
+        "item_wYpjUk"
+      ],
+      "custom_css": []
+    },
+    "tnv30_keyframe05_hpxzgV": {
+      "type": "tnv30-keyframe05",
+      "disabled": false,
+      "settings": {
+        "image_leaderurl": "https://cdn.shopify.com/s/files/1/0560/0162/6273/files/TR256A_thermal_camera_360",
+        "url_parameter": "?v=1706949020",
+        "image_number": "36",
+        "image_type": "webp",
+        "title": "Ultra Clear,Precise,and Reliable",
+        "top_dis": 2,
+        "bottom_dis": 100,
+        "image_bot": "shopline://shop_images/undefinedundefined"
+      },
+      "blocks": {
+        "item_9jeQJN": {
+          "type": "item",
+          "settings": {
+            "title": "Extreme  Temperature Alarm",
+            "image": "shopline://shop_images/1_6382260406811676743.png"
+          }
+        },
+        "item_inJKfP": {
+          "type": "item",
+          "settings": {
+            "title": "6 Color Palettes",
+            "image": "shopline://shop_images/2_6382260503934504977.png"
+          }
+        },
+        "item_Fwnqnh": {
+          "type": "item",
+          "settings": {
+            "title": "Wide FOV of 50°*63.5°",
+            "image": "shopline://shop_images/3_6382260787486299180.png"
+          }
+        },
+        "item_n3XAQk": {
+          "type": "item",
+          "settings": {
+            "title": "Wide  Temperature Range",
+            "image": "shopline://shop_images/4_6382260961650987079.png"
+          }
+        },
+        "item_hMneHJ": {
+          "type": "item",
+          "settings": {
+            "title": "Hot  Spot Alert",
+            "image": "shopline://shop_images/5_6382261158329881628.png"
+          }
+        },
+        "item_UVYF64": {
+          "type": "item",
+          "settings": {
+            "title": "IP65 Protection",
+            "image": "shopline://shop_images/6_6382261320683000909.png"
+          }
+        }
+      },
+      "block_order": [
+        "item_9jeQJN",
+        "item_inJKfP",
+        "item_Fwnqnh",
+        "item_n3XAQk",
+        "item_hMneHJ",
+        "item_UVYF64"
+      ],
+      "custom_css": []
+    },
+    "53f152b6-689d-429a-b502-7f16402346dc": {
+      "disabled": false,
+      "type": "tnv30-productcompare",
+      "settings": {
+        "title": "Compare With The Other Models",
+        "urltext": "COMPARE MORE PRODUCTS",
+        "url": "https://mileseeytools.com/collections/all-thermal-imaging-cameras"
+      },
+      "blocks": {
+        "2ace23d5-e603-4e06-8b90-b2b06db6ea07": {
+          "type": "item",
+          "settings": {
+            "title": "TR256A",
+            "value01": "3.5'' IPS Large Screen",
+            "key01": "Display Screen",
+            "value02": "256x192",
+            "key02": "Thermal Resolution",
+            "value03": "640*480 ",
+            "key03": "Display Resolution",
+            "value04": "2 Megapixels",
+            "key04": "Visible Light Resolution",
+            "value05": "≤20Hz",
+            "key05": "Output Frame Rate",
+            "value06": "/",
+            "key06": "Extra Function",
+            "value07": "0.5m~1.2m",
+            "key07": "Measurable Distance Range",
+            "value08": "",
+            "key08": "",
+            "product": "16063677008822979860180910"
+          }
+        },
+        "item_cFqEXC": {
+          "type": "item",
+          "settings": {
+            "title": "TR256C",
+            "value01": "3.5'' IPS Large Screen",
+            "key01": "Display Screen",
+            "value02": "256x192",
+            "key02": "Thermal Resolution",
+            "value03": "640*480 ",
+            "key03": "Display Resolution",
+            "value04": "2 Megapixels",
+            "key04": "Visible Light Resolution",
+            "value05": "≤20Hz",
+            "key05": "Output Frame Rate",
+            "value06": "Laser Measure/GPS/Wifi",
+            "key06": "Extra Function",
+            "value07": "0.5m~1.2m",
+            "key07": "Measurable Distance Range",
+            "value08": "",
+            "key08": "",
+            "product": "16063677009311700253640910"
+          }
+        },
+        "item_dbV7Rf": {
+          "type": "item",
+          "settings": {
+            "title": "TR120",
+            "value01": "3.5'' IPS Large Screen",
+            "key01": "Display Screen",
+            "value02": "120x90",
+            "key02": "Thermal Resolution",
+            "value03": "320*240",
+            "key03": "Display Resolution",
+            "value04": "640*480 pixels",
+            "key04": "Visible Light Resolution",
+            "value05": "≤20Hz",
+            "key05": "Output Frame Rate",
+            "value06": "/",
+            "key06": "Extra Function",
+            "value07": "0.5m~1.2m",
+            "key07": "Measurable Distance Range",
+            "value08": "",
+            "key08": "",
+            "product": "16063677008246850257210910"
+          }
+        }
+      },
+      "block_order": [
+        "2ace23d5-e603-4e06-8b90-b2b06db6ea07",
+        "item_cFqEXC",
+        "item_dbV7Rf"
+      ],
+      "custom_css": []
+    }
+  },
+  "order": [
+    "f48aa03f-f9e1-4943-a2f3-abc756228367",
+    "fa675739-fd6f-4424-819e-6d1bee5d2b4c",
+    "main-product-info",
+    "debc4e9b-331b-44e0-ab62-17daeb50c0de",
+    "tnv30_keyframe05_hpxzgV",
+    "tnv30_keyframe04_FcyXYD",
+    "49d8137d-8a2f-4152-8eb8-7913fbf27a0e",
+    "183f88cf-267f-43ae-9c91-6a774fb3bda8",
+    "tnv30_imageswiper_4eKjh7",
+    "tnv30_keyframe06_n8pgtN",
+    "tnv30_textwithmedia_rhnEc8",
+    "tnv30_snapshot_9bCLF9",
+    "e1c8a755-3904-4c5b-b89b-6b308233019f",
+    "95c0aab3-bf74-41de-97d3-dade34b38a45",
+    "tnv30_textwithmedia_8MA6aU",
+    "tnv30_textwithmedia_8BpjK3",
+    "tnv30_snapshot_TzR6pL",
+    "4cd6a823-5707-4a0c-8890-5bd5ce773912",
+    "363618ec-e44d-4b05-b9e6-3961f0cd3a16",
+    "53f152b6-689d-429a-b502-7f16402346dc",
+    "b2b24c13-7c5b-4556-92aa-a3df195c5e15",
+    "299e9842-c9f3-4d67-9e77-9d715b2f8fda",
+    "product-recommendations",
+    "1710752964166857b581"
+  ]
+}

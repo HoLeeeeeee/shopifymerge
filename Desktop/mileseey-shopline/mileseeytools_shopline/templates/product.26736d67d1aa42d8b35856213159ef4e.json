@@ -1,0 +1,560 @@
+{
+  "sections": {
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": false,
+      "settings": {
+        "title": "You may also like",
+        "products_to_show": 4,
+        "pc_cols": 4,
+        "mobile_cols": 2,
+        "color_scheme": "none",
+        "product_image_ratio": "100",
+        "product_fill_type": "contain",
+        "show_secondary_image": true,
+        "padding_top": 80,
+        "padding_bottom": 80
+      },
+      "blocks": {
+        "block-1": {
+          "type": "image",
+          "settings": {}
+        },
+        "block-2": {
+          "type": "title",
+          "settings": {}
+        },
+        "block-3": {
+          "type": "price",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "block-1",
+        "block-2",
+        "block-3"
+      ],
+      "custom_css": []
+    },
+    "main-product-info": {
+      "type": "main-product",
+      "disabled": false,
+      "settings": {
+        "product_info_sticky": true,
+        "product_image_pc_show_style": "carousel",
+        "product_image_pc_thumbnail_postion": "bottom",
+        "product_image_size": "medium",
+        "product_mobile_thumbnail_image_hide": "hide",
+        "video_loop": false,
+        "video_autoplay": false,
+        "pc_magnifier_type": "click",
+        "padding_top": 60,
+        "padding_bottom": 60
+      },
+      "blocks": {
+        "block_1": {
+          "type": "title",
+          "settings": {}
+        },
+        "171256928744817c9bc5": {
+          "blockId": "171256928744817c9bc5",
+          "type": "shopline://apps/商品评价/blocks/comment-start/bd4a09d9-7542-4e11-931c-19fe441576aa",
+          "settings": {}
+        },
+        "block_2": {
+          "type": "price",
+          "settings": {
+            "show_order": "sale_origin",
+            "sale_font_size": "font_size_big",
+            "regular_font_size": "font_size_medium",
+            "save_font_size": "font_size_small",
+            "font_size_flexible": false,
+            "sale_price_pc_font_size": 20,
+            "sale_price_mobile_font_size": 18,
+            "regular_price_pc_font_size": 20,
+            "regular_price_mobile_font_size": 16,
+            "save_price_pc_font_size": 20,
+            "save_price_mobile_font_size": 16,
+            "sale_font_bold": true
+          }
+        },
+        "block_7": {
+          "type": "description",
+          "settings": {
+            "location": "image_right",
+            "is_fold": false
+          }
+        },
+        "block_3": {
+          "type": "dividing_line",
+          "settings": {
+            "dividing_line_color": "#000000",
+            "dividing_line_height": 1
+          }
+        },
+        "block_4": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "flatten",
+            "enabled_color_swatch": true,
+            "color_swatch_type": "square",
+            "sizes": "medium",
+            "layout_direction": "row"
+          }
+        },
+        "block_5": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "block_6": {
+          "type": "buy_buttons",
+          "settings": {}
+        },
+        "block_11": {
+          "type": "product_additional",
+          "settings": {
+            "title": "",
+            "icon": "none",
+            "description": "",
+            "custom_page": ""
+          },
+          "disabled": true
+        },
+        "block_12": {
+          "type": "share",
+          "settings": {},
+          "disabled": true
+        },
+        "1711437926151df0da5d": {
+          "type": "icon",
+          "settings": {
+            "icon1": "customer",
+            "title1": "Free Shipping",
+            "sub_title1": "",
+            "icon2": "customer",
+            "title2": "",
+            "sub_title2": "30-Day Money-Back",
+            "icon3": "customer",
+            "title3": "Lifetime Customer Support",
+            "sub_title3": ""
+          },
+          "disabled": false
+        },
+        "171143792951007ec16c": {
+          "type": "html",
+          "settings": {
+            "html": "<div class=\"payment-icon-wrapper\">\n    \n      <img class=\" lazyloaded\" src=\"//7egoaboyt7vy3efy-56001626273.shopifypreview.com/cdn/shop/files/f2.png?v=1679398209\" data-src=\"//7egoaboyt7vy3efy-56001626273.shopifypreview.com/cdn/shop/files/f2.png?v=1679398209\" width=\"548\" height=\"32\" loading=\"lazy\" alt=\"\">"
+          },
+          "disabled": true
+        }
+      },
+      "block_order": [
+        "block_1",
+        "171256928744817c9bc5",
+        "block_2",
+        "block_7",
+        "block_3",
+        "block_4",
+        "block_5",
+        "block_6",
+        "block_11",
+        "block_12",
+        "1711437926151df0da5d",
+        "171143792951007ec16c"
+      ],
+      "custom_css": []
+    },
+    "1710467045770d25e404": {
+      "type": "new-background-text-size-width",
+      "disabled": false,
+      "settings": {
+        "margin_top": 0
+      },
+      "blocks": {
+        "1710468158039f63db5a": {
+          "type": "image",
+          "settings": {
+            "show_font": false,
+            "base_font_family": "poppins_n4",
+            "title": "Compact Design with Rich Features",
+            "heading_font_weight": "700",
+            "heading_font_size_pc": "2.1vw",
+            "heading_font_size_mb": "6.5vw",
+            "text": "TR120E thermography imager provides a 2.4” Full Screen of HD Resolution 320*240, high-quality images with clear details.\n<br>An enhanced experience will remain with you in the form of a 25Hz refresh rate.",
+            "sheading_font_weight": "500",
+            "sheading_font_size_pc": "0.8vw",
+            "sheading_font_size_mb": 14,
+            "text_color": "#fff",
+            "text_bg_color": "#000000",
+            "text_mobile_color": "#fff",
+            "text_width_pc": 40,
+            "text_width_mb": 100,
+            "layout": "right",
+            "btn": "Shop Now",
+            "btn_font_weight": "500",
+            "btn_bg_color": "#ff6000",
+            "btn_bg_color_hover": "#019cb6",
+            "btn_font_size_pc": "18px",
+            "btn_font_size_mb": 14,
+            "checkout": false,
+            "image_mb": "shopline://shop_images/1_6378007102912631843.jpg",
+            "image": "shopline://shop_images/1_6378006629074128991.jpg"
+          }
+        },
+        "17104681591607cb5700": {
+          "type": "image",
+          "settings": {
+            "show_font": false,
+            "base_font_family": "poppins_n4",
+            "title": "Wide Temperature Range",
+            "heading_font_weight": "700",
+            "heading_font_size_pc": "2.1vw",
+            "heading_font_size_mb": "6.5vw",
+            "text": "TR120E Infrared Thermal Scanner can measure from-10℃ to 400℃ and covers a wide-field view of 50×38°. <br>Quick and accurate temperature measurement with errors controlled within 2 ℃. <br>Auto Alarm & Warning Light reminds you\nwhen the temperature is out of range.",
+            "sheading_font_weight": "500",
+            "sheading_font_size_pc": "0.8vw",
+            "sheading_font_size_mb": 14,
+            "text_color": "#fff",
+            "text_bg_color": "#000000",
+            "text_mobile_color": "#fff",
+            "text_width_pc": 40,
+            "text_width_mb": 100,
+            "layout": "left",
+            "btn": "Shop Now",
+            "btn_font_weight": "500",
+            "btn_bg_color": "#ff6000",
+            "btn_bg_color_hover": "#019cb6",
+            "btn_font_size_pc": "18px",
+            "btn_font_size_mb": 14,
+            "checkout": false,
+            "image_mb": "shopline://shop_images/2_6378007104070259723.jpg",
+            "image": "shopline://shop_images/2_6378006630869291064.jpg"
+          }
+        },
+        "1710468160624902171f": {
+          "type": "image",
+          "settings": {
+            "show_font": false,
+            "base_font_family": "poppins_n4",
+            "title": "6 Color Palette Options",
+            "heading_font_weight": "700",
+            "heading_font_size_pc": "2.1vw",
+            "heading_font_size_mb": "6.5vw",
+            "text": "6 color palettes for you to choose\nthe ideal color scale for your job.\nThe colors are- rainbow, Iron Red,\nWhite Heat, Black Heat, Rainbow, and Lava.",
+            "sheading_font_weight": "500",
+            "sheading_font_size_pc": "0.8vw",
+            "sheading_font_size_mb": 14,
+            "text_color": "#fff",
+            "text_bg_color": "#000000",
+            "text_mobile_color": "#fff",
+            "text_width_pc": 40,
+            "text_width_mb": 100,
+            "layout": "right",
+            "btn": "Shop Now",
+            "btn_font_weight": "500",
+            "btn_bg_color": "#ff6000",
+            "btn_bg_color_hover": "#019cb6",
+            "btn_font_size_pc": "18px",
+            "btn_font_size_mb": 14,
+            "checkout": false,
+            "image": "shopline://shop_images/3_6378006632698007600.jpg",
+            "image_mb": "shopline://shop_images/3_6378007105479545942.jpg"
+          }
+        },
+        "17104692135467eb5a7d": {
+          "type": "image",
+          "settings": {
+            "show_font": false,
+            "base_font_family": "poppins_n4",
+            "title": "Powerful LED Light",
+            "heading_font_weight": "700",
+            "heading_font_size_pc": "2.1vw",
+            "heading_font_size_mb": "6.5vw",
+            "text": "LED Work Light allows you to\nreach dark and hard-to-reach areas;<br>\nTR120E thermal imager can also be used as a problem solver to identify any issues or areas of weakness such as a heat leak or a build-up of moisture.",
+            "sheading_font_weight": "500",
+            "sheading_font_size_pc": "0.8vw",
+            "sheading_font_size_mb": 14,
+            "text_color": "#fff",
+            "text_bg_color": "#000000",
+            "text_mobile_color": "#fff",
+            "text_width_pc": 40,
+            "text_width_mb": 100,
+            "layout": "left",
+            "btn": "Shop Now",
+            "btn_font_weight": "500",
+            "btn_bg_color": "#ff6000",
+            "btn_bg_color_hover": "#019cb6",
+            "btn_font_size_pc": "18px",
+            "btn_font_size_mb": 14,
+            "checkout": false,
+            "image_mb": "shopline://shop_images/4_6378007106855277571.jpg",
+            "image": "shopline://shop_images/PC.jpg"
+          }
+        },
+        "171046921446833348ff": {
+          "type": "image",
+          "settings": {
+            "show_font": false,
+            "base_font_family": "poppins_n4",
+            "title": "Rechargeable Lithium Battery",
+            "heading_font_weight": "700",
+            "heading_font_size_pc": "2.1vw",
+            "heading_font_size_mb": "6.5vw",
+            "text": "Built-in large capacity 2600mAh\nLi-Ion rechargeable battery can\nsupport up to 9 hrs of continuous operation.",
+            "sheading_font_weight": "500",
+            "sheading_font_size_pc": "0.8vw",
+            "sheading_font_size_mb": 14,
+            "text_color": "#fff",
+            "text_bg_color": "#000000",
+            "text_mobile_color": "#fff",
+            "text_width_pc": 40,
+            "text_width_mb": 100,
+            "layout": "right",
+            "btn": "Shop Now",
+            "btn_font_weight": "500",
+            "btn_bg_color": "#ff6000",
+            "btn_bg_color_hover": "#019cb6",
+            "btn_font_size_pc": "18px",
+            "btn_font_size_mb": 14,
+            "checkout": false,
+            "image_mb": "shopline://shop_images/5_6378007108600108086.jpg",
+            "image": "shopline://shop_images/5_6378006636053450816.jpg"
+          }
+        },
+        "17104692153248b6f0bf": {
+          "type": "image",
+          "settings": {
+            "show_font": false,
+            "base_font_family": "poppins_n4",
+            "title": "Wide Application",
+            "heading_font_weight": "700",
+            "heading_font_size_pc": "2.1vw",
+            "heading_font_size_mb": "6.5vw",
+            "text": "Compact size but with rich functions<br>Mileseey Infrared thermal scanner TR120E  is best for preventive maintenance, electrical inspections, frontline troubleshooting, massive body temperature measurement, etc.",
+            "sheading_font_weight": "500",
+            "sheading_font_size_pc": "0.8vw",
+            "sheading_font_size_mb": 14,
+            "text_color": "#fff",
+            "text_bg_color": "#000000",
+            "text_mobile_color": "#fff",
+            "text_width_pc": 40,
+            "text_width_mb": 100,
+            "layout": "left",
+            "btn": "Shop Now",
+            "btn_font_weight": "500",
+            "btn_bg_color": "#ff6000",
+            "btn_bg_color_hover": "#019cb6",
+            "btn_font_size_pc": "18px",
+            "btn_font_size_mb": 14,
+            "checkout": false,
+            "image": "shopline://shop_images/6_6378006637747949576.jpg",
+            "image_mb": "shopline://shop_images/7_6378007110143611916.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "1710468158039f63db5a",
+        "17104681591607cb5700",
+        "1710468160624902171f",
+        "17104692135467eb5a7d",
+        "171046921446833348ff",
+        "17104692153248b6f0bf"
+      ],
+      "custom_css": []
+    },
+    "1712740421144770412f": {
+      "type": "animate-prosettings",
+      "disabled": false,
+      "settings": {},
+      "blocks": {},
+      "block_order": []
+    },
+    "1712740462086ad7c0fe": {
+      "type": "tnv30-specs",
+      "disabled": false,
+      "settings": {
+        "title": "TR120E Thermal Imaging Camera",
+        "specs": "SPECS",
+        "specification": "User Manual",
+        "media_type": "image",
+        "image": "shopline://shop_images/TR120E.jpg"
+      },
+      "blocks": {
+        "1712740705160db3c387": {
+          "type": "item",
+          "settings": {
+            "title": "Model Number",
+            "content": "TR120E"
+          }
+        },
+        "1712740765399592514b": {
+          "type": "item",
+          "settings": {
+            "title": "Thermal Resolution",
+            "content": "120*90"
+          }
+        },
+        "1712740840211cb797b8": {
+          "type": "item",
+          "settings": {
+            "title": "Measurable Distance Range",
+            "content": "0.5m~1.2m"
+          }
+        },
+        "1712740890661493d85e": {
+          "type": "item",
+          "settings": {
+            "title": "Wavelength Coverage",
+            "content": "8-14um"
+          }
+        },
+        "171274094356415c886c": {
+          "type": "item",
+          "settings": {
+            "title": "Temperature Range",
+            "content": "-20℃～400℃&nbsp;"
+          }
+        },
+        "17127410691790e11fea": {
+          "type": "item",
+          "settings": {
+            "title": "Color Palette",
+            "content": "5 Color Palettes"
+          }
+        },
+        "171274115167042803fa": {
+          "type": "item",
+          "settings": {
+            "title": "Frame Rate",
+            "content": "25 Hz"
+          }
+        },
+        "171274128106772bce1f": {
+          "type": "item",
+          "settings": {
+            "title": "Infrared Spectral Band",
+            "content": "8-12um"
+          }
+        },
+        "1712741354355fc1c109": {
+          "type": "item",
+          "settings": {
+            "title": "Battery",
+            "content": "3.7V 2600mAh rechargeable lithium battery"
+          }
+        },
+        "17127445635732a5e460": {
+          "type": "item",
+          "settings": {
+            "title": "Weight",
+            "content": "310g"
+          }
+        },
+        "171274460263401ddf26": {
+          "type": "item",
+          "settings": {
+            "title": "Dimension",
+            "content": "19.7*7.2*6cm"
+          }
+        }
+      },
+      "block_order": [
+        "1712740705160db3c387",
+        "1712740765399592514b",
+        "1712740840211cb797b8",
+        "1712740890661493d85e",
+        "171274094356415c886c",
+        "17127410691790e11fea",
+        "171274115167042803fa",
+        "171274128106772bce1f",
+        "1712741354355fc1c109",
+        "17127445635732a5e460",
+        "171274460263401ddf26"
+      ],
+      "custom_css": []
+    },
+    "17128157622198d02cdd": {
+      "disabled": false,
+      "type": "tnv30-productcompare",
+      "settings": {
+        "title": "Compare With Other Models",
+        "urltext": "COMPARE MORE PRODUCTS",
+        "url": "https://mileseeytools.com/collections/all-thermal-imaging-cameras"
+      },
+      "blocks": {
+        "171281578772178667bd": {
+          "type": "item",
+          "settings": {
+            "title": "TR120E",
+            "value01": "2.4\" TFT LCD",
+            "key01": "Display Screen",
+            "value02": "120*90",
+            "key02": "Thermal Resolution",
+            "value03": "320*240",
+            "key03": "Display Resolution",
+            "value04": "n/a",
+            "key04": "Visible Light ",
+            "value05": "25Hz",
+            "key05": "Output Frame Rate",
+            "value06": "0.5m~1.2m",
+            "key06": "Measurable Distance Range",
+            "value07": "",
+            "product": "16063677008577193735560910"
+          }
+        },
+        "1712815897074d710339": {
+          "type": "item",
+          "settings": {
+            "title": "TR120",
+            "value01": "3.5'' IPS Large Screen",
+            "key01": "Display Screen",
+            "value02": "120x90",
+            "key02": "Thermal Resolution",
+            "value03": "320*240",
+            "key03": "Display Resolution",
+            "value04": "640*480 pixels",
+            "key04": "Visible Light Resolution",
+            "value05": "≤20Hz",
+            "key05": "Output Frame Rate",
+            "value06": "0.5m~1.2m",
+            "key06": "Measurable Distance Range",
+            "product": "16063677008246850257210910"
+          }
+        },
+        "1712816017882ee379d9": {
+          "type": "item",
+          "settings": {
+            "title": "TR256B",
+            "value01": "2.8'' LCD Screen",
+            "key01": "Display Screen",
+            "value02": "256*192",
+            "key02": "Thermal Resolution",
+            "value03": "320*240",
+            "key03": "Display Resolution",
+            "value04": "200W",
+            "key04": "Visible Light Resolution",
+            "value05": "50Hz",
+            "key05": "Output Frame Rate",
+            "value06": "0.5m~1.2m",
+            "key06": "Measurable Distance Range",
+            "product": "16063677010001243733690910"
+          }
+        }
+      },
+      "block_order": [
+        "171281578772178667bd",
+        "1712815897074d710339",
+        "1712816017882ee379d9"
+      ],
+      "custom_css": []
+    }
+  },
+  "order": [
+    "main-product-info",
+    "1710467045770d25e404",
+    "1712740421144770412f",
+    "1712740462086ad7c0fe",
+    "17128157622198d02cdd",
+    "product-recommendations"
+  ]
+}

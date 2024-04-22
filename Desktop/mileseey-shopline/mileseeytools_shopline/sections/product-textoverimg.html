@@ -1,0 +1,130 @@
+{{ assign 'secidlast' (replace section.id '-' '_') }}
+<div class="pro4kteoverimg-container" id="pro4kteoverimg-{{secidlast}}">
+      {{#if section.settings.image}}
+        <img
+          class="hide-mb"
+          alt
+          src="{{ image_url section.settings.image }}"
+        >
+      {{/if}}
+      {{#if section.settings.imagemb}}
+        <img
+          class="hide-pc"
+          alt
+          src="{{ image_url section.settings.imagemb }}"         
+        >
+      {{/if}}
+      {{#if section.settings.bgimage}}
+      <div class="overbgimg-tp2">
+        <img
+          class="hide-mb"
+          alt
+          src="{{ image_url section.settings.bgimage }}"
+        >
+
+      {{#if section.settings.bgimagemb}}
+        <img
+          class="hide-pc"
+          alt
+          src="{{ image_url section.settings.bgimagemb }}"         
+        >
+      {{/if}}
+      </div>
+     {{/if}}
+      <div class="pro4kteoverimg-text pro4kteoverimgte-{{section.settings.text_position}}" style="text-align:{{section.settings.text_align}}">
+      {{#if section.settings.title '!=' ''}}
+        <div class="tnv30scrollimg-box-title animate-ele">
+          {{ section.settings.title }}
+        </div>
+      {{/if}}
+      {{#if section.settings.content '!=' ''}}
+        <div class="pro4kteoverimg-content animate-ele">
+          {{{section.settings.content}}}
+        </div>
+      {{/if}}
+      </div>
+</div>
+
+{{#schema}}
+{
+  "name": "Text Over Image",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "imagemb",
+      "label": "Image(mobile)"
+    },{
+        "type": "select",
+        "id": "text_position",
+        "label": "text position",
+        "options": [
+          {
+            "value": "center",
+            "label": "center"
+          },{
+            "value": "top",
+            "label": "top"
+          },{
+            "value": "bottom",
+            "label": "bottom"
+          },{
+            "value": "left-middle",
+            "label": "left-middle"
+          },{
+            "value": "right-middle",
+            "label": "right-middle"
+          }
+        ],
+        "default": "top"
+      },{
+        "type": "select",
+        "id": "text_align",
+        "label": "text align",
+        "options": [
+          {
+            "value": "center",
+            "label": "center"
+          },{
+            "value": "left",
+            "label": "left"
+          },{
+            "value": "right",
+            "label": "right"
+          }
+        ],
+        "default": "center"
+      },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "title"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "content"
+    },{
+      "type": "image_picker",
+      "id": "bgimage",
+      "label": "Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "bgimagemb",
+      "label": "Background Image(mobile)"
+    }
+  ],
+
+  "presets": [
+    {
+      "name": "Text Over Image",
+      "category": "Ho-Advance"
+    }
+  ]
+}
+{{/schema}}

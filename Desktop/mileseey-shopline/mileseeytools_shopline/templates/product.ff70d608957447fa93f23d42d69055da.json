@@ -1,0 +1,624 @@
+{
+  "sections": {
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": false,
+      "settings": {
+        "show_product_number": 6,
+        "pc_cols": 4,
+        "md_cols": 2,
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "product_image_ratio": "150",
+        "product_fill_type": "contain",
+        "product_hover_show_next": true,
+        "notice_style": ""
+      },
+      "blocks": {
+        "block-1": {
+          "type": "image",
+          "settings": {}
+        },
+        "block-2": {
+          "type": "title",
+          "settings": {}
+        },
+        "block-3": {
+          "type": "price",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "block-1",
+        "block-2",
+        "block-3"
+      ]
+    },
+    "main-product-info": {
+      "type": "main-product",
+      "disabled": false,
+      "settings": {
+        "product_info_sticky": true,
+        "product_image_pc_show_style": "carousel",
+        "product_image_pc_thumbnail_postion": "bottom",
+        "product_image_size": "medium",
+        "product_mobile_thumbnail_image_hide": "hide",
+        "video_loop": false,
+        "video_autoplay": false,
+        "pc_magnifier_type": "click",
+        "padding_top": 60,
+        "padding_bottom": 60
+      },
+      "blocks": {
+        "block_1": {
+          "type": "title",
+          "settings": {}
+        },
+        "block_2": {
+          "type": "price",
+          "settings": {
+            "show_order": "sale_origin",
+            "sale_font_size": "font_size_big",
+            "regular_font_size": "font_size_medium",
+            "save_font_size": "font_size_small",
+            "font_size_flexible": false,
+            "sale_price_pc_font_size": 20,
+            "sale_price_mobile_font_size": 18,
+            "regular_price_pc_font_size": 20,
+            "regular_price_mobile_font_size": 16,
+            "save_price_pc_font_size": 20,
+            "save_price_mobile_font_size": 16,
+            "sale_font_bold": true
+          }
+        },
+        "block_3": {
+          "type": "dividing_line",
+          "settings": {
+            "dividing_line_color": "#000000",
+            "dividing_line_height": 1
+          }
+        },
+        "block_7": {
+          "type": "description",
+          "settings": {
+            "location": "image_right",
+            "is_fold": false
+          }
+        },
+        "block_4": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "flatten",
+            "enabled_color_swatch": true,
+            "color_swatch_type": "square",
+            "sizes": "medium",
+            "layout_direction": "row"
+          }
+        },
+        "block_5": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "block_6": {
+          "type": "buy_buttons",
+          "settings": {}
+        },
+        "block_12": {
+          "type": "share",
+          "settings": {},
+          "disabled": true
+        },
+        "17127390196990a1d906": {
+          "type": "icon",
+          "settings": {
+            "icon1": "logistics",
+            "title1": "Free Shipping",
+            "sub_title1": "",
+            "icon2": "medal",
+            "title2": "30-Day Money Back",
+            "sub_title2": "",
+            "icon3": "customer",
+            "title3": "Lifetime Customer Support",
+            "sub_title3": ""
+          }
+        },
+        "1712739089022adc06e5": {
+          "type": "html",
+          "settings": {
+            "html": "<div class=\"payment-icon-wrapper\">\n    \n      <img class=\" lazyloaded\" src=\"//7egoaboyt7vy3efy-56001626273.shopifypreview.com/cdn/shop/files/f2.png?v=1679398209\" data-src=\"//7egoaboyt7vy3efy-56001626273.shopifypreview.com/cdn/shop/files/f2.png?v=1679398209\" width=\"548\" height=\"32\" loading=\"lazy\" alt=\"\">"
+          },
+          "disabled": true
+        }
+      },
+      "block_order": [
+        "block_1",
+        "block_2",
+        "block_3",
+        "block_7",
+        "block_4",
+        "block_5",
+        "block_6",
+        "block_12",
+        "17127390196990a1d906",
+        "1712739089022adc06e5"
+      ],
+      "custom_css": []
+    },
+    "1710467045770d25e404": {
+      "type": "new-background-text-size-width",
+      "disabled": false,
+      "settings": {
+        "margin_top": 0
+      },
+      "blocks": {
+        "1710468158039f63db5a": {
+          "type": "image",
+          "settings": {
+            "show_font": false,
+            "base_font_family": "poppins_n4",
+            "title": "New Version TR256C <br>\nThermal Imaging Camera",
+            "heading_font_weight": "700",
+            "heading_font_size_pc": "2.1vw",
+            "heading_font_size_mb": "6.5vw",
+            "text": "Infrared Image resolution as 256*192, Optional functions for TR256C:\nDual-camera for infrared or visible light, Laser Measure, GPS Positioning and WIFI Projection",
+            "sheading_font_weight": "500",
+            "sheading_font_size_pc": "0.8vw",
+            "sheading_font_size_mb": 14,
+            "text_color": "#fff",
+            "text_bg_color": "#000000",
+            "text_mobile_color": "#fff",
+            "text_width_pc": 40,
+            "text_width_mb": 100,
+            "layout": "left",
+            "btn": "Shop Now",
+            "btn_font_weight": "500",
+            "btn_bg_color": "#ff6000",
+            "btn_bg_color_hover": "#019cb6",
+            "btn_font_size_pc": "18px",
+            "btn_font_size_mb": 14,
+            "checkout": false,
+            "image_mb": "shopline://shop_images/1_6378022943456662604.jpg",
+            "image": "shopline://shop_images/1_6378022532616605785.jpg"
+          }
+        },
+        "17104681591607cb5700": {
+          "type": "image",
+          "settings": {
+            "show_font": false,
+            "base_font_family": "poppins_n4",
+            "title": "Visible Light Camera",
+            "heading_font_weight": "700",
+            "heading_font_size_pc": "2.1vw",
+            "heading_font_size_mb": "6.5vw",
+            "text": "Mileseey TR256C infrared thermal scanner, designed with infrared, visible light and automatic hot/cold spot tracker, providing people with Visible Light Camera",
+            "sheading_font_weight": "500",
+            "sheading_font_size_pc": "0.8vw",
+            "sheading_font_size_mb": 14,
+            "text_color": "#fff",
+            "text_bg_color": "#000000",
+            "text_mobile_color": "#fff",
+            "text_width_pc": 40,
+            "text_width_mb": 100,
+            "layout": "right",
+            "btn": "Shop Now",
+            "btn_font_weight": "500",
+            "btn_bg_color": "#ff6000",
+            "btn_bg_color_hover": "#019cb6",
+            "btn_font_size_pc": "18px",
+            "btn_font_size_mb": 14,
+            "checkout": false,
+            "image": "shopline://shop_images/2_6378022534193664014.jpg",
+            "image_mb": "shopline://shop_images/2_6378022944899503150.jpg"
+          }
+        },
+        "1710468160624902171f": {
+          "type": "image",
+          "settings": {
+            "show_font": false,
+            "base_font_family": "poppins_n4",
+            "title": "6 Colors Palettes | Adjustable Emissivity\n",
+            "heading_font_weight": "700",
+            "heading_font_size_pc": "2.1vw",
+            "heading_font_size_mb": "6.5vw",
+            "text": "Warning for hot/cold temperature, \n6 color palettes - High Resolution Rainbow, Hot Red, Lava, Rainbow, Iron Red, White Heat for clearer view and easier analysis",
+            "sheading_font_weight": "500",
+            "sheading_font_size_pc": "0.8vw",
+            "sheading_font_size_mb": 14,
+            "text_color": "#fff",
+            "text_bg_color": "#000000",
+            "text_mobile_color": "#fff",
+            "text_width_pc": 40,
+            "text_width_mb": 100,
+            "layout": "left",
+            "btn": "Shop Now",
+            "btn_font_weight": "500",
+            "btn_bg_color": "#ff6000",
+            "btn_bg_color_hover": "#019cb6",
+            "btn_font_size_pc": "18px",
+            "btn_font_size_mb": 14,
+            "checkout": false,
+            "image_mb": "shopline://shop_images/3_6378022946375898177.jpg",
+            "image": "shopline://shop_images/3_6378022535602950238.jpg"
+          }
+        },
+        "17104692135467eb5a7d": {
+          "type": "image",
+          "settings": {
+            "show_font": false,
+            "base_font_family": "poppins_n4",
+            "title": "Auto Hot/Cold Spot Tracker",
+            "heading_font_weight": "700",
+            "heading_font_size_pc": "2.1vw",
+            "heading_font_size_mb": "6.5vw",
+            "text": "Quick scan and inspection warning \nfor hot/cold temperature. Wide temperature range: the thermal infrared camera can measure from-20℃ to 450℃ (4℉～842℉).Big memory with 2000 pictures.Rechargeable Lithium Battery",
+            "sheading_font_weight": "500",
+            "sheading_font_size_pc": "0.8vw",
+            "sheading_font_size_mb": 14,
+            "text_color": "#fff",
+            "text_bg_color": "#000000",
+            "text_mobile_color": "#fff",
+            "text_width_pc": 40,
+            "text_width_mb": 100,
+            "layout": "right",
+            "btn": "Shop Now",
+            "btn_font_weight": "500",
+            "btn_bg_color": "#ff6000",
+            "btn_bg_color_hover": "#019cb6",
+            "btn_font_size_pc": "18px",
+            "btn_font_size_mb": 14,
+            "checkout": false,
+            "image": "shopline://shop_images/4_6378022536827686955.jpg",
+            "image_mb": "shopline://shop_images/4_6378022947667743786.jpg"
+          }
+        },
+        "171046921446833348ff": {
+          "type": "image",
+          "settings": {
+            "show_font": false,
+            "base_font_family": "poppins_n4",
+            "title": "3.5 inch Color LCD <br>High Display Resolution",
+            "heading_font_weight": "700",
+            "heading_font_size_pc": "2.1vw",
+            "heading_font_size_mb": "6.5vw",
+            "text": "The infrared thermometer camera TR256C<br>\nWith wide field view of 50x63.4°,\ndisplays resolution 320*240 and the visible light resolution 640*480, \ndelivers super high-resolution thermal imaging",
+            "sheading_font_weight": "500",
+            "sheading_font_size_pc": "0.8vw",
+            "sheading_font_size_mb": 14,
+            "text_color": "#fff",
+            "text_bg_color": "#000000",
+            "text_mobile_color": "#fff",
+            "text_width_pc": 40,
+            "text_width_mb": 100,
+            "layout": "left",
+            "btn": "Shop Now",
+            "btn_font_weight": "500",
+            "btn_bg_color": "#ff6000",
+            "btn_bg_color_hover": "#019cb6",
+            "btn_font_size_pc": "18px",
+            "btn_font_size_mb": 14,
+            "checkout": false,
+            "image": "shopline://shop_images/5_6378022538085978186.jpg",
+            "image_mb": "shopline://shop_images/5_6378022949194470466.jpg"
+          }
+        },
+        "17104692153248b6f0bf": {
+          "type": "image",
+          "settings": {
+            "show_font": false,
+            "base_font_family": "poppins_n4",
+            "title": "GPS Positioning <br>for TR256C only",
+            "heading_font_weight": "700",
+            "heading_font_size_pc": "2.1vw",
+            "heading_font_size_mb": "6.5vw",
+            "text": "Positioning the detected objective accurately with longitude and latitude location, track the objective in high or low temperature conveniently, keep the positioning record with camera shot",
+            "sheading_font_weight": "500",
+            "sheading_font_size_pc": "0.8vw",
+            "sheading_font_size_mb": 14,
+            "text_color": "#fff",
+            "text_bg_color": "#000000",
+            "text_mobile_color": "#fff",
+            "text_width_pc": 40,
+            "text_width_mb": 100,
+            "layout": "right",
+            "btn": "Shop Now",
+            "btn_font_weight": "500",
+            "btn_bg_color": "#ff6000",
+            "btn_bg_color_hover": "#019cb6",
+            "btn_font_size_pc": "18px",
+            "btn_font_size_mb": 14,
+            "checkout": false,
+            "image_mb": "shopline://shop_images/6_6378022950570202141.jpg",
+            "image": "shopline://shop_images/6_6378022539679813717.jpg"
+          }
+        },
+        "17104692351920f678b9": {
+          "type": "image",
+          "settings": {
+            "show_font": false,
+            "base_font_family": "poppins_n4",
+            "title": "Laser Measure Function<br> for TR256C only",
+            "heading_font_weight": "700",
+            "heading_font_size_pc": "2.1vw",
+            "heading_font_size_mb": "6.5vw",
+            "text": "Not only detecting and imaging by infrared technology, laser measure is available to find the exact range from the objective",
+            "sheading_font_weight": "500",
+            "sheading_font_size_pc": "0.8vw",
+            "sheading_font_size_mb": 14,
+            "text_color": "#fff",
+            "text_bg_color": "#000000",
+            "text_mobile_color": "#fff",
+            "text_width_pc": 40,
+            "text_width_mb": 100,
+            "layout": "left",
+            "btn": "Shop Now",
+            "btn_font_weight": "500",
+            "btn_bg_color": "#ff6000",
+            "btn_bg_color_hover": "#019cb6",
+            "btn_font_size_pc": "18px",
+            "btn_font_size_mb": 14,
+            "checkout": false,
+            "image": "shopline://shop_images/7_6378022541122654286.jpg",
+            "image_mb": "shopline://shop_images/7_6378022951945933858.jpg"
+          }
+        },
+        "1710469236105e7b8901": {
+          "type": "image",
+          "settings": {
+            "show_font": false,
+            "base_font_family": "poppins_n4",
+            "title": "WIFI projection for TR256C only",
+            "heading_font_weight": "700",
+            "heading_font_size_pc": "2.1vw",
+            "heading_font_size_mb": "6.5vw",
+            "text": "WIFI projection enable to have thermal images easily and conveniently in computer and without wire connection with thermal imager and analyze the pictures with computer software",
+            "sheading_font_weight": "500",
+            "sheading_font_size_pc": "0.8vw",
+            "sheading_font_size_mb": 14,
+            "text_color": "#fff",
+            "text_bg_color": "#000000",
+            "text_mobile_color": "#fff",
+            "text_width_pc": 40,
+            "text_width_mb": 100,
+            "layout": "right",
+            "btn": "Shop Now",
+            "btn_font_weight": "500",
+            "btn_bg_color": "#ff6000",
+            "btn_bg_color_hover": "#019cb6",
+            "btn_font_size_pc": "18px",
+            "btn_font_size_mb": 14,
+            "checkout": false,
+            "image": "shopline://shop_images/8_6378022542750044209.jpg",
+            "image_mb": "shopline://shop_images/8_6378022953388774471.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "1710468158039f63db5a",
+        "17104681591607cb5700",
+        "1710468160624902171f",
+        "17104692135467eb5a7d",
+        "171046921446833348ff",
+        "17104692153248b6f0bf",
+        "17104692351920f678b9",
+        "1710469236105e7b8901"
+      ],
+      "custom_css": []
+    },
+    "171274184704274b0bc5": {
+      "type": "animate-prosettings",
+      "disabled": false,
+      "settings": {},
+      "blocks": {},
+      "block_order": []
+    },
+    "1712741877570873e231": {
+      "type": "tnv30-specs",
+      "disabled": false,
+      "settings": {
+        "title": "TR256C Thermal Imaging Camera",
+        "specs": "SPECS",
+        "specification": "User Manual",
+        "specification_url": "https://cdn-files.myshopline.com/file/store/1709871255948/TR256C.pdf",
+        "media_type": "image",
+        "image": null
+      },
+      "blocks": {
+        "1712741998307e8a750c": {
+          "type": "item",
+          "settings": {
+            "title": "Model Number",
+            "content": "TR256C"
+          }
+        },
+        "171274204194074489d1": {
+          "type": "item",
+          "settings": {
+            "title": "Thermal Resolution",
+            "content": "256*192"
+          }
+        },
+        "17127420668550108203": {
+          "type": "item",
+          "settings": {
+            "title": "Measurable Distance Range",
+            "content": "0.5m~1.2m"
+          }
+        },
+        "171274209824799e5404": {
+          "type": "item",
+          "settings": {
+            "title": "Visible Light Resolution",
+            "content": "2 Megapixels"
+          }
+        },
+        "1712742589163db0e817": {
+          "type": "item",
+          "settings": {
+            "title": "Extra Features",
+            "content": "GPS Positioning,Laser Measure, WIFI projection"
+          }
+        },
+        "171274230710165fc716": {
+          "type": "item",
+          "settings": {
+            "title": "Wavelength Coverage",
+            "content": "8-14um"
+          }
+        },
+        "171274235057030f3b54": {
+          "type": "item",
+          "settings": {
+            "title": "Temperature Range",
+            "content": "-20℃～550℃ (-4℉～1022℉)"
+          }
+        },
+        "17127423914888889102": {
+          "type": "item",
+          "settings": {
+            "title": "Color Palettes",
+            "content": "6 Color Palettes"
+          }
+        },
+        "1712742441135f70e9cd": {
+          "type": "item",
+          "settings": {
+            "title": "Frame Rate",
+            "content": "&lt;20 Hz"
+          }
+        },
+        "17127424902967970619": {
+          "type": "item",
+          "settings": {
+            "title": "Infrared Spectral Band",
+            "content": "12um"
+          }
+        },
+        "171274252985649ec0b4": {
+          "type": "item",
+          "settings": {
+            "title": "Battery",
+            "content": "5000mAh rechargeable lithium battery"
+          }
+        },
+        "171274474475566f1b8d": {
+          "type": "item",
+          "settings": {
+            "title": "Weight",
+            "content": "555g"
+          }
+        },
+        "171274478927447a40f2": {
+          "type": "item",
+          "settings": {
+            "title": "Dimension",
+            "content": "23.8*95*85cm"
+          }
+        }
+      },
+      "block_order": [
+        "1712741998307e8a750c",
+        "171274204194074489d1",
+        "17127420668550108203",
+        "171274209824799e5404",
+        "1712742589163db0e817",
+        "171274230710165fc716",
+        "171274235057030f3b54",
+        "17127423914888889102",
+        "1712742441135f70e9cd",
+        "17127424902967970619",
+        "171274252985649ec0b4",
+        "171274474475566f1b8d",
+        "171274478927447a40f2"
+      ],
+      "custom_css": []
+    },
+    "17128078170983b7f82b": {
+      "disabled": false,
+      "type": "tnv30-productcompare",
+      "settings": {
+        "title": "Compare With The Other Models",
+        "urltext": "COMPARE MORE PRODUCTS",
+        "url": "https://mileseeytools.com/collections/all-thermal-imaging-cameras"
+      },
+      "blocks": {
+        "171280790714117f38e6": {
+          "type": "item",
+          "settings": {
+            "title": "TR256C",
+            "value01": "3.5'' IPS Large Screen",
+            "key01": "Display Screen",
+            "value02": "256x192",
+            "key02": "Thermal Resolution",
+            "value03": "640*480 ",
+            "key03": "Display Resolution",
+            "value04": "2 Megapixels",
+            "key04": "Visible Light Resolution",
+            "value05": "≤20Hz",
+            "key05": "Output Frame Rate",
+            "value06": "Laser Measure/GPS/Wifi",
+            "key06": "Extra Function",
+            "value07": "0.5m~1.2m",
+            "key07": "Measurable Distance Range",
+            "product": "16063677009311700253640910"
+          }
+        },
+        "17128130846337d2e919": {
+          "type": "item",
+          "settings": {
+            "title": "TR256A",
+            "value01": "3.5'' IPS Large Screen",
+            "key01": "Display Screen",
+            "value02": "256x192",
+            "key02": "Thermal Resolution",
+            "value03": "640*480 ",
+            "key03": "Display Resolution",
+            "value04": "2 Megapixels",
+            "key04": "Visible Light Resolution",
+            "value05": "≤20Hz",
+            "key05": "Output Frame Rate",
+            "value06": "/",
+            "key06": "Extra Function",
+            "value07": "0.5m~1.2m",
+            "key07": "Measurable Distance Range",
+            "product": "16063677008822979860180910"
+          }
+        },
+        "171281321482992397d3": {
+          "type": "item",
+          "settings": {
+            "title": "TR120",
+            "value01": "3.5'' IPS Large Screen",
+            "key01": "Display Screen",
+            "value02": "120x90",
+            "key02": "Thermal Resolution",
+            "value03": "320*240",
+            "key03": "Display Resolution",
+            "value04": "640*480 pixels",
+            "key04": "Visible Light Resolution",
+            "value05": "≤20Hz",
+            "key05": "Output Frame Rate",
+            "value06": "/",
+            "key06": "Extra Function",
+            "value07": "0.5m~1.2m",
+            "key07": "Measurable Distance Range",
+            "product": "16063677008246850257210910"
+          }
+        }
+      },
+      "block_order": [
+        "171280790714117f38e6",
+        "17128130846337d2e919",
+        "171281321482992397d3"
+      ],
+      "custom_css": []
+    }
+  },
+  "order": [
+    "171274184704274b0bc5",
+    "main-product-info",
+    "1710467045770d25e404",
+    "17128078170983b7f82b",
+    "1712741877570873e231",
+    "product-recommendations"
+  ]
+}
