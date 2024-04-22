@@ -1,0 +1,893 @@
+{
+  "sections": {
+    "f48aa03f-f9e1-4943-a2f3-abc756228367": {
+      "type": "product-diver",
+      "disabled": false,
+      "settings": {},
+      "blocks": {}
+    },
+    "fa675739-fd6f-4424-819e-6d1bee5d2b4c": {
+      "type": "animate-prosettings",
+      "disabled": false,
+      "settings": {},
+      "blocks": {}
+    },
+    "49d8137d-8a2f-4152-8eb8-7913fbf27a0e": {
+      "type": "product-diver",
+      "disabled": false,
+      "settings": {},
+      "blocks": {}
+    },
+    "363618ec-e44d-4b05-b9e6-3961f0cd3a16": {
+      "type": "product-diver",
+      "disabled": false,
+      "settings": {},
+      "blocks": {}
+    },
+    "b2b24c13-7c5b-4556-92aa-a3df195c5e15": {
+      "type": "product-diver",
+      "disabled": false,
+      "settings": {},
+      "blocks": {}
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": false,
+      "settings": {
+        "show_product_number": 6,
+        "pc_cols": 4,
+        "md_cols": 2,
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "product_image_ratio": "150",
+        "product_fill_type": "contain",
+        "product_hover_show_next": true,
+        "notice_style": ""
+      },
+      "blocks": {
+        "block-1": {
+          "type": "image",
+          "settings": {}
+        },
+        "block-2": {
+          "type": "title",
+          "settings": {}
+        },
+        "block-3": {
+          "type": "price",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "block-1",
+        "block-2",
+        "block-3"
+      ]
+    },
+    "1710752964166857b581": {
+      "type": "sign-up-and-save",
+      "disabled": false,
+      "settings": {
+        "full_screen_width": true,
+        "color_scheme": "none",
+        "padding_top": 80,
+        "padding_bottom": 80
+      },
+      "blocks": {
+        "17107529641663402edc": {
+          "type": "title",
+          "settings": {
+            "title": "SERVICE SUPPORT",
+            "fontSize": "title3"
+          },
+          "blockId": "17107529641663402edc"
+        },
+        "17107529641662daa800": {
+          "type": "desc",
+          "settings": {
+            "description": "Be the first to find out about our newest offerings and hottest deals, and what’s new."
+          },
+          "blockId": "17107529641662daa800"
+        },
+        "1710752964166e359026": {
+          "type": "button",
+          "settings": {
+            "button_text": "Submit",
+            "placeholder": "Your email address"
+          },
+          "blockId": "1710752964166e359026"
+        }
+      },
+      "block_order": [
+        "17107529641663402edc",
+        "17107529641662daa800",
+        "1710752964166e359026"
+      ],
+      "custom_css": []
+    },
+    "main-product-info": {
+      "type": "main-product",
+      "disabled": false,
+      "settings": {
+        "product_info_sticky": true,
+        "product_image_pc_show_style": "thumbnail_flatten",
+        "product_image_pc_thumbnail_postion": "bottom",
+        "product_image_size": "small",
+        "product_mobile_thumbnail_image_hide": "hide",
+        "video_loop": false,
+        "video_autoplay": false,
+        "pc_magnifier_type": "click",
+        "padding_top": 60,
+        "padding_bottom": 60
+      },
+      "blocks": {
+        "block_1": {
+          "type": "title",
+          "settings": {}
+        },
+        "block_2": {
+          "type": "price",
+          "settings": {}
+        },
+        "block_3": {
+          "type": "dividing_line",
+          "settings": {
+            "dividing_line_color": "#000000",
+            "dividing_line_height": 1
+          }
+        },
+        "block_4": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "flatten",
+            "enabled_color_swatch": true,
+            "color_swatch_type": "square",
+            "sizes": "medium",
+            "layout_direction": "row"
+          }
+        },
+        "block_5": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "block_6": {
+          "type": "buy_buttons",
+          "settings": {}
+        },
+        "block_7": {
+          "type": "description",
+          "settings": {
+            "location": "image_right",
+            "is_fold": false
+          }
+        },
+        "block_8": {
+          "type": "product_additional",
+          "settings": {
+            "title": "",
+            "icon": "none",
+            "description": "",
+            "custom_page": ""
+          }
+        },
+        "block_9": {
+          "type": "product_additional",
+          "settings": {
+            "title": "",
+            "icon": "none",
+            "description": "",
+            "custom_page": ""
+          }
+        },
+        "block_10": {
+          "type": "product_additional",
+          "settings": {
+            "title": "",
+            "icon": "none",
+            "description": "",
+            "custom_page": ""
+          }
+        },
+        "block_11": {
+          "type": "product_additional",
+          "settings": {
+            "title": "",
+            "icon": "none",
+            "description": "",
+            "custom_page": ""
+          }
+        },
+        "block_12": {
+          "type": "share",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "block_1",
+        "block_2",
+        "block_3",
+        "block_4",
+        "block_5",
+        "block_6",
+        "block_7",
+        "block_8",
+        "block_9",
+        "block_10",
+        "block_11",
+        "block_12"
+      ],
+      "custom_css": []
+    },
+    "tnv30_keyframe04_RJpPdU": {
+      "type": "tnv30-keyframe04",
+      "disabled": false,
+      "settings": {
+        "image_leaderurl": "https://cdn.shopify.com/s/files/1/0560/0162/6273/files/DTX10_Unprecedented_Digital_Accuracy",
+        "url_parameter": "?v=1706754085",
+        "image_number": "36",
+        "image_type": "webp",
+        "toptitle": "Unprecedented Digital Accuracy",
+        "topcontent": "The revolutionary digitization technology translates the scale of the tape measure into accurate digital distance data.The patented AccuMeasure marks on the tape read by the state-of-the-art decoding sensor, ensuring the most accurate measurements with a precision of up to +/- 1/32”.",
+        "lenspec": "",
+        "top_dis": 100,
+        "bottom_dis": 100,
+        "spec01": "",
+        "spec02": "",
+        "spec03": "",
+        "image": null,
+        "bg_image": "shopline://shop_images/bg01.jpeg"
+      },
+      "blocks": {},
+      "custom_css": []
+    },
+    "tnv30_keyframe04_YcPdDT": {
+      "type": "tnv30-keyframe04",
+      "disabled": false,
+      "settings": {
+        "image_leaderurl": "https://cdn.shopify.com/s/files/1/0560/0162/6273/files/DTX10_Industry-leading_blade_robustness",
+        "url_parameter": "?v=1706757038",
+        "image_number": "10",
+        "image_type": "webp",
+        "toptitle": "Industry-leading blade robustness",
+        "topcontent": "With industry-leading blade robustness, advanced automatic tape braking system, replaceable tape mechanism, the DTX10 is built for getting results in tough conditions.",
+        "lenspec": "",
+        "top_dis": 100,
+        "bottom_dis": 100,
+        "spec01": "Imperial Metric Unit",
+        "spec02": "Replaceable Tape",
+        "spec03": "Automatic Tape brake",
+        "image": null,
+        "bg_image": "shopline://shop_images/bg03.jpeg"
+      },
+      "blocks": {},
+      "custom_css": []
+    },
+    "d9_textoverimg_MiqByg": {
+      "disabled": false,
+      "type": "d9-textoverimg",
+      "settings": {
+        "fullscreen": true,
+        "position": "left",
+        "image": "shopline://shop_images/测量工具专题-DTX10_01_04.jpg",
+        "imagemb": "shopline://shop_images/M-DTX10_09_6385195360616456287.png",
+        "title": "Green Laser Line extension",
+        "content": "<p>The green laser line is a complete game-changer, delivering fast and accurate alignment from the tape's markings to the measured points on materials of any geometry.</p>",
+        "top_dis": 60,
+        "bottom_dis": 60
+      },
+      "blocks": {},
+      "custom_css": []
+    },
+    "tnv30_textwithmedia_DMKpQB": {
+      "type": "tnv30-textwithmedia",
+      "disabled": true,
+      "settings": {
+        "title": "Exceptional Brightness And Extending Range",
+        "content": "<p>The long-range and bright green laser line extension allows for easy alignment and marking of measuring point at far areas or surfaces.</p>",
+        "media_type": "image",
+        "image": "shopline://shop_images/7_6385194275717783556.png",
+        "image_mb": "shopline://shop_images/7_6385194275717783556.png"
+      },
+      "blocks": {},
+      "custom_css": []
+    },
+    "95c0aab3-bf74-41de-97d3-dade34b38a45": {
+      "type": "tnv30-textwithmedia",
+      "disabled": true,
+      "settings": {
+        "title": "You Ultimate Tool of Precision",
+        "content": "<p>For professionals in construction, architecture, and interior design, extreme accuracy reduces costly errors and reworks, allowing you to always stay competitive in fast-paced job sites.</p>",
+        "media_type": "image",
+        "video": "shopify://files/videos/DTX10 You Ultimate Tool of Precision.mp4",
+        "video_mb": "shopify://files/videos/DTX10 You Ultimate Tool of Precision.mp4",
+        "image": "shopline://shop_images/7_6385194275717783556.png",
+        "image_mb": "shopline://shop_images/7_6385194275717783556.png"
+      },
+      "blocks": {},
+      "custom_css": []
+    },
+    "tnv30_keyframe04_dKKGRb": {
+      "type": "tnv30-keyframe04",
+      "disabled": false,
+      "settings": {
+        "image_leaderurl": "https://cdn.shopify.com/s/files/1/0560/0162/6273/files/DTX10_State-of-the-art_laser_measure",
+        "url_parameter": "?v=1706756634",
+        "image_number": "7",
+        "image_type": "webp",
+        "toptitle": "State-of-the-art laser measure",
+        "topcontent": "Boasting an advanced laser measure that extends up to 330ft, the DTX10 offers unrivaled measuring ease to distant and hard-to-reach areas without moving an inch,ensuring safety in complex job sites by eliminating the need for repeated ladder climbs.",
+        "lenspec": "",
+        "top_dis": 100,
+        "bottom_dis": 100,
+        "spec01": "",
+        "spec02": "",
+        "spec03": "",
+        "image": null,
+        "bg_image": "shopline://shop_images/bg02.jpeg"
+      },
+      "blocks": {},
+      "custom_css": []
+    },
+    "17109169383613eac5f2": {
+      "type": "animate-frame01",
+      "disabled": false,
+      "settings": {
+        "media_type": "image",
+        "title": "DTX10 DIGITAL TAPE PRO",
+        "content": "The revolutionary digitization technology translates the scale of the tape measure into accurate digital distance data.The patented AccuMeasure marks on the tape read by the state-of-the-art decoding sensor, ensuring the most accurate measurements with a precision of up to +/- 1/32”.",
+        "bg_image": "shopline://shop_images/测量工具专题-DTX10_01_01.jpg",
+        "image": "shopline://shop_images/测量工具专题-DTX10_01_01.jpg",
+        "image_mb": "shopline://shop_images/测量工具专题-DTX10_01_01.jpg",
+        "bg_imagemb": "shopline://shop_images/M-DTX10_02_6385221745204798539.png"
+      },
+      "blocks": {},
+      "block_order": [],
+      "custom_css": []
+    },
+    "e1c8a755-3904-4c5b-b89b-6b308233019f": {
+      "type": "tnv30-scrollimg",
+      "disabled": false,
+      "settings": {
+        "media_type": "image",
+        "title": "Unprecedented Precise <span>And Convenient </span>Measurement at Your Fingertips",
+        "content": "",
+        "image": "shopline://shop_images/测量工具专题-DTX10-2_02.jpg",
+        "image_mb": "shopline://shop_images/M-DTX10-黑色1_31.png"
+      },
+      "blocks": {},
+      "custom_css": []
+    },
+    "046fa5c3-c139-4857-be92-b7c0215380b0": {
+      "type": "tnv30-imageswiper02",
+      "disabled": true,
+      "settings": {
+        "title": "Laser Measure for Easy  Long-range Measurement",
+        "content": "The laser measure is ideal for measuring inaccessible areas without the need for physical relocation, avoiding ladder climbs and ensuring safety.",
+        "contentcolor": "#dddddd"
+      },
+      "blocks": {
+        "177118b1-b2c8-4bc1-80e3-3da4e9df61a0": {
+          "type": "item",
+          "settings": {
+            "media_type": "image",
+            "imagemb": "shopline://shop_images/7_6385194275717783556.png",
+            "image": "shopline://shop_images/7_6385194275717783556.png"
+          }
+        },
+        "item_nH4yAP": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "media_type": "image"
+          }
+        }
+      },
+      "block_order": [
+        "177118b1-b2c8-4bc1-80e3-3da4e9df61a0",
+        "item_nH4yAP"
+      ],
+      "custom_css": []
+    },
+    "tnv30_textwithmedia_g9qmwN": {
+      "type": "tnv30-textwithmedia",
+      "disabled": false,
+      "settings": {
+        "title": "Incremental Measurement",
+        "content": "<p>Requiring 0 calculations, incremental measuring is never more than a button click away. Users easily zero the data when stretching the tap to a specific point. Measuring in increments involves no need to do any addition or math operations.</p>",
+        "media_type": "image",
+        "image_mb": "shopline://shop_images/M-DTX10_28_6385200455438146658.png",
+        "image": "shopline://shop_images/6_6385200588011349016.png"
+      },
+      "blocks": {},
+      "custom_css": []
+    },
+    "d9_textoverimg_m38LTj": {
+      "type": "d9-textoverimg",
+      "disabled": false,
+      "settings": {
+        "fullscreen": true,
+        "position": "left",
+        "title": "Bluetooth Connection with Smart Apps",
+        "content": "<p>The Next-gen sketching App connected via Bluetooth supports data labeling on both hand-drawn plans and uploaded on-site pictures. This integration enables data capturing and plan construction on a single platform, significantly streamlining and simplifying your workflow.<br/></p>",
+        "top_dis": 100,
+        "bottom_dis": 100,
+        "imagemb": "shopline://shop_images/M-DTX10-黑色_39.jpg",
+        "image": "shopline://shop_images/测量工具专题-DTX10_01_13.png"
+      },
+      "blocks": {},
+      "custom_css": []
+    },
+    "299e9842-c9f3-4d67-9e77-9d715b2f8fda": {
+      "type": "tnv30-specs",
+      "disabled": false,
+      "settings": {
+        "title": "DTX10 Digital Tape Pro",
+        "specs": "SPECS",
+        "specification": "User Maunal",
+        "specification_url": "https://cdn.shopify.com/s/files/1/0560/0162/6273/files/DTX10.pdf?v=1692868839&ref=ericnestor",
+        "media_type": "image",
+        "model_link": "",
+        "shop_label": "<p>Early Bird Deal Up to <strong>60% OFF</strong></p>",
+        "image": "shopline://shop_images/集合.png"
+      },
+      "blocks": {
+        "8fa9849f-bb65-4245-b18c-096c218ce35a": {
+          "type": "item",
+          "settings": {
+            "title": "Model",
+            "content": "<p>DTX10</p>"
+          }
+        },
+        "7eb55522-1150-4fc8-9e99-fbe7a0b5af59": {
+          "type": "item",
+          "settings": {
+            "title": "Laser Range",
+            "content": "<p>330ft</p>"
+          }
+        },
+        "b8344e29-6ece-446e-99ed-252415ac87b8": {
+          "type": "item",
+          "settings": {
+            "title": "Tape Range",
+            "content": "<p>12ft</p>"
+          }
+        },
+        "bc62ae18-ab2b-4145-a558-05a186bdedcf": {
+          "type": "item",
+          "settings": {
+            "title": "Measuring features",
+            "content": "<p>Distance, Continuous Measurement, Area,Volume, Auto Horizontal Distance & Vertical Height Measurement</p>"
+          }
+        },
+        "7055bfec-59ad-4b31-ac2b-85ab3a2f8787": {
+          "type": "item",
+          "settings": {
+            "title": "Memory storage",
+            "content": "<p>1,000 groups</p>"
+          }
+        },
+        "a56b4139-a239-4e7e-92bd-0fff2087ed13": {
+          "type": "item",
+          "settings": {
+            "title": "Reference",
+            "content": "<p>Front/Green Laser Line/Rear</p>"
+          }
+        },
+        "a77b97b6-0ce7-44ff-9b2a-420370f9cb15": {
+          "type": "item",
+          "settings": {
+            "title": "Tilt sensor",
+            "content": "<p>√</p>"
+          }
+        },
+        "e632eece-1b15-4257-aaf5-e7c1310dba9a": {
+          "type": "item",
+          "settings": {
+            "title": "Digital level",
+            "content": "<p>√</p>"
+          }
+        },
+        "2f79e6f4-70fb-40ba-9e17-8fee11c53f21": {
+          "type": "item",
+          "settings": {
+            "title": "Laser measure",
+            "content": "<p>√</p>"
+          }
+        },
+        "71a8b51c-42be-4ac5-a4bd-e143a77f6bd9": {
+          "type": "item",
+          "settings": {
+            "title": "Green laser line",
+            "content": "<p>√</p>"
+          }
+        },
+        "c0303e1e-9988-4ada-9b7f-64184f20a074": {
+          "type": "item",
+          "settings": {
+            "title": "Digital Accuracy",
+            "content": "<p>+/- 1/32\"</p>"
+          }
+        },
+        "item_iEHndA": {
+          "type": "item",
+          "settings": {
+            "title": "Laser Accuracy",
+            "content": "<p>'+/-1/16\"</p>"
+          }
+        },
+        "item_ULCRrx": {
+          "type": "item",
+          "settings": {
+            "title": "Battery Type",
+            "content": "<p>2600 mAh Rechargeable Li-ion Battery</p>"
+          }
+        },
+        "item_Aw3Dej": {
+          "type": "item",
+          "settings": {
+            "title": "Dimensions",
+            "content": "<p>192*50*96mm</p>"
+          }
+        },
+        "item_3XHpxK": {
+          "type": "item",
+          "settings": {
+            "title": "Net Weight",
+            "content": "<p>630g</p>"
+          }
+        }
+      },
+      "block_order": [
+        "8fa9849f-bb65-4245-b18c-096c218ce35a",
+        "7eb55522-1150-4fc8-9e99-fbe7a0b5af59",
+        "b8344e29-6ece-446e-99ed-252415ac87b8",
+        "bc62ae18-ab2b-4145-a558-05a186bdedcf",
+        "7055bfec-59ad-4b31-ac2b-85ab3a2f8787",
+        "a56b4139-a239-4e7e-92bd-0fff2087ed13",
+        "a77b97b6-0ce7-44ff-9b2a-420370f9cb15",
+        "e632eece-1b15-4257-aaf5-e7c1310dba9a",
+        "2f79e6f4-70fb-40ba-9e17-8fee11c53f21",
+        "71a8b51c-42be-4ac5-a4bd-e143a77f6bd9",
+        "c0303e1e-9988-4ada-9b7f-64184f20a074",
+        "item_iEHndA",
+        "item_ULCRrx",
+        "item_Aw3Dej",
+        "item_3XHpxK"
+      ],
+      "custom_css": []
+    },
+    "183f88cf-267f-43ae-9c91-6a774fb3bda8": {
+      "type": "tnv30-snapshot",
+      "disabled": false,
+      "settings": {
+        "aside_bgcolor": "#000000",
+        "aside_opacity": 100,
+        "title": "",
+        "content": ""
+      },
+      "blocks": {
+        "203fa744-a527-4720-b822-6345c7702ecc": {
+          "type": "item",
+          "settings": {
+            "media_type": "image",
+            "title": "Industry-Leading Robustness",
+            "content": "",
+            "image_mb": "shopline://shop_images/M-DTX10_24_6385198600616254553.png",
+            "image": "shopline://shop_images/7_6385194275717783556.png"
+          }
+        },
+        "96be213c-3994-4aa3-83da-ee01554ca276": {
+          "type": "item",
+          "settings": {
+            "media_type": "video",
+            "video": "https://cdn-files.myshopline.com/video/store/1709871255948/p2p.mp4?w=1300&h=650&d=2.88&fromFileSelect=1&poster=https%3A%2F%2Fimg-va.myshopline.com%2Fimage%2Fstore%2F1709871255948%2F8590941eef9a490789820ac3fda3ed95.png%3Fw%3D1300%26h%3D650",
+            "video_mb": "https://cdn-files.myshopline.com/video/store/1709871255948/p2p.mp4?w=1300&h=650&d=2.88&fromFileSelect=1&poster=https%3A%2F%2Fimg-va.myshopline.com%2Fimage%2Fstore%2F1709871255948%2F8590941eef9a490789820ac3fda3ed95.png%3Fw%3D1300%26h%3D650",
+            "title": "lmperial & Metric Unit",
+            "content": "",
+            "image_mb": null,
+            "image": "shopline://shop_images/undefinedundefined"
+          }
+        },
+        "7c2460dd-7c03-4f54-bcfc-4ec2fb3d50e5": {
+          "type": "item",
+          "settings": {
+            "media_type": "video",
+            "video": "https://cdn-files.myshopline.com/video/store/1709871255948/p2p.mp4?w=1300&h=650&d=2.88&fromFileSelect=1&poster=https%3A%2F%2Fimg-va.myshopline.com%2Fimage%2Fstore%2F1709871255948%2F8590941eef9a490789820ac3fda3ed95.png%3Fw%3D1300%26h%3D650",
+            "video_mb": "https://cdn-files.myshopline.com/video/store/1709871255948/p2p.mp4?w=1300&h=650&d=2.88&fromFileSelect=1&poster=https%3A%2F%2Fimg-va.myshopline.com%2Fimage%2Fstore%2F1709871255948%2F8590941eef9a490789820ac3fda3ed95.png%3Fw%3D1300%26h%3D650",
+            "title": "Automatic Tape Brake",
+            "content": "",
+            "image": "shopline://shop_images/undefinedundefined"
+          }
+        },
+        "b2c2f193-c4b2-49e7-af2a-32ea546f7af5": {
+          "type": "item",
+          "settings": {
+            "media_type": "video",
+            "video": "https://cdn-files.myshopline.com/video/store/1709871255948/p2p.mp4?w=1300&h=650&d=2.88&fromFileSelect=1&poster=https%3A%2F%2Fimg-va.myshopline.com%2Fimage%2Fstore%2F1709871255948%2F8590941eef9a490789820ac3fda3ed95.png%3Fw%3D1300%26h%3D650",
+            "video_mb": "https://cdn-files.myshopline.com/video/store/1709871255948/p2p.mp4?w=1300&h=650&d=2.88&fromFileSelect=1&poster=https%3A%2F%2Fimg-va.myshopline.com%2Fimage%2Fstore%2F1709871255948%2F8590941eef9a490789820ac3fda3ed95.png%3Fw%3D1300%26h%3D650",
+            "title": "Replaceable Tape",
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "203fa744-a527-4720-b822-6345c7702ecc",
+        "96be213c-3994-4aa3-83da-ee01554ca276",
+        "7c2460dd-7c03-4f54-bcfc-4ec2fb3d50e5",
+        "b2c2f193-c4b2-49e7-af2a-32ea546f7af5"
+      ],
+      "custom_css": []
+    },
+    "5bdb6b11-1f97-4611-9f2e-b755b4a5138d": {
+      "type": "tnv30-xuliezhen03",
+      "disabled": false,
+      "settings": {
+        "position": "right",
+        "title": "Exceptionally Versatile Measuring Functions",
+        "content": "<p>Along with distance measurement, the DTX10 also offers continuous measurement, area, volume, indirect vertical height & horizontal distance, stake-out, providing users with all the critical calculations they need in their projects.</p>",
+        "top_dis": 120,
+        "bottom_dis": 0,
+        "bg_image": null,
+        "image": "shopline://shop_images/UI变换序列00.webp"
+      },
+      "blocks": {
+        "b0deb9b0-63b3-4441-85c1-321dcf1bb85c": {
+          "type": "item",
+          "settings": {
+            "title": "Mixed Data Sources Calculation",
+            "icon": "shopline://shop_images/13_6385203996437355548.png"
+          }
+        },
+        "6f655731-36f5-4526-9827-8d0f91f937cb": {
+          "type": "item",
+          "settings": {
+            "title": "Continuous Measurement",
+            "icon": "shopline://shop_images/14_6385204166793206792.png"
+          }
+        },
+        "32d74043-fb32-4ad8-bd2c-e6393504a43f": {
+          "type": "item",
+          "settings": {
+            "title": "Incremental Measurement",
+            "icon": "shopline://shop_images/15_6385204301882728466.png"
+          }
+        },
+        "3e0bb5db-9594-4d9d-bd28-41507808ed7a": {
+          "type": "item",
+          "settings": {
+            "title": "Indirect Level & Height Measurement",
+            "icon": "shopline://shop_images/16_6385204488596365323.png"
+          }
+        },
+        "item_cQpX6h": {
+          "type": "item",
+          "settings": {
+            "title": "Area & Volume Calculation",
+            "icon": "shopline://shop_images/17_6385204643500663838.png"
+          }
+        }
+      },
+      "block_order": [
+        "b0deb9b0-63b3-4441-85c1-321dcf1bb85c",
+        "6f655731-36f5-4526-9827-8d0f91f937cb",
+        "32d74043-fb32-4ad8-bd2c-e6393504a43f",
+        "3e0bb5db-9594-4d9d-bd28-41507808ed7a",
+        "item_cQpX6h"
+      ],
+      "custom_css": []
+    },
+    "4cd6a823-5707-4a0c-8890-5bd5ce773912": {
+      "type": "tnv30-packlist",
+      "disabled": false,
+      "settings": {
+        "toptitle": "Package List",
+        "title": "Distance Measurement",
+        "content": "Boasts a perfect blend of of leading-edge design and marvelous performance.",
+        "grid_style": "style2",
+        "show_lefttext": false,
+        "clickcg": false,
+        "image": "shopline://shop_images/集合.png"
+      },
+      "blocks": {
+        "7c72fb9f-3c54-4af8-8523-59f2b7f7c6f1": {
+          "type": "item",
+          "settings": {
+            "title": "USB Cable",
+            "content": "<p>Boasts a perfect blend of of leading-edge design and marvelous performance</p>",
+            "image": "shopline://shop_images/8_6385208029596195906.png",
+            "icon": "shopline://shop_images/8_6385208029596195906.png"
+          }
+        },
+        "af808ee0-ab89-4938-b9d1-739e608e71f9": {
+          "type": "item",
+          "settings": {
+            "title": "Carring Bag",
+            "content": "",
+            "image": "shopline://shop_images/9_6385208273955725326.png",
+            "icon": "shopline://shop_images/9_6385208273955725326.png"
+          }
+        },
+        "7dae7394-e56d-4d11-b6dc-46f229c9d749": {
+          "type": "item",
+          "settings": {
+            "title": "Battery Pack",
+            "content": "<p>Boasts a perfect blend of of leading-edge design and marvelous performance03</p>",
+            "icon": "shopline://shop_images/9_6385208273955725326.png",
+            "image": "shopline://shop_images/9_6385208273955725326.png"
+          }
+        },
+        "31a73a1a-cea0-49fa-a4a8-b536270d23fc": {
+          "type": "item",
+          "settings": {
+            "title": "Lanyard Strap",
+            "content": "",
+            "image": "shopline://shop_images/10_6385209027068174412.png",
+            "icon": "shopline://shop_images/10_6385209027068174412.png"
+          }
+        },
+        "7ec2540b-8500-42d2-a5e3-40807a6bdf0e": {
+          "type": "item",
+          "settings": {
+            "title": "Hexagon Crossscrew Driver",
+            "content": "",
+            "image": "shopline://shop_images/11_6385209523455664167.png",
+            "icon": "shopline://shop_images/11_6385209523455664167.png"
+          }
+        },
+        "f9781f64-0d79-4967-95c2-6de83d3a8c59": {
+          "type": "item",
+          "settings": {
+            "title": "User Manual",
+            "content": "",
+            "icon": "shopline://shop_images/12_6385209777328759890.png",
+            "image": "shopline://shop_images/12_6385209777328759890.png"
+          }
+        },
+        "f51a850d-8862-4a44-9b9f-b04755cbd2eb": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "title": "accessory07",
+            "content": "<p>Boasts a perfect blend of of leading-edge design and marvelous performance07</p>",
+            "icon": "shopify://shop_images/product06.png",
+            "image": "shopify://shop_images/product06.png"
+          }
+        },
+        "437dcda4-40d0-408f-941f-65806656c62b": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "title": "accessory08",
+            "content": "<p>Boasts a perfect blend of of leading-edge design and marvelous performance08</p>",
+            "icon": "shopify://shop_images/product06.png",
+            "image": "shopify://shop_images/product06.png"
+          }
+        }
+      },
+      "block_order": [
+        "7c72fb9f-3c54-4af8-8523-59f2b7f7c6f1",
+        "af808ee0-ab89-4938-b9d1-739e608e71f9",
+        "7dae7394-e56d-4d11-b6dc-46f229c9d749",
+        "31a73a1a-cea0-49fa-a4a8-b536270d23fc",
+        "7ec2540b-8500-42d2-a5e3-40807a6bdf0e",
+        "f9781f64-0d79-4967-95c2-6de83d3a8c59",
+        "f51a850d-8862-4a44-9b9f-b04755cbd2eb",
+        "437dcda4-40d0-408f-941f-65806656c62b"
+      ],
+      "custom_css": []
+    },
+    "53f152b6-689d-429a-b502-7f16402346dc": {
+      "type": "tnv30-productcompare",
+      "disabled": false,
+      "settings": {
+        "title": "DTX10 Digital Tape Pro",
+        "urltext": "COMPARE MORE PRODUCTS",
+        "url": ""
+      },
+      "blocks": {
+        "2ace23d5-e603-4e06-8b90-b2b06db6ea07": {
+          "type": "item",
+          "settings": {
+            "title": "DTX10",
+            "value01": "330ft",
+            "key01": "Laser Range",
+            "value02": "12ft",
+            "key02": "Tape Range",
+            "value03": "1,000 Groups",
+            "key03": "Memory Storage",
+            "value04": "IPS",
+            "key04": "Screen Display",
+            "value05": "Front/Green Laser Line/Rear",
+            "key05": "Reference",
+            "value06": "APP",
+            "key06": "Bluetooth Connectivity",
+            "value07": "√",
+            "key07": "Screen Rotation",
+            "value08": "7h",
+            "key08": "Battery Runtime",
+            "product": "16063677010778028836250910"
+          }
+        },
+        "0f4b1299-ce85-44dc-a791-2f96ab9261d2": {
+          "type": "item",
+          "settings": {
+            "title": "DT20",
+            "value01": "130ft",
+            "key01": "Laser Range",
+            "value02": "16ft",
+            "key02": "Tape Range",
+            "value03": "50 Groups",
+            "key03": "Memory Storage",
+            "value04": "2\" LCD",
+            "key04": "Screen Display",
+            "value05": "Front/Rear",
+            "key05": "Reference",
+            "value06": "APP",
+            "key06": "Bluetooth Connectivity",
+            "value07": "×",
+            "key07": "Screen Rotation",
+            "value08": "10h",
+            "key08": "Battery Runtime",
+            "product": "16063677008262956477110910"
+          }
+        },
+        "74a0e456-e9ab-417d-aae3-b3c2621112a8": {
+          "type": "item",
+          "settings": {
+            "title": "D9 Pro",
+            "value01": "330ft",
+            "key01": "Laser Range",
+            "value02": "/",
+            "key02": "Tape Range",
+            "value03": "35 Groups",
+            "key03": "Memory Storage",
+            "value04": "2.4IPS",
+            "key04": "Screen Display",
+            "value05": "Front/Rear/Tripod Center/Laser Level",
+            "key05": "Reference",
+            "value06": "APP",
+            "key06": "Bluetooth Connectivity",
+            "value07": "√",
+            "key07": "Screen Rotation",
+            "value08": "8h",
+            "key08": "Screen Rotation",
+            "product": "16063677010778028836250910"
+          }
+        }
+      },
+      "block_order": [
+        "2ace23d5-e603-4e06-8b90-b2b06db6ea07",
+        "0f4b1299-ce85-44dc-a791-2f96ab9261d2",
+        "74a0e456-e9ab-417d-aae3-b3c2621112a8"
+      ],
+      "custom_css": []
+    }
+  },
+  "order": [
+    "f48aa03f-f9e1-4943-a2f3-abc756228367",
+    "fa675739-fd6f-4424-819e-6d1bee5d2b4c",
+    "main-product-info",
+    "17109169383613eac5f2",
+    "tnv30_keyframe04_RJpPdU",
+    "49d8137d-8a2f-4152-8eb8-7913fbf27a0e",
+    "95c0aab3-bf74-41de-97d3-dade34b38a45",
+    "d9_textoverimg_MiqByg",
+    "tnv30_textwithmedia_DMKpQB",
+    "tnv30_keyframe04_dKKGRb",
+    "046fa5c3-c139-4857-be92-b7c0215380b0",
+    "tnv30_keyframe04_YcPdDT",
+    "183f88cf-267f-43ae-9c91-6a774fb3bda8",
+    "tnv30_textwithmedia_g9qmwN",
+    "e1c8a755-3904-4c5b-b89b-6b308233019f",
+    "5bdb6b11-1f97-4611-9f2e-b755b4a5138d",
+    "background_text_size_hKUwtz",
+    "d9_textoverimg_m38LTj",
+    "4cd6a823-5707-4a0c-8890-5bd5ce773912",
+    "363618ec-e44d-4b05-b9e6-3961f0cd3a16",
+    "53f152b6-689d-429a-b502-7f16402346dc",
+    "b2b24c13-7c5b-4556-92aa-a3df195c5e15",
+    "299e9842-c9f3-4d67-9e77-9d715b2f8fda",
+    "product-recommendations",
+    "1710752964166857b581"
+  ]
+}

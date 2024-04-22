@@ -1,0 +1,218 @@
+{{ assign 'secidlast' (replace section.id '-' '_') }}
+<style>
+  .tnv30clearident-fixbox-{{ secidlast }}{
+    padding-top:{{ divided_by section.settings.top_dis 19.2 }}vw;
+    padding-bottom:{{ divided_by section.settings.bottom_dis 19.2 }}vw;
+  }
+    #tnv30cidentfbox-{{ secidlast }}{
+        background: url("{{ image_url section.settings.bg_image }}") no-repeat;
+          background-size: 100% auto;
+    background-position: center top;
+    }
+
+</style>
+
+
+<div class="tnv30clearident-container" id="tnv30cidentfbox-{{ secidlast }}">
+<div class="tnv30clearident-fixbox tnv30clearident-fixbox-{{ secidlast }}">
+    {{#if section.settings.toptitle '!=' '' }}
+    <div class="tnv30clearident-toptitle">
+    {{ section.settings.toptitle }}
+    </div>
+  {{/if}}
+  {{#if section.settings.topcontent '!=' '' }}
+    <div class="tnv30textmedia-content">
+    {{ section.settings.topcontent }}
+    </div>
+  {{/if}}
+  <div class="tnv30clearident-wp">
+  <div class="tnv30clearidentimg">
+    {{#if section.settings.image }}<img id="tnv30clearidentimg-{{secidlast}}" alt src="{{ image_url section.settings.image }}"/>{{ else }}<img id="tnv30clearidentimg-{{secidlast}}" alt src="{{ section.settings.image_leaderurl }}_1.{{ section.settings.image_type }}{{ section.settings.url_parameter }}"/>{{/if}}
+   <span class="lenspec-span"><span class="pointer02"></span><span class="pointer01"></span><span class="pointertext">{{ section.settings.lenspec }}</span><span class="pointerover"></span></span>
+    {{#if section.settings.spec01 '!=' '' }}
+      <span class="keyf4-spec" id="keyf4-spec01">{{ section.settings.spec01 }}</span><span class="keyf4-spec" id="keyf4-spec02">{{ section.settings.spec02 }}</span><span class="keyf4-spec" id="keyf4-spec03">{{ section.settings.spec03 }}</span>
+      {{/if}}
+  </div>
+    
+  </div>
+  
+</div>
+
+</div>
+
+<script> 
+    $(function(){
+      
+       var controller_{{secidlast}} = new ScrollMagic.Controller();
+      var images_{{secidlast}}= [];
+       setTimeout(function(){
+     for(var i =1;i<={{section.settings.image_number}};i++){  
+           const imgzhenshu_{{secidlast}} = new Image();
+          imgzhenshu_{{secidlast}}.src = `{{ section.settings.image_leaderurl }}_${i}.{{ section.settings.image_type }}{{ section.settings.url_parameter }}`;
+        };
+              },5000);
+     for(var i =1;i<={{section.settings.image_number}};i++){
+       images_{{secidlast}}.push(`{{ section.settings.image_leaderurl }}_${i}.{{ section.settings.image_type }}{{ section.settings.url_parameter }}`);
+   };
+        var obj_{{secidlast}} = {curImg_{{secidlast}}: 0};
+       var tweenmaxthr_{{secidlast}} = new TimelineMax()
+         .add([
+     TweenMax.to("#shopline-section-header,#shopline-section-announcement-bar", 0.5, {className: "+=hidehd"}), 
+       ]) 
+         .add([
+       TweenMax.to(".tnv30clearident-fixbox-{{ secidlast }} .tnv30clearidentimg", 1, {className: "+=active"}), 
+       ]) 
+        .add([
+          TweenMax.to(".tnv30clearident-fixbox-{{ secidlast }} .tnv30clearidentimg span.lenspec-span", 4, { clipPath: "inset(0 0 0% 0)"}),
+          TweenMax.to(".tnv30clearident-fixbox-{{ secidlast }} .tnv30clearidentimg span.pointer01", 4, { maxHeight: "100%"}),
+          TweenMax.to(obj_{{secidlast}}, {{section.settings.image_number}}/2.5,
+       {
+        curImg_{{secidlast}}: images_{{secidlast}}.length - 1,	// animate propery curImg to number of images
+        roundProps: "curImg_{{secidlast}}",				// only integers so it can be used as an array index
+        repeat: 0,									// repeat 3 times
+        immediateRender: false,			// load first image automatically
+        ease: Linear.easeNone,			// show every image the same ammount of time
+        onUpdate: function () {
+             $("#tnv30clearidentimg-{{secidlast}}").attr("src", images_{{secidlast}}[obj_{{secidlast}}.curImg_{{secidlast}}]); // set the image source 
+                          if(obj_{{secidlast}}.curImg_{{secidlast}} > 20){
+                     $(".tnv30clearident-fixbox-{{ secidlast }} .tnv30clearidentimg span.lenspec-span").addClass("hide");  
+                    }else{
+                     $(".tnv30clearident-fixbox-{{ secidlast }} .tnv30clearidentimg span.lenspec-span").removeClass("hide");    
+                    }
+           {{#if section.settings.spec01 '!=' '' }}
+                  if(obj_{{secidlast}}.curImg_{{secidlast}} > 8){
+                     $(".tnv30clearident-fixbox-{{ secidlast }} .keyf4-spec").addClass("active");  
+                    }else{
+                     $(".tnv30clearident-fixbox-{{ secidlast }} .keyf4-spec").removeClass("active");      
+                    }
+           {{/if}}
+        }
+                          
+      }
+        ),
+        
+      ])
+
+      
+     var beishu_nine = $(window).width()/1920;
+      if($(window).width() > 768){
+        var n_beshu = beishu_nine*465; 
+        var offsetho = 170;  
+      }else if($(window).width() <= 768 && $(window).width() > 550){
+        var n_beshu = beishu_nine*600; 
+         var offsetho = 100;
+      }else{
+        var n_beshu = beishu_nine*1700; 
+         var offsetho = 80;
+      }
+                         
+     $(window).resize(function() {      
+        if($(window).width() > 768){
+        var n_beshu = beishu_nine*465; 
+             var offsetho = 170;   
+      }else if($(window).width() <= 768 && $(window).width() > 550){
+        var n_beshu = beishu_nine*600; 
+         var offsetho = 100;
+      }else{
+        var n_beshu = beishu_nine*1700; 
+         var offsetho = 80;
+      }       
+      });
+ 
+       new ScrollMagic.Scene({triggerElement: "#tnv30cidentfbox-{{secidlast}}", duration: offsetho*{{section.settings.image_number}},offset: n_beshu})
+        .setTween(tweenmaxthr_{{secidlast}})
+		.setPin("#tnv30cidentfbox-{{secidlast}}")
+         .on("enter", function(e) {
+        })
+        .on("leave", function(e) {
+          
+        })
+        .addTo(controller_{{secidlast}}); 
+     
+    });
+              
+</script>
+
+{{#schema}}
+  {
+    "name": "RT256A Animation02",
+    "settings": [
+       {
+            "type": "image_picker",
+            "id": "bg_image",
+            "label": "Background Image"
+       },{
+        "type":"image_picker",
+        "id":"image",
+        "label":"Image"
+      },{
+        "type":"text",
+        "id":"image_leaderurl",
+        "label":"Image Leaderurl"
+      },{
+        "type":"text",
+        "id":"url_parameter",
+        "label":"Image url_parameter",
+        "default":"?v=1703237718"
+      },{
+        "type":"text",
+        "id":"image_number",
+        "label":"Image Number"
+      },{
+        "type":"text",
+        "id":"image_type",
+        "label":"Image Type"
+      },{
+        "type":"text",
+        "id":"toptitle",
+        "label":"Top Title"
+      },{
+        "type":"text",
+        "id":"topcontent",
+        "label":"Top Content"
+      },{
+        "type":"text",
+        "id":"lenspec",
+        "label":"Len Spec",
+        "default":"25mm F1.0 Germanium Lens"
+      },{
+        "id": "top_dis",
+        "type": "range",
+        "label": "Top Distence",
+        "default": 100,
+        "min": 0,
+        "max": 200,
+        "step": 2,
+        "unit": "px"
+      },
+      {
+        "id": "bottom_dis",
+        "type": "range",
+        "label": "Botttom Distence",
+        "default": 100,
+        "min": 0,
+        "max": 400,
+        "step": 4,
+        "unit": "px"
+      },{
+        "type":"text",
+        "id":"spec01",
+        "label":"spec01"
+      },{
+        "type":"text",
+        "id":"spec02",
+        "label":"spec02"
+      },{
+        "type":"text",
+        "id":"spec03",
+        "label":"spec03"
+      }
+      
+	],
+	"presets": [
+      {
+        "name": "RT256A Animation02","category": "Ho-Advance"
+      }
+    ]
+  }
+{{/schema}}

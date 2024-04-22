@@ -1,0 +1,232 @@
+{{ assign 'secidlast' (replace section.id '-' '_') }}
+<style>
+  .tnv30mateintro-fixbox-{{ secidlast }}{
+    padding-top:{{  divided_by section.settings.top_dis 19.2 }}vw;
+    padding-bottom:{{  divided_by section.settings.bottom_dis 19.2 }}vw;
+    {{#if  section.settings.bg_image }}
+     background: url("{{ image_url section.settings.bg_image }}") no-repeat;
+    background-size: 100% auto;
+    background-position: center bottom;
+   {{/if}}
+  }
+
+</style>
+
+
+<div class="tnv30mateintro-container" id="tnv30mateintrofbox-{{ secidlast }}">
+<div class="tnv30mateintro-fixbox container-ho tnv30mateintro-fixbox-{{ secidlast }}">
+    {{!-- <div class="tnv30mateintro-text">
+   {{#if section.settings.title '!=' '' }}
+    <div class="tnv30mateintro-title">
+    {{ section.settings.title }}
+    </div>
+  {{/if}}
+  {{#if section.settings.content '!=' '' }}
+    <div class="tnv30mateintro-content">
+    {{ section.settings.content }}
+    </div>
+  {{/if}}  
+  </div> --}}
+  <div class="tnv30textoverimg-title">{{ section.settings.title }}</div>
+  <div class="tnv30mateintro-wp">
+  <div class="tnv30mateintro-wp-box">
+    {{#if section.settings.image }}<img id="tnv30mateintro-wpimg-{{secidlast}}" alt src="{{ image_url section.settings.image }}"/>{{else}}<img id="tnv30mateintro-wpimg-{{secidlast}}" alt src="{{ section.settings.image_leaderurl }}_1.{{ section.settings.image_type }}{{ section.settings.url_parameter }}"/>{{/if}}  
+          <div class="tnv30mateintro-botimgbox">
+            <div class="tnv30mateintro-boxwrapper">
+            {{#each section.blocks as |block|  }}
+            <div class="tnv30mateintro-item">    
+              {{#if block.settings.image }} <img  src="{{ image_url block.settings.image }}"/>{{/if}}
+              {{#if block.settings.title '!=' '' }}
+              <div class="tnv30mateintro-itemtitle">{{ block.settings.title }}</div>
+              {{/if}} 
+             </div>
+           {{/each}}
+            </div>
+           {{#if section.settings.image_bot }} <img class="hide-mb" alt src="{{ image_url section.settings.image_bot }}"/>{{/if}}
+            {{#if section.settings.image_botmb }} <img class="hide-pc" alt src="{{ image_url section.settings.image_botmb }}"/>{{/if}}
+          </div> 
+  </div>
+  
+
+    
+  </div>
+  
+</div>
+
+</div>
+
+    <script> 
+    $(function(){
+      
+       var controller_{{secidlast}} = new ScrollMagic.Controller();
+      var images_{{secidlast}}= [];
+       setTimeout(function(){
+     for(var i =1;i<={{section.settings.image_number}};i++){  
+           const imgzhenshu_{{secidlast}} = new Image();
+          imgzhenshu_{{secidlast}}.src = `{{ section.settings.image_leaderurl }}_${i}.{{ section.settings.image_type }}{{ section.settings.url_parameter }}`;
+        };
+              },5000);
+     for(var i =1;i<={{section.settings.image_number}};i++){
+       images_{{secidlast}}.push(`{{ section.settings.image_leaderurl }}_${i}.{{ section.settings.image_type }}{{ section.settings.url_parameter }}`);
+   };
+        var obj_{{secidlast}} = {curImg_{{secidlast}}: 0};
+       var tweenmaxthr_{{secidlast}} = new TimelineMax()
+        .add([
+       TweenMax.to("#shopline-section-header,#shopline-section-announcement-bar", 0.5, {className: "+=hidehd"}),          
+       ])
+         .add([
+        TweenMax.to(".tnv30mateintro-botimgbox", 2, {transform: "translateY(0%)"}),        
+       ])
+        .add([
+          TweenMax.to(obj_{{secidlast}}, {{section.settings.image_number}}/5,
+       {
+        curImg_{{secidlast}}: images_{{secidlast}}.length - 1,	// animate propery curImg to number of images
+        roundProps: "curImg_{{secidlast}}",				// only integers so it can be used as an array index
+        repeat: 0,									// repeat 3 times
+        immediateRender: false,			// load first image automatically
+        ease: Linear.easeNone,			// show every image the same ammount of time
+        onUpdate: function () {
+    
+             $("#tnv30mateintro-wpimg-{{secidlast}}").attr("src", images_{{secidlast}}[obj_{{secidlast}}.curImg_{{secidlast}}]); // set the image source 
+             if(obj_{{secidlast}}.curImg_{{secidlast}} > 17){
+              $(".tnv30mateintro-fixbox-{{ secidlast }} .tnv30mateintro-wp-hezi").addClass("active")
+              }else{
+                $(".tnv30mateintro-fixbox-{{ secidlast }} .tnv30mateintro-wp-hezi").removeClass("active")
+              }
+        }
+                          
+      }),
+        
+      ])
+      .add([
+       TweenMax.to("#shopline-section-header,#shopline-section-announcement-bar", 2, {className: "+=hidehd"}),          
+       ])
+
+      
+     var beishu_nine = $(window).width()/1920;
+      if($(window).width() > 768){
+        var n_beshu = beishu_nine*465; 
+        var offsetho = 80;  
+      }else if($(window).width() <= 768 && $(window).width() > 550){
+         var n_beshu = beishu_nine*600; 
+         var offsetho = 100;
+      }else{
+         var n_beshu = beishu_nine*1700; 
+         var offsetho = 60;
+      }
+                         
+     $(window).resize(function() {      
+        if($(window).width() > 768){
+        var n_beshu = beishu_nine*465; 
+             var offsetho = 80;   
+      }else if($(window).width() <= 768 && $(window).width() > 550){
+         var n_beshu = beishu_nine*600; 
+         var offsetho = 100;
+      }else{
+         var n_beshu = beishu_nine*1700; 
+         var offsetho = 60;
+      }       
+      });
+ 
+       new ScrollMagic.Scene({triggerElement: "#tnv30mateintrofbox-{{secidlast}}", duration: offsetho*{{section.settings.image_number}},offset: n_beshu})
+        .setTween(tweenmaxthr_{{secidlast}})
+		.setPin("#tnv30mateintrofbox-{{secidlast}}")
+         .on("enter", function(e) {
+        })
+        .on("leave", function(e) {
+          
+        })
+        .addTo(controller_{{secidlast}}); 
+     
+    });
+              
+</script> 
+
+{{#schema}}
+  {
+    "name": "RT256A Animation01",
+    "settings": [
+      {
+        "type":"image_picker",
+        "id":"image",
+        "label":"Image"
+      },{
+        "type":"text",
+        "id":"image_leaderurl",
+        "label":"Image Leaderurl"
+      },{
+        "type":"text",
+        "id":"url_parameter",
+        "label":"Image url_parameter",
+        "default":"?v=1703237718"
+      },{
+        "type":"text",
+        "id":"image_number",
+        "label":"Image Number"
+      },{
+        "type":"text",
+        "id":"image_type",
+        "label":"Image Type"
+      },{
+        "type":"image_picker",
+        "id":"image_bot",
+        "label":"Image Bottom"
+      },{
+        "type":"image_picker",
+        "id":"image_botmb",
+        "label":"Image Bottom(mobile)"
+      },{
+        "type":"text",
+        "id":"title",
+        "label":"Title"
+      },{
+        "id": "top_dis",
+        "type": "range",
+        "label": "Top Distence",
+        "default": 100,
+        "min": 0,
+        "max": 200,
+        "step": 2,
+        "unit": "px"
+      },
+      {
+        "id": "bottom_dis",
+        "type": "range",
+        "label": "Botttom Distence",
+        "default": 100,
+        "min": 0,
+        "max": 200,
+        "step": 2,
+        "unit": "px"
+      },{
+        "type":"image_picker",
+        "id":"bg_image",
+        "label":"Background Image"
+      }
+      
+	],
+        "blocks": [
+        {
+            "type": "item",
+            "name": "item",
+            "settings": [
+                {
+                  "type":"image_picker",
+                  "id":"image",
+                  "label":"Image"
+                },{
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title"
+                }
+            ]
+        }
+    ],
+	"presets": [
+      {
+        "name": "RT256A Animation01",
+        "category": "Ho-Advance"
+      }
+    ]
+  }
+{{/schema}}

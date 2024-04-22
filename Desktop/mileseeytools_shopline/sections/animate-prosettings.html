@@ -1,0 +1,39 @@
+{{{stylesheet_tag (asset_url "product-add.css")}}}
+{{{stylesheet_tag (asset_url "animate-product.css")}}}
+{{{stylesheet_tag (asset_url "swiper.min.css")}}}
+<script src="{{asset_url 'jquery.min.js'}}"></script>
+<script src="{{asset_url 'swiper.min.js'}}"></script>
+<script src="{{asset_url 'TweenMax.js'}}" defer="defer"></script>
+ <script src="{{asset_url 'ScrollMagic.js'}}" defer="defer"></script>
+ <script src="{{asset_url 'animation.gsap.js'}}" defer="defer"></script>
+<script>
+ if($(".animate-ele")){
+$(window).scroll(function() {
+  var scrollPosition = $(window).scrollTop();
+  
+  $('.animate-ele').each(function() {
+    var elementPosition = $(this).offset().top;
+    var windowHeight = $(window).height();
+    
+    if (scrollPosition > elementPosition - windowHeight*7/8) {
+      $(this).addClass('animate-top');
+    } else {
+      $(this).removeClass('animate-top');
+    }
+  });
+});
+ } 
+</script>
+{{#schema}}
+  {
+    "name": "Product Anmate Settings","class": "Animateframe-top",
+    "settings": [
+
+	],
+	"presets": [
+      {
+        "name": "Product Anmate Settings"
+      }
+    ]
+  }
+{{/schema}}

@@ -1,0 +1,209 @@
+{{ assign 'secidlast' (replace section.id '-' '_') }}
+<div class="tnv30textwithimage-container  tnv30textwithimage-anim" id="tnv30twimage-con-{{ secidlast }}" >
+<div class="tnv30textwithimage-wp tnv30textwithimage-{{ section.settings.position }}">
+  <div class="tnv30textwithimage-tp">
+ {{#if section.settings.image}}<img id="tnv30clearidentimg-{{secidlast}}" alt src="{{ image_url section.settings.image }}"/>{{else}}<img id="tnv30clearidentimg-{{secidlast}}" alt src="{{ section.settings.image_leaderurl }}_1.{{ section.settings.image_type }}{{ section.settings.url_parameter }}"/>{{/if}}
+     {{#if section.settings.spec01 '!=' '' }}
+      <span class="keyf4-spec" id="keyf4-specnew01">{{ section.settings.spec01 }}</span><span class="keyf4-spec" id="keyf4-specnew02">{{ section.settings.spec02 }}</span>
+      {{/if}}
+  </div>
+  
+  <div class="tnv30textwithimage-wz" {{product.template_suffix}}>
+   {{#if section.settings.title '!=' ''}}
+    <div class="tnv30textwithimage-wz-title animate-ele">
+    {{ section.settings.title }}
+    </div>
+  {{/if}}
+  {{#if section.settings.content '!=' ''}}
+    <div class="tnv30textwithimage-wz-content animate-ele">
+    {{{section.settings.content}}}
+    </div>
+  {{/if}}
+     <div class="tnv30textimg-wzbpttpm animate-ele">
+      {{#each section.blocks as |block| }}
+        <div class="tnv30textimg-wzbpttpm-item">     
+          {{#if block.settings.title '!=' ''}}
+          <div class="tnv30textimg-wzbpttpm-itemtitle">{{ block.settings.title }}</div>
+          {{/if}}  
+         {{#if block.settings.subtitle '!=' ''}}
+          <div class="tnv30textimg-wzbpttpm-itemsubtitle">{{ block.settings.subtitle }}</div>
+          {{/if}}
+         </div>
+       {{/each}}
+    </div>
+    
+  </div>
+  
+</div>
+
+</div>
+
+
+<script> 
+    $(function(){
+      
+       var controller_{{secidlast}} = new ScrollMagic.Controller();
+      var images_{{secidlast}}= [];
+       setTimeout(function(){
+     for(var i =1;i<={{section.settings.image_number}};i++){  
+           const imgzhenshu_{{secidlast}} = new Image();
+          imgzhenshu_{{secidlast}}.src = `{{ section.settings.image_leaderurl }}_${i}.{{ section.settings.image_type }}{{ section.settings.url_parameter }}`;
+        };
+              },5000);
+     for(var i =1;i<={{section.settings.image_number}};i++){
+       images_{{secidlast}}.push(`{{ section.settings.image_leaderurl }}_${i}.{{ section.settings.image_type }}{{ section.settings.url_parameter }}`);
+   };
+        var obj_{{secidlast}} = {curImg_{{secidlast}}: 0};
+       var tweenmaxthr_{{secidlast}} = new TimelineMax()
+       .add([
+       TweenMax.to("#shopline-section-header,#shopline-section-announcement-bar", 2, {className: "+=hidehd"}), 
+       ])
+        .add([
+          TweenMax.to(".tnv30clearident-fixbox-{{ secidlast }} .tnv30clearidentimg span.lenspec-span", 4, { height: "100%"}),
+          TweenMax.to(obj_{{secidlast}}, {{section.settings.image_number}}/2.5,
+       {
+        curImg_{{secidlast}}: images_{{secidlast}}.length - 1,	// animate propery curImg to number of images
+        roundProps: "curImg_{{secidlast}}",				// only integers so it can be used as an array index
+        repeat: 0,									// repeat 3 times
+        immediateRender: false,			// load first image automatically
+        ease: Linear.easeNone,			// show every image the same ammount of time
+        onUpdate: function () {
+             $("#tnv30clearidentimg-{{secidlast}}").attr("src", images_{{secidlast}}[obj_{{secidlast}}.curImg_{{secidlast}}]); // set the image source 
+              {{#if section.settings.spec01 '!=' '' }}
+                  if(obj_{{secidlast}}.curImg_{{secidlast}} > 1){
+                     $("#tnv30twimage-con-{{ secidlast }} .keyf4-spec").addClass("active");  
+                    }else{
+                     $("#tnv30twimage-con-{{ secidlast }} .keyf4-spec").removeClass("active");      
+                    }
+           {{/if}}
+
+        }
+                          
+      }
+        ),
+        
+      ])
+
+      
+     var beishu_nine = $(window).width()/1920;
+      if($(window).width() > 768){
+        var n_beshu = beishu_nine*465; 
+        var offsetho = 170;  
+      }else if($(window).width() <= 768 && $(window).width() > 550){
+        var n_beshu = beishu_nine*600; 
+         var offsetho = 100;
+      }else{
+        var n_beshu = beishu_nine*1700; 
+         var offsetho = 80;
+      }
+                         
+     $(window).resize(function() {      
+        if($(window).width() > 768){
+        var n_beshu = beishu_nine*465; 
+             var offsetho = 200;   
+      }else if($(window).width() <= 768 && $(window).width() > 550){
+        var n_beshu = beishu_nine*600; 
+         var offsetho = 100;
+      }else{
+        var n_beshu = beishu_nine*1700; 
+         var offsetho = 80;
+      }       
+      });
+ 
+       new ScrollMagic.Scene({triggerElement: "#tnv30twimage-con-{{secidlast}}", duration: offsetho*{{section.settings.image_number}},offset: n_beshu})
+        .setTween(tweenmaxthr_{{secidlast}})
+		.setPin("#tnv30twimage-con-{{secidlast}}")
+         .on("enter", function(e) {
+        })
+        .on("leave", function(e) {
+          
+        })
+        .addTo(controller_{{secidlast}}); 
+     
+    });
+              
+</script>
+
+{{#schema}}
+  {
+    "name": "TextWithImage Animate",
+    "settings": [
+      {
+        "type": "select",
+        "id": "position",
+        "label": "Image Position",
+        "options": [
+          {
+            "value": "left",
+            "label": "left"
+          },{
+            "value": "right",
+            "label": "right"
+          }
+        ],
+        "default": "left"
+      },{
+        "type":"image_picker",
+        "id":"image",
+        "label":"Image"
+      },{
+        "type":"text",
+        "id":"image_leaderurl",
+        "label":"Image Leaderurl"
+      },{
+        "type":"text",
+        "id":"url_parameter",
+        "label":"Image url_parameter",
+        "default":"?v=1703237718"
+      },{
+        "type":"text",
+        "id":"image_number",
+        "label":"Image Number"
+      },{
+        "type":"text",
+        "id":"image_type",
+        "label":"Image Type"
+      },{
+        "type":"text",
+        "id":"spec01",
+        "label":"spec01"
+      },{
+        "type":"text",
+        "id":"spec02",
+        "label":"spec02"
+      },{
+        "type":"text",
+        "id":"title",
+        "label":"title"
+      },{
+        "type":"richtext",
+        "id":"content",
+        "label":"content"
+      }
+      
+	],
+        "blocks": [
+        {
+            "type": "item",
+            "name": "item",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title"
+                },
+                {
+                    "type": "text",
+                    "id": "subtitle",
+                    "label": "subtitle"
+                }
+            ]
+        }
+    ],
+	"presets": [
+      {
+        "name": "TextWithImage Animate","category": "Ho-Advance"
+      }
+    ]
+  }
+{{/schema}}

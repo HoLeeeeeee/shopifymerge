@@ -1,0 +1,138 @@
+{{ assign 'secidlast' (replace section.id '-' '_') }}
+<div class="tnv30textoverimg-container tnv30textoverimg-container02">
+  <div class="tnv30textoverimg-box tnv30textoverimg-box02">
+     <div class="tnv30textoverimg-text-sec animate-ele">
+       {{#if section.settings.title '!=' ''}}      
+      <div class="tnv30textoverimg-title-sec">{{ section.settings.title }}</div> 
+      {{/if}}
+        {{#if section.settings.content '!=' ''}}  
+      <div class="tnv30textoverimg-content-sec" {{#if section.settings.contentcolor}}style="color:{{ section.settings.contentcolor }}"{{/if}}>{{ section.settings.content }}</div> 
+        {{/if}}
+    </div>
+    <div class="swiper-container tnv30imgsw-{{ secidlast }}">
+     <div class="swiper-wrapper">
+      {{#each section.blocks as |block| }}
+       <div class="swiper-slide">
+   
+     {{#if block.settings.media_type '==' 'image'}}
+         <img class="{{#if block.settings.imagemb}}hide-mb{{/if}}" alt src="{{ image_url block.settings.image }}"/>
+      {{#if block.settings.imagemb}}
+      <img class="hide-pc" alt src="{{ image_url block.settings.imagemb }}"/>
+      {{/if}}
+        {{else}}
+        {{ assign 'urlv'  block.settings.video }}
+        {{ assign 'urlvmb'  block.settings.video_mb }}
+        <video width="100%" autoplay="autoplay"  loop="loop" muted="muted" preload="metadata" webkit-playsinline="true" playsinline="true" x5-playsinline="true" x-webkit-airplay='allow' >
+        <source class="hide-mb" src="{{ urlv }}"/>
+        </video>
+         <video class="hide-pc" width="100%" autoplay="autoplay"  loop="loop" muted="muted" preload="metadata" webkit-playsinline="true" playsinline="true" x5-playsinline="true" x-webkit-airplay='allow' >
+        <source src="{{ urlvmb }}"/>
+        </video>
+      {{/if}}  
+       </div>
+       {{/each}}
+     </div>
+    </div>
+    {{#if (size section.blocks) '>' 1}}
+    <div class="tnv30imgsw-nav">
+      <div class="swiperprev-{{secidlast}}"><svg width="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="22" cy="22" r="21.5" stroke="#666666"/>
+<path d="M16.0104 22.0104L15.5861 21.5861L15.1618 22.0104L15.5861 22.4346L16.0104 22.0104ZM25.9346 12.9346C26.169 12.7003 26.169 12.3204 25.9346 12.0861C25.7003 11.8518 25.3204 11.8518 25.0861 12.0861L25.9346 12.9346ZM16.4346 22.4346L25.9346 12.9346L25.0861 12.0861L15.5861 21.5861L16.4346 22.4346ZM25.9346 31.0861L16.4346 21.5861L15.5861 22.4346L25.0861 31.9346L25.9346 31.0861Z" fill="#333333"/>
+</svg>
+</div>
+      <div class="swipernext-{{secidlast}}"><svg width="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="22" cy="22" r="21.5" transform="matrix(-1 0 0 1 44 0)" stroke="#666666"/>
+<path d="M27.9896 22.0104L28.4139 22.4346L28.8382 22.0104L28.4139 21.5861L27.9896 22.0104ZM18.9139 12.0861C18.6796 11.8518 18.2997 11.8518 18.0654 12.0861C17.831 12.3204 17.831 12.7003 18.0654 12.9346L18.9139 12.0861ZM28.4139 21.5861L18.9139 12.0861L18.0654 12.9346L27.5654 22.4346L28.4139 21.5861ZM18.9139 31.9346L28.4139 22.4346L27.5654 21.5861L18.0654 31.0861L18.9139 31.9346Z" fill="#333333"/>
+</svg>
+</div>
+      </div>
+  {{/if}}
+</div> 
+  
+  
+</div>
+
+<script> 
+  var tnvswiper_{{secidlast}} = new Swiper('.tnv30imgsw-{{ secidlast }}',{
+    // autoplay: true,
+    loop: true,
+    effect: 'fade',
+     fadeEffect: {
+    crossFade: true,
+  },
+   observer: true, autoHeight: true, 
+    observeParents: true, 
+    navigation: {
+		nextEl: '.swipernext-{{secidlast}}',
+		prevEl: '.swiperprev-{{secidlast}}',
+	}
+  })
+  
+</script>
+{{#schema}}
+  {
+    "name": "Product Image Swiper02",
+    "settings": [
+     {
+      "type":"text",
+      "id":"title",
+      "label":"title"
+    },{
+      "type":"text",
+      "id":"content",
+      "label":"content"
+    },{
+      "type":"color",
+      "id":"contentcolor",
+      "label":"content color",
+      "default":"#666"
+    }
+	],
+        "blocks": [
+        {
+            "type": "item",
+            "name": "item",
+            "settings": [
+           {
+                "type": "select",
+                "id": "media_type",
+                "label": "Media Type",
+                "options": [
+                  {
+                    "value": "image",
+                    "label": "Image"
+                  },{
+                    "value": "video",
+                    "label": "Video"
+                  }
+                ],
+                "default": "image"
+              },{
+      "type": "video_text",
+      "id": "video",
+      "format": "video",
+      "label": "video"
+    },{
+      "type": "video_text",
+      "id": "video_mb",
+      "format": "video",
+      "label": "video(mobile)"
+    },{
+              "type":"image_picker",
+              "id":"image",
+              "label":"Image"
+            },{
+              "type":"image_picker",
+              "id":"imagemb",
+              "label":"Image(mobile)"
+            }
+            ]
+        }
+    ],
+	"presets": [
+      {
+        "name": "Product Image Swiper02","category": "Ho-Advance"
+      }
+    ]
+  }
+{{/schema}}

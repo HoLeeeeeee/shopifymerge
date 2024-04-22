@@ -1,0 +1,137 @@
+
+<div class="tnv30packlist-container">
+  {{#if section.settings.toptitle '!=' ''}}
+    <div class="tnv30packlist-title">
+    {{ section.settings.toptitle }}
+    </div>
+  {{/if}}
+
+  <div class="tnv30packlist-box">
+    <div class="tnv30packlist-boxleft animate-ele">
+      <div class="tnv30packlist-boxleftimg"><img class="" alt src="{{ image_url section.settings.image }}"/></div>
+      <div class="tnv30packlist-boxlefttitle" {{#unless section.settings.show_lefttext}}style="display:none"{{/unless}}>{{ section.settings.title }}</div> 
+      <div class="tnv30packlist-boxleftcontent" {{#unless section.settings.show_lefttext}}style="display:none"{{/unless}}>{{{ section.settings.content }}}</div> 
+    </div>
+    <div class="tnv30packlist-boxright tnv30specys-{{ section.settings.grid_style }}">
+       {{#each section.blocks as |block| }}
+        <div class="tnv30packlist-box-item animate-ele{{#if forloop.first}} active{{/if}}">
+        {{#if block.settings.icon}}
+         <div class="tnv30packlist-box-itemimg" data-picture="{{ image_url block.settings.image }}"><img alt src="{{ image_url block.settings.icon }}"/></div>
+          {{/if}}       
+          {{#if block.settings.title}}
+          <div class="tnv30packlist-box-itemtitle" data-title="{{ block.settings.title }}" data-content="{{{ escape block.settings.content }}}">{{ block.settings.title }}</div>
+          {{/if}}       
+         </div>
+       {{/each}}
+    </div>
+
+  </div> 
+  
+
+  
+</div>
+{{#if section.settings.clickcg}}
+  <style>
+    .tnv30packlist-box-item.active {
+    background: #3B3B3B;
+   }
+  </style>
+<script>
+  $(function(){
+    $(".tnv30packlist-box-item").each(function(){
+      $(this).click(function(){
+        $(this).addClass("active").siblings().removeClass("active");
+       let picvalue = $(this).find(".tnv30packlist-box-itemimg").data("picture");
+       let titlevalue = $(this).find(".tnv30packlist-box-itemtitle").data("title");
+       let convalue = $(this).find(".tnv30packlist-box-itemtitle").data("content");
+        $(".tnv30packlist-boxleftimg img").attr("src",picvalue);
+        if( $(".tnv30packlist-boxlefttitle")){$(".tnv30packlist-boxlefttitle").html(titlevalue);}
+        if($(".tnv30packlist-boxleftcontent")){$(".tnv30packlist-boxleftcontent").html(convalue);}
+        
+      });
+    })
+  });
+</script>
+{{/if}}
+{{#schema}}
+  {
+    "name": "Product Package List","class": "Product-PackageList",
+    "settings": [
+      {
+        "type":"text",
+        "id":"toptitle",
+        "label":"top title"
+      },{
+        "type":"image_picker",
+        "id":"image",
+        "label":"Image"
+      },{
+        "type":"text",
+        "id":"title",
+        "label":"title"
+      },{
+        "type":"text",
+        "id":"content",
+        "label":"content"
+      },{
+        "type": "select",
+        "id": "grid_style",
+        "label": "Grid Style",
+        "options": [
+          {
+            "value": "style1",
+            "label": "style1"
+          },{
+            "value": "style2",
+            "label": "style2"
+          },{
+            "value": "style3",
+            "label": "style3"
+          }
+        ],
+        "default": "style1"
+      },{
+        "type":"checkbox",
+        "id":"show_lefttext",
+        "label":"Show Left Text?",
+        "default":true
+      },{
+        "type":"checkbox",
+        "id":"clickcg",
+        "label":"Click to ChangeLeftImage?",
+        "default":true
+      }
+	],
+    "blocks": [
+        {
+            "type": "item",
+            "name": "item",
+            "settings": [
+                {
+                  "type":"image_picker",
+                  "id":"icon",
+                  "label":"icon"
+                },{
+                  "type":"image_picker",
+                  "id":"image",
+                  "label":"Image(click to show)"
+                },{
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title"
+                },
+                {
+                    "type": "richtext",
+                    "id": "content",
+                    "label": "Description"
+                }
+            ]
+        }
+    ],
+	"presets": [
+      {
+        "name": "Product Package List","category": "Ho-Advance"
+      }
+    ]
+  }
+{{/schema}}

@@ -1,0 +1,341 @@
+{{ assign 'secidlast' (replace section.id '-' '_') }}
+<style>
+  .tnv30clearident-fixbox-{{ secidlast }}{
+    padding-top:{{ divided_by section.settings.top_dis 19.2 }}vw;
+    padding-bottom:{{ divided_by section.settings.bottom_dis 19.2 }}vw;
+    {{#if section.settings.bg_image }}
+     background: url("{{ image_url section.settings.bg_image }}") no-repeat;
+    background-size: 100% auto;
+    background-position: center bottom;
+   {{/if }}
+  }
+</style>
+
+
+<div class="tnv30clearident-container" id="tnv30cidentfbox-{{ secidlast }}">
+<div class="tnv30clearident-fixbox tnv30clearident-fixbox-{{ secidlast }}">
+        {{#if section.settings.toptitle '!=' '' }}
+    <div class="tnv30clearident-toptitle">
+    {{ section.settings.toptitle }}
+    </div>
+  {{/if}}
+  <div class="tnv30clearident-wp tnv30clearident-wp-{{ section.settings.position }}">
+  <div class="tnv30clearidentimg">
+    {{#if section.settings.image}}<img id="tnv30clearidentimg-{{secidlast}}" alt src="{{ image_url section.settings.image }}"/>{{else}}<img id="tnv30clearidentimg-{{secidlast}}" alt src="{{ section.settings.image_leaderurl }}_1.{{ section.settings.image_type }}{{ section.settings.url_parameter }}"/>{{/if}}
+   <span class="lenspec-span"><span class="pointer02"></span><span class="pointer01"></span><span class="pointertext">{{ section.settings.lenspec }}</span><span class="pointerover"></span></span>
+  </div>
+  
+  <div class="tnv30clearidenttext">
+    <div class="tnv30clearidenttext-item01">
+   {{#if section.settings.title02 '!=' '' }}
+    <div class="tnv30clearidenttext-title">
+    {{ section.settings.title02 }}
+    </div>
+  {{/if }}
+  {{#if section.settings.content02 '!=' '' }}
+    <div class="tnv30clearidenttext-content hide-mb">
+    {{{section.settings.content02}}}
+    </div>
+      <div class="tnv30clearidenttext-content hide-pc">
+    {{{section.settings.content02mb}}}
+    </div>
+  {{/if }}
+  
+   {{#or section.settings.item02value01 '!=' '' section.settings.item02value02 '!=' '' }}
+   <div class="tnv30-cibotbox">
+      {{#if section.settings.item02value01 '!=' '' }}
+     <div class="tnv30-cibot-item">
+       <div class="tnv30-cibot-itemvalue">{{ section.settings.item02value01 }}</div>
+         <div class="tnv30-cibot-itemkey">{{ section.settings.item02key01 }}</div>
+     </div>
+     {{/if }}
+     {{#if section.settings.item02value02 '!=' '' }}
+     <div class="tnv30-cibot-item">
+       <div class="tnv30-cibot-itemvalue">{{ section.settings.item02value02 }}</div>
+         <div class="tnv30-cibot-itemkey">{{ section.settings.item02key02 }}</div>
+     </div>
+     {{/if}}
+   </div>
+   {{/or}}   
+   </div> 
+    <div class="tnv30clearidenttext-item02">
+   {{#if section.settings.title '!=' '' }}
+    <div class="tnv30clearidenttext-title">
+    {{ section.settings.title }}
+    </div>
+  {{/if}}
+  {{#if section.settings.content '!=' '' }}
+    <div class="tnv30clearidenttext-content hide-mb">
+    {{{section.settings.content}}}
+    </div>
+    <div class="tnv30clearidenttext-content hide-pc">
+    {{{section.settings.contentmb}}}
+    </div>
+  {{/if }}
+  
+   {{#or section.settings.itemvalue01 '!=' '' section.settings.itemvalue02 '!=' '' }}
+   <div class="tnv30-cibotbox">
+      {{#if section.settings.itemvalue01 '!=' '' }}
+     <div class="tnv30-cibot-item">
+       <div class="tnv30-cibot-itemvalue">{{ section.settings.itemvalue01 }}</div>
+         <div class="tnv30-cibot-itemkey">{{ section.settings.itemkey01 }}</div>
+     </div>
+     {{/if }}
+     {{#if section.settings.itemvalue02 '!=' '' }}
+     <div class="tnv30-cibot-item">
+       <div class="tnv30-cibot-itemvalue">{{ section.settings.itemvalue02 }}</div>
+         <div class="tnv30-cibot-itemkey">{{ section.settings.itemkey02 }}</div>
+     </div>
+     {{/if }}
+   </div>
+   {{/or}}   
+   </div> 
+
+    
+  </div>
+    
+  </div>
+  
+</div>
+
+</div>
+
+<script> 
+    $(function(){
+      
+       var controller_{{secidlast}} = new ScrollMagic.Controller();
+      var images_{{secidlast}}= [];
+       setTimeout(function(){
+     for(var i =1;i<={{section.settings.image_number}};i++){  
+           const imgzhenshu_{{secidlast}} = new Image();
+          imgzhenshu_{{secidlast}}.src = `{{ section.settings.image_leaderurl }}_${i}.{{ section.settings.image_type }}{{ section.settings.url_parameter }}`;
+        };
+              },5000);
+     for(var i =1;i<={{section.settings.image_number}};i++){
+       images_{{secidlast}}.push(`{{ section.settings.image_leaderurl }}_${i}.{{ section.settings.image_type }}{{ section.settings.url_parameter }}`);
+   };
+        var obj_{{secidlast}} = {curImg_{{secidlast}}: 0};
+       var tweenmaxthr_{{secidlast}} = new TimelineMax()
+
+         .add([
+       TweenMax.to(".tnv30clearident-fixbox-{{ secidlast }} .tnv30clearidentimg", 1, {className: "+=active"}), 
+       ]) 
+        .add([
+       TweenMax.to(".tnv30clearident-fixbox-{{ secidlast }} .tnv30clearidenttext-item01", 1, {className: "+=active"}), 
+       ]) 
+       .add([
+       TweenMax.to("#shopline-section-header,#shopline-section-announcement-bar", 2, {className: "+=hidehd"}), 
+       ])
+        .add([
+          TweenMax.to(".tnv30clearident-fixbox-{{ secidlast }} .tnv30clearidentimg span.lenspec-span", 4, { height: "100%"}),
+          TweenMax.to(obj_{{secidlast}}, {{section.settings.image_number}}/2.5,
+       {
+        curImg_{{secidlast}}: images_{{secidlast}}.length - 1,	// animate propery curImg to number of images
+        roundProps: "curImg_{{secidlast}}",				// only integers so it can be used as an array index
+        repeat: 0,									// repeat 3 times
+        immediateRender: false,			// load first image automatically
+        ease: Linear.easeNone,			// show every image the same ammount of time
+        onUpdate: function () {
+             $("#tnv30clearidentimg-{{secidlast}}").attr("src", images_{{secidlast}}[obj_{{secidlast}}.curImg_{{secidlast}}]); // set the image source 
+               if(obj_{{secidlast}}.curImg_{{secidlast}} > 9){
+                 $(".tnv30clearident-fixbox-{{ secidlast }} .tnv30clearidenttext-item02").addClass("active");
+                 $(".tnv30clearident-fixbox-{{ secidlast }} .tnv30clearidenttext-item01").addClass("disable");
+              }else{
+                  $(".tnv30clearident-fixbox-{{ secidlast }} .tnv30clearidenttext-item02").removeClass("active");
+               $(".tnv30clearident-fixbox-{{ secidlast }} .tnv30clearidenttext-item01").removeClass("disable");
+              }
+                    if(obj_{{secidlast}}.curImg_{{secidlast}} > 7){
+                     $(".tnv30clearident-fixbox-{{ secidlast }} .tnv30clearidentimg span.lenspec-span").addClass("hide");  
+                    }else{
+                     $(".tnv30clearident-fixbox-{{ secidlast }} .tnv30clearidentimg span.lenspec-span").removeClass("hide");    
+                    }
+        }
+                          
+      }
+        ),
+        
+      ])
+
+      
+     var beishu_nine = $(window).width()/1920;
+      if($(window).width() > 768){
+        var n_beshu = beishu_nine*465; 
+        var offsetho = 170;  
+      }else if($(window).width() <= 768 && $(window).width() > 550){
+        var n_beshu = beishu_nine*600; 
+         var offsetho = 100;
+      }else{
+        var n_beshu = beishu_nine*1700; 
+         var offsetho = 80;
+      }
+                         
+     $(window).resize(function() {      
+        if($(window).width() > 768){
+        var n_beshu = beishu_nine*465; 
+             var offsetho = 170;   
+      }else if($(window).width() <= 768 && $(window).width() > 550){
+        var n_beshu = beishu_nine*600; 
+         var offsetho = 100;
+      }else{
+        var n_beshu = beishu_nine*1700; 
+         var offsetho = 80;
+      }       
+      });
+ 
+       new ScrollMagic.Scene({triggerElement: "#tnv30cidentfbox-{{secidlast}}", duration: offsetho*{{section.settings.image_number}},offset: n_beshu})
+        .setTween(tweenmaxthr_{{secidlast}})
+		.setPin("#tnv30cidentfbox-{{secidlast}}")
+         .on("enter", function(e) {
+        })
+        .on("leave", function(e) {
+          
+        })
+        .addTo(controller_{{secidlast}}); 
+     
+    });
+              
+</script>
+
+{{#schema}}
+  {
+    "name": "Clear Identification",
+    "settings": [
+      {
+        "type": "select",
+        "id": "position",
+        "label": "Image Position",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },{
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "left"
+      },{
+        "type":"image_picker",
+        "id":"image",
+        "label":"Image"
+      },{
+        "type":"text",
+        "id":"image_leaderurl",
+        "label":"Image Leaderurl"
+      },{
+        "type":"text",
+        "id":"url_parameter",
+        "label":"Image url_parameter",
+        "default":"?v=1703237718"
+      },{
+        "type":"text",
+        "id":"image_number",
+        "label":"Image Number"
+      },{
+        "type":"text",
+        "id":"image_type",
+        "label":"Image Type"
+      },{
+        "type":"text",
+        "id":"toptitle",
+        "label":"Top Title"
+      },{
+        "type":"text",
+        "id":"lenspec",
+        "label":"Len Spec",
+        "default":"25mm F1.0 Germanium Lens"
+      },{
+        "type":"header",
+        "content":"Lens settings"
+      },{
+        "type":"text",
+        "id":"title02",
+        "label":"Lens Title"
+      },{
+        "type":"richtext",
+        "id":"content02",
+        "label":"Lens Content"
+      },{
+        "type":"richtext",
+        "id":"content02mb",
+        "label":"Lens Content(mobile)"
+      },{
+          "type": "text",
+          "id": "item02value01",
+          "label": "Lens Itemvalue01"
+      },{
+          "type": "text",
+          "id": "item02key01",
+          "label": "Lens Itemkey01"
+      },{
+          "type": "text",
+          "id": "item02value02",
+          "label": "Lens Itemvalue02"
+      },{
+          "type": "text",
+          "id": "item02key02",
+          "label": "Lens Itemkey02"
+      },{
+        "type":"header",
+        "content":"Sensor Settings"
+      },{
+        "type":"text",
+        "id":"title",
+        "label":"Sensor Title"
+      },{
+        "type":"richtext",
+        "id":"content",
+        "label":"Sensor Content"
+      },{
+        "type":"richtext",
+        "id":"contentmb",
+        "label":"Sensor Content(mobile)"
+      },{
+          "type": "text",
+          "id": "itemvalue01",
+          "label": "Sensor Itemvalue01"
+      },{
+          "type": "text",
+          "id": "itemkey01",
+          "label": "Sensor Itemkey01"
+      },{
+          "type": "text",
+          "id": "itemvalue02",
+          "label": "Sensor Itemvalue02"
+      },{
+          "type": "text",
+          "id": "itemkey02",
+          "label": "Sensor Itemkey02"
+      },{
+        "id": "top_dis",
+        "type": "range",
+        "label": "Top Distence",
+        "default": 100,
+        "min": 0,
+        "max": 200,
+        "step": 2,
+        "unit": "px"
+      },
+      {
+        "id": "bottom_dis",
+        "type": "range",
+        "label": "Botttom Distence",
+        "default": 100,
+        "min": 0,
+        "max": 400,
+        "step": 4,
+        "unit": "px"
+      },{
+        "type":"image_picker",
+        "id":"bg_image",
+        "label":"Background Image"
+      }
+      
+	],
+	"presets": [
+      {
+        "name": "Clear Identification","category": "Ho-Advance"
+      }
+    ]
+  }
+{{/schema}}

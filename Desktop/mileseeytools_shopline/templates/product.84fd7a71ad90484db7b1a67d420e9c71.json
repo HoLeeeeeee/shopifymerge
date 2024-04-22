@@ -1,0 +1,501 @@
+{
+  "sections": {
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": false,
+      "settings": {
+        "show_product_number": 6,
+        "pc_cols": 4,
+        "md_cols": 2,
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "product_image_ratio": "150",
+        "product_fill_type": "contain",
+        "product_hover_show_next": true,
+        "notice_style": ""
+      },
+      "blocks": {
+        "block-1": {
+          "type": "image",
+          "settings": {}
+        },
+        "block-2": {
+          "type": "title",
+          "settings": {}
+        },
+        "block-3": {
+          "type": "price",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "block-1",
+        "block-2",
+        "block-3"
+      ]
+    },
+    "main-product-info": {
+      "type": "main-product",
+      "disabled": false,
+      "settings": {
+        "product_info_sticky": true,
+        "product_image_pc_show_style": "carousel",
+        "product_image_pc_thumbnail_postion": "bottom",
+        "product_image_size": "medium",
+        "product_mobile_thumbnail_image_hide": "hide",
+        "video_loop": false,
+        "video_autoplay": false,
+        "pc_magnifier_type": "click",
+        "padding_top": 60,
+        "padding_bottom": 60
+      },
+      "blocks": {
+        "block_1": {
+          "type": "title",
+          "settings": {}
+        },
+        "block_2": {
+          "type": "price",
+          "settings": {
+            "show_order": "sale_origin",
+            "sale_font_size": "font_size_big",
+            "regular_font_size": "font_size_medium",
+            "save_font_size": "font_size_small",
+            "font_size_flexible": false,
+            "sale_price_pc_font_size": 20,
+            "sale_price_mobile_font_size": 18,
+            "regular_price_pc_font_size": 20,
+            "regular_price_mobile_font_size": 16,
+            "save_price_pc_font_size": 20,
+            "save_price_mobile_font_size": 16,
+            "sale_font_bold": true
+          }
+        },
+        "block_3": {
+          "type": "dividing_line",
+          "settings": {
+            "show_pc_line": true,
+            "show_mobile_line": true,
+            "dividing_line_color": "#333333",
+            "dividing_line_style": "0",
+            "dividing_line_height": 1
+          }
+        },
+        "block_4": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "flatten",
+            "enabled_color_swatch": true,
+            "color_swatch_type": "square",
+            "sizes": "medium",
+            "layout_direction": "row"
+          }
+        },
+        "block_5": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "block_6": {
+          "type": "buy_buttons",
+          "settings": {}
+        },
+        "block_7": {
+          "type": "description",
+          "settings": {
+            "location": "image_right",
+            "is_fold": false
+          },
+          "disabled": false
+        },
+        "block_9": {
+          "type": "product_additional",
+          "settings": {
+            "title": "",
+            "icon": "none",
+            "description": "",
+            "custom_page": ""
+          },
+          "disabled": true
+        },
+        "block_10": {
+          "type": "product_additional",
+          "settings": {
+            "title": "",
+            "icon": "none",
+            "description": "",
+            "custom_page": ""
+          },
+          "disabled": true
+        },
+        "171271187619647a69b4": {
+          "type": "icon",
+          "settings": {
+            "icon1": "logistics",
+            "title1": "Free Shipping",
+            "sub_title1": "",
+            "icon2": "medal",
+            "title2": "30-Day Money Back",
+            "sub_title2": "",
+            "icon3": "customer",
+            "title3": "Lifetime Customer Support",
+            "sub_title3": ""
+          }
+        },
+        "171271203856368e310c": {
+          "type": "html",
+          "settings": {
+            "html": "<div class=\"payment-icon-wrapper\">\n    \n      <img class=\" lazyloaded\" src=\"//7egoaboyt7vy3efy-56001626273.shopifypreview.com/cdn/shop/files/f2.png?v=1679398209\" data-src=\"//7egoaboyt7vy3efy-56001626273.shopifypreview.com/cdn/shop/files/f2.png?v=1679398209\" width=\"548\" height=\"32\" loading=\"lazy\" alt=\"\">"
+          },
+          "disabled": true
+        },
+        "block_11": {
+          "type": "product_additional",
+          "settings": {
+            "title": "",
+            "icon": "none",
+            "description": "",
+            "custom_page": ""
+          },
+          "disabled": true
+        },
+        "block_12": {
+          "type": "share",
+          "settings": {},
+          "disabled": true
+        }
+      },
+      "block_order": [
+        "block_1",
+        "block_2",
+        "block_3",
+        "block_4",
+        "block_5",
+        "block_6",
+        "block_7",
+        "block_9",
+        "block_10",
+        "171271187619647a69b4",
+        "171271203856368e310c",
+        "block_11",
+        "block_12"
+      ],
+      "custom_css": []
+    },
+    "1710467045770d25e404": {
+      "type": "new-background-text-size-width",
+      "disabled": false,
+      "settings": {
+        "margin_top": 0
+      },
+      "blocks": {
+        "1710468158039f63db5a": {
+          "type": "image",
+          "settings": {
+            "show_font": false,
+            "base_font_family": "poppins_n4",
+            "title": "P7AK Outdoor Measure \nMax Range of 200m",
+            "heading_font_weight": "700",
+            "heading_font_size_pc": "2.1vw",
+            "heading_font_size_mb": "6.5vw",
+            "text": "Laser measure in long range.\nDaylight anti-inerference technology.",
+            "sheading_font_weight": "500",
+            "sheading_font_size_pc": "0.8vw",
+            "sheading_font_size_mb": 14,
+            "text_color": "#fff",
+            "text_bg_color": "#000000",
+            "text_mobile_color": "#fff",
+            "text_width_pc": 40,
+            "text_width_mb": 100,
+            "layout": "right",
+            "btn": "Shop Now",
+            "btn_font_weight": "500",
+            "btn_bg_color": "#ff6000",
+            "btn_bg_color_hover": "#019cb6",
+            "btn_font_size_pc": "18px",
+            "btn_font_size_mb": 14,
+            "checkout": false,
+            "image": "shopline://shop_images/P7AK Laser measure  (1)_6379386936637100074.jpg",
+            "image_mb": "shopline://shop_images/P7AK laser measure M (1).jpg"
+          }
+        },
+        "17104681591607cb5700": {
+          "type": "image",
+          "settings": {
+            "show_font": false,
+            "base_font_family": "poppins_n4",
+            "title": "Point Viewfinder",
+            "heading_font_weight": "700",
+            "heading_font_size_pc": "2.1vw",
+            "heading_font_size_mb": "6.5vw",
+            "text": "Camera with 4X zoom display\nEasily target and measure the objective\nLong range measure | P2P measure\n",
+            "sheading_font_weight": "500",
+            "sheading_font_size_pc": "0.8vw",
+            "sheading_font_size_mb": 20,
+            "text_color": "#2c2c2c",
+            "text_bg_color": "#000000",
+            "text_mobile_color": "#fff",
+            "text_width_pc": 40,
+            "text_width_mb": 100,
+            "layout": "left",
+            "btn": "Shop Now",
+            "btn_font_weight": "500",
+            "btn_bg_color": "#ff6000",
+            "btn_bg_color_hover": "#019cb6",
+            "btn_font_size_pc": "18px",
+            "btn_font_size_mb": 14,
+            "checkout": false,
+            "image_mb": "shopline://shop_images/P7AK laser measure M (2).jpg",
+            "image": "shopline://shop_images/P7AK Laser measure  (2).jpg"
+          }
+        },
+        "1710468160624902171f": {
+          "type": "image",
+          "settings": {
+            "show_font": false,
+            "base_font_family": "poppins_n4",
+            "title": "Bluetooth Transmission",
+            "heading_font_weight": "700",
+            "heading_font_size_pc": "2.1vw",
+            "heading_font_size_mb": "6.5vw",
+            "text": "Applicable to a variety of design apps\nSurveying an mapping more convenient.",
+            "sheading_font_weight": "500",
+            "sheading_font_size_pc": "0.8vw",
+            "sheading_font_size_mb": 14,
+            "text_color": "#2c2c2c",
+            "text_bg_color": "#000000",
+            "text_mobile_color": "#fff",
+            "text_width_pc": 40,
+            "text_width_mb": 100,
+            "layout": "right",
+            "btn": "Shop Now",
+            "btn_font_weight": "500",
+            "btn_bg_color": "#ff6000",
+            "btn_bg_color_hover": "#019cb6",
+            "btn_font_size_pc": "18px",
+            "btn_font_size_mb": 14,
+            "checkout": false,
+            "image_mb": "shopline://shop_images/P7AK laser measure M (3).jpg",
+            "image": "shopline://shop_images/P7AK Laser measure  (3).jpg"
+          }
+        },
+        "17104692135467eb5a7d": {
+          "type": "image",
+          "settings": {
+            "show_font": false,
+            "base_font_family": "poppins_n4",
+            "title": "Color LCD Display",
+            "heading_font_weight": "700",
+            "heading_font_size_pc": "2.1vw",
+            "heading_font_size_mb": "6.5vw",
+            "text": "3.0 inch large screen \nCamera Shot \nPoint Viewfinder \nScreen Rotation",
+            "sheading_font_weight": "500",
+            "sheading_font_size_pc": "0.8vw",
+            "sheading_font_size_mb": 14,
+            "text_color": "#2c2c2c",
+            "text_bg_color": "#000000",
+            "text_mobile_color": "#fff",
+            "text_width_pc": 40,
+            "text_width_mb": 100,
+            "layout": "left",
+            "btn": "Shop Now",
+            "btn_font_weight": "500",
+            "btn_bg_color": "#ff6000",
+            "btn_bg_color_hover": "#019cb6",
+            "btn_font_size_pc": "18px",
+            "btn_font_size_mb": 14,
+            "checkout": false,
+            "image_mb": "shopline://shop_images/P7AK laser measure M (4).jpg",
+            "image": "shopline://shop_images/P7AK Laser measure  (5).jpg"
+          }
+        },
+        "171046921446833348ff": {
+          "type": "image",
+          "settings": {
+            "show_font": false,
+            "base_font_family": "poppins_n4",
+            "title": "Outdoor or Indoor Measure\nRich Measure Solutions",
+            "heading_font_weight": "700",
+            "heading_font_size_pc": "2.1vw",
+            "heading_font_size_mb": "6.5vw",
+            "text": "Distance/Area/Volume/Pythagoras Measure\nAuto Area Calculation for Triangle /Circle/Trapezium etc.",
+            "sheading_font_weight": "500",
+            "sheading_font_size_pc": "0.8vw",
+            "sheading_font_size_mb": 14,
+            "text_color": "#2c2c2c",
+            "text_bg_color": "#000000",
+            "text_mobile_color": "#fff",
+            "text_width_pc": 40,
+            "text_width_mb": 100,
+            "layout": "right",
+            "btn": "Shop Now",
+            "btn_font_weight": "500",
+            "btn_bg_color": "#ff6000",
+            "btn_bg_color_hover": "#019cb6",
+            "btn_font_size_pc": "18px",
+            "btn_font_size_mb": 14,
+            "checkout": false,
+            "image_mb": "shopline://shop_images/P7AK laser measure M (5).jpg",
+            "image": "shopline://shop_images/P7AK Laser measure  (6).jpg"
+          }
+        },
+        "17104692153248b6f0bf": {
+          "type": "image",
+          "settings": {
+            "show_font": false,
+            "base_font_family": "poppins_n4",
+            "title": "Durable | Reliable",
+            "heading_font_weight": "700",
+            "heading_font_size_pc": "2.1vw",
+            "heading_font_size_mb": "6.5vw",
+            "text": "IP65 rated against dust, dirt and rain withstand tough job site conditions.",
+            "sheading_font_weight": "500",
+            "sheading_font_size_pc": "0.8vw",
+            "sheading_font_size_mb": 14,
+            "text_color": "#2c2c2c",
+            "text_bg_color": "#000000",
+            "text_mobile_color": "#fff",
+            "text_width_pc": 40,
+            "text_width_mb": 100,
+            "layout": "left",
+            "btn": "Shop Now",
+            "btn_font_weight": "500",
+            "btn_bg_color": "#ff6000",
+            "btn_bg_color_hover": "#019cb6",
+            "btn_font_size_pc": "18px",
+            "btn_font_size_mb": 14,
+            "checkout": false,
+            "image": "shopline://shop_images/P7AK Laser measure  (7).jpg",
+            "image_mb": "shopline://shop_images/P7AK laser measure M (6).jpg"
+          }
+        },
+        "17104692351920f678b9": {
+          "type": "image",
+          "settings": {
+            "show_font": false,
+            "base_font_family": "poppins_n4",
+            "title": "Rich Laser Measure Solutions",
+            "heading_font_weight": "700",
+            "heading_font_size_pc": "2.1vw",
+            "heading_font_size_mb": "6.5vw",
+            "text": "12 powerful performances cover the needs of both indoor or outdoor projects and DIY designs.",
+            "sheading_font_weight": "500",
+            "sheading_font_size_pc": "0.8vw",
+            "sheading_font_size_mb": 14,
+            "text_color": "#2c2c2c",
+            "text_bg_color": "#ffffff",
+            "text_mobile_color": "#000000",
+            "text_width_pc": 40,
+            "text_width_mb": 100,
+            "layout": "right",
+            "btn": "Shop Now",
+            "btn_font_weight": "500",
+            "btn_bg_color": "#ff6000",
+            "btn_bg_color_hover": "#019cb6",
+            "btn_font_size_pc": "18px",
+            "btn_font_size_mb": 14,
+            "checkout": false,
+            "image_mb": "shopline://shop_images/P7AK laser measure M (7).jpg",
+            "image": "shopline://shop_images/P7AK Laser measure  (8).jpg"
+          }
+        }
+      },
+      "block_order": [
+        "1710468158039f63db5a",
+        "17104681591607cb5700",
+        "1710468160624902171f",
+        "17104692135467eb5a7d",
+        "171046921446833348ff",
+        "17104692153248b6f0bf",
+        "17104692351920f678b9"
+      ],
+      "custom_css": []
+    },
+    "17128305596655e558fb": {
+      "disabled": false,
+      "type": "animate-prosettings",
+      "settings": {},
+      "blocks": {},
+      "block_order": []
+    },
+    "1712830571336e72fb66": {
+      "disabled": false,
+      "type": "tnv30-specs",
+      "settings": {
+        "title": "P7AK Outdoor Laser Measure",
+        "specs": "SPECS",
+        "specification": "User Manual",
+        "specification_url": "https://cdn-files.myshopline.com/file/store/1709871255948/P7A-K.pdf",
+        "media_type": "model",
+        "image": "shopline://shop_images/P7AK2.jpg"
+      },
+      "blocks": {
+        "1712830901485eadb437": {
+          "type": "item",
+          "settings": {
+            "title": "Measuring Range",
+            "content": "80m"
+          }
+        },
+        "1712830925626d92b111": {
+          "type": "item",
+          "settings": {
+            "title": "Measuring Accuracy",
+            "content": "±(1.5mm+5x10-5D)"
+          }
+        },
+        "1712830990481a30fd6d": {
+          "type": "item",
+          "settings": {
+            "title": "Memory",
+            "content": "1000 Sets"
+          }
+        },
+        "17128310538566c1eceb": {
+          "type": "item",
+          "settings": {
+            "title": "Screen Display",
+            "content": "2.0\" Colored Display"
+          }
+        },
+        "1712831102849558f295": {
+          "type": "item",
+          "settings": {
+            "title": "Battery Type",
+            "content": "3*AAA NI-MH rechargeable<br>batteries"
+          }
+        },
+        "17128311320192f527e0": {
+          "type": "item",
+          "settings": {
+            "title": "Item Weight",
+            "content": "140g"
+          }
+        },
+        "17128311683535481a34": {
+          "type": "item",
+          "settings": {
+            "title": "Dimension",
+            "content": "115*49*26mm"
+          }
+        }
+      },
+      "block_order": [
+        "1712830901485eadb437",
+        "1712830925626d92b111",
+        "1712830990481a30fd6d",
+        "17128310538566c1eceb",
+        "1712831102849558f295",
+        "17128311320192f527e0",
+        "17128311683535481a34"
+      ],
+      "custom_css": []
+    }
+  },
+  "order": [
+    "main-product-info",
+    "1710467045770d25e404",
+    "17128305596655e558fb",
+    "1712830571336e72fb66",
+    "product-recommendations"
+  ]
+}
