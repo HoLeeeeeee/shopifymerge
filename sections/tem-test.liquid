@@ -6,7 +6,7 @@
   %}
 {% assign originstrim = pageParamStr02 | split: 'formid=' | last | strip | remove: ']' | remove: '[' | remove: '"' %} 
 {% assign originname = pageParamStr02 | split: 'formid=' | first | split: 'name=' | last | remove: ']' | remove: '[' | remove: '"' | remove: ',' %} 
-
+{{ pageParamStr }}
 <div class="demo-01">
   <div class="demo-canvasbox">
  <canvas id="canvas" width="150" height="150"></canvas>
