@@ -1,3 +1,12 @@
+{%- capture contentForQuerystring -%}{{ content_for_header }}{%- endcapture -%}
+{% liquid
+    assign pageParamStr = contentForQuerystring | split: '"pageurl":"' | last | split: '"' | first | url_decode | split: '?' | last | replace: '\/', '/' | replace: '%20', ' ' | replace: '\u0026', '&'
+    assign pageParamStr02 = contentForQuerystring | split: '"pageurl":"' | last | split: '"' | first | url_decode | split: '?'
+    assign pageParamStr03 = pageParamStr02[1] | replace: '\/', '/' | replace: '%20', ' ' | replace: '\u0026', '&'
+  %}
+{% assign originstrim = pageParamStr02 | split: 'formid=' | last | strip | remove: ']' | remove: '[' | remove: '"' %} 
+{% assign originname = pageParamStr02 | split: 'formid=' | first | split: 'name=' | last | remove: ']' | remove: '[' | remove: '"' | remove: ',' %} 
+
 <div class="demo-01">
   <div class="demo-canvasbox">
  <canvas id="canvas" width="150" height="150"></canvas>
