@@ -1,0 +1,148 @@
+{
+  "type": "header",
+  "name": "t:sections.header-group.name",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "disabled": true,
+      "settings": {
+        "bg_color": "#111111",
+        "text_color": "#0ee06d",
+        "announcement_text": "Black Friday , Get 20% Off Storewide ，CODE:BF20",
+        "announcement_link": "",
+        "announcement_closable": false
+      }
+    },
+    "index_announcement_qVHPNi": {
+      "type": "index-announcement",
+      "blocks": {
+        "block_qMkANX": {
+          "type": "block",
+          "settings": {
+            "text": "<p><a href=\"\/products\/reolink-sim-card\" title=\"5-year unlimited IoT plan for $399, includes free Reolink Go PT Plus camera\">Get free reolink camera<\/a><\/p>",
+            "text_color": "#282828"
+          }
+        },
+        "block_UFY83r": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Grab up to 50% OFF & up to 2 GB FREE until February 12!<\/p>",
+            "text_color": "#282828"
+          }
+        },
+        "block_RTmqkE": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "text": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "block_qMkANX",
+        "block_UFY83r",
+        "block_RTmqkE"
+      ],
+      "settings": {
+        "show_block": true,
+        "timesloop": "5",
+        "background_color": "#cdf3df"
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "megamenu01_A6UDiY": {
+          "type": "megamenu01",
+          "settings": {
+            "menu_item": "Shop SIM Card"
+          }
+        },
+        "megamenu02_yg6ymL": {
+          "type": "megamenu02",
+          "settings": {
+            "menu_item": "Device"
+          }
+        },
+        "megamenu03_rXDKFJ": {
+          "type": "megamenu03",
+          "settings": {
+            "menu_item": "Special Offer",
+            "promo_image_1": "shopify:\/\/shop_images\/specialoffer_01_380x170_240527.jpg",
+            "promo_heading_1": "Flash Sale Starts Now!",
+            "promo_text_1": "<p>Explore diverse IoT applications spanning agriculture to industrial automation.<\/p>",
+            "promo_url_1": "shopify:\/\/collections",
+            "promo_image_2": "shopify:\/\/shop_images\/specialoffer_02_380x170_240527.jpg",
+            "promo_heading_2": "New Arrival US Prepaid SIM Card",
+            "promo_text_2": "<p>Explore diverse IoT applications spanning agriculture to industrial automation.<\/p>",
+            "promo_url_2": "shopify:\/\/collections\/all-product",
+            "promo_image_3": "shopify:\/\/shop_images\/specialoffer_03_380x170_240527.jpg",
+            "promo_heading_3": "Refer Friends, Be Rewarded",
+            "promo_text_3": "<p>Explore diverse IoT applications spanning agriculture to industrial automation.<\/p>",
+            "promo_url_3": "shopify:\/\/collections\/all"
+          }
+        },
+        "megamenu_8UDR6q": {
+          "type": "megamenu",
+          "settings": {
+            "menu_item": "Business",
+            "promo_heading_1": "",
+            "promo_text_1": "",
+            "promo_url_1": "shopify:\/\/pages\/b2b",
+            "promo_heading_2": "",
+            "promo_text_2": "",
+            "promo_url_2": "",
+            "promo_heading_3": "",
+            "promo_text_3": "",
+            "promo_url_3": "",
+            "promo_heading_4": "",
+            "promo_text_4": "",
+            "promo_url_4": "",
+            "promo_heading_5": "",
+            "promo_text_5": "",
+            "promo_url_5": ""
+          }
+        },
+        "megamenu04_TB63C8": {
+          "type": "megamenu04",
+          "settings": {
+            "menu_item": "Supports",
+            "title": "Network",
+            "logo_1": "shopify:\/\/shop_images\/navfour_1.png",
+            "logo_2": "shopify:\/\/shop_images\/navfour_2.png",
+            "logo_3": "shopify:\/\/shop_images\/navfour_3.png",
+            "logo_4": "shopify:\/\/shop_images\/navfour_4.png",
+            "url": "shopify:\/\/collections",
+            "urltext": "View All Network",
+            "leftposi": "-30vw"
+          }
+        }
+      },
+      "block_order": [
+        "megamenu01_A6UDiY",
+        "megamenu02_yg6ymL",
+        "megamenu03_rXDKFJ",
+        "megamenu_8UDR6q",
+        "megamenu04_TB63C8"
+      ],
+      "settings": {
+        "logo": "shopify:\/\/shop_images\/EIOTCLUB-LOGO2-600x85-0504.png",
+        "logo-inverted": "shopify:\/\/shop_images\/EIOTCLUB-LOGO3-600x85-0504.png",
+        "desktop_logo_width": 140,
+        "mobile_logo_width": 120,
+        "main_menu_link_list": "new-main-menu",
+        "main_menu_alignment": "left-center",
+        "header_sticky": true,
+        "sticky_index": false,
+        "sticky_collection": false
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "index_announcement_qVHPNi",
+    "header"
+  ]
+}

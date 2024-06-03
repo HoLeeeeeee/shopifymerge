@@ -1,0 +1,132 @@
+{% comment %}
+  snippets/cart-top-pick-item.liquid
+{% endcomment %}
+{% liquid
+  assign on_sale = false
+  assign the_variant = null
+  if product.compare_at_price > product.price
+    assign on_sale = true
+  endif
+  for variant in product.variants
+    if variant.price == product.price and variant.compare_at_price == product.compare_at_price
+      assign the_variant = variant
+    endif
+  endfor
+%}
+<div
+  class="cart__item"
+  data-key="{{ product.key }}"
+>
+  <div class="cart__item--image" data-aos>
+    <a
+      href="{{ product.url }}"
+      class="image-wrap"
+      style="display: block; height: 0; padding-bottom: {{ 100 | divided_by: product.featured_image.aspect_ratio }}%;"
+    >
+      {%- render 'image-element',
+        img: product.featured_image.src,
+        alt: product.title,
+        sizes: sizes,
+        sizeVariable: sizeVariable,
+        fallback: fallback,
+        widths: '180, 360, 540'
+      -%}
+    </a>
+  </div>
+
+  <div class="cart__item--details">
+    <div class="cart__item--name">
+      <a href="{{ product.url }}" class="cart__product-name">
+        {{ product.title | replace: '-', '‑' }}
+      </a>
+
+      {%- unless product.has_only_default_variant and the_variant -%}
+        <div class="cart__variant-meta">
+          {{ the_variant.title }}
+        </div>
+      {%- endunless -%}
+      <div class="{% if product.selling_plan_allocation == empty %}hide {% endif %}">
+        {{ product.selling_plan_allocation.selling_plan.name }}
+      </div>
+
+      {%- assign property_size = product.properties | size -%}
+      {%- if property_size > 0 -%}
+        {%- for p in product.properties -%}
+          {%- assign first_character_in_key = p.first | truncate: 1, '' -%}
+          {%- unless p.last == blank or first_character_in_key == '_' -%}
+            {{ p.first }}:
+
+            {%- if p.last contains '/uploads/' -%}
+              <a href="{{ p.last }}">{{ p.last | split: '/' | last }}</a>
+            {%- else -%}
+              {{ p.last }}
+            {%- endif -%}
+
+            <br>
+          {%- endunless -%}
+        {%- endfor -%}
+      {%- endif -%}
+    </div>
+    {% comment %} price  {% endcomment %}
+    <div class="cart__item--price {% unless on_sale %} normal-price {% endunless %} cart__item-price-col text-left">
+      {%- if product.price_varies -%}
+        {%- assign price = product.price_min | money -%}
+        <span
+          {% if on_sale %}
+            class="sale-price"
+          {% endif %}
+        >
+          {{ price }}
+          {% comment %} {{ 'products.general.from_text_html' | t: price: price }} {% endcomment %}
+        </span>
+      {%- else -%}
+        <span
+          {% if on_sale %}
+            class="sale-price"
+          {% endif %}
+        >
+          {{ product.price | money }}
+        </span>
+      {%- endif -%}
+      {%- if on_sale -%}
+        <span class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
+        <span class="grid-product__price--original">{{ product.compare_at_price | money }}</span>
+        <span class="visually-hidden">{{ 'products.general.sale_price' | t }}</span>
+        <div class="cart__item--saved-price">
+          Save ${{ product.compare_at_price | minus: product.price | divided_by: 100 }}
+        </div>
+      {%- endif -%}
+      {%- if product.unit_price_measurement -%}
+        {%- capture unit_price_base_unit -%}
+            <span class="unit-price-base">
+              {%- if product.unit_price_measurement -%}
+                {%- if product.unit_price_measurement.reference_value != 1 -%}
+                  {{ product.unit_price_measurement.reference_value }}
+                {%- endif -%}
+                {{ product.unit_price_measurement.reference_unit }}
+              {%- endif -%}
+            </span>
+          {%- endcapture -%}
+
+        <div class="product__unit-price">{{ product.unit_price | money }}/{{ unit_price_base_unit }}</div>
+      {%- endif -%}
+
+      <top-pick-item
+        class="cart__item-top-pick-item"
+        {% if the_variant %}
+          data-variant="{{ the_variant.id }}"
+        {% endif %}
+      >
+        <button
+          data-atc
+          class="cart__item-top-pick-atc"
+          {% unless the_variant.available %}
+            disabled="disabled"
+          {% endunless %}
+        >
+          <span class="cart__item-top-pick-atc-text" data-add-to-cart-text data-default-text="+ ADD"> + ADD </span>
+        </button>
+      </top-pick-item>
+    </div>
+  </div>
+</div>

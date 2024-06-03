@@ -1,0 +1,266 @@
+{% liquid
+  assign secid = section.id | split:"__" 
+  assign secidlast = secid[1] | replace: "-","_"
+%}
+<style>
+  #spdevdeals-out-{{ secidlast }}{
+    {% if section.settings.bg_image %}
+      background: url("{{ section.settings.bg_image | image_url }}") no-repeat;
+      background-size: 100% auto;
+      background-position: center top;
+    {% endif %}
+  }
+
+ {% if section.settings.bg_imagemb %}
+  @media (max-width:768px){
+     #spdevdeals-out-{{ secidlast }}{
+      background-image: url("{{ section.settings.bg_imagemb | image_url }}");
+      background-position: top;
+    background-size: auto;
+  } 
+  }
+ {% endif %}
+</style>
+<div id="spdevdeals-out-{{ secidlast }}">
+<div class="spdevdeals-outbox">
+   
+  <div class="contain-index">
+    {% if section.settings.title != blank %}
+        <div class="spdevdeals-toptitle animate-ele">{{ section.settings.title }}</div> 
+        {% endif %}    
+    
+    <div class="spdevdeals-content animate-ele">
+
+    <div class="spdevdeals-probox">  
+       {% for block in section.blocks %} 
+       {% liquid
+            assign product = all_products[block.settings.product]
+            assign current_variant = product.selected_or_first_available_variant
+          %}
+
+       <div class="spdevdeals-proitem"> 
+          {% if block.settings.save != blank %}
+             <span class="spdevdeals-prosave" style="background:{{ block.settings.savecolor }}">SAVE<span>{{ block.settings.save }}</span></span>
+            {% endif %}
+          <div class="spdevdeals-proitem-img">
+            {% if block.settings.image %}
+            <img src="{{ block.settings.image | img_url:'master' }}" />
+              {% else %}
+               <img src="{{ product.featured_image | img_url:'master' }}" />
+            {% endif %}
+          </div>     
+         
+         <div class="spdevdeals-itemtext">
+            
+         {% if block.settings.title != blank %}
+              <div class="spdevdeals-item-title">{{ block.settings.title }}</div>
+           {% else %}
+             <div class="spdevdeals-item-title">{{product.title }}</div>
+         {% endif %}
+           <div class="spdevdeals-item-price"><span class="spdevdeals-item-original">{{ product.price | money }}</span>{% if product.price_varies %}<span class="spdevdeals-item-old">{{ product.compare_at_price | money }}</span>{% endif %}</div>
+                      {% assign idvalue = block.id | prepend:'spofdevform' %}
+{% form 'product', product, id: idvalue, class: 'product-single__form' %}
+
+    <div class="payment-buttons">
+    <span class="spoffer-ubybutton bthho spoffer-ubybutton03"><span>Shop Now</span></span>
+    <button
+      {% if product.empty? %}type="button"{% else %}type="submit"{% endif %}
+      data-product-id="{{ current_variant.id }}"
+      name="add"
+      data-add-to-cart
+      class="add-to-cart add-to-cartfeapro addcartcustom js-drawer-open-cart"
+      {% unless current_variant.available %} disabled="disabled"{% endunless %}>
+      <span data-add-to-cart-text>
+        Add To Cart
+      </span>
+    </button>
+      
+    </div>
+    
+      <select name="id" data-product-select class="product-single__variants no-js">
+        {%- for variant in product.variants -%}
+          {% if variant.available %}
+            <option {% if variant == product.selected_or_first_available_variant %}
+              selected="selected" {% endif %}
+              value="{{ variant.id }}">
+              {{ variant.title }} - {{ variant.price | money_with_currency }}
+            </option>
+          {% else %}
+            <option disabled="disabled">
+              {{ variant.title }} - {{ 'products.product.sold_out' | t }}
+            </option>
+          {% endif %}
+        {%- endfor -%}
+      </select>
+    {% endform %} 
+       <script>
+   if(shopify_features_script){
+   }else{let shopify_features_script = document.querySelector("script[id='shopify-features']"); let shopify_features_json = JSON.parse(shopify_features_script.innerHTML);}
+         
+  
+ 
+  var checkout_headers = {
+  'Accept': 'application/json',
+  'Content-Type': 'application/json',
+  'authorization': 'Basic ' + btoa(shopify_features_json.accessToken)
+  };
+  $(".spoffer-ubybutton03").click(function(){
+
+  let variant_id={{current_variant.id}};
+
+  let checkout_json={
+  "checkout": {
+  "line_items": [
+  {
+  "variant_id": variant_id,
+  "quantity": 1
+  }
+  ],
+  "secret": true,
+  "wallet_name": "Checkout",
+  "is_upstream_button": false,
+  "page_type": "product",
+  "has_selling_plans": false,
+  "presentment_currency": "{{ shop.currency }}",
+  "country": "{{shop.locale|upcase}}"
+  }
+  }
+  let data=JSON.stringify(checkout_json);
+  fetch("/wallets/checkouts.json",
+  {
+  method: 'POST',
+  headers: checkout_headers,
+  body: data
+  }
+  ).then(function(response) {
+  if (response.ok) {
+  return response.text();
+  }
+  }).then(function(strj) {
+  let checkout_json = JSON.parse(strj);
+  location.href = checkout_json.checkout.web_url;
+  }).catch(function(err) {
+  });
+  })
+</script>     
+           {% if block.settings.code %}
+             <div class="spofferright-dicode"><span class="spofferright-dicodemub">Code:<span>ESALE2024</span></span><span class="spoffer-dicodcopy">COPY</span></div>
+           {% endif %}
+         </div>
+         
+         </div>
+          
+     {% endfor %}
+    </div>
+  </div>
+
+
+      
+    </div>
+    
+</div>
+</div>
+
+        <script>   
+  $(function(){
+      var spenjoysn{{secidlast}} = new Swiper ('.spenjoysn-{{secidlast}}', {
+    slidesPerView : 1.66,
+    observer: true, 
+    observeParents: true, centeredSlides: true,
+     scrollbar: {
+      el: '.swiper-scrollbar-{{ secidlast }}',dragSize:89
+    },
+    // breakpoints: { 
+    //   10: {  
+    //    slidesPerView : 1.5,
+    //   },
+    //   550: { 
+    //    slidesPerView : 2,
+    //   },
+    //   769: {  
+    //     slidesPerView: 3,
+    //   },
+    //   994: { 
+    //     slidesPerView : 4,
+    //   }
+    // }
+
+  });
+  })
+
+</script>
+   <script>
+         $(()=>{
+             $('.spoffer-dicodcopy').click(function(){
+                let text = $(this).siblings('.spofferright-dicodemub').find('span').text();
+                navigator.clipboard.writeText(text);
+               $(this).html('Done');
+               // 设置计时器
+                setTimeout(() => {
+                    $(this).html('COPY');
+                }, 2000);
+              })
+         })
+       </script>
+{% schema %}
+  {
+   "name": "Device SIM Card Deals",
+  "settings": [
+     {
+        "type": "text",
+        "id": "title",
+        "label": "title?"
+      },
+    {
+      "type": "image_picker",
+      "id": "bg_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_imagemb",
+      "label": "Background Image(mobile)"
+    }
+    ],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "block",
+        "settings": [
+       {
+        "type": "text",
+        "id": "save",
+        "label": "save"
+      },{
+        "type": "color",
+        "id": "savecolor",
+        "label": "save bgcolor",
+        "default": "#FFCC00"
+      },{
+        "type": "product",
+        "id": "product",
+        "label": "product"
+      },{
+        "type": "image_picker",
+        "id": "image",
+        "label": "image"
+      },{
+        "type": "text",
+        "id": "title",
+        "label": "title"
+      },{
+        "type": "text",
+        "id": "code",
+        "label": "code"
+      }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Device SIM Card Deals",
+        "category": "HO-layout"
+      }
+    ]
+  }
+{% endschema %}

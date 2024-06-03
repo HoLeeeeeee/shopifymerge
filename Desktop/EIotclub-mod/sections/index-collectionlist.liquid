@@ -1,0 +1,138 @@
+{% liquid
+  assign secid = section.id | split:"__" 
+  assign secidlast = secid[1] | replace: "-","_"
+%}
+{% if section.settings.show_block  %}
+<div class="indexcollists-outbox">
+  <div class="contain-index">
+  <div class="indexcollists_{{ secidlast }} indexcollists_flbo">
+      {% for block in section.blocks %}
+         <div class="indexcollists-item">
+        {% if block.settings.url  %}
+        <a href="{{  block.settings.url  }}">
+        {% endif %}
+        {% if block.settings.image  %}
+          <div class="indexcollists-itimg"><img class="{% if block.settings.imagemb  %}hide-mb{% endif %}"  src="{{ block.settings.image | img_url:'master' }}" alt=" " /></div>
+         {% endif %}
+        {% if block.settings.imagemb  %}
+          <div class="indexcollists-itimg"><img class="hide-pc"  src="{{ block.settings.imagemb | img_url:'master' }}"  alt=" " /></div>
+       {% endif %}
+        {% if block.settings.title != blank %}
+        <div class="indexcollists-ittitle">{{ block.settings.title }} <svg width="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="25" cy="25" r="24" transform="matrix(-1 0 0 1 50 0)" stroke="currentColor" stroke-width="2"/>
+<path d="M23.7061 19.2939L29.7061 25.2939L23.7061 31.2939" stroke="currentColor" stroke-width="2"/>
+</svg></div> 
+        {% endif %}
+        {% if block.settings.url  %}
+        </a>
+        {% endif %}
+
+      </div>
+      {% endfor %}
+  </div>
+  </div>
+</div>
+<!-- 
+<script>   
+  $(function(){
+      var collist_{{secidlast}} = new Swiper ('.indexcollists_{{ secidlast }}', {
+    slidesPerView : 5,
+    spaceBetween: '1.4%',
+    // autoplay: {
+    //   delay: 5000,
+    //   stopOnLastSlide: false,
+    //   disableOnInteraction: true, 
+    // },
+    breakpoints: { 
+      10: {  
+        slidesPerView: 1.3,
+        spaceBetween: 10
+      },
+      550: { 
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+      768: {  //当屏幕宽度大于等于768 
+        slidesPerView: 4,
+      },
+      994: { 
+        slidesPerView: 4,
+      },
+      1200: {  
+        slidesPerView: 5,
+        spaceBetween: '1.4%'
+      }
+    }
+
+  });
+
+  })
+
+</script> -->
+<!-- <script>
+
+  $(function(){
+
+    if($(window).width() >  992 ){
+      $(window).scroll(function(){
+
+        if($(window).scrollTop() + $(window).height()*5/6  > $(".Logolist02-container-outbox").offset().top ){
+          $(".Logolist02-container-outbox").addClass("move_coltext");
+
+        }else{
+          $(".Logolist02-container-outbox").removeClass("move_coltext");
+        }
+
+      });
+
+    }  
+
+  });
+</script> -->
+{% endif %}
+
+
+{% schema %}
+  {
+   "name": "Collection List",
+  "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_block",
+        "label": "Show Block?",
+        "default": true
+      }
+    ],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "block",
+        "settings": [
+       {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },{
+        "type": "image_picker",
+        "id": "imagemb",
+        "label": "Image(mobile)"
+      },{
+        "type": "text",
+        "id": "title",
+        "label": "title"
+      },{
+        "type": "url",
+        "id": "url",
+        "label": "url"
+      }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Collection List",
+        "category": "HO-layout"
+      }
+    ]
+  }
+{% endschema %}

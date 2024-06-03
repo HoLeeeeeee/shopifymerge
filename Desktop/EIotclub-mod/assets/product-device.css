@@ -1,0 +1,3666 @@
+@media (min-width: 1551px){
+ .template-product .main-content .page-width {
+    max-width: calc(66.7% + 80px);
+}  
+}
+.add-to-cart.disabled,.bthho.disabled{
+  pointer-events: none;opacity: 0.5;
+}
+.tempro-all img{
+      vertical-align: top;
+}
+.product-blockbuyadd{
+  display: none;
+}
+.prodis-timedown b{
+  display: inline;
+}
+.dvsbanner-outbox{
+     position: relative; 
+}
+.dvsbanner-img >img{
+  width: 100%;
+}
+.dvsbanner-text{
+  position: absolute;
+    left: 16.7%;
+    top: 50%;
+    width: 22vw;
+    transform: translateY(-50%);
+}
+.dvsbanner-title {
+      font-size: 1.8vw;
+    font-weight: bold;
+    margin-bottom: 1.8vw;
+}
+.dvsbanner_item{
+      display: flex;margin-bottom: 1vw;
+    align-items: center;
+}
+.dvsbanner_item>span{
+      flex: 0 1 4.3vw;
+    margin-right: 0.7vw;
+}
+.dvsbanner_item_title{
+  font-size: 1.04vw;font-weight: bold;margin-bottom: 0.5vw;
+}
+.dvsbanner_item_subtitle{
+  font-size: 0.93vw;
+}
+.prodestextimg-container{
+      margin: 2.3vw 0 0.2vw;
+}
+.prodestextimg-wp{
+  display: flex;
+    justify-content: space-between;
+}
+.prodestextimg-img{
+    flex: 0 1 calc((100% - 1.8vw)/2);
+    border-radius: 1.05vw;
+    overflow: hidden;
+}
+.prodestextimg-text{
+    flex: 0 1 calc((100% - 1.8vw)/2);
+    border-radius: 1.05vw;
+    overflow: hidden;
+    padding: 5.5vw 4.2vw 10px 3.8vw;
+}
+.prodestextimg-right .prodestextimg-img{
+  order:3;
+}
+.prodvsimgswitch-image{
+      border-radius: 1vw;
+    overflow: hidden;
+}
+.prodvsimgswitch-bottom-item{
+      position: relative;
+}
+.prodvsimgswitch-box,.prodvsimgswitch-wrapper{
+      position: relative;
+}
+.prodvsimgswitch-bottom-item .prodvsimgswitch-text{
+      top: 50%;
+    position: absolute;
+    left: 5.5vw;    width: 20vw;
+    transform: translateY(-50%);
+}
+.simlogoover-img img{
+  width: 100%;
+}
+.prodvsimgswitch-title{
+      font-size: 1.8vw;
+    font-weight: bold;
+    margin-bottom: 0.8vw;
+}
+.prodvsimgswitch-content{
+      font-size: 0.84vw;    line-height: 1.65;
+}
+.prodvsimgswitch-content p{
+  margin-bottom:0;
+}
+.prodvsimgswitch-item-bet{
+  display: flex;justify-content: space-between;
+    background-color: #FFFFFF;
+    padding: 6.2vw 3.5vw 2.6vw;
+    border-radius: 1vw;
+}
+
+.prodvsimgswitch-item-bet .prodvsimgswitch-image{
+      border-radius: 0.5vw;
+      flex: 0 1 56%;
+}
+.prodvsimgswitch-item-bet .prodvsimgswitch-text{
+      flex: 0 1 44%;
+    padding: 3.5vw 3vw 0 2vw;
+}
+.prodvsimgswitch-botcontent{
+      color: #838383;
+    margin-top: 2.8vw;
+    font-size: 0.73vw;
+    line-height: 1.5;
+}
+.prodvsimgswitch-box .prodvsimgswitchbtn {
+  color: #282828;    width: 2.5vw;
+}
+.prodvsimgswitch-box .prodvsimgswitchbtn svg{
+    width: 100%;
+    overflow: visible;
+}
+  .prodvsimgswitch-box .swiper-button-next{
+     right: -5.5vw;
+  } 
+ .prodvsimgswitch-box .swiper-button-prev{
+     left: -5.5vw;
+  }
+.prodvsimgswitch-nav{
+      text-align: center;
+    font-size: 0;    width: 100%;
+    position: absolute;
+    top: 1.9vw;
+    z-index: 6;
+}
+.prodvsimgswitch-nav-item{
+      font-size: 14px;
+    padding: 6px 28px;
+    border: 1px solid;
+    display: inline-block;
+    border-radius: 20px;
+    font-weight: bold;  background-color:#ffffff;
+    line-height: 1.8;transition:.8s;    margin: 0 7px;    cursor: pointer;
+}
+.prodvsimgswitch-nav-item.active{
+  background-color:#07C160;
+  border-color:#07C160;
+}
+.prodvssimsu-outbox {
+      margin: 5.5vw 0;
+}
+.prodvssimsu-content{
+  line-height: 1.65;
+    font-size: 0.84vw;
+    text-align: center;
+    margin-bottom: 1.5vw;
+}
+.prodvssimsu-content p{
+  margin-bottom:0;
+}
+.prodvssimsu-title{
+  font-size: 1.8vw;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0.8vw;
+}
+.chat-prosim label{
+  display: inline;text-transform: inherit;    margin-bottom: 0;
+}
+.prodvssimsu-imagebox{
+      padding: 3vw 2vw;
+    background: #E8E8E8;
+    border-radius: 1vw;
+}
+.prodvsdownload-title{
+      font-size: 1.8vw;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2.7vw;
+}
+.prodvsdownload-box{
+      position: relative;border-radius: 1vw;
+}
+.prodvsdownload-textbox{
+      position: absolute;
+       left: 14vw;
+    top: 51%;   text-align: center;
+    transform: translateY(-50%);
+}
+.prodvsdownload-textbox>img{
+      width: 8.5vw;
+    margin-bottom: 1.5vw;
+}
+.prodvsdownload-text-dw{
+      font-size: 0.94vw;
+    font-weight: bold;
+    margin-bottom: 0.8vw;
+}
+.prodownload_icon01 svg{
+  vertical-align: top;
+    width: 10vw;
+    margin-bottom: 1vw;
+}
+.provideoho-topcon .indexvideoho-text {
+    color: #282828;
+}
+.provideoho-topcon{
+    border-radius: 1vw;
+    margin: 2.8vw 0 4.4vw;
+}
+.provideoho-topcon .indexvideoho-title {
+    font-size: 1.8vw;
+}
+.provideoho-topcon .indexvideoho-content {
+    padding: 0;    margin-bottom: 2.5vw;
+}
+.provideoho-topcon .indexvideoho-text {
+    width: 60%;    transform: translate(-50%,-50%);
+}
+.prodvssimple-outbox{
+      margin: 2vw 0 6vw;
+}
+.prodvssimple-title{
+      text-align: center;
+    font-size: 1.8vw;
+    font-weight: bold;
+    margin-bottom: 3.5vw;
+}
+.prodvssimple-box{
+  display: flex; 
+    justify-content: space-between;
+}
+.prodvssimple-item{    text-align: center;
+      flex: 0 1 calc((100% - 5vw)/3);
+}
+.prodvssimple-itimg img{
+  border-radius: 1vw;width: 100%;
+}
+.prodvssimple-ittitle{
+  font-size: 0.94vw;
+    margin-top: 1vw;
+}
+ .procomparison-container {
+      display: flex;
+      text-align: center;
+      justify-content: flex-end;
+    }
+    .procomparison_left {
+      width: 25%;
+    position: relative;
+    }
+    .procomparison_right {
+      width: 75%;
+    }
+#procom-device{
+    position: absolute;
+    font-size: 1.8vw;
+    font-weight: 700;
+    width: 85%;
+    left: 10%;
+    top: 3.8vw;
+    text-align: left;
+} 
+.procomparison_left .procomparison-proimg, .procomparison_left .procomparison-itemtitle, .procomparison_left .procomparison-proitemsubtitle {
+    opacity: 0;
+}
+.procomparison-itemspec{
+  padding:1.4vw 1.7vw;    font-size: .84vw;
+}
+ .procomparison_right .procomparison-proitemsubtitle ~ .procomparison-itemspec{
+   padding-left: 5vw;
+    padding-right: 5vw;
+   }
+.procomparison_right .swiper-procomparison{
+      overflow: hidden;
+}
+.procomparison-proimg img{
+      max-width: 110px;
+}
+.prodvsfaqs-britem,.prodvsfaqs-navitem img{
+  display:none;
+}
+.prodvsfaqs-navitem img{width: 6px;}
+.prodvsfaqs-britem-1{
+  display:block;
+}
+.prodvsfaqs-navitem.active img{
+   display: inline-block;
+    position: absolute;
+    right: 0.8vw;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.prodvsfaqs-outbox{
+      margin: 5.5vw 0;
+}
+.prodvsfaqs-title{
+      text-align: center;
+    font-size: 1.8vw;
+    font-weight: bold;
+    margin-bottom: 3vw;
+}
+.prodvsfaqs-bright{
+      flex: 0 1 calc(100% - 14.6vw);
+    border-radius: 1vw;
+    background: #fff;
+}
+.prodvsfaqs-bleft{
+  flex: 0 1 12.8vw;    overflow: hidden;
+    background: #E8E8E8;
+    border-radius: 1vw;
+}
+.prodvsfaqs-box{
+      display: flex;
+    justify-content: space-between;    align-items: flex-start;
+}
+.prodvsfaqs-britqacon{
+  display:none;    font-size: .84vw;
+    margin: 1.2vw 5% 0 1.5vw;    line-height: 1.45;
+}
+.prodvsfaqs-navitem{
+      font-size: .94vw;    position: relative;
+      padding: 1.88vw 1.1vw 1.88vw 0.7vw;   cursor: pointer;
+}
+.prodvsfaqs-navitem.active{
+      background: #fff;    box-shadow: 0 -1px 0 0 #fff;
+}
+.prodvsfaqs-navitem:after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    width: 90%;
+    border-bottom: 1px solid #fff;
+}
+.prodvsfaqs-navitem:last-child:after{
+  display:none;
+}
+.prodvsfaqs-britem{
+      padding: 1vw 1.7vw;
+}
+.prodvsfaqs-britqatitle{
+  font-size: 0.94vw;
+    position: relative;    padding-right: 20%;
+    cursor: pointer;
+}
+.prodvsfaqs-britqatitle img{
+      width: 9px;
+    position: absolute;
+    top: 50%;transition:.5s;
+    right: 0;
+    transform: translateY(-50%);
+}
+.prodvsfaqs-britqatitle.open img{
+    transform: translateY(-50%) rotate(90deg);
+}
+.prodvsfaqs-britqa{
+    padding: 1.4vw 0.2vw;
+    border-bottom: 1px solid #E2E2E2;
+}
+.prodvsfaqs-britqa:last-child{
+    border-bottom: none;
+}
+.procomparison-proimg{
+      padding: 0 0 1.2vw;
+}
+ .procomparison-itemtitle{
+      padding: 0;
+    font-size: 1.04vw;
+    font-weight: bold;
+    margin-bottom: 1vw;
+}
+.procomparison-proitemsubtitle{
+      padding: 0;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 1.6vw;
+}
+.procomparison-container .procomparison-proitemsubtitle,.procomparison-container .procomparison-itemtitle {
+  padding: 0;
+}
+.procomparison-proitemsubtitle ~ .procomparison-itemspec{
+    background: #fff;  
+  position:relative;
+}
+.procomparison-proitemsubtitle ~ .procomparison-itemspec:after{
+  content:'';border-bottom: 1px solid #E2E2E2;width:100%;bottom:0;left:0;    position: absolute;
+}
+.procomparison-proitemsubtitle ~ .procomparison-itemspec:last-child:after{
+    border-bottom: none; 
+}
+.procomparison_left .procomparison-proitemsubtitle ~ .procomparison-itemspec:after{
+  border-bottom: none; 
+}
+.procomparison_left .procomparison-proitemsubtitle ~ .procomparison-itemspec{
+    background: #EFEFEF;      font-size: 0.94vw;    text-align: left;
+    font-weight: bold;
+}
+
+.procomparison_left .procomparison-proitemsubtitle ~ .procomparison-itemspec:nth-child(odd){
+    background: #E8E8E8;  
+}
+.cpview-more:hover{
+      opacity: 0.7;
+}
+.cus-recommend-colbox{
+      margin: 5vw 0 8vw;
+}
+@media (min-width:994px){
+  .cus-recommend-colbox .indexmulticate-toptitle {
+    font-size: 1.8vw;
+    margin-bottom: 4vw;
+}
+}
+.simlogoover-outbox{
+    position: relative;
+    margin: 1.6vw 0 4.2vw;
+    border-radius: 1vw;
+    overflow: hidden;
+}
+.simlogoover-title{
+      position: absolute;
+    left: 10%;
+    width: 80%;
+    text-align: center;
+    top: 2.4vw;
+    font-size: 1.86vw;
+    font-weight: bold;
+}
+.simlogoover_elebox {
+  position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    left: 10%;
+    text-align: center;
+    bottom: 2.5vw;
+}
+@media (min-width:1551px){
+  .template-product .main-content .contain-index{
+      width: 67.3%;
+}
+}
+.simlogoover_item img{
+      max-width: 50px;
+    margin-bottom: 0.84vw;
+}
+.simlogoover_item_title{
+      font-size: 1.04vw;
+    font-weight: bold;
+    margin-bottom: 0.5vw;
+}
+.simlogooveritem_subtitle{
+      font-size: 0.84vw;
+}
+.simquick-box {
+      margin: 2vw 0 5.5vw;
+}
+.simquick-toptitle{
+      text-align: center;
+    font-size: 1.86vw;
+    font-weight: bold;
+    margin-bottom: 2vw;
+}
+.simquick-title {
+      position: absolute;
+    width: 80%;
+    left: 10%;
+    font-size: 1.04vw;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.5;
+}
+.simquick-proitem-center .simquick-title{
+top: 50%;
+    transform: translateY(-50%);
+}
+.simquick-proitem-top .simquick-title{
+  top:1.7vw;
+}
+.simquick-proitem-bottom .simquick-title{
+  bottom:1.7vw;
+}
+.simnetsup_fixbox,.clkpopun_fixbox{
+  position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #282828B2;
+    top: 0;
+    left: 0;    display: none;
+    z-index: 101;
+}
+
+.simnetsup_fixitem,.clkpopun_fixitem{
+      position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 90%;
+    max-width: 780px;
+    padding: calc(12px + 1vw) calc(10px + 1vw) calc(20px + 2vw);
+    background: #fff;
+    border-radius: 1vw;
+}
+.simnetsup_fixitemtop,.clkpopun_fixitemtop{
+  font-size: calc(12px + 0.3vw);
+    font-weight: bold;
+    border-bottom: 1px solid #D9D9D9;
+    padding-bottom: 1.4vw;
+    margin-bottom: 1.6vw;
+}
+.del-simnetsup,.del-clkpopun{
+  position: absolute;
+    right: 12px;
+    width: calc(20px + 1vw);
+    height: calc(20px + 1vw);
+    top: 14px;
+    color: #616161;
+    background: #D9D9D9;
+    font-weight: 400;
+    font-size: 1.3vw;
+    border-radius: 50%;cursor: pointer;
+    text-align: center;
+    line-height: calc(20px + 1vw);
+}
+.simnetsup_fixitemimg{
+      display: flex;
+    flex-wrap: wrap;    justify-content: space-between;
+
+}
+.simnetsup_fixitemimg>span{
+      flex: 0 1 calc((100% - 2.8vw)/6);
+    margin-bottom: 0.65vw;
+}
+.simnetsup-outbox{
+      width: 50%;
+    margin: 5.5vw auto 3.8vw;
+}
+.simnetsup-title{
+      text-align: center;
+    font-size: 1.86vw;
+    font-weight: bold;
+    margin-bottom: 2.6vw;
+}
+.leftsim-navsspecs .procomparison-itemspec {
+    position: relative;
+    font-size: 0.94vw;
+    font-weight: bold;transition:.5s;
+}
+
+.leftsim-navsspecs .procomparison-itemspec:after {
+    border-top: 1px solid #E6E6E6;
+    width: 96%;
+    left: 2%;
+    border-bottom: none;
+    bottom: auto;
+    z-index: -1;
+    top: 0;
+    position: absolute;
+    content: "";
+}
+.leftsim-navsspecs .procomparison-itemspec:first-child:after {
+  opacity:0;
+}
+.simnetsup_elebox {
+      display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;  
+}
+.simnetsup_item{
+  flex: 0 1 calc((100% - 5vw)/5);    display: flex;
+    justify-content: center;    background: #fff;
+    margin-bottom: 1.7vw;
+    border-radius: 3vw;    transition: .8s ease-in-out;
+    align-items: center;    border: 1px solid transparent;
+}
+.simnetsup_item:hover{
+   border: 1px solid #07C160;
+}
+.moresupport-ho{
+      font-size: 0.84vw;
+    font-weight: 600;
+    cursor: pointer;
+}
+.simcoverage-outbox{
+      margin: 5vw 0;text-align: center;
+}
+.simcoverage-title{
+    font-size: 1.86vw;
+    font-weight: bold;
+    margin-bottom: 1.25vw;
+}
+.simcoverage-content{
+      padding: 0 14vw 1.3vw;
+    font-size: .84vw;
+    line-height: 1.5;
+}
+.simcoverage-content p{
+margin-bottom:0;
+}
+.simcoverage_navs {
+      font-size: 0;
+    margin-bottom: 1.7vw;
+}
+.simcoverage_nav_item{
+      border-bottom: 1px solid transparent;
+    font-size: .94vw;
+    display: inline-block;
+    margin: 0 2.5vw;
+    font-weight: bold;
+    padding-bottom: 2px;cursor: pointer;
+}.simcoverage_nav_item.active{
+    border-bottom: 2px solid #07C160;
+}
+.simcoverage_conitem{
+      padding: 3.3vw 5.5vw 3.6vw;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: left;
+    border-radius: 1vw;
+    border: 1px solid #07C160;
+    background: #E5FBEF;
+    display: none;
+}
+.simcoverage_conitem p{
+  margin-bottom:0;
+}
+.simcoverage_conitem.simcr_conitem-1{
+     display: block; 
+}
+.simcoverage-btn{
+  display: inline-block;
+    margin-top: 2.1vw;
+    background: #07C160;
+    padding: 0.6vw 1.7vw;
+    border-radius: 2vw;
+    font-weight: bold;
+    line-height: 1.5;
+    font-size: .94vw;
+}
+.simadvuse-outbox{
+      margin: 5vw 0 5.5vw;
+}
+.simadvuse-title{
+      text-align: center;
+    font-size: 1.86vw;
+    font-weight: bold;
+    margin-bottom: 3.3vw;
+}
+.simadvuse_elebox {
+      display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.simadvuse_item{
+      flex: 0 1 calc((100% - 2.6vw)/3);
+    margin-bottom: 1.3vw;
+    background: #fff;
+    border-radius: 1vw;
+padding: 1vw 2.2vw 1.9vw 1.4vw;
+}
+.simadvuse_item img{
+      width: 2.6vw;
+    margin-bottom: 0.75vw;
+}
+.simadvuse-itemtitle{
+      font-size: 1.04vw;
+    font-weight: bold;
+    margin-bottom: 0.75vw;
+}
+.simadvuse-itemcon{
+  font-size: calc(12px + 0.1vw);
+    line-height: 1.5;
+}
+.simadvuse-itemcon p{
+  margin-bottom:0;
+}
+.simcdopera-outbox{
+      margin: 6.5vw 0 5vw;
+}
+.simcdopera-title{
+      text-align: center;
+    font-size: 1.86vw;
+    margin-bottom: 4.5vw;
+    font-weight: bold;
+}
+.simcdopera_elebox {
+  padding: 0 4.8vw;
+    display: flex;
+    justify-content: space-between;
+}
+.simcdopera_item{
+      flex: 0 1 23%;
+    text-align: center;
+}
+.simcdopera-img img{
+      width: 12vw;    border-radius: 0.5vw;
+    margin-bottom: 0.8vw;
+}
+.simcdopera-itemtitle{
+      font-size: 0.94vw;
+    font-weight: bold;
+    margin-bottom: 0.85vw;
+}
+.simcdopera-itemcon{
+      font-size: 0.84vw;    line-height: 1.5;
+}
+.simcdopera-itemcon p{
+  margin-bottom:0;
+}
+.simcdopera-itemcon a{
+  text-decoration:underline;
+}
+.simgridimg-outbox{
+      margin: 5vw 0 5.5vw;      text-align: center;
+}
+.simgridimg-title{
+    font-weight: bold;
+    font-size: 1.86vw;
+    margin-bottom: 0.8vw
+}
+.simgridimg-content{
+    font-size: .84vw;
+    margin-bottom: 1.7vw;
+    line-height: 1.5;
+}
+.simgridimg-content p{
+      margin-bottom: 0;
+}
+.simgridimg-btn{
+      display: inline-block;
+    margin-bottom: 2.7vw;
+    background: #07c160;
+    padding: 0.6vw 1.7vw;
+    border-radius: 2vw;
+    font-weight: 700;
+    line-height: 1.5;
+    font-size: .94vw;
+}
+.simgridimg_botbox {
+  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1.2vw;
+}
+.simgridimgitem-imgnofir{
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.simgridimg_conitem {
+      position: relative;
+    border-radius: 1vw;
+    overflow: hidden;
+
+}
+.simgridimgitem-title{
+      position: absolute;
+    width: 90%;
+    left: 5%;
+    text-align: center;
+    bottom: 1.1vw;font-size: .94vw;
+    font-weight: bold;
+}
+.simgridimgitem-1{
+      grid-column: span 3;
+    grid-row: span 2;
+}
+.simgridimgitem-2{
+  grid-column: span 5;
+    grid-row: span 1;
+}
+.simgridimgitem-3{
+  grid-column: span 4;
+    grid-row: span 1;
+}
+.simgridimgitem-4,.simgridimgitem-5,.simgridimgitem-6{
+  grid-column: span 3;
+    grid-row: span 1;
+}
+.simgridimgitem-img{
+      transition: .8s;
+}
+.simgridimg_conitem:hover .simgridimgitem-img {
+      transform: scale(1.2);
+}
+.simnavsw-box{
+      margin: 5vw 0 6.2vw;
+}
+.simnavsw-toptitle{
+      text-align: center;
+    font-size: 1.86vw;
+    font-weight: bold;
+    margin-bottom: 3vw;
+}
+.simnavsw-content{
+      display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.simnavsw-conleft{
+    width: 33.6%;    padding-top: 3vw;
+}
+.simnavsw-conright{
+    width: 52%;position: relative;
+}
+.simnavsw-conleft-itcon{
+  display:none;
+}
+.simnavsw-conleft-ittitle{
+  font-size: 1.04vw;
+    position: relative;    cursor: pointer;
+    padding: 1.2vw 3px;
+    border-bottom: 1px solid #D9D9D9;
+    font-weight: 600;
+}
+ .simnavsw-conleft-itcon-0{
+display:block;
+}
+.simnavsw-conleft-itcon{
+      font-size: 0.84vw;
+    line-height: 1.5;
+    padding: 1.2vw 3px;
+    border-bottom: 1px solid #D9D9D9;
+}
+.simnavsw-conleft-itcon p{
+  margin-bottom:0;
+}
+.simnavsw-img img{
+      border-radius: 1vw;
+}
+.simnavsw-conleft-ittitle.active:after{
+content: "";
+    position: absolute;
+    bottom: -1px;
+    background: #07C160;
+    width: 49%;
+    left: 0;
+    height: 2px;
+}
+.simvilist-box{
+      margin: 6.5vw 0 6vw;
+}
+.simvilist-toptitle{
+      text-align: center;
+    font-size: 1.86vw;
+    font-weight: bold;
+    margin-bottom: 2.6vw;
+}
+.simvilist-itemvideo{
+      position: relative;    border-radius: 1vw;
+    overflow: hidden;
+}
+.simvilist-itemvideo video{
+      vertical-align: top;
+}
+.vilist-itvi-overbox{
+  position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.playbtnv{
+  width: 3.9vw;    cursor: pointer;
+}
+.simvilist-title{
+      font-size: 0.94vw;
+    margin-top: 1.1vw;
+    font-weight: 600;
+}
+.simvilist-btn{
+      position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    text-decoration: underline;
+    font-size: 0.94vw;
+    font-weight: 600;
+    margin-top: 2.3vw;
+    display: inline-block;
+}
+.simspecs-outbox{
+      margin: 5vw 0 7vw;
+}
+.simspecs-title{
+      margin-bottom: 3.9vw;
+    font-size: 1.86vw;
+    text-align: center;
+    font-weight: bold;
+}
+.simspecs_elebox {
+      background: #fff;
+    border-radius: 1vw;
+}
+
+.simspecs_item{
+      display: flex;
+    justify-content: space-between;transition:.5s;
+padding: 1.1vw 13vw 1.1vw 19vw; position: relative;
+}
+.simspecs_item:hover{
+background:#E5FBEF;    box-shadow: 0 0 0 2px #E5FBEF;
+}
+.simspecs_item:after{
+content: "";
+    position: absolute;
+    left: 1.5%;
+    bottom: 0;
+    width: 97%;
+    height: 1px;
+    background: #E6E6E6;    z-index: -1;
+}
+.simspecs_item:last-child:after{
+  display:none;
+}
+.simspecs_item_title{
+      flex: 0 1 50%;    font-size: 0.94vw;font-weight:600;
+}
+.simspecsitem_subtitle{
+        flex: 0 1 50%;    font-size: 0.84vw;
+}
+.simblogs-outbox{
+  margin: 6.7vw 0;
+}
+.simblogs-title{
+      text-align: center;
+    font-size: 1.86vw;
+    font-weight: bold;
+    margin-bottom: 2.6vw;
+}
+.simblogs-img img{
+  border-radius: 1vw;
+}
+.simblogs_item_title{
+      font-size: 0.94vw;
+    margin: 1vw 0 0.5vw;
+    font-weight: 600;
+}
+.simblogsitem_con{
+  line-height: 1.5;
+    font-size: 0.83vw;
+}
+.simblogsitem_con p{
+  margin-bottom:0;
+}
+.simblogs-btn{
+  position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    text-decoration: underline;
+    font-size: .94vw;
+    font-weight: 600;
+    margin-top: 2.6vw;
+    display: inline-block;
+}
+.procomparison-itemspec .height_item {
+      display: flex;
+    align-items: center;
+}
+.procomparison_right .procomparison-itemspec .height_item {
+  justify-content: center;
+}
+.procomparison-secmb-title{
+  text-align: center;
+    font-size: 1.86vw;
+    font-weight: bold;
+    margin-bottom: 3.4vw;
+}
+.procomparison-conbox{
+      margin: 5.5vw 0 6vw;
+}
+.simappdown-box{
+      padding-top: 3.6vw;    overflow: hidden;    margin: 5vw 0;
+}
+.simappdown-toptitle{
+      text-align: center;
+    font-size: 1.86vw;
+    font-weight: bold;
+    margin-bottom: 1.1vw; 
+}
+.simappdown-topcon p{
+      text-align: center;
+    margin-bottom: 2.7vw;
+    line-height: 1.5;
+    font-size: .84vw;
+}
+.simappdown-content{
+      display: flex;
+    justify-content: space-between;
+    /* align-items: flex-end; */
+}
+.simappdown-conleft{
+      width: 42.7%;    margin-top: 1vw;
+}
+.simappdown-conright{
+      width: 50.8%;
+    padding-right: 4%;    position: relative;
+}
+.simappdown-conleftbox{
+      background: #FFFFFF4D;
+    border: 1px solid rgba(255,255,255,.53);
+    border-radius: 1vw;
+    padding: 0.5vw 1.5vw;
+}
+.transf-line{
+  transition:0.5s;    transform-origin: center;
+}
+.active .transf-line{
+      transform: rotate(90deg);
+}
+.simappdownconleft-ittitle {
+  font-size: 0.94vw;
+    position: relative;
+    cursor: pointer;
+    padding: 1.2vw 18px 1.2vw 2px;
+    border-bottom: 1px solid #00000014;
+    font-weight: 600;
+    transition: 0.5s;
+}
+.simappdownconleft-ittitle.active:after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    background: #07c160;
+    width: 49%;
+    left: 0;
+    height: 3px;
+}
+
+.simappdown-conleft-itcon{
+      font-size: 0.84vw;  display:none;
+    line-height: 1.5;
+    padding: 1.2vw 3px;
+    border-bottom: 1px solid #D9D9D9;
+}
+.simappdown-conleft-itcon p{
+  margin-bottom:0;
+}
+ .simappdown-conleft-itcon-1{
+display:block;
+}
+.simappdownconleft-ittitle.active{
+  font-size: 1.25vw;    font-weight: 700;
+}
+.simappdownconleft-ittitle>span{
+      position: absolute;
+    right: 1px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.simappdown-conleft-item:last-child .simappdownconleft-ittitle{
+  border-bottom:none;
+}
+.simappdown-conleft-item:last-child .simappdown-conleft-itcon{
+    border-bottom:none;    border-top: 1px solid #D9D9D9;
+}
+.simappdown-leftbtn{
+      display: inline-block;
+    font-size: 1vw;
+    font-weight: bold;
+    margin: 1.8vw 0 0 1.5vw;
+}
+.simappdown-leftbtn img{
+      vertical-align: middle;
+    margin-left: 1vw;
+}
+.simappdown-leftbtn:hover{
+      text-decoration: underline;
+}
+.procomparison-review{
+      margin-bottom: 0.8vw;
+}
+.simcompare-box .procomparison_left .procomparison-review{
+      opacity: 0;
+}
+.simcompare-box #procom-device{
+  opacity:0;
+}
+.simcompare-box .procomparison-container {
+    justify-content: space-between;
+}
+.simcompare-box .procomparison_left {
+    width: 23.5%;border-radius: 0 0 1vw 1vw;
+    overflow: hidden;
+}
+.simcompare-box .procomparison_right {
+    width: 74%; 
+}
+.simcompare-box .procomparison-proitemsubtitle~.procomparison-itemspec:after {
+    border-top: 1px solid #E6E6E6;
+    width: 96%;
+    left: 2%;
+    border-bottom: none;
+    bottom: auto;    z-index: -1;
+    top: 0;
+}
+.simcompare-box .procomparison-proimg img {
+    max-width: 60px;
+}
+.simcompare-box .procomparison-proimg {
+    padding: 1vw 0 4px;
+}
+.simcompare-box .procomparison-itemtitle {
+    margin-bottom: 0.7vw;
+}
+.simcompare-box .cpview-more{
+      border-radius: 2vw;
+    border: 1px solid;
+    padding: 0.5vw 1.5vw;
+    text-decoration: none;
+    display: inline-block;
+}
+.simcompare-box .procomparison-proitemsubtitle {
+    margin-bottom: 1.3vw;    text-decoration: none
+}
+.simcompare-box .procomparison_right .procomparison-probox{
+      background: #fff;
+    border-radius: 1vw;    overflow: hidden;    position: relative;
+    z-index: 0;
+}
+.simcompare-box .procomparison-proitemsubtitle~.procomparison-itemspec{
+  position:relative;transition:.5s;    background: transparent;
+}
+.simcompare-box .procomparison_left .procomparison-proitemsubtitle~.procomparison-itemspec {
+    text-align: center;
+}
+.simcompare-box .procomparison_left .procomparison-proitemsubtitle~.procomparison-itemspec {
+    background: transparent;
+}
+.simcompare-box .procomparison_left .procomparison-proitemsubtitle+.procomparison-itemspec:after{
+  opacity:0;
+}
+.simcompare-box .procomparison_left .procomparison-proitemsubtitle+.procomparison-itemspec{
+      border-radius: 1vw 1vw 0 0;
+}
+.simcompare-box .procomparison-itemspec .height_item {
+    justify-content: center;
+}
+.itemspecsim.active{
+      background: #e5fbef !important;
+    box-shadow: 0 0 0 2px #e5fbef;
+}
+.leftsim-navsspecs{
+      background: #fff;
+    border-radius: 1vw;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+}
+.exhpronav-item.active::after{
+  content: "";
+  position: absolute;
+  left: -1.3vw;
+  width: calc(100% + 2.6vw);
+  background: #07C160;
+  height: 3px;
+  bottom: -16px;
+}
+.product-outbox .page-content{
+  padding: 0;    margin-top: 1px;
+  background-color: #ffffff;
+}
+.template-product .product-outbox .page-width{
+  max-width: 100%;
+  padding: 0;
+}
+.grid-proimage{
+  padding: 2.2vw 3.8vw 3.6vw 16%;    width: 58%;
+}
+.grid-proinfo{
+  padding: 2.2vw 12.8% 3.6vw 2.4vw;  background-color: #F5F5F5;    width: 42%;
+}
+#HeaderWrapper{
+  box-shadow: 0 0px 1px 0 #c7c7c7;
+}
+.product-outbox .product-single__meta {
+  padding-left: 0;
+}
+.product-outbox .flickity-button{
+   transition: .5s;    color: #282828;
+   background: #fff;
+   box-shadow: 0 0 2px 0 #cbcdcc;
+}
+.product__thumb-item a:before{
+  border-radius: 3px;
+}
+.product__thumb-item a.is-active:before,.product__thumb-item a:focus:before {
+  box-shadow: inset 0 0 0 1px #17D170;
+}
+.product__thumbs[data-position=below] .product__thumb-arrow {
+  width: 21px;
+  background: #EBEBEB;
+}
+.product__main-photos image-element img{
+  border-radius: 1vw;
+}
+.product__thumbs[data-position=below] .product__thumb-arrow.product__thumb-arrow--next {
+  text-align: center;border-radius: 0 10px 10px 0;
+}
+.product__thumbs[data-position=below] .product__thumb-arrow.product__thumb-arrow--prev{
+  text-align: center;border-radius: 10px 0 0 10px;
+}
+@media only screen and (min-width: 590px){
+.product__thumbs--below .product__thumb-item {
+    margin-right: 15px;  max-width: 90px;
+}
+.product__thumbs--below {
+  margin-top: calc(20px + 0.5vw);
+}
+}
+.product-single__title {
+  font-size: 1.3vw;
+  margin-bottom: 0.8vw;
+}
+.product-block--tab .collapsible-content__inner h2{
+  font-size: calc(12px + 0.5vw);
+}
+.product-outbox .product-block--price{
+ display: none;
+}
+.product-block {
+  margin-bottom: 20px;
+}
+.product-block.product-block--header{
+  margin-bottom: 0;
+}
+.line-pro{
+  border-bottom:1px solid #DFDFDF;
+}
+.collapsibles-wrapper--border-bottom {
+    border-bottom-color: #DFDFDF;
+}
+.product-block.product-block-html{
+  margin: 17px 0 0;
+}
+.product__quantity{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: calc(1vw + 20px);
+}
+.product__quantity label {
+  display: block;
+  margin-bottom: 0;
+  letter-spacing: 0;
+  font-size: 14px;
+}
+.new-discount-container {
+  display: flex;
+  align-items: center;
+  background-color: #FBEADD;    border-radius: 4px;padding: 0;
+}
+.new-discount-text {
+  width: 40%;
+  font-size: 1.3vw;
+  line-height: 1.2;    display: flex;
+  font-weight: bold;
+  color: #E74300;
+  padding: 0.8vw 2.5vw 0.75vw 2.8vw;
+  border-right: 1px solid #ffffff;
+}
+.new-discount-main{
+  margin-right: 5px;
+}
+.new-discount-code{
+  font-size: 14px;
+}
+.new-discount-box{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
+  padding: 0 1vw;
+}
+.pay-and-logistics .pay>span,.pay-and-logistics .logistics>span{
+  font-size: 14px;
+  font-weight: bold;
+}
+/* .pay-and-logistics .pay+.logistics{
+  display: none;
+} */
+.pay-and-logistics {
+  background-color: transparent;
+  padding: 18px 0 0;
+}
+.toptag-span{
+  font-size: 12px;
+  background: #17D170;
+  display: inline-block;
+  padding: 6px 4px;
+  border-radius: 2px;
+  font-weight: bold;
+  margin-right: 12px;
+}
+.topdiscount-span{
+  font-size: 12px;
+  background: #FBEADD;
+  display: inline-block;
+  padding: 6px 4px;
+  border-radius: 2px;
+  font-weight: bold;
+  color: #E74300;
+}
+.toptag-pro{
+  margin-bottom: 7px;
+}
+.promain-shipinfo-title{
+  font-size: 14px;
+  font-weight: bold;
+}
+.promain-shipinfo-con{
+  display: flex;    max-width: 340px;
+  flex-wrap: wrap;
+  flex: 0 1 58%;
+  justify-content: space-between;
+}
+.proship-item{
+  display: flex;
+  align-items: center;
+  flex: 0 1 45%;    font-size: 12px;
+  justify-content: space-between;    margin-bottom: 12px;
+}
+.product-block-shipinfo{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;    margin: calc(1vw + 20px) 0;
+}
+.proship-item img{
+  max-width: 30px;
+  margin-right: 8px;
+}
+.promain-netsup-title{
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+.promain-netsup-con{
+  display: flex;
+  justify-content: space-between;
+}
+.promain-netsup-con>span{
+  max-width: 30%;border-radius: 4px
+}
+.promain-netsup-con .moresupport-ho{
+  display: flex;
+  background: #EBEBEB;
+  align-items: center;
+  padding: 4px;
+  font-weight: 500;
+}
+.product-block-desc,.product-block-textcg{
+  font-size: 14px;
+}
+.product-block-desc ul,.product-block-textcg ul {
+  margin: 0 0 10px 22px;
+}
+.product-block-desc ul li,.product-block-textcg ul li{
+  margin-bottom: 12px;
+}
+[data-type_header_accent_transform=true] .label, [data-type_header_accent_transform=true] label {
+  font-size: 14px;
+  letter-spacing: 0;
+}
+.product-block-desc button img,.product-block-textcg button img{
+  vertical-align: middle;
+  margin-right: 8px;
+  max-width: 14px;    padding-bottom: 3px;     max-height: 18px;
+}
+.pro-plusicon{
+  max-width: 13px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.is-open .pro-plusicon .transf-line{
+  transform: rotate(90deg);
+}
+.chat-prosim{
+  margin: calc(1vw + 20px) 0;
+  font-size: 14px;
+}
+.chat-prosim img{
+  vertical-align: middle;
+  margin-right: 5px;
+  max-width: 26px;
+}
+.chat-prosim span{
+  cursor: pointer;
+  color: #07C160;
+  font-weight: 600;
+  text-decoration: underline;
+}
+.product-outbox .js-qty__num {
+  border-radius: 2px;    width: 31%;    padding: 9px; border-color: #BFBFBF;
+}
+.product-outbox .js-qty__adjust {
+  border-radius: 2px;
+  border: 1px solid #BFBFBF;
+  padding: 5px 13px;   
+}
+.product-outbox  .js-qty__wrapper {
+  max-width: 135px;
+}
+.prodis-timedown{
+  font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+.variant-wrapper{
+  margin-top: 25px;
+}
+.variant-plans-wrapper .variant-input-wrap{
+  display: flex;
+  flex-wrap: wrap;    justify-content: space-between;
+}
+.variant-plans-wrapper  .variant-input-wrap label{
+  border-radius: 4px;
+  margin: 0;
+  box-shadow: 0 0 0 1px #CFCFCF;font-weight: 500;
+  padding: 17px 12px;    color: #282828;line-height: 1.2;
+  position: relative;
+  height: 100%;
+}
+
+
+.variant-plans-wrapper .variant-input-wrap input[type=radio]:checked + label{
+  box-shadow: 0 0 0 2px #07C160;
+    background: #E5FBEF;    color: #282828;    font-weight: bold;
+}
+.variant-plans-wrapper .variant-input-wrap>.variant-input{
+  flex: 0 1 calc((100% - 11px)/2);
+  margin-bottom: 11px;
+}
+.pro-variant-box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pro-variant-img{
+  max-width: 50px;
+}
+.pro-variant-text{
+  flex: 0 1 calc(100% - 68px);
+}
+.pro-variant-title{
+  font-size: calc(12px + 0.3vw);
+  margin-bottom: 3px;
+}
+.pro-variant-subtitle{
+  font-size: 14px;
+  margin-right: 10px;
+  margin-bottom: 7px;
+}
+.pro-variant-price{
+  font-size: calc(12px + 0.2vw);
+}
+.pv-nowprice{
+  margin-right: 5px;
+}
+.pv-oldprice{
+  text-decoration: line-through;color: #B1B1B1;font-weight: 500 !important;
+}
+.pro-variant-tag{
+  position: absolute;
+  top: 0;
+  left: 17px;
+  padding: 3px 6px;
+  border-radius: 0 0 3px 3px;
+  background: #07C160;
+  font-weight: bold;
+  font-size: 12px;
+}
+.pro-stickbar .bthho {
+  padding: 0.75vw 3vw;
+  font-weight: bold;margin-top: 0;
+}
+.pro-stickbar{
+  position: fixed;
+    z-index: 999;
+    background: #FFF;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 15%;
+}
+
+.prostickbar-leftsubtitle{
+  color: #ACACAC;
+  font-size: calc(12px + .2vw);
+  margin-top: 3px;
+}
+.bstick-price{
+  margin-right: 18px;text-align: center;
+}
+.pro-stickbar .product-single__form{
+  display: flex;
+  align-items: center;
+}
+.pro-stickbar .payment-buttons{
+  display: flex;
+}
+.pro-stickbar .add-to-cart.add-to-cartfeapro{
+  margin-right: 18px;
+}
+.bstick-nowprice{
+  font-size: calc(12px + 0.3vw);    letter-spacing: 0.03em;
+  font-weight: 600;
+}
+.bstick-save{
+  color: #ACACAC;
+  font-size: calc(12px + 0.2vw);
+}
+.template-product .product-outbox.product-simoutbox .page-width {
+  max-width: calc(66.7% + 80px);
+  padding: 0 40px;
+}
+.product-simoutbox .grid-proimage {
+  padding: 2.2vw 0 2.5vw;
+  width: 35%;
+}
+.product-simoutbox.product-outbox .page-content {
+  background-color: inherit;
+}
+.product-simoutbox .grid-proinfo{
+  padding: 2.2vw 0 2.5vw 33px;
+  width: 65%;
+}
+.product-simoutbox.product-outbox .flickity-button {
+  display: none;
+}
+.product-simoutbox .product__thumbs--below .product__thumbs--scroller {
+  margin: 0 25px;
+}
+.sim-shipinfobox{
+  display: flex;
+  justify-content: space-around;
+  font-size: 12px;    line-height: 1.5;
+  text-align: center;
+  margin-top: 24px;
+}
+.sim-shipinfo-item>img{
+  margin-bottom: 6px;
+}
+.prosimcard-desnav{
+  display: flex;
+  align-items: center;
+  background: #E8E8E8;
+  border-radius: 3vw;    margin-bottom: 20px;
+}
+.prosim-rightreview{
+  margin-left: auto;
+}
+.backgwhite-box{
+  padding: 1px calc(12px + 1vw) calc(13px + .5vw);
+    background: #fff;
+    border-radius: 1vw;
+}
+.delivery-simbox{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: bold;
+}
+.delivery-simbox img{
+  max-height: 30px;
+}
+.prosimcard-desitem {
+  border-radius: 20px;
+  font-size: calc(12px + 0.2vw);
+  border: 1px solid transparent;
+  padding: 7.5px 18px;
+  background: transparent;
+  margin: 0 calc(7px + 0.3vw);
+  transition: .3s;    cursor: pointer;
+}
+.prosimcard-desitem-1{
+  margin-left: 0;
+}
+.prosimcard-desitem.active {
+  border: 1px solid #6A6A6A;
+  background: #fff;
+}
+.prosimcard-desconitem ul{
+  margin: 0 0 20px 20px;
+  font-size: 14px;
+  column-count: 2;
+  gap: 10%; 
+}
+.prosimcard-desconitem ul>li{
+  margin-bottom: 12px;
+}
+.prosimcard-desconitem .promain-netsup-con>span {
+  max-width: 29%;    line-height: 0;
+}
+.prosimcard-desconitem .promain-netsup-con {
+  margin-top: calc(4px + 0.3vw);
+}
+.prosimcard-desconitem{
+  font-size: 14px;line-height: 1.5;
+  display: none;padding-right: 3%;
+}
+.prosimcard-desconitem-1{
+  display: block;padding-right: 10%;
+}
+.prosimcard-desconitem-3 ul{
+  gap: 0;
+}
+.product-block-discounttime {
+  display: flex;    margin-bottom: 18px;
+  align-items: center;
+}
+.product-block-discounttime .prodis-timedown {
+    margin-bottom: 0;    margin-right: 12px;  width: 288px;
+}
+.product-block-discounttime .new-discount-text {
+  width: 34%;
+  font-size: calc(12px + 0.4vw);
+  padding: 12px 24px;
+}
+.product-block-discounttime .new-discount-box {
+  width: 66%;
+  padding: 0 8px;
+}
+.product-block-discounttime .new-discount-code {
+  margin-right: 13px;
+}
+.product-block-simquabuy{
+  display: flex;
+    justify-content: space-between;
+    align-items: center;    margin-top: calc(13px + 1vw);
+}
+.product-block-simquabuy .payment-buttons{
+  display: flex;
+  align-items: center;    justify-content: space-between;
+}
+.product-block-simquabuy .payment-buttons>*{
+flex:0 1 calc((100% - 11px)/2) ;   font-size: calc(12px + 0.3vw);
+}
+.product-simoutbox .product__quantity label {
+  margin-right: 18px;
+}
+.product-block-simquabuy [data-store-availability-holder]{
+  display: none;
+}
+
+.product-block-simquabuy .dsim-payment-button{
+  padding: 0.74vw 2vw;
+  margin-top: 0;
+  text-align: center;
+  font-weight: bold;    min-height: 48px !important;
+}
+.product-block-simquabuy .payment-buttons .add-to-cart{
+  min-height: 48px;
+  border: 2px solid;
+}
+.product-simoutbox .product__quantity+.product-block{
+  min-width: 410px;    margin-bottom: 0;
+}
+.product-block-simquabuy .product__quantity {
+  margin-bottom: 0;
+}
+.product-outbox.product-simoutbox .js-qty__adjust ,.product-outbox.product-simoutbox .js-qty__num{
+  background: #fff;
+}
+.product-simoutbox .payment-buttons .add-to-cart--secondary,.pro-stickbar .add-to-cart.add-to-cartfeapro {
+  background-color: #fff !important;
+}
+.backgwhite-box .variant-input-wrap label {
+  box-shadow: 0 0 0 1px #CFCFCF;
+  border-radius: 10px;
+  font-weight: 500;    color: inherit;
+}
+.backgwhite-box .variant-input-wrap input[type=radio]:checked + label {
+  box-shadow: 0 0 0 1px #07C160;
+  color: #282828;
+  background: #E5FBEF;
+  font-weight: bold;
+}
+.variant-other-wrapper{
+  display: flex;
+  align-items: center;    flex-wrap: wrap;
+}
+.variant-other-wrapper label.variant__label{
+  margin-bottom: 0;
+    margin-right: 18px;
+}
+.backgwhite-box .variant-plans-wrapper .variant-input-wrap label {
+  padding: 33px 15px 0;
+}
+.backgwhite-box  .variant-plans-wrapper .variant-input-wrap>.variant-input {
+  flex: 0 1 calc((100% - 20px - 1vw)/3);
+  margin-bottom: calc(5px + 0.5vw);
+}
+.backgwhite-box .pro-variant-title {
+  font-size: calc(12px + .2vw);
+  margin-bottom: 5px;    font-weight: bold;
+}
+.pro-variant-item{
+  font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;line-height: 1.8;
+  border-bottom: 1px solid #EAEAEA;
+}
+.backgwhite-box .variant-input-wrap input[type=radio]:checked+label .pro-variant-item{border-bottom: 1px solid #B8F0D2;}
+.pro-vaprice-box{
+  border-bottom: 1px solid transparent !important;
+}
+.pro-variant-box02{
+  width: 100%;
+}
+.pro-variant-item>span{
+ font-weight: 600;
+}
+.pro-variant-item>span:first-child{
+  color: #636363; font-weight: 500;
+}
+.backgwhite-box .pro-variant-price {
+  font-size: 12px;
+}
+.backgwhite-box span.pv-nowprice{
+  font-weight: 600;    margin-right: 0;
+}
+.backgwhite-box span.pv-oldprice{
+  font-weight: 500;    margin-right: 8px;
+}
+.pro-variant-tag.pro-variant-yellowtag{
+background-color: #FFDE3B;
+}
+.prova-greenponter{
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  right: 8px;
+  top: 7px;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 2px #CFCFCF;
+}
+.backgwhite-box .variant-input-wrap input[type=radio]:checked+label .prova-greenponter{
+  box-shadow: 0 0 0 2px #07C160;
+  background: #07C160;
+}
+.product-outbox .planlabel-popunbox .product-block--price{
+  display: block;  margin-bottom: 0;
+}
+.planlabel-popunbox{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: calc(20px + 0.5vw) 0 20px;
+}
+.planlabel-title{
+  font-size: calc(12px + 0.3vw);
+}
+.clk-popun-btn{
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background: #282828;
+  color: #fff;
+  position: relative;
+  top: -3px;
+  border-radius: 50%;
+  font-size: 12px;
+  text-align: center;
+  padding-top: 1px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+.clkpopun_fixitemimg{
+  line-height: 1.5;
+}
+.clkpopun_fixitemimg p{
+  margin-bottom: 0;    font-size: calc(12px + 0.2vw);
+}
+.backgwhite-box .clkpopun_fixitem{
+  max-width: 615px;
+}
+.planlabel-popunbox .product__price{
+  font-size: calc(12px + 0.6vw);
+  font-weight: 600;
+}
+.planlabel-popunbox .product__price--compare {
+  color: #636363;
+  font-weight: 500;    padding-right: 7px;
+  font-size: calc(12px + 0.2vw);
+}
+.prostickbar-lefttitle{
+  font-size: calc(12px + .3vw);
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+@media (min-width:551px){
+.prodvsfaqs-bright .prodvsfaqs-navitem{
+  display:none;
+}
+}
+/* product media >1920 */
+
+@media (min-width:1921px){
+  .grid-proinfo {
+    padding-right:18%;
+}
+.product-simoutbox .product__quantity+.product-block {
+  min-width: 20vw;
+}
+.product-block-simquabuy .payment-buttons .add-to-cart {
+  padding: 0.65vw 1vw;
+  border-radius: 2vw;
+}
+.simcoverage_conitem ,.simadvuse-itemcon{
+  font-size: 0.74vw;
+}
+.product__thumbs--below {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.new-discount-text {
+  font-size: calc(16px + 0.5vw);
+  padding: 0.8vw calc(10px + 1.5vw) 0.75vw calc(16px + 1.5vw);
+}
+
+
+}
+
+/* product media <1550 */
+@media (max-width:1550px){
+.grid-proimage {
+  padding: 2.2vw 3.8vw 3.6vw calc((100% - 1180px)/2);
+}
+.grid-proinfo {
+  padding: 2.2vw calc((100% - 1220px)/2) 3.6vw 2.4vw;
+}
+.dvsbanner-text {
+  position: absolute;
+  left: calc((100% - 1180px)/2);
+}
+.prodvsfaqs-navitem {
+  padding: 1.94vw 1.3vw 1.94vw 0.7vw;  font-size: 1.1vw;
+}
+.pro-stickbar {
+  padding: 15px calc((100% - 1180px)/2);
+}
+.prodvsimgswitch-box .prodvsimgswitchbtn,.cus-recommend-colbox .multicabtn{
+  width: 2.8vw;
+}
+.pro-stickbar .bthho {
+  line-height: 1.5;
+}
+.template-product .product-outbox.product-simoutbox>.page-content>.page-width{
+  max-width: 1260px;
+  padding: 0 40px 0 55px;
+}
+.prodvsimgswitch-bottom-item .prodvsimgswitch-text {
+  width: 23vw;
+}
+.prodvsimgswitch-content,.prodvssimsu-content {
+font-size: 1vw;
+}
+.dvsbanner_item_subtitle {
+  font-size: 1.1vw;
+}
+.dvsbanner_item_title {
+  font-size: 1.2vw;
+}
+.dvsbanner-title {
+  font-size: 2vw;
+}
+.procomparison-itemspec {
+  font-size: 1vw;
+}
+.procomparison_left .procomparison-proitemsubtitle~.procomparison-itemspec {
+  font-size: 1.1vw;
+}
+.prodvsfaqs-britqacon {
+  font-size: 1vw;
+}
+.prodvsfaqs-britqatitle {
+  font-size: 1.1vw;
+}
+.prodvsfaqs-bleft {
+  flex: 0 1 15vw;
+}
+.prodvsfaqs-bright {
+  flex: 0 1 calc(100% - 16.6vw);
+}
+.simlogoover_item_title,.simquick-title,.simnavsw-conleft-ittitle {
+  font-size: 1.2vw;
+}
+.simlogooveritem_subtitle {
+  font-size: 1vw;
+}
+.simnetsup-outbox {
+  width: 66%;
+}
+.simcoverage-content {
+  padding: 0 14vw 1.8vw;
+  font-size: 1vw;
+}
+.simcoverage_nav_item,.simcoverage-btn,.simgridimg-btn,.simgridimgitem-title,.simvilist-title ,.simspecs_item_title{
+  font-size: 1.1vw;
+}
+.simadvuse-itemtitle {
+  font-size: 1.2vw;
+  margin-bottom: 1vw;
+}
+.simadvuse_item img {
+  width: 3.2vw;
+  margin-bottom: 1vw;
+}
+.simcdopera-itemtitle {
+  font-size: 1.1vw;
+  margin-bottom: 1vw;
+}
+.simcdopera-img img {
+  width: 13vw;
+  border-radius: 0.8vw;
+  margin-bottom: 1vw;
+}
+.simcdopera-itemcon ,.simgridimg-content,.prodvssimple-ittitle,.simnavsw-conleft-itcon,.simspecsitem_subtitle,.simappdown-conleft-itcon,.simblogsitem_con,.moresupport-ho{
+  font-size: 1vw;
+}
+.simgridimg-title {
+  font-size: 2.3vw;
+  margin-bottom: 1.2vw;
+}
+.simvilist-btn {
+  font-size: 1.1vw;
+  margin-top: 3vw;
+}
+.simappdown-topcon p {
+  margin-bottom: 3.4vw;
+  font-size: 1vw;
+}
+.simappdownconleft-ittitle {
+  font-size: 1.1vw;
+}
+.simappdownconleft-ittitle.active {
+  font-size: 1.4vw;
+}
+.leftsim-navsspecs .procomparison-itemspec {
+  position: relative;
+  font-size: 1.1vw;
+  font-weight: 700;
+  transition: .5s;
+}
+.simblogs_item_title {
+  font-size: 1.1vw;
+  margin: 1.3vw 0 0.7vw;
+}
+.simblogs-btn {
+  font-size: 1.1vw;
+  margin-top: 3.2vw;
+}
+.cus-recommend-colbox .indexmulticate-toptitle,.simblogs-title,.prodvsfaqs-title,.procomparison-secmb-title,.simappdown-toptitle,.simspecs-title,.simvilist-toptitle,.simnavsw-toptitle,
+.simcdopera-title,.prodvssimple-title,.simadvuse-title,.simcoverage-title,.simquick-toptitle,.simlogoover-title{
+  font-size: 2.3vw;
+}
+.prodvssimsu-title,.prodvsdownload-title,.provideoho-topcon .indexvideoho-title,.prodvssimple-title,#procom-device,.prodvsfaqs-title,.cus-recommend-colbox .indexmulticate-toptitle{
+  font-size: 2.3vw;
+}
+.prodvsimgswitch-botcontent {
+  font-size: 13px;
+}
+.prodvsimgswitch-title{
+  font-size: 2vw;
+}
+.product-block-simquabuy .dsim-payment-button {
+  padding: 0.95vw 2vw;
+}
+.simappdown-conleft {
+  margin-top: 2vw;
+}
+.simappdown-leftbtn {
+  margin: 2.3vw 0 0 1.5vw;
+}
+.simappdown-conright {
+  padding-right: 9%;
+}
+
+}
+
+
+/* product media <1400 */
+@media (max-width: 1400px){
+  .prodvsimgswitch-box .swiper-button-next {
+    right: -3.5vw;
+  }
+  .prodvsimgswitch-box .swiper-button-prev {
+    left: -3.5vw;
+  }
+
+
+
+}
+
+/* product media <1280 */
+@media (max-width: 1280px){
+.prodvsimgswitch-outbox{
+padding: 0 2vw;
+}
+.dvsbanner-text {
+  width: 28vw;
+}
+.dvsbanner_item_title,.indexmoreabout-content,.indexvideoho-content {
+  font-size: 1.3vw;
+}
+.dvsbanner_item_subtitle ,.prodvsimgswitch-content,.prodvssimsu-content,.procomparison-itemspec{
+  font-size: 1.2vw;
+}
+.prodvsimgswitch-bottom-item .prodvsimgswitch-text {
+  width: 23vw;
+}
+.prodvssimple-ittitle {
+  font-size: 1.2vw;
+}
+.grid-proimage {
+  padding: 3vw 4vw 4vw;    width: 52%;
+}
+.grid-proinfo {
+  padding: 3vw 3vw 4vw;    width: 48%;
+}
+.product-single__title {
+  font-size: 2vw;
+  margin-bottom: 1.3vw;
+}
+.pro-stickbar {
+  padding: 15px 40px;
+}
+.dvsbanner-text {
+  left: 40px;
+}
+.prodvssimsu-title {
+  font-size: 2.3vw;
+  margin-bottom: 1.3vw;
+}
+
+.procomparison_left .procomparison-proitemsubtitle~.procomparison-itemspec {
+  font-size: 1.4vw;
+}
+.procomparison-itemspec {
+  padding: 1.6vw 1.7vw;
+}
+.prodvsfaqs-bleft {
+  flex: 0 1 19vw;
+}
+.prodvsfaqs-navitem {
+  padding: 1.96vw 1.5vw 1.96vw 1vw;font-size: 1.3vw;
+}
+.prodvsfaqs-bleft {
+  flex: 0 1 19vw;
+}
+.prodvsfaqs-bright {
+  flex: 0 1 calc(100% - 21vw);
+}
+.prodvsfaqs-britqatitle {
+  font-size: 1.25vw;
+}
+.prodvsfaqs-britqacon {
+  font-size: 1.2vw;
+}
+.new-discount-text {
+  font-size: 1.8vw;
+}
+.prodvsdownload-text-dw {
+  font-size: 1.3vw;    margin-bottom: 1.5vw;
+}
+.prodownload_icon01 svg {
+  width: 12vw;
+}
+.moresupport-ho {
+  font-size: 15px;
+}
+.simquick-box {
+  margin: 2vw 2vw 5.5vw;
+}
+.simnavsw-conright {
+  width: 53%;
+  margin-right: 3%;
+}
+.simspecs_item {
+  padding: 1.4vw 13vw 1.4vw 19vw;
+}
+.simappdown-box>.contain-index{
+  max-width: 92%;
+}
+.simappdown-leftbtn {
+  font-size: 1.3vw;
+}
+.simappdown-conright {
+  width: 47%;
+  padding-right: 6%;
+}
+.simappdown-conleft {
+  width: 44%;
+  margin-top: 2vw;
+}
+.simquick-box {
+  margin: 2vw 3vw 5.5vw;
+}
+.product-block-simquabuy .dsim-payment-button {
+  padding: 1.23vw 2vw;border-radius: 3vw;
+}
+.prosimcard-desconitem .promain-netsup-con>span {
+  max-width: 41%;
+}
+.product-simoutbox .promain-netsup-con span:nth-child(3){
+display: none;
+}
+.product-block-simquabuy {
+  flex-wrap: wrap;
+}
+.product-block-simquabuy>*{
+  margin-top: 1vw;
+}
+.simlogooveritem_subtitle,.simcoverage-content {
+  font-size: 1.2vw;
+}
+.simlogoover_item_title, .simquick-title, .simnavsw-conleft-ittitle {
+  font-size: 1.4vw;
+}
+.cus-recommend-colbox .indexmulticate-toptitle, .simblogs-title, .prodvsfaqs-title, .procomparison-secmb-title, .simappdown-toptitle, .simspecs-title, .simvilist-toptitle, .simnavsw-toptitle, .simcdopera-title, .prodvssimple-title, .simadvuse-title, .simcoverage-title, .simquick-toptitle, .simlogoover-title, .prodvssimsu-title, .prodvsdownload-title, .provideoho-topcon .indexvideoho-title, #procom-device {
+  font-size: 2.6vw;
+}
+.simcoverage_nav_item, .simcoverage-btn, .simgridimg-btn, .simgridimgitem-title, .simvilist-title, .simspecs_item_title {
+  font-size: 1.3vw;
+}
+.simadvuse-itemtitle {
+  font-size: 1.4vw;
+}
+.simadvuse_item img {
+  width: 4.5vw;
+}
+.simcdopera-itemcon, .simgridimg-content, .prodvssimple-ittitle, .simnavsw-conleft-itcon, .simspecsitem_subtitle, .simappdown-conleft-itcon, .simblogsitem_con, .moresupport-ho {
+  font-size: 1.2vw;
+}
+.simcdopera-itemtitle {
+  font-size: 1.3vw;
+}
+.simcdopera-img img {
+  width: 16vw;
+}
+.simvilist-btn {
+  font-size: 1.3vw;
+}
+.simappdownconleft-ittitle {
+  font-size: 1.3vw;
+}
+.simappdownconleft-ittitle.active {
+  font-size: 1.6vw;
+}
+.simappdown-topcon p {
+  font-size: 1.2vw;
+}
+.leftsim-navsspecs .procomparison-itemspec ,.simblogs-btn{
+  font-size: 1.3vw;
+}
+.simblogs_item_title {
+  font-size: 1.3vw;
+  margin: 2vw 0 1.5vw;
+}
+
+
+}
+
+
+/* product media <993 */
+@media (max-width: 993px){
+.product-single__sticky {
+  position: relative;
+  top: 0;
+}
+.grid-proimage {
+  width: 100%;padding: 5vw 40px;
+}
+.grid-proinfo {
+  padding: 5vw 40px;
+  width: 100%;
+}
+.product-single__title {
+  font-size: 3vw;
+  margin-bottom: 1.8vw;
+}
+.new-discount-text {
+  font-size: 3vw;
+}
+.dvsbanner-text {
+  width: 37vw;
+}
+.dvsbanner-title {
+  font-size: 2.8vw;
+}
+.dvsbanner_item>span {
+  flex: 0 1 7vw;
+  margin-right: 1.2vw;
+}
+.dvsbanner_item_title, .indexmoreabout-content, .indexvideoho-content {
+  font-size: 1.6vw;
+}
+.dvsbanner_item_subtitle, .prodvsimgswitch-content, .prodvssimsu-content, .procomparison-itemspec {
+  font-size: 1.5vw;
+}
+.prodestextimg-wp {
+  flex-wrap: wrap;
+}
+.prodestextimg-img {
+  flex: 0 1 100%;
+}
+.prodestextimg-text {
+  flex: 0 1 100%;  padding: 5vw;
+  margin-top: 2vw;
+}
+.prodestextimg-wp {
+  margin-bottom: 4vw;
+}
+.prodestextimg-right .prodestextimg-img {
+  order: 0;
+}
+.prodvsimgswitch-box .prodvsimgswitchbtn, .cus-recommend-colbox .multicabtn {
+  width: 4vw;
+}
+.prodvsimgswitch-box .swiper-button-next {
+  right: -5vw;
+}
+.prodvsimgswitch-box .swiper-button-prev {
+  left: -5vw;
+}
+.prodvsimgswitch-nav-item {
+  font-size: 13px;
+  padding: 5px 20px;
+}
+.prodvssimple-ittitle {
+  font-size: 1.5vw;
+}
+.prodvsdownload-title, .provideoho-topcon .indexvideoho-title, .prodvssimple-title, #procom-device, .prodvsfaqs-title, .cus-recommend-colbox .indexmulticate-toptitle {
+  font-size: 2.6vw;
+}
+.procomparison-itemspec {
+  font-size: 1.6vw;
+}
+.procomparison_left .procomparison-proitemsubtitle~.procomparison-itemspec {
+  font-size: 1.8vw;
+}
+.prodvsfaqs-bleft {
+  flex: 0 1 26%;
+}
+.prodvsfaqs-navitem {
+  font-size: 1.7vw;     padding: 2.1vw 2vw 2.1vw 1vw;
+}
+.prodvsfaqs-bright {
+  flex: 0 1 72%;
+}
+.prodvsfaqs-britqatitle {
+  font-size: 1.65vw;   
+}
+.prodvsfaqs-britqacon {
+  font-size: 1.6vw;
+}
+.pro-stickbar .bthho {
+  padding: 1vw 3vw;
+}
+.prostickbar-lefttext{
+display: none;
+}
+.product-simoutbox .grid-proinfo {
+  padding: 4vw 0;
+  width: 100%;
+}
+.product-simoutbox .grid-proimage {
+  padding: 4vw 0 2vw;
+  width: 100%;
+}
+.product-block-simquabuy .dsim-payment-button {
+  padding: 1.9vw 2vw;
+}
+.simlogoover_item_title, .simquick-title, .simnavsw-conleft-ittitle {
+  font-size: 1.6vw;
+}
+.simlogooveritem_subtitle, .simcoverage-content {
+  font-size: 1.4vw;
+}
+.simlogoover_elebox {
+  width: 90%;
+  left: 5%;
+}
+.simnetsup-outbox {
+  width: 80%;
+}
+.simcoverage_nav_item, .simcoverage-btn, .simgridimg-btn, .simgridimgitem-title, .simvilist-title, .simspecs_item_title {
+  font-size: 1.5vw;
+}
+.simcoverage-content {
+  padding: 0 5vw 3vw;
+}
+.simcoverage_navs {
+  margin-bottom: 3vw;
+}
+.simcoverage_nav_item, .simcoverage-btn, .simgridimg-btn, .simgridimgitem-title, .simvilist-title, .simspecs_item_title {
+  font-size: 1.7vw;
+}
+.simadvuse-itemtitle {
+  font-size: 1.6vw;
+}
+.simcdopera-itemcon, .simgridimg-content, .prodvssimple-ittitle, .simnavsw-conleft-itcon, .simspecsitem_subtitle, .simappdown-conleft-itcon, .simblogsitem_con, .moresupport-ho {
+  font-size: 1.4vw;
+}
+.simvilist-btn, .simappdownconleft-ittitle {
+  font-size: 1.7vw;
+}
+.simappdown-topcon p {
+  font-size: 1.4vw;
+}
+.simappdownconleft-ittitle.active {
+  font-size: 1.8vw;
+}
+.simappdown-conright {
+  width: 50%;
+  padding-right: 0;
+}
+.simappdown-leftbtn {
+  font-size: 1.6vw;
+  margin: 3vw 0 0 1.5vw;
+}
+.leftsim-navsspecs .procomparison-itemspec, .simblogs-btn {
+  font-size: 1.6vw;
+}
+.simblogs_item_title {
+  font-size: 1.6vw;
+}
+
+
+
+}
+
+
+
+/* product media <768 */
+@media (max-width: 768px){
+  .pro-stickbar .bthho {
+    font-size: 2vw;
+    padding: 1.2vw 5vw;
+    border-radius: 4vw;
+}
+.bstick-nowprice {
+  font-size: 2vw;
+}
+.bstick-save {
+  color: #acacac;
+  font-size: calc(12px + .3vw);
+}
+.new-discount-text {
+  padding: 1.2vw 2.5vw 1.1vw 2.8vw;
+}
+.dvsbanner-text {
+  top: 6%;
+  width: 60%;
+  transform: translateY(0%);
+}
+.dvsbanner-title {
+  font-size: 4vw;margin-bottom: 2.8vw;
+}
+.dvsbanner_item>span {
+  flex: 0 1 9vw;
+  margin-right: 2vw;
+}
+.dvsbanner_item {
+  margin-bottom: 2.3vw;
+}
+.prodestextimg-text {
+  margin-top: 0;
+}
+.indexmoreabout-title,.prodvssimsu-title,.prodvsimgswitch-title {
+  font-size: 3vw;
+}
+.dvsbanner_item_title, .indexmoreabout-content, .indexvideoho-content {
+  font-size: 1.8vw;
+}
+.dvsbanner_item_subtitle, .prodvsimgswitch-content, .prodvssimsu-content, .procomparison-itemspec {
+  font-size: 1.8vw;
+}
+.prodvsdownload-title, .provideoho-topcon .indexvideoho-title, .prodvssimple-title, #procom-device, .prodvsfaqs-title, .cus-recommend-colbox .indexmulticate-toptitle {
+  font-size: 3vw;
+}
+.dvsbanner_item_title{
+  font-size: 2.4vw;    margin-bottom: 0.8vw;
+}
+.dvsbanner_item_subtitle{
+  font-size: 2vw;
+}
+.prodvsimgswitch-bottom-item .prodvsimgswitch-text {
+  width: 36vw;
+}
+.prodvssimsu-content {
+  margin-bottom: 3vw;
+}
+.provideoho-topcon .indexvideoho-text {
+  width: 80%;
+}
+.prodvsfaqs-navitem {
+  font-size: 2vw;
+}
+.prodvsfaqs-bleft {
+  flex: 0 1 31%;
+}
+.prodvsfaqs-bright {
+  flex: 0 1 67%;
+}
+.prodvsfaqs-britqatitle {
+  font-size: 1.8vw;
+}
+.prodvsfaqs-britqacon {
+  font-size: 1.7vw;
+}
+.product-block-simquabuy .dsim-payment-button {
+  padding: 2vw;
+}
+.exhpronav-item, .exhpronav-btn {
+  margin: 0 2vw;
+}
+.simlogoover-title{
+  font-size: 4vw;
+  width: 60%;
+  left: 20%;
+  top: 5%;
+}
+.simlogoover_item_title, .simquick-title, .simnavsw-conleft-ittitle {
+  font-size: 2vw;
+}
+.simlogooveritem_subtitle, .simcoverage-content {
+  font-size: 1.7vw;
+}
+.simlogoover_elebox {
+  bottom: 5vw;
+}
+.procomparison-conbox .swiper>.swiper-scrollbar,.simquick-box .swiper>.swiper-scrollbar,.simadvuse-outbox .swiper>.swiper-scrollbar,.simgridimg_botmbbox .swiper>.swiper-scrollbar,.simvilist-conitem .swiper>.swiper-scrollbar {
+  left: 9%;
+  height: 4px;
+  width:78%;
+  border-radius: 5px;
+  overflow: hidden;
+  background: #D9D9D9;
+}
+.procomparison-conbox .swiper .swiper-scrollbar-drag,.simquick-box  .swiper .swiper-scrollbar-drag,.simadvuse-outbox .swiper .swiper-scrollbar-drag,.simgridimg_botmbbox .swiper .swiper-scrollbar-drag,.simvilist-conitem .swiper .swiper-scrollbar-drag{
+  background: #07C160;
+}
+.procomparison-conbox .swiper,.simquick-box  .swiper,.simadvuse-outbox .swiper,.simgridimg_botmbbox .swiper,.simvilist-conitem .swiper{
+    padding-bottom: 35px;
+}
+.cus-recommend-colbox .indexmulticate-toptitle, .simblogs-title, .prodvsfaqs-title, .procomparison-secmb-title, .simappdown-toptitle, .simspecs-title, .simvilist-toptitle, .simnavsw-toptitle, .simcdopera-title, .prodvssimple-title, .simadvuse-title, .simcoverage-title, .simquick-toptitle, .simlogoover-title, .prodvssimsu-title, .prodvsdownload-title, .provideoho-topcon .indexvideoho-title, #procom-device {
+  font-size: 3.6vw;
+}
+.simlogoover-outbox {
+  margin: 4vw 0 6vw;
+}
+.simquick-toptitle {
+  margin-bottom: 3vw;
+}
+.simcoverage_nav_item, .simcoverage-btn, .simgridimg-btn, .simgridimgitem-title, .simvilist-title, .simspecs_item_title {
+  font-size: 2.2vw;
+}
+.simcoverage-btn {
+  margin-top: 4vw;
+  padding: 1vw 3vw;
+  border-radius: 3vw;
+}
+.simcoverage-outbox {
+  margin: 7vw 0;
+}
+.simnetsup-outbox {
+  width: 84%;
+}
+.simadvuse_item {
+  margin-bottom: 0;
+  border-radius: 1.6vw;
+  padding: 3vw 3vw 3vw 3vw;
+}
+.simadvuse_item img {
+  width: 6vw;
+  margin-bottom: 2vw;
+}
+.simadvuse-itemtitle {
+  font-size: 2.2vw;
+  margin-bottom: 2vw;
+}
+.simcdopera-itemcon, .simgridimg-content, .prodvssimple-ittitle, .simnavsw-conleft-itcon, .simspecsitem_subtitle, .simappdown-conleft-itcon, .simblogsitem_con, .moresupport-ho {
+  font-size: 1.7vw;
+}
+.prodvssimple-outbox {
+  margin: 8vw 0;
+}
+.simcdopera_elebox {
+  padding: 0;
+}
+.simcdopera_item {
+  flex: 0 1 28%;
+}
+.simcdopera-img img {
+  width: 22vw;    margin-bottom: 2vw;
+}
+.simcdopera-itemtitle {
+  font-size: 1.9vw;
+  margin-bottom: 2vw;
+}
+.simgridimg-outbox {
+  margin: 8vw 0;
+}
+.simgridimg-title {
+  font-size: 3.6vw;
+  margin-bottom: 2vw;
+  padding: 0 15vw;
+}
+.simgridimg-btn {
+  padding: 1.2vw 3vw;
+  border-radius: 3vw;    margin-bottom: 5vw;
+}
+.simgridimgitem-title {
+  bottom: 3vw;
+}
+.simvilist-box {
+  margin: 8vw 0;
+}
+.simvilist-btn{
+  display: none;
+}
+.simspecs_item {
+  padding: 2vw 13vw;
+}
+.simappdown-topcon p {
+  font-size: 1.7vw;
+}
+.simappdownconleft-ittitle.active {
+  font-size: 2.5vw;
+}
+.simappdown-box>.contain-index {
+  max-width: 100%;
+}
+.simappdown-box .swiper-button-prev{
+  left: -1vw;
+}
+.simappdown-box .swiper-button-next{
+  right: -1vw;
+}
+.simblogs-btn,.simblogs_item_title{
+  font-size: 1.8vw;
+}
+.procomparison_left{
+  display: none;
+}
+.procomparison_right,  .simcompare-box .procomparison_right  {
+  width: 100%;
+}
+.mb-procompareitem{
+  text-align: left;
+  padding: 2vw;   
+  background: #E8E8E8;
+}
+.mb-procompareitem>span{
+  visibility: hidden;
+}
+.prodvsdownload-text-dw{
+  display: none;
+  }
+  .prodvsdownload-textbox {
+    left: 22vw;
+    top: 8.8vw;    display: flex;
+    align-items: center;
+    transform: translateY(0%);
+  }
+  .download-btnprobox{
+    margin-left: 3.7vw;
+  }
+  .prodvsdownload-textbox>img {
+    width: 15vw;
+    margin-bottom: 0;
+  }
+  .prodownload_icon01 svg {
+    width: 25vw;
+    margin-bottom: 1.1vw;
+  }
+  .prodownload_icon02 svg{
+    margin-bottom: 0;
+  }
+  .swiper-slide-active .mb-procompareitem>span{
+    visibility: visible;
+  }
+  .simcompare-box .procomparison_right .procomparison-probox {
+    background: transparent;    border-radius: 0;
+}
+.simcompare-box .procomparison-proitemsubtitle~.procomparison-itemspec {
+  background: #fff;
+}
+
+
+
+}
+
+
+
+/* product media <550 */
+@media (max-width: 550px){
+  /* .simlogoover_elebox {
+    width: 80%;
+    left: 10%;
+  } */
+    .prodvsdownload-textbox {
+      left: 10vw;
+      top: 8.8vw;
+    }
+    .download-btnprobox{
+      margin-left: 3.7vw;
+    }
+    .prodvsdownload-textbox>img {
+      width: 25vw;
+      margin-bottom: 0;
+    }
+    .prodownload_icon01 svg {
+      width: 40vw;
+      margin-bottom: 2.1vw;
+    }
+    .prodownload_icon02 svg{
+      margin-bottom: 0;
+    }
+  .simlogoover_elebox {
+    flex-wrap: wrap;
+  }
+  .simlogoover_item{
+    display: flex;
+    align-items: center;
+    text-align: left;
+    flex: 0 1 100%;
+  }
+  .simlogoover_item span:first-child{
+    margin-right: 2vw;
+  }
+  .prodvssimple-item {
+    flex: 0 1 100%;
+    margin-bottom: 5vw;
+  }
+  .prodvssimple-box {
+    flex-wrap: wrap;
+  }
+  .prodvssimple-ittitle {
+    margin-top: 3vw;
+  }
+  .new-discount-text{
+    width: 34%;
+  }
+  .grid-proimage {
+    padding: 13px 20px 26px;
+}
+.grid-proinfo {
+  padding: 0 20px 5vw;
+}
+.product-outbox .grid {
+  margin-left: 0;
+}
+.product-outbox .page-content {
+  background-color: transparent;
+}
+.product-outbox .flickity-button,.product-slideshow .is-selected .product__photo-zoom,.product__thumbs[data-position=below] .product__thumb-arrow  {
+  display: none;
+}
+.product__thumbs--below .product__thumb-item {
+  margin-right: 5px;
+  max-width: 30px;
+}
+.product__thumbs--below .product__thumbs--scroller{
+  min-height: auto;    display: flex;
+  justify-content: center;
+}
+.product__thumbs--below {
+  margin-top: 18px;
+}
+.product__thumb-item .image-wrap{
+  opacity: 0;
+}
+.product__thumb-item .image-wrap>image-element{
+  display: none;
+}
+.product__thumb-item>a{
+  width: 30px;
+  height: 4px;
+  background: #D9D9D9;
+  border-radius: 4px;
+}
+.product__thumb-item a.is-active{
+  background-color: #17d170;
+}
+.product__thumb-item a.is-active:before, .product__thumb-item a:focus:before {
+  box-shadow: none;
+}
+.product-single__meta {
+  margin-top: 0;
+}
+.toptag-span {
+  padding: 5px 6px;
+  margin-right: 7px;
+}
+.topdiscount-span {
+  padding: 5px 7px;
+}
+.product-single__title {
+  font-size: 4.8vw;
+  margin-bottom: 9px;
+  line-height: 1.5;
+}
+.collapsible-trigger-btn {
+  padding: 18px 0;
+}
+.product-block--tab .collapsible-content__inner h2 {
+  font-size: calc(12px + 1vw);
+}
+.collapsible-trigger-btn--borders + .collapsible-content .collapsible-content__inner {
+  padding-left: 22px;
+  padding-right: 20px;
+}
+.variant-wrapper {
+  margin-top: 22px;
+}
+.variant-wrapper + .variant-wrapper {
+  margin-top: 18px;
+}
+.variant-plans-wrapper .variant-input-wrap>.variant-input {
+  flex: 0 1 100%;
+}
+.pro-variant-title {
+  font-size: calc(12px + 1.5vw);
+  margin-bottom: 6px;
+}
+.pro-variant-subtitle {
+  font-size: 14px;
+  margin-right: 0;
+  margin-bottom: 6px;
+}
+.pv-nowprice {
+  font-size: calc(12px + 1vw);
+}
+.pv-oldprice {
+  font-size: calc(12px + 0.5vw);
+}
+.pro-variant-box {
+  width: 100%;
+}
+.chat-prosim {
+  margin: 14px 0 28px;    display: flex;
+  align-items: flex-start;
+}
+.product__quantity {
+  margin-bottom: calc(2vw + 20px);
+}
+.variant-plans-wrapper .variant-input-wrap label {
+  padding: 17px 15px;
+}
+.new-discount-text {
+  width: 100%;
+}
+.new-discount-container {
+  flex-wrap: wrap;
+}
+.new-discount-text {
+  font-size: calc(12px + 3.5vw) !important;
+  line-height: 1.2 !important;   width: 100%;
+  border-right: none;    padding: 6px 16px 2px;
+}
+.new-discount-box {
+  width: 100%;
+  padding: 0;
+  padding: 0 20px 9px 23px;
+  line-height: 1;
+}
+.new-discount-box button {
+  padding: 8px 22px !important;
+  font-size: 14px !important;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translateY(5px);
+}
+.new-discount-main {
+  font-size: inherit!important;
+}
+.pay-and-logistics{
+  width: calc(100% + 40px);
+  left: -20px;
+  position: relative;
+  background: #ECECEC;
+  margin-bottom: 0;    padding: 21px 20px;    border-radius: 10px 10px 0 0;
+}
+.product-single__meta .pay-and-logistics .pay {
+  flex-direction: row;
+}
+.product-block-shipinfo{
+  width: calc(100% + 40px);
+  left: -20px;
+  position: relative;
+  background: #ECECEC;
+  margin: 0;    padding: 0 20px 28px;
+
+}
+.product-block-netsup{
+  width: calc(100% + 40px);
+  left: -20px;    border-radius: 0 0 10px 10px;
+  position: relative;
+  background: #ECECEC;
+  margin-bottom: 0;    padding: 0 20px 28px;
+}
+.promain-netsup-con>span {
+  background: #fff;    max-width: 29%;
+}
+.promain-netsup-con .moresupport-ho{
+ background: #fff;font-size: 14px;
+}
+.proship-item {
+  flex: 0 1 100%;
+  margin-bottom: 10px;
+  max-width: 162px;    justify-content: flex-start;
+}
+.promain-shipinfo-con {
+  max-width: 163px;
+}
+.exhpronav-item, .exhpronav-btn {
+  margin: 0 1vw;
+  padding: 0 5vw;
+}
+.dvsbanner-outbox {
+  position: relative;
+  margin: 7vw 5vw 5vw;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.dvsbanner-text {
+  top: 7vw;
+  width: 90%;
+  left: 7vw;
+}
+.dvsbanner-title {
+  font-size: 5.3vw;
+  margin-bottom: 5vw;    letter-spacing: 0.02em;
+}
+.dvsbanner_item>span {
+  flex: 0 1 13vw;
+  margin-right: 3.2vw;
+}
+.dvsbanner_item_title {
+  font-size: 3.7vw;
+  margin-bottom: 2vw;
+}
+.dvsbanner_item_subtitle {
+  font-size: 3.7vw;
+}
+.dvsbanner_item {
+  margin-bottom: 3vw;
+}
+.prodestextimg-wp {
+  margin-bottom: 5vw;
+  border-radius: 10px;
+  overflow: hidden;
+  padding-bottom: 0 !important;
+}
+.prodestextimg-text {
+  padding: 6vw 2.5vw 6vw 3.5vw;
+}
+.indexmoreabout-title{
+  font-size: 4.8vw;
+  margin-bottom: 2.1vw;
+}
+.indexmoreabout-content{
+  font-size: 3.7vw;
+}
+.prodvsimgswitch-box .prodvsimgswitchbtn{
+  display: none;
+}
+.prodvsimgswitch-outbox {
+  padding: 0;
+}
+.prodvsimgswitch-bottom-item .prodvsimgswitch-text {
+  width: 100%;
+  top: 0;
+  position: relative;
+  left: 0;
+  transform: translateY(0);    padding: 5.5vw 3vw 3vw;
+}
+.prodvsimgswitch-nav {
+  position: relative;
+  top: 0;  order: 3;    padding: 8vw 0 5vw;
+}
+.prodvsimgswitch-wrapper{
+  background: #fff;
+  border-radius: 10px;    display: flex;
+  flex-wrap: wrap;
+}
+.prodvsimgswitch-box{
+  width: 100%;
+}
+.prodvsimgswitch-title{
+  font-size: 4.8vw;
+  margin-bottom: 2vw;
+}
+.dvsbanner_item_title, .indexmoreabout-content, .indexvideoho-content, .dvsbanner_item_subtitle, .prodvsimgswitch-content, .prodvssimsu-content, .procomparison-itemspec {
+  font-size: 3.7vw;
+}
+.prodvsimgswitch-nav-item {
+  font-size: 3.7vw;
+  padding: 7px 20px;
+  margin: 0 0 14px;
+  min-width: 68%;
+}
+.cus-recommend-colbox .indexmulticate-toptitle, .simblogs-title, .prodvsfaqs-title, .procomparison-secmb-title, .simappdown-toptitle, .simspecs-title, .simvilist-toptitle, .simnavsw-toptitle, .simcdopera-title, .prodvssimple-title, .simadvuse-title, .simcoverage-title, .simquick-toptitle, .simlogoover-title, .prodvssimsu-title, .prodvsdownload-title, .provideoho-topcon .indexvideoho-title, #procom-device {
+  font-size: 5.8vw;
+}
+.prodvssimsu-title {
+  margin: 8vw 0 3vw;
+}
+.prodvssimsu-content p {
+  display: inline;
+}
+.prodvssimsu-content {
+  margin-bottom: 6vw;
+}
+.prodvssimsu-imagebox {
+  padding: 4vw 3vw;
+  border-radius: 10px;
+}
+.prodvssimsu-outbox {
+  margin: 5.5vw 0 15vw;
+}
+.prodvsdownload-title {
+  margin: 0 0 6.5vw;
+}
+.prodvsimgswitch-item-bet .prodvsimgswitch-text {
+  flex: 0 1 100%;
+  padding: 8vw 2vw 5vw;
+  order: 2;
+}
+.prodvsimgswitch-item-bet {
+  flex-wrap: wrap;
+}
+.prodvsimgswitch-item-bet .prodvsimgswitch-image {
+  border-radius: 10px;
+  flex: 0 1 100%;
+}
+.provideoho-topcon .indexvideoho-text {
+  transform: translate(0);
+  text-align: center;
+}
+
+.provideoho-topcon {
+  margin: 5vw 0;
+}
+.prodvssimple-title {
+  margin-bottom: 6.5vw;
+}
+.prodvssimple-itimg img {
+  border-radius: 4.5vw;
+}
+.prodvssimple-ittitle {
+  margin-top: 3.8vw;
+  font-size: 3.7vw;
+}
+.prodvssimple-item {
+  margin-bottom: 7.5vw;
+}
+.cus-recommend-colbox .multicabtn {
+display: none;
+}
+.cus-recommend-colbox>.contain-index{
+  padding-right: 0;
+}
+.cus-recommend-colbox {
+  margin: 5vw 0 12vw;
+}
+.pro-stickbar {
+  padding: 4vw 5vw;
+}
+.bstick-nowprice {
+  font-size: 4.2vw;
+}
+.bstick-save {
+  font-size: 3.7vw;
+}
+.pro-stickbar .add-to-cart.add-to-cartfeapro {
+  margin-right: 2.5vw;    padding: 2vw 3vw;
+}
+.pro-stickbar .bthho {
+  font-size: 4.2vw;
+  padding: 2.5vw 4vw;
+  border-radius: 6vw;
+}
+.pro-stickbar .product-single__form {
+  justify-content: space-between;    width: 100%;
+}
+.bstick-price {
+  margin-right: 0;
+}
+.template-product{
+  padding-bottom: 75px;
+}
+.prodvsfaqs-outbox {
+  margin: 7vw 0 10vw;
+}
+.prodvsfaqs-bleft{
+  display: none;
+}
+.prodvsfaqs-title {
+  margin-bottom: 6.5vw;
+}
+.prodvsfaqs-bright {
+  flex: 0 1 100%;
+  border-radius: 3vw;
+  overflow: hidden;
+}
+.prodvsfaqs-britem {
+  padding: 0 3vw;
+}
+.prodvsfaqs-navitem {
+  padding: 5.3vw 4vw 5.3vw 2vw;
+  margin: 0 3vw;
+  border-bottom: 1px solid #E2E2E2;font-size: 4.2vw;
+  font-weight: bold;
+}
+.prodvsfaqs-britqa {
+  padding: 5.3vw 1vw 5.3vw 6vw;font-size: 4.2vw;
+}
+.prodvsfaqs-britqatitle {
+  padding-right: 6%;font-size: 4.2vw;
+}
+.prodvsfaqs-navitem img {
+  right: 1.8vw;display: inline-block;
+  transition: 0.3s;
+  position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.prodvsfaqs-navitem.active img {
+  transform: translateY(-50%) rotate(90deg);
+}
+.prodvsfaqs-britqacon {
+  font-size: 3.2vw;
+  margin: 4vw 0 0;
+}
+.product-block-discounttime {
+  flex-wrap: wrap;
+}
+.product-simoutbox .product__quantity+.product-block {
+  min-width: 100%;
+}
+.template-product .product-outbox.product-simoutbox>.page-content>.page-width {
+  padding: 0 20px;
+}
+.sim-shipinfobox {
+  display: none;
+}
+.prosimcard-desnav {
+  border-radius: 6vw 0 0 6vw;
+  padding: 5px 0 5px 5px;
+  overflow-x: scroll;
+  text-wrap: nowrap;
+  width: calc(100% + 20px);white-space: nowrap;
+}
+.prosimcard-desconitem {
+  padding-right: 20px;
+}
+.prosimcard-desconitem-1 {
+  padding-right: 20px;
+}
+.prosimcard-desconitem ul {
+  column-count: 1;
+  gap: 0;
+  width: 100%;
+}
+.prosimcard-desconitem .promain-netsup-con>span {
+  max-width: 29%;    display: inherit;
+}
+/* .prosimcard-desnav::-webkit-scrollbar,.exhpronav-list::-webkit-scrollbar {
+  height: 6px;
+} */
+.product-simoutbox .product-block-discounttime .new-discount-text {
+  width: auto;
+  padding: 3px 5px 1px 0;
+  font-size: calc(12px + 2.2vw)!important;
+}
+.product-simoutbox .product-block-discounttime .new-discount-box {
+  width: auto;
+  padding: 0;    flex: 1 1 auto;
+}
+.product-block-discounttime .prodis-timedown {
+  margin-bottom: 0;    width: auto;
+  font-size: 12px;
+}
+.product-simoutbox .new-discount-container {
+  width: 100%;
+}
+.product-simoutbox .product-block-discounttime .new-discount-code {
+  margin-right: 0;
+  font-size: calc(12px + 0.9vw);
+}
+.product-simoutbox .product-block-discounttime {
+  margin-bottom: 0;
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  bottom: 73px;
+  width: 100%;
+  background: #FBEADD;
+  padding: 6px 3vw 6px 5vw;
+}
+.product-simoutbox  .new-discount-box button {
+  padding: 6px 18px!important;
+  transform: translateY(2vw);
+}
+.product-outbox .planlabel-popunbox .product-block--price {
+  display: none;
+}
+.product-simoutbox .pay-and-logistics {
+  width: 100%;
+  left: 0;
+  background: transparent;
+  margin-bottom: 15px;
+  padding: 0;
+  border-radius: 0;
+}
+.product-simoutbox  .variant-wrapper {
+  margin-top: 14px;
+}
+.variant-other-wrapper label.variant__label {
+  margin-bottom: 9px;
+}
+.variant-input-wrap label {
+  padding: 6px 14px 6px;
+  margin: 0 11px 12px 0;
+}
+.planlabel-title {
+  font-size: calc(12px + 1vw);
+}
+.planlabel-popunbox {
+  margin: calc(20px + 0.5vw) 0 15px;
+}
+.backgwhite-box .variant-plans-wrapper .variant-input-wrap>.variant-input {
+  flex: 0 1 calc((100% - 10px)/2);
+  margin-bottom: 11px;
+  min-width: 45%;
+}
+.pro-variant-tag {
+  font-size: 12px;
+  letter-spacing: -.02em;
+  left: 10px;
+  transform: scale(0.8);
+  transform-origin: left top;
+}
+.backgwhite-box .variant-input-wrap label {
+  border-radius: 6px;
+}
+.backgwhite-box {
+  border-radius: 3vw;
+  padding: 1px calc(8px + 1vw) calc(13px + 2vw);
+}
+.variant-other-wrapper label.variant__label {
+  font-size: 4.2vw;
+  text-transform: inherit;
+}
+.del-simnetsup, .del-clkpopun {
+  right: 9px;
+  top: 7px;
+  font-size: 15px;
+}
+.prova-greenponter {
+  width: 13px;
+  height: 13px;
+  right: 6px;
+  top: 6px;
+}
+.product-block-simquabuy .product__quantity {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.product-block-simquabuy .dsim-payment-button {
+  padding: 3vw;
+  border-radius: 6vw;
+}
+.product-block-simquabuy .payment-buttons>* {
+  font-size: calc(12px + 0.8vw);
+}
+.product-block-simquabuy {
+  margin-bottom: 26px;
+}
+.delivery-simbox img {
+  width: 40vw;
+}
+.product-simoutbox .promain-netsup-con span:nth-child(3) {
+  display: inline;
+}
+.simnetsup_fixitemimg>span {
+  flex: 0 1 calc((100% - 2.8vw)/3);    margin-bottom: 1.5vw;
+}
+.simnetsup_fixitemtop, .clkpopun_fixitemtop {
+  font-size: calc(12px + 1vw);
+  padding-bottom: 3vw;
+  margin-bottom: 3vw;
+}
+.simlogoover-title{
+  width: 80%;
+  left: 10%;
+  top: 7vw;
+  font-size: 5.3vw;
+}
+.simlogoover-outbox {
+  margin: 8vw 0 12vw;    border-radius: 3vw;
+}
+.simlogoover_elebox {
+  width: 90%;
+  left: 8vw;    bottom: 11vw;
+}
+.simlogoover_item span:first-child {
+  margin-right: 3.2vw;
+}
+.simlogoover_item_title,.simlogooveritem_subtitle {
+  font-size: 3.7vw;
+}
+.simquick-box .swpallbtn{
+  display: none;
+}
+.simquick-img img{
+  border-radius: 5.3vw;
+}
+.simnetsup-outbox {
+  margin: 12vw auto;width: 90%;
+}
+.simnetsup-title.prodvssimple-title {
+  margin-bottom: 4.5vw;
+}
+.simnetsup_item {
+  flex: 0 1 calc((100% - 11vw)/3);
+  margin-bottom: 3.7vw;
+  border-radius: 6vw;
+  margin: 0 1.8vw 3.7vw;
+}
+.simnetsup_item:nth-child(4) ~ .simnetsup_item:not(:last-child){
+  display: none;
+}
+.simnetsup_elebox {
+  justify-content: center;
+}
+.moresupport-ho {
+  font-size: 3.2vw;
+}
+.simquick-box .contain-index {
+  padding-right: 0;
+}
+.simquick-proitem-center .simquick-title {
+  font-size: 3.7vw;
+}
+.simquick-proitem-top .simquick-title {
+  top: 6vw;
+  font-size: 3.7vw;
+}
+.simquick-proitem-bottom .simquick-title {
+  bottom: 6vw;
+  font-size: 3.7vw;
+}
+.simcoverage-title {
+  margin-bottom: 3.5vw;
+}
+ .simcoverage-content {
+  font-size: 3.7vw;
+  padding: 0 7.5vw 6vw;
+}.product-block-simquabuy .payment-buttons>* {
+  min-height: 42px!important;
+}
+.product-block-simquabuy .dsim-payment-button {
+  min-height: 42px!important;
+}
+.simcoverage_nav_item{
+  font-size: 4.2vw;
+  margin: 0 5vw;
+}
+.simcoverage_navs {
+  margin-bottom: 5.8vw;
+}
+.simcoverage_conitem {
+  padding: 6.3vw 5.5vw;
+  font-size: 3.7vw;
+  border-radius: 5.8vw;
+}
+.simquick-box {
+  margin: 7vw 0vw;
+}
+.simcoverage-btn {
+  margin-top: 5.4vw;
+  padding: 2.6vw 8.5vw;
+  border-radius: 6vw;
+  font-size: 4.2vw;
+}
+.simcoverage-outbox {
+  margin: 7vw 0 13vw;
+}
+.simadvuse-title {
+  margin: 0 10vw 7vw 5vw;
+}
+.simadvusemb.contain-index {
+  padding-right: 0;
+}
+.simadvuse_item {
+  padding: 3.2vw 4px 3vw 3.5vw;
+  border-radius: 6vw;    height: 100%;
+}
+.simadvuse_item img {
+  width: 10.6vw;
+  margin-bottom: 3.8vw;
+}
+.simadvuse-itemtitle {
+  font-size: 4.2vw;
+  margin-bottom: 3.2vw;
+}
+.simadvuse-outbox {
+  margin: 7vw 0 13vw;
+}
+.simcdopera-title{
+  font-size: 5.3vw;    margin-bottom: 8vw;
+}
+.simcdopera_elebox {
+  flex-wrap: wrap;
+}
+.simcdopera_item {
+  flex: 0 1 100%;
+  margin-bottom: 5.8vw;
+}
+.simcdopera-img img {
+  width: 61vw;
+  margin-bottom: 4.2vw;
+}
+.simcdopera-itemtitle {
+  font-size: 4.2vw;
+  margin-bottom: 4.5vw;
+  padding: 0 12vw;
+}
+.simcdopera-itemcon{
+  font-size: 3.7vw;
+}
+.simgridimg-title {
+  font-size: 5.8vw;
+  margin-bottom: 5.5vw;
+  padding: 0;
+}
+.simgridimg-content {
+  margin-bottom: 7vw;
+  font-size: 3.7vw;    padding: 0 2vw;
+}
+.simgridimg-btn {
+  padding: 3vw 6vw;
+  border-radius: 6vw;
+  margin-bottom: 10vw;
+  font-size: 4.2vw;
+}
+.simgridimgitem-title {
+  bottom: 4vw;
+  font-size: 3.7vw;
+}
+.simgridimg_conitem {
+  border-radius: 6vw;
+}
+.simnavsw-box {
+  margin: 18vw 0 15vw;
+}
+.simnavsw-content {
+  flex-wrap: wrap;
+}
+.simnavsw-conright {
+  width: 100%;
+  margin: 0;
+  padding: 0 8vw;
+}
+.simnavsw-conleft {
+  width: 100%;
+  padding-top: 10vw;
+  order: 3;
+}
+ .swpbtnbox .swpallbtn {
+  width: 8vw;
+}
+.swpbtnbox .swiper-button-next {
+  right: -2vw;
+}
+.swpbtnbox .swiper-button-prev {
+  left: -2vw;
+}.simnavsw-toptitle {
+  margin-bottom: 10vw;
+}
+.simnavsw-conleft-item .simnavsw-conleft-ittitle{
+  display: none;
+}
+.simconleft-mbcgnav{
+  border-bottom: 1px solid #d9d9d9;
+    text-align: center;    display: flex;
+    justify-content: space-between;
+}
+.simconleft-mbcgnav .simnavsw-conleft-ittitle{
+  display: inline-block;
+  font-size: 4.2vw;
+  padding: 0 3vw 2vw;    border-bottom: 1px solid transparent;
+}
+.simnavsw-conleft-itcon {
+  padding: 4vw 0 0 2vw;
+  border-bottom: none;
+  font-size: 3.7vw;
+}
+.simnavsw-conleft-ittitle.active:after {
+  width: 100%;
+}
+.simvilist-toptitle,.simspecs-title {
+  margin-bottom: 8vw;
+}
+.simvilist-title{
+  font-size: 3.7vw;
+  margin-top: 3.5vw;
+}
+.simvilist-itemvideo {
+  border-radius: 3vw;
+}
+.playbtnv {
+  width: 10.5vw;
+}
+.simvilist-box {
+  margin: 15vw 0;
+}
+.simspecsitem_subtitle,.simspecs_item_title{
+  font-size: 3.7vw;    display: flex;
+  align-items: center;
+}
+.simspecs_item {
+  padding: 6vw 3vw;
+}
+.simspecs_elebox {
+  border-radius: 5vw;
+}
+.simappdown-content {
+  flex-wrap: wrap;
+}
+.simappdown-conleft {
+  width: 100%;
+  margin-top: 9vw;
+}
+.simappdown-conright {
+  width: 100%;
+  margin-top: 8vw;padding: 0 5vw;
+}
+.simappdown-box.swpbtnbox .swiper-button-next{
+  right: 0;
+}
+.simappdown-box.swpbtnbox .swiper-button-prev{
+  left: 0;
+}
+.simappdown-leftbtn {
+  font-size: 4.2vw;
+  margin: 9.5vw 0 0;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.simappdown-leftbtn img {
+  margin-left: 5vw;
+}
+.simappdown-toptitle{
+  padding: 8vw 5vw 3vw;    line-height: 1.5;
+}
+.simappdown-topcon p {
+  font-size: 4.3vw;
+  margin: 0 5vw;
+  letter-spacing: 0.02em;
+}
+.simappdown-conleftbox {
+  border-radius: 5vw;
+  padding: 2vw 4vw;
+}
+.simappdown-conleft-itcon {
+  font-size: 3.7vw;
+  padding: 4vw 3px;
+}
+.simappdownconleft-ittitle {
+  font-size: 4.2vw;
+  padding: 3.2vw 18px 3.2vw 2px;
+}
+.simappdownconleft-ittitle.active {
+  font-size: 4.2vw;
+}
+.simspecs-outbox {
+  margin: 15vw 0;
+}
+.simblogs-outbox {
+  margin: 15vw 0;
+}
+.simblogs-title {
+  margin-bottom: 8vw;
+}
+ .simblogs_item_title {
+  font-size: 4.2vw;
+  margin: 5vw 2vw 3vw 0;
+}
+.simblogsitem_con{
+  font-size: 3.7vw;
+}
+.simblogs-width.contain-index {
+  padding-right: 0;
+}
+.simblogs-btn{
+  font-size: 4.8vw;
+    margin-top: 10vw;
+}
+.exhpronav-list {
+  overflow-y: hidden;
+}
+.template-product .indexmulticate-toptitle{
+  text-align: center;
+  margin: 0 5vw 8vw 0;
+}
+.procomparison-conbox>.contain-index {
+  padding-right: 0;
+}
+.procomparison-conbox {
+  margin: 8vw 0 13vw;
+}
+
+.procomparison-itemspec,.procomparison-proitemsubtitle~.procomparison-itemspec,.procomparison-itemspec, .procomparison-proitemsubtitle~.procomparison-itemspec {
+  text-align: left;
+  padding: 3.1vw 0;
+}
+.procomparison_right .procomparison-proitemsubtitle~.procomparison-itemspec {
+  padding-left: 0;
+  padding-right: 0;
+}
+.procomparison_right .procomparison-itemspec .height_item {
+  padding-left: 8vw;   
+}
+.procomparison_right .procomparison-proitemsubtitle~.procomparison-itemspec .height_item{
+  padding-right: 2vw;
+}
+.procomparison_right .procomparison-itemspec .height_item {
+  justify-content: flex-start;
+}.mb-procompareitem {
+  padding: 3.2vw;    font-weight: 600;
+}
+.procomparison-proimg img,.simcompare-box .procomparison-proimg img  {
+  max-width: 100px;
+}
+.procomparison-proitemsubtitle {
+  margin-bottom: 5vw;
+}
+.procomparison-container .procomparison-itemtitle {
+  margin-bottom: 3vw;
+  font-size: 4.2vw;
+}
+.simcompare-box .procomparison-proitemsubtitle {
+  margin: 3vw 0 5vw;
+}
+.simcompare-box .cpview-more {
+  border-radius: 4vw;
+  padding: 2vw 3.5vw;
+}
+.product-single__meta .pay-and-logistics .pay span {
+  min-width: 100px;
+}
+.product-single__meta .pay-and-logistics .payment-icons .icon--payment {
+  margin: -10px 4px 6px 0;
+}
+.product-single__meta .pay-and-logistics .payment-icons {
+  text-align: right;
+}
+.prodestextimg-img {
+  border-radius: 0;
+}
+.backgwhite-box .variant-plans-wrapper .variant-input-wrap label {
+  padding: 25px 8px 0;
+}
+.pro-variant-box02 .pv-nowprice {
+  font-size: inherit;
+}
+.backgwhite-box span.pv-oldprice {
+  margin-right: 4px;
+  font-size: inherit;
+}
+.backgwhite-box .pro-variant-title {
+  font-size: calc(12px + .5vw);
+}
+.pro-variant-item>span:first-child {
+  transform: scale(0.9);
+  transform-origin: left center;
+}
+.prodis-timedown b {
+  display: none;
+}
+.product-simoutbox .product__quantity label{
+  font-size: calc(12px + 1vw);
+}
+.product-block-simquabuy .product__quantity+.product-block{
+  display: none;
+}
+.product-simoutbox .product-block-simquabuy {
+  margin-bottom: 20px;
+}
+.chat-prosim img {
+  margin-right: 3px;
+  max-width: 6.8vw;
+}
+.product-single__meta .chat-prosim label{
+  font-size: 3.7vw;    font-weight: 500;
+}
+.chat-prosim span {
+  font-weight: 500;
+}
+.product-block-quandvs .product__quantity label{
+  text-transform: uppercase;
+}
+
+}
+
+
+.product-simoutbox .product__quantity label ,[data-type_header_accent_transform=true] label {
+  text-transform: inherit;
+}
+.simcoverage-btn:hover{
+  background: #282828;
+  color: #fff;
+}
+.simcdopera-itemcon a:hover,.simblogs-btn:hover,.simvilist-btn:hover {
+  color: #07C160;
+}
+.product__quantity .js-qty__wrapper {
+  background-color: transparent;
+}
+.product-simoutbox .product__quantity label,[data-type_header_accent_transform=true] .variant-other-wrapper label.variant__label {
+font-weight:500;
+}
+@media (min-width:994px){
+  .product-simoutbox .product__quantity label,[data-type_header_accent_transform=true] .variant-other-wrapper label.variant__label {
+    font-size: calc(12px + 0.3vw);
+}
+.product-outbox.product-simoutbox .js-qty__adjust, .product-outbox.product-simoutbox .js-qty__num {
+  border-radius: calc(6px + 0.2vw);
+}
+
+}
+@media (min-width:551px){
+.simconleft-mbcgnav{
+  display: none;
+}
+}

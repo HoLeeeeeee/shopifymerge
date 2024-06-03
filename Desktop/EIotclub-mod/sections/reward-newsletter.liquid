@@ -1,0 +1,109 @@
+{{ 'section-reward-newsletter.css' | asset_url | stylesheet_tag }}
+{% liquid
+  assign secid = section.id | split: '__'
+  assign secidlast = secid[1] | replace: '-', '_'
+%}
+
+<div class="reward-newsletteroutbox">
+  <div class="contain-index">
+    <div class="reward-newsletter-box">
+      {% if section.settings.image %}
+        <div class="reward-newsletter-img">
+          <img
+            class="{% if section.settings.imagemb  %}hide-mb{% endif %}"
+            src="{{ section.settings.image | img_url:'master' }}"
+            alt=""
+          >
+        </div>
+      {% endif %}
+      {% if section.settings.imagemb %}
+        <div class="reward-newsletter-img">
+          <img class="hide-pc" src="{{ section.settings.imagemb | img_url:'master' }}" alt="">
+        </div>
+      {% endif %}
+      <div class="reward-newsletter-text">
+        {%- if section.settings.tips != blank -%}
+            <div class="reward-newsletter-tips animate-ele">{{ section.settings.tips }}</div>
+        {%- endif -%}
+        {%- if section.settings.title != blank -%}
+          <div class="reward-newsletter-title animate-ele">{{ section.settings.title }}</div>
+        {%- endif -%}
+        {%- if section.settings.content != blank -%}
+          <div class="reward-newsletter-content animate-ele">{{ section.settings.content }}</div>
+        {%- endif -%}
+        {% form 'customer', id: 'newsletter-reward' %}
+          {% if form.posted_successfully? %}
+            <div class="note note--success">{{ 'general.newsletter_form.newsletter_confirmation' | t }}</div>
+          {% endif %}
+          {% if form.context == 'footer' %}
+            {% if form.errors %}
+              {{ form.errors | default_errors }}
+            {% endif %}
+          {% endif %}
+
+          <label for="Email-{{ secidlast }}" class="hidden-label">Enter your email address</label>
+          <label for="newsletter-submit-{{ secidlast }}" class="hidden-label">
+            {{- 'general.newsletter_form.submit' | t -}}
+          </label>
+          <input type="hidden" name="contact[tags]" value="prospect,newsletter">
+          <input type="hidden" name="contact[context]" value="footer">
+          <div class="footer__newsletter animate-ele">
+            <input
+              type="email"
+              value="{% if customer %}{{ customer.email }}{% endif %}"
+              placeholder="Enter your email address"
+              name="contact[email]"
+              id="Email-{{ secidlast }}"
+              class="footer__newsletter-input"
+              autocorrect="off"
+              autocapitalize="off"
+            >
+            <button type="submit" id="newsletter-submit-{{ secidlast }}" class="newsletteindexbtn" name="commit">
+              Next
+            </button>
+          </div>
+        {% endform %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Reward Newsletter",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "image"
+    },
+    {
+      "type": "image_picker",
+      "id": "imagemb",
+      "label": "image(mobile)"
+    },
+    {
+        "type": "text",
+        "id": "tips",
+        "label": "Tips"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "title"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "content"
+    }
+  ],
+
+  "presets": [
+    {
+      "name": "Reward Newsletter",
+      "category": "Ho-Advance"
+    }
+  ]
+}
+{% endschema %}

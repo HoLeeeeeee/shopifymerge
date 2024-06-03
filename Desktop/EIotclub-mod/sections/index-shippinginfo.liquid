@@ -1,0 +1,73 @@
+{% liquid
+  assign secid = section.id | split:"__" 
+  assign secidlast = secid[1] | replace: "-","_"
+%}
+{% if section.settings.show_block  %}
+<div class="indexspinfo-outbox">
+  <div class="contain-index">
+  <div class="indexspinfo-box animate-ele">
+      {% for block in section.blocks %}
+         <div class="indexspinfo-item">
+        {% if block.settings.url  %}
+        <a href="{{  block.settings.url  }}">
+        {% endif %}
+        {% if block.settings.image  %}
+          <div class="indexspinfo-icon"><img src="{{ block.settings.image | img_url:'master' }}" alt="" /></div>
+         {% endif %}
+        {% if block.settings.title != blank %}
+        <div class="indexspinfo-title">{{ block.settings.title }}</div> 
+        {% endif %}
+        {% if block.settings.url  %}
+        </a>
+        {% endif %}
+
+         </div>
+      {% endfor %}
+  </div>
+  </div>
+</div>
+
+
+{% endif %}
+
+
+{% schema %}
+  {
+   "name": "Shipping Info",
+  "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_block",
+        "label": "Show Block?",
+        "default": true
+      }
+    ],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "block",
+        "settings": [
+       {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },{
+        "type": "text",
+        "id": "title",
+        "label": "title"
+      },{
+        "type": "url",
+        "id": "url",
+        "label": "url"
+      }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Shipping Info",
+        "category": "HO-layout"
+      }
+    ]
+  }
+{% endschema %}

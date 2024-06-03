@@ -1,0 +1,81 @@
+{% liquid
+  assign secid = section.id | split:"__" 
+  assign secidlast = secid[1] | replace: "-","_"
+%}
+
+<div class="prodvssimple-outbox">
+  <div class="contain-index">
+    {% if section.settings.title != blank %}
+        <div class="prodvssimple-title">{{ section.settings.title }}</div> 
+        {% endif %}
+  <div class="prodvssimple-box prodvssimple_{{ secidlast }}">
+      {% for block in section.blocks %}
+         <div class="prodvssimple-item">
+        {% if block.settings.url  %}
+        <a href="{{  block.settings.url  }}">
+        {% endif %}
+        {% if block.settings.image  %}
+          <div class="prodvssimple-itimg"><img class="{% if block.settings.imagemb  %}hide-mb{% endif %}"  src="{{ block.settings.image | img_url:'master' }}" alt=" " /></div>
+         {% endif %}
+        {% if block.settings.imagemb  %}
+          <div class="prodvssimple-itimg"><img class="hide-pc"  src="{{ block.settings.imagemb | img_url:'master' }}"  alt=" " /></div>
+       {% endif %}
+        {% if block.settings.title != blank %}
+        <div class="prodvssimple-ittitle">{{ block.settings.title }}</div> 
+        {% endif %}
+        {% if block.settings.url  %}
+        </a>
+        {% endif %}
+
+      </div>
+      {% endfor %}
+  </div>
+  </div>
+</div>
+
+
+
+
+{% schema %}
+  {
+   "name": "Simple Activation",
+  "settings": [
+     {
+        "type": "text",
+        "id": "title",
+        "label": "title"
+      } 
+    ],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "block",
+        "settings": [
+       {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },{
+        "type": "image_picker",
+        "id": "imagemb",
+        "label": "Image(mobile)"
+      },{
+        "type": "text",
+        "id": "title",
+        "label": "title"
+      },{
+        "type": "url",
+        "id": "url",
+        "label": "url"
+      }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Simple Activation",
+        "category": "HO-layout"
+      }
+    ]
+  }
+{% endschema %}

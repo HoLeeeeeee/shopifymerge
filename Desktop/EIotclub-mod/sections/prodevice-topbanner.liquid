@@ -1,0 +1,89 @@
+{% liquid
+  assign secid = section.id | split:"__" 
+  assign secidlast = secid[1] | replace: "-","_"
+%}
+
+<div class="dvsbanner-outbox">
+    {% if section.settings.image  %}
+      <div class="dvsbanner-img"><img class="{% if section.settings.imagemb  %}hide-mb{% endif %}"  src="{{ section.settings.image | img_url:'master' }}" alt=" " /></div>
+     {% endif %}
+    {% if section.settings.imagemb  %}
+     <div class="dvsbanner-img"><img class="hide-pc"  src="{{ section.settings.imagemb | img_url:'master' }}"  alt=" " /></div>
+   {% endif %}
+  <div class="dvsbanner-text"> 
+  {% if section.settings.title != blank %}
+    <div class="dvsbanner-title animate-ele">{{ section.settings.title }}</div>
+   {% endif %}
+  <div class="dvsbanner_elebox animate-ele">
+      {% for block in section.blocks %}
+         <div class="dvsbanner_item">
+        {% if block.settings.image  %}
+          <span><img src="{{ block.settings.image | img_url:'master' }}" alt=" " /></span>
+         {% endif %}
+       <div class="dvsbanner_item_text">
+           {% if block.settings.title != blank %}
+            <div class="dvsbanner_item_title">{{ block.settings.title }}</div>
+           {% endif %}
+         {% if block.settings.subtitle != blank %}
+            <div class="dvsbanner_item_subtitle">{{ block.settings.subtitle }}</div>
+           {% endif %}
+       </div>
+
+      </div>  
+      {% endfor %}
+  </div>
+   </div>
+
+  
+</div>
+
+
+
+
+{% schema %}
+  {
+   "name": "Device TopBanner",
+  "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "title"
+      },{
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },{
+        "type": "image_picker",
+        "id": "imagemb",
+        "label": "Image(mobile)"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "block",
+        "settings": [
+       {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },{
+        "type": "text",
+        "id": "title",
+        "label": "title"
+      },{
+        "type": "text",
+        "id": "subtitle",
+        "label": "subtitle"
+      }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Device TopBanner",
+        "category": "HO-layout"
+      }
+    ]
+  }
+{% endschema %}

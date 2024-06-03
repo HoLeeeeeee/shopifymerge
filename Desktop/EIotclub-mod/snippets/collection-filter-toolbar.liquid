@@ -1,0 +1,351 @@
+
+
+{% comment %} 
+variable:
+  - blocks: section.blocks
+  - isShowInstockOnly: 
+  - pageParamTagGroups: 未分离的筛选组，例如 ['color:white,blue', 'wirelesswrist-rest:no']
+  - separatedParamTagGroups: 分离后的筛选组，例：["color:white", "color:blue", "wirelesswrist-rest:no"]，可以转换成 handle tag 形式
+  - resultProductIndexList: 筛选结果的对应索引值列表
+{% endcomment %}
+
+{% if request.page_type == 'collection' and collection.all_tags.size > 0 %}
+    {% assign categories = '' %}
+    {% for tag in collection.all_tags %}
+      {% if tag contains '-' %}
+        {% capture categories %}{% unless categories == blank  %}{{ categories }}|{% endunless %}{{ tag | split: '-' | first }}{% endcapture %}
+      {% endif %}
+    {% endfor %}
+    {% assign cat_array = categories | split: '|' | uniq %}
+  {% endif %}
+  
+  {% comment %} <div class="filter-title-btn medium-up--hide">filters by</div> {% endcomment %}
+  <div class="filters-toolbar filter-box {% if collection.handle != blank %}{{ collection.handle }}{% else %}all{% endif %}">
+    <div class="filters-toolbar__item">
+      <div class="filter-new-mobile-drawer-head  ">
+        <div class="filter-new-mobile-drawer-head-title">
+        Filter
+        </div>
+        <div class="filter-new-mobile-drawer-head-close">
+          <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 1L14.9999 13.9948" stroke="black" stroke-width="2" stroke-linecap="round"/>
+            <path d="M2 14L15 1" stroke="black" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+  
+      <ul class="filter-collection-list">
+        {%- for link in linklists['main-menu'].links -%}
+          {% if link.title == "Products" %}
+            {%- assign collection_links = link.links -%}
+            {%- break -%}
+          {%- endif -%}
+        {%- endfor -%}
+        {%- for collection_link in linklists['products'].links -%}
+          <li class="filter-collection-item {% if collection.url == collection_link.url %}active{% endif %}" >
+            <a href="{{collection_link.url}}">
+              {{collection_link.title}}
+            </a>
+          </li>
+        {%- endfor -%}
+      </ul>
+  
+      {% if collection.all_tags.size > 0 %}
+        {%- comment -%}
+          Loop through tag categories
+        {%- endcomment -%}
+        {% for block in blocks %}
+          {%- for cat_item in cat_array -%}
+            {% if cat_item == block.settings.category_name %}
+              <div class="filter-type active">
+                <span class="filter-type-title" data-handle="{{ cat_item | handle }}">{{ cat_item }}
+                  <div class="filter-type-svg-up">
+                    <svg width="16" height="7" viewBox="0 0 16 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 5V7L8 2L0 7V5L8 0L16 5Z" fill="black"/>
+                    </svg>
+                  </div>
+                  <div class="filter-type-svg-down">
+                      <svg width="16" height="7" viewBox="0 0 16 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M16 5V7L8 2L0 7V5L8 0L16 5Z" fill="black"/>
+                      </svg>
+                  </div>
+                </span>
+                {% assign downcase_cat_item = cat_item |  downcase %}
+                <!-- advanced-filters start  -->
+                <ul class="advanced-filters {% if downcase_cat_item == 'color'%} color-advanced-filters {% endif %}">
+                  {%- comment -%}
+                    Loop through collection tags
+                  {%- endcomment -%}
+  
+                  {%- assign tag_list = block.settings.tag_list | split:',' -%}
+              
+                  {% for tag_item in tag_list %}
+                    {%- for tag in collection.all_tags -%}
+                      {%- assign cat = tag | split: '-' | first | strip  -%}
+                      {%- assign tag_value = tag | split: '-' | last | strip  -%}
+                      {%- assign tag_handle = tag | handle  -%}
+                      {% comment %} 判断当前Tag是否在Url的筛选条件中 {% endcomment %}
+                      {% assign isInParamTag = false %}
+                      {% liquid
+                        for _tagGroup in separatedParamTagGroups
+                          assign _paramTag = _tagGroup | handle
+                          if _paramTag == tag_handle
+                            assign isInParamTag = true
+                            break
+                          endif
+                        endfor
+                      %}
+                      {%- if tag_item == tag_value and cat != tag and cat_item == cat-%}
+                        {%- comment -%}
+                          Strip out tag category prefix and add/remove link for tag filtering
+                        {%- endcomment -%}
+                        {%- if isInParamTag -%}
+                          <li
+                            class="advanced-filter active-filter function-js-tag {% if downcase_cat_item == 'color'%} color-advanced-filter color-background-{{-tag | remove_first: cat_item
+                              | remove_first: '-' | downcase -}} {% endif %}"
+                            data-group="{{ downcase_cat_item }}"
+                            data-value="{{ tag_value | handle }}"
+                            data-handle="{{ tag | handle }}"
+                          >
+                          {% if downcase_cat_item == 'color'%}
+                            <a href="javascript:;" title="Show products matching tag {{ tag }}">
+                              <span class="tag-close checked"><svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="3.03459" y1="8.36396" x2="10.1057" y2="1.29289" stroke="white" stroke-width="2"/><line x1="0.707107" y1="4.60564" x2="4.24264" y2="8.14117" stroke="white" stroke-width="2"/></svg>
+                              </span>
+                            </a>
+                          {% else %}
+                            <a href="javascript:;" title="Show products matching tag {{ tag }}">
+                              <span class="tag-close checked"><svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="3.03459" y1="8.36396" x2="10.1057" y2="1.29289" stroke="white" stroke-width="2"/><line x1="0.707107" y1="4.60564" x2="4.24264" y2="8.14117" stroke="white" stroke-width="2"/></svg>
+                              </span>{{ tag | remove_first: cat_item | remove_first: '-' }}
+                            </a>
+                            {% assign tag_name = tag %}
+                            {%- liquid
+                              assign product_count = 0
+                              for product in collection.products
+                                assign forloopIndex0Str = forloop.index0 | strip
+                                unless resultProductIndexList contains forloopIndex0Str
+                                  # 只遍历筛选结果的商品列表
+                                  continue
+                                endunless
+                                if product.tags contains tag_name
+                                  if isShowInstockOnly
+                                    if product.available
+                                      assign product_count = product_count | plus: 1
+                                    endif
+                                  else
+                                    assign product_count = product_count | plus: 1
+                                  endif
+                                endif
+                              endfor
+                            -%}
+                            <div class="advanced-filter-product-count">
+                                ({{product_count}})
+                            </div>
+                          {% endif %}
+                          </li>
+                        {%- else -%}
+                          <li class="advanced-filter function-js-tag {% if downcase_cat_item == 'color'%} color-advanced-filter color-background-{{-tag | remove_first: cat_item
+                              | remove_first: '-' | downcase | replace: '&', '-' -}} {% endif %}" data-group="{{ downcase_cat_item }}" data-value="{{ tag_value | handle }}" data-handle="{{ tag | handle }}" id="{{ tag | handle }}">
+                            {% if downcase_cat_item == 'color'%}
+                              <a href="javascript:;" title="Show products matching tag {{ tag }}">
+                                <span class="tag-close unchecked"></span>
+                              </a>
+                            {% else %}
+                              <a href="javascript:;" title="Show products matching tag {{ tag }}">
+                                <span class="tag-close unchecked"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.5" y="0.5" width="19" height="19" stroke="black"/></svg>
+                                </span>{{ tag | remove_first: cat_item | remove_first: '-' }}
+                              </a>
+                              {% assign tag_name = tag %}
+                              {% assign current_tag_group_name = tag | replace: '-', '_' | split: "_" | first | handle %}
+                              {% assign current_tag_handle = tag | handle %}
+                              {% comment %}
+                                筛选组存不存在已选项，商品数量需要使用不同的计算方法
+                              {% endcomment %}
+                              {%- liquid
+                                # isCurrentGroupExixtOnParma： 当前组是否存在一个或多个已选项
+                                assign isCurrentGroupExixtOnParma = false
+                                for _group in separatedParamTagGroups
+                                  assign _groupKey = _group | split: ':' | first
+                                  assign _groupValue = _group | split: ':' | last
+                                  if _groupKey == current_tag_group_name
+                                    assign isCurrentGroupExixtOnParma = true
+                                    break
+                                  endif
+                                endfor
+                                if isCurrentGroupExixtOnParma == false
+                                  assign product_count = 0
+                                  for product in collection.products
+                                    assign forloopIndex0Str = forloop.index0 | strip
+                                    unless resultProductIndexList contains forloopIndex0Str
+                                      # 只遍历筛选结果的商品列表
+                                      continue
+                                    endunless
+                                    if product.tags contains tag_name
+                                      if isShowInstockOnly
+                                        if product.available
+                                          assign product_count = product_count | plus: 1
+                                        endif
+                                      else
+                                        assign product_count = product_count | plus: 1
+                                      endif
+                                    endif
+                                  endfor
+                                else
+                                  # 新版 or
+                                  assign product_count = 0
+                                  for product in collection.products
+                                    assign isProductCorrespond = true
+                                    # _paramTagGroup: 例如：'color:white,blue' 等
+                                    for _paramTagGroup in pageParamTagGroups
+                                      assign _paramTagKey = _paramTagGroup | split: ':' | first | handle
+                                      assign _paramTagValues = _paramTagGroup | split: ':' | last | split: ','
+                                      assign isOptionCorrespond = false
+                                      # _paramTagValue: 例如：'blue', 'white', 'wireless' 等值
+                                      if _paramTagKey == blank or _paramTagValues == blank
+                                        continue
+                                      endif 
+                                      # 若为当前所在筛选组，不管组内其他项是否已选或不选，固定成计算当前筛选项
+                                      if _paramTagKey == current_tag_group_name
+                                        assign isProductCorrespond = false
+                                        for _productTag in product.tags
+                                          assign _productTagHandle = _productTag | handle | downcase
+                                          if _productTagHandle == current_tag_handle
+                                            assign isProductCorrespond = true
+                                            break
+                                          endif
+                                        endfor
+                                        continue
+                                      endif
+                                      # 非当前所在筛选组，正常计算
+                                      for _productTag in product.tags
+                                        # 获得handle，区分出产品tag的键和值
+                                        assign _productTagHandle = _productTag | handle | downcase
+                                        assign _productTagKey = _productTag | replace: '-', '_' | split: "_" | first | handle
+                                        assign _productTagValues = _productTag | replace: '-', '_' | split: "_" | last | handle
+                                        comment
+                                          筛选项是单选
+                                          筛选项是多选，符合其中一条即可
+                                        endcomment
+                                        for _paramTagValue in _paramTagValues
+                                          assign _paramTagValueHandle = _paramTagValue | handle | downcase
+                                          assign _paramTag = _paramTagKey | append: '-' | append: _paramTagValueHandle
+                                          if _productTagHandle == _paramTag
+                                            assign isOptionCorrespond = true
+                                            break
+                                          endif
+                                        endfor
+                                      endfor
+                                      # 产品不符合筛选结果
+                                      if isOptionCorrespond == false
+                                        assign isProductCorrespond = false
+                                        break
+                                      endif
+                                    endfor
+                                    if isProductCorrespond == true
+                                      # 需要额外考虑只显示有库存商品的情况
+                                      if isShowInstockOnly
+                                        if product.available
+                                          assign product_count = product_count | plus: 1
+                                        endif
+                                      else
+                                        assign product_count = product_count | plus: 1
+                                      endif
+                                    endif
+                                  endfor
+                                endif
+                              -%}
+                              <div class="advanced-filter-product-count">
+                                ({{product_count}})
+                              </div>
+                            {% endif %}
+                          </li>
+                        {%- endif -%}
+                      {% endif %}
+                      
+                    {%- endfor -%}
+                    
+                  {%- endfor -%}
+                    <!-- loop block.settings.tag_list -->
+                </ul>
+                <!-- advanced-filters end  -->
+              </div>
+            {% endif %}
+          {%- endfor -%}
+        {% endfor %}
+  
+        <div class="filter-type active filter-type-hide">
+          <span class="filter-type-title">In stock
+            <div class="filter-type-svg-up">
+              <svg width="16" height="7" viewBox="0 0 16 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 5V7L8 2L0 7V5L8 0L16 5Z" fill="black"/>
+              </svg>
+            </div>
+            <div class="filter-type-svg-down">
+                <svg width="16" height="7" viewBox="0 0 16 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 5V7L8 2L0 7V5L8 0L16 5Z" fill="black"/>
+                </svg>
+            </div>
+          </span>
+          <ul class="advanced-filters">
+            {% comment %} <li class="advanced-filter function-js-tag {% if isShowInstockOnly%}active-filter{% endif %}"> {% endcomment %}
+            <li class="advanced-filter function-js-tag">
+              <a class="instock-tag instock_option" href="javascript:;">
+             
+                <span class="tag-close checked hidecheck">
+                  <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="3.03459" y1="8.36396" x2="10.1057" y2="1.29289" stroke="white" stroke-width="2"/>
+                    <line x1="0.707107" y1="4.60564" x2="4.24264" y2="8.14117" stroke="white" stroke-width="2"/>
+                  </svg>
+                </span>
+           
+           
+                <span class="tag-close unchecked">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0.5" y="0.5" width="19" height="19" stroke="black"/>
+                  </svg>
+                </span>Yes 
+              
+                {% comment %} <span class="tag-close"></span>Yes {% endcomment %}
+              </a>
+              {% assign product_count = 0 %}
+              {% for product in collection.products %}
+                {% comment %} 只计算筛选后的产品 {% endcomment %}
+                {% liquid
+                  assign forloopIndex0Str = forloop.index0 | strip
+                  unless resultProductIndexList contains forloopIndex0Str
+                    continue
+                  endunless
+                %}
+                {% if product.available %}
+                  {% assign product_count = product_count | plus: 1 %}
+                {% endif %}
+              {% endfor %}
+  
+              <div class="advanced-filter-product-count">
+                {% if product_count < 10 %}
+                  ({{product_count}})
+                {% else %}
+                  ({{product_count}})
+                {% endif %}
+              </div>
+            </li>
+          </ul>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+  
+  <script>
+    $(function(){
+      $('.filter-type').off();
+      $('.filter-type-title').click(function(){
+        $(this).parent('.filter-type').toggleClass('active');
+      })
+      $('.filter-toolbar__mobile-bottom-button').click(function(){
+          $('.filter-new-container').addClass('entered');
+      })
+      $('.filter-new-mobile-drawer-head-close').click(function(){
+        $('.filter-new-container').removeClass('entered');
+      })
+    })
+  </script>
+  

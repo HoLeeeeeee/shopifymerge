@@ -1,0 +1,1693 @@
+{{ 'section-coverage-proreforyou.css' | asset_url | stylesheet_tag }}
+
+{% liquid
+  assign secid = section.id | split: '__'
+  assign secidlast = secid[1] | replace: '-', '_'
+%}
+<div class="coverageforyou-container">
+  <div class="contain-index">
+    {%- if section.settings.title != blank -%}
+      <div class="coverageforyou-title animate-ele">{{ section.settings.title }}</div>
+    {%- endif -%}
+    {% comment %}
+      <div class="coverageforyou-navfir animate-ele">
+        {%- if section.settings.type1 != blank -%}<span class="coverageforyou-navfiritem coverageforyou-navfiritem01 active" data-index="1">{{ section.settings.type1 }}</span>{%- endif -%}
+        {%- if section.settings.type2 != blank -%}<span class="coverageforyou-navfiritem coverageforyou-navfiritem02" data-index="2">{{ section.settings.type2 }}</span>{%- endif -%}
+      </div>
+    {% endcomment %}
+    <!-- SIM Card Content -->
+    <div class="coverageforyou-seccon coverageforyou-seccon01 animate-ele">
+      {% liquid
+        assign originalus = false
+        assign originaluk = false
+        assign originaleu = false
+        assign originalca = false
+        assign originalgl = false
+        for block in section.blocks
+          if block.type == 'simcard'
+            if block.settings.country == 'US'
+              assign originalus = true
+            elsif block.settings.country == 'UK'
+              assign originaluk = true
+            elsif block.settings.country == 'Europe'
+              assign originaleu = true
+            elsif block.settings.country == 'Canada'
+              assign originalca = true
+            elsif block.settings.country == 'Global'
+              assign originalgl = true
+            endif
+          endif
+        endfor
+      %}
+      {% comment %} <div class="coverageforyou-navsec">
+        <div class="coverageforyou-navsecitem coverageforyou-navsecitem01 active" data-index="1">All Products</div>
+        {% if originalus %}
+          <div class="coverageforyou-navsecitem coverageforyou-navsecitem02" data-index="2">US</div>
+        {% endif %}
+        {% if originaluk %}
+          <div class="coverageforyou-navsecitem coverageforyou-navsecitem03" data-index="3">UK</div>
+        {% endif %}
+        {% if originaleu %}
+          <div class="coverageforyou-navsecitem coverageforyou-navsecitem04" data-index="4">Europe</div>
+        {% endif %}
+        {% if originalca %}
+          <div class="coverageforyou-navsecitem coverageforyou-navsecitem05" data-index="5">Canada</div>
+        {% endif %}
+        {% if originalgl %}
+          <div class="coverageforyou-navsecitem coverageforyou-navsecitem06" data-index="6">Global</div>
+        {% endif %}
+      </div> {% endcomment %}
+
+      <div class="coverageforyou-contsec">
+        <div class="inforyou-contsecitem inforyou-contsecitem-1">
+          <div class="swiper-button-prev foryoubtn foryouprev-firall">
+            <svg width="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="25" cy="25" r="24" stroke="currentColor" stroke-width="2"/>
+              <path d="M26.2939 19.2939L20.2939 25.2939L26.2939 31.2939" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="swiper-button-next foryoubtn foryounext-firall">
+            <svg width="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="25" cy="25" r="24" transform="matrix(-1 0 0 1 50 0)" stroke="currentColor" stroke-width="2"/>
+              <path d="M23.7061 19.2939L29.7061 25.2939L23.7061 31.2939" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="swiper" id="foryouswpbox-firstall">
+            <div class="swiper-scrollbar hide-pc swiper-scrollbar-firstall"></div>
+            <div class="swiper-wrapper">
+              {% for block in section.blocks %}
+                {% if block.type == 'simcard' %}
+                  <style>
+                    #infypro-topbox-{{ block.id }}:before{
+                        background: linear-gradient(251.58deg, {{block.settings.color_1}} 11.65%, {{block.settings.color_2}} 89.32%);
+                    }
+                  </style>
+                  <div class="swiper-slide">
+                    <div class="infycontsecitem-pro">
+                      <div class="infycontsecitem-pro-topbox" id="infypro-topbox-{{ block.id }}">
+                        <div class="infycontsecitem-pro-img">
+                          {% if block.settings.icon01 -%}
+                            <img alt="" src="{{ block.settings.icon01 | img_url:'master' }}">
+                          {%- endif %}
+                          {% if block.settings.icon02 -%}
+                            <img alt="" src="{{ block.settings.icon02 | img_url:'master' }}">
+                          {%- endif %}
+                          {% if block.settings.icon03 -%}
+                            <img alt="" src="{{ block.settings.icon03 | img_url:'master' }}">
+                          {%- endif %}
+                        </div>
+                        {% if block.settings.title != blank %}
+                          <div class="infycontsecitem-pro-plan">
+                            {{ block.settings.title }}
+                          </div>
+                        {% endif %}
+                        {% if block.settings.price != blank %}
+                          <div class="infycontsecitem-pro-price">
+                            {{ block.settings.price }}
+                          </div>
+                        {% endif %}
+                      </div>
+                      {% if block.settings.content != blank %}
+                        <div class="infycontsecitem-pro-content">
+                          {{ block.settings.content }}
+                        </div>
+                      {% endif %}
+
+                      {% if block.settings.shopbtn != blank %}
+                        <a class="infycontsecitem-pro-btn bthho" href="{{ block.settings.shopurl }}">
+                          <span>{{ block.settings.shopbtn }}</span>
+                        </a>
+                      {% endif %}
+                    </div>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+          <script>
+                           var foryous_firstall = new Swiper('#foryouswpbox-firstall',{
+                          slidesPerView : 3,
+                          spaceBetween: '4.45%',
+                          observer: true,  //开启动态检查器，监测swiper和slide
+                          observeParents: true,
+                          {% if section.settings.autoplay %}
+                            autoplay: {
+                              delay: {{ section.settings.interval | times: 1000 }},
+                            },
+                            {% endif %}
+                          navigation: {
+                      		nextEl: '.foryounext-firall',
+                      		prevEl: '.foryouprev-firall',
+                      	},
+             scrollbar: {
+              el: '.swiper-scrollbar-firstall',dragSize:89
+            }
+            ,
+            breakpoints: {
+              10: {  //当屏幕宽度大于等于320
+                slidesPerView: 1.5,
+                spaceBetween: 10
+              },
+              550: {  //当屏幕宽度大于等于768
+                slidesPerView: 2,
+                spaceBetween: 20
+              },
+              768: {  //当屏幕宽度大于等于768
+                slidesPerView: 2,
+                spaceBetween: '4%'
+              },
+              994: {
+                slidesPerView: 3,
+                spaceBetween: '4.45%'
+              },
+              1200: {
+                slidesPerView: 3,
+                spaceBetween: '4.45%'
+              }
+            }
+                        })
+          </script>
+        </div>
+
+        <!-- SIM Card US -->
+        {% if originalus %}
+          <div class="inforyou-contsecitem inforyou-contsecitem-2">
+            <div class="swiper-button-prev foryoubtn foryouprev-firus">
+              <svg width="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="25" cy="25" r="24" stroke="currentColor" stroke-width="2"/>
+                <path d="M26.2939 19.2939L20.2939 25.2939L26.2939 31.2939" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="swiper-button-next foryoubtn foryounext-firus">
+              <svg width="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="25" cy="25" r="24" transform="matrix(-1 0 0 1 50 0)" stroke="currentColor" stroke-width="2"/>
+                <path d="M23.7061 19.2939L29.7061 25.2939L23.7061 31.2939" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="swiper" id="foryouswpbox-firstus">
+              <div class="swiper-scrollbar hide-pc swiper-scrollbar-firstus"></div>
+              <div class="swiper-wrapper">
+                {% for block in section.blocks %}
+                  {% if block.type == 'simcard' and block.settings.country == 'US' %}
+                    <style>
+                      #infypro-topbox-{{ block.id }}:before{
+                          background: linear-gradient(251.58deg, {{block.settings.color_1}} 11.65%, {{block.settings.color_2}} 89.32%);
+                      }
+                    </style>
+                    <div class="swiper-slide">
+                      <div class="infycontsecitem-pro">
+                        <div class="infycontsecitem-pro-topbox" id="infypro-topbox-{{ block.id }}">
+                          <div class="infycontsecitem-pro-img">
+                            {% if block.settings.icon01 -%}
+                              <img alt="" src="{{ block.settings.icon01 | img_url:'master' }}">
+                            {%- endif %}
+                            {% if block.settings.icon02 -%}
+                              <img alt="" src="{{ block.settings.icon02 | img_url:'master' }}">
+                            {%- endif %}
+                            {% if block.settings.icon03 -%}
+                              <img alt="" src="{{ block.settings.icon03 | img_url:'master' }}">
+                            {%- endif %}
+                          </div>
+                          {% if block.settings.title != blank %}
+                            <div class="infycontsecitem-pro-plan">
+                              {{ block.settings.title }}
+                            </div>
+                          {% endif %}
+                          {% if block.settings.price != blank %}
+                            <div class="infycontsecitem-pro-price">
+                              {{ block.settings.price }}
+                            </div>
+                          {% endif %}
+                        </div>
+                        {% if block.settings.content != blank %}
+                          <div class="infycontsecitem-pro-content">
+                            {{ block.settings.content }}
+                          </div>
+                        {% endif %}
+                        {% if block.settings.shopbtn != blank %}
+                          <a class="infycontsecitem-pro-btn bthho" href="{{ block.settings.shopurl }}">
+                            <span>{{ block.settings.shopbtn }}</span>
+                          </a>
+                        {% endif %}
+                      </div>
+                    </div>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+            <script>
+                             var foryous_firstus = new Swiper('#foryouswpbox-firstus',{
+                            slidesPerView : 3,
+                            spaceBetween: '4.45%',
+                            observer: true,  //开启动态检查器，监测swiper和slide
+                            observeParents: true,
+                            {% if section.settings.autoplay %}
+                              autoplay: {
+                                delay: {{ section.settings.interval | times: 1000 }},
+                              },
+                              {% endif %}
+                            navigation: {
+                        		nextEl: '.foryounext-firus',
+                        		prevEl: '.foryouprev-firus',
+                        	},
+               scrollbar: {
+                el: '.swiper-scrollbar-firstus',dragSize:89
+              }
+              ,
+              breakpoints: {
+                10: {  //当屏幕宽度大于等于320
+                  slidesPerView: 1.5,
+                  spaceBetween: 10
+                },
+                550: {  //当屏幕宽度大于等于768
+                  slidesPerView: 2,
+                  spaceBetween: 20
+                },
+                768: {  //当屏幕宽度大于等于768
+                  slidesPerView: 2,
+                  spaceBetween: '4%'
+                },
+                994: {
+                  slidesPerView: 3,
+                  spaceBetween: '4.45%'
+                },
+                1200: {
+                  slidesPerView: 3,
+                  spaceBetween: '4.45%'
+                }
+              }
+                          })
+            </script>
+          </div>
+        {% endif %}
+
+        <!-- SIM Card UK -->
+        {% if originaluk %}
+          <div class="inforyou-contsecitem inforyou-contsecitem-3">
+            <div class="swiper-button-prev foryoubtn foryouprev-firuk">
+              <svg width="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="25" cy="25" r="24" stroke="currentColor" stroke-width="2"/>
+                <path d="M26.2939 19.2939L20.2939 25.2939L26.2939 31.2939" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="swiper-button-next foryoubtn foryounext-firuk">
+              <svg width="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="25" cy="25" r="24" transform="matrix(-1 0 0 1 50 0)" stroke="currentColor" stroke-width="2"/>
+                <path d="M23.7061 19.2939L29.7061 25.2939L23.7061 31.2939" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="swiper" id="foryouswpbox-firstuk">
+              <div class="swiper-scrollbar hide-pc swiper-scrollbar-firstuk"></div>
+              <div class="swiper-wrapper">
+                {% for block in section.blocks %}
+                  {% if block.type == 'simcard' and block.settings.country == 'UK' %}
+                    <style>
+                      #infypro-topbox-{{ block.id }}:before{
+                          background: linear-gradient(251.58deg, {{block.settings.color_1}} 11.65%, {{block.settings.color_2}} 89.32%);
+                      }
+                    </style>
+                    <div class="swiper-slide">
+                      <div class="infycontsecitem-pro">
+                        <div class="infycontsecitem-pro-topbox" id="infypro-topbox-{{ block.id }}">
+                          <div class="infycontsecitem-pro-img">
+                            {% if block.settings.icon01 -%}
+                              <img alt="" src="{{ block.settings.icon01 | img_url:'master' }}">
+                            {%- endif %}
+                            {% if block.settings.icon02 -%}
+                              <img alt="" src="{{ block.settings.icon02 | img_url:'master' }}">
+                            {%- endif %}
+                            {% if block.settings.icon03 -%}
+                              <img alt="" src="{{ block.settings.icon03 | img_url:'master' }}">
+                            {%- endif %}
+                          </div>
+                          {% if block.settings.title != blank %}
+                            <div class="infycontsecitem-pro-plan">
+                              {{ block.settings.title }}
+                            </div>
+                          {% endif %}
+                          {% if block.settings.price != blank %}
+                            <div class="infycontsecitem-pro-price">
+                              {{ block.settings.price }}
+                            </div>
+                          {% endif %}
+                        </div>
+                        {% if block.settings.content != blank %}
+                          <div class="infycontsecitem-pro-content">
+                            {{ block.settings.content }}
+                          </div>
+                        {% endif %}
+                        {% if block.settings.shopbtn != blank %}
+                          <a class="infycontsecitem-pro-btn bthho" href="{{ block.settings.shopurl }}">
+                            <span>{{ block.settings.shopbtn }}</span>
+                          </a>
+                        {% endif %}
+                      </div>
+                    </div>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+            <script>
+                             var foryous_firstuk = new Swiper('#foryouswpbox-firstuk',{
+                            slidesPerView : 3,
+                            spaceBetween: '4.45%',
+                            observer: true,  //开启动态检查器，监测swiper和slide
+                            observeParents: true,
+                            {% if section.settings.autoplay %}
+                              autoplay: {
+                                delay: {{ section.settings.interval | times: 1000 }},
+                              },
+                              {% endif %}
+                            navigation: {
+                        		nextEl: '.foryounext-firuk',
+                        		prevEl: '.foryouprev-firuk',
+                        	},
+               scrollbar: {
+                el: '.swiper-scrollbar-firstuk',dragSize:89
+              }
+              ,
+              breakpoints: {
+                10: {  //当屏幕宽度大于等于320
+                  slidesPerView: 1.5,
+                  spaceBetween: 10
+                },
+                550: {  //当屏幕宽度大于等于768
+                  slidesPerView: 2,
+                  spaceBetween: 20
+                },
+                768: {  //当屏幕宽度大于等于768
+                  slidesPerView: 2,
+                  spaceBetween: '4%'
+                },
+                994: {
+                  slidesPerView: 3,
+                  spaceBetween: '4.45%'
+                },
+                1200: {
+                  slidesPerView: 3,
+                  spaceBetween: '4.45%'
+                }
+              }
+                          })
+            </script>
+          </div>
+        {% endif %}
+
+        <!-- SIM Card Europe -->
+        {% if originaleu %}
+          <div class="inforyou-contsecitem inforyou-contsecitem-4">
+            <div class="swiper-button-prev foryoubtn foryouprev-fireu">
+              <svg width="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="25" cy="25" r="24" stroke="currentColor" stroke-width="2"/>
+                <path d="M26.2939 19.2939L20.2939 25.2939L26.2939 31.2939" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="swiper-button-next foryoubtn foryounext-fireu">
+              <svg width="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="25" cy="25" r="24" transform="matrix(-1 0 0 1 50 0)" stroke="currentColor" stroke-width="2"/>
+                <path d="M23.7061 19.2939L29.7061 25.2939L23.7061 31.2939" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="swiper" id="foryouswpbox-firsteu">
+              <div class="swiper-scrollbar hide-pc swiper-scrollbar-firsteu"></div>
+              <div class="swiper-wrapper">
+                {% for block in section.blocks %}
+                  {% if block.type == 'simcard' and block.settings.country == 'Europe' %}
+                    <style>
+                      #infypro-topbox-{{ block.id }}:before{
+                          background: linear-gradient(251.58deg, {{block.settings.color_1}} 11.65%, {{block.settings.color_2}} 89.32%);
+                      }
+                    </style>
+                    <div class="swiper-slide">
+                      <div class="infycontsecitem-pro">
+                        <div class="infycontsecitem-pro-topbox" id="infypro-topbox-{{ block.id }}">
+                          <div class="infycontsecitem-pro-img">
+                            {% if block.settings.icon01 -%}
+                              <img alt="" src="{{ block.settings.icon01 | img_url:'master' }}">
+                            {%- endif %}
+                            {% if block.settings.icon02 -%}
+                              <img alt="" src="{{ block.settings.icon02 | img_url:'master' }}">
+                            {%- endif %}
+                            {% if block.settings.icon03 -%}
+                              <img alt="" src="{{ block.settings.icon03 | img_url:'master' }}">
+                            {%- endif %}
+                          </div>
+                          {% if block.settings.title != blank %}
+                            <div class="infycontsecitem-pro-plan">
+                              {{ block.settings.title }}
+                            </div>
+                          {% endif %}
+                          {% if block.settings.price != blank %}
+                            <div class="infycontsecitem-pro-price">
+                              {{ block.settings.price }}
+                            </div>
+                          {% endif %}
+                        </div>
+                        {% if block.settings.content != blank %}
+                          <div class="infycontsecitem-pro-content">
+                            {{ block.settings.content }}
+                          </div>
+                        {% endif %}
+                        {% if block.settings.shopbtn != blank %}
+                          <a class="infycontsecitem-pro-btn bthho" href="{{ block.settings.shopurl }}">
+                            <span>{{ block.settings.shopbtn }}</span>
+                          </a>
+                        {% endif %}
+                      </div>
+                    </div>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+            <script>
+                             var foryous_firsteu = new Swiper('#foryouswpbox-firsteu',{
+                            slidesPerView : 3,
+                            spaceBetween: '4.45%',
+                            observer: true,  //开启动态检查器，监测swiper和slide
+                            observeParents: true,
+                            {% if section.settings.autoplay %}
+                              autoplay: {
+                                delay: {{ section.settings.interval | times: 1000 }},
+                              },
+                              {% endif %}
+                            navigation: {
+                        		nextEl: '.foryounext-fireu',
+                        		prevEl: '.foryouprev-fireu',
+                        	},
+               scrollbar: {
+                el: '.swiper-scrollbar-firsteu',dragSize:89
+              }
+              ,
+              breakpoints: {
+                10: {  //当屏幕宽度大于等于320
+                  slidesPerView: 1.5,
+                  spaceBetween: 10
+                },
+                550: {  //当屏幕宽度大于等于768
+                  slidesPerView: 2,
+                  spaceBetween: 20
+                },
+                768: {  //当屏幕宽度大于等于768
+                  slidesPerView: 2,
+                  spaceBetween: '4%'
+                },
+                994: {
+                  slidesPerView: 3,
+                  spaceBetween: '4.45%'
+                },
+                1200: {
+                  slidesPerView: 3,
+                  spaceBetween: '4.45%'
+                }
+              }
+                          })
+            </script>
+          </div>
+        {% endif %}
+
+        <!-- SIM Card Canada -->
+        {% if originalca %}
+          <div class="inforyou-contsecitem inforyou-contsecitem-5">
+            <div class="swiper-button-prev foryoubtn foryouprev-firca">
+              <svg width="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="25" cy="25" r="24" stroke="currentColor" stroke-width="2"/>
+                <path d="M26.2939 19.2939L20.2939 25.2939L26.2939 31.2939" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="swiper-button-next foryoubtn foryounext-firca">
+              <svg width="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="25" cy="25" r="24" transform="matrix(-1 0 0 1 50 0)" stroke="currentColor" stroke-width="2"/>
+                <path d="M23.7061 19.2939L29.7061 25.2939L23.7061 31.2939" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="swiper" id="foryouswpbox-firstca">
+              <div class="swiper-scrollbar hide-pc swiper-scrollbar-firstca"></div>
+              <div class="swiper-wrapper">
+                {% for block in section.blocks %}
+                  {% if block.type == 'simcard' and block.settings.country == 'Canada' %}
+                    <style>
+                      #infypro-topbox-{{ block.id }}:before{
+                          background: linear-gradient(251.58deg, {{block.settings.color_1}} 11.65%, {{block.settings.color_2}} 89.32%);
+                      }
+                    </style>
+                    <div class="swiper-slide">
+                      <div class="infycontsecitem-pro">
+                        <div class="infycontsecitem-pro-topbox" id="infypro-topbox-{{ block.id }}">
+                          <div class="infycontsecitem-pro-img">
+                            {% if block.settings.icon01 -%}
+                              <img alt="" src="{{ block.settings.icon01 | img_url:'master' }}">
+                            {%- endif %}
+                            {% if block.settings.icon02 -%}
+                              <img alt="" src="{{ block.settings.icon02 | img_url:'master' }}">
+                            {%- endif %}
+                            {% if block.settings.icon03 -%}
+                              <img alt="" src="{{ block.settings.icon03 | img_url:'master' }}">
+                            {%- endif %}
+                          </div>
+                          {% if block.settings.title != blank %}
+                            <div class="infycontsecitem-pro-plan">
+                              {{ block.settings.title }}
+                            </div>
+                          {% endif %}
+                          {% if block.settings.price != blank %}
+                            <div class="infycontsecitem-pro-price">
+                              {{ block.settings.price }}
+                            </div>
+                          {% endif %}
+                        </div>
+                        {% if block.settings.content != blank %}
+                          <div class="infycontsecitem-pro-content">
+                            {{ block.settings.content }}
+                          </div>
+                        {% endif %}
+                        {% if block.settings.shopbtn != blank %}
+                          <a class="infycontsecitem-pro-btn bthho" href="{{ block.settings.shopurl }}">
+                            <span>{{ block.settings.shopbtn }}</span>
+                          </a>
+                        {% endif %}
+                      </div>
+                    </div>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+            <script>
+                             var foryous_firstca = new Swiper('#foryouswpbox-firstca',{
+                            slidesPerView : 3,
+                            spaceBetween: '4.45%',
+                            observer: true,  //开启动态检查器，监测swiper和slide
+                            observeParents: true,
+                            {% if section.settings.autoplay %}
+                              autoplay: {
+                                delay: {{ section.settings.interval | times: 1000 }},
+                              },
+                              {% endif %}
+                            navigation: {
+                        		nextEl: '.foryounext-firca',
+                        		prevEl: '.foryouprev-firca',
+                        	},
+               scrollbar: {
+                el: '.swiper-scrollbar-firstca',dragSize:89
+              }
+              ,
+              breakpoints: {
+                10: {  //当屏幕宽度大于等于320
+                  slidesPerView: 1.5,
+                  spaceBetween: 10
+                },
+                550: {  //当屏幕宽度大于等于768
+                  slidesPerView: 2,
+                  spaceBetween: 20
+                },
+                768: {  //当屏幕宽度大于等于768
+                  slidesPerView: 2,
+                  spaceBetween: '4%'
+                },
+                994: {
+                  slidesPerView: 3,
+                  spaceBetween: '4.45%'
+                },
+                1200: {
+                  slidesPerView: 3,
+                  spaceBetween: '4.45%'
+                }
+              }
+                          })
+            </script>
+          </div>
+        {% endif %}
+
+        <!-- SIM Card Global -->
+        {% if originalgl %}
+          <div class="inforyou-contsecitem inforyou-contsecitem-6">
+            <div class="swiper-button-prev foryoubtn foryouprev-firgl">
+              <svg width="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="25" cy="25" r="24" stroke="currentColor" stroke-width="2"/>
+                <path d="M26.2939 19.2939L20.2939 25.2939L26.2939 31.2939" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="swiper-button-next foryoubtn foryounext-firgl">
+              <svg width="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="25" cy="25" r="24" transform="matrix(-1 0 0 1 50 0)" stroke="currentColor" stroke-width="2"/>
+                <path d="M23.7061 19.2939L29.7061 25.2939L23.7061 31.2939" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="swiper" id="foryouswpbox-firstgl">
+              <div class="swiper-scrollbar hide-pc swiper-scrollbar-firstgl"></div>
+              <div class="swiper-wrapper">
+                {% for block in section.blocks %}
+                  {% if block.type == 'simcard' and block.settings.country == 'Global' %}
+                    <style>
+                      #infypro-topbox-{{ block.id }}:before{
+                          background: linear-gradient(251.58deg, {{block.settings.color_1}} 11.65%, {{block.settings.color_2}} 89.32%);
+                      }
+                    </style>
+                    <div class="swiper-slide">
+                      <div class="infycontsecitem-pro">
+                        <div class="infycontsecitem-pro-topbox" id="infypro-topbox-{{ block.id }}">
+                          <div class="infycontsecitem-pro-img">
+                            {% if block.settings.icon01 -%}
+                              <img alt="" src="{{ block.settings.icon01 | img_url:'master' }}">
+                            {%- endif %}
+                            {% if block.settings.icon02 -%}
+                              <img alt="" src="{{ block.settings.icon02 | img_url:'master' }}">
+                            {%- endif %}
+                            {% if block.settings.icon03 -%}
+                              <img alt="" src="{{ block.settings.icon03 | img_url:'master' }}">
+                            {%- endif %}
+                          </div>
+                          {% if block.settings.title != blank %}
+                            <div class="infycontsecitem-pro-plan">
+                              {{ block.settings.title }}
+                            </div>
+                          {% endif %}
+                          {% if block.settings.price != blank %}
+                            <div class="infycontsecitem-pro-price">
+                              {{ block.settings.price }}
+                            </div>
+                          {% endif %}
+                        </div>
+                        {% if block.settings.content != blank %}
+                          <div class="infycontsecitem-pro-content">
+                            {{ block.settings.content }}
+                          </div>
+                        {% endif %}
+                        {% if block.settings.shopbtn != blank %}
+                          <a class="infycontsecitem-pro-btn bthho" href="{{ block.settings.shopurl }}">
+                            <span>{{ block.settings.shopbtn }}</span>
+                          </a>
+                        {% endif %}
+                      </div>
+                    </div>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+            <script>
+                             var foryous_firstgl = new Swiper('#foryouswpbox-firstgl',{
+                            slidesPerView : 3,
+                            spaceBetween: '4.45%',
+                            observer: true,  //开启动态检查器，监测swiper和slide
+                            observeParents: true,
+                            {% if section.settings.autoplay %}
+                              autoplay: {
+                                delay: {{ section.settings.interval | times: 1000 }},
+                              },
+                              {% endif %}
+                            navigation: {
+                        		nextEl: '.foryounext-firgl',
+                        		prevEl: '.foryouprev-firgl',
+                        	},
+               scrollbar: {
+                el: '.swiper-scrollbar-firstgl',dragSize:89
+              }
+              ,
+              breakpoints: {
+                10: {  //当屏幕宽度大于等于320
+                  slidesPerView: 1.5,
+                  spaceBetween: 10
+                },
+                550: {  //当屏幕宽度大于等于768
+                  slidesPerView: 2,
+                  spaceBetween: 20
+                },
+                768: {  //当屏幕宽度大于等于768
+                  slidesPerView: 2,
+                  spaceBetween: '4%'
+                },
+                994: {
+                  slidesPerView: 3,
+                  spaceBetween: '4.45%'
+                },
+                1200: {
+                  slidesPerView: 3,
+                  spaceBetween: '4.45%'
+                }
+              }
+                          })
+            </script>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- Device SIM card content -->
+
+    <div class="coverageforyou-seccon coverageforyou-seccon02 animate-ele">
+      {% liquid
+        assign originalus = false
+        assign originaluk = false
+        assign originaleu = false
+        assign originalca = false
+        assign originalgl = false
+        for block in section.blocks
+          if block.type == 'desimcard'
+            if block.settings.country == 'US'
+              assign originalus = true
+            elsif block.settings.country == 'UK'
+              assign originaluk = true
+            elsif block.settings.country == 'Europe'
+              assign originaleu = true
+            elsif block.settings.country == 'Canada'
+              assign originalca = true
+            elsif block.settings.country == 'Global'
+              assign originalgl = true
+            endif
+          endif
+        endfor
+      %}
+      <div class="coverageforyou-navsec">
+        <div class="coverageforyou-navsecitem coverageforyou-navsecitem01 active" data-index="1">All Products</div>
+        {% if originalus %}
+          <div class="coverageforyou-navsecitem coverageforyou-navsecitem02" data-index="2">US</div>
+        {% endif %}
+        {% if originaluk %}
+          <div class="coverageforyou-navsecitem coverageforyou-navsecitem03" data-index="3">UK</div>
+        {% endif %}
+        {% if originaleu %}
+          <div class="coverageforyou-navsecitem coverageforyou-navsecitem04" data-index="4">Europe</div>
+        {% endif %}
+        {% if originalca %}
+          <div class="coverageforyou-navsecitem coverageforyou-navsecitem05" data-index="5">Canada</div>
+        {% endif %}
+        {% if originalgl %}
+          <div class="coverageforyou-navsecitem coverageforyou-navsecitem06" data-index="6">Global</div>
+        {% endif %}
+      </div>
+
+      <div class="coverageforyou-contsec">
+        <div class="inforyou-contsecitem inforyou-contsecitem-1">
+          <div class="swiper-button-prev foryoubtn foryouprev-secall">
+            <svg width="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="25" cy="25" r="24" stroke="currentColor" stroke-width="2"/>
+              <path d="M26.2939 19.2939L20.2939 25.2939L26.2939 31.2939" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="swiper-button-next foryoubtn foryounext-secall">
+            <svg width="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="25" cy="25" r="24" transform="matrix(-1 0 0 1 50 0)" stroke="currentColor" stroke-width="2"/>
+              <path d="M23.7061 19.2939L29.7061 25.2939L23.7061 31.2939" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="swiper" id="foryouswpbox-secall">
+            <div class="swiper-scrollbar hide-pc swiper-scrollbar-secall"></div>
+            <div class="swiper-wrapper">
+              {% for block in section.blocks %}
+                {% if block.type == 'desimcard' %}
+                  <style>
+                    #infypro-topbox-{{ block.id }}:before{
+                        background: linear-gradient(251.58deg, {{block.settings.color_1}} 11.65%, {{block.settings.color_2}} 89.32%);
+                    }
+                  </style>
+                  <div class="swiper-slide">
+                    <div class="infycontsecitem-pro">
+                      <div class="infycontsecitem-pro-topbox" id="infypro-topbox-{{ block.id }}">
+                        <div class="infycontsecitem-pro-img">
+                          {% if block.settings.icon01 -%}
+                            <img alt="" src="{{ block.settings.icon01 | img_url:'master' }}">
+                          {%- endif %}
+                          {% if block.settings.icon02 -%}
+                            <img alt="" src="{{ block.settings.icon02 | img_url:'master' }}">
+                          {%- endif %}
+                          {% if block.settings.icon03 -%}
+                            <img alt="" src="{{ block.settings.icon03 | img_url:'master' }}">
+                          {%- endif %}
+                        </div>
+                        {% if block.settings.title != blank %}
+                          <div class="infycontsecitem-pro-plan">
+                            {{ block.settings.title }}
+                          </div>
+                        {% endif %}
+                        {% if block.settings.price != blank %}
+                          <div class="infycontsecitem-pro-price">
+                            {{ block.settings.price }}
+                          </div>
+                        {% endif %}
+                      </div>
+                      {% if block.settings.content != blank %}
+                        <div class="infycontsecitem-pro-content">
+                          {{ block.settings.content }}
+                        </div>
+                      {% endif %}
+
+                      {% if block.settings.shopbtn != blank %}
+                        <a class="infycontsecitem-pro-btn bthho" href="{{ block.settings.shopurl }}">
+                          <span>{{ block.settings.shopbtn }}</span>
+                        </a>
+                      {% endif %}
+                    </div>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+          <script>
+                           var foryous_secall = new Swiper('#foryouswpbox-secall',{
+                          slidesPerView : 3,
+                          spaceBetween: '4.45%',
+                          observer: true,  //开启动态检查器，监测swiper和slide
+                          observeParents: true,
+                          {% if section.settings.autoplay %}
+                            autoplay: {
+                              delay: {{ section.settings.interval | times: 1000 }},
+                            },
+                            {% endif %}
+                          navigation: {
+                      		nextEl: '.foryounext-secall',
+                      		prevEl: '.foryouprev-secall',
+                      	},
+             scrollbar: {
+              el: '.swiper-scrollbar-secall',dragSize:89
+            }
+            ,
+            breakpoints: {
+              10: {  //当屏幕宽度大于等于320
+                slidesPerView: 1.5,
+                spaceBetween: 10
+              },
+              550: {  //当屏幕宽度大于等于768
+                slidesPerView: 2,
+                spaceBetween: 20
+              },
+              768: {  //当屏幕宽度大于等于768
+                slidesPerView: 2,
+                spaceBetween: '4%'
+              },
+              994: {
+                slidesPerView: 3,
+                spaceBetween: '4.45%'
+              },
+              1200: {
+                slidesPerView: 3,
+                spaceBetween: '4.45%'
+              }
+            }
+                        })
+          </script>
+        </div>
+
+        <!-- SIM Card US -->
+        {% if originalus %}
+          <div class="inforyou-contsecitem inforyou-contsecitem-2">
+            <div class="swiper-button-prev foryoubtn foryouprev-secus">
+              <svg width="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="25" cy="25" r="24" stroke="currentColor" stroke-width="2"/>
+                <path d="M26.2939 19.2939L20.2939 25.2939L26.2939 31.2939" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="swiper-button-next foryoubtn foryounext-secus">
+              <svg width="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="25" cy="25" r="24" transform="matrix(-1 0 0 1 50 0)" stroke="currentColor" stroke-width="2"/>
+                <path d="M23.7061 19.2939L29.7061 25.2939L23.7061 31.2939" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="swiper" id="foryouswpbox-secus">
+              <div class="swiper-scrollbar hide-pc swiper-scrollbar-secus"></div>
+              <div class="swiper-wrapper">
+                {% for block in section.blocks %}
+                  {% if block.type == 'desimcard' and block.settings.country == 'US' %}
+                    <style>
+                      #infypro-topbox-{{ block.id }}:before{
+                          background: linear-gradient(251.58deg, {{block.settings.color_1}} 11.65%, {{block.settings.color_2}} 89.32%);
+                      }
+                    </style>
+                    <div class="swiper-slide">
+                      <div class="infycontsecitem-pro">
+                        <div class="infycontsecitem-pro-topbox" id="infypro-topbox-{{ block.id }}">
+                          <div class="infycontsecitem-pro-img">
+                            {% if block.settings.icon01 -%}
+                              <img alt="" src="{{ block.settings.icon01 | img_url:'master' }}">
+                            {%- endif %}
+                            {% if block.settings.icon02 -%}
+                              <img alt="" src="{{ block.settings.icon02 | img_url:'master' }}">
+                            {%- endif %}
+                            {% if block.settings.icon03 -%}
+                              <img alt="" src="{{ block.settings.icon03 | img_url:'master' }}">
+                            {%- endif %}
+                          </div>
+                          {% if block.settings.title != blank %}
+                            <div class="infycontsecitem-pro-plan">
+                              {{ block.settings.title }}
+                            </div>
+                          {% endif %}
+                          {% if block.settings.price != blank %}
+                            <div class="infycontsecitem-pro-price">
+                              {{ block.settings.price }}
+                            </div>
+                          {% endif %}
+                        </div>
+                        {% if block.settings.content != blank %}
+                          <div class="infycontsecitem-pro-content">
+                            {{ block.settings.content }}
+                          </div>
+                        {% endif %}
+                        {% if block.settings.shopbtn != blank %}
+                          <a class="infycontsecitem-pro-btn bthho" href="{{ block.settings.shopurl }}">
+                            <span>{{ block.settings.shopbtn }}</span>
+                          </a>
+                        {% endif %}
+                      </div>
+                    </div>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+            <script>
+                             var foryous_secus = new Swiper('#foryouswpbox-secus',{
+                            slidesPerView : 3,
+                            spaceBetween: '4.45%',
+                            observer: true,  //开启动态检查器，监测swiper和slide
+                            observeParents: true,
+                            {% if section.settings.autoplay %}
+                              autoplay: {
+                                delay: {{ section.settings.interval | times: 1000 }},
+                              },
+                              {% endif %}
+                            navigation: {
+                        		nextEl: '.foryounext-secus',
+                        		prevEl: '.foryouprev-secus',
+                        	},
+               scrollbar: {
+                el: '.swiper-scrollbar-secus',dragSize:89
+              }
+              ,
+              breakpoints: {
+                10: {  //当屏幕宽度大于等于320
+                  slidesPerView: 1.5,
+                  spaceBetween: 10
+                },
+                550: {  //当屏幕宽度大于等于768
+                  slidesPerView: 2,
+                  spaceBetween: 20
+                },
+                768: {  //当屏幕宽度大于等于768
+                  slidesPerView: 2,
+                  spaceBetween: '4%'
+                },
+                994: {
+                  slidesPerView: 3,
+                  spaceBetween: '4.45%'
+                },
+                1200: {
+                  slidesPerView: 3,
+                  spaceBetween: '4.45%'
+                }
+              }
+                          })
+            </script>
+          </div>
+        {% endif %}
+
+        <!-- SIM Card UK -->
+        {% if originaluk %}
+          <div class="inforyou-contsecitem inforyou-contsecitem-3">
+            <div class="swiper-button-prev foryoubtn foryouprev-secuk">
+              <svg width="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="25" cy="25" r="24" stroke="currentColor" stroke-width="2"/>
+                <path d="M26.2939 19.2939L20.2939 25.2939L26.2939 31.2939" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="swiper-button-next foryoubtn foryounext-secuk">
+              <svg width="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="25" cy="25" r="24" transform="matrix(-1 0 0 1 50 0)" stroke="currentColor" stroke-width="2"/>
+                <path d="M23.7061 19.2939L29.7061 25.2939L23.7061 31.2939" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="swiper" id="foryouswpbox-secuk">
+              <div class="swiper-scrollbar hide-pc swiper-scrollbar-secuk"></div>
+              <div class="swiper-wrapper">
+                {% for block in section.blocks %}
+                  {% if block.type == 'desimcard' and block.settings.country == 'UK' %}
+                    <style>
+                      #infypro-topbox-{{ block.id }}:before{
+                          background: linear-gradient(251.58deg, {{block.settings.color_1}} 11.65%, {{block.settings.color_2}} 89.32%);
+                      }
+                    </style>
+                    <div class="swiper-slide">
+                      <div class="infycontsecitem-pro">
+                        <div class="infycontsecitem-pro-topbox" id="infypro-topbox-{{ block.id }}">
+                          <div class="infycontsecitem-pro-img">
+                            {% if block.settings.icon01 -%}
+                              <img alt="" src="{{ block.settings.icon01 | img_url:'master' }}">
+                            {%- endif %}
+                            {% if block.settings.icon02 -%}
+                              <img alt="" src="{{ block.settings.icon02 | img_url:'master' }}">
+                            {%- endif %}
+                            {% if block.settings.icon03 -%}
+                              <img alt="" src="{{ block.settings.icon03 | img_url:'master' }}">
+                            {%- endif %}
+                          </div>
+                          {% if block.settings.title != blank %}
+                            <div class="infycontsecitem-pro-plan">
+                              {{ block.settings.title }}
+                            </div>
+                          {% endif %}
+                          {% if block.settings.price != blank %}
+                            <div class="infycontsecitem-pro-price">
+                              {{ block.settings.price }}
+                            </div>
+                          {% endif %}
+                        </div>
+                        {% if block.settings.content != blank %}
+                          <div class="infycontsecitem-pro-content">
+                            {{ block.settings.content }}
+                          </div>
+                        {% endif %}
+                        {% if block.settings.shopbtn != blank %}
+                          <a class="infycontsecitem-pro-btn bthho" href="{{ block.settings.shopurl }}">
+                            <span>{{ block.settings.shopbtn }}</span>
+                          </a>
+                        {% endif %}
+                      </div>
+                    </div>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+            <script>
+                             var foryous_secuk = new Swiper('#foryouswpbox-secuk',{
+                            slidesPerView : 3,
+                            spaceBetween: '4.45%',
+                            observer: true,  //开启动态检查器，监测swiper和slide
+                            observeParents: true,
+                            {% if section.settings.autoplay %}
+                              autoplay: {
+                                delay: {{ section.settings.interval | times: 1000 }},
+                              },
+                              {% endif %}
+                            navigation: {
+                        		nextEl: '.foryounext-secuk',
+                        		prevEl: '.foryouprev-secuk',
+                        	},
+               scrollbar: {
+                el: '.swiper-scrollbar-secuk',dragSize:89
+              }
+              ,
+              breakpoints: {
+                10: {  //当屏幕宽度大于等于320
+                  slidesPerView: 1.5,
+                  spaceBetween: 10
+                },
+                550: {  //当屏幕宽度大于等于768
+                  slidesPerView: 2,
+                  spaceBetween: 20
+                },
+                768: {  //当屏幕宽度大于等于768
+                  slidesPerView: 2,
+                  spaceBetween: '4%'
+                },
+                994: {
+                  slidesPerView: 3,
+                  spaceBetween: '4.45%'
+                },
+                1200: {
+                  slidesPerView: 3,
+                  spaceBetween: '4.45%'
+                }
+              }
+                          })
+            </script>
+          </div>
+        {% endif %}
+
+        <!-- SIM Card Europe -->
+        {% if originaleu %}
+          <div class="inforyou-contsecitem inforyou-contsecitem-4">
+            <div class="swiper-button-prev foryoubtn foryouprev-seceu">
+              <svg width="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="25" cy="25" r="24" stroke="currentColor" stroke-width="2"/>
+                <path d="M26.2939 19.2939L20.2939 25.2939L26.2939 31.2939" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="swiper-button-next foryoubtn foryounext-seceu">
+              <svg width="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="25" cy="25" r="24" transform="matrix(-1 0 0 1 50 0)" stroke="currentColor" stroke-width="2"/>
+                <path d="M23.7061 19.2939L29.7061 25.2939L23.7061 31.2939" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="swiper" id="foryouswpbox-seceu">
+              <div class="swiper-scrollbar hide-pc swiper-scrollbar-seceu"></div>
+              <div class="swiper-wrapper">
+                {% for block in section.blocks %}
+                  {% if block.type == 'desimcard' and block.settings.country == 'Europe' %}
+                    <style>
+                      #infypro-topbox-{{ block.id }}:before{
+                          background: linear-gradient(251.58deg, {{block.settings.color_1}} 11.65%, {{block.settings.color_2}} 89.32%);
+                      }
+                    </style>
+                    <div class="swiper-slide">
+                      <div class="infycontsecitem-pro">
+                        <div class="infycontsecitem-pro-topbox" id="infypro-topbox-{{ block.id }}">
+                          <div class="infycontsecitem-pro-img">
+                            {% if block.settings.icon01 -%}
+                              <img alt="" src="{{ block.settings.icon01 | img_url:'master' }}">
+                            {%- endif %}
+                            {% if block.settings.icon02 -%}
+                              <img alt="" src="{{ block.settings.icon02 | img_url:'master' }}">
+                            {%- endif %}
+                            {% if block.settings.icon03 -%}
+                              <img alt="" src="{{ block.settings.icon03 | img_url:'master' }}">
+                            {%- endif %}
+                          </div>
+                          {% if block.settings.title != blank %}
+                            <div class="infycontsecitem-pro-plan">
+                              {{ block.settings.title }}
+                            </div>
+                          {% endif %}
+                          {% if block.settings.price != blank %}
+                            <div class="infycontsecitem-pro-price">
+                              {{ block.settings.price }}
+                            </div>
+                          {% endif %}
+                        </div>
+                        {% if block.settings.content != blank %}
+                          <div class="infycontsecitem-pro-content">
+                            {{ block.settings.content }}
+                          </div>
+                        {% endif %}
+                        {% if block.settings.shopbtn != blank %}
+                          <a class="infycontsecitem-pro-btn bthho" href="{{ block.settings.shopurl }}">
+                            <span>{{ block.settings.shopbtn }}</span>
+                          </a>
+                        {% endif %}
+                      </div>
+                    </div>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+            <script>
+                             var foryous_seceu = new Swiper('#foryouswpbox-seceu',{
+                            slidesPerView : 3,
+                            spaceBetween: '4.45%',
+                            observer: true,  //开启动态检查器，监测swiper和slide
+                            observeParents: true,
+                            {% if section.settings.autoplay %}
+                              autoplay: {
+                                delay: {{ section.settings.interval | times: 1000 }},
+                              },
+                              {% endif %}
+                            navigation: {
+                        		nextEl: '.foryounext-seceu',
+                        		prevEl: '.foryouprev-seceu',
+                        	},
+               scrollbar: {
+                el: '.swiper-scrollbar-seceu',dragSize:89
+              }
+              ,
+              breakpoints: {
+                10: {  //当屏幕宽度大于等于320
+                  slidesPerView: 1.5,
+                  spaceBetween: 10
+                },
+                550: {  //当屏幕宽度大于等于768
+                  slidesPerView: 2,
+                  spaceBetween: 20
+                },
+                768: {  //当屏幕宽度大于等于768
+                  slidesPerView: 2,
+                  spaceBetween: '4%'
+                },
+                994: {
+                  slidesPerView: 3,
+                  spaceBetween: '4.45%'
+                },
+                1200: {
+                  slidesPerView: 3,
+                  spaceBetween: '4.45%'
+                }
+              }
+                          })
+            </script>
+          </div>
+        {% endif %}
+
+        <!-- SIM Card Canada -->
+        {% if originalca %}
+          <div class="inforyou-contsecitem inforyou-contsecitem-5">
+            <div class="swiper-button-prev foryoubtn foryouprev-secca">
+              <svg width="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="25" cy="25" r="24" stroke="currentColor" stroke-width="2"/>
+                <path d="M26.2939 19.2939L20.2939 25.2939L26.2939 31.2939" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="swiper-button-next foryoubtn foryounext-secca">
+              <svg width="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="25" cy="25" r="24" transform="matrix(-1 0 0 1 50 0)" stroke="currentColor" stroke-width="2"/>
+                <path d="M23.7061 19.2939L29.7061 25.2939L23.7061 31.2939" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="swiper" id="foryouswpbox-secca">
+              <div class="swiper-scrollbar hide-pc swiper-scrollbar-secca"></div>
+              <div class="swiper-wrapper">
+                {% for block in section.blocks %}
+                  {% if block.type == 'desimcard' and block.settings.country == 'Canada' %}
+                    <style>
+                      #infypro-topbox-{{ block.id }}:before{
+                          background: linear-gradient(251.58deg, {{block.settings.color_1}} 11.65%, {{block.settings.color_2}} 89.32%);
+                      }
+                    </style>
+                    <div class="swiper-slide">
+                      <div class="infycontsecitem-pro">
+                        <div class="infycontsecitem-pro-topbox" id="infypro-topbox-{{ block.id }}">
+                          <div class="infycontsecitem-pro-img">
+                            {% if block.settings.icon01 -%}
+                              <img alt="" src="{{ block.settings.icon01 | img_url:'master' }}">
+                            {%- endif %}
+                            {% if block.settings.icon02 -%}
+                              <img alt="" src="{{ block.settings.icon02 | img_url:'master' }}">
+                            {%- endif %}
+                            {% if block.settings.icon03 -%}
+                              <img alt="" src="{{ block.settings.icon03 | img_url:'master' }}">
+                            {%- endif %}
+                          </div>
+                          {% if block.settings.title != blank %}
+                            <div class="infycontsecitem-pro-plan">
+                              {{ block.settings.title }}
+                            </div>
+                          {% endif %}
+                          {% if block.settings.price != blank %}
+                            <div class="infycontsecitem-pro-price">
+                              {{ block.settings.price }}
+                            </div>
+                          {% endif %}
+                        </div>
+                        {% if block.settings.content != blank %}
+                          <div class="infycontsecitem-pro-content">
+                            {{ block.settings.content }}
+                          </div>
+                        {% endif %}
+                        {% if block.settings.shopbtn != blank %}
+                          <a class="infycontsecitem-pro-btn bthho" href="{{ block.settings.shopurl }}">
+                            <span>{{ block.settings.shopbtn }}</span>
+                          </a>
+                        {% endif %}
+                      </div>
+                    </div>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+            <script>
+              var foryous_secca = new Swiper('#foryouswpbox-secca',{
+                slidesPerView : 3,
+                spaceBetween: '4.45%',
+                observer: true,  //开启动态检查器，监测swiper和slide
+                observeParents: true,
+                {% if section.settings.autoplay %}
+                  autoplay: {
+                    delay: {{ section.settings.interval | times: 1000 }},
+                  },
+                  {% endif %}
+                navigation: {
+                nextEl: '.foryounext-secca',
+                prevEl: '.foryouprev-secca',
+              },
+               scrollbar: {
+                el: '.swiper-scrollbar-secca',dragSize:89
+              }
+              ,
+              breakpoints: {
+                10: {  //当屏幕宽度大于等于320
+                  slidesPerView: 1.5,
+                  spaceBetween: 10
+                },
+                550: {  //当屏幕宽度大于等于768
+                  slidesPerView: 2,
+                  spaceBetween: 20
+                },
+                768: {  //当屏幕宽度大于等于768
+                  slidesPerView: 2,
+                  spaceBetween: '4%'
+                },
+                994: {
+                  slidesPerView: 3,
+                  spaceBetween: '4.45%'
+                },
+                1200: {
+                  slidesPerView: 3,
+                  spaceBetween: '4.45%'
+                }
+              }
+            })
+            </script>
+          </div>
+        {% endif %}
+
+        <!-- SIM Card Global -->
+        {% if originalgl %}
+          <div class="inforyou-contsecitem inforyou-contsecitem-6">
+            <div class="swiper-button-prev foryoubtn foryouprev-secgl">
+              <svg width="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="25" cy="25" r="24" stroke="currentColor" stroke-width="2"/>
+                <path d="M26.2939 19.2939L20.2939 25.2939L26.2939 31.2939" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="swiper-button-next foryoubtn foryounext-secgl">
+              <svg width="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="25" cy="25" r="24" transform="matrix(-1 0 0 1 50 0)" stroke="currentColor" stroke-width="2"/>
+                <path d="M23.7061 19.2939L29.7061 25.2939L23.7061 31.2939" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="swiper" id="foryouswpbox-secgl">
+              <div class="swiper-scrollbar hide-pc swiper-scrollbar-secgl"></div>
+              <div class="swiper-wrapper">
+                {% for block in section.blocks %}
+                  {% if block.type == 'desimcard' and block.settings.country == 'Global' %}
+                    <style>
+                      #infypro-topbox-{{ block.id }}:before{
+                          background: linear-gradient(251.58deg, {{block.settings.color_1}} 11.65%, {{block.settings.color_2}} 89.32%);
+                      }
+                    </style>
+                    <div class="swiper-slide">
+                      <div class="infycontsecitem-pro">
+                        <div class="infycontsecitem-pro-topbox" id="infypro-topbox-{{ block.id }}">
+                          <div class="infycontsecitem-pro-img">
+                            {% if block.settings.icon01 -%}
+                              <img alt="" src="{{ block.settings.icon01 | img_url:'master' }}">
+                            {%- endif %}
+                            {% if block.settings.icon02 -%}
+                              <img alt="" src="{{ block.settings.icon02 | img_url:'master' }}">
+                            {%- endif %}
+                            {% if block.settings.icon03 -%}
+                              <img alt="" src="{{ block.settings.icon03 | img_url:'master' }}">
+                            {%- endif %}
+                          </div>
+                          {% if block.settings.title != blank %}
+                            <div class="infycontsecitem-pro-plan">
+                              {{ block.settings.title }}
+                            </div>
+                          {% endif %}
+                          {% if block.settings.price != blank %}
+                            <div class="infycontsecitem-pro-price">
+                              {{ block.settings.price }}
+                            </div>
+                          {% endif %}
+                        </div>
+                        {% if block.settings.content != blank %}
+                          <div class="infycontsecitem-pro-content">
+                            {{ block.settings.content }}
+                          </div>
+                        {% endif %}
+                        {% if block.settings.shopbtn != blank %}
+                          <a class="infycontsecitem-pro-btn bthho" href="{{ block.settings.shopurl }}">
+                            <span>{{ block.settings.shopbtn }}</span>
+                          </a>
+                        {% endif %}
+                      </div>
+                    </div>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+            <script>
+              var foryous_secgl = new Swiper('#foryouswpbox-secgl',{
+                slidesPerView : 3,
+                spaceBetween: '4.45%',
+                observer: true,  //开启动态检查器，监测swiper和slide
+                observeParents: true,
+                {% if section.settings.autoplay %}
+                  autoplay: {
+                    delay: {{ section.settings.interval | times: 1000 }},
+                  },
+                  {% endif %}
+                navigation: {
+                nextEl: '.foryounext-secgl',
+                prevEl: '.foryouprev-secgl',
+              },
+               scrollbar: {
+                el: '.swiper-scrollbar-secgl',dragSize:89
+              }
+              ,
+              breakpoints: {
+                10: {  //当屏幕宽度大于等于320
+                  slidesPerView: 1.5,
+                  spaceBetween: 10
+                },
+                550: {  //当屏幕宽度大于等于768
+                  slidesPerView: 2,
+                  spaceBetween: 20
+                },
+                768: {  //当屏幕宽度大于等于768
+                  slidesPerView: 2,
+                  spaceBetween: '4%'
+                },
+                994: {
+                  slidesPerView: 3,
+                  spaceBetween: '4.45%'
+                },
+                1200: {
+                  slidesPerView: 3,
+                  spaceBetween: '4.45%'
+                }
+              }
+            )
+            </script>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(function () {
+    $('.coverageforyou-navfiritem').click(function () {
+      let newindex = $(this).data('index');
+      $(this).addClass('active').siblings().removeClass('active');
+      $('.coverageforyou-seccon').hide();
+      $('.coverageforyou-seccon0' + newindex).fadeIn();
+    });
+    $('.coverageforyou-seccon01 .coverageforyou-navsecitem').click(function () {
+      let newindex = $(this).data('index');
+      $(this).addClass('active').siblings().removeClass('active');
+      $('.coverageforyou-seccon01 .inforyou-contsecitem').hide();
+      $('.coverageforyou-seccon01 .inforyou-contsecitem-' + newindex).fadeIn();
+    });
+    $('.coverageforyou-seccon02 .coverageforyou-navsecitem').click(function () {
+      let newindex = $(this).data('index');
+      $(this).addClass('active').siblings().removeClass('active');
+      $('.coverageforyou-seccon02 .inforyou-contsecitem').hide();
+      $('.coverageforyou-seccon02 .inforyou-contsecitem-' + newindex).fadeIn();
+    });
+  });
+</script>
+{% schema %}
+{
+  "name": "Coverage Product For You",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "title"
+    },
+    {
+      "type": "text",
+      "id": "type1",
+      "label": "type1"
+    },
+    {
+      "type": "text",
+      "id": "type2",
+      "label": "type2"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "autoplay?"
+    },
+    {
+      "type": "text",
+      "id": "interval",
+      "label": "Play Interval",
+      "default": "5"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "simcard",
+      "name": "SIM Card",
+      "settings": [
+        {
+          "type": "select",
+          "id": "country",
+          "label": "Country",
+          "options": [
+            {
+              "value": "US",
+              "label": "US"
+            },
+            {
+              "value": "UK",
+              "label": "UK"
+            },
+            {
+              "value": "Europe",
+              "label": "Europe"
+            },
+            {
+              "value": "Canada",
+              "label": "Canada"
+            },
+            {
+              "value": "Global",
+              "label": "Global"
+            }
+          ]
+        },
+        {
+          "type": "image_picker",
+          "id": "icon01",
+          "label": "contry flag01"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon02",
+          "label": "contry flag02"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon03",
+          "label": "contry flag03"
+        },
+        {
+          "type": "header",
+          "content": "Color Transition"
+        },
+        {
+          "type": "color",
+          "id": "color_1",
+          "label": "color_1",
+          "default": "#BCF4F8"
+        },
+        {
+          "type": "color",
+          "id": "color_2",
+          "label": "color_2",
+          "default": "#70D4DB"
+        },
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "Plan"
+        },
+        {
+          "type": "text",
+          "id": "price",
+          "label": "Price"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        },
+        {
+          "type": "text",
+          "id": "shopbtn",
+          "label": "shopbtn"
+        },
+        {
+          "type": "url",
+          "id": "shopurl",
+          "label": "shopurl"
+        }
+      ]
+    },
+    {
+      "type": "desimcard",
+      "name": "Device SIM card",
+      "settings": [
+        {
+          "type": "select",
+          "id": "country",
+          "label": "Country",
+          "options": [
+            {
+              "value": "US",
+              "label": "US"
+            },
+            {
+              "value": "UK",
+              "label": "UK"
+            },
+            {
+              "value": "Europe",
+              "label": "Europe"
+            },
+            {
+              "value": "Canada",
+              "label": "Canada"
+            },
+            {
+              "value": "Global",
+              "label": "Global"
+            }
+          ]
+        },
+        {
+          "type": "image_picker",
+          "id": "icon01",
+          "label": "contry flag01"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon02",
+          "label": "contry flag02"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon03",
+          "label": "contry flag03"
+        },
+        {
+          "type": "header",
+          "content": "Color Transition"
+        },
+        {
+          "type": "color",
+          "id": "color_1",
+          "label": "color_1",
+          "default": "#BCF4F8"
+        },
+        {
+          "type": "color",
+          "id": "color_2",
+          "label": "color_2",
+          "default": "#70D4DB"
+        },
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "Plan"
+        },
+        {
+          "type": "text",
+          "id": "price",
+          "label": "Price"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        },
+        {
+          "type": "text",
+          "id": "shopbtn",
+          "label": "shopbtn"
+        },
+        {
+          "type": "url",
+          "id": "shopurl",
+          "label": "shopurl"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Coverage Product For You",
+      "category": "Ho-Advance"
+    }
+  ]
+}
+{% endschema %}

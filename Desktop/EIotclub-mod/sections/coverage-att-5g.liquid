@@ -1,0 +1,151 @@
+{{ 'section-coverage-att-5g.css' | asset_url | stylesheet_tag }}
+
+{% liquid
+  assign secid = section.id | split: '__'
+  assign secidlast = secid[1] | replace: '-', '_'
+%}
+<div class="contain-index coverage-att5gmb">
+  <div class="coverage-att5g-outbox">
+    {% if section.settings.title != blank %}
+      <div class="coverage-att5g-title animate-ele common-title">{{ section.settings.title }}</div>
+    {% endif %}
+
+    <div class="coverage-att5g_elebox animate-ele hide-mb">
+      {% for block in section.blocks %}
+        <div class="coverage-att5g_item">
+          {% if block.settings.image %}
+            <span><img src="{{ block.settings.image | img_url:'master' }}" alt=" "></span>
+          {% endif %}
+          <div class="coverage-att5g-itemtext">
+            {% if block.settings.title != blank %}
+              <div class="coverage-att5g-itemtitle">{{ block.settings.title }}</div>
+            {% endif %}
+            {% if block.settings.content != blank %}
+              <div class="coverage-att5g-itemcon">{{ block.settings.content }}</div>
+            {% endif %}
+            {% if block.settings.url != blank %}
+              <a class="coverage-att5g-btn" href="{{ block.settings.url }}">{{ block.settings.link_text }}</a>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="coverage-att5g_elebox animate-ele hide-pc common-swiper-container coverage-att5g-swiper-container">
+      <div class="coverage-att5g-{{ secidlast }} swiper">
+        <div class="swiper-wrapper">
+          {% for block in section.blocks %}
+            <div class="swiper-slide">
+              <div class="coverage-att5g_item">
+                {% if block.settings.image %}
+                  <span><img src="{{ block.settings.image | img_url:'master' }}" alt=" "></span>
+                {% endif %}
+                <div class="coverage-att5g-itemtext">
+                  {% if block.settings.title != blank %}
+                    <div class="coverage-att5g-itemtitle">{{ block.settings.title }}</div>
+                  {% endif %}
+                  {% if block.settings.content != blank %}
+                    <div class="coverage-att5g-itemcon">{{ block.settings.content }}</div>
+                  {% endif %}
+                </div>
+                {% if block.settings.url != blank %}
+                  <a class="coverage-att5g-btn" href="{{ block.settings.url }}">{{ block.settings.link_text }}</a>
+                {% endif %}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="hide-pc">
+        <div class="swiper-button-prev common-swiper-arrow-btn">
+          {% render 'swiper-prev-icon' %}
+        </div>
+        <div class="swiper-button-next common-swiper-arrow-btn">
+          {% render 'swiper-next-icon' %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+$(function(){
+    if($(window).width() < 769){
+      var coverage_att5g_{{secidlast}} = new Swiper ('.coverage-att5g-{{ secidlast }}', {
+      slidesPerView : 2,
+      spaceBetween: 15,
+      observer: true,  //开启动态检查器，监测swiper和slide
+      observeParents: true,
+      {% comment %} autoHeight:true, {% endcomment %}
+      navigation: {
+          nextEl: '.coverage-att5g-swiper-container .swiper-button-next',
+          prevEl: '.coverage-att5g-swiper-container .swiper-button-prev',
+      },
+      breakpoints: {
+        10: {
+          slidesPerView : 1, 
+          spaceBetween: 15,
+        },
+        550: {
+          slidesPerView : 2, 
+          spaceBetween: 20,
+        }
+      }
+
+    });
+
+  }
+})
+</script>
+
+{% schema %}
+{
+  "name": "Coverage AT&T 5G",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "title"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "block",
+      "name": "block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "title"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "content"
+        },
+        {
+          "type": "text",
+          "id": "link_text",
+          "label": "Link Text"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Text Url"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Coverage AT&T 5G",
+      "category": "HO-layout"
+    }
+  ]
+}
+{% endschema %}

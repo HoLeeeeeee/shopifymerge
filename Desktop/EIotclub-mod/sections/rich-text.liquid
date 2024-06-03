@@ -1,0 +1,277 @@
+{%- if section.settings.divider -%}<div class="section--divider">{%- endif -%}
+<style>
+  .new-bg-img#new-{{ section.id }}{
+    padding: {{ section.settings.padding_top_bottom | append: 'px'  }} 0;
+    {% if section.settings.bg_image_pc != blank %}
+    background-image: url("{{ section.settings.bg_image_pc | img_url: 'master' }}");
+    {% endif %}  
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center center;
+    {% comment %} background-size: auto 100%; {% endcomment %}
+    background-color:{{ section.settings.bg_color }};
+  }
+  .new-bg-img#new-{{ section.id }}>*{
+    display: flex;
+    justify-content:{{ section.settings.button_align_text }} ;
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  .new-bg-img#new-{{ section.id }}>* h2{
+  max-width: 620px;
+ }
+ .new-bg-img#new-{{ section.id }} a.btn{
+    margin: 10px 0;
+  }
+  #shopify-section-template--14564082647173__fbcdde0a-3330-4dc4-b9bc-0109117be0ff .new-bg-img > * {
+    transform: translateX(300px);
+  }
+  #shopify-section-template--14564082647173__fbcdde0a-3330-4dc4-b9bc-0109117be0ff{
+    overflow: hidden;
+  }
+  @media(max-width:767px){
+  
+      .new-bg-img#new-{{ section.id }}{
+        padding:  {{ section.settings.padding_top_bottom_mobile | append: 'px'  }} 0;
+        {% if section.settings.bg_image_pc != blank %}
+        background-image: url("{{ section.settings.bg_image_mobile | img_url: 'master' }}");
+      {% endif %}
+      }
+      .new-bg-img#new-{{ section.id }}>* h2{
+       max-width: 220px;
+      }
+      #shopify-section-template--14564082647173__fbcdde0a-3330-4dc4-b9bc-0109117be0ff .new-bg-img > * {
+        transform: translateX(138px);
+      }
+  }
+</style>
+<div class="new-bg-img page-width{% if section.settings.narrow_column %} page-width--narrow{% endif %}" id="new-{{ section.id }}">
+  {%- for block in section.blocks -%}
+    <div class="theme-block" {{ block.shopify_attributes }}>
+      {%- case block.type -%}
+        {%- when 'heading' -%}
+          <h2 class=" text-{{ section.settings.header_align_text }}">{{ block.settings.title | escape }}</h2>
+        {%- when 'page' -%}
+          <div class="rte">
+            {%- if block.settings.page_text != blank -%}
+              {{ pages[block.settings.page_text].content }}
+            {%- else -%}
+              {{ 'home_page.onboarding.no_content' | t }}
+            {%- endif -%}
+          </div>
+        {%- when 'text' -%}
+          <div class="rte  text-{{ section.settings.content_align_text }}">
+            {%- if block.settings.text != blank -%}
+              {%- if block.settings.enlarge_text %}<div class="enlarge-text">{% endif -%}
+              {{ block.settings.text }}
+              {%- if block.settings.enlarge_text %}</div>{% endif -%}
+            {%- else -%}
+              {{ 'home_page.onboarding.no_content' | t }}
+            {%- endif -%}
+          </div>
+        {%- when 'button' -%}
+          <div class="rte text-{{ section.settings.button_align_text }}">
+            <a href="{{ block.settings.link }}" target="_blank" class="btn">
+              {{ block.settings.link_text }}
+            </a>
+          </div>
+      {%- endcase -%}
+    </div>
+  {%- endfor -%}
+</div>
+
+{%- if section.settings.divider -%}</div>{%- endif -%}
+
+{% schema %}
+{
+  "name": "t:sections.rich-text.name",
+  "class": "index-section",
+  "settings": [
+    {
+      "type": "range",
+      "id": "padding_top_bottom",
+      "label": "上下内边距",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "padding_top_bottom_mobile",
+      "label": "移动端上下内边距",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type":"image_picker",
+      "id": "bg_image_pc",
+      "label": "pc端背景图片"
+    },
+    {
+      "type":"image_picker",
+      "id": "bg_image_mobile",
+      "label": "移动端背景图片"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "背景颜色",
+      "info": "有背景图片就会覆盖背景颜色"
+    },
+    {
+      "type": "select",
+      "id": "header_align_text",
+      "label": "标题对齐方式",
+      "default": "center",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.rich-text.settings.align_text.options.left.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.rich-text.settings.align_text.options.center.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.rich-text.settings.align_text.options.right.label"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "content_align_text",
+      "label": "内容对齐方式",
+      "default": "center",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.rich-text.settings.align_text.options.left.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.rich-text.settings.align_text.options.center.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.rich-text.settings.align_text.options.right.label"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "button_align_text",
+      "label": "整体对齐方式",
+      "default": "center",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "t:sections.rich-text.settings.align_text.options.left.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.rich-text.settings.align_text.options.center.label"
+        },
+        {
+          "value": "flex-end",
+          "label": "t:sections.rich-text.settings.align_text.options.right.label"
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "narrow_column",
+      "label": "t:sections.rich-text.settings.narrow_column.label",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "divider",
+      "label": "t:sections.rich-text.settings.divider.label",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "t:sections.rich-text.blocks.heading.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:sections.rich-text.blocks.heading.settings.title.label",
+          "default": "Rich text"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "t:sections.rich-text.blocks.text.name",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "enlarge_text",
+          "label": "t:sections.rich-text.blocks.text.settings.enlarge_text.label",
+          "default": true
+        },
+        {
+          "id": "text",
+          "type": "richtext",
+          "label": "t:sections.rich-text.blocks.text.settings.text.label",
+          "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "t:sections.rich-text.blocks.button.name",
+      "settings": [
+        {
+          "type": "url",
+          "id": "link",
+          "label": "t:sections.rich-text.blocks.button.settings.link.label"
+        },
+        {
+          "type": "text",
+          "id": "link_text",
+          "label": "t:sections.rich-text.blocks.button.settings.link_text.label",
+          "default": "Button"
+        }
+      ]
+    },
+    {
+      "type": "page",
+      "name": "t:sections.rich-text.blocks.page.name",
+      "settings": [
+        {
+          "id": "page_text",
+          "type": "page",
+          "label": "t:sections.rich-text.blocks.page.settings.page_text.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.rich-text.presets.rich_text.name",
+      "blocks": [
+        {
+          "type": "heading"
+        },
+        {
+          "type": "text"
+        }
+      ]
+    }
+  ],
+  "disabled_on": {
+    "groups": ["custom.popups"]
+  }
+}
+{% endschema %}

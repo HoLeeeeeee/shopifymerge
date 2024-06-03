@@ -1,0 +1,85 @@
+<!-- sections\new-banner-list.liquid -->
+<style>
+    a{
+       
+    }
+    #new-banner-{{ section.id }}{
+        background-color: {{ section.settings.bg_color }};
+        height: 70px;
+        padding: 10px 0;
+    }
+    #new-banner-{{ section.id }} .new-image-list{
+        max-height: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    #new-banner-{{ section.id }} .new-image-list a{
+        max-height: 100%;
+        text-align: center;
+        flex: 1;
+    }
+    #new-banner-{{ section.id }} .new-image-list img{
+        max-height: 100%;
+        margin: 0 auto;
+    }
+    @media(max-width:767px){
+        #new-banner-{{ section.id }}{
+            height:50px;
+            padding:5px 0;
+        }
+        #new-banner-{{ section.id }} .new-image-list{
+            overflow-x: auto;
+            overflow-y: hidden;
+        }
+        #new-banner-{{ section.id }} .new-image-list a{
+            min-width: 115px;
+        }
+    }
+</style>
+<div class="new-banner-list" id="new-banner-{{ section.id }}">
+    <div class="new-image-list">
+        {% for block in section.blocks %}
+            {% if block.settings.image != blank %}
+                <a aria-label="link" href="{{ block.settings.image_url | default:'#' }}"><img loading="lazy" src="{{ block.settings.image | img_url: 'master' }}" alt=""></a>
+            {% endif %}    
+        {% endfor %}
+    </div>
+</div>
+<script>
+
+</script>
+{% schema %}
+{
+"name": "new-banner-list",
+"settings": [
+    {
+        "type": "color",
+        "id": "bg_color",
+        "label": "bg color"
+    }
+],
+"blocks":[
+    {
+        "type": "image",
+        "name": "image",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label": "image"
+            },
+            {
+                "type": "url",
+                "id": "image_url",
+                "label": "image url"
+            }
+        ]
+    }
+],
+"presets": [
+    {
+  "name": "new-banner-list"
+    }
+   ]
+ }
+{% endschema %}

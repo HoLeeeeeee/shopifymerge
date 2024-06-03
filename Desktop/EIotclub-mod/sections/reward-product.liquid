@@ -1,0 +1,187 @@
+<div class="reward-product-section">
+<div class="contain-index reward-coupon-product">
+    <div class="title-wrapper">
+      {% if section.settings.title != blank %}
+        <div class="common-title">
+          {{ section.settings.title }}
+        </div>
+      {% endif %}
+      {% if section.settings.subtitle != blank %}
+        <div class="reward-subtitle">
+          {{ section.settings.subtitle }}
+        </div>
+      {% endif %}
+    </div>
+    <div class="reward-container common-swiper-container">
+      <div class="swiper-container">
+        <div class="content-wrapper swiper-wrapper">
+          {% for block in section.blocks %}
+            {% if block.settings.image != blank %}
+            <div class="reward-coupon-product-box swiper-slide">
+              {% render 'reward-coupon-product-block',
+                block: block,
+                image: image,
+                title: title,
+                custom_price: custom_price,
+                custom_point: custom_point
+              %}
+              <div class="reward-rules">
+                <a class="smile-link" href="#smile-points-products">Redeem</a>
+                <a data-index="{{ forloop.index }}" class="rules-link" href="javascript:void(0)">Rules</a>
+              </div>
+            </div>
+            {% else %}
+            <div class="coming-soon-wrapper reward-coupon-product-box swiper-slide">
+              <div class="reward-block-title"> 
+                Coming Soon...
+              </div>
+            </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+        {% if section.blocks.size > 2 %}
+        <div class="mb-show">
+          <div class="swiper-scrollbar swiper-scrollbar-product"></div>
+        </div>
+        {% endif %}
+      </div>
+      {% if section.blocks.size > 4 %}
+      <div class="pc-show">
+        <div class="swiper-button-prev common-swiper-arrow-btn">
+          {% render 'swiper-prev-icon' %}
+        </div>
+        <div class="swiper-button-next common-swiper-arrow-btn">
+          {% render 'swiper-next-icon' %}
+        </div>
+      </div>
+    {% endif %}
+    </div>
+  
+    <div class="rules-notice-bg">
+      <div class="rules-notice">
+        <span class="rules-close-btn">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.22461 13.01L12.9999 1.00005" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <path d="M1 1L13 13" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          </svg>          
+        </span>
+        {% for block in section.blocks %}
+          <div data-index="{{ forloop.index }}" class="rules-notice-box">
+          {% render 'reward-coupon-product-block',
+            block: block,
+            image: image,
+            title: title,
+            custom_price: custom_price,
+            custom_point: custom_point
+          %}
+  
+          {% if block.settings.rules != blank %}
+            <div class="custom_rules">
+              <h3 class="font24">Rules</h3>
+              <div>{{ block.settings.rules }}</div>
+            </div>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+</div>
+  
+  <script>
+    let product = new Swiper('.reward-product-section .swiper-container', {
+      slidesPerView: 1.8,
+      slidesPerColumn: 2,
+      slidesPerColumnFill: 'row',
+      spaceBetween: 10,
+      observer: true,
+      resizeObserver: true,
+      scrollbar: {
+        el: '.swiper-scrollbar-product',
+        dragSize:89
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2.8,
+          slidesPerColumn: 1,
+          spaceBetween: 20,
+          scrollbar: {
+            el: '.swiper-scrollbar-product',
+            dragSize:89
+          },
+        },
+        1000: {
+          slidesPerView: 4,
+          slidesPerColumn: 1,
+          spaceBetween: 20,
+          navigation: {
+            nextEl: '.reward-product-section .swiper-button-next',
+            prevEl: '.reward-product-section .swiper-button-prev',
+          },
+        },
+      },
+    });
+  </script>
+  
+  {% schema %}
+  {
+    "name": "Reward Product",
+    "class": "reward-product-wrapper",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Section title"
+      },
+      {
+        "type": "text",
+        "id": "subtitle",
+        "label": "Sub Title"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image",
+            "info": "Size:190px*190px"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Custom Title"
+          },
+          {
+            "type": "text",
+            "id": "custom_price",
+            "label": "Custom Price",
+            "info": "eg. $1,299.99 "
+          },
+          {
+            "type": "text",
+            "id": "custom_point",
+            "label": "Custom Points",
+            "info": "eg. 1000 "
+          },
+          {
+            "type": "richtext",
+            "id": "rules",
+            "label": "Custom Rules"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Reward Product",
+        "category": "Ho-Advance"
+      }
+    ]
+  }
+  {% endschema %}
+  

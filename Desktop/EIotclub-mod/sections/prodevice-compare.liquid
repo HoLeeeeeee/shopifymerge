@@ -1,0 +1,508 @@
+{% liquid
+  assign secid = section.id | split:"__" 
+  assign secidlast = secid[1] | replace: "-","_"
+%}
+
+
+<div
+  class="procomparison-conbox"
+  {% if section.settings.bg_color %}
+    style="background-color:{{ section.settings.bg_color }};color:{{ section.settings.text_color }}"
+  {% endif %}
+>
+  <div class="contain-index">
+    <div class="procomparison-secmb-title prodvsfaqs-title hide-pc">{{ section.settings.title }}</div>
+    <div class="procomparison-container">
+      <div class="procomparison_left">
+        <span id="procom-device">{{ section.settings.title }}</span>
+        {% for block in section.blocks %}
+          {% assign product = all_products[block.settings.product] %}
+          {% if forloop.index == 1 %}
+            <div class="procomparison-probox">
+              {% if block.settings.image != blank %}
+                <div class="procomparison-proimg procomparison-itemspec itemspec-border">
+                  <div class="height_item height_item1"><a href="{{ product.url }}"><img alt="" src="{{ block.settings.image | img_url:'master' }}"></a></div>
+                </div>
+                {% else %}
+                <div class="procomparison-proimg procomparison-itemspec itemspec-border">
+                  <div class="height_item height_item1"><a href="{{ product.url }}"><img alt="" src="{{ product.featured_image | img_url:'master' }}"></a></div>
+                </div>
+              {% endif %}
+              {% if block.settings.title != blank %}
+                <div class="procomparison-itemtitle procomparison-itemspec itemspec-border">
+                  <div class="height_item height_item2"><a href="{{ product.url }}">{{ block.settings.title }}</a></div>
+                </div>
+                {% else %}
+                <div class="procomparison-itemtitle procomparison-itemspec itemspec-border">
+                  <div class="height_item height_item2"><a href="{{ product.url }}">{{ product.title }}</a></div>
+                </div>
+              {% endif %}
+              {% if block.settings.viewmore != blank %}
+                <div class="procomparison-proitemsubtitle procomparison-itemspec itemspec-border">
+                  <div class="height_item height_item3"><a class="cpview-more" href="{{ product.url }}">{{ block.settings.viewmore }}</a></div>
+                </div>
+              {% endif %}
+              {% if block.settings.specs03 != blank %}
+                <div class="procomparison-itemspec itemspec-border">
+                  <div class="height_item height_item4">{{ block.settings.specs03 }}</div>
+                </div>
+              {% endif %}
+              {% if block.settings.specs04 != blank %}
+                <div class="procomparison-itemspec itemspec-border">
+                  <div class="height_item height_item5">{{ block.settings.specs04 }}</div>
+                </div>
+              {% endif %}
+              {% if block.settings.specs05 != blank %}
+                <div class="procomparison-itemspec itemspec-border">
+                  <div class="height_item height_item6">{{ block.settings.specs05 }}</div>
+                </div>
+              {% endif %}
+              {% if block.settings.specs06 != blank %}
+                <div class="procomparison-itemspec itemspec-border">
+                  <div class="height_item height_item7">{{ block.settings.specs06 }}</div>
+                </div>
+              {% endif %}
+              {% if block.settings.specs07 != blank %}
+                <div class="procomparison-itemspec itemspec-border">
+                  <div class="height_item height_item8">{{ block.settings.specs07 }}</div>
+                </div>
+              {% endif %}
+              {% if block.settings.specs08 != blank %}
+                <div class="procomparison-itemspec itemspec-border">
+                  <div class="height_item height_item9">{{ block.settings.specs08 }}</div>
+                </div>
+              {% endif %}
+              {% if block.settings.specs09 != blank %}
+                <div class="procomparison-itemspec itemspec-border">
+                  <div class="height_item height_item10">{{ block.settings.specs09 }}</div>
+                </div>
+              {% endif %}
+              {% if block.settings.specs10 != blank %}
+                <div class="procomparison-itemspec itemspec-border">
+                  <div class="height_item height_item11">{{ block.settings.specs10 }}</div>
+                </div>
+              {% endif %}
+              {% if block.settings.specs11 != blank %}
+                <div class="procomparison-itemspec itemspec-border">
+                  <div class="height_item height_item12">{{ block.settings.specs11 }}</div>
+                </div>
+              {% endif %}
+              {% if block.settings.specs12 != blank %}
+                <div class="procomparison-itemspec itemspec-border">
+                  <div class="height_item height_item13">{{ block.settings.specs12 }}</div>
+                </div>
+              {% endif %}
+              {% if block.settings.specs13 != blank %}
+                <div class="procomparison-itemspec itemspec-border">
+                  <div class="height_item height_item14">{{ block.settings.specs13 }}</div>
+                </div>
+              {% endif %}
+              {% if block.settings.specs14 != blank %}
+                <div class="procomparison-itemspec itemspec-border">
+                  <div class="height_item height_item15">{{ block.settings.specs14 }}</div>
+                </div>
+              {% endif %}
+              {% if block.settings.specs15 != blank %}
+                <div class="procomparison-itemspec itemspec-border">
+                  <div class="height_item height_item16">{{ block.settings.specs15 }}</div>
+                </div>
+              {% endif %}
+              {% if block.settings.specs16 != blank %}
+                <div class="procomparison-itemspec itemspec-border">
+                  <div class="height_item height_item17">{{ block.settings.specs16 }}</div>
+                </div>
+              {% endif %}
+              {% if block.settings.specs17 != blank %}
+                <div class="procomparison-itemspec itemspec-border">
+                  <div class="height_item height_item18">{{ block.settings.specs17 }}</div>
+                </div>
+              {% endif %}
+              {% if block.settings.specs18 != blank %}
+                <div class="procomparison-itemspec itemspec-border">
+                  <div class="height_item height_item19">{{ block.settings.specs18 }}</div>
+                </div>
+              {% endif %}
+              {% if block.settings.specs19 != blank %}
+                <div class="procomparison-itemspec itemspec-border">
+                  <div class="height_item height_item20">{{ block.settings.specs19 }}</div>
+                </div>
+              {% endif %}
+              {% if block.settings.specs20 != blank %}
+                <div class="procomparison-itemspec itemspec-border">
+                  <div class="height_item height_item21">{{ block.settings.specs20 }}</div>
+                </div>
+              {% endif %}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      <div class="procomparison_right">
+        <div class="swiper-procomparison sw-procomparison-{{ secidlast }} swiper">
+          <div class="swiper-scrollbar hide-pc swiper-scrollbar-{{ secidlast }}"></div>
+          <div class="swiper-wrapper">
+            {% for block in section.blocks %}
+              {% liquid 
+                if forloop.first 
+                assign forval03 =  block.settings.specs03
+                assign forval04 =  block.settings.specs04
+                assign forval05 =  block.settings.specs05
+                assign forval06 =  block.settings.specs06
+                assign forval07 =  block.settings.specs07
+                assign forval08 =  block.settings.specs08
+                assign forval09 =  block.settings.specs09
+                assign forval10 =  block.settings.specs10
+                assign forval11 =  block.settings.specs11
+                assign forval12 =  block.settings.specs12
+                assign forval13 =  block.settings.specs13
+                assign forval14 =  block.settings.specs14
+                assign forval15 =  block.settings.specs15
+                assign forval16 =  block.settings.specs16
+                assign forval17 =  block.settings.specs17
+                assign forval18 =  block.settings.specs18
+                assign forval19 =  block.settings.specs19
+                assign forval20 =  block.settings.specs20
+                endif
+              %}
+              {% if forloop.index >= 2 %}
+                <div class="swiper-slide">
+                  <div class="procomparison-probox">
+                  {% if block.settings.image != blank %}
+                <div class="procomparison-proimg procomparison-itemspec itemspec-border">
+                  <div class="height_item height_item1"><a href="{{ product.url }}"><img alt="" src="{{ block.settings.image | img_url:'master' }}"></a></div>
+                </div>
+                {% else %}
+                <div class="procomparison-proimg procomparison-itemspec itemspec-border">
+                  <div class="height_item height_item1"><a href="{{ product.url }}"><img alt="" src="{{ product.featured_image | img_url:'master' }}"></a></div>
+                </div>
+              {% endif %}
+              {% if block.settings.title != blank %}
+                <div class="procomparison-itemtitle procomparison-itemspec itemspec-border">
+                  <div class="height_item height_item2"><a href="{{ product.url }}">{{ block.settings.title }}</a></div>
+                </div>
+                {% else %}
+                <div class="procomparison-itemtitle procomparison-itemspec itemspec-border">
+                  <div class="height_item height_item2"><a href="{{ product.url }}">{{ product.title }}</a></div>
+                </div>
+              {% endif %}
+                    {% if block.settings.viewmore != blank %}
+                      <div class="procomparison-proitemsubtitle procomparison-itemspec itemspec-border {% unless forloop.index == 2 %}itemspec-border03{% else %}itemspec-border02{% endunless %}">
+                        <div class="height_item height_item3"><a class="cpview-more" href="{{ product.url }}">{{ block.settings.viewmore }}</a></div>
+                      </div>
+                    {% endif %}
+
+                    {% if block.settings.specs03 != blank %}
+                      <div class="hide-pc mb-procompareitem"><span>{{ forval03 }}</span></div> 
+                      <div class="procomparison-itemspec itemspec-border {% unless forloop.index == 2 %}itemspec-border03{% else %}itemspec-border02{% endunless %}">
+                        <div class="height_item height_item4">{{ block.settings.specs03 }}</div>
+                      </div>
+                    {% endif %}
+                    {% if block.settings.specs04 != blank %}
+                      <div class="hide-pc mb-procompareitem"><span>{{ forval04 }}</span></div> 
+                      <div class="procomparison-itemspec itemspec-border {% unless forloop.index == 2 %}itemspec-border03{% else %}itemspec-border02{% endunless %}">
+                        <div class="height_item height_item5">{{ block.settings.specs04 }}</div>
+                      </div>
+                    {% endif %}
+                    {% if block.settings.specs05 != blank %}
+                      <div class="hide-pc mb-procompareitem"><span>{{ forval05 }}</span></div> 
+                      <div class="procomparison-itemspec itemspec-border {% unless forloop.index == 2 %}itemspec-border03{% else %}itemspec-border02{% endunless %}">
+                        <div class="height_item height_item6">{{ block.settings.specs05 }}</div>
+                      </div>
+                    {% endif %}
+                    {% if block.settings.specs06 != blank %}
+                      <div class="hide-pc mb-procompareitem"><span>{{ forval06 }}</span></div> 
+                      <div class="procomparison-itemspec itemspec-border {% unless forloop.index == 2 %}itemspec-border03{% else %}itemspec-border02{% endunless %}">
+                        <div class="height_item height_item7">{{ block.settings.specs06 }}</div>
+                      </div>
+                    {% endif %}
+                    {% if block.settings.specs07 != blank %}
+                      <div class="hide-pc mb-procompareitem"><span>{{ forval07 }}</span></div> 
+                      <div class="procomparison-itemspec itemspec-border {% unless forloop.index == 2 %}itemspec-border03{% else %}itemspec-border02{% endunless %}">
+                        <div class="height_item height_item8">{{ block.settings.specs07 }}</div>
+                      </div>
+                    {% endif %}
+                    {% if block.settings.specs08 != blank %}
+                      <div class="hide-pc mb-procompareitem"><span>{{ forval08 }}</span></div> 
+                      <div class="procomparison-itemspec itemspec-border {% unless forloop.index == 2 %}itemspec-border03{% else %}itemspec-border02{% endunless %}">
+                        <div class="height_item height_item9">{{ block.settings.specs08 }}</div>
+                      </div>
+                    {% endif %}
+                    {% if block.settings.specs09 != blank %}
+                      <div class="hide-pc mb-procompareitem"><span>{{ forval09 }}</span></div> 
+                      <div class="procomparison-itemspec itemspec-border {% unless forloop.index == 2 %}itemspec-border03{% else %}itemspec-border02{% endunless %}">
+                        <div class="height_item height_item10">{{ block.settings.specs09 }}</div>
+                      </div>
+                    {% endif %}
+                    {% if block.settings.specs10 != blank %}
+                      <div class="hide-pc mb-procompareitem"><span>{{ forval10 }}</span></div> 
+                      <div class="procomparison-itemspec itemspec-border {% unless forloop.index == 2 %}itemspec-border03{% else %}itemspec-border02{% endunless %}">
+                        <div class="height_item height_item11">{{ block.settings.specs10 }}</div>
+                      </div>
+                    {% endif %}
+                    {% if block.settings.specs11 != blank %}
+                      <div class="hide-pc mb-procompareitem"><span>{{ forval11 }}</span></div> 
+                      <div class="procomparison-itemspec itemspec-border {% unless forloop.index == 2 %}itemspec-border03{% else %}itemspec-border02{% endunless %}">
+                        <div class="height_item height_item12">{{ block.settings.specs11 }}</div>
+                      </div>
+                    {% endif %}
+                    {% if block.settings.specs12 != blank %}
+                      <div class="hide-pc mb-procompareitem"><span>{{ forval12 }}</span></div> 
+                      <div class="procomparison-itemspec itemspec-border {% unless forloop.index == 2 %}itemspec-border03{% else %}itemspec-border02{% endunless %}">
+                        <div class="height_item height_item13">{{ block.settings.specs12 }}</div>
+                      </div>
+                    {% endif %}
+                    {% if block.settings.specs13 != blank %}
+                      <div class="hide-pc mb-procompareitem"><span>{{ forval13 }}</span></div> 
+                      <div class="procomparison-itemspec itemspec-border {% unless forloop.index == 2 %}itemspec-border03{% else %}itemspec-border02{% endunless %}">
+                        <div class="height_item height_item14">{{ block.settings.specs13 }}</div>
+                      </div>
+                    {% endif %}
+                    {% if block.settings.specs14 != blank %}
+                      <div class="hide-pc mb-procompareitem"><span>{{ forval14 }}</span></div> 
+                      <div class="procomparison-itemspec itemspec-border {% unless forloop.index == 2 %}itemspec-border03{% else %}itemspec-border02{% endunless %}">
+                        <div class="height_item height_item15">{{ block.settings.specs14 }}</div>
+                      </div>
+                    {% endif %}
+                    {% if block.settings.specs15 != blank %}
+                      <div class="hide-pc mb-procompareitem"><span>{{ forval15 }}</span></div> 
+                      <div class="procomparison-itemspec itemspec-border {% unless forloop.index == 2 %}itemspec-border03{% else %}itemspec-border02{% endunless %}">
+                        <div class="height_item height_item16">{{ block.settings.specs15 }}</div>
+                      </div>
+                    {% endif %}
+                    {% if block.settings.specs16 != blank %}
+                      <div class="hide-pc mb-procompareitem"><span>{{ forval16 }}</span></div> 
+                      <div class="procomparison-itemspec itemspec-border {% unless forloop.index == 2 %}itemspec-border03{% else %}itemspec-border02{% endunless %}">
+                        <div class="height_item height_item17">{{ block.settings.specs16 }}</div>
+                      </div>
+                    {% endif %}
+                    {% if block.settings.specs17 != blank %}
+                      <div class="hide-pc mb-procompareitem"><span>{{ forval17 }}</span></div> 
+                      <div class="procomparison-itemspec itemspec-border {% unless forloop.index == 2 %}itemspec-border03{% else %}itemspec-border02{% endunless %}">
+                        <div class="height_item height_item18">{{ block.settings.specs17 }}</div>
+                      </div>
+                    {% endif %}
+                    {% if block.settings.specs18 != blank %}
+                      <div class="hide-pc mb-procompareitem"><span>{{ forval18 }}</span></div> 
+                      <div class="procomparison-itemspec itemspec-border {% unless forloop.index == 2 %}itemspec-border03{% else %}itemspec-border02{% endunless %}">
+                        <div class="height_item height_item19">{{ block.settings.specs18 }}</div>
+                      </div>
+                    {% endif %}
+                    {% if block.settings.specs19 != blank %}
+                      <div class="hide-pc mb-procompareitem"><span>{{ forval19 }}</span></div> 
+                      <div class="procomparison-itemspec itemspec-border {% unless forloop.index == 2 %}itemspec-border03{% else %}itemspec-border02{% endunless %}">
+                        <div class="height_item height_item20">{{ block.settings.specs19 }}</div>
+                      </div>
+                    {% endif %}
+                    {% if block.settings.specs20 != blank %}
+                      <div class="hide-pc mb-procompareitem"><span>{{ forval20 }}</span></div> 
+                      <div class="procomparison-itemspec itemspec-border {% unless forloop.index == 2 %}itemspec-border03{% else %}itemspec-border02{% endunless %}">
+                        <div class="height_item height_item21">{{ block.settings.specs20 }}</div>
+                      </div>
+                    {% endif %}
+                  </div>
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+
+          <!-- <div class="swiper-scrollbar procomparison-swiper-scrollbar"></div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  var procomparison_{{ secidlast }} = new Swiper('.sw-procomparison-{{ secidlast }}', {
+    slidesPerView: 2,
+    observer: true,effect: 'slide',
+    observeParents: true,
+    scrollbar: {
+     el: '.swiper-scrollbar-{{ secidlast }}',dragSize:89
+   },
+    // scrollbar: {
+    //   el: '.procomparison-swiper-scrollbar',
+    //   draggable: true,
+    //   dragSize: 100,
+    // },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,effect: 'fade',
+      },
+      320: {
+        slidesPerView: 1.8,effect: 'fade',
+      },
+      769: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        autoHeight: true,effect: 'slide',
+      },
+      989: {
+        slidesPerView: 2,
+      },
+      1200: {
+        slidesPerView: 2,
+      },
+    },
+  });
+
+$(".procomparison_left .height_item").each(function(index){
+  idx = ++index; 
+var maxHeight = 0;
+$(`.height_item${idx}`).each(function() {
+  var height = Math.ceil($(this).innerHeight());
+  if (height > maxHeight) {
+    maxHeight = height;
+  }
+});
+  $(`.height_item${idx}`).innerHeight(maxHeight)
+  });
+
+</script>
+
+{% schema %}
+{
+  "name": "Product Comparison Table",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "title"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "bg_color"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "text_color"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "block",
+      "name": "block",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "product"
+        },{
+          "type": "image_picker",
+          "id": "image",
+          "label": "image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "title",
+          "default": "Product Comparison"
+        },
+        {
+          "type": "text",
+          "id": "viewmore",
+          "label": "view more"
+        },
+        {
+          "type": "html",
+          "id": "specs03",
+          "label": "specs03"
+        },
+        {
+          "type": "html",
+          "id": "specs04",
+          "label": "specs04"
+        },
+        {
+          "type": "html",
+          "id": "specs05",
+          "label": "specs05"
+        },
+        {
+          "type": "html",
+          "id": "specs06",
+          "label": "specs06"
+        },
+        {
+          "type": "html",
+          "id": "specs07",
+          "label": "specs07"
+        },
+        {
+          "type": "html",
+          "id": "specs08",
+          "label": "specs08"
+        },
+        {
+          "type": "html",
+          "id": "specs09",
+          "label": "specs09"
+        },
+        {
+          "type": "html",
+          "id": "specs10",
+          "label": "specs10"
+        },
+        {
+          "type": "html",
+          "id": "specs11",
+          "label": "specs11"
+        },
+        {
+          "type": "html",
+          "id": "specs12",
+          "label": "specs12"
+        },
+        {
+          "type": "html",
+          "id": "specs13",
+          "label": "specs13"
+        },
+        {
+          "type": "html",
+          "id": "specs14",
+          "label": "specs14"
+        },
+        {
+          "type": "html",
+          "id": "specs15",
+          "label": "specs15"
+        },
+        {
+          "type": "html",
+          "id": "specs16",
+          "label": "specs16"
+        },
+        {
+          "type": "html",
+          "id": "specs17",
+          "label": "specs17"
+        },
+        {
+          "type": "html",
+          "id": "specs18",
+          "label": "specs18"
+        },
+        {
+          "type": "html",
+          "id": "specs19",
+          "label": "specs19"
+        },
+        {
+          "type": "html",
+          "id": "specs20",
+          "label": "specs20"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Comparison Table",
+      "category": "Ho-Advance"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,127 @@
+{% liquid
+  assign secid = section.id | split:"__" 
+  assign secidlast = secid[1] | replace: "-","_"
+%}
+  <div class="contain-index simadvusemb">
+<div class="simadvuse-outbox">
+    {% if section.settings.title != blank %}
+    <div class="simadvuse-title animate-ele">{{ section.settings.title }}</div>
+   {% endif %}
+
+
+  <div class="simadvuse_elebox animate-ele hide-mb">
+      {% for block in section.blocks %}
+         <div class="simadvuse_item">
+        {% if block.settings.image  %}
+          <span><img src="{{ block.settings.image | img_url:'master' }}" alt=" " /></span>
+         {% endif %}
+       <div class="simadvuse-itemtext">
+           {% if block.settings.title != blank %}
+            <div class="simadvuse-itemtitle">{{ block.settings.title }}</div>
+           {% endif %}
+         {% if block.settings.content != blank %}
+            <div class="simadvuse-itemcon">{{ block.settings.content }}</div>
+           {% endif %}
+       </div>
+
+      </div>  
+      {% endfor %}
+  </div>
+
+ <div class="simadvuse_elebox animate-ele hide-pc">
+    <div class="simadvuse-{{ secidlast }} swiper">
+      <div class="swiper-scrollbar hide-pc swiper-scrollbar-{{ secidlast }}"></div>
+      <div class="swiper-wrapper"> 
+    {% for block in section.blocks %}
+      <div class="swiper-slide">
+       <div class="simadvuse_item">
+      {% if block.settings.image  %}
+        <span><img src="{{ block.settings.image | img_url:'master' }}" alt=" " /></span>
+       {% endif %}
+     <div class="simadvuse-itemtext">
+         {% if block.settings.title != blank %}
+          <div class="simadvuse-itemtitle">{{ block.settings.title }}</div>
+         {% endif %}
+       {% if block.settings.content != blank %}
+          <div class="simadvuse-itemcon">{{ block.settings.content }}</div>
+         {% endif %}
+     </div>
+
+    </div>  
+    </div>
+    {% endfor %}
+    </div>
+  </div>
+</div>
+
+  
+</div>
+  </div>
+
+  <script>   
+  $(function(){
+    if($(window).width() < 769){
+      var simadvuse_{{secidlast}} = new Swiper ('.simadvuse-{{ secidlast }}', {
+    slidesPerView : 2,
+    spaceBetween: 9,
+    observer: true,  //开启动态检查器，监测swiper和slide
+    observeParents: true, 
+    {% comment %} autoHeight:true, {% endcomment %}
+     scrollbar: {
+      el: '.swiper-scrollbar-{{ secidlast }}',dragSize:89
+    },
+    breakpoints: { 
+      10: {  
+       slidesPerView : 1.5, spaceBetween: 9,
+      },
+      550: { 
+       slidesPerView : 2, spaceBetween: 20,
+      }
+    }
+
+  });
+    
+}
+  })
+
+</script>
+
+{% schema %}
+  {
+   "name": "Advantages Of Using",
+  "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "title"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "block",
+        "settings": [
+       {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },{
+        "type": "text",
+        "id": "title",
+        "label": "title"
+      },{
+        "type": "richtext",
+        "id": "content",
+        "label": "content"
+      }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Advantages Of Using",
+        "category": "HO-layout"
+      }
+    ]
+  }
+{% endschema %}

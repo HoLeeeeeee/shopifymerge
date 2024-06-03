@@ -1,0 +1,249 @@
+.common-faqs-britem,
+.common-faqs-navitem img {
+    display: none;
+}
+.common-faqs-navitem img{ width: 6px;}
+.common-faqs-britem-1 {
+    display: block;
+}
+
+.common-faqs-navitem.active img {
+    display: inline;
+    position: absolute;
+    right: 0.8vw;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.common-faqs-outbox {
+    margin: 5.5vw 0;
+}
+
+.common-faqs-title {
+    margin-bottom: 3vw;
+}
+
+.common-faqs-bright {
+    flex: 0 1 calc(100% - 14.6vw);
+    border-radius: 1vw;
+    background: #fff;
+}
+
+.common-faqs-bleft {
+    flex: 0 1 12.8vw;
+    overflow: hidden;
+    background: #E8E8E8;
+    border-radius: 1vw;
+}
+
+.common-faqs-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.common-faqs-britqacon {
+    display: none;
+    font-size: .84vw;
+    margin: 1.2vw 5% 0 1.5vw;
+    line-height: 1.45;
+}
+
+.common-faqs-navitem {
+    font-size: .94vw;
+    position: relative;
+    padding: 1.88vw 1.1vw 1.88vw .7vw;
+    cursor: pointer;
+}
+
+.common-faqs-navitem.active {
+    background: #fff;
+    box-shadow: 0 -1px 0 0 #fff;
+}
+
+.common-faqs-navitem:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    width: 90%;
+    border-bottom: 1px solid #fff;
+}
+
+.common-faqs-navitem:last-child:after {
+    display: none;
+}
+
+.common-faqs-britem {
+    padding: 1vw 1.7vw;
+}
+
+.common-faqs-britqatitle {
+    font-size: 0.94vw;
+    position: relative;
+    padding-right: 20%;
+    cursor: pointer;
+}
+
+.common-faqs-britqatitle img {
+    width: 9px;
+    position: absolute;
+    top: 50%;
+    transition: .5s;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.common-faqs-britqatitle.open img {
+    transform: translateY(-50%) rotate(90deg);
+}
+
+.common-faqs-britqa {
+    padding: 1.4vw 0.2vw;
+    border-bottom: 1px solid #E2E2E2;
+}
+
+.common-faqs-britqa:last-child {
+    border-bottom: none;
+}
+
+@media (max-width:1550px) {
+    .common-faqs-britqacon {
+        font-size: 1vw;
+    }
+
+    .common-faqs-britqatitle {
+        font-size: 1.1vw;
+    }
+
+    .common-faqs-navitem {
+        font-size: 1.1vw;
+        padding: 1.94vw 1.3vw 1.94vw .7vw;
+    }
+
+    .common-faqs-bleft {
+        flex: 0 1 15vw;
+    }
+
+    .common-faqs-bright {
+        flex: 0 1 calc(100% - 16.6vw);
+    }
+}
+
+@media (max-width:1280px) {
+    .common-faqs-bleft {
+        flex: 0 1 19vw;
+      }
+      .common-faqs-navitem {
+        padding: 1.96vw 1.5vw 1.96vw 1vw;
+        font-size: 1.3vw;
+      }
+      .common-faqs-bleft {
+        flex: 0 1 19vw;
+      }
+      .common-faqs-bright {
+        flex: 0 1 calc(100% - 21vw);
+      }
+      .common-faqs-britqatitle {
+        font-size: 1.25vw;
+      }
+      .common-faqs-britqacon {
+        font-size: 1.2vw;
+      }
+}
+
+@media (max-width:993px) {
+    .common-faqs-bleft {
+        flex: 0 1 26%;
+    }
+
+    .common-faqs-navitem {
+        font-size: 1.7vw;
+        padding: 2.1vw 2vw 2.1vw 1vw;
+    }
+
+    .common-faqs-bright {
+        flex: 0 1 72%;
+    }
+
+    .common-faqs-britqatitle {
+        font-size: 1.65vw;
+    }
+
+    .common-faqs-britqacon {
+        font-size: 1.6vw;
+    }
+}
+
+@media (max-width:768px) {
+    .common-faqs-navitem {
+        font-size: 2vw;
+      }
+      .common-faqs-bleft {
+        flex: 0 1 31%;
+      }
+      .common-faqs-bright {
+        flex: 0 1 67%;
+      }
+      .common-faqs-britqatitle {
+        font-size: 1.8vw;
+      }
+      .common-faqs-britqacon {
+        font-size: 1.7vw;
+      }
+}
+
+@media (max-width:550px) {
+    .common-faqs-outbox {
+        margin: 7vw 0 10vw;
+      }
+      .common-faqs-bleft{
+        display: none;
+      }
+      .common-faqs-title {
+        margin-bottom: 6.5vw;
+      }
+      .common-faqs-bright {
+        flex: 0 1 100%;
+        border-radius: 3vw;
+        overflow: hidden;
+      }
+      .common-faqs-britem {
+        padding: 0 3vw;
+      }
+      .common-faqs-navitem {
+        padding: 5.3vw 4vw 5.3vw 2vw;
+        margin: 0 3vw;
+        border-bottom: 1px solid #E2E2E2;
+        font-size: 4.2vw;
+        font-weight: bold;
+      }
+      .common-faqs-britqa {
+        padding: 5.3vw 1vw 5.3vw 6vw;
+        font-size: 4.2vw;
+      }
+      .common-faqs-britqatitle {
+        padding-right: 6%;font-size: 4.2vw;
+      }
+      .common-faqs-navitem img {
+        right: 1.8vw;display: inline;
+        transition: 0.3s;
+        position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+      }
+      .common-faqs-navitem.active img {
+        transform: translateY(-50%) rotate(90deg);
+      }
+      .common-faqs-britqacon {
+        font-size: 3.2vw;
+        margin: 4vw 0 0;
+      }
+}
+
+
+@media (min-width:551px) {
+    .common-faqs-bright .common-faqs-navitem {
+        display: none;
+    }
+}

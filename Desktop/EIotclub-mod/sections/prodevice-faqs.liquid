@@ -1,0 +1,396 @@
+{% liquid
+  assign secid = section.id | split:"__" 
+  assign secidlast = secid[1] | replace: "-","_"
+%}
+
+<div class="prodvsfaqs-outbox">
+  <div class="contain-index">
+    {% if section.settings.title != blank %}
+        <div class="prodvsfaqs-title">{{ section.settings.title }}</div> 
+        {% endif %}
+
+        {% liquid
+           assign type1 = false
+           assign type2 = false
+           assign type3 = false
+           assign type4 = false
+           assign type5 = false
+           assign type6 = false
+          assign type7 = false
+           assign type8 = false
+          assign type9 = false
+           for block in section.blocks
+            if block.settings.faqtype == 'type1'
+             assign type1 = true
+            elsif block.settings.faqtype == 'type2'
+             assign type2 = true
+             elsif block.settings.faqtype == 'type3'
+             assign type3 = true
+              elsif block.settings.faqtype == 'type4'
+             assign type4 = true
+           elsif block.settings.faqtype == 'type5'
+             assign type5 = true
+           elsif block.settings.faqtype == 'type6'
+             assign type6 = true
+           elsif block.settings.faqtype == 'type7'
+             assign type7 = true
+           elsif block.settings.faqtype == 'type8'
+             assign type8 = true
+           elsif block.settings.faqtype == 'type9'
+             assign type9 = true
+            
+            endif 
+           endfor
+        %}
+    
+  <div class="prodvsfaqs-box prodvsfaqs_{{ secidlast }}">
+    <div class="prodvsfaqs-bleft">
+      {% if section.settings.type1 != blank %}
+        <div class="prodvsfaqs-navitem active prodvsfaqs-navitem-1" data-index="1">
+          {{ section.settings.type1 }}<img alt="" src="https://cdn.shopify.com/s/files/1/0558/0708/2629/files/arrgrright.png?v=1715758482"/>
+        </div> 
+      {% endif %}
+      {% if section.settings.type2 != blank %}
+        <div class="prodvsfaqs-navitem prodvsfaqs-navitem-2" data-index="2">
+          {{ section.settings.type2 }}<img alt="" src="https://cdn.shopify.com/s/files/1/0558/0708/2629/files/arrgrright.png?v=1715758482"/>
+        </div> 
+      {% endif %}
+      {% if section.settings.type3 != blank %}
+        <div class="prodvsfaqs-navitem prodvsfaqs-navitem-3" data-index="3">
+          {{ section.settings.type3 }}<img alt="" src="https://cdn.shopify.com/s/files/1/0558/0708/2629/files/arrgrright.png?v=1715758482"/>
+        </div> 
+      {% endif %}
+      {% if section.settings.type4 != blank %}
+        <div class="prodvsfaqs-navitem prodvsfaqs-navitem-4" data-index="4">
+          {{ section.settings.type4 }}<img alt="" src="https://cdn.shopify.com/s/files/1/0558/0708/2629/files/arrgrright.png?v=1715758482"/>
+        </div> 
+      {% endif %}
+      {% if section.settings.type5 != blank %}
+        <div class="prodvsfaqs-navitem prodvsfaqs-navitem-5" data-index="5">
+          {{ section.settings.type5 }}<img alt="" src="https://cdn.shopify.com/s/files/1/0558/0708/2629/files/arrgrright.png?v=1715758482"/>
+        </div> 
+      {% endif %}
+      {% if section.settings.type6 != blank %}
+        <div class="prodvsfaqs-navitem prodvsfaqs-navitem-6" data-index="6">
+          {{ section.settings.type6 }}<img alt="" src="https://cdn.shopify.com/s/files/1/0558/0708/2629/files/arrgrright.png?v=1715758482"/>
+        </div> 
+      {% endif %}
+      {% if section.settings.type7 != blank %}
+        <div class="prodvsfaqs-navitem prodvsfaqs-navitem-7" data-index="7">
+          {{ section.settings.type7 }}<img alt="" src="https://cdn.shopify.com/s/files/1/0558/0708/2629/files/arrgrright.png?v=1715758482"/>
+        </div> 
+      {% endif %}
+      {% if section.settings.type8 != blank %}
+        <div class="prodvsfaqs-navitem prodvsfaqs-navitem-8" data-index="8">
+          {{ section.settings.type8 }}<img alt="" src="https://cdn.shopify.com/s/files/1/0558/0708/2629/files/arrgrright.png?v=1715758482"/>
+        </div> 
+      {% endif %}
+      {% if section.settings.type9 != blank %}
+        <div class="prodvsfaqs-navitem prodvsfaqs-navitem-9" data-index="9">
+          {{ section.settings.type9 }}<img alt="" src="https://cdn.shopify.com/s/files/1/0558/0708/2629/files/arrgrright.png?v=1715758482"/>
+        </div> 
+      {% endif %}
+    </div>
+    <div class="prodvsfaqs-bright">
+      {% if type1 %}
+        {% if section.settings.type1 != blank %}
+          <div class="prodvsfaqs-navitem active prodvsfaqs-navitem-1" data-index="1">
+            {{ section.settings.type1 }}<img alt="" src="https://cdn.shopify.com/s/files/1/0558/0708/2629/files/arrgrright.png?v=1715758482"/>
+          </div> 
+        {% endif %}
+       <div class="prodvsfaqs-britem prodvsfaqs-britem-1">  
+      {% for block in section.blocks %}
+          {% if block.settings.faqtype == 'type1' %}
+            <div class="prodvsfaqs-britqa">
+              <div class="prodvsfaqs-britqatitle">{{ block.settings.title }}<img alt="{{ block.settings.title }}" src="https://cdn.shopify.com/s/files/1/0558/0708/2629/files/bkaiirgi.png?v=1713173182"/></div>
+              <div class="prodvsfaqs-britqacon">{{ block.settings.content }}</div>
+            </div>
+          {% endif %}
+
+      {% endfor %}
+      </div>  
+      {% endif %}
+
+      {% if type2 %}
+        {% if section.settings.type2 != blank %}
+          <div class="prodvsfaqs-navitem prodvsfaqs-navitem-2" data-index="2">
+            {{ section.settings.type2 }}<img alt="" src="https://cdn.shopify.com/s/files/1/0558/0708/2629/files/arrgrright.png?v=1715758482"/>
+          </div> 
+        {% endif %}
+       <div class="prodvsfaqs-britem prodvsfaqs-britem-2">  
+      {% for block in section.blocks %}
+          {% if block.settings.faqtype == 'type2' %}
+            <div class="prodvsfaqs-britqa">
+              <div class="prodvsfaqs-britqatitle">{{ block.settings.title }}<img alt="{{ block.settings.title }}" src="https://cdn.shopify.com/s/files/1/0558/0708/2629/files/bkaiirgi.png?v=1713173182"/></div>
+              <div class="prodvsfaqs-britqacon">{{ block.settings.content }}</div>
+            </div>
+          {% endif %}
+
+      {% endfor %}
+      </div> 
+      {% endif %}
+
+      {% if type3 %}
+        {% if section.settings.type3 != blank %}
+          <div class="prodvsfaqs-navitem prodvsfaqs-navitem-3" data-index="3">
+            {{ section.settings.type3 }}<img alt="" src="https://cdn.shopify.com/s/files/1/0558/0708/2629/files/arrgrright.png?v=1715758482"/>
+          </div> 
+        {% endif %}
+       <div class="prodvsfaqs-britem prodvsfaqs-britem-3">  
+      {% for block in section.blocks %}
+          {% if block.settings.faqtype == 'type3' %}
+            <div class="prodvsfaqs-britqa">
+              <div class="prodvsfaqs-britqatitle">{{ block.settings.title }}<img alt="{{ block.settings.title }}" src="https://cdn.shopify.com/s/files/1/0558/0708/2629/files/bkaiirgi.png?v=1713173182"/></div>
+              <div class="prodvsfaqs-britqacon">{{ block.settings.content }}</div>
+            </div>
+          {% endif %}
+
+      {% endfor %}
+      </div> 
+      {% endif %}
+
+      {% if type4 %}
+        {% if section.settings.type4 != blank %}
+          <div class="prodvsfaqs-navitem prodvsfaqs-navitem-4" data-index="4">
+            {{ section.settings.type4 }}<img alt="" src="https://cdn.shopify.com/s/files/1/0558/0708/2629/files/arrgrright.png?v=1715758482"/>
+          </div> 
+        {% endif %}
+       <div class="prodvsfaqs-britem prodvsfaqs-britem-4">  
+      {% for block in section.blocks %}
+          {% if block.settings.faqtype == 'type4' %}
+            <div class="prodvsfaqs-britqa">
+              <div class="prodvsfaqs-britqatitle">{{ block.settings.title }}<img alt="{{ block.settings.title }}" src="https://cdn.shopify.com/s/files/1/0558/0708/2629/files/bkaiirgi.png?v=1713173182"/></div>
+              <div class="prodvsfaqs-britqacon">{{ block.settings.content }}</div>
+            </div>
+          {% endif %}
+
+      {% endfor %}
+      </div> 
+      {% endif %}
+
+      {% if type5 %}
+        {% if section.settings.type5 != blank %}
+          <div class="prodvsfaqs-navitem prodvsfaqs-navitem-5" data-index="5">
+            {{ section.settings.type5 }}<img alt="" src="https://cdn.shopify.com/s/files/1/0558/0708/2629/files/arrgrright.png?v=1715758482"/>
+          </div> 
+        {% endif %}
+       <div class="prodvsfaqs-britem prodvsfaqs-britem-5">  
+      {% for block in section.blocks %}
+          {% if block.settings.faqtype == 'type5' %}
+            <div class="prodvsfaqs-britqa">
+              <div class="prodvsfaqs-britqatitle">{{ block.settings.title }}<img alt="{{ block.settings.title }}" src="https://cdn.shopify.com/s/files/1/0558/0708/2629/files/bkaiirgi.png?v=1713173182"/></div>
+              <div class="prodvsfaqs-britqacon">{{ block.settings.content }}</div>
+            </div>
+          {% endif %}
+
+      {% endfor %}
+      </div>  
+      {% endif %}
+
+      {% if type6 %}
+        {% if section.settings.type6 != blank %}
+          <div class="prodvsfaqs-navitem prodvsfaqs-navitem-6" data-index="6">
+            {{ section.settings.type6 }}<img alt="" src="https://cdn.shopify.com/s/files/1/0558/0708/2629/files/arrgrright.png?v=1715758482"/>
+          </div> 
+        {% endif %}
+       <div class="prodvsfaqs-britem prodvsfaqs-britem-6">  
+      {% for block in section.blocks %}
+          {% if block.settings.faqtype == 'type6' %}
+            <div class="prodvsfaqs-britqa">
+              <div class="prodvsfaqs-britqatitle">{{ block.settings.title }}<img alt="{{ block.settings.title }}" src="https://cdn.shopify.com/s/files/1/0558/0708/2629/files/bkaiirgi.png?v=1713173182"/></div>
+              <div class="prodvsfaqs-britqacon">{{ block.settings.content }}</div>
+            </div>
+          {% endif %}
+
+      {% endfor %}
+      </div>  
+      {% endif %}
+      
+      {% if type7 %}
+        {% if section.settings.type7 != blank %}
+          <div class="prodvsfaqs-navitem prodvsfaqs-navitem-7" data-index="7">
+            {{ section.settings.type7 }}<img alt="" src="https://cdn.shopify.com/s/files/1/0558/0708/2629/files/arrgrright.png?v=1715758482"/>
+          </div> 
+        {% endif %}
+       <div class="prodvsfaqs-britem prodvsfaqs-britem-7">  
+      {% for block in section.blocks %}
+          {% if block.settings.faqtype == 'type7' %}
+            <div class="prodvsfaqs-britqa">
+              <div class="prodvsfaqs-britqatitle">{{ block.settings.title }}<img alt="{{ block.settings.title }}" src="https://cdn.shopify.com/s/files/1/0558/0708/2629/files/bkaiirgi.png?v=1713173182"/></div>
+              <div class="prodvsfaqs-britqacon">{{ block.settings.content }}</div>
+            </div>
+          {% endif %}
+
+      {% endfor %}
+      </div>  
+      {% endif %}
+
+      {% if type8 %}
+        {% if section.settings.type8 != blank %}
+          <div class="prodvsfaqs-navitem prodvsfaqs-navitem-8" data-index="8">
+            {{ section.settings.type8 }}<img alt="" src="https://cdn.shopify.com/s/files/1/0558/0708/2629/files/arrgrright.png?v=1715758482"/>
+          </div> 
+        {% endif %}
+       <div class="prodvsfaqs-britem prodvsfaqs-britem-8">  
+      {% for block in section.blocks %}
+          {% if block.settings.faqtype == 'type8' %}
+            <div class="prodvsfaqs-britqa">
+              <div class="prodvsfaqs-britqatitle">{{ block.settings.title }}<img alt="{{ block.settings.title }}" src="https://cdn.shopify.com/s/files/1/0558/0708/2629/files/bkaiirgi.png?v=1713173182"/></div>
+              <div class="prodvsfaqs-britqacon">{{ block.settings.content }}</div>
+            </div>
+          {% endif %}
+
+      {% endfor %}
+      </div>  
+      {% endif %}
+
+      {% if type9 %}
+        {% if section.settings.type9 != blank %}
+          <div class="prodvsfaqs-navitem prodvsfaqs-navitem-9" data-index="9">
+            {{ section.settings.type9 }}<img alt="" src="https://cdn.shopify.com/s/files/1/0558/0708/2629/files/arrgrright.png?v=1715758482"/>
+          </div> 
+        {% endif %}
+       <div class="prodvsfaqs-britem prodvsfaqs-britem-9">  
+      {% for block in section.blocks %}
+          {% if block.settings.faqtype == 'type9' %}
+            <div class="prodvsfaqs-britqa">
+              <div class="prodvsfaqs-britqatitle">{{ block.settings.title }}<img alt="{{ block.settings.title }}" src="https://cdn.shopify.com/s/files/1/0558/0708/2629/files/bkaiirgi.png?v=1713173182"/></div>
+              <div class="prodvsfaqs-britqacon">{{ block.settings.content }}</div>
+            </div>
+          {% endif %}
+
+      {% endfor %}
+      </div>  
+      {% endif %}
+      
+      
+    </div>
+  </div>
+  </div>
+</div>
+<script>
+  $(function(){
+    $(".prodvsfaqs-navitem").click(function(){
+      $(this).addClass("active").siblings().removeClass("active");
+      let nindex = $(this).data("index");
+      $(".prodvsfaqs-britem").hide();
+      $(".prodvsfaqs-britem-"+nindex).fadeIn();
+    });
+    $(".prodvsfaqs-britqatitle").click(function(){
+      if($(this).next(".prodvsfaqs-britqacon").is(":hidden")){
+        $(this).addClass("open");
+      }else{
+         $(this).removeClass("open");
+      }
+      $(this).next(".prodvsfaqs-britqacon").slideToggle();
+    });
+  })
+</script>
+
+
+
+{% schema %}
+  {
+   "name": "Product Faqs",
+  "settings": [
+     {
+        "type": "text",
+        "id": "title",
+        "label": "title"
+     },{
+        "type": "text",
+        "id": "type1",
+        "label": "type1"
+      },{
+        "type": "text",
+        "id": "type2",
+        "label": "type2"
+      },{
+        "type": "text",
+        "id": "type3",
+        "label": "type3"
+      },{
+        "type": "text",
+        "id": "type4",
+        "label": "type4"
+      },{
+        "type": "text",
+        "id": "type5",
+        "label": "type5"
+      },{
+        "type": "text",
+        "id": "type6",
+        "label": "type6"
+      },{
+        "type": "text",
+        "id": "type7",
+        "label": "type7"
+      },{
+        "type": "text",
+        "id": "type8",
+        "label": "type8"
+      },{
+        "type": "text",
+        "id": "type9",
+        "label": "type9"
+      }  
+    ],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "block",
+        "settings": [
+       {
+        "type": "select",
+        "id": "faqtype",
+        "label": "faq type",
+        "options": [
+        {
+          "value":"type1",
+          "label":"type1"
+        },{
+          "value":"type2",
+          "label":"type2"
+        },{
+          "value":"type3",
+          "label":"type3"
+        },{
+          "value":"type4",
+          "label":"type4"
+        },{
+          "value":"type5",
+          "label":"type5"
+        },{
+          "value":"type6",
+          "label":"type6"
+        },{
+          "value":"type7",
+          "label":"type7"
+        },{
+          "value":"type8",
+          "label":"type8"
+        },{
+          "value":"type9",
+          "label":"type9"
+        }
+        ]
+      },{
+        "type": "text",
+        "id": "title",
+        "label": "title"
+      },{
+        "type": "richtext",
+        "id": "content",
+        "label": "content"
+      }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Product Faqs",
+        "category": "HO-layout"
+      }
+    ]
+  }
+{% endschema %}

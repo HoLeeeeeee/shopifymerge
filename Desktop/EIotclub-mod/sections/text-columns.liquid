@@ -1,0 +1,500 @@
+{%- liquid
+  assign mg_top_desktop = section.settings.mg_top_desktop
+  assign mg_top_tablet = section.settings.mg_top_tablet
+  assign mg_top_mobile = section.settings.mg_top_mobile
+
+  assign mg_bottom_desktop = section.settings.margin_bottom
+  assign mg_bottom_tablet = section.settings.margin_bottom_tab
+  assign mg_bottom_mobile = section.settings.margin_bottom_mb
+-%}
+<style>
+  @media (max-width: 767px) {
+  #new-{{ section.id }} {
+              padding-top: {{ mg_top_mobile | append: 'px' }};
+              padding-bottom: {{ mg_bottom_mobile | append: 'px' }};
+          }
+
+      }
+
+      @media (min-width: 1200px) {
+      #new-{{ section.id }} {
+              padding-top: {{ mg_top_desktop | append: 'px' }};
+              padding-bottom: {{ mg_bottom_desktop | append: 'px' }};
+          }
+      }
+
+
+      @media (min-width: 768px) and (max-width: 1199px) {
+      #new-{{ section.id }} {
+              padding-top: {{ mg_top_tablet | append: 'px' }};
+              padding-bottom: {{ mg_bottom_tablet | append: 'px' }};
+          }
+      }
+     .new-max-box{
+       {% if section.settings.bg_color != blank %}
+         padding: 30px 0 60px;
+         background-color: #f6f6f6;
+       {% endif %}
+
+     }
+     #new-{{ section.id }} .image-wrap{
+       margin-bottom: 0;
+       border-radius: 24px;
+       overflow: hidden;
+     }
+     #new-{{ section.id }} .new-box{
+       margin-top: 24px;
+     }
+
+     .style-2 .new-box{
+       background-color: #f6f6f6;
+       padding: 30px 20px;
+       border-radius: 0 0 20px 20px ;
+       margin-top: 0 !important;
+     }
+    .style-2 .new-box h3{
+     margin-bottom: 4px;
+    }
+     .style-2 .text-spacing{
+       overflow: hidden;
+       border-radius: 20px 20px 0 0 !important;
+       margin-bottom: 0;
+     }
+     .style-1 .grid__item{
+       position: relative;
+       margin-bottom: 0;
+     }
+     .style-1 .image-wrap {
+       margin-bottom: 0;
+       border-radius: 24px;
+       overflow: hidden;
+     }
+     .style-1 .new-box{
+       position: absolute;
+       top: 50%;
+       left: 80px;
+       width: 50%;
+       transform: translateY(-50%);
+       margin-top: 0 !important;
+     }
+     .style-1 .new-box *{
+       margin-bottom: 4px;
+     }
+     .style-1 .new-box .btn{
+       margin-top: 24px;
+     }
+     .style-1 .grid--flush-bottom{
+          margin-bottom: 0;
+        }
+     @media (max-width:589px){
+       .style-1{
+         padding: 0;
+       }
+
+       .style-1 .grid{
+         padding: 0 20px;
+         margin:0;
+         width: 100%;
+       }
+       .style-1 .grid .grid__item{
+         padding: 0;
+         width: 100%;
+         border-radius: 12px;
+         overflow: hidden;
+       }
+       .style-1 .grid .grid__item + .grid__item{
+         margin-top: 20px;
+       }
+       .style-1 .image-wrap{
+         border-radius: 0 !important;
+       }
+       .style-1 .new-box{
+         top: 50%;
+         left: 20px;
+         width: 60%;
+         transform: translateY(-50%);
+         text-align: left;
+       }
+
+       .style-2 .text-spacing{
+       border-radius: 12px 12px 0 0 !important;
+     }
+     .style-2 .new-box{
+       border-radius: 0 0  12px 12px;
+     }
+     }
+</style>
+{%- if section.settings.divider -%}<div class="section--divider">{%- endif -%}
+
+<div class="new-max-box">
+  <div class="page-width {{ section.settings.style }}" id="new-{{ section.id }}">
+    {%- if section.settings.title != blank -%}
+      <div class="section-header text-{{ section.settings.align_text }}">
+        <h2>{{ section.settings.title }}</h2>
+        {% if section.settings['title-buttom'] != blank %}
+          <p>{{ section.settings['title-buttom'] }}</p>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <div class="grid {% unless section.blocks.size == 5 %}grid--uniform{% endunless %} grid--flush-bottom">
+      {%- liquid
+        assign grid_item_width = 'medium-up--one-third'
+        case section.blocks.size
+          when 1
+            assign grid_item_width = 'medium-up--one-half'
+          when 2
+            assign grid_item_width = 'medium-up--one-half'
+          when 4
+            assign grid_item_width = 'medium-up--one-half'
+        endcase
+      -%}
+      {%- for block in section.blocks -%}
+        {%- if section.blocks.size == 5 and forloop.index < 3 -%}
+          {%- assign column_width = 'medium-up--one-half' -%}
+        {%- else -%}
+          {%- assign column_width = grid_item_width -%}
+        {%- endif -%}
+        <div
+          class="grid__item {{ column_width }} text-{{ section.settings.content_align_text }}"
+          {{ block.shopify_attributes }}
+          data-aos="row-of-3"
+        >
+          {%- if block.settings.enable_image -%}
+            <div style="{% if section.settings.align_text == 'center' %}margin: 0 auto;{% endif %} max-width: {{ block.settings.image_width }}px;">
+              {% if block.settings.button_link != blank %}
+                <a
+                  aria-label="{{ block.settings.button_link }}"
+                  href="{{ block.settings.button_link }}"
+                  target="_blank"
+                >
+              {% endif %}
+              {% if block.settings.image != blank %}
+                <div
+                  class="image-wrap text-spacing {% if block.settings.image_mask != 'none' %}svg-mask svg-mask--{{ block.settings.image_mask }}{% endif %}"
+                  style="height: 0; padding-bottom: {{ 100 | divided_by: block.settings.image.aspect_ratio }}%;"
+                >
+                  {%-
+                    render 'image-element',
+                    img: block.settings.image,
+                    sizeVariable: column_width,
+                    widths: '180, 360, 540, 720, 900, 1080',
+                  -%}
+                </div>
+              {% else %}
+                <div
+                  class="image-wrap text-spacing {% if block.settings.image_mask != 'none' %}svg-mask svg-mask--{{ block.settings.image_mask }}{% endif %}"
+                  style="height: 300px"
+                >
+                  {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                </div>
+              {% endif %}
+              {% if block.settings.button_link != blank %}
+                </a>
+              {% endif %}
+            </div>
+          {% endif %}
+          <div class="new-box">
+            {% if block.settings['header-text'] != blank %}
+              <p>{{ block.settings['header-text'] }}</p>
+            {% endif %}
+            {%- if block.settings.title != blank -%}
+              <h3>{{ block.settings.title }}</h3>
+            {% endif %}
+            {% if block.settings.text != blank %}
+              <div class="rte-setting text-spacing">{{ block.settings.text }}</div>
+            {% endif %}
+            {% if block.settings.button_label != blank %}
+              <a href="{{ block.settings.button_link }}" target="_blank" class="btn btn--secondary btn--small">
+                {{ block.settings.button_label }}
+              </a>
+            {% endif %}
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{%- if section.settings.divider -%}</div>{%- endif -%}
+
+{% schema %}
+{
+  "name": "t:sections.text-columns.name",
+  "class": "index-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "header",
+      "content": "Margin Bottom:"
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom_mb",
+      "label": "Mobile",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom_tab",
+      "label": "Tablet",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "label": "Desktop",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Margin Top"
+    },
+    {
+      "type": "range",
+      "id": "mg_top_mobile",
+      "label": "Mobile",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "mg_top_tablet",
+      "label": "Tablet",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "mg_top_desktop",
+      "label": "Desktop",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 0
+    },
+    {
+      "type": "select",
+      "id": "style",
+      "label": "style",
+      "options": [
+        {
+          "value": "none",
+          "label": "none"
+        },
+        {
+          "value": "style-1",
+          "label": "style-1"
+        },
+        {
+          "value": "style-2",
+          "label": "style-2"
+        }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "bg color"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:sections.text-columns.settings.title.label"
+    },
+    {
+      "type": "text",
+      "id": "title-buttom",
+      "label": "title-buttom"
+    },
+    {
+      "type": "select",
+      "id": "align_text",
+      "label": "t:sections.text-columns.settings.align_text.label",
+      "default": "center",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.text-columns.settings.align_text.options.left.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.text-columns.settings.align_text.options.center.label"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "content_align_text",
+      "label": "文本对齐方式",
+      "default": "center",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.text-columns.settings.align_text.options.left.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.text-columns.settings.align_text.options.center.label"
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "divider",
+      "label": "t:sections.text-columns.settings.divider.label",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text_block",
+      "name": "t:sections.text-columns.blocks.column.name",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "enable_image",
+          "label": "t:sections.text-columns.blocks.column.settings.enable_image.label",
+          "default": true
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.text-columns.blocks.column.settings.image.label"
+        },
+        {
+          "type": "select",
+          "id": "image_mask",
+          "label": "t:common.image_mask.label",
+          "default": "none",
+          "options": [
+            {
+              "value": "none",
+              "label": "t:common.image_mask.options.none.label"
+            },
+            {
+              "value": "portrait",
+              "label": "t:common.image_mask.options.portrait.label"
+            },
+            {
+              "value": "landscape",
+              "label": "t:common.image_mask.options.landscape.label"
+            },
+            {
+              "value": "square",
+              "label": "t:common.image_mask.options.square.label"
+            },
+            {
+              "value": "rounded",
+              "label": "t:common.image_mask.options.rounded.label"
+            },
+            {
+              "value": "rounded-wave",
+              "label": "t:common.image_mask.options.rounded-wave.label"
+            },
+            {
+              "value": "rounded-top",
+              "label": "t:common.image_mask.options.rounded-top.label"
+            },
+            {
+              "value": "star",
+              "label": "t:common.image_mask.options.star.label"
+            },
+            {
+              "value": "splat-1",
+              "label": "t:common.image_mask.options.splat-1.label"
+            },
+            {
+              "value": "splat-2",
+              "label": "t:common.image_mask.options.splat-2.label"
+            },
+            {
+              "value": "splat-3",
+              "label": "t:common.image_mask.options.splat-3.label"
+            },
+            {
+              "value": "splat-4",
+              "label": "t:common.image_mask.options.splat-4.label"
+            }
+          ]
+        },
+        {
+          "type": "range",
+          "id": "image_width",
+          "label": "t:sections.text-columns.blocks.column.settings.image_width.label",
+          "default": 650,
+          "min": 60,
+          "max": 650,
+          "step": 10,
+          "unit": "px"
+        },
+        {
+          "type": "text",
+          "id": "header-text",
+          "label": "header text",
+          "default": "header text"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:sections.text-columns.blocks.column.settings.title.label",
+          "default": "Example title"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "t:sections.text-columns.blocks.column.settings.text.label",
+          "default": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products. Add images for emphasis.</p>"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "t:sections.text-columns.blocks.column.settings.button_label.label",
+          "default": "Optional button"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "t:sections.text-columns.blocks.column.settings.button_link.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.text-columns.presets.text_columns_with_images.name",
+      "blocks": [
+        {
+          "type": "text_block"
+        },
+        {
+          "type": "text_block"
+        },
+        {
+          "type": "text_block"
+        }
+      ]
+    }
+  ],
+  "disabled_on": {
+    "groups": ["custom.popups"]
+  }
+}
+{% endschema %}

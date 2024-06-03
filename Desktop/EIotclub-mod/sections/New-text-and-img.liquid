@@ -1,0 +1,467 @@
+<!-- sections\new-metamaterial-banner.liquid -->
+<div class="" id="new-{{ section.id }}">    
+    <div class="new-box">
+        {% if section.settings.image_pc != blank %}
+            <div class="new-image-list">
+                <img class="image-pc" src="{{ section.settings.image_pc | img_url: 'master' }}" alt="{{ section.settings.header }}">
+                <img class="image-mo" src=" {% if section.settings.image_mo != blank %} {{ section.settings.image_mo | img_url: 'master' }} {% else %} {{ section.settings.image_pc | img_url: 'master' }} {% endif %} " alt="{{ section.settings.header }}">
+            </div>
+        {% endif %}  
+        <div class="new-box-header">
+            {% if section.settings.header != blank %}
+                <h2>{{ section.settings.header }}</h2>
+            {% endif %}
+            {% if section.settings.content != blank %}
+                <a class="btn" href="{{ section.settings.content_url }}">{{ section.settings.content }}</a> 
+            {% endif %}          
+        </div>
+    </div>  
+</div>
+<style>
+    #new-{{ section.id }} .image-pc{
+        display: block;
+    }
+    #new-{{ section.id }} .image-mo{
+        display: none;
+    }
+    #new-{{ section.id }} .new-box{
+        position: relative;
+        overflow: hidden;
+        max-width: {{ section.settings.max_width | append: 'px' }};
+        margin:0 auto;
+        padding: {{ section.settings.padding_top | append: 'px' }} {{ section.settings.padding_left_and_right |append: 'px' }} {{ section.settings.padding_bottom | append: 'px' }};    
+        background-color: {{ section.settings.bg_color }};
+    }
+    #new-{{ section.id }} .new-box-header{
+        width: 60%;
+        position: absolute;
+        top:50%;  
+        right: {{ section.settings.text_right | append: '%'   }};
+        transform: translateY(-50%);
+        z-index: 1;
+        padding: 0 20px;
+    }
+    #new-{{ section.id }} .new-box-header h2{       
+        width: {{ section.settings.header_width | append: '%'  }};
+        font-size: {{ section.settings.header_font_size | append: 'px'  }};
+        line-height:{{ section.settings.header_line_height | append: 'px'  }};
+        color:{{ section.settings.header_color }};
+        text-align:{{ section.settings.header_text_align }};
+        margin-bottom:{{ section.settings.header_margin_buttom | append: 'px'  }}
+    }
+    #new-{{ section.id }} .new-box-header p{
+        font-size: {{ section.settings.content_font_size | append: 'px'  }};
+        line-height:{{ section.settings.content_line_height | append: 'px'  }};
+        color:{{ section.settings.content_color }};
+        text-align:{{ section.settings.content_text_align }};
+        margin-bottom:{{ section.settings.content_margin_buttom | append: 'px'  }}
+    }
+    @media(max-width:767px){
+        #new-{{ section.id }} .image-pc{
+            display: none;
+        }
+        #new-{{ section.id }} .image-mo{
+            display: block;
+        }
+        #new-{{ section.id }} .new-box{
+            padding: {{ section.settings.padding_top_mo | append: 'px' }} {{ section.settings.padding_left_and_right_mo |append: 'px' }} {{ section.settings.padding_bottom_mo | append: 'px' }};
+        }
+        #new-{{ section.id }} .new-box-header h2{
+            width: {{ section.settings.header_width_mo | append: '%'  }};
+            font-size: {{ section.settings.header_font_size_mo | append: 'px'  }};
+            line-height:{{ section.settings.header_line_height_mo | append: 'px'  }};
+            text-align:{{ section.settings.header_text_align_mo }};
+            margin-bottom:{{ section.settings.header_margin_buttom_mo | append: 'px'  }}
+        }
+        #new-{{ section.id }} .new-box-header p{
+            font-size: {{ section.settings.content_font_size_mo | append: 'px'  }};
+            line-height:{{ section.settings.content_line_height_mo | append: 'px'  }};
+            text-align:{{ section.settings.content_text_align_mo }};
+            margin-bottom:{{ section.settings.content_margin_buttom_mo | append: 'px'  }}
+        }
+    }
+</style>
+{{ section.settings.liquid }}
+
+{% if  section.settings.liquid != blank %}
+<script>
+    $(document).ready(function() {
+         $('#new-{{ section.id }} .new-box-header h2').text( header );
+         $('#new-{{ section.id }} .new-box-header p').text( content );
+    }) 
+ </script>
+{% endif %}
+
+{% schema  %} 
+    {
+        "name": "new-metamaterial-banner",
+        "settings": [
+            {
+                "type": "header",
+                "content": "盒子样式"
+            },
+            {
+                "type": "text",
+                "id": "max_width",
+                "label": "盒子最大宽度",
+                "info": "盒子整体的最大宽度"
+            },
+            {
+                "type": "range",
+                "id": "text_right",
+                "label": "文本盒子距离右边的距离",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "unit": "%",
+                "default": 0
+            },
+            {
+                "type": "color",
+                "id": "bg_color",
+                "label": "背景颜色"
+            },
+            {
+                "type": "range",
+                "id": "padding_top",
+                "label": "上内边距",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "unit": "px",
+                "default": 32
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom",
+                "label": "下内边距",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "unit": "px",
+                "default": 32
+            },
+            {
+                "type": "range",
+                "id": "padding_left_and_right",
+                "label": "左右内边距",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "unit": "px",
+                "default": 32
+            },
+            {
+                "type": "header",
+                "content": "移动端"
+            },
+            {
+                "type": "range",
+                "id": "padding_top_mo",
+                "label": "上内边距",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "unit": "px",
+                "default": 32
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom_mo",
+                "label": "下内边距",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "unit": "px",
+                "default": 32
+            },
+            {
+                "type": "range",
+                "id": "padding_left_and_right_mo",
+                "label": "左右内边距",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "unit": "px",
+                "default": 22
+            },
+            {
+                "type": "header",
+                "content": "图片"
+            },
+            {
+                "type": "image_picker",
+                "id": "image_pc",
+                "label": "pc端图片"
+            },
+            {
+                "type": "image_picker",
+                "id": "image_mo",
+                "label": "移动端图片"
+            },
+            {
+                "type": "header",
+                "content": "标题"
+            },
+            {
+                "type": "text",
+                "id": "header",
+                "label": "标题",
+                "default": "header"
+            },
+            {
+                "type": "range",
+                "id": "header_width",
+                "label": "标题盒子大小",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "unit": "%",
+                "default": 100
+            },
+            {
+                "type": "color",
+                "id": "header_color",
+                "label": "字体颜色"
+            },
+            {
+                "type": "select",
+                "id": "header_text_align",
+                "label": "对齐方式",
+                "options": [
+                    {
+                        "value": "left",
+                        "label": "left"
+                    },
+                    {
+                        "value": "center",
+                        "label": "center"
+                    },
+                    {
+                        "value": "right",
+                        "label": "right"
+                    }
+                ]
+            },
+            {
+                "type": "range",
+                "id": "header_margin_buttom",
+                "label": "下边距",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "unit": "px",
+                "default": 32
+            },
+            {
+                "type": "range",
+                "id": "header_font_size",
+                "label": "字号",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "unit": "px",
+                "default": 32
+            },
+            {
+                "type": "range",
+                "id": "header_line_height",
+                "label": "行高",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "unit": "px",
+                "default": 32
+            },
+            {
+                "type": "range",
+                "id": "header_width_mo",
+                "label": "移动端标题盒子大小",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "unit": "%",
+                "default": 100
+            },
+            {
+                "type": "select",
+                "id": "header_text_align_mo",
+                "label": "移动端对齐方式",
+                "options": [
+                    {
+                        "value": "left",
+                        "label": "left"
+                    },
+                    {
+                        "value": "center",
+                        "label": "center"
+                    },
+                    {
+                        "value": "right",
+                        "label": "right"
+                    }
+                ]
+            },
+            {
+                "type": "range",
+                "id": "header_margin_buttom_mo",
+                "label": "移动端下边距",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "unit": "px",
+                "default": 32
+            },
+            {
+                "type": "range",
+                "id": "header_font_size_mo",
+                "label": "移动端字号",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "unit": "px",
+                "default": 32
+            },
+            {
+                "type": "range",
+                "id": "header_line_height_mo",
+                "label": "移动端行高",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "unit": "px",
+                "default": 32
+            },
+            {
+                "type": "header",
+                "content": "按钮"
+            },
+            {
+                "type": "text",
+                "id": "content",
+                "label": "按钮",
+                "default": "content"
+            },
+            {
+                "type": "url",
+                "id": "content_url",
+                "label": "按钮链接"
+            },
+            {
+                "type": "color",
+                "id": "content_color",
+                "label": "字体颜色"
+            },
+            {
+                "type": "select",
+                "id": "content_text_align",
+                "label": "对齐方式",
+                "options": [
+                    {
+                        "value": "left",
+                        "label": "left"
+                    },
+                    {
+                        "value": "center",
+                        "label": "center"
+                    },
+                    {
+                        "value": "right",
+                        "label": "right"
+                    }
+                ]
+            },
+            {
+                "type": "range",
+                "id": "content_margin_buttom",
+                "label": "下边距",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "unit": "px",
+                "default": 32
+            },
+            {
+                "type": "range",
+                "id": "content_font_size",
+                "label": "字号",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "unit": "px",
+                "default": 32
+            },
+            {
+                "type": "range",
+                "id": "content_line_height",
+                "label": "行高",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "unit": "px",
+                "default": 32
+            },
+            {
+                "type": "select",
+                "id": "content_text_align_mo",
+                "label": "移动端对齐方式",
+                "options": [
+                    {
+                        "value": "left",
+                        "label": "left"
+                    },
+                    {
+                        "value": "center",
+                        "label": "center"
+                    },
+                    {
+                        "value": "right",
+                        "label": "right"
+                    }
+                ]
+            },
+            {
+                "type": "range",
+                "id": "content_margin_buttom_mo",
+                "label": "移动端下边距",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "unit": "px",
+                "default": 32
+            },
+            {
+                "type": "range",
+                "id": "content_font_size_mo",
+                "label": "移动端字号",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "unit": "px",
+                "default": 32
+            },
+            {
+                "type": "range",
+                "id": "content_line_height_mo",
+                "label": "移动端行高",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "unit": "px",
+                "default": 32
+            },
+            {
+                "type": "liquid",
+                "id": "liquid",
+                "label": "元字段代码",
+                "info": "此框填入元字段代码修改所有内容,填写其他内容无效"
+            }
+        ],
+        "blocks": [],
+        "presets": [
+            {
+                "name": "New-text-and-img"
+            }
+        ]
+    }
+{% endschema %}

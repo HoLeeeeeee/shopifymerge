@@ -1,0 +1,492 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "5d250eda-53c5-4bac-ad39-1d91fc1cdea1": {
+      "type": "slideshow",
+      "blocks": {
+        "template--14569609003141__5d250eda-53c5-4bac-ad39-1d91fc1cdea1-16822525495b841225-0": {
+          "type": "image",
+          "settings": {
+            "title": "EIOTCLUB SIM CARD",
+            "title_color": "",
+            "title_size": 53,
+            "subheading": "",
+            "subheading_size": 20,
+            "subheading_color": "",
+            "subheading_line_height": 24,
+            "subheading_letter_spacing": 0,
+            "link": "",
+            "link_text": "",
+            "link2": "",
+            "link_text2": "",
+            "text_align": "vertical-center horizontal-center",
+            "text_align_mo": "vertical-center-mo horizontal-center-mo",
+            "image": "shopify:\/\/shop_images\/3-1920x400-0408.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/brandstory01-375x460_2x_79ba755f-7742-4108-9502-e203e98f12d3.jpg",
+            "parallax_direction": "top",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "template--14569609003141__5d250eda-53c5-4bac-ad39-1d91fc1cdea1-16822525495b841225-0"
+      ],
+      "settings": {
+        "section_height": "natural",
+        "mobile_height": "auto",
+        "parallax": false,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 5,
+        "lazyload_images": true
+      }
+    },
+    "3c3fb723-4385-4841-a0f2-93acb19369d4": {
+      "type": "rich-text",
+      "blocks": {
+        "template--14569609003141__3c3fb723-4385-4841-a0f2-93acb19369d4-168225246972f6fec4-0": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "title": "Activation"
+          }
+        },
+        "template--14569609003141__3c3fb723-4385-4841-a0f2-93acb19369d4-168225246972f6fec4-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<h3><strong>Welcome to Eiotclub!<\/strong><\/h3><p>Eiotclub SIM Cards are an innovative technology that is revolutionizing how we interact with devices. With smart hardware and data transmission, SIM Cards bring convenience and creativity to your fingertips.<\/p><p>This guide will introduce you to the working principles and usage of cards.  <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--14569609003141__3c3fb723-4385-4841-a0f2-93acb19369d4-168225246972f6fec4-0",
+        "template--14569609003141__3c3fb723-4385-4841-a0f2-93acb19369d4-168225246972f6fec4-1"
+      ],
+      "settings": {
+        "padding_top_bottom": 0,
+        "padding_top_bottom_mobile": 50,
+        "bg_color": "",
+        "header_align_text": "center",
+        "content_align_text": "center",
+        "button_align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "df33b73a-6c69-4864-aa94-d8c13235dd29": {
+      "type": "text-and-image",
+      "settings": {
+        "margin_bottom": 80,
+        "margin_bottom_mobile": 6,
+        "image": "shopify:\/\/shop_images\/works-cardsize-375x250_2x-0601_1d74868e-672a-4756-8a25-0e50433241b2.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "Card Sizes and Functions",
+        "text": "<p>These card sizes provide compatibility and convenience across a range of devices.<\/p><ol><li>Standard Size: Versatile and widely supported for most devices.<\/li><li>Micro Size: Compact option for devices with limited space.<\/li><li>Nano Size: Smallest variant for modern smartphones and tablets.<\/li><\/ol>",
+        "button_label": "Learn more",
+        "button_link": "https:\/\/www.youtube.com\/watch?v=oXCtwoUdlO4",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "right",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "5352dc75-0809-4c66-b100-9262bae308c0": {
+      "type": "text-and-image",
+      "settings": {
+        "margin_bottom": 80,
+        "margin_bottom_mobile": 0,
+        "image": "shopify:\/\/shop_images\/works-devices-375x250_2x-0601_9ca1c095-8bcc-45dc-9bb5-c96307720d9c.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "Integration with Devices and Benefits",
+        "text": "<p>We are dedicated to simplifying IoT usage and prioritizing the user experience. Our goal is to provide IoT subscribers with the most comprehensive and high-quality products, ensuring a seamless and top-notch experience.<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "left",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "85b7de00-5120-4a58-ac76-0d3722ab3e73": {
+      "type": "rich-text",
+      "blocks": {
+        "template--14569609003141__85b7de00-5120-4a58-ac76-0d3722ab3e73-168225246972f6fec4-0": {
+          "type": "heading",
+          "settings": {
+            "title": "Connect the Card to Your Device"
+          }
+        },
+        "template--14569609003141__85b7de00-5120-4a58-ac76-0d3722ab3e73-168225246972f6fec4-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>*EIOTCLUB runs on the nation’s strongest, most reliable wireless network. That means coast-to-coast coverage.<\/p><p>*Supports operators（AT&T & T-mobile &Verizon ）in the United States, and support 30 countries networks in Europe.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--14569609003141__85b7de00-5120-4a58-ac76-0d3722ab3e73-168225246972f6fec4-0",
+        "template--14569609003141__85b7de00-5120-4a58-ac76-0d3722ab3e73-168225246972f6fec4-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "padding_top_bottom": 0,
+        "padding_top_bottom_mobile": 0,
+        "bg_color": "",
+        "header_align_text": "center",
+        "content_align_text": "center",
+        "button_align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "1d331476-667a-4f65-986a-81adff5bb8c7": {
+      "type": "text-columns",
+      "blocks": {
+        "template--14611884408965__1d331476-667a-4f65-986a-81adff5bb8c7-text_block-2": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/set_iccid_USA-DUAL_744_231101.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "header-text": "",
+            "title": "USA Triple-play sim card",
+            "text": "<ul><li>APN: mobile<\/li><li>APN username: (none)<\/li><li>APN password: (none)<\/li><li>Enable Data Roaming<\/li><\/ul>",
+            "button_label": "Learn more",
+            "button_link": "shopify:\/\/products\/4g-data-only-prepaid-iot-sim-card"
+          }
+        },
+        "template--14611884408965__1d331476-667a-4f65-986a-81adff5bb8c7-text_block-1": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/set_iccid_USA-Triple-play_744_231101.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "header-text": "",
+            "title": "USA double sim card",
+            "text": "<ul><li>APN: mobile.three.com.hk<\/li><li>APN username: (none)<\/li><li>APN password: (none)<\/li><li>Enable Data Roaming<\/li><\/ul>",
+            "button_label": "learn more",
+            "button_link": "shopify:\/\/products\/4g-data-only-prepaid-iot-sim-card"
+          }
+        },
+        "template--14611884408965__1d331476-667a-4f65-986a-81adff5bb8c7-text_block-3": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/set_iccid_EU_744_231101.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "header-text": "",
+            "title": "Europe & UK SIM card",
+            "text": "<ul><li>APN: data641003<\/li><li>APN username: (none)<\/li><li>APN password: (none)<\/li><li>Enable Data Roaming<\/li><\/ul>",
+            "button_label": "Learn more",
+            "button_link": "shopify:\/\/products\/europe-sim-card"
+          }
+        }
+      },
+      "block_order": [
+        "template--14611884408965__1d331476-667a-4f65-986a-81adff5bb8c7-text_block-2",
+        "template--14611884408965__1d331476-667a-4f65-986a-81adff5bb8c7-text_block-1",
+        "template--14611884408965__1d331476-667a-4f65-986a-81adff5bb8c7-text_block-3"
+      ],
+      "settings": {
+        "style": "style-2",
+        "bg_color": "",
+        "title": "APN Setting Information",
+        "title-buttom": "Explore the seamless connectivity experience with Eiotclub SIM card. Our cards feature unique ICCID codes for secure communication across major providers like Verizon, AT&T, T-Mobile, and Vodafone. This streamlines activation and compatibility. When you activate service, APN settings are usually automatic but check your manual if you have data issues. Eiotclub SIM cards give you control over your network connection for staying connected on the go.",
+        "align_text": "center",
+        "content_align_text": "center",
+        "divider": false
+      }
+    },
+    "758a37ca-3b51-492a-bd31-256bbc452c55": {
+      "type": "new-image-text-banner",
+      "disabled": true,
+      "settings": {
+        "max_width": "920",
+        "page-width": false,
+        "border-radius": true,
+        "image_pc": "shopify:\/\/shop_images\/3_0526.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/3_0526.jpg",
+        "content": "",
+        "content_left": 10,
+        "content_top": 10,
+        "content_left_mobile": 10,
+        "content_top_mobile": 10
+      }
+    },
+    "2be79406-d686-428f-898b-6e60f728e094": {
+      "type": "rich-text",
+      "blocks": {
+        "template--14569609003141__2be79406-d686-428f-898b-6e60f728e094-168225246972f6fec4-0": {
+          "type": "heading",
+          "settings": {
+            "title": "Connect the Card to Your Device"
+          }
+        },
+        "template--14569609003141__2be79406-d686-428f-898b-6e60f728e094-168225246972f6fec4-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>The Eiotclub SIM card is plug and play. Just insert it into your device. It will activate and configure settings automatically. You can enjoy connectivity right away. Contact customer support if you have any issues.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--14569609003141__2be79406-d686-428f-898b-6e60f728e094-168225246972f6fec4-0",
+        "template--14569609003141__2be79406-d686-428f-898b-6e60f728e094-168225246972f6fec4-1"
+      ],
+      "settings": {
+        "padding_top_bottom": 0,
+        "padding_top_bottom_mobile": 0,
+        "bg_color": "",
+        "header_align_text": "center",
+        "content_align_text": "center",
+        "button_align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "47642301-09e6-4415-b135-b89794b4bab3": {
+      "type": "featured-video",
+      "settings": {
+        "title": "",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_RZIFxE25wo",
+        "divider": false
+      }
+    },
+    "34e6c269-ee98-45c0-91cc-b0fe6aa457b6": {
+      "type": "new-image-list",
+      "blocks": {
+        "5888340f-385b-475f-a1e6-487b2cad0ca4": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1-500x500-0504.jpg",
+            "text": "PTZ camera",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "db0e5834-1414-4dc5-a3a6-d8302ea1f46d": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2-500x500-0504.jpg",
+            "text": "Trail camera",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "470a9006-5023-4086-84c6-ffc4954dd39d": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/3-500x500-0504.jpg",
+            "text": "Tracker",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "fe4412ed-1234-4af6-9e5b-cfd2184ad362": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/9-500x500-0515.jpg",
+            "text": "POC radio",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        }
+      },
+      "block_order": [
+        "5888340f-385b-475f-a1e6-487b2cad0ca4",
+        "db0e5834-1414-4dc5-a3a6-d8302ea1f46d",
+        "470a9006-5023-4086-84c6-ffc4954dd39d",
+        "fe4412ed-1234-4af6-9e5b-cfd2184ad362"
+      ],
+      "settings": {
+        "container": "container",
+        "bg_color": "",
+        "margin_bottom_mb": 40,
+        "margin_bottom_tab": 40,
+        "margin_bottom": 0,
+        "mg_top_mobile": 40,
+        "mg_top_tablet": 40,
+        "mg_top_desktop": 0,
+        "title": "Support Multiple Devices",
+        "color_title": "",
+        "fontsize_title": 32,
+        "fontsize_title_mo": 24,
+        "margin_bottom_title": 40,
+        "margin_bottom_title_mo": 24,
+        "text": "",
+        "image_list_align": "center",
+        "row_box_num": "5",
+        "box_gap": 24,
+        "row_box_num_mobile": "2",
+        "box_gap_mobile": 24
+      }
+    },
+    "96f91454-fa7a-4b5f-b40f-00e04fb8020b": {
+      "type": "faq",
+      "blocks": {
+        "template--14584566153349__96f91454-fa7a-4b5f-b40f-00e04fb8020b-1687154017245602f8-0": {
+          "type": "question",
+          "settings": {
+            "title": "How do l activate my EIOTCLUB SIM card?",
+            "text": "<p>Activating your SIM card is a simple process that only takes a few minutes. Just plug in your device, and it can be used without prior activation. Then, insert the EIOTCLUB SIM card into your device and restart it. That's it! If you need assistance along the way, feel free to reach out to us using the customer service button at the bottom right corner of the page<\/p>",
+            "expand_faq": false
+          }
+        },
+        "template--14584566153349__96f91454-fa7a-4b5f-b40f-00e04fb8020b-1687154017245602f8-1": {
+          "type": "question",
+          "settings": {
+            "title": "What are EIOTCLUB's SIM card sizes?",
+            "text": "<p>Our SlM cards are triple pre-cut, standard, micro, and nano sized. Punch out the size you need for your wirelessdevice.<\/p>",
+            "expand_faq": false
+          }
+        },
+        "52aae928-3aba-412a-b987-c66cfe474a61": {
+          "type": "question",
+          "settings": {
+            "title": "How do I know if EIOTCLUB will work for me?",
+            "text": "<p>There are a few easy ways to check if ElOTCLUB is the perfect fit for you:<br>1.Check the coverage map to verify the service in your area. Please be aware that outside factors like terrain,building structures, weather, and other conditions may also interfere with the actual service available. When youintend to travel out from your regular location, consult the coverage map again to check for service in the areas towhich you will travel.<br>\n2.lf you are bringing your own phone, make sure your device is compatible with ElOTCLUB. It must be GSM.VoLTE,use our Bring Your Own Phone checker to confirm.3.lf you are bringing your own phone, make sure your device is unlocked<\/p>",
+            "expand_faq": false
+          }
+        },
+        "11de30f6-f761-4b77-9bc5-05a13e7d8372": {
+          "type": "question",
+          "settings": {
+            "title": "Why can't I get network connection?",
+            "text": "<p>Your sim card may have been suspended, due to data plan have been run out, you could go to this site to check the status of your card and your data plan. 【https:\/\/sim.eiotclub.com\/eshop\/】If it's not suspended, please click \"online consultation\" so we can help.<\/p>",
+            "expand_faq": false
+          }
+        },
+        "98d72d31-56b0-4d34-bac8-1f75a0bae892": {
+          "type": "question",
+          "settings": {
+            "title": "How can I check my sim card's status and my data plan(s)?",
+            "text": "<p>you could follow the below steps.\n\n\n1. you could go to this site and enter your ICCID:【https:\/\/sim.eiotclub.com\/eshop\/】, and you can see your sim card's status and data plan usage.\n\n2. tap \"plans\" on the lower left corner, and you can see your \"using\", \"unused\" and \"done\" data plan. <\/p>",
+            "expand_faq": false
+          }
+        },
+        "3293876c-be31-4934-841e-cf18595678b4": {
+          "type": "question",
+          "settings": {
+            "title": "Why does the sim card not fit in the device slot?",
+            "text": "<p>Our SIM cards are triple pre-cut, standard, micro, and nano sized. Please look carefully, punch out the size you need for your wireless device.<\/p>",
+            "expand_faq": false
+          }
+        },
+        "b9e73d51-87a9-4c7c-bab5-7f5431a53fea": {
+          "type": "question",
+          "settings": {
+            "title": "Why are there different plans with different prices? What is the difference?",
+            "text": "<p>All the data plans are universal, they can be used on any devices as long as it's compatible. The difference between them is they come with different sizes of data. Also, each of our plans come with a different duration from 30 days, 180 days, a full year. If you are not sure which plan is best for you, we suggest you start with the plan you feel most comfortable with to get familiar with our service. You can always upgrade your EIOTCLUB plan at any time for no additional service charges. You will only be responsible for plan price adjustment.<\/p>",
+            "expand_faq": false
+          }
+        }
+      },
+      "block_order": [
+        "template--14584566153349__96f91454-fa7a-4b5f-b40f-00e04fb8020b-1687154017245602f8-0",
+        "template--14584566153349__96f91454-fa7a-4b5f-b40f-00e04fb8020b-1687154017245602f8-1",
+        "52aae928-3aba-412a-b987-c66cfe474a61",
+        "11de30f6-f761-4b77-9bc5-05a13e7d8372",
+        "98d72d31-56b0-4d34-bac8-1f75a0bae892",
+        "3293876c-be31-4934-841e-cf18595678b4",
+        "b9e73d51-87a9-4c7c-bab5-7f5431a53fea"
+      ],
+      "settings": {
+        "title": "FAQs"
+      }
+    },
+    "d06eae36-20ea-4318-8f95-492e4df43074": {
+      "type": "faq",
+      "blocks": {
+        "template--14611884408965__d06eae36-20ea-4318-8f95-492e4df43074-question-1": {
+          "type": "question",
+          "settings": {
+            "title": "Frequently asked question",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>",
+            "expand_faq": false
+          }
+        },
+        "template--14611884408965__d06eae36-20ea-4318-8f95-492e4df43074-question-2": {
+          "type": "question",
+          "settings": {
+            "title": "Frequently asked question",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>",
+            "expand_faq": false
+          }
+        }
+      },
+      "block_order": [
+        "template--14611884408965__d06eae36-20ea-4318-8f95-492e4df43074-question-1",
+        "template--14611884408965__d06eae36-20ea-4318-8f95-492e4df43074-question-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "FAQs"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "5d250eda-53c5-4bac-ad39-1d91fc1cdea1",
+    "3c3fb723-4385-4841-a0f2-93acb19369d4",
+    "df33b73a-6c69-4864-aa94-d8c13235dd29",
+    "5352dc75-0809-4c66-b100-9262bae308c0",
+    "85b7de00-5120-4a58-ac76-0d3722ab3e73",
+    "1d331476-667a-4f65-986a-81adff5bb8c7",
+    "758a37ca-3b51-492a-bd31-256bbc452c55",
+    "2be79406-d686-428f-898b-6e60f728e094",
+    "47642301-09e6-4415-b135-b89794b4bab3",
+    "34e6c269-ee98-45c0-91cc-b0fe6aa457b6",
+    "96f91454-fa7a-4b5f-b40f-00e04fb8020b",
+    "d06eae36-20ea-4318-8f95-492e4df43074"
+  ]
+}

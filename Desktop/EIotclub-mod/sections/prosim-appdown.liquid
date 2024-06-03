@@ -1,0 +1,176 @@
+{% liquid
+  assign secid = section.id | split:"__" 
+  assign secidlast = secid[1] | replace: "-","_"
+%}
+<style>
+  #simappdown-{{ secidlast }}{
+    {% if section.settings.bg_image %}
+      background: url("{{ section.settings.bg_image | image_url }}") no-repeat;
+      background-size: auto;
+      background-position: center top;
+    {% endif %}
+  }
+
+ {% if section.settings.bg_imagemb %}
+  @media (max-width:550px){
+     #simappdown-{{ secidlast }}{
+      background-image: url("{{ section.settings.bg_imagemb | image_url }}");
+      background-position: top;
+    background-size: cover;
+  } 
+  }
+ {% endif %}
+</style>
+  <div class="simappdown-box swpbtnbox" id="simappdown-{{ secidlast }}">
+    <div class="contain-index">
+    {% if section.settings.title != blank %}
+        <div class="simappdown-toptitle animate-ele">{{ section.settings.title }}</div> 
+    {% endif %}
+      {% if section.settings.content != blank %}
+        <div class="simappdown-topcon animate-ele">{{ section.settings.content }}</div> 
+    {% endif %}
+      <div class="simappdown-content animate-ele">
+ 
+  <div class="simappdown-conleft">
+    <div class="simappdown-conleftbox">
+    {% for block in section.blocks %} 
+    <div class="simappdown-conleft-item">
+      {% if block.settings.title != blank %}<div class="simappdownconleft-ittitle simappdown-conleft-ittitle-{{ forloop.index0 }}{% if forloop.first %} active{% endif %}" data-index="{{ forloop.index }}">{{ block.settings.title }}<span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 8H15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path class="transf-line" d="M8 15L8 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+</span></div>{% endif %}
+      {% if block.settings.content != blank %}<div class="simappdown-conleft-itcon simappdown-conleft-itcon-{{ forloop.index }}">{{ block.settings.content }}</div>{% endif %}
+    </div>
+    {% endfor %}
+      </div>
+    {% if section.settings.appurl %}<a href="{{ section.settings.appurl}}" class="simappdown-leftbtn">{{ section.settings.apptext }}<img alt="" src="https://cdn.shopify.com/s/files/1/0558/0708/2629/files/riarr.svg?v=1713772816"/></a>{% endif %}
+  </div>
+        
+     <div class="simappdown-conright">
+         <div class="swiper-button-prev hide-pc swpallbtn simappdownprev-{{ secidlast }}"><svg width="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="25" cy="25" r="24" stroke="currentColor" stroke-width="2"/>
+<path d="M26.2939 19.2939L20.2939 25.2939L26.2939 31.2939" stroke="currentColor" stroke-width="2"/>
+</svg>
+</div>
+       <div class="swiper-button-next hide-pc swpallbtn simappdownnext-{{ secidlast }}"><svg width="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="25" cy="25" r="24" transform="matrix(-1 0 0 1 50 0)" stroke="currentColor" stroke-width="2"/>
+<path d="M23.7061 19.2939L29.7061 25.2939L23.7061 31.2939" stroke="currentColor" stroke-width="2"/>
+</svg>
+</div>
+     <div class="simappdown-{{ secidlast }} swiper">
+    <div class="swiper-wrapper">  
+      {% for block in section.blocks %} 
+      <div class="swiper-slide">
+       {% if block.settings.image  %}
+         <div class="simappdown-img{% if block.settings.imagemb  %} hide-mb{% endif %}"><img src="{{ block.settings.image | img_url:'master' }}" alt=" " /></div>
+     {% endif %}
+    {% if block.settings.imagemb  %}
+     <div class="simappdown-img hide-pc"><img  src="{{ block.settings.imagemb | img_url:'master' }}"  alt=" " /></div>
+   {% endif %}
+      </div>
+     {% endfor %}
+    </div>
+  </div>
+  
+     </div>
+
+  </div>
+  </div>
+  </div>
+
+        <script>   
+  $(function(){
+      var simappdown_{{secidlast}} = new Swiper ('.simappdown-{{ secidlast }}', {
+    slidesPerView : 1,
+    observer: true,  //开启动态检查器，监测swiper和slide
+    observeParents: true, 
+    navigation: {
+        nextEl: '.simappdownnext-{{ secidlast }}',
+		prevEl: '.simappdownprev-{{ secidlast }}',
+	},on:{
+    slideChange: function(){ 
+       $("#simappdown-{{ secidlast }} .simappdown-conleft-ittitle-"+this.activeIndex).addClass("active").parent().siblings().find(".simappdownconleft-ittitle").removeClass("active");
+      $("#simappdown-{{ secidlast }} .simappdown-conleft-ittitle-"+this.activeIndex).next(".simappdown-conleft-itcon").slideDown().parent().siblings().find(".simappdown-conleft-itcon").slideUp();
+    },
+  },
+   
+  });
+
+    $("#simappdown-{{ secidlast }} .simappdownconleft-ittitle").click(function(){
+      let nowindex = $(this).data("index") - 1;
+      $(this).addClass("active").parent().siblings().find(".simappdownconleft-ittitle").removeClass("active");
+      $(this).next(".simappdown-conleft-itcon").slideDown().parent().siblings().find(".simappdown-conleft-itcon").slideUp();
+      simappdown_{{secidlast}}.slideTo(nowindex);
+    });
+    
+  })
+
+</script>
+
+
+{% schema %}
+{
+  "name": "ProductAppDown",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "title"
+    },{
+        "type": "richtext",
+        "id": "content",
+        "label": "content"
+      },{
+        "type": "text",
+        "id": "apptext",
+        "label": "apptext"
+      },{
+        "type": "url",
+        "id": "appurl",
+        "label": "app url"
+      },
+    {
+      "type": "image_picker",
+      "id": "bg_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_imagemb",
+      "label": "Background Image(mobile)"
+    }
+  ],
+      "blocks": [
+      {
+        "type": "block",
+        "name": "block",
+        "settings": [
+       {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },{
+        "type": "image_picker",
+        "id": "imagemb",
+        "label": "Image(mobile)"
+      },{
+        "type": "text",
+        "id": "title",
+        "label": "title"
+      },{
+        "type": "richtext",
+        "id": "content",
+        "label": "content"
+      }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "ProductAppDown",
+        "category": "HO-layout"
+      }
+    ]
+}
+{% endschema %}

@@ -1,0 +1,220 @@
+<script src="{{ 'top-pick-item.js' | asset_url }}" defer></script>
+<script src="{{ 'cart-item.js' | asset_url }}" defer></script>
+<script src="{{ 'apply-discount.js' | asset_url }}" defer></script>
+{% if settings.cart_type == 'drawer' %}
+  <!-- cart-drawer.liquid -->
+  <div id="CartDrawer" class="drawer drawer-new drawer--right">
+    <form
+      id="CartDrawerForm"
+      action="{{ routes.cart_url }}"
+      method="post"
+      novalidate
+      class="drawer__contents"
+      data-location="cart-drawer"
+    >
+      {% comment %} <div data-yg-subtotal>{{ cart.total_price }}</div> {% endcomment %}
+      <div class="drawer__fixed-header">
+        <div class="drawer__header appear-animation appear-delay-1">
+          <div class="drawer__title">{{ settings.cart_drawer_title }}</div>
+          <div class="drawer__close">
+            <button type="button" class="drawer__close-button js-drawer-close">
+              <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewBox="0 0 64 64">
+                <path d="M19 17.61l27.12 27.13m0-27.12L19 44.74"/>
+              </svg>
+              <span class="icon__fallback-text">{{ 'cart.general.close_cart' | t }}</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="drawer-new__cart-layout">
+        <div class="drawer__inner">
+          <div class="drawer__scrollable">
+            <div
+              class="drawer-left-top-text"
+              style="--bg:{{ settings.cart_drawer_left_toptext_background }};--color:{{ settings.cart_drawer_left_toptext_color }}"
+            >
+              {{ settings.cart_drawer_left_toptext }}
+            </div>
+            <div class="drawer__cart-empty appear-animation appear-delay-2">
+              <div class="drawer__scrollable">
+                {{ 'cart.general.empty' | t }}
+              </div>
+            </div>
+            <div data-products class="appear-animation appear-delay-2 drawer__products"></div>
+            <div class="drawer-bottom-content">
+              <div class="cart-cost-items">
+                <div class="cart-cost-item">
+                  <div class="cart-cost-item-title">Shipping</div>
+                  <div class="cart-cost-item-value"><b>FREE</b></div>
+                </div>
+                <div class="cart-cost-item">
+                  <div class="cart-cost-item-title">Taxes</div>
+                  <div class="cart-cost-item-value">Calculated At Checkout</div>
+                </div>
+                <div class="cart-cost-item">
+                  <div class="cart-cost-item-title">Subtotal</div>
+                  <div class="cart-cost-item-value">
+                    <b>
+                      <div data-subtotal>{{ cart.total_price | money }}</div>
+                    </b>
+                  </div>
+                </div>
+              </div>
+              <div class="drawer__top-pick lg:hidden">
+                <div class="drawer__top-pick-title">
+                  {{ settings.drawer_toppick_title }} 
+                </div>
+                <div class="drawer__top-pick-items-scrollable">
+                  <div class="drawer__top-pick-items">
+                    {% for product in settings.drawer_toppick_products %}
+                      <div class="drawer__top-pick-item">
+                        {%- render 'cart-top-pick-item', product: product -%}
+                      </div>
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+              <div class="drawer__why">
+                <div class="drawer__why-title">{{ settings.why_title }}</div>
+                <div class="drawer__why-layout">
+                  {% for i in (1..4) %}
+                    {% liquid
+                      assign why_svg_index = 'drawer_why_svg_' | append: i
+                      assign why_text_index = 'drawer_why_text_' | append: i
+                      assign why_svg = settings[why_svg_index]
+                      assign why_text = settings[why_text_index]
+                    %}
+                    <div class="drawer__why-item">
+                      <span class="drawer__why-svg">
+                        {{ why_svg }}
+                      </span>
+                      <span class="drawer__why-text">
+                        {{ why_text }}
+                      </span>
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+            {% if settings.cart_notes_enable %}
+              <div class="appear-animation appear-delay-3">
+                <label for="CartNoteDrawer">{{ 'cart.general.note' | t }}</label>
+                <textarea name="note" class="input-full cart-notes" id="CartNoteDrawer">{{ cart.note }}</textarea>
+              </div>
+            {% endif %}
+          </div>
+
+          <div class="drawer__footer appear-animation appear-delay-4">
+            {% comment %}
+              <div data-discounts>
+                {% if cart.cart_level_discount_applications != blank %}
+                  <div class="cart__item-sub cart__item-row">
+                    <div>{{ 'cart.general.discounts' | t }}</div>
+                    <div class="text-right">
+                      {% for cart_discount in cart.cart_level_discount_applications %}
+                        <div>{{ cart_discount.title }} (-{{ cart_discount.total_allocated_amount | money }})</div>
+                      {% endfor %}
+                    </div>
+                  </div>
+                {% endif %}
+              </div>
+            {% endcomment %}
+
+            {% comment %}
+              <div class="cart__item-sub cart__item-row">
+                <div class="cart__subtotal">{{ 'cart.general.subtotal' | t }}</div>
+                <div data-subtotal>{{ cart.total_price | money }}</div>
+              </div>
+            {% endcomment %}
+
+            <div class="cart__item-row cart__savings text-center hide" data-savings></div>
+
+            {% comment %}
+              <div class="cart__item-row text-center ajaxcart__note">
+                <small>
+                  {{ 'cart.general.shipping_at_checkout' | t -}}
+                  <br>
+                </small>
+              </div>
+            {% endcomment %}
+
+            {% if settings.cart_terms_conditions_enable %}
+              <div class="cart__item-row cart__terms">
+                <input type="checkbox" id="CartTermsDrawer" class="cart__terms-checkbox">
+                <label for="CartTermsDrawer">
+                  {% if settings.cart_terms_conditions_page != blank %}
+                    {{ 'cart.general.terms_html' | t: url: settings.cart_terms_conditions_page.url }}
+                  {% else %}
+                    {{ 'cart.general.terms' | t }}
+                  {% endif %}
+                </label>
+              </div>
+            {% endif %}
+            <apply-discount class="cart__discount-wrapper">
+              <div class="cart__discount-field">
+                <input
+                  class="cart__discount-field__input"
+                  autocomplete="name"
+                  type="text"
+                  name="cart-discount-field"
+                  placeholder="Discount code"
+                  data-input
+                >
+                {% comment %} <label class="field__label hidden" for="cart-discount-field">Enter discount code</label> {% endcomment %}
+              </div>
+              <button class="cart__discount-appy-button" data-apply>Apply</button>
+              <div data-error class="hide apply-discount-error-msg">
+                The discount code is not valid or not valid for items in your cart.Please try again.
+              </div>
+            </apply-discount>
+            <div class="cart__checkout-wrapper">
+              <button
+                type="submit"
+                name="checkout"
+                data-terms-required="{{ settings.cart_terms_conditions_enable }}"
+                class="cart__checkout new-cart__checkout"
+              >
+                {{ 'cart.general.checkout' | t }}
+                <span data-subtotal>{{ cart.total_price | money }}</span>
+              </button>
+
+              {% if additional_checkout_buttons and settings.cart_additional_buttons %}
+                <div class="additional-checkout-buttons additional-checkout-buttons--vertical">
+                  {{ content_for_additional_checkout_buttons }}
+                </div>
+              {% endif %}
+            </div>
+            <div class="cart__payment-wrapper">
+              {% if settings.payment_img != blank %}
+                {{ settings.payment_img | image_url: width: 1000 | image_tag }}
+              {% endif %}
+            </div>
+            <div class="cart__reward-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12" fill="none">
+                <path d="M6.27582 1.14891C6.36752 0.963099 6.63248 0.963097 6.72418 1.14891L7.79897 3.32667C8.05388 3.84317 8.54662 4.20117 9.11661 4.28399L11.5199 4.63321C11.725 4.66301 11.8068 4.915 11.6585 5.05963L9.91942 6.75478C9.50697 7.15682 9.31876 7.73607 9.41613 8.30376L9.82666 10.6973C9.86169 10.9016 9.64733 11.0573 9.46392 10.9609L7.31435 9.8308C6.80453 9.56277 6.19547 9.56277 5.68565 9.8308L3.53608 10.9609C3.35267 11.0573 3.13831 10.9016 3.17334 10.6973L3.58387 8.30376C3.68124 7.73607 3.49303 7.15682 3.08058 6.75478L1.34154 5.05964C1.19315 4.915 1.27503 4.66301 1.48009 4.63321L3.88339 4.28399C4.45338 4.20117 4.94612 3.84317 5.20103 3.32667L4.52848 2.99474L5.20103 3.32667L6.27582 1.14891Z" stroke="#282828" stroke-width="1.5"/>
+              </svg>
+              <div class="cart__reward-text">
+                {{ settings.reward_text }}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="drawer__top-pick sm:hidden md:hidden">
+          <div class="drawer__top-pick-title">
+            {{ settings.drawer_toppick_title }}
+          </div>
+          <div class="drawer__top-pick-items-scrollable">
+            <div class="drawer__top-pick-items">
+              {% for product in settings.drawer_toppick_products %}
+                <div class="drawer__top-pick-item">
+                  {%- render 'cart-top-pick-item', product: product -%}
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+{% endif %}

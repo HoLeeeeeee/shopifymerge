@@ -1,0 +1,155 @@
+{% liquid
+  assign secid = section.id | split:"__" 
+  assign secidlast = secid[1] | replace: "-","_"
+%}
+
+  <div class="simvilist-box swpbtnbox">
+    <div class="contain-index">
+    {% if section.settings.title != blank %}
+        <div class="simvilist-toptitle animate-ele">{{ section.settings.title }}</div> 
+    {% endif %}
+      <div class="simvilist-content animate-ele">
+     <div class="simvilist-conitem">
+     <div class="simvilist-{{ secidlast }} swiper">
+<div class="swiper-scrollbar hide-pc swiper-scrollbar-{{ secidlast }}"></div>
+    <div class="swiper-wrapper">  
+      {% for block in section.blocks %} 
+        {% assign urlv = block.settings.video.sources %}
+      <div class="swiper-slide">
+       <div class="simvilist-proitem simvilist-proitem-{{ forloop.index }}">
+     <div class="simvilist-itemvideo">
+        <video
+        width="100%"
+        loop="loop"
+        muted="muted" controls="controls"
+        preload="metadata"
+        webkit-playsinline="true"
+        playsinline="true"
+        x5-playsinline="true"
+        x-webkit-airplay="allow"
+      >
+        <source src="{{ urlv[1].url }}">
+      </video>
+       <div class="vilist-itvi-overbox" style="background-image:url({{ block.settings.image | image_url }})">
+         {% if block.settings.playicon %}<img class="playbtnv" src="{{ block.settings.playicon | image_url }}" alt=""/>{% endif %}
+       </div>
+     </div>
+    {% if block.settings.title != blank %}
+    <div class="simvilist-title">{{ block.settings.title }}</div>
+   {% endif %}
+       </div>
+      </div>
+         {% endfor %}
+    </div>
+  </div>
+  
+     </div>
+
+
+  </div>
+    {% if section.settings.btntext != blank %}
+        <a href="{{ section.settings.btnurl }}" class="simvilist-btn">{{ section.settings.btntext }}</a> 
+    {% endif %}
+      
+  </div>
+  </div>
+
+        <script>   
+  $(function(){
+      var simvilist_{{secidlast}} = new Swiper ('.simvilist-{{ secidlast }}', {
+    slidesPerView : 3,
+    spaceBetween: '3%',
+    observer: true,  //开启动态检查器，监测swiper和slide
+    observeParents: true, 
+    navigation: {
+		nextEl: '.simvilistnext-{{ secidlast }}',
+		prevEl: '.simvilistprev-{{ secidlast }}',
+	},
+     scrollbar: {
+      el: '.swiper-scrollbar-{{ secidlast }}',dragSize:89
+    }
+    ,
+    breakpoints: { 
+      10: {  
+       slidesPerView : 1.48,
+         spaceBetween: 9,
+      },
+      550: { 
+       slidesPerView : 2,
+      },
+      769: {  //当屏幕宽度大于等于769
+        slidesPerView: 3,
+      },
+      994: { 
+        slidesPerView : 3,
+      }
+    }
+
+  });
+    $(".playbtnv").click(function(){
+      $(this).parent().hide();
+      $(this).parents(".simvilist-itemvideo").find("video").trigger("play");
+    });
+    $("body").bind("click",function(evt){ 
+  if($(evt.target).closest(".simvilist-itemvideo").length==0)
+  { 
+   $(".simvilist-itemvideo>video").trigger("pause");$(".vilist-itvi-overbox").show();
+  } 
+}); 
+  })
+
+</script>
+
+
+
+{% schema %}
+{
+  "name": "Video List",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "title"
+    },{
+      "type": "text",
+      "id": "btntext",
+      "label": "button text"
+    },{
+      "type": "url",
+      "id": "btnurl",
+      "label": "button url"
+    }
+  ],
+      "blocks": [
+      {
+        "type": "block",
+        "name": "block",
+        "settings": [
+       {
+        "type": "video",
+        "id": "video",
+        "label": "video"
+      },{
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },{
+        "type": "image_picker",
+        "id": "playicon",
+        "label": "play icon"
+      },{
+        "type": "text",
+        "id": "title",
+        "label": "title"
+      }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Video List",
+        "category": "HO-layout"
+      }
+    ]
+}
+{% endschema %}

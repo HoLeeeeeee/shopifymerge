@@ -1,0 +1,62 @@
+{
+  "sections": {
+    "main": {
+      "type": "list-collections-template",
+      "blocks": {
+        "f9bf8d65-7f6a-4fb4-8e5b-18795effe4fd": {
+          "type": "collection",
+          "settings": {
+            "collection": "cart-remcommond-product"
+          }
+        },
+        "2f9e5f44-c03a-4afe-a5c7-ed492edad3d3": {
+          "type": "collection",
+          "settings": {
+            "collection": "eiotclub-hot-sales"
+          }
+        },
+        "5341eba3-b40b-4a22-9d1e-b67f63530e1e": {
+          "type": "collection",
+          "settings": {
+            "collection": "trail-camera-sim-card"
+          }
+        },
+        "7817f257-d8ca-4d09-a3c3-dab202d65d0d": {
+          "type": "collection",
+          "settings": {
+            "collection": "4g-router-mifi-sim-card"
+          }
+        },
+        "4a156886-97c7-4c5f-b55a-f55a613adb7e": {
+          "type": "collection",
+          "settings": {
+            "collection": "tracker-sim-card"
+          }
+        },
+        "4dc6a72d-2342-4e16-816e-4da4a0ddcb77": {
+          "type": "collection",
+          "settings": {
+            "collection": "4g-router-mifi-sim-card"
+          }
+        }
+      },
+      "block_order": [
+        "f9bf8d65-7f6a-4fb4-8e5b-18795effe4fd",
+        "2f9e5f44-c03a-4afe-a5c7-ed492edad3d3",
+        "5341eba3-b40b-4a22-9d1e-b67f63530e1e",
+        "7817f257-d8ca-4d09-a3c3-dab202d65d0d",
+        "4a156886-97c7-4c5f-b55a-f55a613adb7e",
+        "4dc6a72d-2342-4e16-816e-4da4a0ddcb77"
+      ],
+      "settings": {
+        "title_enable": true,
+        "display_type": "selected",
+        "sort": "alphabetical",
+        "grid": "3"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

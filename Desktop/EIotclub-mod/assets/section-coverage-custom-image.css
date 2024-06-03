@@ -1,0 +1,130 @@
+.simquick-box {
+    margin: 2vw 0 5.5vw;
+}
+
+.simquick-toptitle {
+    text-align: center;
+    font-size: 1.86vw;
+    font-weight: bold;
+    margin-bottom: 2vw;
+}
+
+.simquick-title {
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    font-size: 1.04vw;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.simquick-proitem-center .simquick-title {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.simquick-proitem-top .simquick-title {
+    top: 1.7vw;
+}
+
+.simquick-proitem-bottom .simquick-title {
+    bottom: 1.7vw;
+}
+
+@media (max-width:1550px) {
+    .simquick-toptitle {
+        font-size: 2.3vw;
+    }
+
+    .simquick-title {
+        font-size: 1.2vw;
+    }
+}
+
+@media (max-width:1280px) {
+    .simquick-box {
+        margin: 2vw 3vw 5.5vw;
+    }
+
+    .simquick-toptitle {
+        font-size: 2.6vw;
+    }
+
+    .simquick-title {
+        font-size: 1.4vw;
+    }
+}
+
+@media (max-width:768px) {
+    .simquick-toptitle {
+        font-size: 3.6vw;
+    }
+
+    .simquick-title {
+        font-size: 1.6vw;
+    }
+}
+
+@media (max-width:768px) {
+    .simquick-box .swiper>.swiper-scrollbar {
+        left: 9%;
+        height: 4px;
+        width: 78%;
+        border-radius: 5px;
+        overflow: hidden;
+        background: #D9D9D9;
+    }
+
+    .simquick-box .swiper .swiper-scrollbar-drag {
+        background: #07C160;
+    }
+
+    .simquick-box .swiper {
+        padding-bottom: 35px;
+    }
+
+    .simquick-title {
+        font-size: 2vw;
+    }
+}
+
+@media (max-width:550px) {
+    .simquick-box .swpallbtn {
+        display: none;
+    }
+
+    .simquick-img img {
+        border-radius: 5.3vw;
+    }
+
+    .simquick-box .contain-index {
+        padding-right: 0;
+    }
+
+    .simquick-box {
+        margin: 7vw 0vw;
+    }
+
+    .simquick-toptitle {
+        font-size: 5.8vw;
+    }
+
+    .simquick-box .contain-index {
+        padding-right: 0;
+    }
+
+    .simquick-proitem-center .simquick-title {
+        font-size: 3.7vw;
+    }
+
+    .simquick-proitem-top .simquick-title {
+        top: 6vw;
+        font-size: 3.7vw;
+    }
+
+    .simquick-proitem-bottom .simquick-title {
+        bottom: 6vw;
+        font-size: 3.7vw;
+    }
+}

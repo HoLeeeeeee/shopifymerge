@@ -1,0 +1,63 @@
+{% liquid
+  assign secid = section.id | split:"__" 
+  assign secidlast = secid[1] | replace: "-","_"
+%}
+  <div class="contain-index">
+<div class="simspecs-outbox">
+    {% if section.settings.title != blank %}
+    <div class="simspecs-title animate-ele">{{ section.settings.title }}</div>
+   {% endif %}
+
+  <div class="simspecs_elebox animate-ele">
+      {% for block in section.blocks %}
+         <div class="simspecs_item">
+           {% if block.settings.title != blank %}
+            <div class="simspecs_item_title">{{ block.settings.title }}</div>
+           {% endif %}
+         {% if block.settings.subtitle != blank %}
+            <div class="simspecsitem_subtitle">{{ block.settings.subtitle }}</div>
+           {% endif %}
+      </div>  
+      {% endfor %}
+  </div>
+  
+</div>
+  </div>
+
+
+
+{% schema %}
+  {
+   "name": "Sim SPECS",
+  "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "title"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "block",
+        "settings": [
+       {
+        "type": "text",
+        "id": "title",
+        "label": "spec"
+      },{
+        "type": "text",
+        "id": "subtitle",
+        "label": "value"
+      }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Sim SPECS",
+        "category": "HO-layout"
+      }
+    ]
+  }
+{% endschema %}

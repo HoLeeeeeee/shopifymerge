@@ -1,0 +1,88 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "ab3c3e16-403c-4489-a8ae-a8c766b66f49": {
+      "type": "rich-text",
+      "blocks": {
+        "template--14569752592517__ab3c3e16-403c-4489-a8ae-a8c766b66f49-16823005486b1b4281-0": {
+          "type": "heading",
+          "settings": {
+            "title": "APN Setting Information"
+          }
+        },
+        "template--14569752592517__ab3c3e16-403c-4489-a8ae-a8c766b66f49-16823005486b1b4281-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>When you activate the service with EIOTCLUB, all your APN settings are usually set automatically. However, if you're having issues with data, you need to check your APN settings to make sure that they're correct. please check your user manual about APN setting information<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--14569752592517__ab3c3e16-403c-4489-a8ae-a8c766b66f49-16823005486b1b4281-0",
+        "template--14569752592517__ab3c3e16-403c-4489-a8ae-a8c766b66f49-16823005486b1b4281-1"
+      ],
+      "settings": {
+        "padding_top_bottom": 0,
+        "padding_top_bottom_mobile": 0,
+        "bg_color": "",
+        "header_align_text": "center",
+        "content_align_text": "left",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "82b9d51b-1ef7-400b-9729-3b2b94348f3f": {
+      "type": "faq",
+      "blocks": {
+        "d70afcb1-28b1-4638-8467-c0d27ed60164": {
+          "type": "rich-text",
+          "settings": {
+            "title": "APN information",
+            "text": "",
+            "align_text": "left"
+          }
+        },
+        "template--14569752592517__82b9d51b-1ef7-400b-9729-3b2b94348f3f-1682300617465ba38d-0": {
+          "type": "question",
+          "settings": {
+            "title": "Frequently asked question",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>\n<table style=\"width: auto;\"><tbody>\n<tr>\n<td colspan=\"1\" rowspan=\"1\" width=\"267.87\" style=\"text-align: center;\">*APN<\/td>\n<td colspan=\"1\" rowspan=\"1\" width=\"300.14\" style=\"text-align: center;\">mobile.three.com.hk<\/td>\n<\/tr>\n<tr>\n<td colspan=\"1\" rowspan=\"1\" width=\"auto\" style=\"text-align: center;\">*APN username<\/td>\n<td colspan=\"1\" rowspan=\"1\" width=\"auto\" style=\"text-align: center;\">(none)<\/td>\n<\/tr>\n<tr>\n<td colspan=\"1\" rowspan=\"1\" width=\"auto\" style=\"text-align: center;\">*APN password<\/td>\n<td colspan=\"1\" rowspan=\"1\" width=\"auto\" style=\"text-align: center;\">(none)<\/td>\n<\/tr>\n<tr>\n<td colspan=\"1\" rowspan=\"1\" width=\"auto\" style=\"text-align: center;\">Data Roaming<\/td>\n<td colspan=\"1\" rowspan=\"1\" width=\"auto\" style=\"text-align: center;\">Enable<\/td>\n<\/tr>\n<\/tbody><\/table><p><br><\/p>"
+          }
+        },
+        "template--14569752592517__82b9d51b-1ef7-400b-9729-3b2b94348f3f-1682300617465ba38d-1": {
+          "type": "question",
+          "settings": {
+            "title": "Frequently asked question",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>"
+          }
+        },
+        "b2f878eb-4b8f-462c-a677-5dd3de0ad0a2": {
+          "type": "question",
+          "settings": {
+            "title": "Frequently asked question",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "d70afcb1-28b1-4638-8467-c0d27ed60164",
+        "template--14569752592517__82b9d51b-1ef7-400b-9729-3b2b94348f3f-1682300617465ba38d-0",
+        "template--14569752592517__82b9d51b-1ef7-400b-9729-3b2b94348f3f-1682300617465ba38d-1",
+        "b2f878eb-4b8f-462c-a677-5dd3de0ad0a2"
+      ],
+      "settings": {
+        "title": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "ab3c3e16-403c-4489-a8ae-a8c766b66f49",
+    "82b9d51b-1ef7-400b-9729-3b2b94348f3f"
+  ]
+}

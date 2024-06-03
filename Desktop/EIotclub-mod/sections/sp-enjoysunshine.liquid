@@ -1,0 +1,345 @@
+{% liquid
+  assign secid = section.id | split:"__" 
+  assign secidlast = secid[1] | replace: "-","_"
+%}
+<style>
+  #spenjoysn-out-{{ secidlast }}{
+    {% if section.settings.bg_image %}
+      background: url("{{ section.settings.bg_image | image_url }}") no-repeat;
+      background-size: 100% auto;
+      background-position: center top;
+    {% endif %}
+  }
+
+ {% if section.settings.bg_imagemb %}
+  @media (max-width:768px){
+     #spenjoysn-out-{{ secidlast }}{
+      background-image: url("{{ section.settings.bg_imagemb | image_url }}");
+      background-position: top;
+    background-size: auto;
+  } 
+  }
+ {% endif %}
+</style>
+<div id="spenjoysn-out-{{ secidlast }}">
+<div class="spenjoysn-outbox">
+   
+  <div class="contain-index">
+    {% if section.settings.title != blank %}
+        <div class="spenjoysn-toptitle animate-ele">{{ section.settings.title }}</div> 
+        {% endif %}    
+    
+    <div class="spenjoysn-content animate-ele">
+      <div class="box-spenioybth">
+    <div class="swiper-button-prev spenjoysnbtn spenjoysnprev-{{ secidlast }}"><svg width="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="25" cy="25" r="24" stroke="currentColor" stroke-width="2"/>
+<path d="M26.2939 19.2939L20.2939 25.2939L26.2939 31.2939" stroke="currentColor" stroke-width="2"/>
+</svg>
+</div>
+       <div class="swiper-button-next spenjoysnbtn spenjoysnnext-{{ secidlast }}"><svg width="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="25" cy="25" r="24" transform="matrix(-1 0 0 1 50 0)" stroke="currentColor" stroke-width="2"/>
+<path d="M23.7061 19.2939L29.7061 25.2939L23.7061 31.2939" stroke="currentColor" stroke-width="2"/>
+</svg>
+</div>
+       <div class="spenjoysn-{{ secidlast }} swiper">
+     <div class="swiper-scrollbar hide-pc swiper-scrollbar-{{ secidlast }}"></div>
+    <div class="swiper-wrapper">  
+        {% for block in section.blocks %} 
+      <div class="swiper-slide">
+       <div class="spenjoysn-proitem">
+          <div class="spenjoysn-proitem-img">
+            {% if block.settings.image %}
+            <img class="{% if block.settings.imagemb %}hide-mb{% endif %}" src="{{ block.settings.image | img_url:'master' }}" />
+            {% endif %}
+            {% if block.settings.imagemb %}
+            <img class="hide-pc" src="{{ block.settings.imagemb | img_url:'master' }}" />
+            {% endif %}
+            {% if block.settings.save != blank %}
+              <span class="spenjoysn-prosave" style="background:{{ block.settings.savecolor }}">SAVE<span>{{ block.settings.save }}</span></span>
+            {% endif %}
+            {% if block.settings.url %}
+              <a class="spenjoysn-probtn bthho" href="{{ block.settings.url }}"><span>{{ block.settings.urltext }}</span></a>
+            {% endif %}
+          </div>     
+         
+         <div class="spenjoysn-itemtext">
+           <div class="mb-slideenj"></div>
+         {% if block.settings.title != blank %}
+              <div class="spenjoysntag-proitem-title">{{ block.settings.title }}</div>
+         {% endif %}
+         <div class="spenjoysntag-proitem-price">
+           {% if block.settings.oldprice != blank %}
+              <span class="spenjoysntag-oldprice">{{ block.settings.oldprice }}</span>
+            {% endif %}
+           {% if block.settings.nowprice != blank %}
+              <span class="spenjoysntag-nowprice">ONLY <span>{{ block.settings.nowprice }}</span></span>
+            {% endif %}
+         </div>
+           
+         </div>
+         
+         </div>
+
+      </div>
+          
+     {% endfor %}
+    </div>
+  </div>
+</div> 
+</div> 
+  {% for block in section.blocks %} 
+     <div class="spenjoysn-booutbox spenjoysn-booutbox-{{ forloop.index0 }}" data-index="{{ forloop.index0 }}">
+   <div class="spenjoysn-bottombox">
+     <div class="spenjoysn-bottomitem">
+       {% if block.settings.logo01 %}
+         <span><img alt src="{{ block.settings.logo01 | img_url:'master' }}" /></span>
+         <span>{{ block.settings.text01 }}</span>
+       {% endif %}
+     </div>
+     <div class="spenjoysn-bottomitem">
+       {% if block.settings.logo02 %}
+         <span><img alt src="{{ block.settings.logo02 | img_url:'master' }}" /></span>
+         <span>{{ block.settings.text02 }}</span>
+       {% endif %}
+     </div>
+     <div class="spenjoysn-bottomitem">
+       {% if block.settings.logo03 %}
+         <span><img alt src="{{ block.settings.logo03 | img_url:'master' }}" /></span>
+         <span>{{ block.settings.text03 }}</span>
+       {% endif %}
+     </div>
+     <div class="spenjoysn-bottomitem">
+       {% if block.settings.logo04 %}
+         <span><img alt src="{{ block.settings.logo04 | img_url:'master' }}" /></span>
+         <span>{{ block.settings.text04 }}</span>
+       {% endif %}
+     </div>
+   </div>
+      </div> 
+   {% endfor %}
+      
+    
+
+  </div>
+</div>
+</div>
+  <script>   
+  $(function(){
+      var spenjoysn{{secidlast}} = new Swiper ('.spenjoysn-{{secidlast}}', {
+    slidesPerView : 1.66,
+    observer: true, 
+    autoHeight: true,    
+    observeParents: true, centeredSlides: true, on:{
+    slideChange: function(){
+      $(".spenjoysn-booutbox").hide();
+       $(".spenjoysn-booutbox-"+this.activeIndex).fadeIn();
+    },
+  },
+     scrollbar: {
+      el: '.swiper-scrollbar-{{ secidlast }}',dragSize:89
+    },
+    navigation: {
+		nextEl: '.spenjoysnnext-{{ secidlast }}',
+		prevEl: '.spenjoysnprev-{{ secidlast }}',
+	},
+    breakpoints: { 
+      10: {  
+       slidesPerView : 1.3
+      },
+      769: {  
+       slidesPerView : 1.66
+      }
+    }
+
+  });
+     spenjoysn{{secidlast}}.slideTo(1);
+
+
+  if($(window).width() < 769){
+   $('.spenjoysn-booutbox').on({
+  touchstart: function(event) {
+    // 手指触摸元素时的处理函数
+    startX = event.originalEvent.touches[0].clientX;
+  },
+  touchmove: function(event) {
+    // 手指在元素上移动时的处理函数
+    currentX = event.originalEvent.touches[0].clientX;
+  },
+  touchend: function(event) {
+    // 手指从元素上移开时的处理函数
+    endX = event.originalEvent.changedTouches[0].clientX;
+
+    // 计算左右滑动距离
+    diffX = endX - startX;
+  let alllen =  $('.spenjoysn-booutbox').length;
+  let nowind = $(this).data("index");
+    if (diffX < -50 && diffX < alllen - 1) {
+      // 向右滑动
+      spenjoysn{{secidlast}}.slideTo(nowind + 1); 
+    } else if (diffX > 50 && diffX > 0) {
+      // 向左滑动
+      spenjoysn{{secidlast}}.slideTo(nowind - 1); 
+    }
+  }
+    
+}) 
+  }else{
+         $(".spenjoysn-booutbox").mousedown(function(e){
+                e.preventDefault();    
+                startX = e.pageX;        
+
+            }).mouseup(function(e){
+                  moveEndX = e.pageX;  
+                    diffX = moveEndX - startX;     
+                      let alllen =  $('.spenjoysn-booutbox').length;
+                      let nowind = $(this).data("index");
+                        if (diffX < -50 && diffX < alllen - 1) {
+                          // 向右滑动
+                          spenjoysn{{secidlast}}.slideTo(nowind + 1); 
+                        } else if (diffX > 50 && diffX > 0) {
+                          // 向左滑动
+                          spenjoysn{{secidlast}}.slideTo(nowind - 1); 
+                        }
+            });
+  }  
+  
+    
+  })
+
+</script>
+  
+<script>
+  $(function(){
+   if($(window).width() < 551){
+
+    $(".spenjoysn-booutbox").each(function(){
+        if ($(this).find(".spenjoysn-bottomitem").length > 2  ){
+      $(this).find(".spenjoysn-bottomitem").eq(2).before($('<div class="next-allspan faqbtnhho"><span>View More</span></div>'));
+     $(this).find(".spenjoysn-bottombox").append($('<div class="prev-allspan faqbtnhho"><span>View Less</span></div>'));
+      $(".next-allspan").nextAll().hide();
+    }  
+    });
+
+    $(".next-allspan").click(function(){
+       $(this).hide();
+       $(this).nextAll().slideDown();
+      
+    });
+    
+       $(".prev-allspan").click(function(){
+       $(this).slideUp(500);
+       $(".next-allspan").show().nextAll().hide();
+    });
+       
+   }  
+    
+    });
+
+</script>
+  
+{% schema %}
+  {
+   "name": "Enjoy Sunshine",
+  "settings": [
+     {
+        "type": "text",
+        "id": "title",
+        "label": "title"
+      },
+    {
+      "type": "image_picker",
+      "id": "bg_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_imagemb",
+      "label": "Background Image(mobile)"
+    }
+    ],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "block",
+        "settings": [
+       {
+        "type": "text",
+        "id": "save",
+        "label": "save"
+      },{
+        "type": "color",
+        "id": "savecolor",
+        "label": "save bgcolor",
+        "default": "#FFCC00"
+      },{
+        "type": "image_picker",
+        "id": "image",
+        "label": "image"
+      },{
+        "type": "image_picker",
+        "id": "imagemb",
+        "label": "image(mobile)"
+      },{
+        "type": "text",
+        "id": "urltext",
+        "label": "urltext"
+      },{
+        "type": "url",
+        "id": "url",
+        "label": "url"
+      },{
+        "type": "text",
+        "id": "title",
+        "label": "title"
+      },{
+        "type": "text",
+        "id": "oldprice",
+        "label": "oldprice"
+      },{
+        "type": "text",
+        "id": "nowprice",
+        "label": "nowprice"
+      },{
+        "type": "image_picker",
+        "id": "logo01",
+        "label": "logo01"
+      },{
+        "type": "richtext",
+        "id": "text01",
+        "label": "text01"
+      },{
+        "type": "image_picker",
+        "id": "logo02",
+        "label": "logo02"
+      },{
+        "type": "richtext",
+        "id": "text02",
+        "label": "text02"
+      },{
+        "type": "image_picker",
+        "id": "logo03",
+        "label": "logo03"
+      },{
+        "type": "richtext",
+        "id": "text03",
+        "label": "text03"
+      },{
+        "type": "image_picker",
+        "id": "logo04",
+        "label": "logo04"
+      },{
+        "type": "richtext",
+        "id": "text04",
+        "label": "text04"
+      }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Enjoy Sunshine",
+        "category": "HO-layout"
+      }
+    ]
+  }
+{% endschema %}

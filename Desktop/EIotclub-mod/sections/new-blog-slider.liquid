@@ -1,0 +1,705 @@
+<!-- sections\new-blog-slider.liquid -->
+<style>
+    #new-slider-{{ section.id }}{
+        max-width: {{ section.settings.max_width | append: 'px'  }};
+        margin: {{ section.settings.margin_top | append: 'px'  }} auto {{ section.settings.margin_bottom | append: 'px'  }};
+        color: {{ section.settings.bg_color }};
+        padding-top:{{ section.settings.padding_top | append: 'px'  }};
+        padding-bottom:{{ section.settings.padding_bottom | append: 'px'  }};
+        
+    }
+    #new-slider-{{ section.id }}>div{
+        position: relative;
+    }
+    #new-slider-{{ section.id }} h2.new-slider-header{
+        position: absolute;
+        font-size: {{ section.settings.header_size | append: 'px' }} ;
+        font-weight: {{ section.settings.header_font_weight }};
+        line-height: {{ section.settings.header_line_height | append: 'px'  }};
+        letter-spacing: {{ section.settings.header_letter_spacing | append: 'px' }};
+        color: {{ section.settings.header_color }};   
+        top:30px;
+        left: calc(( 100vw - 1220px ) / 2);
+        transform: translateY(-50%);
+    }
+    #new-slider-{{ section.id }}  .new-Swiper2{
+        padding-top: 70px;
+        padding-left: calc(( 100vw - 1700px ) / 2);
+        padding-right: calc(( 100vw - 1700px ) / 2);
+    }
+    #new-slider-{{ section.id }} .new-slider-box{
+        position: relative;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+    #new-slider-{{ section.id }} .new-slider-textbox{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    #new-slider-{{ section.id }} .new-slider-box img{
+        width: 100%;
+    }
+    #new-slider-{{ section.id }} .new-slider-textbox{
+        padding: 30px;
+    }
+    #new-slider-{{ section.id }} .new-slider-textbox>*{
+        margin: 0;
+    }
+    #new-slider-{{ section.id }} .right-top{
+        top: 0;
+        right: 0;
+        text-align: right;
+    }
+    #new-slider-{{ section.id }} .left-top{
+        top: 0;
+        left: 0;
+        text-align: left;
+    }
+    #new-slider-{{ section.id }} .right-bottom{
+        bottom: 0;
+        right: 0;
+        text-align: right;
+    }
+    #new-slider-{{ section.id }} .text-center{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+    }
+    #new-slider-{{ section.id }} .left-bottom{
+        bottom: 0;
+        left: 0;
+        text-align: left;
+    }
+    #new-slider-{{ section.id }} .swiper-button-next,#new-slider-{{ section.id }}  .swiper-button-prev{
+        width: 40px;
+        height: 40px;
+        top: 30px;
+        right: calc(( 100vw - 1220px ) / 2);
+    }
+    #new-slider-{{ section.id }}  .swiper-button-prev{
+        left: auto;
+        right: calc((( 100vw - 1220px ) / 2) + 50px);
+    }
+    #new-slider-{{ section.id }}  .new-slider-list>*{
+        {% comment %} transform: translateX(calc(( 100vw - 1220px ) / 2)); {% endcomment %}
+    }
+    @media(max-width:1220px){
+        #new-slider-{{ section.id }} .swiper-button-next,#new-slider-{{ section.id }}  .swiper-button-prev{
+        right: 40px;
+    }
+    #new-slider-{{ section.id }}  .swiper-button-prev{
+        left: auto;
+        right: calc(40px + 50px);
+    }
+    #new-slider-{{ section.id }} h2.new-slider-header{
+        left:40px;
+    }
+    #new-slider-{{ section.id }}  .new-Swiper2{
+        padding-top: 70px;
+        padding-left: 40px;
+        padding-right:40px;
+    }
+    }
+    @media(max-width:767px){
+        #new-slider-{{ section.id }}{
+            margin: {{ section.settings.margin_top_mo | append: 'px'  }} auto {{ section.settings.margin_bottom_mo | append: 'px'  }};
+            padding-top:{{ section.settings.padding_top_mo | append: 'px'  }};
+            padding-bottom:{{ section.settings.padding_bottom_mo | append: 'px'  }};
+        }
+        #new-slider-{{ section.id }} h2.new-slider-header{
+            font-size: {{ section.settings.header_size_mo | append: 'px' }} ;
+            font-weight: {{ section.settings.header_font_weight_mo }};
+            line-height: {{ section.settings.header_line_height_mo | append: 'px'  }};
+            letter-spacing: {{ section.settings.header_letter_spacing_mo | append: 'px' }}; 
+        }
+        #new-slider-{{ section.id }} .new-slider-box{
+        border-radius: 12px;
+        }
+        #new-slider-{{ section.id }} .swiper-button-next,#new-slider-{{ section.id }}  .swiper-button-prev{
+            right: 20px;
+        }
+        #new-slider-{{ section.id }}  .swiper-button-prev{
+            left: auto;
+            right: calc(20px + 50px);
+        }
+        #new-slider-{{ section.id }} h2.new-slider-header{
+            left:20px;
+        }
+        #new-slider-{{ section.id }}  .new-Swiper2{
+            padding-top: 70px;
+            padding-left:20px;
+            padding-right: 20px;
+        }
+    }
+</style>
+<div class="new-slider" id="new-slider-{{ section.id }}">
+    <div class="">
+        {% if section.settings.header != blank %}
+            <div class="new-silder-top">
+                <h2 class="new-slider-header">{{ section.settings.header }}</h2>
+            </div>
+        {% endif %}   
+        <div  class="swiper new-Swiper2">
+            <div class="new-slider-list swiper-wrapper">
+                {% for block in section.blocks %}
+                    {% if block.settings.blog != blank %}
+                        <div class="new-slider-box swiper-slide" id="new-slider-{{ block.id }}">
+                            <a href="{{block.settings.blog.url }}">
+                                <div class="new-slider-textbox {{ block.settings.text_align }}">
+                                        <p class="new-slider-subheading">{{ block.settings.blog.created_at | time_tag: format: 'month_day_year' }}</p>
+                                        <h3 class="new-slider-header">{{ block.settings.blog.title }}</h3>                           
+                                </div>
+                                <img src="{{ block.settings.blog.image | img_url: 'master' }}" alt="{{ block.settings.blog.title }}">
+                            </a>
+                        </div>
+                    {% endif %}             
+                {% endfor %}
+            </div>
+            <div class="swiper-button-prev">
+                <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="21.5" cy="21.5" r="20.5" fill="white" stroke="#DDDDDD"/>
+                <path d="M23.7588 16L18.5172 21.2416L23.7588 26.4832" stroke="#666666" stroke-width="1.5"/>
+                </svg>       
+            </div>
+            <div class="swiper-button-next">  
+                <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="21.5" cy="21.5" r="20.5" transform="rotate(-180 21.5 21.5)" fill="white" stroke="#DDDDDD"/>
+                <path d="M19.2412 27L24.4828 21.7584L19.2412 16.5168" stroke="#666666" stroke-width="1.5"/>
+                </svg>    
+            </div>
+        </div>
+       
+    </div>
+</div>
+{% for block in section.blocks %}
+    <style>
+        #new-slider-{{ block.id }} .new-slider-subheading{
+            font-size: {{ block.settings.subheading_size | append: 'px' }} ;
+            font-weight: {{ block.settings.subheading_font_weight }};
+            line-height: {{ block.settings.subheading_line_height | append: 'px'  }};
+            letter-spacing: {{ block.settings.subheading_letter_spacing | append: 'px' }};
+            color: {{ block.settings.subheading_color }};      
+        }
+        #new-slider-{{ block.id }} h3.new-slider-header{
+            font-size: {{ block.settings.header_size | append: 'px' }} ;
+            font-weight: {{ block.settings.header_font_weight }};
+            line-height: {{ block.settings.header_line_height | append: 'px'  }};
+            letter-spacing: {{ block.settings.header_letter_spacing | append: 'px' }};
+            color: {{ block.settings.header_color }}; 
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;     
+        }
+        @media(max-width:767px){
+            #new-slider-{{ block.id }} .new-slider-subheading{
+                font-size: {{ block.settings.subheading_size | append: 'px' }} ;
+                font-weight: {{ block.settings.subheading_font_weight }};
+                line-height: {{ block.settings.subheading_line_height | append: 'px'  }};
+                letter-spacing: {{ block.settings.subheading_letter_spacing | append: 'px' }};   
+            }
+            #new-slider-{{ block.id }} h3.new-slider-header{
+                font-size: {{ block.settings.header_size | append: 'px' }} ;
+                font-weight: {{ block.settings.header_font_weight }};
+                line-height: {{ block.settings.header_line_height | append: 'px'  }};
+                letter-spacing: {{ block.settings.header_letter_spacing | append: 'px' }}; 
+            }
+        }
+    </style>
+{% endfor %}
+
+<script>
+   $(document).ready(function() {
+    let swiper = new Swiper(".new-Swiper2", {
+        slidesPerView: 1.2,
+        spaceBetween: 24,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          breakpoints:{
+            767:{
+                slidesPerView: 2.5,
+                spaceBetween: 24,
+            },
+            998:{
+                slidesPerView: 3.5,
+                spaceBetween: 24,
+            }
+          }
+      });
+    })
+</script>
+{% schema %}
+{
+"name": "new-blog-slider",
+"settings": [
+    {
+        "type": "header",
+        "content": "父盒子配置"
+    },
+    {
+        "type": "color",
+        "id": "bg_color",
+        "label": "盒子背景颜色"
+    },
+    {
+        "type": "text",
+        "id": "max_width",
+        "label": "盒子最大宽度"
+    },
+    {
+        "type": "range",
+        "id": "margin_top",
+        "label": "上外边距",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 36
+    },
+    {
+        "type": "range",
+        "id": "margin_bottom",
+        "label": "下外边距",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 36
+    },
+    {
+        "type": "range",
+        "id": "padding_top",
+        "label": "上内边距",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 36
+    },
+    {
+        "type": "range",
+        "id": "padding_bottom",
+        "label": "下内边距",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 36
+    },
+    {
+        "type": "header",
+        "content": "父盒子移动端配置"
+    },
+    {
+        "type": "range",
+        "id": "margin_top_mo",
+        "label": "上外边距",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 36
+    },
+    {
+        "type": "range",
+        "id": "margin_bottom_mo",
+        "label": "下外边距",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 36
+    },
+    {
+        "type": "range",
+        "id": "padding_top_mo",
+        "label": "上内边距",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 36
+    },
+    {
+        "type": "range",
+        "id": "padding_bottom_mo",
+        "label": "下内边距",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 36
+    },
+    {
+        "type": "header",
+        "content": "标题"
+    },
+    {
+        "type": "text",
+        "id": "header",
+        "label": "标题",
+        "default": "header"
+    },
+    {
+        "type": "color",
+        "id": "header_color",
+        "label": "颜色"
+    },
+    {
+        "type": "range",
+        "id": "header_size",
+        "label": "字号",
+        "min": 12,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 32
+    },
+    {
+        "type": "range",
+        "id": "header_line_height",
+        "label": "行高",
+        "min": 12,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 36
+    },
+    {
+        "type": "range",
+        "id": "header_letter_spacing",
+        "label": "字距",
+        "min": -10,
+        "max": 10,
+        "step": 0.2,
+        "unit": "px",
+        "default":0
+    },
+    {
+      "type": "select",
+      "id": "header_font_weight",
+      "label": "字重",
+      "options": [
+        { "value": "100", "label": "100" },
+        { "value": "200", "label": "200" },
+        { "value": "300", "label": "300" },
+        { "value": "400", "label": "400" },
+        { "value": "500", "label": "500" },
+        { "value": "600", "label": "600" },
+        { "value": "700", "label": "700" },
+        { "value": "800", "label": "800" },
+        { "value": "900", "label": "900" }
+      ],
+      "default": "400"
+    },
+    {
+        "type": "header",
+        "content": "标题移动端配置"
+    },
+    {
+        "type": "range",
+        "id": "header_size_mo",
+        "label": "字号",
+        "min": 12,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 32
+    },
+    {
+        "type": "range",
+        "id": "header_line_height_mo",
+        "label": "行高",
+        "min": 12,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 36
+    },
+    {
+        "type": "range",
+        "id": "header_letter_spacing_mo",
+        "label": "字距",
+        "min": -10,
+        "max": 10,
+        "step": 0.2,
+        "unit": "px",
+        "default":0
+    },
+    {
+      "type": "select",
+      "id": "header_font_weight_mo",
+      "label": "字重",
+      "options": [
+        { "value": "100", "label": "100" },
+        { "value": "200", "label": "200" },
+        { "value": "300", "label": "300" },
+        { "value": "400", "label": "400" },
+        { "value": "500", "label": "500" },
+        { "value": "600", "label": "600" },
+        { "value": "700", "label": "700" },
+        { "value": "800", "label": "800" },
+        { "value": "900", "label": "900" }
+      ],
+      "default": "400"
+    }
+],
+"blocks":[
+    {
+        "type": "image_and_text",
+        "name": "image_and_text",
+        "limit": 10,
+        "settings": [
+            {
+                "type": "header",
+                "content": "博客"
+            },
+            {
+                "type": "article",
+                "id": "blog",
+                "label": "博客",
+                "info": "不选择博客不会展示任何东西"
+            },
+            {
+                "type": "header",
+                "content": "博客创建时间"
+            },
+            {
+                "type": "color",
+                "id": "subheading_color",
+                "label": "颜色",
+                "default": "#6D7175"
+            },
+            {
+                "type": "range",
+                "id": "subheading_size",
+                "label": "字号",
+                "min": 12,
+                "max": 100,
+                "step": 1,
+                "unit": "px",
+                "default": 12
+            },
+            {
+                "type": "range",
+                "id": "subheading_line_height",
+                "label": "行高",
+                "min": 12,
+                "max": 100,
+                "step": 1,
+                "unit": "px",
+                "default": 22
+            },
+            {
+                "type": "range",
+                "id": "subheading_letter_spacing",
+                "label": "字距",
+                "min": -10,
+                "max": 10,
+                "step": 0.2,
+                "unit": "px",
+                "default":0
+            },
+            {
+              "type": "select",
+              "id": "subheading_font_weight",
+              "label": "字重",
+              "options": [
+                { "value": "100", "label": "100" },
+                { "value": "200", "label": "200" },
+                { "value": "300", "label": "300" },
+                { "value": "400", "label": "400" },
+                { "value": "500", "label": "500" },
+                { "value": "600", "label": "600" },
+                { "value": "700", "label": "700" },
+                { "value": "800", "label": "800" },
+                { "value": "900", "label": "900" }
+              ],
+              "default": "400"
+            },
+            {
+                "type": "header",
+                "content": "博客创建时间移动端配置"
+            },
+            {
+                "type": "range",
+                "id": "subheading_size_mo",
+                "label": "字号",
+                "min": 12,
+                "max": 100,
+                "step": 1,
+                "unit": "px",
+                "default": 12
+            },
+            {
+                "type": "range",
+                "id": "subheading_line_height_mo",
+                "label": "行高",
+                "min": 12,
+                "max": 100,
+                "step": 1,
+                "unit": "px",
+                "default": 22
+            },
+            {
+                "type": "range",
+                "id": "subheading_letter_spacing_mo",
+                "label": "字距",
+                "min": -10,
+                "max": 10,
+                "step": 0.2,
+                "unit": "px",
+                "default":0
+            },
+            {
+              "type": "select",
+              "id": "subheading_font_weight_mo",
+              "label": "字重",
+              "options": [
+                { "value": "100", "label": "100" },
+                { "value": "200", "label": "200" },
+                { "value": "300", "label": "300" },
+                { "value": "400", "label": "400" },
+                { "value": "500", "label": "500" },
+                { "value": "600", "label": "600" },
+                { "value": "700", "label": "700" },
+                { "value": "800", "label": "800" },
+                { "value": "900", "label": "900" }
+              ],
+              "default": "400"
+            },
+            {
+                "type": "header",
+                "content": "博客标题"
+            },
+            {
+                "type": "color",
+                "id": "header_color",
+                "label": "颜色"
+            },
+            {
+                "type": "range",
+                "id": "header_size",
+                "label": "字号",
+                "min": 12,
+                "max": 100,
+                "step": 1,
+                "unit": "px",
+                "default": 20
+            },
+            {
+                "type": "range",
+                "id": "header_line_height",
+                "label": "行高",
+                "min": 12,
+                "max": 100,
+                "step": 1,
+                "unit": "px",
+                "default": 30
+            },
+            {
+                "type": "range",
+                "id": "header_letter_spacing",
+                "label": "字距",
+                "min": -10,
+                "max": 10,
+                "step": 0.2,
+                "unit": "px",
+                "default":0
+            },
+            {
+              "type": "select",
+              "id": "header_font_weight",
+              "label": "字重",
+              "options": [
+                { "value": "100", "label": "100" },
+                { "value": "200", "label": "200" },
+                { "value": "300", "label": "300" },
+                { "value": "400", "label": "400" },
+                { "value": "500", "label": "500" },
+                { "value": "600", "label": "600" },
+                { "value": "700", "label": "700" },
+                { "value": "800", "label": "800" },
+                { "value": "900", "label": "900" }
+              ],
+              "default": "400"
+            },
+            {
+                "type": "header",
+                "content": "博客标题移动端配置"
+            },
+            {
+                "type": "range",
+                "id": "header_size_mo",
+                "label": "字号",
+                "min": 12,
+                "max": 100,
+                "step": 1,
+                "unit": "px",
+                "default": 30
+            },
+            {
+                "type": "range",
+                "id": "header_line_height_mo",
+                "label": "行高",
+                "min": 12,
+                "max": 100,
+                "step": 1,
+                "unit": "px",
+                "default": 30
+            },
+            {
+                "type": "range",
+                "id": "header_letter_spacing_mo",
+                "label": "字距",
+                "min": -10,
+                "max": 10,
+                "step": 0.2,
+                "unit": "px",
+                "default":0
+            },
+            {
+              "type": "select",
+              "id": "header_font_weight_mo",
+              "label": "字重",
+              "options": [
+                { "value": "100", "label": "100" },
+                { "value": "200", "label": "200" },
+                { "value": "300", "label": "300" },
+                { "value": "400", "label": "400" },
+                { "value": "500", "label": "500" },
+                { "value": "600", "label": "600" },
+                { "value": "700", "label": "700" },
+                { "value": "800", "label": "800" },
+                { "value": "900", "label": "900" }
+              ],
+              "default": "400"
+            },
+            {
+              "type": "select",
+              "id": "text_align",
+              "label": "图中文字对齐方式",
+              "options": [
+                { "value": "right-top", "label": "右上" },
+                { "value": "right-bottom", "label": "右下" },
+                { "value": "text-center", "label": "居中" },
+                { "value": "left-top", "label": "左上" },
+                { "value": "left-bottom", "label": "左下" }
+              ],
+              "default": "left-top"
+            }
+        ]
+    }
+],
+"presets": [
+    {
+        "name": "new-blog-slider"
+    }
+   ]
+ }
+{% endschema %}

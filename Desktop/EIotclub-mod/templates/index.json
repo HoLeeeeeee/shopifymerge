@@ -1,0 +1,1030 @@
+{
+  "sections": {
+    "1f662b16-5e96-4b98-abbc-7a1b44783e08": {
+      "type": "slideshow",
+      "blocks": {
+        "997b2acf-267c-49a3-8a40-3f408974148c": {
+          "type": "image",
+          "settings": {
+            "title": "Experience seamless connectivity",
+            "title_color": "",
+            "title_size": 54,
+            "subheading": "Lightning-fast signal strength for a smarter, more efficient life",
+            "subheading_size": 20,
+            "subheading_color": "",
+            "subheading_line_height": 24,
+            "subheading_letter_spacing": 0,
+            "link": "shopify:\/\/products\/4g-lte-prepaid-sim-card-tmobile-att",
+            "link_text": "Shop Now",
+            "link2": "",
+            "link_text2": "",
+            "text_align": "vertical-center horizontal-left",
+            "text_align_mo": "vertical-center-mo horizontal-center-mo",
+            "image": "shopify:\/\/shop_images\/bannerpc.png",
+            "image_mobile": "shopify:\/\/shop_images\/mbbanner.png",
+            "parallax_direction": "left",
+            "overlay_opacity": 0
+          }
+        },
+        "image_jJnTLN": {
+          "type": "image",
+          "settings": {
+            "title": "Buy 1 SIM Cardget 1 FREE Reolink Cam",
+            "title_color": "",
+            "title_size": 54,
+            "subheading": "get 5-year unlimited and reolink go pt plus",
+            "subheading_size": 20,
+            "subheading_color": "",
+            "subheading_line_height": 24,
+            "subheading_letter_spacing": 0,
+            "link": "",
+            "link_text": "Learn more",
+            "link2": "shopify:\/\/products\/reolink-sim-card",
+            "link_text2": "",
+            "text_align": "vertical-center horizontal-left",
+            "text_align_mo": "vertical-center-mo horizontal-center-mo",
+            "image": "shopify:\/\/shop_images\/bannerPC_03_1920x750_240522.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/bannerMO_03_1200x750_240522.jpg",
+            "parallax_direction": "left",
+            "overlay_opacity": 0
+          }
+        },
+        "template--14564082647173__1f662b16-5e96-4b98-abbc-7a1b44783e08-1681021565e897297a-0": {
+          "type": "image",
+          "settings": {
+            "title": "GL-XE300 Global Router",
+            "title_color": "",
+            "title_size": 40,
+            "subheading": "Get 24GB 360days SIM Card & GL-XE300 Global Router",
+            "subheading_size": 19,
+            "subheading_color": "#1c1d1d",
+            "subheading_line_height": 30,
+            "subheading_letter_spacing": 0,
+            "link": "shopify:\/\/products\/travel-router-with-sim-card-gl-xe300",
+            "link_text": "Shop now",
+            "link2": "",
+            "link_text2": "",
+            "text_align": "vertical-center horizontal-left",
+            "text_align_mo": "vertical-center-mo horizontal-center-mo",
+            "image": "shopify:\/\/shop_images\/bannerPC_02_1920x750_240522.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/bannerMO_02_1200x750_240522.jpg",
+            "parallax_direction": "left",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "997b2acf-267c-49a3-8a40-3f408974148c",
+        "image_jJnTLN",
+        "template--14564082647173__1f662b16-5e96-4b98-abbc-7a1b44783e08-1681021565e897297a-0"
+      ],
+      "settings": {
+        "section_height": "natural",
+        "mobile_height": "auto",
+        "parallax": false,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 8,
+        "lazyload_images": true
+      }
+    },
+    "index_collectionlist_wkP6Pk": {
+      "type": "index-collectionlist",
+      "blocks": {
+        "block_VEjQJp": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/clol_1.png",
+            "imagemb": "shopify:\/\/shop_images\/clol_1.png",
+            "title": "SIM card",
+            "url": "shopify:\/\/collections\/shop-by-country"
+          }
+        },
+        "block_Dxmhyr": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/homelist_02_366_240522.jpg",
+            "imagemb": "shopify:\/\/shop_images\/homelist_02_366_240522.jpg",
+            "title": "Device SIM card",
+            "url": "shopify:\/\/collections\/shop-by-device"
+          }
+        },
+        "block_LJNM7X": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/homelist_03_366_240522.jpg",
+            "imagemb": "shopify:\/\/shop_images\/homelist_03_366_240522.jpg",
+            "title": "Contract Device",
+            "url": "shopify:\/\/collections\/device"
+          }
+        },
+        "block_eWzVqA": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/clol_4.png",
+            "imagemb": "shopify:\/\/shop_images\/clol_4.png",
+            "title": "Business",
+            "url": "shopify:\/\/pages\/b2b"
+          }
+        },
+        "block_aXXf3D": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/greenlist_1.png",
+            "imagemb": "shopify:\/\/shop_images\/greenlist_2.png",
+            "title": "Refill",
+            "url": "shopify:\/\/pages\/refill"
+          }
+        }
+      },
+      "block_order": [
+        "block_VEjQJp",
+        "block_Dxmhyr",
+        "block_LJNM7X",
+        "block_eWzVqA",
+        "block_aXXf3D"
+      ],
+      "custom_css": [],
+      "settings": {
+        "show_block": true
+      }
+    },
+    "index_prorecforyou_wHMKp8": {
+      "type": "index-prorecforyou",
+      "blocks": {
+        "simcard_7bKUzB": {
+          "type": "simcard",
+          "settings": {
+            "country": "US",
+            "icon01": "shopify:\/\/shop_images\/ctyicon_2.png",
+            "color_1": "#bcf4f8",
+            "color_2": "#70d4db",
+            "title": "<p>Trial plan <strong>300<\/strong>MB<\/p>",
+            "price": "$5.00",
+            "content": "<p>Supports <strong>AT&T and T-mobile<\/strong> networks.<\/p><p>Affordable 4G IoT SIM card.<\/p><p>Reliable IoT Data Solutions.<\/p><p>No contracts, extra fees or activation fees.<\/p>",
+            "shopbtn": "Shop Now",
+            "shopurl": "shopify:\/\/products\/4g-lte-prepaid-sim-card-tmobile-att"
+          }
+        },
+        "simcard_wRWkYi": {
+          "type": "simcard",
+          "settings": {
+            "country": "US",
+            "icon01": "shopify:\/\/shop_images\/ctyicon_2.png",
+            "color_1": "#e3fabe",
+            "color_2": "#abebc9",
+            "title": "<p>Trial data plan-<strong>100<\/strong>MB<\/p>",
+            "price": "$5.99",
+            "content": "<p>Support <strong>Verizon, AT&T and T-Mobile.<\/strong><\/p><p>Fast and Reliable Data.<\/p><p>No Contracts, No Hidden Fees.<\/p><p>Flexible Plans for IoT Devices.<\/p>",
+            "shopbtn": "Shop Now",
+            "shopurl": "shopify:\/\/products\/security-camera-sim-card-verizon-att-tmobile-6g"
+          }
+        },
+        "simcard_3UckEe": {
+          "type": "simcard",
+          "settings": {
+            "country": "US",
+            "icon01": "shopify:\/\/shop_images\/ctyicon_2.png",
+            "color_1": "#bcf4f8",
+            "color_2": "#70d4db",
+            "title": "<p><strong>2<\/strong>GB <strong>30<\/strong>DAYS<\/p>",
+            "price": "$15.00",
+            "content": "<p>Supports <strong>AT&T and T-mobile<\/strong> networks.<\/p><p>Affordable 4G IoT SIM card.<\/p><p>Reliable IoT Data Solutions.<\/p><p>No contracts, extra fees or activation fees.<\/p>",
+            "shopbtn": "Shop Now",
+            "shopurl": "shopify:\/\/products\/4g-lte-prepaid-sim-card-tmobile-att"
+          }
+        },
+        "simcard_gWGC4F": {
+          "type": "simcard",
+          "settings": {
+            "country": "US",
+            "icon01": "shopify:\/\/shop_images\/ctyicon_2.png",
+            "color_1": "#e3fabe",
+            "color_2": "#abebc9",
+            "title": "<p><strong>2<\/strong>GB <strong>30<\/strong>DAYS<\/p>",
+            "price": "$19.9",
+            "content": "<p>Support <strong>Verizon, AT&T and T-Mobile.<\/strong><\/p><p>Fast and Reliable Data.<\/p><p>No Contracts, No Hidden Fees.<\/p><p>Flexible Plans for IoT Devices.<\/p>",
+            "shopbtn": "Shop Now",
+            "shopurl": "shopify:\/\/products\/4g-data-only-prepaid-iot-sim-card"
+          }
+        },
+        "simcard_bigaez": {
+          "type": "simcard",
+          "settings": {
+            "country": "US",
+            "icon01": "shopify:\/\/shop_images\/ctyicon_2.png",
+            "color_1": "#bcf4f8",
+            "color_2": "#70d4db",
+            "title": "<p><strong>24<\/strong>GB <strong>360<\/strong>DAYS<\/p>",
+            "price": "$109",
+            "content": "<p>Supports <strong>AT&T and T-mobile<\/strong> networks.<\/p><p>Affordable 4G IoT SIM card.<\/p><p>Reliable IoT Data Solutions.<\/p><p>No contracts, extra fees or activation fees.<\/p>",
+            "shopbtn": "",
+            "shopurl": "shopify:\/\/products\/4g-lte-prepaid-sim-card-tmobile-att"
+          }
+        },
+        "simcard_DJnNNa": {
+          "type": "simcard",
+          "settings": {
+            "country": "US",
+            "icon01": "shopify:\/\/shop_images\/ctyicon_2.png",
+            "color_1": "#e3fabe",
+            "color_2": "#abebc9",
+            "title": "<p><strong>24<\/strong>GB <strong>360<\/strong>DAYS<\/p>",
+            "price": "$139.99",
+            "content": "",
+            "shopbtn": "",
+            "shopurl": ""
+          }
+        },
+        "desimcard_etLrdU": {
+          "type": "desimcard",
+          "settings": {
+            "country": "Canada",
+            "icon01": "shopify:\/\/shop_images\/ctyicon_1.png",
+            "icon02": "shopify:\/\/shop_images\/ctyicon_2.png",
+            "color_1": "#bcf4f8",
+            "color_2": "#70d4db",
+            "title": "<p>Trial plan <strong>100<\/strong>MB<\/p>",
+            "price": "$7.99",
+            "content": "<p>Support <strong>Bell\/Rogers\/TELUS\/Verizon\/T-mobile\/AT&T<\/strong><\/p><p>Affordable 4G IoT SIM card.<\/p><p>Available in US and Canada only.<\/p><p>No contracts, extra fees or activation fees.<\/p>",
+            "shopbtn": "Shop Now",
+            "shopurl": "shopify:\/\/products\/north-america-sim-card"
+          }
+        },
+        "desimcard_rwX3KK": {
+          "type": "desimcard",
+          "settings": {
+            "country": "Europe",
+            "icon01": "shopify:\/\/shop_images\/Europe.png",
+            "color_1": "#bcf4f8",
+            "color_2": "#70d4db",
+            "title": "<p><strong>500<\/strong>MB <strong>30<\/strong>DAYS<\/p>",
+            "price": "$5.00",
+            "content": "<p>connecting to over <strong>30 countries<\/strong> in Europe<\/p><p>Affordable 4G IoT SIM card.<\/p><p>Triple-cut SIM-Fits various device sizes.<\/p><p>No contracts, extra fees or activation fees.<\/p>",
+            "shopbtn": "Shop Now",
+            "shopurl": "shopify:\/\/products\/europe-sim-card"
+          }
+        },
+        "desimcard_8imNxc": {
+          "type": "desimcard",
+          "settings": {
+            "country": "Europe",
+            "icon01": "shopify:\/\/shop_images\/Europe.png",
+            "color_1": "#bcf4f8",
+            "color_2": "#70d4db",
+            "title": "<p><strong>3<\/strong>GB <strong>30<\/strong>DAYS<\/p>",
+            "price": "$16.59",
+            "content": "<p>connecting to over <strong>30 countries<\/strong> in Europe<\/p><p>Affordable 4G IoT SIM card.<\/p><p>Triple-cut SIM-Fits various device sizes.<\/p><p>No contracts, extra fees or activation fees.<\/p>",
+            "shopbtn": "Shop Now",
+            "shopurl": "shopify:\/\/products\/europe-sim-card"
+          }
+        },
+        "desimcard_GnMqAr": {
+          "type": "desimcard",
+          "settings": {
+            "country": "Europe",
+            "icon01": "shopify:\/\/shop_images\/Europe.png",
+            "color_1": "#bcf4f8",
+            "color_2": "#70d4db",
+            "title": "<p><strong>36<\/strong>GB <strong>360<\/strong>DAYS<\/p>",
+            "price": "$110",
+            "content": "<p>connecting to over <strong>30 countries<\/strong> in Europe<\/p><p>Affordable 4G IoT SIM card.<\/p><p>Triple-cut SIM-Fits various device sizes.<\/p><p>No contracts, extra fees or activation fees.<\/p>",
+            "shopbtn": "Shop Now",
+            "shopurl": "shopify:\/\/products\/europe-sim-card"
+          }
+        },
+        "simcard_Pxfmte": {
+          "type": "simcard",
+          "settings": {
+            "country": "Global",
+            "icon01": "shopify:\/\/shop_images\/ctyicon_3.png",
+            "color_1": "#fcce89",
+            "color_2": "#fce572",
+            "title": "<p><strong>1<\/strong>GB <strong>30<\/strong>DAYS<\/p>",
+            "price": "$9.99",
+            "content": "<p>Connect in 200+ countries.<\/p><p>5G Speed: High-speed internet on-the-go for uninterrupted business activity.<\/p><p>Activate instantly—no complex setup.<\/p><p>Select data packages to suit your work travel.<\/p>",
+            "shopbtn": "Shop Now",
+            "shopurl": "shopify:\/\/products\/router-plans-30gb"
+          }
+        },
+        "simcard_NeX9nY": {
+          "type": "simcard",
+          "settings": {
+            "country": "Global",
+            "icon01": "shopify:\/\/shop_images\/ctyicon_3.png",
+            "color_1": "#bcf4f8",
+            "color_2": "#70d4db",
+            "title": "<p><strong>5<\/strong>GB <strong>30<\/strong>DAYS<\/p>",
+            "price": "$35",
+            "content": "<p>Connect in 200+ countries.<\/p><p>5G Speed: High-speed internet on-the-go for uninterrupted business activity.<\/p><p>Activate instantly—no complex setup.<\/p><p>Select data packages to suit your work travel.<\/p>",
+            "shopbtn": "Shop Now",
+            "shopurl": "shopify:\/\/products\/router-plans-30gb"
+          }
+        },
+        "simcard_G8aKWb": {
+          "type": "simcard",
+          "settings": {
+            "country": "Global",
+            "icon01": "shopify:\/\/shop_images\/ctyicon_3.png",
+            "color_1": "#bcf4f8",
+            "color_2": "#70d4db",
+            "title": "<p><strong>24<\/strong>GB <strong>360<\/strong>DAYS<\/p>",
+            "price": "$169",
+            "content": "<p>High Speed 4G LTE Data Prepaid SIM Card.<\/p><p>No contracts. No activation fees.<\/p><p>Compatible with a variety of IoT devices.<\/p><p>Easily renew online anytime.<\/p>",
+            "shopbtn": "Shop Now",
+            "shopurl": "shopify:\/\/products\/router-plans-30gb"
+          }
+        },
+        "desimcard_TG7Aki": {
+          "type": "desimcard",
+          "settings": {
+            "country": "US",
+            "icon01": "shopify:\/\/shop_images\/Security_camera.png",
+            "color_1": "#bcf4f8",
+            "color_2": "#70d4db",
+            "title": "<p>1111111<\/p>",
+            "price": "111",
+            "content": "<p>11111111111111111111111<\/p>",
+            "shopbtn": "",
+            "shopurl": ""
+          }
+        }
+      },
+      "block_order": [
+        "simcard_7bKUzB",
+        "simcard_wRWkYi",
+        "simcard_3UckEe",
+        "simcard_gWGC4F",
+        "simcard_bigaez",
+        "simcard_DJnNNa",
+        "desimcard_etLrdU",
+        "desimcard_rwX3KK",
+        "desimcard_8imNxc",
+        "desimcard_GnMqAr",
+        "simcard_Pxfmte",
+        "simcard_NeX9nY",
+        "simcard_G8aKWb",
+        "desimcard_TG7Aki"
+      ],
+      "settings": {
+        "title": "prepaid SIM card Data for you",
+        "type1": "SIM Card",
+        "type2": "Device SIM card",
+        "autoplay": false,
+        "interval": "5"
+      }
+    },
+    "index_bannerandcollection_GEBGtH": {
+      "type": "index-bannerandcollection",
+      "blocks": {
+        "block_eHVc5q": {
+          "type": "block",
+          "settings": {
+            "product": "security-camera-sim-card-verizon-att-tmobile-24gb",
+            "title": "",
+            "content": ""
+          }
+        },
+        "block_VTCeBe": {
+          "type": "block",
+          "settings": {
+            "product": "trail-camera-sim-card",
+            "title": "Trail camera sim card",
+            "content": ""
+          }
+        },
+        "block_ni9zYn": {
+          "type": "block",
+          "settings": {
+            "product": "best-prepaid-hotspot-plans",
+            "title": "Global router sim card",
+            "content": ""
+          }
+        },
+        "block_8yJbYw": {
+          "type": "block",
+          "settings": {
+            "product": "router-hotspot-sim-card",
+            "title": "US router sim card",
+            "content": ""
+          }
+        },
+        "block_naVHif": {
+          "type": "block",
+          "settings": {
+            "product": "gps-tracker-data-plans",
+            "title": "GPS tracker sim card",
+            "content": "Lorem ipsum dolor sit amet consectetur. Metus ullamcorper tristique arcu sed adipiscing ultrices."
+          }
+        },
+        "block_AtyYik": {
+          "type": "block",
+          "settings": {
+            "product": "industrial-sim-card",
+            "title": "Industrial sim card",
+            "content": ""
+          }
+        }
+      },
+      "block_order": [
+        "block_eHVc5q",
+        "block_VTCeBe",
+        "block_ni9zYn",
+        "block_8yJbYw",
+        "block_naVHif",
+        "block_AtyYik"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/devicecardBG_1920x720_240528.jpg",
+        "imagemb": "shopify:\/\/shop_images\/devicecardBG_750x980_240528.jpg",
+        "textcolor": "#282828",
+        "title": "Multi-Device Compatibility",
+        "content": "<p>Our Prepaid SIM Card simplifies connecting IoT and M2M devices.<br\/>It caters to various needs, such as solar cameras, trail cameras, routers, GPS trackers, and more. Our strong network coverage ensures high performance globally.<\/p>",
+        "btn": "Shop Now",
+        "url": "shopify:\/\/collections\/shop-by-device",
+        "bottom_dis": 490
+      }
+    },
+    "index_featurepro_Xj6HtG": {
+      "type": "index-featurepro",
+      "settings": {
+        "product": "reolink-sim-card",
+        "image": "shopify:\/\/shop_images\/home_reolink_620x440_240527.jpg",
+        "imagemb": "shopify:\/\/shop_images\/home_reolink_620x440_240527.jpg",
+        "toptitle": "reolink go pt plus",
+        "shownewtag": true,
+        "newtag": "New Arrival",
+        "title": "5-year unlimited IoT plan for $399, includes free Reolink Go PT Plus camera",
+        "content": "<p>plug and play<\/p><p>4G LTE connectivity<\/p><p>5-year unlimited IoT plan<\/p><p>free reolink <\/p><p><\/p>"
+      }
+    },
+    "index_multiplecategories_gaENQL": {
+      "type": "index-multiplecategories",
+      "blocks": {
+        "block_iP7V8y": {
+          "type": "block",
+          "settings": {
+            "collection": "security-camera",
+            "title": "security camera",
+            "showhotpointer": false,
+            "hottext": "Hot",
+            "hotcolor": "#e74300",
+            "hottextcolor": "#ffffff"
+          }
+        },
+        "block_pMyRVq": {
+          "type": "block",
+          "settings": {
+            "collection": "trail-camera",
+            "title": "Trail Camera",
+            "showhotpointer": true,
+            "hottext": "Hot",
+            "hotcolor": "#e74300",
+            "hottextcolor": "#ffffff"
+          }
+        },
+        "block_mwHU3C": {
+          "type": "block",
+          "settings": {
+            "collection": "router",
+            "title": "Router",
+            "showhotpointer": false,
+            "hottext": "Hot",
+            "hotcolor": "#e74300",
+            "hottextcolor": "#ffffff"
+          }
+        },
+        "block_PTEJPn": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "collection": "shop-by-network",
+            "title": "Others",
+            "showhotpointer": false,
+            "hottext": "Hot",
+            "hotcolor": "#e74300",
+            "hottextcolor": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "block_iP7V8y",
+        "block_pMyRVq",
+        "block_mwHU3C",
+        "block_PTEJPn"
+      ],
+      "settings": {
+        "title": "Contract Device Selections",
+        "autoplay": true,
+        "interval": "6"
+      }
+    },
+    "index_gethelp_WUybGH": {
+      "type": "index-gethelp",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/gethelp.png",
+        "imagemb": "shopify:\/\/shop_images\/gethpmb.png",
+        "title": "24\/7 Support",
+        "content": "<p>Get the help you need<\/p>",
+        "btn": "Learn More",
+        "btnurl": "shopify:\/\/pages\/frequently-asked-questions"
+      }
+    },
+    "index_video_qe6App": {
+      "type": "index-video",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/videocover_1920x900_240522.jpg",
+        "imagemb": "shopify:\/\/shop_images\/videocover_750x650_240522.jpg",
+        "title": "Boost Your Signal with EIOTCLUB",
+        "content": "",
+        "btn": "Watch Full Video",
+        "youtubeurl": "https:\/\/www.youtube.com\/watch?v=rBBzuL-I2oI",
+        "youtubeurlmb": "",
+        "video_mp4url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/b73f572d6eac466ca9495791c7611e4f.mp4",
+        "video04url_mb": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/b73f572d6eac466ca9495791c7611e4f.mp4"
+      }
+    },
+    "hero_video_E7jyth": {
+      "type": "hero-video",
+      "disabled": true,
+      "settings": {
+        "title": "Boost Your Signal with EIOTCLUB",
+        "title_size": 80,
+        "subheading": "Lorem ipsum dolor sit amet consectetur. Metus ullamcorper tristique arcu sed adipiscing ultrices. Tristique interdum condimentum justo gravida dignissim.",
+        "link_text": "Watch Full Video",
+        "link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "text_align": "vertical-center horizontal-center",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "overlay_opacity": 0,
+        "section_height": "650px",
+        "mobile_height": "auto"
+      }
+    },
+    "more_aboutus_W86rrY": {
+      "type": "more-aboutus",
+      "blocks": {
+        "item_zLpYCH": {
+          "type": "item",
+          "settings": {
+            "position": "left",
+            "image": "shopify:\/\/shop_images\/moreabout_1.png",
+            "imagemb": "shopify:\/\/shop_images\/abtmb_1.png",
+            "textbgcolor": "#ffffff",
+            "title": "Why Join The Affiliate Program?",
+            "content": "<p>Grow, earn more, and enjoy special perks along the way!<\/p>",
+            "btntext": "Learn More",
+            "btnurl": "\/",
+            "top_dis": 0,
+            "bottom_dis": 50
+          }
+        },
+        "item_H68MxJ": {
+          "type": "item",
+          "settings": {
+            "position": "right",
+            "image": "shopify:\/\/shop_images\/moreabout_2.png",
+            "imagemb": "shopify:\/\/shop_images\/abtmb_2.png",
+            "textbgcolor": "#ffffff",
+            "title": "Reward Yourself, You Deserve It!",
+            "content": "<p>Get 10% Commision For Every Friend You Refer!<\/p>",
+            "btntext": "Learn More",
+            "btnurl": "\/",
+            "top_dis": 0,
+            "bottom_dis": 50
+          }
+        }
+      },
+      "block_order": [
+        "item_zLpYCH",
+        "item_H68MxJ"
+      ],
+      "settings": {
+        "title": "More about Eiotclub"
+      }
+    },
+    "index_review_jGD3EV": {
+      "type": "index-review",
+      "blocks": {
+        "reviews_pjFA8p": {
+          "type": "reviews",
+          "settings": {
+            "title": "EIOTCLUB SIM Card",
+            "content": "<p>Unlock the Reolink Duo's potential with the EIOTCLUB SIM Card. Get seamless cellular coverage for uninterrupted monitoring, even in remote areas. Just insert the SIM card and you're good to go!<\/p>",
+            "image": "shopify:\/\/shop_images\/1_c50b9124-a89b-40b2-ae18-fa95f757a9a2.png",
+            "author": "LifeHackster ",
+            "icon": "5-stars"
+          }
+        },
+        "reviews_fXWAjC": {
+          "type": "reviews",
+          "settings": {
+            "title": "EIOTCLUB data provider in all my Reolinks",
+            "content": "<p>I now use EIOTCLUB data provider in all my Reolinks. They have relatively inexpense plans (especially when buying the yearly prepaid plans) and no hidden fees or extra charges.<\/p>",
+            "image": "shopify:\/\/shop_images\/2_67641253-0192-4179-b5b0-d825f06dc45e.png",
+            "author": "HuntingFarmer",
+            "icon": "5-stars"
+          }
+        },
+        "reviews_yEiahi": {
+          "type": "reviews",
+          "settings": {
+            "title": "EIOTCLUB Wireless SIM CARD Data",
+            "content": "<p>It is almost unbelievable how affordable this system is. I can get a year's service with plenty of data for around $200.<\/p>",
+            "image": "shopify:\/\/shop_images\/3_e0e1bc95-63cb-4d8d-990d-d701060f7bfb.png",
+            "author": "TNT - Try New Things",
+            "icon": "5-stars"
+          }
+        },
+        "reviews_69pxFC": {
+          "type": "reviews",
+          "settings": {
+            "title": "Reolink GO PT with EIOTCLUB SIM card",
+            "content": "<p>Resolve poor performance on your Reolink GO PT camera due to inadequate network coverage by choosing EIOTCLUB. Our SIM card operates on Verizon network, delivering superior coverage and optimal performance for reliable and uninterrupted connectivity.<\/p>",
+            "image": "shopify:\/\/shop_images\/4.png",
+            "author": "WindMule Acres",
+            "icon": "5-stars"
+          }
+        }
+      },
+      "block_order": [
+        "reviews_pjFA8p",
+        "reviews_fXWAjC",
+        "reviews_yEiahi",
+        "reviews_69pxFC"
+      ],
+      "settings": {
+        "title": "Thousands Of Happy Customers",
+        "autoplay": false
+      }
+    },
+    "index_iconoverbanner_H63N7R": {
+      "type": "index-iconoverbanner",
+      "blocks": {
+        "block_cWky7x": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/overba_2.png",
+            "title": "Strong Network Coverage, Excellent Signal Quality"
+          }
+        },
+        "block_Y4wxBd": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/overba_3.png",
+            "title": "10-Year Warranty"
+          }
+        },
+        "block_xaeCYV": {
+          "type": "block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/overba_1.png",
+            "title": "24\/7 Customer Service"
+          }
+        }
+      },
+      "block_order": [
+        "block_cWky7x",
+        "block_Y4wxBd",
+        "block_xaeCYV"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/branddevice_1920x900_240522.jpg",
+        "imagemb": "shopify:\/\/shop_images\/branddevice_750x980_240522.jpg",
+        "toptitle": "Our Mission",
+        "title": "Perfect for Your IoT Devices",
+        "content": "<p>At EIOTCLUB, we go the extra mile to ensure that you have the best signal quality possible.<\/p>",
+        "textcolor": "#ffffff"
+      }
+    },
+    "index_newsletter_H36wWT": {
+      "type": "index-newsletter",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/subbanner_2.png",
+        "imagemb": "shopify:\/\/shop_images\/subform.png",
+        "title": "Get In Touch With Us",
+        "content": "<p>Lorem ipsum dolor sit amet consectetur. Metus ullamcorper tristique arcu sed adipiscing ultrices. <\/p>"
+      }
+    },
+    "index_imagelists_3NKnqM": {
+      "type": "index-imagelists",
+      "blocks": {
+        "block_6qGdL7": {
+          "type": "block",
+          "settings": {
+            "title": "Prepaid SIM Cards: Everything You Need to Know",
+            "content": "",
+            "image": "shopify:\/\/shop_images\/blog01_410x500_240531.jpg",
+            "url": "https:\/\/www.eiotclub.com\/blogs\/community\/ultimate-guide-prepaid-sim-cards"
+          }
+        },
+        "block_DN8gTx": {
+          "type": "block",
+          "settings": {
+            "title": "Top 9 Prepaid SIM Offers You Can't Miss",
+            "content": "",
+            "image": "shopify:\/\/shop_images\/blog02_410x500_240531.jpg",
+            "url": "https:\/\/www.eiotclub.com\/blogs\/community\/top-prepaid-sim-cards-usa"
+          }
+        },
+        "block_QzFEiA": {
+          "type": "block",
+          "settings": {
+            "title": "5-year unlimited SIM card IoT service",
+            "content": "",
+            "image": "shopify:\/\/shop_images\/blog03_410x500_240531.jpg",
+            "url": "https:\/\/www.eiotclub.com\/blogs\/community\/free-reolink-camera-with-unlimited-sim-plan"
+          }
+        },
+        "block_bg9AkR": {
+          "type": "block",
+          "settings": {
+            "title": "Best SIM cards for security cameras",
+            "content": "",
+            "image": "shopify:\/\/shop_images\/blog04_410x500_240531.jpg",
+            "url": "https:\/\/www.eiotclub.com\/blogs\/community\/best-4g-sim-for-security-cameras"
+          }
+        }
+      },
+      "block_order": [
+        "block_6qGdL7",
+        "block_DN8gTx",
+        "block_QzFEiA",
+        "block_bg9AkR"
+      ],
+      "settings": {
+        "title": "Buying Guides ",
+        "btntext": "Read All",
+        "btnurl": "shopify:\/\/blogs\/community"
+      }
+    },
+    "fee75eff-2181-4f13-ba9c-7143dbb9ff9b": {
+      "type": "new-scrolling-image",
+      "disabled": true,
+      "settings": {
+        "image1": "shopify:\/\/shop_images\/Frame_194570_6d9cfb85-43a3-4960-a6de-b142f2e8f7f1.png",
+        "image2": "shopify:\/\/shop_images\/Frame_194568_f7908de5-40d7-423e-90c7-8417d7640e7d.png",
+        "image3": "shopify:\/\/shop_images\/Frame_194569_5849f0d8-0414-43ad-995b-9c6b85ebfb82.png"
+      }
+    },
+    "d6f5b1c4-6dc9-49e2-b813-aa962d156d3f": {
+      "type": "new-hero-video",
+      "blocks": {
+        "111f926a-4f23-4409-9b92-4bb2afe153d1": {
+          "type": "new-video",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PART6-04-710x528-0707.jpg",
+            "text_align": "vertical-center horizontal-center",
+            "video_url": "https:\/\/www.youtube.com\/watch?v=uldO0VrCijQ&t=247s",
+            "overlay_opacity": 0,
+            "section_height": "450px",
+            "mobile_height": "auto"
+          }
+        },
+        "8e986db3-25da-4fe2-921f-43ddddd6bf22": {
+          "type": "new-video",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PART6-03-710x528-0707_3973fce2-192b-44be-a76e-bf5f4ad3e6ff.jpg",
+            "text_align": "vertical-center horizontal-center",
+            "video_url": "https:\/\/www.youtube.com\/watch?v=dyplV1sroVg&pp=ygUIZWlvdGNsdWI%3D",
+            "overlay_opacity": 0,
+            "section_height": "450px",
+            "mobile_height": "auto"
+          }
+        },
+        "1badc680-d006-403c-bed0-c69105d50dde": {
+          "type": "new-video",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PART6-05-710x528-0707.jpg",
+            "text_align": "vertical-center horizontal-center",
+            "video_url": "https:\/\/www.youtube.com\/watch?v=LSs8JM6w_7o&pp=ygUIZWlvdGNsdWI%3D",
+            "overlay_opacity": 0,
+            "section_height": "450px",
+            "mobile_height": "auto"
+          }
+        }
+      },
+      "block_order": [
+        "111f926a-4f23-4409-9b92-4bb2afe153d1",
+        "8e986db3-25da-4fe2-921f-43ddddd6bf22",
+        "1badc680-d006-403c-bed0-c69105d50dde"
+      ],
+      "disabled": true,
+      "settings": {
+        "margin_bottom_mb": 0,
+        "margin_bottom_tab": 0,
+        "margin_bottom": 0,
+        "mg_top_mobile": 0,
+        "mg_top_tablet": 0,
+        "mg_top_desktop": 0,
+        "header": "",
+        "header_color": "#f6f6f6",
+        "header_size": 32,
+        "header_line_height": 36,
+        "header_letter_spacing": 0,
+        "header_font_weight": "700",
+        "header_size_mo": 32,
+        "header_line_height_mo": 36,
+        "header_letter_spacing_mo": 0,
+        "header_font_weight_mo": "400"
+      }
+    },
+    "b36a5e8f-83b7-4e6d-8fe9-2e5da2ab9b3c": {
+      "type": "new-blog-post",
+      "disabled": true,
+      "settings": {
+        "bg_color": "",
+        "max_width": "",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "margin_top_mo": 0,
+        "margin_bottom_mo": 0,
+        "padding_top_mo": 0,
+        "padding_bottom_mo": 0,
+        "title": "Buying Guides",
+        "title_color": "",
+        "title_size": 32,
+        "title_line_height": 36,
+        "title_letter_spacing": 0,
+        "title_font_weight": "400",
+        "title_size_mo": 20,
+        "title_line_height_mo": 36,
+        "title_letter_spacing_mo": 0,
+        "title_font_weight_mo": "400",
+        "blog_all": "All Blog",
+        "blog_all_url": "https:\/\/www.eiotclub.com\/blogs\/community",
+        "blog": "community",
+        "post_limit": 5,
+        "subheading_color": "#dddddd",
+        "subheading_size": 12,
+        "subheading_line_height": 22,
+        "subheading_letter_spacing": 0,
+        "subheading_font_weight": "400",
+        "subheading_size_mo": 12,
+        "subheading_line_height_mo": 22,
+        "subheading_letter_spacing_mo": 0,
+        "subheading_font_weight_mo": "400",
+        "header_color": "#ffffff",
+        "header_size": 16,
+        "header_line_height": 24,
+        "header_letter_spacing": 0,
+        "header_font_weight": "400",
+        "header_size_mo": 20,
+        "header_line_height_mo": 24,
+        "header_letter_spacing_mo": 0.2,
+        "header_font_weight_mo": "400",
+        "text_align": "left-top"
+      }
+    },
+    "da4bba46-dad8-4290-9325-cb348b0a9d91": {
+      "type": "text-with-icons",
+      "blocks": {
+        "template--14564082647173__da4bba46-dad8-4290-9325-cb348b0a9d91-1681096681e0229d5e-0": {
+          "type": "text_block",
+          "settings": {
+            "icon": "free-shipping",
+            "html_svg": "<svg width=\"52\" height=\"52\" viewbox=\"0 0 52 52\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M9.26378 15.485C9.05118 15.544 8.85776 15.6577 8.70284 15.8148C8.51408 16.0452 8.40919 16.3328 8.40538 16.6307C7.60647 24.3053 7.58947 28.9118 8.40538 36.5303C8.40578 36.8013 8.48792 37.0658 8.64107 37.2893C8.79422 37.5128 9.01125 37.6849 9.26378 37.7831L25.4017 44.0655L25.8862 44.1998L26.3723 44.0638L42.5103 37.7848C42.761 37.6839 42.9762 37.5111 43.129 37.2882C43.2817 37.0653 43.3651 36.8022 43.3687 36.532C44.2186 28.82 44.2288 24.3733 43.3687 16.7327C43.3918 16.3987 43.2853 16.0687 43.0712 15.8114C42.9302 15.6148 42.7354 15.4631 42.5103 15.3745V15.3779\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M35.2371 20.2156L26.3726 23.6663H25.402L9.26406 17.3855C9.05243 17.3003 8.8654 17.1637 8.71995 16.988C8.57451 16.8123 8.47524 16.603 8.43115 16.3792C8.47381 16.1695 8.56719 15.9734 8.70312 15.808C8.85843 15.6522 9.05181 15.5397 9.26406 15.4817L17.333 12.3421M35.2371 20.2156L42.5123 17.3855C42.7258 17.3023 42.9146 17.1661 43.0609 16.9897C43.2072 16.8134 43.3062 16.6027 43.3486 16.3775H43.3452C43.3023 16.1684 43.2089 15.9729 43.0732 15.808C42.9319 15.6118 42.7372 15.4602 42.5123 15.3712L26.3743 9.2026C26.2215 9.13501 26.0562 9.1001 25.889 9.1001C25.7219 9.1001 25.5566 9.13501 25.4037 9.2026L17.333 12.3421M35.2371 20.2156L17.333 12.3421M25.8882 44.1999V23.6663M31.8375 35.0805L38.6367 32.5307\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<\/svg>",
+            "title": "Fast  Shipping",
+            "header_color": "",
+            "header_size": 16,
+            "header_line_height": 36,
+            "header_letter_spacing": 0,
+            "header_font_weight": "400",
+            "header_size_mo": 14,
+            "header_line_height_mo": 20,
+            "header_letter_spacing_mo": 0,
+            "header_font_weight_mo": "400",
+            "text": "",
+            "content_color": "",
+            "content_size": 16,
+            "content_line_height": 36,
+            "content_letter_spacing": 0,
+            "content_font_weight": "400",
+            "content_size_mo": 16,
+            "content_line_height_mo": 36,
+            "content_letter_spacing_mo": 0,
+            "content_font_weight_mo": "400"
+          }
+        },
+        "template--14564082647173__da4bba46-dad8-4290-9325-cb348b0a9d91-1681096681e0229d5e-1": {
+          "type": "text_block",
+          "settings": {
+            "icon": "customer-service",
+            "html_svg": "<svg width=\"52\" height=\"52\" viewbox=\"0 0 52 52\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M9 29.6819C9 23.0729 13.4066 21.4219 15.6108 21.4219C19.5738 21.4219 20.5654 24.7273 20.5654 26.3766V32.9873C20.5654 36.9504 17.2601 37.942 15.6091 37.942C13.4066 37.942 9 36.2893 9 29.6819V29.6819ZM43.693 29.6819C43.693 23.0729 39.2864 21.4219 37.0822 21.4219C33.1191 21.4219 32.1292 24.7273 32.1292 26.3766V32.9873C32.1292 36.9504 35.4346 37.942 37.0839 37.942C39.2864 37.942 43.693 36.2893 43.693 29.6819Z\" stroke=\"#07c160\" stroke-width=\"3\"><\/path>\n<path d=\"M10.123 24.8254C10.3659 16.8554 14.4217 8 26.3464 8C38.2525 8 42.3134 16.8233 42.5646 24.7815M42.7434 34.3368C42.7434 34.3368 42.9694 39.5292 40.3032 41.7907C37.6386 44.0438 30.9098 43.9999 30.9098 43.9999\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\"><\/path>\n<\/svg>",
+            "title": "7*24h Monday to Sunday",
+            "header_color": "",
+            "header_size": 16,
+            "header_line_height": 36,
+            "header_letter_spacing": 0,
+            "header_font_weight": "400",
+            "header_size_mo": 14,
+            "header_line_height_mo": 20,
+            "header_letter_spacing_mo": 0,
+            "header_font_weight_mo": "400",
+            "text": "",
+            "content_color": "",
+            "content_size": 16,
+            "content_line_height": 36,
+            "content_letter_spacing": 0,
+            "content_font_weight": "400",
+            "content_size_mo": 16,
+            "content_line_height_mo": 36,
+            "content_letter_spacing_mo": 0,
+            "content_font_weight_mo": "400"
+          }
+        },
+        "template--14564082647173__da4bba46-dad8-4290-9325-cb348b0a9d91-1681096681e0229d5e-2": {
+          "type": "text_block",
+          "settings": {
+            "icon": "bills",
+            "html_svg": "<svg width=\"52\" height=\"52\" viewbox=\"0 0 52 52\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M32.5 35.104H45.5\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M44.75 27.8541V12.9375C44.75 11.1426 43.295 9.6875 41.5 9.6875H28.0833H10.75C8.95508 9.6875 7.5 11.1426 7.5 12.9375V40.8541C7.5 42.6491 8.95508 44.1041 10.75 44.1041H32.9265\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M37.9167 40.5208L32.5 35.1042L37.9162 29.6875\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M21.8182 16.6875V34.6875\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M26.3182 18.324C26.3182 18.324 22.2152 18.324 20.1818 18.324C18.1484 18.324 16.5 19.9724 16.5 22.0058C16.5 24.0392 18.1484 25.6876 20.1818 25.6876\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M17.3182 33.0511C17.3182 33.0511 21.4211 33.0511 23.4545 33.0511C25.488 33.0511 27.1364 31.4027 27.1364 29.3693C27.1364 27.3359 25.488 25.6875 23.4545 25.6875H20.1818\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<\/svg>",
+            "title": "10-Day Money-Back Guarantee",
+            "header_color": "",
+            "header_size": 16,
+            "header_line_height": 36,
+            "header_letter_spacing": 0,
+            "header_font_weight": "400",
+            "header_size_mo": 14,
+            "header_line_height_mo": 20,
+            "header_letter_spacing_mo": 0,
+            "header_font_weight_mo": "400",
+            "text": "",
+            "content_color": "",
+            "content_size": 16,
+            "content_line_height": 36,
+            "content_letter_spacing": 0,
+            "content_font_weight": "400",
+            "content_size_mo": 16,
+            "content_line_height_mo": 36,
+            "content_letter_spacing_mo": 0,
+            "content_font_weight_mo": "400"
+          }
+        },
+        "d8e94311-2612-4cc2-a60c-a53be873eac1": {
+          "type": "text_block",
+          "settings": {
+            "icon": "secure-payment",
+            "html_svg": "<svg width=\"52\" height=\"52\" viewbox=\"0 0 52 52\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M5.6665 12C5.6665 10.8954 6.56193 10 7.6665 10H43.6665C44.7711 10 45.6665 10.8954 45.6665 12V40C45.6665 41.1046 44.7711 42 43.6665 42H7.6665C6.56193 42 5.6665 41.1046 5.6665 40V12Z\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M5.6665 17.9995H45.6665\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"square\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M28.6665 34H37.6665\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<\/svg>",
+            "title": "Secure payment",
+            "header_color": "",
+            "header_size": 16,
+            "header_line_height": 36,
+            "header_letter_spacing": 0,
+            "header_font_weight": "400",
+            "header_size_mo": 14,
+            "header_line_height_mo": 20,
+            "header_letter_spacing_mo": 0,
+            "header_font_weight_mo": "400",
+            "text": "",
+            "content_color": "",
+            "content_size": 16,
+            "content_line_height": 36,
+            "content_letter_spacing": 0,
+            "content_font_weight": "400",
+            "content_size_mo": 16,
+            "content_line_height_mo": 36,
+            "content_letter_spacing_mo": 0,
+            "content_font_weight_mo": "400"
+          }
+        }
+      },
+      "block_order": [
+        "template--14564082647173__da4bba46-dad8-4290-9325-cb348b0a9d91-1681096681e0229d5e-0",
+        "template--14564082647173__da4bba46-dad8-4290-9325-cb348b0a9d91-1681096681e0229d5e-1",
+        "template--14564082647173__da4bba46-dad8-4290-9325-cb348b0a9d91-1681096681e0229d5e-2",
+        "d8e94311-2612-4cc2-a60c-a53be873eac1"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "align_text": "center",
+        "desktop_columns_per_row": 3,
+        "icon_color": "#19a64f",
+        "button_label": "",
+        "button_link": "",
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "1f662b16-5e96-4b98-abbc-7a1b44783e08",
+    "index_collectionlist_wkP6Pk",
+    "index_prorecforyou_wHMKp8",
+    "index_bannerandcollection_GEBGtH",
+    "index_featurepro_Xj6HtG",
+    "index_multiplecategories_gaENQL",
+    "index_gethelp_WUybGH",
+    "index_video_qe6App",
+    "hero_video_E7jyth",
+    "more_aboutus_W86rrY",
+    "index_review_jGD3EV",
+    "index_iconoverbanner_H63N7R",
+    "index_newsletter_H36wWT",
+    "index_imagelists_3NKnqM",
+    "fee75eff-2181-4f13-ba9c-7143dbb9ff9b",
+    "d6f5b1c4-6dc9-49e2-b813-aa962d156d3f",
+    "b36a5e8f-83b7-4e6d-8fe9-2e5da2ab9b3c",
+    "da4bba46-dad8-4290-9325-cb348b0a9d91"
+  ]
+}

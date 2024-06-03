@@ -1,0 +1,700 @@
+{% liquid
+  assign secid = section.id | split:"__" 
+  assign secidlast = secid[1] | replace: "-","_"
+%}
+
+<div class="indexmulticate-outbox">
+   
+  <div class="contain-index">
+    {% if section.settings.title != blank %}
+        <div class="indexmulticate-toptitle animate-ele">{{ section.settings.title }}</div> 
+        {% endif %}
+    <div class="indexmulticate-navs animate-ele">
+     {% for block in section.blocks %}
+       <div class="indexmulticate-navsitem indexmulticate-navsitem-{{ forloop.index }}{% if forloop.first %} active{% endif %}" data-index="{{ forloop.index }}">{% if block.settings.title != blank %}{{ block.settings.title }}{% else %}{{ collections[block.settings.collection].title }}{% endif %}{% if block.settings.showhotpointer %}<span style="color:{{ block.settings.hottextcolor }};background:{{ block.settings.hotcolor }}">{{ block.settings.hottext }}</span>{% endif %}</div>
+     {% endfor %}
+    </div>
+    
+    <div class="indexmulticate-content animate-ele">
+      {% for block in section.blocks %} 
+      {% if block.type == 'block' %}
+        {% assign collection = collections[block.settings.collection] %}
+     <div class="multicate-conitem multicate-conitem-{{ forloop.index }}{% if forloop.first %} active{% endif %}">
+         <div class="swiper-button-prev multicabtn multicaprev-{{ block.id|replace:'-','_' }}"><svg width="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="25" cy="25" r="24" stroke="currentColor" stroke-width="2"/>
+<path d="M26.2939 19.2939L20.2939 25.2939L26.2939 31.2939" stroke="currentColor" stroke-width="2"/>
+</svg>
+</div>
+       <div class="swiper-button-next multicabtn multicanext-{{ block.id|replace:'-','_' }}"><svg width="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="25" cy="25" r="24" transform="matrix(-1 0 0 1 50 0)" stroke="currentColor" stroke-width="2"/>
+<path d="M23.7061 19.2939L29.7061 25.2939L23.7061 31.2939" stroke="currentColor" stroke-width="2"/>
+</svg>
+</div>
+     <div class="mulca-conitsp-{{ block.id|replace:'-','_' }} swiper">
+<div class="swiper-scrollbar hide-pc swiper-scrollbar-{{ block.id|replace:'-','_' }}"></div>
+    <div class="swiper-wrapper">  
+      {% for product in collection.products limit:20 %} 
+      <div class="swiper-slide">
+       <div class="mulca-conitsp-proitem{% if product.metafields.custom.griditem_bgimage %} conitsp-proitem-hasbgimg{% endif %}"> 
+       {% if product.metafields.custom.griditem_bgimage %}
+        <div class="onitsp-proitem-bgimg" {% if product.metafields.custom.griditem_bgimage %}style="background-image:url('{{ product.metafields.custom.griditem_bgimage | image_url }}')"{% endif %}></div>
+      {% endif %}
+          <div class="mulcon-proitem-img">
+            <a href="{{  product.url  }}"> <img src="{% if product.metafields.custom.grid_image != blank %}{{ product.metafields.custom.grid_image | image_url }}{% else %}{{ product.featured_image | image_url }}{% endif %}" alt="{{ product.featured_image.alt }}" /></a>
+            {% if product.tags contains "new" %}
+              <span class="mulconpro-tag mulconpro-tag-new">New</span>
+            {% elsif product.tags contains "deal" %}
+               <span class="mulconpro-tag mulconpro-tag-deal">Deal</span>
+            {% endif %}
+          </div>
+
+         <div class="mulcon-proitem-title"><a href="{{  product.url  }}">{% if product.metafields.custom.short_title != blank %}{{ product.metafields.custom.short_title }}{% else %}{{ product.title }}{% endif %}</a></div>
+          {% if product.metafields.custom.collection_subtitle != blank %}<div class="mulcon-proitem-subtitle">{{ product.metafields.custom.collection_subtitle }}</div>{% endif %}
+         <div class="mulcon-proitem-price">
+          {%- capture form_id -%}AddToCartForm-{{ product.id }}{%- endcapture -%}
+  {%- capture class_value -%}product-single__form{%- endcapture -%}
+  {% assign current_variant = product.selected_or_first_available_variant  %}
+  {% form 'product', product, id: form_id, class: class_value %}
+      <button
+        {% if product.empty? %}type="button"{% else %}type="submit"{% endif %}
+        name="add"
+        data-add-to-cart
+        class="add-to-cart-col addcartcustom js-drawer-open-cart" data-product-id="{{ current_variant.id }}"
+        {% unless current_variant.available %} disabled="disabled"{% endunless %}>
+        <span data-add-to-cart-text data-default-text="Add to cart">
+          <b><img alt="cart" src="https://cdn.shopify.com/s/files/1/0558/0708/2629/files/mulist_4.png?v=1709101569"/></b>
+        </span>
+      </button>
+
+  
+    <select name="id" data-product-select class="product-single__variants no-js">
+      {%- for variant in product.variants -%}
+        {% if variant.available %}
+          <option {% if variant == product.selected_or_first_available_variant %}
+            selected="selected" {% endif %}
+            value="{{ variant.id }}">
+            {{ variant.title }} - {{ variant.price | money_with_currency }}
+          </option>
+        {% else %}
+          <option disabled="disabled">
+            {{ variant.title }} - {{ 'products.product.sold_out' | t }}
+          </option>
+        {% endif %}
+      {%- endfor -%}
+    </select>
+  {% endform %}
+          <span class="mulcon-price-original">{{ product.price | money }}</span>{% if product.price_varies %}<span class="mulcon-price-old">{{ product.compare_at_price | money }}</span>{% endif %}</div>
+
+         </div>
+      </div>
+         {% endfor %}
+    </div>
+  </div>
+  
+     </div>
+        <script>   
+  $(function(){
+      var conitsp_{{block.id|replace:'-','_'}} = new Swiper ('.mulca-conitsp-{{ block.id|replace:'-','_' }}', {
+    slidesPerView : 4,
+    spaceBetween: '2.2%',
+    observer: true,  //开启动态检查器，监测swiper和slide
+    observeParents: true, 
+    navigation: {
+		nextEl: '.multicanext-{{ block.id|replace:'-','_' }}',
+		prevEl: '.multicaprev-{{ block.id|replace:'-','_' }}',
+	},
+     scrollbar: {
+      el: '.swiper-scrollbar-{{ block.id|replace:'-','_' }}',dragSize:89
+    }
+    {% if section.settings.autoplay %} 
+    ,
+    autoplay: {
+      delay: {{ section.settings.interval | times: 1000 }},
+    }
+    {% endif %}   
+    ,
+    breakpoints: { 
+      10: {  
+       slidesPerView : 1.5,
+         spaceBetween: '2.5%',
+      },
+      550: { 
+       slidesPerView : 2,
+      },
+      769: {  //当屏幕宽度大于等于769
+        slidesPerView: 3,
+      },
+      994: { 
+        slidesPerView : 4,
+      }
+    }
+
+  });
+  })
+
+</script>
+{% elsif block.type == 'block02' %}
+ {% liquid
+    assign prodcut01 = all_products[block.settings.product01] 
+    assign prodcut02 = all_products[block.settings.product02]
+  %}
+<div class="multicate-conitem multicate-conitem-{{ forloop.index }}{% if forloop.first %} active{% endif %}">
+  <div class="multicate-conitem-sty02">
+ {% if prodcut01 %}   
+ <div class="sprecordfun-proitem">
+  <div class="sprecordfun-proitem-img">
+    {% if block.settings.product_image01 %}
+      <a href="{{ prodcut01.url }}"><img class="hide-mb" src="{{ block.settings.product_image01 | img_url:'master' }}" /><img class="hide-pc" src="{{ block.settings.product_imagemb01 | img_url:'master' }}" /></a>
+    {% endif %}
+  </div>  
+  
+ <div class="sprecordfun-itemtext">
+  {% if prodcut02.tags contains "new" %}
+    <span class="mulconpro-tag mulconpro-tag-new">New</span>
+  {% elsif prodcut02.tags contains "deal" %}
+     <span class="mulconpro-tag mulconpro-tag-deal">Deal</span>
+  {% endif %} 
+ {% if block.settings.product_title01 != blank %}
+ <div class="sprecordfun-title"> <a href="{{ prodcut01.url }}">{{  block.settings.product_title01 }}</a></div>
+  {% else %}
+    <div class="sprecordfun-title"><a href="{{ prodcut01.url }}">{{ prodcut01.title }}</a></div>
+ {% endif %}
+{% if block.settings.product_subtitle01 != blank %}
+ <div class="sprecordfun-subtitle">{{  block.settings.product_subtitle01 }}</div>
+ {% endif %}
+ <div class="mulcon-proitem-price">
+ {%- capture form_id -%}AddToCartForm-{{ prodcut01.id }}{%- endcapture -%}
+{%- capture class_value -%}product-single__form{%- endcapture -%}
+{% assign current_variant = prodcut01.selected_or_first_available_variant  %}
+{% form 'product', prodcut01, id: form_id, class: class_value %}
+<button
+{% if prodcut01.empty? %}type="button"{% else %}type="submit"{% endif %}
+name="add"
+data-add-to-cart
+class="add-to-cart-col addcartcustom js-drawer-open-cart" data-product-id="{{ current_variant.id }}"
+{% unless current_variant.available %} disabled="disabled"{% endunless %}>
+<span data-add-to-cart-text data-default-text="Add to cart">
+ <img alt="cart" src="https://cdn.shopify.com/s/files/1/0558/0708/2629/files/spcart02.png?v=1711511840"/>
+</span>
+</button>
+
+
+<select name="id" data-product-select class="product-single__variants no-js">
+{%- for variant in prodcut01.variants -%}
+{% if variant.available %}
+  <option {% if variant == prodcut01.selected_or_first_available_variant %}
+    selected="selected" {% endif %}
+    value="{{ variant.id }}">
+    {{ variant.title }} - {{ variant.price | money_with_currency }}
+  </option>
+{% else %}
+  <option disabled="disabled">
+    {{ variant.title }} - {{ 'products.product.sold_out' | t }}
+  </option>
+{% endif %}
+{%- endfor -%}
+</select>
+{% endform %}
+ <span class="mulcon-price-original">{{ prodcut01.price | money }}</span>{% if prodcut01.price_varies %}<span class="mulcon-price-old">{{ prodcut01.compare_at_price | money }}</span>{% endif %}</div>
+ </div>
+ </div>
+     {% endif %}
+
+
+     {% if prodcut02 %}   
+     <div class="sprecordfun-proitem">
+      <div class="sprecordfun-proitem-img">
+        {% if block.settings.product_image02 %}
+          <a href="{{ prodcut02.url }}"><img class="hide-mb" src="{{ block.settings.product_image02 | image_url }}" /><img class="hide-pc" src="{{ block.settings.product_imagemb02 | image_url }}" /></a>
+        {% endif %}
+      </div>      
+     <div class="sprecordfun-itemtext">
+      {% if prodcut02.tags contains "new" %}
+        <span class="mulconpro-tag mulconpro-tag-new">New</span>
+      {% elsif prodcut02.tags contains "deal" %}
+         <span class="mulconpro-tag mulconpro-tag-deal">Deal</span>
+      {% endif %}
+     {% if block.settings.product_title02 != blank %}
+     <div class="sprecordfun-title"> <a href="{{ prodcut02.url }}">{{  block.settings.product_title02 }}</a></div>
+      {% else %}
+        <div class="sprecordfun-title"><a href="{{ prodcut02.url }}">{{ prodcut02.title }}</a></div>
+     {% endif %}
+    {% if block.settings.product_subtitle02 != blank %}
+     <div class="sprecordfun-subtitle">{{  block.settings.product_subtitle02 }}</div>
+     {% endif %}
+     <div class="mulcon-proitem-price">
+     {%- capture form_id -%}AddToCartForm-{{ prodcut02.id }}{%- endcapture -%}
+    {%- capture class_value -%}product-single__form{%- endcapture -%}
+    {% assign current_variant = prodcut02.selected_or_first_available_variant  %}
+    {% form 'product', prodcut02, id: form_id, class: class_value %}
+    <button
+    {% if prodcut02.empty? %}type="button"{% else %}type="submit"{% endif %}
+    name="add"
+    data-add-to-cart
+    class="add-to-cart-col addcartcustom js-drawer-open-cart" data-product-id="{{ current_variant.id }}"
+    {% unless current_variant.available %} disabled="disabled"{% endunless %}>
+    <span data-add-to-cart-text data-default-text="Add to cart">
+     <img alt="cart" src="https://cdn.shopify.com/s/files/1/0558/0708/2629/files/spcart02.png?v=1711511840"/>
+    </span>
+    </button>
+    
+    
+    <select name="id" data-product-select class="product-single__variants no-js">
+    {%- for variant in prodcut02.variants -%}
+    {% if variant.available %}
+      <option {% if variant == prodcut02.selected_or_first_available_variant %}
+        selected="selected" {% endif %}
+        value="{{ variant.id }}">
+        {{ variant.title }} - {{ variant.price | money_with_currency }}
+      </option>
+    {% else %}
+      <option disabled="disabled">
+        {{ variant.title }} - {{ 'products.product.sold_out' | t }}
+      </option>
+    {% endif %}
+    {%- endfor -%}
+    </select>
+    {% endform %}
+     <span class="mulcon-price-original">{{ prodcut02.price | money }}</span>{% if prodcut02.price_varies %}<span class="mulcon-price-old">{{ prodcut02.compare_at_price | money }}</span>{% endif %}</div>
+     </div>
+     </div>
+         {% endif %}
+
+
+  </div>
+
+</div>
+{% elsif block.type == 'block03' %}
+{% liquid
+  assign prodcut01 = all_products[block.settings.product01] 
+  assign prodcut02 = all_products[block.settings.product02]
+  assign prodcut03 = all_products[block.settings.product03]
+%}
+<div class="multicate-conitem multicate-conitem-{{ forloop.index }}{% if forloop.first %} active{% endif %}">
+<div class="multicate-conitem-sty03">
+  {% if prodcut01 %}
+    <div class="mulca-conitsp-proitem{% if prodcut01.metafields.custom.griditem_bgimage %} conitsp-proitem-hasbgimg{% endif %}"> 
+    {% if prodcut01.metafields.custom.griditem_bgimage %}
+     <div class="onitsp-proitem-bgimg" {% if prodcut01.metafields.custom.griditem_bgimage %}style="background-image:url('{{ prodcut01.metafields.custom.griditem_bgimage | image_url }}')"{% endif %}></div>
+   {% endif %}
+       <div class="mulcon-proitem-img">
+         <a href="{{  prodcut01.url  }}"> <img src="{% if prodcut01product.metafields.custom.grid_image != blank %}{{ prodcut01.metafields.custom.grid_image | image_url }}{% else %}{{ prodcut01.featured_image | img_url:'master' }}{% endif %}" alt="{{ prodcut01.featured_image.alt }}" /></a>
+         {% if prodcut01.tags contains "new" %}
+           <span class="mulconpro-tag mulconpro-tag-new">New</span>
+         {% elsif prodcut01.tags contains "deal" %}
+            <span class="mulconpro-tag mulconpro-tag-deal">Deal</span>
+         {% endif %}
+       </div>
+       {% if block.settings.product_title01 != blank %}
+        <div class="mulcon-proitem-title"><a href="{{  prodcut01.url  }}">{{ block.settings.product_title01 }}</a></div>
+        {% else %}
+        <div class="mulcon-proitem-title"><a href="{{  prodcut01.url  }}">{{ prodcut01.title }}</a></div>
+         {% endif %}
+       {% if prodcut01.metafields.custom.collection_subtitle != blank %}
+        <div class="mulcon-proitem-subtitle">{{ prodcut01.metafields.custom.collection_subtitle }}</div>
+      {% else %}
+      <div class="mulcon-proitem-subtitle">{{ block.settings.product_subtitle01 }}</div>
+      {% endif %}
+      <div class="mulcon-proitem-price">
+       {%- capture form_id -%}AddToCartForm-{{ prodcut01.id }}{%- endcapture -%}
+  {%- capture class_value -%}product-single__form{%- endcapture -%}
+  {% assign current_variant = prodcut01.selected_or_first_available_variant  %}
+  {% form 'product', prodcut01, id: form_id, class: class_value %}
+   <button
+     {% if prodcut01.empty? %}type="button"{% else %}type="submit"{% endif %}
+     name="add"
+     data-add-to-cart
+     class="add-to-cart-col addcartcustom js-drawer-open-cart" data-product-id="{{ current_variant.id }}"
+     {% unless current_variant.available %} disabled="disabled"{% endunless %}>
+     <span data-add-to-cart-text data-default-text="Add to cart">
+       <b><img alt="cart" src="https://cdn.shopify.com/s/files/1/0558/0708/2629/files/mulist_4.png?v=1709101569"/></b>
+     </span>
+   </button>
+  
+  
+  <select name="id" data-product-select class="product-single__variants no-js">
+   {%- for variant in prodcut01.variants -%}
+     {% if variant.available %}
+       <option {% if variant == prodcut01.selected_or_first_available_variant %}
+         selected="selected" {% endif %}
+         value="{{ variant.id }}">
+         {{ variant.title }} - {{ variant.price | money_with_currency }}
+       </option>
+     {% else %}
+       <option disabled="disabled">
+         {{ variant.title }} - {{ 'products.product.sold_out' | t }}
+       </option>
+     {% endif %}
+   {%- endfor -%}
+  </select>
+  {% endform %}
+       <span class="mulcon-price-original">{{ prodcut01.price | money }}</span>{% if prodcut01.price_varies %}<span class="mulcon-price-old">{{ prodcut01.compare_at_price | money }}</span>{% endif %}</div>
+  
+      </div>
+    {% endif %}
+
+{% if prodcut02 %}
+  <div class="mulca-conitsp-proitem{% if prodcut02.metafields.custom.griditem_bgimage %} conitsp-proitem-hasbgimg{% endif %}"> 
+  {% if prodcut02.metafields.custom.griditem_bgimage %}
+   <div class="onitsp-proitem-bgimg" {% if prodcut02.metafields.custom.griditem_bgimage %}style="background-image:url('{{ prodcut02.metafields.custom.griditem_bgimage | image_url }}')"{% endif %}></div>
+ {% endif %}
+     <div class="mulcon-proitem-img">
+       <a href="{{  prodcut02.url  }}"> <img src="{% if prodcut02.metafields.custom.grid_image != blank %}{{ prodcut02.metafields.custom.grid_image | image_url }}{% else %}{{ prodcut02.featured_image | image_url }}{% endif %}" alt="{{ prodcut02.featured_image.alt }}" /></a>
+       {% if prodcut02.tags contains "new" %}
+         <span class="mulconpro-tag mulconpro-tag-new">New</span>
+       {% elsif prodcut02.tags contains "deal" %}
+          <span class="mulconpro-tag mulconpro-tag-deal">Deal</span>
+       {% endif %}
+     </div>
+     {% if block.settings.product_title02 != blank %}
+    <div class="mulcon-proitem-title"><a href="{{  prodcut02.url  }}">{{ block.settings.product_title02 }}</a></div>
+    {% else %}
+    <div class="mulcon-proitem-title"><a href="{{  prodcut02.url  }}">{{ prodcut02.title }}</a></div>
+     {% endif %}
+
+     {% if prodcut02.metafields.custom.collection_subtitle != blank %}
+      <div class="mulcon-proitem-subtitle">{{ prodcut02.metafields.custom.collection_subtitle }}</div>
+    {% else %}
+    <div class="mulcon-proitem-subtitle">{{ block.settings.product_subtitle02 }}</div>
+    {% endif %}
+    <div class="mulcon-proitem-price">
+     {%- capture form_id -%}AddToCartForm-{{ prodcut02.id }}{%- endcapture -%}
+{%- capture class_value -%}product-single__form{%- endcapture -%}
+{% assign current_variant = prodcut02.selected_or_first_available_variant  %}
+{% form 'product', prodcut02, id: form_id, class: class_value %}
+ <button
+   {% if prodcut02.empty? %}type="button"{% else %}type="submit"{% endif %}
+   name="add"
+   data-add-to-cart
+   class="add-to-cart-col addcartcustom js-drawer-open-cart" data-product-id="{{ current_variant.id }}"
+   {% unless current_variant.available %} disabled="disabled"{% endunless %}>
+   <span data-add-to-cart-text data-default-text="Add to cart">
+     <b><img alt="cart" src="https://cdn.shopify.com/s/files/1/0558/0708/2629/files/mulist_4.png?v=1709101569"/></b>
+   </span>
+ </button>
+
+
+<select name="id" data-product-select class="product-single__variants no-js">
+ {%- for variant in prodcut02.variants -%}
+   {% if variant.available %}
+     <option {% if variant == prodcut02.selected_or_first_available_variant %}
+       selected="selected" {% endif %}
+       value="{{ variant.id }}">
+       {{ variant.title }} - {{ variant.price | money_with_currency }}
+     </option>
+   {% else %}
+     <option disabled="disabled">
+       {{ variant.title }} - {{ 'products.product.sold_out' | t }}
+     </option>
+   {% endif %}
+ {%- endfor -%}
+</select>
+{% endform %}
+     <span class="mulcon-price-original">{{ prodcut02.price | money }}</span>{% if prodcut02.price_varies %}<span class="mulcon-price-old">{{ prodcut02.compare_at_price | money }}</span>{% endif %}</div>
+
+    </div>
+  {% endif %}
+
+
+   {% if prodcut03 %}   
+   <div class="sprecordfun-proitem">
+    <div class="sprecordfun-proitem-img">
+      {% if block.settings.product_image03 %}
+        <a href="{{ prodcut03.url }}"><img class="hide-mb" src="{{ block.settings.product_image03 | img_url:'master' }}" /><img class="hide-pc" src="{{ block.settings.product_imagemb03 | img_url:'master' }}" /></a>
+      {% endif %}
+      
+    </div>      
+   <div class="sprecordfun-itemtext">
+    {% if prodcut02.tags contains "new" %}
+      <span class="mulconpro-tag mulconpro-tag-new">New</span>
+    {% elsif prodcut02.tags contains "deal" %}
+       <span class="mulconpro-tag mulconpro-tag-deal">Deal</span>
+    {% endif %}  
+   {% if block.settings.product_title03 != blank %}
+   <div class="sprecordfun-title"> <a href="{{ prodcut03.url }}">{{  block.settings.product_title03 }}</a></div>
+    {% else %}
+      <div class="sprecordfun-title"><a href="{{ prodcut03.url }}">{{ prodcut02.title }}</a></div>
+   {% endif %}
+  {% if block.settings.product_subtitle03 != blank %}
+   <div class="sprecordfun-subtitle">{{  block.settings.product_subtitle03 }}</div>
+   {% endif %}
+   <div class="mulcon-proitem-price">
+   {%- capture form_id -%}AddToCartForm-{{ prodcut03.id }}{%- endcapture -%}
+  {%- capture class_value -%}product-single__form{%- endcapture -%}
+  {% assign current_variant = prodcut03.selected_or_first_available_variant  %}
+  {% form 'product', prodcut03, id: form_id, class: class_value %}
+  <button
+  {% if product.empty? %}type="button"{% else %}type="submit"{% endif %}
+  name="add"
+  data-add-to-cart
+  class="add-to-cart-col addcartcustom js-drawer-open-cart" data-product-id="{{ current_variant.id }}"
+  {% unless current_variant.available %} disabled="disabled"{% endunless %}>
+  <span data-add-to-cart-text data-default-text="Add to cart">
+   <img alt="cart" src="https://cdn.shopify.com/s/files/1/0558/0708/2629/files/spcart02.png?v=1711511840"/>
+  </span>
+  </button>
+  
+  
+  <select name="id" data-product-select class="product-single__variants no-js">
+  {%- for variant in prodcut03.variants -%}
+  {% if variant.available %}
+    <option {% if variant == prodcut03.selected_or_first_available_variant %}
+      selected="selected" {% endif %}
+      value="{{ variant.id }}">
+      {{ variant.title }} - {{ variant.price | money_with_currency }}
+    </option>
+  {% else %}
+    <option disabled="disabled">
+      {{ variant.title }} - {{ 'products.product.sold_out' | t }}
+    </option>
+  {% endif %}
+  {%- endfor -%}
+  </select>
+  {% endform %}
+   <span class="mulcon-price-original">{{ prodcut03.price | money }}</span>{% if prodcut03.price_varies %}<span class="mulcon-price-old">{{ prodcut03.compare_at_price | money }}</span>{% endif %}</div>
+   </div>
+   </div>
+       {% endif %}
+
+
+</div>
+
+</div>
+
+{% endif %}
+     {% endfor %}
+    </div>
+    
+
+  </div>
+</div>
+
+<script>
+ $(()=>{
+   $(".indexmulticate-navsitem").click(function(){
+     let tsdata = $(this).data("index");
+     $(this).addClass("active").siblings().removeClass("active");
+     $(".multicate-conitem-"+tsdata).addClass("active").siblings().removeClass("active");
+   })
+ })
+</script>
+{% schema %}
+  {
+   "name": "Switch Multi Categories",
+  "settings": [
+     {
+        "type": "text",
+        "id": "title",
+        "label": "title?"
+      },{
+        "type": "checkbox",
+        "id": "autoplay",
+        "label": "autoplay?"
+      },{
+        "type": "text",
+        "id": "interval",
+        "label": "Play Interval",
+        "default": "5"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "style01",
+        "settings": [
+       {
+        "type": "collection",
+        "id": "collection",
+        "label": "collection"
+      },{
+        "type": "text",
+        "id": "title",
+        "label": "title"
+      },{
+        "type": "checkbox",
+        "id": "showhotpointer",
+        "label": "show hotpointer?"
+      },{
+        "type": "text",
+        "id": "hottext",
+        "label": "hottext",
+        "default": "Hot"
+      },{
+        "type": "color",
+        "id": "hotcolor",
+        "label": "hot background color?",
+        "default": "#e74300"
+      },{
+        "type": "color",
+        "id": "hottextcolor",
+        "label": "hot text color?",
+        "default": "#ffffff"
+      }
+        ]
+      },{
+        "type": "block02",
+        "name": "style02",
+        "settings": [
+       {
+        "type": "text",
+        "id": "title",
+        "label": "title"
+      },{
+        "type": "checkbox",
+        "id": "showhotpointer",
+        "label": "show hotpointer?"
+      },{
+        "type": "text",
+        "id": "hottext",
+        "label": "hottext",
+        "default": "Hot"
+      },{
+        "type": "color",
+        "id": "hotcolor",
+        "label": "hot background color?",
+        "default": "#e74300"
+      },{
+        "type": "color",
+        "id": "hottextcolor",
+        "label": "hot text color?",
+        "default": "#ffffff"
+      },{
+        "type": "header",
+        "content": "Product(01)"
+      },{
+        "type": "product",
+        "id": "product01",
+        "label": "product01"
+      },{
+        "type": "text",
+        "id": "product_title01",
+        "label": "product title01"
+      },{
+        "type": "text",
+        "id": "product_subtitle01",
+        "label": "product subtitle01"
+      },{
+        "type": "image_picker",
+        "id": "product_image01",
+        "label": "product image01"
+      },{
+        "type": "image_picker",
+        "id": "product_imagemb01",
+        "label": "product image01(mobile)"
+      },{
+        "type": "header",
+        "content": "Product(02)"
+      },{
+        "type": "product",
+        "id": "product02",
+        "label": "product02"
+      },{
+        "type": "text",
+        "id": "product_title02",
+        "label": "product title02"
+      },{
+        "type": "text",
+        "id": "product_subtitle02",
+        "label": "product subtitle02"
+      },{
+        "type": "image_picker",
+        "id": "product_image02",
+        "label": "product image02"
+      },{
+        "type": "image_picker",
+        "id": "product_imagemb02",
+        "label": "product image02(mobile)"
+      }
+        ]
+      },{
+        "type": "block03",
+        "name": "style03",
+        "settings": [
+       {
+        "type": "text",
+        "id": "title",
+        "label": "title"
+      },{
+        "type": "checkbox",
+        "id": "showhotpointer",
+        "label": "show hotpointer?"
+      },{
+        "type": "text",
+        "id": "hottext",
+        "label": "hottext",
+        "default": "Hot"
+      },{
+        "type": "color",
+        "id": "hotcolor",
+        "label": "hot background color?",
+        "default": "#e74300"
+      },{
+        "type": "color",
+        "id": "hottextcolor",
+        "label": "hot text color?",
+        "default": "#ffffff"
+      },{
+        "type": "header",
+        "content": "Product(01)"
+      },{
+        "type": "product",
+        "id": "product01",
+        "label": "product01"
+      },{
+        "type": "text",
+        "id": "product_title01",
+        "label": "product title01"
+      },{
+        "type": "text",
+        "id": "product_subtitle01",
+        "label": "product subtitle01"
+      },{
+        "type": "header",
+        "content": "Product(02)"
+      },{
+        "type": "product",
+        "id": "product02",
+        "label": "product02"
+      },{
+        "type": "text",
+        "id": "product_title02",
+        "label": "product title02"
+      },{
+        "type": "text",
+        "id": "product_subtitle02",
+        "label": "product subtitle02"
+      },{
+        "type": "header",
+        "content": "Product(03)"
+      },{
+        "type": "product",
+        "id": "product03",
+        "label": "product03"
+      },{
+        "type": "text",
+        "id": "product_title03",
+        "label": "product title03"
+      },{
+        "type": "text",
+        "id": "product_subtitle03",
+        "label": "product subtitle03"
+      },{
+        "type": "image_picker",
+        "id": "product_image03",
+        "label": "product image03"
+      },{
+        "type": "image_picker",
+        "id": "product_imagemb03",
+        "label": "product image03(mobile)"
+      }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Switch Multi Categories",
+        "category": "HO-layout"
+      }
+    ]
+  }
+{% endschema %}

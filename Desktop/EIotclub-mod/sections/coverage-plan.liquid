@@ -1,0 +1,88 @@
+{{ 'section-coverage-plan.css' | asset_url | stylesheet_tag }}
+
+{% liquid
+  assign secid = section.id | split: '__'
+  assign secidlast = secid[1] | replace: '-', '_'
+%}
+<div class="contain-index">
+  <div class="coverage-plan-outbox">
+    {% if section.settings.title != blank %}
+      <div class="coverage-plan-title animate-ele common-title">{{ section.settings.title }}</div>
+    {% endif %}
+
+    <div class="coverage-plan_elebox animate-ele">
+      {% for block in section.blocks %}
+        <div class="coverage-plan_item">
+          {% if block.settings.image %}
+            <span><img src="{{ block.settings.image | img_url:'master' }}" alt=" "></span>
+          {% endif %}
+          <div class="coverage-plan-itemtext">
+            {% if block.settings.title != blank %}
+              <div class="coverage-plan-itemtitle">{{ block.settings.title }}</div>
+            {% endif %}
+            {% if block.settings.content != blank %}
+              <div class="coverage-plan-itemcon">{{ block.settings.content }}</div>
+            {% endif %}
+            {% if block.settings.url != blank %}
+              <a class="coverage-plan-btn" href="{{ block.settings.url }}">{{ block.settings.link_text }}</a>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "Coverage Plan",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "title"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "block",
+      "name": "block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "title"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "content"
+        },
+        {
+          "type": "text",
+          "id": "link_text",
+          "label": "Link Text"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Text Url"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Coverage Plan",
+      "category": "HO-layout"
+    }
+  ]
+}
+{% endschema %}

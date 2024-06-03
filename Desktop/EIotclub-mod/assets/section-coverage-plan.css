@@ -1,0 +1,146 @@
+.coverage-plan-outbox {
+    margin: 5vw 0 5.5vw;
+}
+
+.coverage-plan-title {
+    margin-bottom: 3.3vw;
+}
+
+.coverage-plan_elebox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.coverage-plan_item {
+    flex: 0 1 calc((100% - 2.6vw)/4);
+    margin-bottom: 1.3vw;
+    text-align: center;
+}
+
+.coverage-plan_item img {
+    background: #fff;
+    width: 2.6vw;
+    margin-bottom: 0.75vw;
+}
+
+.coverage-plan-itemtitle {
+    font-size: 1.04vw;
+    font-weight: bold;
+    margin-bottom: 0.75vw;
+}
+
+.coverage-plan-itemcon {
+    font-size: calc(12px + 0.2vw);
+    line-height: 1.5;
+    margin-bottom: 1vw;
+}
+
+.coverage-plan-itemcon p {
+    margin-bottom: 0;
+}
+
+.coverage-plan-btn {
+    text-decoration: underline;
+    font-size: calc(12px + .2vw);
+}
+
+.coverage-plan-btn:hover {
+    color: var(--colorThemeCustom);
+}
+
+@media (max-width: 1550px) {
+    .coverage-plan-itemtitle {
+        font-size: 1.4vw;
+        margin-bottom: 1vw;
+    }
+
+    .coverage-plan_item img {
+        width: 3.2vw;
+        margin-bottom: 1vw;
+    }
+}
+
+@media (max-width: 1280px) {
+    .coverage-plan-itemtitle {
+        font-size: 1.4vw;
+    }
+
+    .coverage-plan_item img {
+        width: 4.5vw;
+    }
+
+    .coverage-plan_item {
+        flex: 0 1 calc((100% - 2.6vw)/2);
+    }
+}
+
+@media (max-width: 768px) {
+    .coverage-plan_item {
+        flex: 0 1 calc((100% - 4vw) / 2);
+        margin-bottom: 40px;
+    }
+
+    .coverage-plan_item img {
+        width: 6vw;
+        margin-bottom: 2vw;
+    }
+
+    .coverage-plan-itemtitle {
+        font-size: 2.2vw;
+        margin-bottom: 2vw;
+    }
+
+    .coverage-plan-itemcon {
+        text-align: left;
+    }
+
+    .coverage-plan-swiper-container.common-swiper-container .common-swiper-arrow-btn svg {
+        background: #f5f5f5;
+    }
+
+    .coverage-plan-swiper-container.common-swiper-container .swiper-button-next {
+        right: -15px;
+    }
+
+    .coverage-plan-swiper-container.common-swiper-container .swiper-button-prev {
+        left: -15px;
+    }
+}
+
+@media (max-width: 550px) {
+    .coverage-plan_item {
+        height: 100%;
+    }
+
+    .coverage-plan_item img {
+        width: 10.6vw;
+        margin-bottom: 3vw;
+    }
+
+    .coverage-plan-itemtitle {
+        font-size: 4.2vw;
+        margin-bottom: 3.2vw;
+    }
+
+    .coverage-plan-outbox {
+        margin: 12vw 0 7vw;
+    }
+
+    .coverage-plan-swiper-container.common-swiper-container .common-swiper-arrow-btn {
+        display: block;
+        width: 6vw;
+    }
+
+    .coverage-plan-swiper-container.common-swiper-container .swiper-button-next {
+        right: 15px;
+    }
+
+    .coverage-plan-swiper-container.common-swiper-container .swiper-button-prev {
+        left: 15px;
+    }
+
+    .coverage-plan-title {
+        margin-bottom: 8vw;
+    }
+}

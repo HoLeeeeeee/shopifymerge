@@ -1,0 +1,22 @@
+{% if product.metafields.custom._discount_text != blank and product.metafields.custom._discount_code != blank %}
+<div class="new-discount-container">
+    <div class="new-discount-text">
+        <span class="new-discount-main">{% if product.metafields.custom._discount_text != blank %}{{ product.metafields.custom._discount_text }}{% else %}{{ text }}{% endif %} </span>
+        <span>OFF</span>
+    </div>
+    <div class="new-discount-box">
+        <div class="new-discount-code">
+            <div>Code:<span
+                        style="margin-left: 4px;">{% if product.metafields.custom._discount_code != blank %}{{ product.metafields.custom._discount_code }}{% else %}{{ discount }}{% endif %}</span>
+            </div>
+        </div>
+        <div class="tooltip">
+            <button value="" onclick="copyText()" onmouseout="outFunc()">
+                <span class="tooltiptext" id="myTooltip">Copy</span>
+                COPY
+            </button>
+        </div>
+    </div>
+</div>
+<div>{{ product_variant }}</div>
+{% endif %}

@@ -1,0 +1,1054 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "aa227a16-9093-46cc-a70c-47d7b1f7d41f": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_logistics_policy": false
+          }
+        },
+        "separator": {
+          "type": "separator",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "button",
+            "product_dynamic_variants_enable": true,
+            "color_swatches": false,
+            "offer_icon": ""
+          }
+        },
+        "sales_point": {
+          "type": "sales_point",
+          "disabled": true,
+          "settings": {
+            "icon": "globe",
+            "text": "Free worldwide shipping"
+          }
+        },
+        "inventory_status": {
+          "type": "inventory_status",
+          "disabled": true,
+          "settings": {
+            "inventory_threshold": 10,
+            "inventory_transfers_enable": true
+          }
+        },
+        "91f72013-96b8-48a3-ba6a-7a2af9ee3e7a": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "b303c7cf-b133-44aa-8935-2b127ee43d47": {
+          "type": "new-discount",
+          "settings": {
+            "text": "1",
+            "discount": "2",
+            "show_product_variant": "Trial data plan-100MB"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "surface_pickup_enable": true
+          }
+        },
+        "tab": {
+          "type": "tab",
+          "disabled": true,
+          "settings": {
+            "title": "Shipping information",
+            "content": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.<\/p><p>Ex: Shipping and return policies, size guides, and other common questions.<\/p>",
+            "page": ""
+          }
+        },
+        "contact": {
+          "type": "contact",
+          "disabled": true,
+          "settings": {
+            "title": "Ask a question",
+            "phone": false
+          }
+        },
+        "share": {
+          "type": "share",
+          "disabled": true,
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "is_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "aa227a16-9093-46cc-a70c-47d7b1f7d41f",
+        "price",
+        "separator",
+        "variant_picker",
+        "sales_point",
+        "inventory_status",
+        "91f72013-96b8-48a3-ba6a-7a2af9ee3e7a",
+        "b303c7cf-b133-44aa-8935-2b127ee43d47",
+        "buy_buttons",
+        "tab",
+        "contact",
+        "share",
+        "description"
+      ],
+      "settings": {
+        "sku_enable": false,
+        "image_size": "medium",
+        "product_zoom_enable": true,
+        "thumbnail_position": "below",
+        "thumbnail_height": "flexible",
+        "thumbnail_arrows": false,
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "b1362342-b3a7-4960-b540-4e649fe4c9b3": {
+      "type": "new-image-list",
+      "blocks": {
+        "5fe6154d-dff7-4ed1-b06b-c186882bf18a": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/blue-icon-03-52x52-0621.png",
+            "image_mobile": "shopify:\/\/shop_images\/blue-icon-03-52x52-0621.png",
+            "text": "Double Network",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "9c7674e4-755e-486f-a2f4-516d3a978910": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/blue-icon-02-52x52-0621.png",
+            "image_mobile": "shopify:\/\/shop_images\/blue-icon-02-52x52-0621.png",
+            "text": "4G High-Speed Data",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "ecd85ff6-5f46-4ecf-95fe-b566c0e6402d": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/blue-icon-01-52x52-0621.png",
+            "image_mobile": "shopify:\/\/shop_images\/blue-icon-01-52x52-0621.png",
+            "text": "No Extra Fees",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "5d0471a8-0b9c-47f7-965d-43e2bae5b5ca": {
+          "type": "large_banner",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/icon-04-52x52-0428.png",
+            "image_mobile": "shopify:\/\/shop_images\/icon-04-52x52-0428.png",
+            "text": "Compatible and Convenient",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 15,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        }
+      },
+      "block_order": [
+        "5fe6154d-dff7-4ed1-b06b-c186882bf18a",
+        "9c7674e4-755e-486f-a2f4-516d3a978910",
+        "ecd85ff6-5f46-4ecf-95fe-b566c0e6402d",
+        "5d0471a8-0b9c-47f7-965d-43e2bae5b5ca"
+      ],
+      "settings": {
+        "container": "1170",
+        "bg_color": "#f6f6f6",
+        "margin_bottom_mb": 40,
+        "margin_bottom_tab": 40,
+        "margin_bottom": 34,
+        "mg_top_mobile": 40,
+        "mg_top_tablet": 40,
+        "mg_top_desktop": 40,
+        "title": "",
+        "color_title": "",
+        "fontsize_title": 32,
+        "fontsize_title_mo": 24,
+        "margin_bottom_title": 40,
+        "margin_bottom_title_mo": 24,
+        "text": "",
+        "image_list_align": "center",
+        "row_box_num": "5",
+        "box_gap": 24,
+        "row_box_num_mobile": "3",
+        "box_gap_mobile": 24
+      }
+    },
+    "59df1900-a7e6-4b5f-9428-ce84805a1e83": {
+      "type": "featured-video",
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "divider": false
+      }
+    },
+    "sub": {
+      "type": "product-full-width",
+      "disabled": true,
+      "settings": {
+        "max_width": true
+      }
+    },
+    "background-image-text": {
+      "type": "background-image-text",
+      "disabled": true,
+      "settings": {
+        "subtitle": "",
+        "title": "Large image with text box",
+        "text": "<p>Pair large text with a full-width image to draw attention to an important detail of your brand or product line.<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "layout": "left",
+        "height": 550,
+        "parallax": false,
+        "parallax_direction": "top",
+        "lazyload_images": true
+      }
+    },
+    "text-and-image": {
+      "type": "text-and-image",
+      "settings": {
+        "margin_bottom": 80,
+        "margin_bottom_mobile": 60,
+        "image": "shopify:\/\/shop_images\/security-cam-sim-card_08_700500-0726.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "Seamless Connectivity",
+        "text": "<p>EIOTCLUB offers top-notch security camera SIM cards that guarantee seamless connectivity for a wide range of camera models. With our reliable and uninterrupted connection, you can trust us to keep you connected to the strongest available network, even in challenging environments like forests. Never miss a moment with EIOTCLUB's secure and dependable security camera SIM cards.<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "left",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "7e87da54-5271-41be-a457-8954b49ac77a": {
+      "type": "text-and-image",
+      "settings": {
+        "margin_bottom": 80,
+        "margin_bottom_mobile": 60,
+        "image": "shopify:\/\/shop_images\/security-cam-sim-card_07_700500-0726.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "Plug and Play",
+        "text": "<p>Discover the ultimate convenience of instant connectivity with EIOTCLUB's plug and play IoT solution, specifically tailored for 4G SIM card security cameras. Our user-friendly services remove the need for complicated setups, making it effortless to integrate your devices. Experience hassle-free and reliable connectivity, specifically optimized for security cameras, all at your fingertips. Stay connected, stay in control, and enjoy seamless performance with EIOTCLUB's cutting-edge plug and play IoT solution for 4G SIM card security cameras<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "right",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "170efe63-4f82-419e-a4a5-4ca2077bf548": {
+      "type": "text-and-image",
+      "settings": {
+        "margin_bottom": 80,
+        "margin_bottom_mobile": 60,
+        "image": "shopify:\/\/shop_images\/security-cam-sim-card_07_700500-0720_5ceefa75-c50d-4b76-ba01-c9d03374a62c.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "EIOTCLUB's Trusted IoT Services",
+        "text": "<p>At EIOTCLUB, we have established strong partnerships with leading camera brands worldwide and work closely with respected camera manufacturers. Through these valuable relationships and in-depth conversations, we continuously enhance trail cameras and provide exceptional global IoT connectivity services specifically designed for security camera users. Trust EIOTCLUB to deliver reliable and optimized IoT connectivity for your camera, ensuring you never miss a beat. We specialize in security camera SIM cards, providing secure and dependable connections for your peace of mind.<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "left",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "text-and-image2": {
+      "type": "text-and-image",
+      "settings": {
+        "margin_bottom": 80,
+        "margin_bottom_mobile": 60,
+        "image": "shopify:\/\/shop_images\/security-cam-sim-card_04_700500-0727.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "Perfect for Security Cameras!",
+        "text": "<p>Our SIM cards have undergone extensive testing and are an excellent choice for a wide range of IoT devices, including security cameras. What's more, we offer user-friendly and budget-friendly plans that cater to various device needs, allowing you to conveniently renew your data plan from anywhere, at any time! Our SIM kit comes pre-cut in three different sizes (Standard, Micro, and Nano), ensuring compatibility with any device, especially security cameras.<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "right",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "81a03bcb-8061-4cfd-b87c-9c6b0fbef019": {
+      "type": "text-and-image",
+      "settings": {
+        "margin_bottom": 80,
+        "margin_bottom_mobile": 60,
+        "image": "shopify:\/\/shop_images\/PC-P206-600x450-0621.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "Reliable Support",
+        "text": "<p>With our professional online ordering system and dedicated online customer support, we are committed to solving any issues you may encounter with your security camera SIM card. Your peace of mind is our top priority! Feel free to reach out to us if you have any questions or need assistance. To better assist you, kindly provide us with your SIM card number (rest assured, it will be kept confidential). Experience the convenience and reliability of our services designed specifically for security camera SIM cards.<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "left",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "19a90b87-bfa8-4d25-8f05-e5d6e27d5ef3": {
+      "type": "new-image-list",
+      "blocks": {
+        "de71c8e1-0085-41a2-95c0-db80dab0d619": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1-500x500-0504.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/1-500x500-0504.jpg",
+            "text": "Security Camera",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "f89671d1-e1cd-43ff-af09-a00b6a6e51aa": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/6-500x500-0504.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/6-500x500-0504.jpg",
+            "text": "Security Camera",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "58e78670-869f-4d10-83b9-34a98ad1a44c": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2-500x500-0504.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/2-500x500-0504.jpg",
+            "text": "Trail Camera",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "03f7783d-783a-4b13-ad2d-edc696ba0715": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/4-500x500-0504.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/4-500x500-0504.jpg",
+            "text": "4G Router",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "1cc3c4e1-6d41-4299-9acf-80a5b969aab6": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/3-500x500-0504.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/3-500x500-0504.jpg",
+            "text": "Tracker",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "9caceea6-5d37-4b35-a91b-1c20b69c86be": {
+          "type": "large_banner",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/8-500x500-0504.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/8-500x500-0504.jpg",
+            "text": "Industrial",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        }
+      },
+      "block_order": [
+        "de71c8e1-0085-41a2-95c0-db80dab0d619",
+        "f89671d1-e1cd-43ff-af09-a00b6a6e51aa",
+        "58e78670-869f-4d10-83b9-34a98ad1a44c",
+        "03f7783d-783a-4b13-ad2d-edc696ba0715",
+        "1cc3c4e1-6d41-4299-9acf-80a5b969aab6",
+        "9caceea6-5d37-4b35-a91b-1c20b69c86be"
+      ],
+      "settings": {
+        "container": "container",
+        "bg_color": "#f6f6f6",
+        "margin_bottom_mb": 20,
+        "margin_bottom_tab": 40,
+        "margin_bottom": 40,
+        "mg_top_mobile": 20,
+        "mg_top_tablet": 40,
+        "mg_top_desktop": 40,
+        "title": "Support Multiple Devices",
+        "color_title": "",
+        "fontsize_title": 32,
+        "fontsize_title_mo": 24,
+        "margin_bottom_title": 40,
+        "margin_bottom_title_mo": 24,
+        "text": "",
+        "image_list_align": "center",
+        "row_box_num": "5",
+        "box_gap": 24,
+        "row_box_num_mobile": "3",
+        "box_gap_mobile": 24
+      }
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonials-0": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+            "author": "Author name",
+            "author_info": "Los Angeles, CA"
+          }
+        },
+        "testimonials-1": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+            "author": "Author name",
+            "author_info": "Los Angeles, CA"
+          }
+        },
+        "testimonials-2": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+            "author": "Author name",
+            "author_info": "Los Angeles, CA"
+          }
+        }
+      },
+      "block_order": [
+        "testimonials-0",
+        "testimonials-1",
+        "testimonials-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Don't take our word for it",
+        "round_images": true,
+        "color_background": "#f9f9f9",
+        "color_text": "#1c1d1d"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "product_recommendations_heading": "You may also like",
+        "related_count": 6,
+        "products_per_row": 3
+      }
+    },
+    "collection-return": {
+      "type": "collection-return",
+      "disabled": true,
+      "settings": {}
+    },
+    "a7c31362-9ecd-4ba5-aed2-d16f5ce1cc7d": {
+      "type": "featured-collections",
+      "blocks": {
+        "template--14564082581637__a7c31362-9ecd-4ba5-aed2-d16f5ce1cc7d-16808335751327be2f-0": {
+          "type": "collection",
+          "settings": {
+            "image_url": "",
+            "title": "",
+            "title_color": "",
+            "focal_point": "center center",
+            "size": "wide"
+          }
+        },
+        "template--14564082581637__a7c31362-9ecd-4ba5-aed2-d16f5ce1cc7d-16808335751327be2f-1": {
+          "type": "collection",
+          "settings": {
+            "image_url": "",
+            "title": "",
+            "title_color": "",
+            "focal_point": "center center",
+            "size": "square-small"
+          }
+        },
+        "template--14564082581637__a7c31362-9ecd-4ba5-aed2-d16f5ce1cc7d-16808335751327be2f-2": {
+          "type": "collection",
+          "settings": {
+            "image_url": "",
+            "title": "",
+            "title_color": "",
+            "focal_point": "center center",
+            "size": "square-small"
+          }
+        },
+        "template--14564082581637__a7c31362-9ecd-4ba5-aed2-d16f5ce1cc7d-16808335751327be2f-3": {
+          "type": "collection",
+          "settings": {
+            "image_url": "",
+            "title": "",
+            "title_color": "",
+            "focal_point": "center center",
+            "size": "square-small"
+          }
+        },
+        "template--14564082581637__a7c31362-9ecd-4ba5-aed2-d16f5ce1cc7d-16808335751327be2f-4": {
+          "type": "collection",
+          "settings": {
+            "image_url": "",
+            "title": "",
+            "title_color": "",
+            "focal_point": "center center",
+            "size": "square-small"
+          }
+        },
+        "template--14564082581637__a7c31362-9ecd-4ba5-aed2-d16f5ce1cc7d-16808335751327be2f-5": {
+          "type": "collection",
+          "settings": {
+            "image_url": "",
+            "title": "",
+            "title_color": "",
+            "focal_point": "center center",
+            "size": "wide"
+          }
+        }
+      },
+      "block_order": [
+        "template--14564082581637__a7c31362-9ecd-4ba5-aed2-d16f5ce1cc7d-16808335751327be2f-0",
+        "template--14564082581637__a7c31362-9ecd-4ba5-aed2-d16f5ce1cc7d-16808335751327be2f-1",
+        "template--14564082581637__a7c31362-9ecd-4ba5-aed2-d16f5ce1cc7d-16808335751327be2f-2",
+        "template--14564082581637__a7c31362-9ecd-4ba5-aed2-d16f5ce1cc7d-16808335751327be2f-3",
+        "template--14564082581637__a7c31362-9ecd-4ba5-aed2-d16f5ce1cc7d-16808335751327be2f-4",
+        "template--14564082581637__a7c31362-9ecd-4ba5-aed2-d16f5ce1cc7d-16808335751327be2f-5"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Collection list",
+        "title-buttom": "title-buttom",
+        "divider": false,
+        "enable_gutter": false
+      }
+    },
+    "8a14e423-efa0-4e85-9a30-4c0668ebd37c": {
+      "type": "new-slider-table",
+      "blocks": {
+        "6c20f788-0a06-4095-a0ec-9a0f4851f804": {
+          "type": "table_thead",
+          "settings": {
+            "thead_text": "",
+            "image1": "shopify:\/\/shop_images\/056916f25a3d36b928f382daf8b96786.webp",
+            "button1": "Double Network",
+            "button_link1": "https:\/\/www.eiotclub.com\/products\/4g-lte-prepaid-sim-card-tmobile-att",
+            "image2": "shopify:\/\/shop_images\/950f07fd30eabd74964b0387d8332fca.webp",
+            "button2": "Triple-play Network",
+            "button_link2": "https:\/\/www.eiotclub.com\/products\/4g-data-only-prepaid-iot-sim-card",
+            "button3": "",
+            "button_link3": ""
+          }
+        },
+        "d83e83c3-9092-4a82-9c1f-f9dd555d0a0a": {
+          "type": "table_tbody",
+          "settings": {
+            "bg_color": "",
+            "tbody_text1": "Network support",
+            "tbody_text2": "ATT \/ T-mobie",
+            "tbody_text3": "ATT \/ T-mobile\/ Verizon",
+            "tbody_text4": ""
+          }
+        },
+        "305c4f88-e51f-4d6e-a79b-252a1d1908b6": {
+          "type": "table_tbody",
+          "settings": {
+            "bg_color": "",
+            "tbody_text1": "Price",
+            "tbody_text2": "$5\/$15\/$119",
+            "tbody_text3": "$5.99\/$19.9\/$139",
+            "tbody_text4": ""
+          }
+        },
+        "5a8740c9-f8a2-4d73-9096-800391cc7241": {
+          "type": "table_tbody",
+          "settings": {
+            "bg_color": "",
+            "tbody_text1": "Data",
+            "tbody_text2": "300MB\/2GB\/24GB",
+            "tbody_text3": "100MB\/2GB\/24GB",
+            "tbody_text4": ""
+          }
+        },
+        "2467f7d7-3ec9-428d-bfe4-d857722d43d4": {
+          "type": "table_tbody",
+          "settings": {
+            "bg_color": "",
+            "tbody_text1": "Scenario",
+            "tbody_text2": "Common household, outdoor, construction, etc",
+            "tbody_text3": "Involve more remote places like jungle",
+            "tbody_text4": ""
+          }
+        },
+        "8f67dc7c-60e4-4aa4-9bd2-d86af840f0ee": {
+          "type": "table_tbody",
+          "settings": {
+            "bg_color": "",
+            "tbody_text1": "APN",
+            "tbody_text2": "mobile.three.com.hk",
+            "tbody_text3": "mobile",
+            "tbody_text4": ""
+          }
+        }
+      },
+      "block_order": [
+        "6c20f788-0a06-4095-a0ec-9a0f4851f804",
+        "d83e83c3-9092-4a82-9c1f-f9dd555d0a0a",
+        "305c4f88-e51f-4d6e-a79b-252a1d1908b6",
+        "5a8740c9-f8a2-4d73-9096-800391cc7241",
+        "2467f7d7-3ec9-428d-bfe4-d857722d43d4",
+        "8f67dc7c-60e4-4aa4-9bd2-d86af840f0ee"
+      ],
+      "settings": {
+        "container": "container",
+        "bg_color": "",
+        "margin_bottom_mb": 40,
+        "margin_bottom_tab": 40,
+        "margin_bottom": 40,
+        "mg_top_mobile": 40,
+        "mg_top_tablet": 40,
+        "mg_top_desktop": 40,
+        "title": "Pick the right one for you",
+        "button_background_color": "#07c160"
+      }
+    },
+    "801d87af-9793-4c59-bcf3-12abdedb9dcc": {
+      "type": "new-image-list",
+      "blocks": {
+        "070b1982-d908-41ca-8a16-3f8307f4d248": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PC-P401-600x540-0426.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/PC-P401-600x540-0426.jpg",
+            "text": "Insert the card into the device correctly",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "89ac2674-695b-4a4e-8651-ae763f033016": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PC-P402-600x540-0426.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/PC-P402-600x540-0426.jpg",
+            "text": "Restart the device",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "8a373407-7863-43a2-ae88-d332a5b2ae86": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PC-P403-600x540-0426.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/PC-P403-600x540-0426.jpg",
+            "text": "Activate successful",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        }
+      },
+      "block_order": [
+        "070b1982-d908-41ca-8a16-3f8307f4d248",
+        "89ac2674-695b-4a4e-8651-ae763f033016",
+        "8a373407-7863-43a2-ae88-d332a5b2ae86"
+      ],
+      "settings": {
+        "container": "container",
+        "bg_color": "#f6f6f6",
+        "margin_bottom_mb": 40,
+        "margin_bottom_tab": 40,
+        "margin_bottom": 25,
+        "mg_top_mobile": 40,
+        "mg_top_tablet": 40,
+        "mg_top_desktop": 40,
+        "title": "Simple Activation",
+        "color_title": "",
+        "fontsize_title": 32,
+        "fontsize_title_mo": 24,
+        "margin_bottom_title": 40,
+        "margin_bottom_title_mo": 24,
+        "text": "",
+        "image_list_align": "center",
+        "row_box_num": "3",
+        "box_gap": 24,
+        "row_box_num_mobile": "1",
+        "box_gap_mobile": 24
+      }
+    },
+    "1c054fad-af9b-438d-9c7e-9f8ef83cc786": {
+      "type": "faq",
+      "blocks": {
+        "50094f6c-64b6-4037-bf72-6db11cdef8ab": {
+          "type": "rich-text",
+          "disabled": true,
+          "settings": {
+            "title": "",
+            "text": "In simple terms, a SIM card in a security camera allows it to connect to cellular networks, just like a SIM card in a phone. It enables the camera to transmit data wirelessly, without relying on Wi-Fi or wired connections. With a SIM card, you can install the camera anywhere and still have it work, even if there's no internet access. It also lets you monitor and access the camera remotely through a mobile app or website to view live video and receive alerts. Essentially, the SIM card provides connectivity and convenience for your security camera.",
+            "align_text": "center"
+          }
+        },
+        "template--14564082581637__1c054fad-af9b-438d-9c7e-9f8ef83cc786-16809196117e528771-0": {
+          "type": "question",
+          "settings": {
+            "title": "How much data do I need for a 4G securty camere?",
+            "text": "The amount of data required for a 4G security camera depends on factors such as video quality, recording duration, and frequency of motion events. On average, a high-quality 1080p camera can consume around 1-2 GB of data per day when set to continuous recording. However, many cameras have options for motion-triggered recording or lower resolution settings, which can significantly reduce data usage. It's recommended to check the camera's specifications or consult with the manufacturer to determine the expected data consumption based on your specific camera settings and usage patterns."
+          }
+        },
+        "template--14564082581637__1c054fad-af9b-438d-9c7e-9f8ef83cc786-16809196117e528771-1": {
+          "type": "question",
+          "settings": {
+            "title": "The SD card and SIM card in a security camera have differences in terms of functionality and usage",
+            "text": "\"Functionality: An SD card is a storage medium, similar to a portable hard drive or memory card. It is used to store videos, photos, and other data captured by the camera. On the other hand, a SIM card is an intelligent card used for connecting to mobile networks. It enables the camera to transmit data over cellular networks.\n\nUsage: The primary purpose of an SD card is to store and backup images and videos captured by the camera, providing temporary storage and offline access capabilities. Conversely, a SIM card is used for remote access, real-time monitoring, and remote control of the camera. Connecting to the mobile network lets you remotely view live video, receive alerts, and control the camera through a mobile application.\""
+          }
+        },
+        "30431904-2c96-48e6-bfce-6ac553354b41": {
+          "type": "question",
+          "settings": {
+            "title": "Do security cameras work on 4G?",
+            "text": "Yes, security cameras can work on 4G networks. By using a SIM card with an active data plan, they can establish a connection to the 4G network, enabling remote access and monitoring through mobile apps or web interfaces. This allows for real-time video streaming and control, providing flexibility in camera placement and making it possible to monitor locations where wired connectivity is not available or reliable."
+          }
+        },
+        "97374034-486c-4a48-8aed-5746b586f41f": {
+          "type": "question",
+          "settings": {
+            "title": "What does a SIM card do in a security camera?",
+            "text": "The amount of data required for a 4G security camera depends on factors such as video quality, recording duration, and frequency of motion events. On average, a high-quality 1080p camera can consume around 1-2 GB of data per day when set to continuous recording. However, many cameras have options for motion-triggered recording or lower resolution settings, which can significantly reduce data usage. It's recommended to check the camera's specifications or consult with the manufacturer to determine the expected data consumption based on your specific camera settings and usage patterns."
+          }
+        },
+        "322bb76e-d5c7-48d9-9cb3-39e7380d9812": {
+          "type": "question",
+          "disabled": true,
+          "settings": {
+            "title": "Frequently asked question",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>"
+          }
+        },
+        "d9b25cae-7f4a-41b1-babd-95405d51a570": {
+          "type": "question",
+          "disabled": true,
+          "settings": {
+            "title": "Frequently asked question",
+            "text": "<p>Use this text to answer questions in as much detail as possible for your customers.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "50094f6c-64b6-4037-bf72-6db11cdef8ab",
+        "template--14564082581637__1c054fad-af9b-438d-9c7e-9f8ef83cc786-16809196117e528771-0",
+        "template--14564082581637__1c054fad-af9b-438d-9c7e-9f8ef83cc786-16809196117e528771-1",
+        "30431904-2c96-48e6-bfce-6ac553354b41",
+        "97374034-486c-4a48-8aed-5746b586f41f",
+        "322bb76e-d5c7-48d9-9cb3-39e7380d9812",
+        "d9b25cae-7f4a-41b1-babd-95405d51a570"
+      ],
+      "settings": {
+        "title": "FAQs"
+      }
+    },
+    "1682675971f684f111": {
+      "type": "apps",
+      "blocks": {
+        "95df2e24-a890-4352-b778-8b08ed8acf88": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "95df2e24-a890-4352-b778-8b08ed8acf88"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "268770bf-647e-43a2-88ee-5982ce38e45d": {
+      "type": "text-with-icons",
+      "blocks": {
+        "template--14564082581637__268770bf-647e-43a2-88ee-5982ce38e45d-16809489265e4023f6-0": {
+          "type": "text_block",
+          "settings": {
+            "icon": "free-shipping",
+            "html_svg": "<svg width=\"52\" height=\"52\" viewbox=\"0 0 52 52\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M9.26378 15.485C9.05118 15.544 8.85776 15.6577 8.70284 15.8148C8.51408 16.0452 8.40919 16.3328 8.40538 16.6307C7.60647 24.3053 7.58947 28.9118 8.40538 36.5303C8.40578 36.8013 8.48792 37.0658 8.64107 37.2893C8.79422 37.5128 9.01125 37.6849 9.26378 37.7831L25.4017 44.0655L25.8862 44.1998L26.3723 44.0638L42.5103 37.7848C42.761 37.6839 42.9762 37.5111 43.129 37.2882C43.2817 37.0653 43.3651 36.8022 43.3687 36.532C44.2186 28.82 44.2288 24.3733 43.3687 16.7327C43.3918 16.3987 43.2853 16.0687 43.0712 15.8114C42.9302 15.6148 42.7354 15.4631 42.5103 15.3745V15.3779\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M35.2371 20.2156L26.3726 23.6663H25.402L9.26406 17.3855C9.05243 17.3003 8.8654 17.1637 8.71995 16.988C8.57451 16.8123 8.47524 16.603 8.43115 16.3792C8.47381 16.1695 8.56719 15.9734 8.70312 15.808C8.85843 15.6522 9.05181 15.5397 9.26406 15.4817L17.333 12.3421M35.2371 20.2156L42.5123 17.3855C42.7258 17.3023 42.9146 17.1661 43.0609 16.9897C43.2072 16.8134 43.3062 16.6027 43.3486 16.3775H43.3452C43.3023 16.1684 43.2089 15.9729 43.0732 15.808C42.9319 15.6118 42.7372 15.4602 42.5123 15.3712L26.3743 9.2026C26.2215 9.13501 26.0562 9.1001 25.889 9.1001C25.7219 9.1001 25.5566 9.13501 25.4037 9.2026L17.333 12.3421M35.2371 20.2156L17.333 12.3421M25.8882 44.1999V23.6663M31.8375 35.0805L38.6367 32.5307\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<\/svg>",
+            "title": "Fast Shipping",
+            "header_color": "",
+            "header_size": 16,
+            "header_line_height": 36,
+            "header_letter_spacing": 0,
+            "header_font_weight": "400",
+            "header_size_mo": 16,
+            "header_line_height_mo": 36,
+            "header_letter_spacing_mo": 0,
+            "header_font_weight_mo": "400",
+            "text": "",
+            "content_color": "",
+            "content_size": 16,
+            "content_line_height": 36,
+            "content_letter_spacing": 0,
+            "content_font_weight": "400",
+            "content_size_mo": 16,
+            "content_line_height_mo": 36,
+            "content_letter_spacing_mo": 0,
+            "content_font_weight_mo": "400"
+          }
+        },
+        "template--14564082581637__268770bf-647e-43a2-88ee-5982ce38e45d-16809489265e4023f6-1": {
+          "type": "text_block",
+          "settings": {
+            "icon": "customer-service",
+            "html_svg": "<svg width=\"52\" height=\"52\" viewbox=\"0 0 52 52\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M9 29.6819C9 23.0729 13.4066 21.4219 15.6108 21.4219C19.5738 21.4219 20.5654 24.7273 20.5654 26.3766V32.9873C20.5654 36.9504 17.2601 37.942 15.6091 37.942C13.4066 37.942 9 36.2893 9 29.6819V29.6819ZM43.693 29.6819C43.693 23.0729 39.2864 21.4219 37.0822 21.4219C33.1191 21.4219 32.1292 24.7273 32.1292 26.3766V32.9873C32.1292 36.9504 35.4346 37.942 37.0839 37.942C39.2864 37.942 43.693 36.2893 43.693 29.6819Z\" stroke=\"#07c160\" stroke-width=\"3\"><\/path>\n<path d=\"M10.123 24.8254C10.3659 16.8554 14.4217 8 26.3464 8C38.2525 8 42.3134 16.8233 42.5646 24.7815M42.7434 34.3368C42.7434 34.3368 42.9694 39.5292 40.3032 41.7907C37.6386 44.0438 30.9098 43.9999 30.9098 43.9999\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\"><\/path>\n<\/svg>",
+            "title": "7\/24 custom support",
+            "header_color": "",
+            "header_size": 16,
+            "header_line_height": 36,
+            "header_letter_spacing": 0,
+            "header_font_weight": "400",
+            "header_size_mo": 16,
+            "header_line_height_mo": 36,
+            "header_letter_spacing_mo": 0,
+            "header_font_weight_mo": "400",
+            "text": "",
+            "content_color": "",
+            "content_size": 16,
+            "content_line_height": 36,
+            "content_letter_spacing": 0,
+            "content_font_weight": "400",
+            "content_size_mo": 16,
+            "content_line_height_mo": 36,
+            "content_letter_spacing_mo": 0,
+            "content_font_weight_mo": "400"
+          }
+        },
+        "template--14564082581637__268770bf-647e-43a2-88ee-5982ce38e45d-16809489265e4023f6-2": {
+          "type": "text_block",
+          "settings": {
+            "icon": "secure-payment",
+            "html_svg": "<svg width=\"52\" height=\"52\" viewbox=\"0 0 52 52\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M32.5 35.104H45.5\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M44.75 27.8541V12.9375C44.75 11.1426 43.295 9.6875 41.5 9.6875H28.0833H10.75C8.95508 9.6875 7.5 11.1426 7.5 12.9375V40.8541C7.5 42.6491 8.95508 44.1041 10.75 44.1041H32.9265\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M37.9167 40.5208L32.5 35.1042L37.9162 29.6875\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M21.8182 16.6875V34.6875\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M26.3182 18.324C26.3182 18.324 22.2152 18.324 20.1818 18.324C18.1484 18.324 16.5 19.9724 16.5 22.0058C16.5 24.0392 18.1484 25.6876 20.1818 25.6876\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M17.3182 33.0511C17.3182 33.0511 21.4211 33.0511 23.4545 33.0511C25.488 33.0511 27.1364 31.4027 27.1364 29.3693C27.1364 27.3359 25.488 25.6875 23.4545 25.6875H20.1818\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<\/svg>",
+            "title": "30-Day Money Back",
+            "header_color": "",
+            "header_size": 16,
+            "header_line_height": 36,
+            "header_letter_spacing": 0,
+            "header_font_weight": "400",
+            "header_size_mo": 16,
+            "header_line_height_mo": 36,
+            "header_letter_spacing_mo": 0,
+            "header_font_weight_mo": "400",
+            "text": "",
+            "content_color": "",
+            "content_size": 16,
+            "content_line_height": 36,
+            "content_letter_spacing": 0,
+            "content_font_weight": "400",
+            "content_size_mo": 16,
+            "content_line_height_mo": 36,
+            "content_letter_spacing_mo": 0,
+            "content_font_weight_mo": "400"
+          }
+        },
+        "731caf94-9e45-43df-b0c9-3a77c1ca99e2": {
+          "type": "text_block",
+          "settings": {
+            "icon": "secure-payment",
+            "html_svg": "<svg width=\"52\" height=\"52\" viewbox=\"0 0 52 52\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M5.6665 12C5.6665 10.8954 6.56193 10 7.6665 10H43.6665C44.7711 10 45.6665 10.8954 45.6665 12V40C45.6665 41.1046 44.7711 42 43.6665 42H7.6665C6.56193 42 5.6665 41.1046 5.6665 40V12Z\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M5.6665 17.9995H45.6665\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"square\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M28.6665 34H37.6665\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<\/svg>",
+            "title": "Secure Payment",
+            "header_color": "",
+            "header_size": 16,
+            "header_line_height": 36,
+            "header_letter_spacing": 0,
+            "header_font_weight": "400",
+            "header_size_mo": 16,
+            "header_line_height_mo": 36,
+            "header_letter_spacing_mo": 0,
+            "header_font_weight_mo": "400",
+            "text": "",
+            "content_color": "",
+            "content_size": 16,
+            "content_line_height": 36,
+            "content_letter_spacing": 0,
+            "content_font_weight": "400",
+            "content_size_mo": 16,
+            "content_line_height_mo": 36,
+            "content_letter_spacing_mo": 0,
+            "content_font_weight_mo": "400"
+          }
+        }
+      },
+      "block_order": [
+        "template--14564082581637__268770bf-647e-43a2-88ee-5982ce38e45d-16809489265e4023f6-0",
+        "template--14564082581637__268770bf-647e-43a2-88ee-5982ce38e45d-16809489265e4023f6-1",
+        "template--14564082581637__268770bf-647e-43a2-88ee-5982ce38e45d-16809489265e4023f6-2",
+        "731caf94-9e45-43df-b0c9-3a77c1ca99e2"
+      ],
+      "settings": {
+        "title": "",
+        "align_text": "center",
+        "desktop_columns_per_row": 3,
+        "icon_color": "#19a64f",
+        "button_label": "",
+        "button_link": "",
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "b1362342-b3a7-4960-b540-4e649fe4c9b3",
+    "59df1900-a7e6-4b5f-9428-ce84805a1e83",
+    "sub",
+    "background-image-text",
+    "text-and-image",
+    "7e87da54-5271-41be-a457-8954b49ac77a",
+    "170efe63-4f82-419e-a4a5-4ca2077bf548",
+    "text-and-image2",
+    "81a03bcb-8061-4cfd-b87c-9c6b0fbef019",
+    "19a90b87-bfa8-4d25-8f05-e5d6e27d5ef3",
+    "testimonials",
+    "product-recommendations",
+    "collection-return",
+    "a7c31362-9ecd-4ba5-aed2-d16f5ce1cc7d",
+    "8a14e423-efa0-4e85-9a30-4c0668ebd37c",
+    "801d87af-9793-4c59-bcf3-12abdedb9dcc",
+    "1c054fad-af9b-438d-9c7e-9f8ef83cc786",
+    "1682675971f684f111",
+    "268770bf-647e-43a2-88ee-5982ce38e45d"
+  ]
+}

@@ -1,0 +1,121 @@
+
+{% if section.settings.show_block %}
+
+{% assign flag_geshu = false %}
+<div class="top_announcement-container"  style="background:{{section.settings.background_color}};">
+  
+      {% if section.blocks.size > 1 %}
+    {% assign flag_geshu = true %}
+    <div class="swiper-button-prev swiper-button-prev-ann"><svg xmlns="http://www.w3.org/2000/svg" width="9" viewBox="0 0 9 14" fill="none">
+<path d="M8 1.64642L2 7.11606L8 12.5857" stroke="currentColor" stroke-width="2"/>
+</svg></div>
+    <div class="swiper-button-next swiper-button-next-ann"><svg xmlns="http://www.w3.org/2000/svg" width="9" viewBox="0 0 9 14" fill="none">
+<path d="M1 1.64642L7 7.11606L1 12.5857" stroke="currentColor" stroke-width="2"/>
+</svg></div>
+    {% endif %}
+  <div class="swiper top_announcement-box">
+
+    <div class="swiper-wrapper">
+  {% for block in section.blocks %}
+
+     <div class="swiper-slide">
+  <div class="page_top_announcement" style="color:{{block.settings.text_color}};">
+    {{block.settings.text}}{%if block.settings.icon != blank %} <img src={{block.settings.icon | img_url:'master'}}> {%endif%}
+  </div>
+    </div>
+  {% endfor %}
+      
+    </div>
+  </div>
+
+
+</div>
+
+
+<script>        
+  var top_announcemen = new Swiper ('.top_announcement-box', {
+    // autoHeight:true, 
+               observer:true,
+    observeParents:true,
+//     effect : 'fade',
+//     fadeEffect: {
+//     crossFade: false,
+//   },
+    breakpoints: { 
+      769: {  
+        autoHeight:true, 
+      }
+    },
+    {% if flag_geshu == true %}
+    loop:true,
+        navigation: {
+      nextEl: '.swiper-button-next-ann', 
+      prevEl: '.swiper-button-prev-ann',
+    },
+
+      autoplay: {
+        delay: {{ section.settings.timesloop }}000,
+    stopOnLastSlide: false,
+    disableOnInteraction: true,
+    },
+        {% endif %}
+
+  })        
+  </script>
+
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Top Announcement",
+    "settings": [
+		{
+			"type":"checkbox",
+			"label":"show_block?",
+			"id":"show_block",
+             "default": true
+		},{
+			"type":"text",
+			"label":"gap time",
+			"id":"timesloop",
+             "default": "5"
+		},
+        {
+			"type":"color",
+			"label":"background  color",
+			"id":"background_color"
+        }
+	],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "block",
+        "settings": [
+
+        
+        { 
+			"type":"richtext",
+			"label":"text",
+			"id":"text"
+        },{
+          "type":"image_picker",
+          "label":"icon",
+          "id":"icon"
+            },
+        {
+			"type":"color",
+			"label":"text color",
+			"id":"text_color"
+        }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Top Announcement",
+        "category": "Ho-Advance"
+      }
+    ]
+  }
+{% endschema %}
+

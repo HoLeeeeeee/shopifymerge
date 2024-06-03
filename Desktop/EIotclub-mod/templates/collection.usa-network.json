@@ -1,0 +1,354 @@
+{
+  "sections": {
+    "main-collection": {
+      "type": "main-collection",
+      "blocks": {
+        "collection_description": {
+          "type": "collection_description",
+          "settings": {}
+        },
+        "product_grid": {
+          "type": "product_grid",
+          "settings": {
+            "collection_subnav_style": "none",
+            "per_row": 2,
+            "mobile_flush_grid": false
+          }
+        }
+      },
+      "block_order": [
+        "collection_description",
+        "product_grid"
+      ],
+      "settings": {
+        "collection_image_enable": true,
+        "collection_image_height": 550,
+        "parallax": true,
+        "parallax_direction": "top",
+        "enable_sidebar": true,
+        "collapsed": true,
+        "enable_color_swatches": false,
+        "enable_sort": false
+      }
+    },
+    "5afc0934-7506-4d41-97a2-3b8efdd3fef2": {
+      "type": "slideshow",
+      "blocks": {
+        "template--14569600450693__5afc0934-7506-4d41-97a2-3b8efdd3fef2-16822357535e232562-0": {
+          "type": "image",
+          "settings": {
+            "title": "Security Camera Sim Card",
+            "title_color": "",
+            "title_size": 48,
+            "subheading": "Experience the Power of Convenience - Embrace Seamless Connectivity",
+            "subheading_size": 20,
+            "subheading_color": "",
+            "subheading_line_height": 24,
+            "subheading_letter_spacing": 0,
+            "link": "",
+            "link_text": "",
+            "link2": "",
+            "link_text2": "",
+            "text_align": "vertical-center horizontal-center",
+            "text_align_mo": "vertical-center-mo horizontal-center-mo",
+            "image": "shopify:\/\/shop_images\/3-1920x400-0408.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/brandstory01-375x460_2x_79ba755f-7742-4108-9502-e203e98f12d3.jpg",
+            "parallax_direction": "top",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "template--14569600450693__5afc0934-7506-4d41-97a2-3b8efdd3fef2-16822357535e232562-0"
+      ],
+      "settings": {
+        "section_height": "natural",
+        "mobile_height": "auto",
+        "parallax": false,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 5,
+        "lazyload_images": true
+      }
+    },
+    "7b2e9177-f7d8-498d-aa9c-bc699e2f3598": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "home_featured_products": "security-camera-sim-card",
+        "per_row": 2,
+        "rows": 1,
+        "view_all": false,
+        "divider": false
+      }
+    },
+    "fa5f4172-f339-4421-926a-9dcd05c06240": {
+      "type": "text-and-image",
+      "settings": {
+        "margin_bottom": 0,
+        "margin_bottom_mobile": 0,
+        "image": "shopify:\/\/shop_images\/Security-camera_04_720-0705.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "AT&T, T-Mobile",
+        "title": "Double  Network SIM Card",
+        "text": "<p>Experience uninterrupted surveillance with our prepaid SIM card designed specifically for security cameras. With compatibility for both AT&T and T-Mobile networks, this 24GB data card provides reliable connectivity to meet your monitoring needs. Enjoy the convenience of prepaid options, giving you full control over usage and expenses without any monthly contracts.<\/p>",
+        "button_label": "Learn more",
+        "button_link": "shopify:\/\/products\/security-camera-sim-card-att-tmobile-24gb",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "left",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "f8ff2f5f-6484-4a7b-8c8a-b174a310ab83": {
+      "type": "text-and-image",
+      "settings": {
+        "margin_bottom": 40,
+        "margin_bottom_mobile": 0,
+        "image": "shopify:\/\/shop_images\/Security-camera_01_720-0705.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": " AT&T, Version,  T-Mobile",
+        "title": "Triple  Network SIM Card",
+        "text": "<p>Take your monitoring setup to the next level with our prepaid SIM card. Enjoy uninterrupted connections, reliable speed, and extensive coverage in different areas. Our prepaid SIM card supports AT&T, Verizon, and T-Mobile networks, giving you the freedom to select your preferred carrier. Upgrade to our triple network SIM card and unleash the full potential of your monitoring system.<\/p>",
+        "button_label": "Learn more",
+        "button_link": "shopify:\/\/products\/security-camera-sim-card-verizon-att-tmobile-24gb",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "right",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "0bb00ffa-36e3-4145-88be-c9773c5de2eb": {
+      "type": "new-image-text-banner",
+      "settings": {
+        "max_width": "",
+        "page-width": false,
+        "border-radius": true,
+        "image_pc": "shopify:\/\/shop_images\/20230809150305.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/20230809172920.jpg",
+        "content": "",
+        "content_left": 72,
+        "content_top": 41,
+        "content_left_mobile": 10,
+        "content_top_mobile": 10
+      }
+    },
+    "4d7d48c6-a9f6-4c68-b8a6-6c0aae704a0a": {
+      "type": "new-slider-table",
+      "blocks": {
+        "d1faacbc-e14a-458a-9ecc-255fa52370da": {
+          "type": "table_thead",
+          "settings": {
+            "thead_text": "",
+            "image1": "shopify:\/\/shop_images\/Security-camera_04_720-0705.jpg",
+            "button1": "Double network",
+            "button_link1": "",
+            "image2": "shopify:\/\/shop_images\/Security-camera_01_720-0705.jpg",
+            "button2": "Triple network",
+            "button_link2": "",
+            "button3": "",
+            "button_link3": ""
+          }
+        },
+        "b7a7edbe-f63a-41f9-808a-3b71dded43ad": {
+          "type": "table_tbody",
+          "settings": {
+            "bg_color": "",
+            "tbody_text1": "Features",
+            "tbody_text2": "Double Network SIM Card for Cameras",
+            "tbody_text3": "Triple Network SIM Card for Cameras",
+            "tbody_text4": ""
+          }
+        },
+        "5a232927-a88a-4ae2-9fb8-ad5f53bb9565": {
+          "type": "table_tbody",
+          "settings": {
+            "bg_color": "",
+            "tbody_text1": "Supported Carriers",
+            "tbody_text2": "AT&T, T-Mobile",
+            "tbody_text3": "AT&T, Verizon, T-Mobile",
+            "tbody_text4": ""
+          }
+        },
+        "2d5ace0c-0fec-4410-bed1-ff711dc515d9": {
+          "type": "table_tbody",
+          "settings": {
+            "bg_color": "",
+            "tbody_text1": "Data Speed",
+            "tbody_text2": "Consistent Speed",
+            "tbody_text3": "Consistent Speed",
+            "tbody_text4": ""
+          }
+        },
+        "93148627-1da8-47da-8d37-d5985c8de022": {
+          "type": "table_tbody",
+          "settings": {
+            "bg_color": "",
+            "tbody_text1": "Coverage Area",
+            "tbody_text2": "Consistent Coverage",
+            "tbody_text3": "Consistent Coverage",
+            "tbody_text4": ""
+          }
+        },
+        "564a83d9-dad4-484c-8dc6-d35bcb7bcab4": {
+          "type": "table_tbody",
+          "settings": {
+            "bg_color": "",
+            "tbody_text1": "Price",
+            "tbody_text2": "Budget-Friendly",
+            "tbody_text3": "Moderate Price",
+            "tbody_text4": ""
+          }
+        },
+        "aa04410f-b3c5-47f3-9e16-eda78dfbfab8": {
+          "type": "table_tbody",
+          "settings": {
+            "bg_color": "",
+            "tbody_text1": "Suitable For",
+            "tbody_text2": "Cost-effective, Flexible Network Selection",
+            "tbody_text3": "Comprehensive Coverage, Multi-Carrier Support",
+            "tbody_text4": ""
+          }
+        }
+      },
+      "block_order": [
+        "d1faacbc-e14a-458a-9ecc-255fa52370da",
+        "b7a7edbe-f63a-41f9-808a-3b71dded43ad",
+        "5a232927-a88a-4ae2-9fb8-ad5f53bb9565",
+        "2d5ace0c-0fec-4410-bed1-ff711dc515d9",
+        "93148627-1da8-47da-8d37-d5985c8de022",
+        "564a83d9-dad4-484c-8dc6-d35bcb7bcab4",
+        "aa04410f-b3c5-47f3-9e16-eda78dfbfab8"
+      ],
+      "settings": {
+        "container": "container",
+        "bg_color": "",
+        "margin_bottom_mb": 40,
+        "margin_bottom_tab": 40,
+        "margin_bottom": 0,
+        "mg_top_mobile": 40,
+        "mg_top_tablet": 40,
+        "mg_top_desktop": 0,
+        "title": "",
+        "button_background_color": "#07c160"
+      }
+    },
+    "c40aa522-aa67-4239-bc59-e58facf5e0eb": {
+      "type": "new-image-list",
+      "blocks": {
+        "ccae232c-12d0-4ddc-adb6-89aafb254146": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logo-460x300-03_05a5a8b2-5e67-44d3-ac52-9803fcaf5f9a.jpg",
+            "text": "REOLINK",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "f26d1cf5-7e05-4749-b7e6-02e9c3250957": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logo-460x300-02_8ff8356a-3725-4488-8e51-16d18faa8e3f.jpg",
+            "text": "EUFY",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "2a3491fe-e27a-472b-8828-507a59ef7e05": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logo-460x300-04.jpg",
+            "text": "CTRONICS",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "d872f936-35e7-49e9-b7e4-f73b8b93f08d": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/contactus02-460x300-0506.jpg",
+            "text": "Contact Us",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        }
+      },
+      "block_order": [
+        "ccae232c-12d0-4ddc-adb6-89aafb254146",
+        "f26d1cf5-7e05-4749-b7e6-02e9c3250957",
+        "2a3491fe-e27a-472b-8828-507a59ef7e05",
+        "d872f936-35e7-49e9-b7e4-f73b8b93f08d"
+      ],
+      "settings": {
+        "container": "container",
+        "bg_color": "#f6f6f6",
+        "margin_bottom_mb": 40,
+        "margin_bottom_tab": 40,
+        "margin_bottom": 40,
+        "mg_top_mobile": 40,
+        "mg_top_tablet": 40,
+        "mg_top_desktop": 40,
+        "title": "Device Support by EIOTCLUB SIM Card",
+        "color_title": "",
+        "fontsize_title": 32,
+        "fontsize_title_mo": 24,
+        "margin_bottom_title": 40,
+        "margin_bottom_title_mo": 24,
+        "text": "",
+        "image_list_align": "center",
+        "row_box_num": "5",
+        "box_gap": 24,
+        "row_box_num_mobile": "3",
+        "box_gap_mobile": 24
+      }
+    }
+  },
+  "order": [
+    "main-collection",
+    "5afc0934-7506-4d41-97a2-3b8efdd3fef2",
+    "7b2e9177-f7d8-498d-aa9c-bc699e2f3598",
+    "fa5f4172-f339-4421-926a-9dcd05c06240",
+    "f8ff2f5f-6484-4a7b-8c8a-b174a310ab83",
+    "0bb00ffa-36e3-4145-88be-c9773c5de2eb",
+    "4d7d48c6-a9f6-4c68-b8a6-6c0aae704a0a",
+    "c40aa522-aa67-4239-bc59-e58facf5e0eb"
+  ]
+}

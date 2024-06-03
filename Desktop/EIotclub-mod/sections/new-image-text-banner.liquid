@@ -1,0 +1,136 @@
+<!-- sections\new-image-text-banner.liquid -->
+<style>
+    #new-{{ section.id }}{
+        margin-bottom:40px;
+    }
+    #new-{{ section.id }} .page-width{
+        max-width: {{ section.settings.max_width | append: 'px'  }};
+    }
+    #new-{{ section.id }} .new-border-radius{
+        border-radius: 20px;
+        overflow: hidden;
+    }
+    #new-{{ section.id }} .new-box{
+        position: relative;
+    }
+    #new-{{ section.id }} .new-box picture{
+        width: 100%;
+        display: flex;
+    }
+    #new-{{ section.id }} .new-box picture img{
+        width: 100%;
+    }
+    #new-{{ section.id }} .new-box-text{
+        color: #fff;
+        position: absolute;
+        top: {{ section.settings.content_top |append: '%'  }};
+        left:{{ section.settings.content_left |append: '%'  }}
+    }
+    @media(max-width:767px){
+        #new-{{ section.id }} .new-box-text{
+            top: {{ section.settings.content_top_mobile |append: '%'  }};
+            left:{{ section.settings.content_left_mobile |append: '%'  }}
+        }
+    }
+</style>
+<div id="new-{{ section.id }}">
+    <div class="{% unless section.settings.page-width %} page-width {% endunless %}">
+        <div class="new-box  {% if section.settings.border-radius %} new-border-radius {% endif %}">
+            <picture>
+              <source media="(max-width: 767px)" srcset="{{ section.settings.image_mobile | img_url: 'master' }}" />
+              <source media="(min-width: 768px)" srcset="{{ section.settings.image_pc | img_url: 'master' }}" />
+              <img src="{{ section.settings.image_pc | img_url: 'master' }}" alt="banner" />
+            </picture>
+            <div class="new-box-text">
+                {{ section.settings.content }}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "new-image-text-banner",
+  "settings": [
+    {
+        "type": "text",
+        "id": "max_width",
+        "label": "最大宽度"
+    },
+    {
+      "type": "checkbox",
+      "id": "page-width",
+      "label": "page width show?",
+      "info": "是否全屏展示？",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "border-radius",
+      "label": "border radius show?",
+      "info": "是否需要圆角？",
+      "default": false
+    },
+    {
+        "type": "image_picker",
+        "id": "image_pc",
+        "label": "image pc"
+    },
+    {
+        "type": "image_picker",
+        "id": "image_mobile",
+        "label": "image mobile"
+    },
+    {
+        "type": "richtext",
+        "id": "content",
+        "label": "content"
+    },
+    {
+        "type": "range",
+        "id": "content_left",
+        "label": "文本距离盒子左边",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "%",
+        "default": 10
+    },
+    {
+        "type": "range",
+        "id": "content_top",
+        "label": "文本距离盒子上边",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "%",
+        "default": 10
+    }, 
+    {
+        "type": "range",
+        "id": "content_left_mobile",
+        "label": "移动端文本距离盒子左边",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "%",
+        "default": 10
+    },
+    {
+        "type": "range",
+        "id": "content_top_mobile",
+        "label": "移动端文本距离盒子上边",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "%",
+        "default": 10
+    }
+  ],
+  "presets": [
+    {
+      "name": "new-image-text-banner"
+    }
+  ]
+}
+{% endschema %}

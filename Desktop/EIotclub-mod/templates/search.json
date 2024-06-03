@@ -1,0 +1,80 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-search",
+      "settings": {
+        "enable_sidebar": true,
+        "collapsed": true,
+        "enable_color_swatches": true,
+        "enable_sort": true,
+        "per_row": 5,
+        "mobile_flush_grid": true
+      }
+    },
+    "df8ab7b3-d90a-41a9-a238-05e6487d917d": {
+      "type": "slideshow",
+      "blocks": {
+        "template--14611884998789__df8ab7b3-d90a-41a9-a238-05e6487d917d-image-1": {
+          "type": "image",
+          "settings": {
+            "title": "Endless\npossibilities.",
+            "title_color": "",
+            "title_size": 80,
+            "subheading": "Bring your brand to life",
+            "subheading_size": 20,
+            "subheading_color": "",
+            "subheading_line_height": 24,
+            "subheading_letter_spacing": 0,
+            "link": "",
+            "link_text": "Optional button",
+            "link2": "",
+            "link_text2": "Optional button",
+            "text_align": "vertical-bottom horizontal-left",
+            "text_align_mo": "vertical-bottom-mo horizontal-left-mo",
+            "parallax_direction": "top",
+            "overlay_opacity": 0
+          }
+        },
+        "template--14611884998789__df8ab7b3-d90a-41a9-a238-05e6487d917d-image-2": {
+          "type": "image",
+          "settings": {
+            "title": "Two line\nslide titles.",
+            "title_color": "",
+            "title_size": 80,
+            "subheading": "And big, beautiful imagery",
+            "subheading_size": 20,
+            "subheading_color": "",
+            "subheading_line_height": 24,
+            "subheading_letter_spacing": 0,
+            "link": "",
+            "link_text": "Optional button",
+            "link2": "",
+            "link_text2": "Optional button",
+            "text_align": "vertical-bottom horizontal-left",
+            "text_align_mo": "vertical-bottom-mo horizontal-left-mo",
+            "parallax_direction": "top",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "template--14611884998789__df8ab7b3-d90a-41a9-a238-05e6487d917d-image-1",
+        "template--14611884998789__df8ab7b3-d90a-41a9-a238-05e6487d917d-image-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "section_height": "650px",
+        "mobile_height": "auto",
+        "parallax": false,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 5,
+        "lazyload_images": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "df8ab7b3-d90a-41a9-a238-05e6487d917d"
+  ]
+}

@@ -1,0 +1,268 @@
+<style>
+    #new-refill-{{ section.id }}{
+        display:flex;
+    }
+    #new-refill-{{ section.id }} .new-refill-left{
+        position: relative;
+        width: 66.66%;
+        color: #fff;
+        min-height: 900px;
+        background: green;
+        text-align: center;
+    }
+    #new-refill-{{ section.id }} .new-refill-right{
+        position: relative;
+        width: 33.33%; 
+        height: 100%;
+        background-color: #f6f6f6;
+        min-height: 900px;
+        color: #fff;
+        text-align: center;
+    }
+    #new-refill-{{ section.id }} .new-refill-left>img,
+    #new-refill-{{ section.id }} .new-refill-right>img{
+        width: 100%;
+        height: 900px;
+    }
+    #new-refill-{{ section.id }} .new-refill-box{
+        padding:30px 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 40%;
+    height: 100%;
+    }
+    #new-refill-{{ section.id }} .new-refill-banner{
+        padding:30px 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 60%;
+        color: black;
+        height: 100%;
+    }
+    #new-refill-{{ section.id }} .new-refill-banner .new-images .slick-list {
+        border-radius: 20px;
+        overflow: hidden;
+        border: 3px solid #fff;
+    }
+    #new-refill-{{ section.id }} .new-refill-banner .new-images>button{
+        width: 40px;
+        height: 40px;
+    }
+    #new-refill-{{ section.id }} .slick-dots li.slick-active button:before{
+        color: #19A64F;
+    }
+    #new-refill-{{ section.id }} .slick-dots li button:focus::before,#new-refill-{{ section.id }} .slick-dots li button:hover::before{
+        color: #19A64F;
+    }
+    #new-refill-{{ section.id }} .slick-prev{
+        left: -50px;
+    }
+    #new-refill-{{ section.id }} .slick-next{
+        right: -50px;
+    }
+    .slick-next:before, .slick-prev:before{
+        color:#ddd ;
+        font-size: 40px;
+    }
+
+    #new-refill-{{ section.id }} h3{
+        margin-bottom: 14px;
+    }
+    #new-refill-{{ section.id }} .new-refill-banner img{
+        width: 100%;
+    }
+    #new-refill-{{ section.id }} .new-refill-box>div::-webkit-scrollbar{
+        width: 0px;
+    }
+    #new-refill-{{ section.id }} .new-refill-box>div{
+        height: 80%;
+        border-radius: 20px;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    #new-refill-{{ section.id }} .slick-dots{
+        bottom:-40px
+    }
+    .new-img-pc{display: block;}
+    .new-img-moblie{display: none;}
+    @media(max-width:767px){
+        .new-img-pc{display: none;}
+        .new-img-moblie{display: block;min-height: 900px;}
+        #new-refill-{{ section.id }} .new-refill-right .new-img-moblie{
+            min-height: 650px;
+            height: 650px;
+        }
+        #new-refill-{{ section.id }}{
+            flex-direction: column;
+        }
+        #new-refill-{{ section.id }} .new-refill-left,
+        #new-refill-{{ section.id }} .new-refill-right{
+            width: 100%;
+        }
+        #new-refill-{{ section.id }} .new-refill-box{  
+            width: 90%;
+            height: 100%;
+            }
+        #new-refill-{{ section.id }} .new-refill-right{
+            min-height: 700px;
+        }
+
+    }
+</style>
+<div class="new-refill" id="new-refill-{{ section.id }}">
+    <div class="new-refill-left">
+        {% if section.settings.bg-refill-left != blank %}
+        <img class="new-img-pc" src="{{ section.settings.bg-refill-left | img_url: 'master'}}" alt="{{ section.settings.bg-refill-left.titel }}">
+        {% endif %}
+        {% if section.settings.bg-refill-left-moblie !=blank %}
+        <img class="new-img-moblie" src="{{ section.settings.bg-refill-left-moblie | img_url: 'master'}}" alt="">
+        {% endif %}
+        
+
+        <div class="new-refill-box">
+            {% if section.settings.left-header != blank  %}
+            <h3>{{ section.settings.left-header }}</h3>
+            {% endif %}
+            
+            {% if section.settings.left-text != blank %}
+            <p>{{ section.settings.left-text  }}</p>
+            {% endif %}
+     
+            <div>
+                {{ section.settings.refill }}
+            </div>  
+        </div>       
+ 
+    <div class="new-refill-right">
+        {% if section.settings.bg-refill-right !=  blank %}
+        <img class="new-img-pc" src="{{ section.settings.bg-refill-right | img_url: 'master'}}" alt="{{ section.settings.bg-refill-right.titel }}">
+        {% endif %}
+        {% if section.settings.bg-refill-right-moblie !=blank %}
+        <img class="new-img-moblie" src="{{ section.settings.bg-refill-right-moblie | img_url: 'master'}}" alt="">
+        {% endif %}
+        <div class="new-refill-banner">
+                <div class="new-text-list">
+                    {% for block in section.blocks %}
+                        <div class="new-text">
+                            {% if block.settings.right-header != blank %}
+                            <h3>{{ block.settings.right-header }}</h3>
+                            {% endif %}              
+                            {% if block.settings.right-text != blank %}
+                            <p>{{ block.settings.right-text }}</p>
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="new-images">
+                    {% for block in section.blocks %}
+                        {% if block.settings.image != blank %}
+                        <div class="new-banner">
+                            <img src="{{ block.settings.image | img_url: 'master'}}" alt="{{ block.settings.image.titel }}">
+                        </div>
+                        {% endif %}            
+                    {% endfor %}
+                </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function() {
+        $('.new-images').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            asNavFor: '.new-text-list',
+            dots: true,
+        });
+        $('.new-text-list').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: '.new-images'
+        });
+      });
+   
+</script>
+{% schema %}
+    {
+        "name": "new refill",
+        "class": "new-reviews-block-section",
+        "settings": [
+            {
+                "type": "header",
+                "content": "refill left"
+            },
+            {
+                "type": "text",
+                "id": "left-header",
+                "label": "left-header"
+            },
+            {
+                "type":"textarea",
+                "id": "left-text",
+                "label": "left-text"
+            },
+            {
+                "type": "liquid",
+                "id": "refill",
+                "label": "refill"
+            },
+            {
+                "type": "image_picker",
+                "id": "bg-refill-left",
+                "label": "bg-refill-left"
+            },
+            {
+                "type": "image_picker",
+                "id": "bg-refill-left-moblie",
+                "label": "bg-refill-left-moblie"
+            },
+            {
+                "type": "image_picker",
+                "id": "bg-refill-right",
+                "label": "bg-refill-right"
+            },
+            {
+                "type": "image_picker",
+                "id": "bg-refill-right-moblie",
+                "label": "bg-refill-right-moblie"
+            }
+        ],
+        "blocks": [
+            {
+                "name": "images",
+                "type": "images",
+                "settings": [
+                    {
+                "type": "header",
+                "content": "refill right"
+                    },
+                    {
+                        "type": "text",
+                        "id": "right-header",
+                        "label": "right-header"
+                    },
+                    {
+                        "type":"textarea",
+                        "id": "right-text",
+                        "label": "right-text"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "image"
+                    }
+                ]
+            }
+        ], 
+        "presets": [
+          {
+            "name": "new refill"
+          }
+        ]
+    }
+{% endschema %} 

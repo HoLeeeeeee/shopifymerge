@@ -1,0 +1,1459 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "35d05352-7b96-44ca-b8e5-bbe6879725c5": {
+      "type": "slideshow",
+      "blocks": {
+        "template--14612882194565__35d05352-7b96-44ca-b8e5-bbe6879725c5-image-1": {
+          "type": "image",
+          "settings": {
+            "title": "Grow Your Business with \nEIOTCLUB",
+            "title_color": "",
+            "title_size": 48,
+            "subheading": "",
+            "subheading_size": 20,
+            "subheading_color": "",
+            "subheading_line_height": 24,
+            "subheading_letter_spacing": 0,
+            "link": "",
+            "link_text": "Shop Now",
+            "link2": "",
+            "link_text2": "",
+            "text_align": "vertical-center horizontal-center",
+            "text_align_mo": "vertical-center-mo horizontal-center-mo",
+            "image": "shopify:\/\/shop_images\/home-customer1920540_0901.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/home-customer7501200_0901.jpg",
+            "parallax_direction": "top",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "template--14612882194565__35d05352-7b96-44ca-b8e5-bbe6879725c5-image-1"
+      ],
+      "settings": {
+        "section_height": "650px",
+        "mobile_height": "auto",
+        "parallax": false,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 5,
+        "lazyload_images": true
+      }
+    },
+    "442d110a-5d43-4fb0-9073-bd84e7a37469": {
+      "type": "rich-text",
+      "blocks": {
+        "template--14612882194565__442d110a-5d43-4fb0-9073-bd84e7a37469-heading-1": {
+          "type": "heading",
+          "settings": {
+            "title": "For Any Situation"
+          }
+        },
+        "dc8dd4d4-7463-44c4-a639-4c91570e0fc5": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>If you’re looking for new products to sell, tech to kit out your office,or unique gifts for your employees, partners, or visiting guests, EIOTCLUB has something for you.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--14612882194565__442d110a-5d43-4fb0-9073-bd84e7a37469-heading-1",
+        "dc8dd4d4-7463-44c4-a639-4c91570e0fc5"
+      ],
+      "settings": {
+        "padding_top_bottom": 32,
+        "padding_top_bottom_mobile": 32,
+        "bg_color": "",
+        "header_align_text": "center",
+        "content_align_text": "center",
+        "button_align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "79351e4c-4000-40c5-b1d4-d9c8b06408c6": {
+      "type": "new-image-list",
+      "blocks": {
+        "1570b242-47f4-4845-bc70-4a7a20800942": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Save_More_with_the_Anker_Corporate_Purchase_Program_-_Anker_US_aad6811c-2802-4589-ba05-331c5cbb5a3a.jpg",
+            "text": "PTZ camera",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "333876be-6a9d-4b44-9fe3-8e9f0ad69442": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Save_More_with_the_Anker_Corporate_Purchase_Program_-_Anker_US_2a0ee742-3453-4ca8-8993-b9bf754c112c.jpg",
+            "text": "Trail camera",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "5fb4dfa4-1c43-495e-9f1d-5a3ccc68fdfd": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Save_More_with_the_Anker_Corporate_Purchase_Program_-_Anker_US_d4e784c7-8fab-4ea4-af25-5849eb94f8e6.jpg",
+            "text": "Tracker",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "7d48938e-0dac-483a-b443-43288f4c0cb8": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Save_More_with_the_Anker_Corporate_Purchase_Program_-_Anker_US.jpg",
+            "text": "POC radio",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        }
+      },
+      "block_order": [
+        "1570b242-47f4-4845-bc70-4a7a20800942",
+        "333876be-6a9d-4b44-9fe3-8e9f0ad69442",
+        "5fb4dfa4-1c43-495e-9f1d-5a3ccc68fdfd",
+        "7d48938e-0dac-483a-b443-43288f4c0cb8"
+      ],
+      "settings": {
+        "container": "container",
+        "bg_color": "",
+        "margin_bottom_mb": 0,
+        "margin_bottom_tab": 20,
+        "margin_bottom": 40,
+        "mg_top_mobile": 0,
+        "mg_top_tablet": 20,
+        "mg_top_desktop": 40,
+        "title": "Support Multiple Devices",
+        "color_title": "",
+        "fontsize_title": 32,
+        "fontsize_title_mo": 24,
+        "margin_bottom_title": 40,
+        "margin_bottom_title_mo": 24,
+        "text": "",
+        "image_list_align": "center",
+        "row_box_num": "4",
+        "box_gap": 24,
+        "row_box_num_mobile": "2",
+        "box_gap_mobile": 12
+      }
+    },
+    "87b7ef20-29ca-4df9-b670-b6a8ea9e5afa": {
+      "type": "text-columns",
+      "blocks": {
+        "template--14612882194565__87b7ef20-29ca-4df9-b670-b6a8ea9e5afa-text_block-1": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/Save_More_with_the_Anker_Corporate_Purchase_Program_-_Anker_US_aad6811c-2802-4589-ba05-331c5cbb5a3a.jpg",
+            "image_mask": "none",
+            "image_width": 300,
+            "header-text": "For Businesses",
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "dfa6da2e-f15f-4529-941e-d037fb676afa": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/Save_More_with_the_Anker_Corporate_Purchase_Program_-_Anker_US_2a0ee742-3453-4ca8-8993-b9bf754c112c.jpg",
+            "image_mask": "none",
+            "image_width": 300,
+            "header-text": "For Dealers",
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "e35988a4-adb8-4ce5-953a-fd113a339945": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/Save_More_with_the_Anker_Corporate_Purchase_Program_-_Anker_US_d4e784c7-8fab-4ea4-af25-5849eb94f8e6.jpg",
+            "image_mask": "none",
+            "image_width": 300,
+            "header-text": "For Schools",
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "a851dbcd-a37a-4bda-9182-41eb3cb3f7c1": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/Save_More_with_the_Anker_Corporate_Purchase_Program_-_Anker_US.jpg",
+            "image_mask": "none",
+            "image_width": 300,
+            "header-text": "For Gifts",
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--14612882194565__87b7ef20-29ca-4df9-b670-b6a8ea9e5afa-text_block-1",
+        "dfa6da2e-f15f-4529-941e-d037fb676afa",
+        "e35988a4-adb8-4ce5-953a-fd113a339945",
+        "a851dbcd-a37a-4bda-9182-41eb3cb3f7c1"
+      ],
+      "disabled": true,
+      "settings": {
+        "style": "none",
+        "bg_color": "",
+        "title": "",
+        "title-buttom": "",
+        "align_text": "center",
+        "content_align_text": "center",
+        "divider": false
+      }
+    },
+    "76a9fa58-beb9-4b57-89d9-58d47e79acbc": {
+      "type": "rich-text",
+      "blocks": {
+        "6ede0d68-30e6-4ff6-b5d9-8bfd39e60392": {
+          "type": "heading",
+          "settings": {
+            "title": "Special Corporate Purchase Offers"
+          }
+        },
+        "3de1441e-64eb-4a84-b9bb-20a0f8851bb5": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Corporate purchase discounts can only be applied on this page<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "6ede0d68-30e6-4ff6-b5d9-8bfd39e60392",
+        "3de1441e-64eb-4a84-b9bb-20a0f8851bb5"
+      ],
+      "disabled": true,
+      "settings": {
+        "padding_top_bottom": 32,
+        "padding_top_bottom_mobile": 32,
+        "bg_color": "",
+        "header_align_text": "center",
+        "content_align_text": "center",
+        "button_align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "061e6af3-4e26-4848-9fd6-b50b8a1998c9": {
+      "type": "contact-form",
+      "settings": {
+        "title": "Special Corporate Purchase Offers",
+        "text": "<p>Corporate purchase discounts can only be applied on this page<\/p>",
+        "show_phone": true,
+        "narrow_column": false
+      }
+    },
+    "dae09485-50f3-493c-bf34-b3ec8ee8530c": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Shop By Network",
+        "home_featured_products": "shop-by-network",
+        "per_row": 3,
+        "rows": 1,
+        "view_all": false,
+        "divider": false
+      }
+    },
+    "c1320cee-9fa3-4879-a4ce-9db3f4284dcf": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Shop By Device",
+        "home_featured_products": "cart-remcommond-product",
+        "per_row": 3,
+        "rows": 1,
+        "view_all": false,
+        "divider": false
+      }
+    },
+    "99bdce53-ed79-4c3d-ba2b-98df7f1b1dcd": {
+      "type": "new-image-text-banner",
+      "settings": {
+        "max_width": "",
+        "page-width": false,
+        "border-radius": true,
+        "image_pc": "shopify:\/\/shop_images\/Frame_196455.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/Frame_196456.jpg",
+        "content": "",
+        "content_left": 10,
+        "content_top": 10,
+        "content_left_mobile": 10,
+        "content_top_mobile": 10
+      }
+    },
+    "106e710d-f941-4e47-b12e-45c44d48b71e": {
+      "type": "new-image-text-banner",
+      "settings": {
+        "max_width": "",
+        "page-width": false,
+        "border-radius": true,
+        "image_pc": "shopify:\/\/shop_images\/aboutus-1920x540-030607_2601e938-1e37-437d-b473-d3b506423029.webp",
+        "image_mobile": "shopify:\/\/shop_images\/aboutus-1920x540-030607_2601e938-1e37-437d-b473-d3b506423029.webp",
+        "content": "",
+        "content_left": 10,
+        "content_top": 10,
+        "content_left_mobile": 10,
+        "content_top_mobile": 10
+      }
+    },
+    "df0a7af0-5b32-447a-9aab-0b2f395433cb": {
+      "type": "text-with-icons",
+      "blocks": {
+        "template--14612882194565__df0a7af0-5b32-447a-9aab-0b2f395433cb-text_block-1": {
+          "type": "text_block",
+          "settings": {
+            "icon": "bills",
+            "html_svg": "",
+            "title": "Example title",
+            "header_color": "",
+            "header_size": 16,
+            "header_line_height": 24,
+            "header_letter_spacing": 0,
+            "header_font_weight": "400",
+            "header_size_mo": 14,
+            "header_line_height_mo": 20,
+            "header_letter_spacing_mo": 0,
+            "header_font_weight_mo": "400",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products.<\/p>",
+            "content_color": "",
+            "content_size": 14,
+            "content_line_height": 20,
+            "content_letter_spacing": 0,
+            "content_font_weight": "400",
+            "content_size_mo": 12,
+            "content_line_height_mo": 18,
+            "content_letter_spacing_mo": 0,
+            "content_font_weight_mo": "400"
+          }
+        },
+        "454ab803-ec5c-4b0f-8842-8f48e9828d4c": {
+          "type": "text_block",
+          "settings": {
+            "icon": "gift",
+            "html_svg": "",
+            "title": "Example title",
+            "header_color": "",
+            "header_size": 16,
+            "header_line_height": 24,
+            "header_letter_spacing": 0,
+            "header_font_weight": "400",
+            "header_size_mo": 14,
+            "header_line_height_mo": 20,
+            "header_letter_spacing_mo": 0,
+            "header_font_weight_mo": "400",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products.<\/p>",
+            "content_color": "",
+            "content_size": 14,
+            "content_line_height": 20,
+            "content_letter_spacing": 0,
+            "content_font_weight": "400",
+            "content_size_mo": 12,
+            "content_line_height_mo": 18,
+            "content_letter_spacing_mo": 0,
+            "content_font_weight_mo": "400"
+          }
+        },
+        "f6b7984f-96d9-4e81-b882-e370b160e2cd": {
+          "type": "text_block",
+          "settings": {
+            "icon": "ribbon",
+            "html_svg": "",
+            "title": "Example title",
+            "header_color": "",
+            "header_size": 16,
+            "header_line_height": 24,
+            "header_letter_spacing": 0,
+            "header_font_weight": "400",
+            "header_size_mo": 14,
+            "header_line_height_mo": 20,
+            "header_letter_spacing_mo": 0,
+            "header_font_weight_mo": "400",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products.<\/p>",
+            "content_color": "",
+            "content_size": 14,
+            "content_line_height": 20,
+            "content_letter_spacing": 0,
+            "content_font_weight": "400",
+            "content_size_mo": 12,
+            "content_line_height_mo": 18,
+            "content_letter_spacing_mo": 0,
+            "content_font_weight_mo": "400"
+          }
+        },
+        "50398a4a-a919-4ef9-8545-884d6cfc76d8": {
+          "type": "text_block",
+          "settings": {
+            "icon": "chat",
+            "html_svg": "",
+            "title": "Example title",
+            "header_color": "",
+            "header_size": 16,
+            "header_line_height": 24,
+            "header_letter_spacing": 0,
+            "header_font_weight": "400",
+            "header_size_mo": 14,
+            "header_line_height_mo": 20,
+            "header_letter_spacing_mo": 0,
+            "header_font_weight_mo": "400",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products.<\/p>",
+            "content_color": "",
+            "content_size": 14,
+            "content_line_height": 20,
+            "content_letter_spacing": 0,
+            "content_font_weight": "400",
+            "content_size_mo": 12,
+            "content_line_height_mo": 18,
+            "content_letter_spacing_mo": 0,
+            "content_font_weight_mo": "400"
+          }
+        }
+      },
+      "block_order": [
+        "template--14612882194565__df0a7af0-5b32-447a-9aab-0b2f395433cb-text_block-1",
+        "454ab803-ec5c-4b0f-8842-8f48e9828d4c",
+        "f6b7984f-96d9-4e81-b882-e370b160e2cd",
+        "50398a4a-a919-4ef9-8545-884d6cfc76d8"
+      ],
+      "settings": {
+        "title": "Why Choose EIOTCLUB?",
+        "align_text": "center",
+        "desktop_columns_per_row": 4,
+        "icon_color": "#000000",
+        "button_label": "",
+        "button_link": "",
+        "divider": false
+      }
+    },
+    "7d760943-4c36-4581-a9d6-f8a290df643f": {
+      "type": "new-image-text-banner",
+      "settings": {
+        "max_width": "",
+        "page-width": false,
+        "border-radius": true,
+        "image_pc": "shopify:\/\/shop_images\/aboutus_480x720_03_2x-06_090c02be-0d24-4291-a7c1-e7c76003c5b1.webp",
+        "image_mobile": "shopify:\/\/shop_images\/aboutus_480x720_03_2x-06_090c02be-0d24-4291-a7c1-e7c76003c5b1.webp",
+        "content": "",
+        "content_left": 10,
+        "content_top": 10,
+        "content_left_mobile": 10,
+        "content_top_mobile": 10
+      }
+    },
+    "34e6c269-ee98-45c0-91cc-b0fe6aa457b6": {
+      "type": "new-image-list",
+      "blocks": {
+        "5888340f-385b-475f-a1e6-487b2cad0ca4": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1-500x500-0504.jpg",
+            "text": "PTZ camera",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "db0e5834-1414-4dc5-a3a6-d8302ea1f46d": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2-500x500-0504.jpg",
+            "text": "Trail camera",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "470a9006-5023-4086-84c6-ffc4954dd39d": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/3-500x500-0504.jpg",
+            "text": "Tracker",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "fe4412ed-1234-4af6-9e5b-cfd2184ad362": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/9-500x500-0515.jpg",
+            "text": "POC radio",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "343abe52-37aa-4a2a-9c5c-f3fc9dfe0b87": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2-500x500-0504.jpg",
+            "text": "Trail camera",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        }
+      },
+      "block_order": [
+        "5888340f-385b-475f-a1e6-487b2cad0ca4",
+        "db0e5834-1414-4dc5-a3a6-d8302ea1f46d",
+        "470a9006-5023-4086-84c6-ffc4954dd39d",
+        "fe4412ed-1234-4af6-9e5b-cfd2184ad362",
+        "343abe52-37aa-4a2a-9c5c-f3fc9dfe0b87"
+      ],
+      "settings": {
+        "container": "container",
+        "bg_color": "",
+        "margin_bottom_mb": 40,
+        "margin_bottom_tab": 40,
+        "margin_bottom": 40,
+        "mg_top_mobile": 40,
+        "mg_top_tablet": 40,
+        "mg_top_desktop": 40,
+        "title": "Support Multiple Devices",
+        "color_title": "",
+        "fontsize_title": 32,
+        "fontsize_title_mo": 24,
+        "margin_bottom_title": 40,
+        "margin_bottom_title_mo": 24,
+        "text": "",
+        "image_list_align": "center",
+        "row_box_num": "5",
+        "box_gap": 24,
+        "row_box_num_mobile": "3",
+        "box_gap_mobile": 24
+      }
+    },
+    "f3e3431c-9789-4eeb-86f9-7716f73d7bb6": {
+      "type": "new-image-list",
+      "blocks": {
+        "cb42c8f9-7c86-4404-8ab5-03fd2a1e1c25": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_195410.png",
+            "text": "",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "490cad13-1e46-4a6f-bd47-481cbd219e02": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_195411.png",
+            "text": "",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "2e547758-837f-47f4-acee-ff4eca31890a": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_195404.png",
+            "text": "",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "6f84c704-d18f-4f61-ad81-00f568bf37ec": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_195412.png",
+            "text": "",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "933b6b83-c787-4f31-b587-f42c36a1c4ed": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/three_logo.png",
+            "text": "",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "95a16453-30f1-42f2-bff3-3683ed6108a0": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_195405.png",
+            "text": "",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "2e4eb43c-d61d-4fc1-a4fc-9433da52455d": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_195406.png",
+            "text": "",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "66fe16c2-1c53-4b2b-a9e7-d2a130f870ae": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_195407.png",
+            "text": "",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "e7f2fb0f-de8a-4a39-acb5-707fa5452bb3": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_195408.png",
+            "text": "",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "4a26d8ad-f0a4-4415-b136-a65c902ce72f": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_195409.png",
+            "text": "",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        }
+      },
+      "block_order": [
+        "cb42c8f9-7c86-4404-8ab5-03fd2a1e1c25",
+        "490cad13-1e46-4a6f-bd47-481cbd219e02",
+        "2e547758-837f-47f4-acee-ff4eca31890a",
+        "6f84c704-d18f-4f61-ad81-00f568bf37ec",
+        "933b6b83-c787-4f31-b587-f42c36a1c4ed",
+        "95a16453-30f1-42f2-bff3-3683ed6108a0",
+        "2e4eb43c-d61d-4fc1-a4fc-9433da52455d",
+        "66fe16c2-1c53-4b2b-a9e7-d2a130f870ae",
+        "e7f2fb0f-de8a-4a39-acb5-707fa5452bb3",
+        "4a26d8ad-f0a4-4415-b136-a65c902ce72f"
+      ],
+      "settings": {
+        "container": "container",
+        "bg_color": "",
+        "margin_bottom_mb": 50,
+        "margin_bottom_tab": 40,
+        "margin_bottom": 50,
+        "mg_top_mobile": 50,
+        "mg_top_tablet": 40,
+        "mg_top_desktop": 50,
+        "title": "Worldwide Partners",
+        "color_title": "",
+        "fontsize_title": 32,
+        "fontsize_title_mo": 24,
+        "margin_bottom_title": 40,
+        "margin_bottom_title_mo": 24,
+        "text": "",
+        "image_list_align": "center",
+        "row_box_num": "5",
+        "box_gap": 24,
+        "row_box_num_mobile": "3",
+        "box_gap_mobile": 8
+      }
+    },
+    "719be643-e166-4c58-8d64-0de553ff63f2": {
+      "type": "rich-text",
+      "blocks": {
+        "template--14612882194565__719be643-e166-4c58-8d64-0de553ff63f2-heading-1": {
+          "type": "heading",
+          "settings": {
+            "title": "Terms & Conditions"
+          }
+        },
+        "template--14612882194565__719be643-e166-4c58-8d64-0de553ff63f2-text-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<ol><li>The corporate purchase discounts offered by EIOTCLUB are based on the Manufacturer's Suggested Retail Price (MSRP) listed on the product page of the EIOTCLUB website. Different purchase quantities will qualify for a discount within a specific range. Please complete the form to inquire about group purchase discounts for specific products.<\/li><li>The EIOTCLUB Cooperation Program does not authorize any form of resale.<\/li><li>EIOTCLUB reserves the right, at its sole discretion, to interpret, amend, or terminate any terms of the Corporate Purchase Program.<\/li><\/ol>"
+          }
+        }
+      },
+      "block_order": [
+        "template--14612882194565__719be643-e166-4c58-8d64-0de553ff63f2-heading-1",
+        "template--14612882194565__719be643-e166-4c58-8d64-0de553ff63f2-text-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "padding_top_bottom": 100,
+        "padding_top_bottom_mobile": 32,
+        "bg_color": "",
+        "header_align_text": "center",
+        "content_align_text": "left",
+        "button_align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "d0c3cf1e-0abf-428e-a78a-26ef38d088d6": {
+      "type": "New-Reviews-Block",
+      "blocks": {
+        "436b26b6-457a-42e3-8faa-0619cda1a466": {
+          "type": "reviews",
+          "settings": {
+            "margin_bottom_banner": 0,
+            "margin_bottom_banner_mo": 0,
+            "image02": "shopify:\/\/shop_images\/unnamed_1.jpg",
+            "name": "LifeHackster ",
+            "rating": "star5",
+            "title": "Unleash Security Anywhere with Reolink Duo & EIOTCLUB SIM Card",
+            "color_title": "#333333",
+            "font_size_title": 20,
+            "font_size_title_mo": 13,
+            "line_height_title": 45,
+            "margin_bottom_title": 0,
+            "line_height_title_mo": 20,
+            "margin_bottom_title_mo": 20,
+            "des": "Today, we're excited to introduce the game-changing Reolink Duo, a 4G cellular connected security camera that revolutionizes property surveillance. This wireless camera operates independently, powered by batteries or solar panels, and requires no internet or Wi-Fi connection. And here's the key to its unparalleled connectivity: the EIOTCLUB SIM Card.\n\nWith the EIOTCLUB SIM Card, you can harness the full potential of the Reolink Duo. Enjoy seamless cellular coverage and uninterrupted monitoring, even in remote areas with no access to power or internet. Simply insert the SIM card, and you're ready to go.\n\nJoin us as we unbox the Reolink Duo, set it up effortlessly with the EIOTCLUB SIM Card, and explore its exceptional video and audio quality. Discover how this true wireless security camera, combined with EIOTCLUB's reliable connectivity, provides an unbeatable solution for securing your properties.\n\nDon't miss out on this groundbreaking combination of the Reolink Duo and EIOTCLUB SIM Card. Elevate your security game today.",
+            "color_des": "#333333",
+            "font_size_des": 14,
+            "font_size_des_mo": 14,
+            "line_height_des": 21,
+            "margin_bottom_des": 33,
+            "line_height_des_mo": 21,
+            "margin_bottom_des_mo": 20,
+            "myproduct": "",
+            "product-button": "",
+            "product-url": ""
+          }
+        },
+        "d9c3c561-15bd-4d07-a110-f1cb0487ba12": {
+          "type": "reviews",
+          "settings": {
+            "margin_bottom_banner": 32,
+            "margin_bottom_banner_mo": 0,
+            "image02": "shopify:\/\/shop_images\/channels4_profile.jpg",
+            "name": "Dustin Warncke",
+            "rating": "star5",
+            "title": "Get SIM Cards Easily and Affordably with EIOTCLUB SIM Kit",
+            "color_title": "#333333",
+            "font_size_title": 20,
+            "font_size_title_mo": 13,
+            "line_height_title": 48,
+            "margin_bottom_title": 0,
+            "line_height_title_mo": 25,
+            "margin_bottom_title_mo": 20,
+            "des": "Looking for a hassle-free and cost-effective way to get a cellular data plan? Look no further! With the EIOTCLUB SIM Kit, you can effortlessly plug into your IoT devices without the need for activation. Experience seamless connectivity and enjoy the convenience of a reliable cellular data plan for your IoT devices.",
+            "color_des": "#333333",
+            "font_size_des": 14,
+            "font_size_des_mo": 14,
+            "line_height_des": 21,
+            "margin_bottom_des": 33,
+            "line_height_des_mo": 21,
+            "margin_bottom_des_mo": 20,
+            "myproduct": "",
+            "product-button": "",
+            "product-url": ""
+          }
+        },
+        "b8416341-fd0a-43db-96e4-0f46be8d3f67": {
+          "type": "reviews",
+          "settings": {
+            "margin_bottom_banner": 0,
+            "margin_bottom_banner_mo": 0,
+            "image02": "shopify:\/\/shop_images\/unnamed.jpg",
+            "name": "TNT - Try New Things",
+            "rating": "star5",
+            "title": "Wireless Communication That's Really Affordable",
+            "color_title": "#333333",
+            "font_size_title": 20,
+            "font_size_title_mo": 14,
+            "line_height_title": 45,
+            "margin_bottom_title": 0,
+            "line_height_title_mo": 20,
+            "margin_bottom_title_mo": 20,
+            "des": "It is almost unbelievable how affordable this system is.  I can get a year's service with plenty of data for around $200.  The google voice number also works really well.  It rings to the phone but also rings to a wall phone in the house and to my wife's cell phone as well.  It does confuse people when they call and she answers, but we love it.\n\nI can't imagine being tethered to any of the major phone companies for thousands per year.  This does take an unlocked phone and a few brain cells, but will save you 75% or more per year.",
+            "color_des": "#333333",
+            "font_size_des": 14,
+            "font_size_des_mo": 14,
+            "line_height_des": 21,
+            "margin_bottom_des": 33,
+            "line_height_des_mo": 21,
+            "margin_bottom_des_mo": 20,
+            "myproduct": "",
+            "product-button": "",
+            "product-url": ""
+          }
+        },
+        "27847d79-0512-487d-9583-418c4ac4b163": {
+          "type": "reviews",
+          "settings": {
+            "margin_bottom_banner": 0,
+            "margin_bottom_banner_mo": 0,
+            "image02": "shopify:\/\/shop_images\/channels4_profile_1.jpg",
+            "name": "WindMule Acres",
+            "rating": "star5",
+            "title": "Experience Optimal Performance with Reolink GO PT and EIOTCLUB SIM Card",
+            "color_title": "#333333",
+            "font_size_title": 20,
+            "font_size_title_mo": 13,
+            "line_height_title": 45,
+            "margin_bottom_title": 0,
+            "line_height_title_mo": 20,
+            "margin_bottom_title_mo": 20,
+            "des": "Are you experiencing poor results with your Reolink GO PT camera due to inadequate network coverage? EIOTCLUB has the solution for you. Our SIM card operates on the Verizon network, providing superior coverage and optimal performance for your camera. Don't let the wrong network ruin your investment - switch to EIOTCLUB SIM card for reliable and uninterrupted connectivity. As a satisfied user of Reolink GO PT with EIOTCLUB SIM card, I highly recommend this combination for anyone looking for reliable and high-performance IoT devices.",
+            "color_des": "#333333",
+            "font_size_des": 14,
+            "font_size_des_mo": 14,
+            "line_height_des": 21,
+            "margin_bottom_des": 33,
+            "line_height_des_mo": 21,
+            "margin_bottom_des_mo": 20,
+            "myproduct": "",
+            "product-button": "",
+            "product-url": ""
+          }
+        },
+        "d2578cbc-de5d-4740-853b-e3aae995c840": {
+          "type": "reviews",
+          "disabled": true,
+          "settings": {
+            "margin_bottom_banner": 0,
+            "margin_bottom_banner_mo": 0,
+            "image02": "shopify:\/\/shop_images\/shutterstock_2205392875_2_1_25559ecd-7c6f-4757-9a94-9cd6a9d8c221.png",
+            "name": "Phil Stracchino",
+            "rating": "star5",
+            "title": "RESPECTS YOUR PRIVACY!",
+            "color_title": "#333333",
+            "font_size_title": 20,
+            "font_size_title_mo": 13,
+            "line_height_title": 45,
+            "margin_bottom_title": 0,
+            "line_height_title_mo": 20,
+            "margin_bottom_title_mo": 20,
+            "des": "I have two reolink camera, I try this company started with $5.99 trial plan sim card, I did the monthly plan for the first two months. No issues so I opted for the annual subscription after that. good service!",
+            "color_des": "#333333",
+            "font_size_des": 14,
+            "font_size_des_mo": 14,
+            "line_height_des": 21,
+            "margin_bottom_des": 33,
+            "line_height_des_mo": 21,
+            "margin_bottom_des_mo": 20,
+            "myproduct": "",
+            "product-button": "",
+            "product-url": ""
+          }
+        },
+        "6ea2a3fd-0264-40db-b2f3-a754fcc8ef96": {
+          "type": "reviews",
+          "disabled": true,
+          "settings": {
+            "margin_bottom_banner": 0,
+            "margin_bottom_banner_mo": 0,
+            "image02": "shopify:\/\/shop_images\/shutterstock_2205392875_2_1_25559ecd-7c6f-4757-9a94-9cd6a9d8c221.png",
+            "name": "Phil Stracchino",
+            "rating": "star5",
+            "title": "RESPECTS YOUR PRIVACY!",
+            "color_title": "#333333",
+            "font_size_title": 20,
+            "font_size_title_mo": 13,
+            "line_height_title": 45,
+            "margin_bottom_title": 0,
+            "line_height_title_mo": 20,
+            "margin_bottom_title_mo": 20,
+            "des": "I have two reolink camera, I try this company started with $5.99 trial plan sim card, I did the monthly plan for the first two months. No issues so I opted for the annual subscription after that. good service!",
+            "color_des": "#333333",
+            "font_size_des": 14,
+            "font_size_des_mo": 14,
+            "line_height_des": 21,
+            "margin_bottom_des": 33,
+            "line_height_des_mo": 21,
+            "margin_bottom_des_mo": 20,
+            "myproduct": "",
+            "product-button": "",
+            "product-url": ""
+          }
+        }
+      },
+      "block_order": [
+        "436b26b6-457a-42e3-8faa-0619cda1a466",
+        "d9c3c561-15bd-4d07-a110-f1cb0487ba12",
+        "b8416341-fd0a-43db-96e4-0f46be8d3f67",
+        "27847d79-0512-487d-9583-418c4ac4b163",
+        "d2578cbc-de5d-4740-853b-e3aae995c840",
+        "6ea2a3fd-0264-40db-b2f3-a754fcc8ef96"
+      ],
+      "settings": {
+        "bg_color": "#f6f6f6",
+        "margin_bottom_mb": 40,
+        "margin_bottom_tab": 40,
+        "margin_bottom": 40,
+        "mg_top_mobile": 40,
+        "mg_top_tablet": 40,
+        "mg_top_desktop": 60,
+        "title": "Listen to Their Voice",
+        "color_title": "#333333",
+        "font_size_title": 32,
+        "font_size_title_mo": 13,
+        "line_height_title": 0,
+        "margin_bottom_title": 45,
+        "line_height_title_mo": 20,
+        "margin_bottom_title_mo": 20,
+        "star_color": "#19a64f"
+      }
+    },
+    "f48ed2cf-b55e-4ae3-9c33-226a739a882b": {
+      "type": "new-image-list",
+      "blocks": {
+        "3128e439-d0a4-464b-a3ed-022ac07c9485": {
+          "type": "large_banner",
+          "settings": {
+            "text": "",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "9c02dd77-27f4-4bfc-981d-8bd3c268376e": {
+          "type": "large_banner",
+          "settings": {
+            "text": "",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "5a7dd521-0a22-413a-bb1f-b989f66ea3ef": {
+          "type": "large_banner",
+          "settings": {
+            "text": "",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "96709d79-357a-49d3-88fc-925abe378d9b": {
+          "type": "large_banner",
+          "settings": {
+            "text": "",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "7cbdcbf3-db2e-432c-8b6e-ae1b54d784a8": {
+          "type": "large_banner",
+          "settings": {
+            "text": "",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "ad55df63-3f6d-489b-8d20-f40cec6852ae": {
+          "type": "large_banner",
+          "settings": {
+            "text": "",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        }
+      },
+      "block_order": [
+        "3128e439-d0a4-464b-a3ed-022ac07c9485",
+        "9c02dd77-27f4-4bfc-981d-8bd3c268376e",
+        "5a7dd521-0a22-413a-bb1f-b989f66ea3ef",
+        "96709d79-357a-49d3-88fc-925abe378d9b",
+        "7cbdcbf3-db2e-432c-8b6e-ae1b54d784a8",
+        "ad55df63-3f6d-489b-8d20-f40cec6852ae"
+      ],
+      "settings": {
+        "container": "container",
+        "bg_color": "",
+        "margin_bottom_mb": 40,
+        "margin_bottom_tab": 40,
+        "margin_bottom": 0,
+        "mg_top_mobile": 40,
+        "mg_top_tablet": 40,
+        "mg_top_desktop": 0,
+        "title": "",
+        "color_title": "",
+        "fontsize_title": 32,
+        "fontsize_title_mo": 24,
+        "margin_bottom_title": 40,
+        "margin_bottom_title_mo": 24,
+        "text": "",
+        "image_list_align": "center",
+        "row_box_num": "3",
+        "box_gap": 24,
+        "row_box_num_mobile": "2",
+        "box_gap_mobile": 12
+      }
+    },
+    "88baed77-badf-4580-8a81-f5d64c332e6f": {
+      "type": "text-columns",
+      "blocks": {
+        "template--14612882194565__88baed77-badf-4580-8a81-f5d64c332e6f-text_block-1": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image_mask": "none",
+            "image_width": 650,
+            "header-text": "",
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "a8a2e192-3b2a-4ffa-b478-f8a7b1fdf008": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image_mask": "none",
+            "image_width": 650,
+            "header-text": "",
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "ef8ade3d-33c0-4012-bb58-732e760fd4fe": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image_mask": "none",
+            "image_width": 650,
+            "header-text": "",
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "7e174ace-70b5-4547-b232-32503f711838": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image_mask": "none",
+            "image_width": 650,
+            "header-text": "",
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "f7a904b5-0ebb-4bfd-ad3e-7e9146d70e27": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image_mask": "none",
+            "image_width": 650,
+            "header-text": "",
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "37f8073b-560e-4548-9e2a-71564af43e21": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image_mask": "none",
+            "image_width": 650,
+            "header-text": "",
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--14612882194565__88baed77-badf-4580-8a81-f5d64c332e6f-text_block-1",
+        "a8a2e192-3b2a-4ffa-b478-f8a7b1fdf008",
+        "ef8ade3d-33c0-4012-bb58-732e760fd4fe",
+        "7e174ace-70b5-4547-b232-32503f711838",
+        "f7a904b5-0ebb-4bfd-ad3e-7e9146d70e27",
+        "37f8073b-560e-4548-9e2a-71564af43e21"
+      ],
+      "disabled": true,
+      "settings": {
+        "style": "none",
+        "bg_color": "",
+        "title": "",
+        "title-buttom": "",
+        "align_text": "center",
+        "content_align_text": "center",
+        "divider": false
+      }
+    },
+    "96f91454-fa7a-4b5f-b40f-00e04fb8020b": {
+      "type": "faq",
+      "blocks": {
+        "template--14584566153349__96f91454-fa7a-4b5f-b40f-00e04fb8020b-1687154017245602f8-0": {
+          "type": "question",
+          "settings": {
+            "title": "How do l activate my EIOTCLUB SIM card?",
+            "text": "<p>Activating your SlM card is straightforward and only takes a few minutes. Just plug in your device and it can be usedWITHOUT activation.And then, insert the ElOTCLUB SIM card into your device and restart it. That's it! lf you neednelp along the way, you can reach us right away on any page via the FAQ buton in the bottom right corner<\/p>",
+            "expand_faq": false
+          }
+        },
+        "template--14584566153349__96f91454-fa7a-4b5f-b40f-00e04fb8020b-1687154017245602f8-1": {
+          "type": "question",
+          "settings": {
+            "title": "What are EIOTCLUB's SIM card sizes?",
+            "text": "<p>Our SlM cards are triple pre-cut, standard, micro, and nano sized. Punch out the size you need for your wirelessdevice.<\/p>",
+            "expand_faq": false
+          }
+        },
+        "52aae928-3aba-412a-b987-c66cfe474a61": {
+          "type": "question",
+          "settings": {
+            "title": "How do I know if EIOTCLUB will work for me?",
+            "text": "<p>There are a few easy ways to check if ElOTCLUB is the perfect fit for you:<br>1.Check the coverage map to verify the service in your area. Please be aware that outside factors like terrain,building structures, weather, and other conditions may also interfere with the actual service available. When youintend to travel out from your regular location, consult the coverage map again to check for service in the areas towhich you will travel.<br>\n2.lf you are bringing your own phone, make sure your device is compatible with ElOTCLUB. It must be GSM.VoLTE,use our Bring Your Own Phone checker to confirm.3.lf you are bringing your own phone, make sure your device is unlocked<\/p>",
+            "expand_faq": false
+          }
+        }
+      },
+      "block_order": [
+        "template--14584566153349__96f91454-fa7a-4b5f-b40f-00e04fb8020b-1687154017245602f8-0",
+        "template--14584566153349__96f91454-fa7a-4b5f-b40f-00e04fb8020b-1687154017245602f8-1",
+        "52aae928-3aba-412a-b987-c66cfe474a61"
+      ],
+      "settings": {
+        "title": "FAQs"
+      }
+    },
+    "c3790607-4351-46ad-8438-a7c9dc314b92": {
+      "type": "text-with-icons",
+      "blocks": {
+        "template--14614457811077__c3790607-4351-46ad-8438-a7c9dc314b92-text_block-1": {
+          "type": "text_block",
+          "settings": {
+            "icon": "chat",
+            "html_svg": "<svg width=\"52\" height=\"52\" viewbox=\"0 0 52 52\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M9.26378 15.485C9.05118 15.544 8.85776 15.6577 8.70284 15.8148C8.51408 16.0452 8.40919 16.3328 8.40538 16.6307C7.60647 24.3053 7.58947 28.9118 8.40538 36.5303C8.40578 36.8013 8.48792 37.0658 8.64107 37.2893C8.79422 37.5128 9.01125 37.6849 9.26378 37.7831L25.4017 44.0655L25.8862 44.1998L26.3723 44.0638L42.5103 37.7848C42.761 37.6839 42.9762 37.5111 43.129 37.2882C43.2817 37.0653 43.3651 36.8022 43.3687 36.532C44.2186 28.82 44.2288 24.3733 43.3687 16.7327C43.3918 16.3987 43.2853 16.0687 43.0712 15.8114C42.9302 15.6148 42.7354 15.4631 42.5103 15.3745V15.3779\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M35.2371 20.2156L26.3726 23.6663H25.402L9.26406 17.3855C9.05243 17.3003 8.8654 17.1637 8.71995 16.988C8.57451 16.8123 8.47524 16.603 8.43115 16.3792C8.47381 16.1695 8.56719 15.9734 8.70312 15.808C8.85843 15.6522 9.05181 15.5397 9.26406 15.4817L17.333 12.3421M35.2371 20.2156L42.5123 17.3855C42.7258 17.3023 42.9146 17.1661 43.0609 16.9897C43.2072 16.8134 43.3062 16.6027 43.3486 16.3775H43.3452C43.3023 16.1684 43.2089 15.9729 43.0732 15.808C42.9319 15.6118 42.7372 15.4602 42.5123 15.3712L26.3743 9.2026C26.2215 9.13501 26.0562 9.1001 25.889 9.1001C25.7219 9.1001 25.5566 9.13501 25.4037 9.2026L17.333 12.3421M35.2371 20.2156L17.333 12.3421M25.8882 44.1999V23.6663M31.8375 35.0805L38.6367 32.5307\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<\/svg>",
+            "title": "Fast  Shipping",
+            "header_color": "",
+            "header_size": 16,
+            "header_line_height": 36,
+            "header_letter_spacing": 0,
+            "header_font_weight": "400",
+            "header_size_mo": 16,
+            "header_line_height_mo": 36,
+            "header_letter_spacing_mo": 0,
+            "header_font_weight_mo": "400",
+            "text": "",
+            "content_color": "",
+            "content_size": 16,
+            "content_line_height": 36,
+            "content_letter_spacing": 0,
+            "content_font_weight": "400",
+            "content_size_mo": 16,
+            "content_line_height_mo": 36,
+            "content_letter_spacing_mo": 0,
+            "content_font_weight_mo": "400"
+          }
+        },
+        "template--14614457811077__c3790607-4351-46ad-8438-a7c9dc314b92-text_block-2": {
+          "type": "text_block",
+          "settings": {
+            "icon": "chat",
+            "html_svg": "<svg width=\"52\" height=\"52\" viewbox=\"0 0 52 52\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M9 29.6819C9 23.0729 13.4066 21.4219 15.6108 21.4219C19.5738 21.4219 20.5654 24.7273 20.5654 26.3766V32.9873C20.5654 36.9504 17.2601 37.942 15.6091 37.942C13.4066 37.942 9 36.2893 9 29.6819V29.6819ZM43.693 29.6819C43.693 23.0729 39.2864 21.4219 37.0822 21.4219C33.1191 21.4219 32.1292 24.7273 32.1292 26.3766V32.9873C32.1292 36.9504 35.4346 37.942 37.0839 37.942C39.2864 37.942 43.693 36.2893 43.693 29.6819Z\" stroke=\"#07c160\" stroke-width=\"3\"><\/path>\n<path d=\"M10.123 24.8254C10.3659 16.8554 14.4217 8 26.3464 8C38.2525 8 42.3134 16.8233 42.5646 24.7815M42.7434 34.3368C42.7434 34.3368 42.9694 39.5292 40.3032 41.7907C37.6386 44.0438 30.9098 43.9999 30.9098 43.9999\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\"><\/path>\n<\/svg>",
+            "title": "Lifetime Customer Support",
+            "header_color": "",
+            "header_size": 16,
+            "header_line_height": 36,
+            "header_letter_spacing": 0,
+            "header_font_weight": "400",
+            "header_size_mo": 16,
+            "header_line_height_mo": 36,
+            "header_letter_spacing_mo": 0,
+            "header_font_weight_mo": "400",
+            "text": "",
+            "content_color": "",
+            "content_size": 16,
+            "content_line_height": 36,
+            "content_letter_spacing": 0,
+            "content_font_weight": "400",
+            "content_size_mo": 16,
+            "content_line_height_mo": 36,
+            "content_letter_spacing_mo": 0,
+            "content_font_weight_mo": "400"
+          }
+        },
+        "template--14614457811077__c3790607-4351-46ad-8438-a7c9dc314b92-text_block-3": {
+          "type": "text_block",
+          "settings": {
+            "icon": "chat",
+            "html_svg": "<svg width=\"52\" height=\"52\" viewbox=\"0 0 52 52\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M32.5 35.104H45.5\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M44.75 27.8541V12.9375C44.75 11.1426 43.295 9.6875 41.5 9.6875H28.0833H10.75C8.95508 9.6875 7.5 11.1426 7.5 12.9375V40.8541C7.5 42.6491 8.95508 44.1041 10.75 44.1041H32.9265\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M37.9167 40.5208L32.5 35.1042L37.9162 29.6875\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M21.8182 16.6875V34.6875\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M26.3182 18.324C26.3182 18.324 22.2152 18.324 20.1818 18.324C18.1484 18.324 16.5 19.9724 16.5 22.0058C16.5 24.0392 18.1484 25.6876 20.1818 25.6876\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M17.3182 33.0511C17.3182 33.0511 21.4211 33.0511 23.4545 33.0511C25.488 33.0511 27.1364 31.4027 27.1364 29.3693C27.1364 27.3359 25.488 25.6875 23.4545 25.6875H20.1818\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<\/svg>",
+            "title": "10-Day Money-Back Guarantee",
+            "header_color": "",
+            "header_size": 16,
+            "header_line_height": 36,
+            "header_letter_spacing": 0,
+            "header_font_weight": "400",
+            "header_size_mo": 16,
+            "header_line_height_mo": 36,
+            "header_letter_spacing_mo": 0,
+            "header_font_weight_mo": "400",
+            "text": "",
+            "content_color": "",
+            "content_size": 16,
+            "content_line_height": 36,
+            "content_letter_spacing": 0,
+            "content_font_weight": "400",
+            "content_size_mo": 16,
+            "content_line_height_mo": 36,
+            "content_letter_spacing_mo": 0,
+            "content_font_weight_mo": "400"
+          }
+        },
+        "eee922ef-92d7-4917-8732-966b4f0b4d37": {
+          "type": "text_block",
+          "settings": {
+            "icon": "chat",
+            "html_svg": "<svg width=\"52\" height=\"52\" viewbox=\"0 0 52 52\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M5.6665 12C5.6665 10.8954 6.56193 10 7.6665 10H43.6665C44.7711 10 45.6665 10.8954 45.6665 12V40C45.6665 41.1046 44.7711 42 43.6665 42H7.6665C6.56193 42 5.6665 41.1046 5.6665 40V12Z\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M5.6665 17.9995H45.6665\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"square\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M28.6665 34H37.6665\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<\/svg>",
+            "title": "Secure payment",
+            "header_color": "",
+            "header_size": 16,
+            "header_line_height": 36,
+            "header_letter_spacing": 0,
+            "header_font_weight": "400",
+            "header_size_mo": 16,
+            "header_line_height_mo": 36,
+            "header_letter_spacing_mo": 0,
+            "header_font_weight_mo": "400",
+            "text": "",
+            "content_color": "",
+            "content_size": 16,
+            "content_line_height": 36,
+            "content_letter_spacing": 0,
+            "content_font_weight": "400",
+            "content_size_mo": 16,
+            "content_line_height_mo": 36,
+            "content_letter_spacing_mo": 0,
+            "content_font_weight_mo": "400"
+          }
+        }
+      },
+      "block_order": [
+        "template--14614457811077__c3790607-4351-46ad-8438-a7c9dc314b92-text_block-1",
+        "template--14614457811077__c3790607-4351-46ad-8438-a7c9dc314b92-text_block-2",
+        "template--14614457811077__c3790607-4351-46ad-8438-a7c9dc314b92-text_block-3",
+        "eee922ef-92d7-4917-8732-966b4f0b4d37"
+      ],
+      "settings": {
+        "title": "",
+        "align_text": "center",
+        "desktop_columns_per_row": 3,
+        "icon_color": "#000",
+        "button_label": "",
+        "button_link": "",
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "35d05352-7b96-44ca-b8e5-bbe6879725c5",
+    "442d110a-5d43-4fb0-9073-bd84e7a37469",
+    "79351e4c-4000-40c5-b1d4-d9c8b06408c6",
+    "87b7ef20-29ca-4df9-b670-b6a8ea9e5afa",
+    "76a9fa58-beb9-4b57-89d9-58d47e79acbc",
+    "061e6af3-4e26-4848-9fd6-b50b8a1998c9",
+    "dae09485-50f3-493c-bf34-b3ec8ee8530c",
+    "c1320cee-9fa3-4879-a4ce-9db3f4284dcf",
+    "99bdce53-ed79-4c3d-ba2b-98df7f1b1dcd",
+    "106e710d-f941-4e47-b12e-45c44d48b71e",
+    "df0a7af0-5b32-447a-9aab-0b2f395433cb",
+    "7d760943-4c36-4581-a9d6-f8a290df643f",
+    "34e6c269-ee98-45c0-91cc-b0fe6aa457b6",
+    "f3e3431c-9789-4eeb-86f9-7716f73d7bb6",
+    "719be643-e166-4c58-8d64-0de553ff63f2",
+    "d0c3cf1e-0abf-428e-a78a-26ef38d088d6",
+    "f48ed2cf-b55e-4ae3-9c33-226a739a882b",
+    "88baed77-badf-4580-8a81-f5d64c332e6f",
+    "96f91454-fa7a-4b5f-b40f-00e04fb8020b",
+    "c3790607-4351-46ad-8438-a7c9dc314b92"
+  ]
+}

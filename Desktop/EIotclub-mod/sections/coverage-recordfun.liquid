@@ -1,0 +1,222 @@
+{{ 'section-coverage-recordfun.css' | asset_url | stylesheet_tag }}
+
+{% liquid
+  assign secid = section.id | split: '__'
+  assign secidlast = secid[1] | replace: '-', '_'
+%}
+<style>
+   #coveragefun-out-{{ secidlast }}{
+     {% if section.settings.bg_image %}
+       background: url("{{ section.settings.bg_image | image_url }}") no-repeat;
+       background-size: 100% auto;
+       background-position: center top;
+     {% endif %}
+   }
+
+  {% if section.settings.bg_imagemb %}
+   @media (max-width:768px){
+      #coveragefun-out-{{ secidlast }}{
+       background-image: url("{{ section.settings.bg_imagemb | image_url }}");
+       background-position: top;
+     background-size: auto;
+   }
+   }
+  {% endif %}
+</style>
+<div id="coveragefun-out-{{ secidlast }}">
+  <div class="coveragefun-outbox">
+    <div class="contain-index">
+      {% if section.settings.title != blank %}
+        <div class="coveragefun-toptitle common-title animate-ele">{{ section.settings.title }}</div>
+      {% endif %}
+
+      {% if section.settings.content != blank %}
+      <div class="coveragefun-text-wrapper animate-ele">{{ section.settings.content }}</div>
+      {% endif %}
+
+      <div class="coveragefun-content animate-ele common-swiper-container">
+        <div class="coveragefun-{{ secidlast }} swiper">
+          <div class="swiper-scrollbar hide-pc swiper-scrollbar-{{ secidlast }}"></div>
+          <div class="swiper-wrapper">
+            {% for block in section.blocks %}
+              {% assign product = all_products[block.settings.product] %}
+              <div class="swiper-slide">
+                <a href="{{ product.url }}">
+                  <div class="coveragefun-proitem">
+                    <div class="coveragefun-proitem-img">
+                      {% if block.settings.image %}
+                        <img class="img-bg" src="{{ block.settings.image | img_url:'master' }}">
+                      {% endif %}
+                      <div class="coveragefun-cart-btn">
+                        <img
+                          alt="cart"
+                          src="https://cdn.shopify.com/s/files/1/0558/0708/2629/files/mulist_4.png?v=1709101569"
+                        >
+                      </div>
+                    </div>
+                    {% comment %}
+                      <div class="mulcon-proitem-price ">
+                        <span class="mulcon-price-original">{{ product.price | money }}</span>
+                        {%- if product.price_varies -%}
+                          <span class="mulcon-price-old">{{ product.compare_at_price | money }}</span>
+                        {%- endif %}
+                      </div>
+                    {% endcomment %}
+                    <div class="coveragefun-itemtext">
+                      {% if block.settings.hottext != blank %}
+                        <span
+                          class="coveragefun-tag-deal"
+                          style="color:{{ block.settings.hottextcolor }};background:{{ block.settings.hotcolor }}"
+                        >
+                          {{- block.settings.hottext -}}
+                        </span>
+                      {% endif %}
+                      {% if block.settings.title != blank %}
+                        <div class="coveragefun-title">{{ block.settings.title }}</div>
+                      {% else %}
+                        <div class="coveragefun-title">{{ product.title }}</div>
+                      {% endif %}
+                      {% if block.settings.subtitle != blank %}
+                        <div class="coveragefun-subtitle">{{ block.settings.subtitle }}</div>
+                      {% endif %}
+                    </div>
+                  </div>
+                </a>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+        {% if section.blocks.size > 4 %}
+          <div class="pc-show">
+            <div class="swiper-button-prev common-swiper-arrow-btn">
+              {% render 'swiper-prev-icon' %}
+            </div>
+            <div class="swiper-button-next common-swiper-arrow-btn">
+              {% render 'swiper-next-icon' %}
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $(function(){
+      var coveragefun_{{secidlast}} = new Swiper ('.coveragefun-{{secidlast}}', {
+          slidesPerView : 4,
+          spaceBetween: '2.2%',
+          observer: true,
+          {% comment %} loop:true, {% endcomment %}
+          observeParents: true,
+          scrollbar: {
+              el: '.swiper-scrollbar-{{ secidlast }}',
+              dragSize:89
+          },
+          breakpoints: {
+              10: {
+                  slidesPerView : 1.5,
+                  loop:false,
+                  spaceBetween: '2.5%',
+              },
+              550: {
+                  slidesPerView : 2,
+                  loop:false,
+              },
+              769: {  //当屏幕宽度大于等于769
+                  slidesPerView: 3,
+                  navigation: {
+                    nextEl: '.coveragefun-content .swiper-button-next',
+                    prevEl: '.coveragefun-content .swiper-button-prev',
+                  }
+              },
+              994: {
+                  slidesPerView : 4,
+                  navigation: {
+                    nextEl: '.coveragefun-content .swiper-button-next',
+                    prevEl: '.coveragefun-content .swiper-button-prev',
+                  }
+              }
+          }
+
+      });
+  })
+</script>
+
+{% schema %}
+{
+  "name": "Coverage device for you",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title?"
+    },
+    {
+      "type": "text",
+      "id": "content",
+      "label": "Content?"
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_imagemb",
+      "label": "Background Image(mobile)"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "block",
+      "name": "block",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "product"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "title"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "subtitle"
+        },
+        {
+          "type": "text",
+          "id": "hottext",
+          "label": "hottext"
+        },
+        {
+          "type": "color",
+          "id": "hotcolor",
+          "label": "Deal background color?",
+          "default": "#FFCC00"
+        },
+        {
+          "type": "color",
+          "id": "hottextcolor",
+          "label": "Deal text color?",
+          "default": "#282828"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Coverage device for you",
+      "category": "HO-layout"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,75 @@
+{% liquid
+  assign lasttag = ''
+  for ntag in product.tags
+    if ntag contains "Popular Areas-"
+    assign splstr = ntag | split: "-"
+    assign lasstr = splstr[1] | append:'|'
+    assign lasttag = lasttag | append: lasstr
+    endif
+  endfor
+%}
+<div class="mulca-conitsp-proitem" data-title="{{ product.title }}" data-tags="{{ lasttag }}">
+    
+  <div class="mulcon-proitem-img">
+    <a href="{{  product.url  }}"><img src="{% if product.metafields.custom.grid_image != blank %}{{ product.metafields.custom.grid_image | image_url }}{% else %}{{ product.featured_image | image_url }}{% endif %}" alt="{{ product.featured_image.alt }}" /></a>
+    <div class="colhot-tagbox">
+      {% assign total_inventory = 0 %}
+      {% for variant in product.variants %}
+        {% assign total_inventory = total_inventory | plus: variant.inventory_quantity %}
+      {% endfor %}
+
+      {% if product.tags contains "new" %}
+        <span class="mulconpro-tag mulconpro-tag-new">New</span>
+      {% elsif product.tags contains "deal" %}
+         <span class="mulconpro-tag mulconpro-tag-deal">Deal</span>
+      {% endif %}
+      {% if product.metafields.custom.original_quantity != blank %}<span class="colhotsales"><img alt src="https://cdn.shopify.com/s/files/1/0558/0708/2629/files/hot-sale2.png?v=1716601578"/>{{ product.metafields.custom.original_quantity | minus: total_inventory }} Sold</span>{% endif %}
+    </div>
+  </div>
+  <div class="mulcon-proitem-text">   
+
+  {% if product.metafields.custom.collection_toptitle != blank %}<div class="mulcon-proitem-toptitle">{{ product.metafields.custom.collection_toptitle }}</div>{% endif %}
+ <div class="mulcon-proitem-title"><a href="{{  product.url  }}">{% if product.metafields.custom.short_title != blank %}{{ product.metafields.custom.short_title }}{% else %}{{ product.title }}{% endif %}</a></div>
+  {% if product.metafields.custom.collection_subtitle != blank %}<div class="mulcon-proitem-subtitle">{{ product.metafields.custom.collection_subtitle }}</div>{% endif %}
+  <div class="colgrid-review"><div class='jdgm-widget jdgm-preview-badge'>{{ product.metafields.judgeme.badge }}</div></div>
+ <div class="mulcon-proitem-price">
+  {%- capture form_id -%}AddToCartForm-{{ product.id }}{%- endcapture -%}
+  {%- capture class_value -%}product-single__form{%- endcapture -%}
+  {% assign current_variant = product.selected_or_first_available_variant  %}
+  {% form 'product', product, id: form_id, class: class_value %}
+      <button
+        {% if product.empty? %}type="button"{% else %}type="submit"{% endif %}
+        name="add"
+        data-add-to-cart
+        class="add-to-cart-col addcartcustom js-drawer-open-cart" data-product-id="{{ current_variant.id }}"
+        {% unless current_variant.available %} disabled="disabled"{% endunless %}>
+        <span data-add-to-cart-text data-default-text="Add to cart">
+          <img alt="cart" src="https://cdn.shopify.com/s/files/1/0558/0708/2629/files/colcartlogo.png?v=1716792532"/>
+        </span>
+      </button>
+
+  
+    <select name="id" data-product-select class="product-single__variants no-js">
+      {%- for variant in product.variants -%}
+        {% if variant.available %}
+          <option {% if variant == product.selected_or_first_available_variant %}
+            selected="selected" {% endif %}
+            value="{{ variant.id }}">
+            {{ variant.title }} - {{ variant.price | money_with_currency }}
+          </option>
+        {% else %}
+          <option disabled="disabled">
+            {{ variant.title }} - {{ 'products.product.sold_out' | t }}
+          </option>
+        {% endif %}
+      {%- endfor -%}
+    </select>
+  {% endform %}
+  
+  
+  
+  <span class="mulcon-price-original" {% if pricecolor != blank and product.compare_at_price %}style="color:{{ pricecolor }}"{% endif %}>{{ product.price | money }}</span>{% if product.compare_at_price %}<span class="mulcon-price-old">{{ product.compare_at_price | money }}</span>{% endif %}</div>              
+   </div>
+
+
+ </div>

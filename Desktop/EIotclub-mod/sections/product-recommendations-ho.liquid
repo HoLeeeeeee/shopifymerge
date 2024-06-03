@@ -1,0 +1,407 @@
+{% liquid
+  assign secid = section.id | split:"__" 
+  assign secidlast = secid[1] | replace: "-","_"
+%}
+{%- liquid
+  assign recommend_products = true
+  
+  if recommendations.products and recommendations.products_count > 0
+    assign related_collection = recommendations
+  endif
+  
+  assign number_of_products = section.settings.related_count
+-%}
+
+{% if section.settings.collection %}
+  <div class="cus-recommend-colbox">
+    <div class="contain-index">
+    {% if section.settings.product_recommendations_heading != blank %}
+        <div class="indexmulticate-toptitle animate-ele">{{ section.settings.product_recommendations_heading }}</div> 
+    {% endif %}
+      <div class="indexmulticate-content animate-ele">
+        {% assign collection = collections[section.settings.collection] %}
+     <div class="multicate-conitem  active">
+         <div class="swiper-button-prev multicabtn multicaprev-{{ secidlast }}"><svg width="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="25" cy="25" r="24" stroke="currentColor" stroke-width="2"/>
+<path d="M26.2939 19.2939L20.2939 25.2939L26.2939 31.2939" stroke="currentColor" stroke-width="2"/>
+</svg>
+</div>
+       <div class="swiper-button-next multicabtn multicanext-{{ secidlast }}"><svg width="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="25" cy="25" r="24" transform="matrix(-1 0 0 1 50 0)" stroke="currentColor" stroke-width="2"/>
+<path d="M23.7061 19.2939L29.7061 25.2939L23.7061 31.2939" stroke="currentColor" stroke-width="2"/>
+</svg>
+</div>
+     <div class="mulca-conitsp-{{ secidlast }} swiper">
+<div class="swiper-scrollbar hide-pc swiper-scrollbar-{{ secidlast }}"></div>
+    <div class="swiper-wrapper">  
+      {% for product in collection.products limit: number_of_products %} 
+      <div class="swiper-slide">
+       <div class="mulca-conitsp-proitem{% if product.metafields.custom.griditem_bgimage %} conitsp-proitem-hasbgimg{% endif %}">
+        {% if product.metafields.custom.griditem_bgimage %}
+          <div class="onitsp-proitem-bgimg" {% if product.metafields.custom.griditem_bgimage %}style="background-image:url('{{ product.metafields.custom.griditem_bgimage | image_url }}')"{% endif %}></div>
+        {% endif %}
+
+          <div class="mulcon-proitem-img">
+            <a href="{{  product.url  }}"><img src="{% if product.metafields.custom.grid_image != blank %}{{ product.metafields.custom.grid_image | image_url }}{% else %}{{ product.featured_image | image_url }}{% endif %}" alt="{{ product.featured_image.alt }}" /></a>
+            {% if product.tags contains "new" %}
+              <span class="mulconpro-tag mulconpro-tag-new">New</span>
+            {% elsif product.tags contains "deal" %}
+               <span class="mulconpro-tag mulconpro-tag-deal">Deal</span>
+            {% endif %}
+          </div>
+
+         <div class="mulcon-proitem-title"> <a href="{{  product.url  }}">{% if product.metafields.custom.short_title != blank %}{{ product.metafields.custom.short_title }}{% else %}{{ product.title }}{% endif %}</a></div>
+          {% if product.metafields.custom.collection_subtitle != blank %}<div class="mulcon-proitem-subtitle">{{ product.metafields.custom.collection_subtitle }}</div>{% endif %}
+         <div class="mulcon-proitem-price">
+          {%- capture form_id -%}AddToCartForm-{{ product.id }}{%- endcapture -%}
+  {%- capture class_value -%}product-single__form{%- endcapture -%}
+  {% assign current_variant = product.selected_or_first_available_variant  %}
+  {% form 'product', product, id: form_id, class: class_value %}
+      <button
+        {% if product.empty? %}type="button"{% else %}type="submit"{% endif %}
+        name="add"
+        data-add-to-cart
+        class="add-to-cart-col addcartcustom js-drawer-open-cart" data-product-id="{{ current_variant.id }}"
+        {% unless current_variant.available %} disabled="disabled"{% endunless %}>
+        <span data-add-to-cart-text data-default-text="Add to cart">
+          <b><img alt="cart" src="https://cdn.shopify.com/s/files/1/0558/0708/2629/files/mulist_4.png?v=1709101569"/></b>
+        </span>
+      </button>
+
+  
+    <select name="id" data-product-select class="product-single__variants no-js">
+      {%- for variant in product.variants -%}
+        {% if variant.available %}
+          <option {% if variant == product.selected_or_first_available_variant %}
+            selected="selected" {% endif %}
+            value="{{ variant.id }}">
+            {{ variant.title }} - {{ variant.price | money_with_currency }}
+          </option>
+        {% else %}
+          <option disabled="disabled">
+            {{ variant.title }} - {{ 'products.product.sold_out' | t }}
+          </option>
+        {% endif %}
+      {%- endfor -%}
+    </select>
+  {% endform %}
+
+          <span class="mulcon-price-original">{{ product.price | money }}</span>{% if product.price_varies %}<span class="mulcon-price-old">{{ product.compare_at_price | money }}</span>{% endif %}</div>
+              
+
+
+         </div>
+      </div>
+         {% endfor %}
+    </div>
+  </div>
+  
+     </div>
+        <script>   
+  $(function(){
+      var conitsp_{{secidlast}} = new Swiper ('.mulca-conitsp-{{ secidlast }}', {
+    slidesPerView : {{ section.settings.products_per_row }},
+    spaceBetween: '2.2%',
+    observer: true,  //开启动态检查器，监测swiper和slide
+    observeParents: true, 
+    navigation: {
+		nextEl: '.multicanext-{{ secidlast }}',
+		prevEl: '.multicaprev-{{ secidlast }}',
+	},
+     scrollbar: {
+      el: '.swiper-scrollbar-{{ secidlast }}',dragSize:89
+    }
+    ,
+    breakpoints: { 
+      10: {  
+       slidesPerView : 1.5,
+         spaceBetween: '2.5%',
+      },
+      550: { 
+       slidesPerView : 2,
+      },
+      769: {  //当屏幕宽度大于等于769
+        slidesPerView: 3,
+      },
+      994: { 
+        slidesPerView : 4,
+      }
+    }
+
+  });
+  })
+
+</script>
+
+  </div>
+  </div>
+  </div>
+
+  
+{% else %}
+<product-recommendations
+  class="cus-recommend-colbox"
+    id="Recommendations-{{ section.id }}"
+    data-section-id="{{ section.id }}"
+    data-section-type="product-recommendations"
+    data-enable="{{ recommend_products }}"
+    data-product-id="{{ product.id }}"
+    data-intent="related"
+    data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ number_of_products }}"
+    data-limit="{{ number_of_products }}">
+   <div class="contain-index">
+    {% if section.settings.product_recommendations_heading != blank %}
+        <div class="indexmulticate-toptitle animate-ele">{{ section.settings.product_recommendations_heading }}</div> 
+    {% endif %}
+      <div class="indexmulticate-content animate-ele">
+        {% assign collection = collections[section.settings.collection] %}
+     <div class="multicate-conitem  active">
+         <div class="swiper-button-prev multicabtn multicaprev-{{ secidlast }}"><svg width="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="25" cy="25" r="24" stroke="currentColor" stroke-width="2"/>
+<path d="M26.2939 19.2939L20.2939 25.2939L26.2939 31.2939" stroke="currentColor" stroke-width="2"/>
+</svg>
+</div>
+       <div class="swiper-button-next multicabtn multicanext-{{ secidlast }}"><svg width="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="25" cy="25" r="24" transform="matrix(-1 0 0 1 50 0)" stroke="currentColor" stroke-width="2"/>
+<path d="M23.7061 19.2939L29.7061 25.2939L23.7061 31.2939" stroke="currentColor" stroke-width="2"/>
+</svg>
+</div>
+     <div class="mulca-conitsp-{{ secidlast }} swiper">
+<div class="swiper-scrollbar hide-pc swiper-scrollbar-{{ secidlast }}"></div>
+    <div class="swiper-wrapper">  
+      {% for product in collection.products limit: number_of_products %} 
+      <div class="swiper-slide">
+       <div class="mulca-conitsp-proitem{% if product.metafields.custom.griditem_bgimage %} conitsp-proitem-hasbgimg{% endif %}">
+        {% if product.metafields.custom.griditem_bgimage %}
+          <div class="onitsp-proitem-bgimg" {% if product.metafields.custom.griditem_bgimage %}style="background-image:url('{{ product.metafields.custom.griditem_bgimage | image_url }}')"{% endif %}></div>
+        {% endif %}
+          <div class="mulcon-proitem-img">
+            <a href="{{  product.url  }}"><img src="{% if product.metafields.custom.grid_image != blank %}{{ product.metafields.custom.grid_image | image_url }}{% else %}{{ product.featured_image | image_url }}{% endif %}" alt="{{ product.featured_image.alt }}" /></a>
+            {% if product.tags contains "new" %}
+              <span class="mulconpro-tag mulconpro-tag-new">New</span>
+            {% elsif product.tags contains "deal" %}
+               <span class="mulconpro-tag mulconpro-tag-deal">Deal</span>
+            {% endif %}
+          </div>
+
+         <div class="mulcon-proitem-title"> <a href="{{  product.url  }}">{% if product.metafields.custom.short_title != blank %}{{ product.metafields.custom.short_title }}{% else %}{{ product.title }}{% endif %}</a></div>
+          {% if product.metafields.custom.collection_subtitle != blank %}<div class="mulcon-proitem-subtitle">{{ product.metafields.custom.collection_subtitle }}</div>{% endif %}
+         <div class="mulcon-proitem-price">
+          {%- capture form_id -%}AddToCartForm-{{ product.id }}{%- endcapture -%}
+  {%- capture class_value -%}product-single__form{%- endcapture -%}
+  {% assign current_variant = product.selected_or_first_available_variant  %}
+  {% form 'product', product, id: form_id, class: class_value %}
+      <button
+        {% if product.empty? %}type="button"{% else %}type="submit"{% endif %}
+        name="add"
+        data-add-to-cart
+        class="add-to-cart-col addcartcustom js-drawer-open-cart" data-product-id="{{ current_variant.id }}"
+        {% unless current_variant.available %} disabled="disabled"{% endunless %}>
+        <span data-add-to-cart-text data-default-text="Add to cart">
+          <b><img alt="cart" src="https://cdn.shopify.com/s/files/1/0558/0708/2629/files/mulist_4.png?v=1709101569"/></b>
+        </span>
+      </button>
+
+  
+    <select name="id" data-product-select class="product-single__variants no-js">
+      {%- for variant in product.variants -%}
+        {% if variant.available %}
+          <option {% if variant == product.selected_or_first_available_variant %}
+            selected="selected" {% endif %}
+            value="{{ variant.id }}">
+            {{ variant.title }} - {{ variant.price | money_with_currency }}
+          </option>
+        {% else %}
+          <option disabled="disabled">
+            {{ variant.title }} - {{ 'products.product.sold_out' | t }}
+          </option>
+        {% endif %}
+      {%- endfor -%}
+    </select>
+  {% endform %}
+
+          <span class="mulcon-price-original">{{ product.price | money }}</span>{% if product.price_varies %}<span class="mulcon-price-old">{{ product.compare_at_price | money }}</span>{% endif %}</div>
+              
+
+         </div>
+      </div>
+         {% endfor %}
+    </div>
+  </div>
+  
+     </div>
+        <script>   
+  $(function(){
+      var conitsp_{{secidlast}} = new Swiper ('.mulca-conitsp-{{ secidlast }}', {
+    slidesPerView : {{ section.settings.products_per_row }},
+    spaceBetween: '2.2%',
+    observer: true,  //开启动态检查器，监测swiper和slide
+    observeParents: true, 
+    navigation: {
+		nextEl: '.multicanext-{{ secidlast }}',
+		prevEl: '.multicaprev-{{ secidlast }}',
+	},
+     scrollbar: {
+      el: '.swiper-scrollbar-{{ secidlast }}',dragSize:89
+    }
+    ,
+    breakpoints: { 
+      10: {  
+       slidesPerView : 1.5,
+         spaceBetween: '2.5%',
+      },
+      550: { 
+       slidesPerView : 2,
+      },
+      769: {  //当屏幕宽度大于等于769
+        slidesPerView: 3,
+      },
+      994: { 
+        slidesPerView : 4,
+      }
+    }
+
+  });
+  })
+
+</script>
+
+    </div>
+      </div>
+</product-recommendations>
+{% endif %}
+
+<!-- <product-recommendations
+    id="Recommendations-{{ section.id }}"
+    data-section-id="{{ section.id }}"
+    data-section-type="product-recommendations"
+    data-enable="{{ recommend_products }}"
+    data-product-id="{{ product.id }}"
+    data-intent="related"
+    data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ number_of_products }}"
+    data-limit="{{ number_of_products }}">
+  <div
+      data-section-id="{{ product.id }}"
+      data-subsection
+      data-section-type="collection-template"
+      class="index-section">
+    <div class="page-width">
+      <header class="section-header">
+        <h3 class="section-header__title">
+          {{ section.settings.product_recommendations_heading }}
+        </h3>
+      </header>
+    </div>
+
+    <div class="page-width page-width--flush-small">
+      <div class="grid-overflow-wrapper">
+        {%- if recommend_products -%}
+          <div class="product-recommendations-placeholder">
+            {% comment %}
+              This content is visually hidden and replaced when recommended products show up
+            {% endcomment %}
+            <div class="grid grid--uniform visually-invisible" aria-hidden="true">
+              {%- render 'product-grid-item', product: product, per_row: number_of_products -%}
+            </div>
+          </div> 
+        {%- endif -%}
+        {%- if related_collection.products_count > 0 -%}
+          <div class="product-recommendations page-width">
+            <div class="product-single__related grid grid--uniform" data-aos="overflow__animation">
+              {%- for product in related_collection.products limit: number_of_products -%}
+                {% comment %} On smaller screen sizes, 66vw is used for grid items in the CSS {% endcomment %}
+                {%- render 'product-grid-item',
+                    product: product,
+                    per_row: section.settings.products_per_row,
+                    fallback: '66vw'
+                -%}
+              {%- endfor -%}
+            </div>
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</product-recommendations>
+
+<style>
+    .product-recommendations-placeholder .grid-product__title {
+        font-size: 16px;
+    }
+
+    .product-recommendations-placeholder .grid-product__price {
+        font-size: 12px;
+    }
+
+    @media (max-width: 767px) {
+        .product-recommendations-placeholder .grid-product__title {
+            font-size: 14px;
+        }
+
+        .product-recommendations-placeholder .grid {
+            flex-wrap: wrap;
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-left: 0;
+            gap: 10px;
+        }
+
+        .product-recommendations-placeholder .grid .grid__item {
+            flex: 0 0 calc(50% - 8px);
+            width: calc(50% - 8px);
+            padding: 0;
+            margin: 0;
+        }
+
+        .product-recommendations-placeholder .grid .grid-product__meta {
+            padding: 20px 10px;
+        }
+    }
+</style> -->
+
+{% schema %}
+{
+  "name": "Product Recommend",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "t:sections.product-recommendations.settings.show_product_recommendations.info"
+    },
+    {
+      "type": "text",
+      "id": "product_recommendations_heading",
+      "label": "t:sections.product-recommendations.settings.product_recommendations_heading.label",
+      "default": "You may also like"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "custom collection"
+    },
+    {
+      "type": "range",
+      "id": "related_count",
+      "label": "t:sections.product-recommendations.settings.related_count.label",
+      "default": 6,
+      "min": 2,
+      "max": 10,
+      "step": 1
+    },
+    {
+      "type": "range",
+      "id": "products_per_row",
+      "label": "t:sections.product-recommendations.settings.products_per_row.label",
+      "default": 4,
+      "min": 2,
+      "max": 5,
+      "step": 1
+    }
+  ],
+    "presets": [
+      {
+        "name": "Product Recommend",
+        "category": "HO-layout"
+      }
+    ]
+}
+{% endschema %}

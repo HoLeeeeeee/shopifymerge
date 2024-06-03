@@ -1,0 +1,349 @@
+{{ 'section-reward-benefits.css' | asset_url | stylesheet_tag }}
+
+<div class="contain-index">
+  {% if section.settings.title != blank %}
+    <div class="common-title">{{ section.settings.title }}</div>
+  {% endif %}
+
+  <div class="benefits_block-wrapper">
+    {% for block in section.blocks %}
+      {% if block.type == 'left_benefits_block' %}
+        <div class="reward-benefits-left reward-benefits-item">
+          <a {% if block.settings.link01 != blank %} href="{{ block.settings.link01 }}"{% endif %} class="benefits-item benefits-item01">
+            <div class="text-wrapper">
+              {% if block.settings.text01 != blank %}
+                <div class="item-text">{{ block.settings.text01 }}</div>
+              {% endif %}
+              {% if block.settings.title01 != blank %}
+                <div class="item-title">{{ block.settings.title01 }}</div>
+              {% endif %}
+            </div>
+            <div class="img-wrapper">
+              {% if block.settings.image01 -%}
+                <img
+                  class="lazyload"
+                  src="{{ block.settings.image01 | img_url:'master' }}"
+                  alt="{{ block.settings.title01 }}"
+                >
+              {%- endif %}
+            </div>
+          </a>
+          <div class="benefits-left-bottom">
+            <a {% if block.settings.link02 != blank %} href="{{ block.settings.link02 }}"{% endif %} class="benefits-item benefits-item02">
+              <div class="text-wrapper">
+                {% if block.settings.text02 != blank %}
+                  <div class="item-text">{{ block.settings.text02 }}</div>
+                {% endif %}
+              </div>
+              <div class="img-wrapper">
+                {% if block.settings.image02 -%}
+                  <img
+                    class="lazyload{% if block.settings.image02_mb !=blank %} hide-mb{% endif %}"
+                    src="{{ block.settings.image02 | img_url:'master' }}"
+                    alt=""
+                  >
+                {%- endif %}
+                {% if block.settings.image02_mb !=blank %}
+                  <img
+                    class="lazyload hide-pc"
+                    src="{{ block.settings.image02_mb | img_url:'master' }}"
+                    alt=""
+                  >
+                {%- endif %}
+              </div>
+            </a>
+            <div class="benefits-left-bottom-right">
+              <a {% if block.settings.link03 != blank %} href="{{ block.settings.link03 }}"{% endif %} class="benefits-item benefits-item03">
+                <div class="text-wrapper">
+                  {% if block.settings.text03 != blank %}
+                    <div class="item-text">{{ block.settings.text03 }}</div>
+                  {% endif %}
+                </div>
+                <div class="img-wrapper">
+                  {% if block.settings.image03 -%}
+                    <img
+                      class="lazyload"
+                      src="{{ block.settings.image03 | img_url:'master' }}"
+                      alt="{{ block.settings.title03 }}"
+                    >
+                  {%- endif %}
+                </div>
+              </a>
+
+              <a {% if block.settings.link04 != blank %} href="{{ block.settings.link04 }}"{% endif %} class="benefits-item benefits-item04">
+                <div class="text-wrapper">
+                  {% if block.settings.text04 != blank %}
+                    <div class="item-text">{{ block.settings.text04 }}</div>
+                  {% endif %}
+                </div>
+                <div class="img-wrapper">
+                  {% if block.settings.image04 -%}
+                    <img
+                      class="lazyload"
+                      src="{{ block.settings.image04 | img_url:'master' }}"
+                      alt="{{ block.settings.title04}}"
+                    >
+                  {%- endif %}
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+      {% if block.type == 'right_benefits_block' %}
+        <div class="reward-benefits-right reward-benefits-item">
+          <div class="benefits-right-top">
+            <a {% if block.settings.link01 != blank %} href="{{ block.settings.link01 }}"{% endif %} class="benefits-item benefits-item01">
+              <div class="text-wrapper">
+                {% if block.settings.text01 != blank %}
+                  <div class="item-text">{{ block.settings.text01 }}</div>
+                {% endif %}
+                {% if block.settings.title01 != blank %}
+                  <div class="item-title">{{ block.settings.title01 }}</div>
+                {% endif %}
+              </div>
+              <div class="img-wrapper">
+                {% if block.settings.image01 -%}
+                  <img
+                    class="lazyload"
+                    src="{{ block.settings.image01 | img_url:'master' }}"
+                    alt=""
+                  >
+                {%- endif %}
+              </div>
+            </a>
+            <a {% if block.settings.link02 != blank %} href="{{ block.settings.link02}}"{% endif %} class="benefits-item benefits-item02">
+              <div class="text-wrapper">
+                {% if block.settings.text02 != blank %}
+                  <div class="item-text">{{ block.settings.text02 }}</div>
+                {% endif %}
+                {% if block.settings.tip02 != blank %}
+                  <div class="item-tip">{{ block.settings.tip02 }}</div>
+                {% endif %}
+              </div>
+              <div class="img-wrapper">
+                {% if block.settings.image02 -%}
+                  <img
+                    class="lazyload"
+                    src="{{ block.settings.image02 | img_url:'master' }}"
+                    alt=""
+                  >
+                {%- endif %}
+              </div>
+            </a>
+          </div>
+          <div class="benefits-right-bottom">
+            <a {% if block.settings.link03 != blank %} href="{{ block.settings.link03 }}"{% endif %} class="benefits-item benefits-item03">
+              <div class="text-wrapper">
+                {% if block.settings.title03 != blank %}
+                  <div class="item-title">{{ block.settings.title03 }}</div>
+                {% endif %}
+                {% if block.settings.text03 != blank %}
+                  <div class="item-text">{{ block.settings.text03 }}</div>
+                {% endif %}
+              </div>
+              <div class="img-wrapper">
+                {% if block.settings.image03 -%}
+                  <img
+                    class="lazyload"
+                    src="{{ block.settings.image03 | img_url:'master' }}"
+                    alt="{{ block.settings.title03 }}"
+                  >
+                {%- endif %}
+              </div>
+            </a>
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Reward Benefits",
+  "class": "reward-benefit-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "EiotclubCredits Benefits "
+    }
+  ],
+  "blocks": [
+    {
+      "type": "left_benefits_block",
+      "name": "left_benefits_block",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Block Item01"
+        },
+        {
+          "type": "html",
+          "id": "text01",
+          "label": "Text01"
+        },
+        {
+          "type": "html",
+          "id": "title01",
+          "label": "Title01"
+        },
+        {
+          "type": "image_picker",
+          "id": "image01",
+          "label": "Image01"
+        },
+        {
+            "type": "url",
+            "id": "link01",
+            "label": "Url01"
+        },
+        {
+          "type": "header",
+          "content": "Block Item02"
+        },
+        {
+          "type": "html",
+          "id": "text02",
+          "label": "Text02"
+        },
+        {
+          "type": "image_picker",
+          "id": "image02",
+          "label": "Image02"
+        },
+        {
+          "type": "image_picker",
+          "id": "image02_mb",
+          "label": "Image02 on Mobile"
+        },
+        {
+            "type": "url",
+            "id": "link02",
+            "label": "Url02"
+        },
+        {
+          "type": "header",
+          "content": "Block Item03"
+        },
+        {
+          "type": "html",
+          "id": "text03",
+          "label": "Text03"
+        },
+        {
+          "type": "image_picker",
+          "id": "image03",
+          "label": "Image03"
+        },
+        {
+            "type": "url",
+            "id": "link03",
+            "label": "Url03"
+        },
+        {
+          "type": "header",
+          "content": "Block Item04"
+        },
+        {
+          "type": "html",
+          "id": "text04",
+          "label": "Text04"
+        },
+        {
+          "type": "image_picker",
+          "id": "image04",
+          "label": "Image04"
+        }
+      ]
+    },
+    {
+      "type": "right_benefits_block",
+      "name": "right_benefits_block",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Block Item01"
+        },
+        {
+          "type": "html",
+          "id": "text01",
+          "label": "Text01"
+        },
+        {
+          "type": "html",
+          "id": "title01",
+          "label": "Title01"
+        },
+        {
+          "type": "image_picker",
+          "id": "image01",
+          "label": "Image01"
+        },
+        {
+            "type": "url",
+            "id": "link01",
+            "label": "Url01"
+        },
+        {
+          "type": "header",
+          "content": "Block Item02"
+        },
+        {
+          "type": "html",
+          "id": "text02",
+          "label": "Text02"
+        },
+        {
+          "type": "html",
+          "id": "tip02",
+          "label": "Tip02",
+          "default": "(coming soon)"
+        },
+        {
+          "type": "image_picker",
+          "id": "image02",
+          "label": "Image02"
+        },
+        {
+            "type": "url",
+            "id": "link02",
+            "label": "Url02"
+        },
+        {
+          "type": "header",
+          "content": "Block Item03"
+        },
+        {
+          "type": "html",
+          "id": "title03",
+          "label": "Title03"
+        },
+        {
+          "type": "html",
+          "id": "text03",
+          "label": "Text03"
+        },
+        {
+          "type": "image_picker",
+          "id": "image03",
+          "label": "Image03"
+        },
+        {
+          "type": "url",
+          "id": "link03",
+          "label": "Url03"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Reward Benefits",
+      "category": "HO-layout"
+    }
+  ]
+}
+{% endschema %}

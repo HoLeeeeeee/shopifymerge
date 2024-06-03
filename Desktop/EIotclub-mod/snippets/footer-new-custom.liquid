@@ -1,0 +1,77 @@
+{% if block.settings.show_footer_title %}
+  <h2 class="footer__title hide-mb">{{ block.settings.title }}</h2>
+  <button type="button" class="footer__title collapsible-trigger collapsible-trigger-btn hide-pc is-open" aria-controls="Footer-{{ block.id }}">
+    {{ block.settings.title }}
+<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10 5H0" stroke="currentColor" stroke-width="1.5"/>
+<path class="shuplusline" d="M5 -4.17233e-07L5 10" stroke="currentColor" stroke-width="1.5"/>
+</svg>
+  </button>
+{% endif %}
+<div
+  {% if block.settings.show_footer_title %}
+    id="Footer-{{ block.id }}" class="is-open collapsible-content collapsible-content--small"
+  {% endif %}>
+  <div class="collapsible-content__inner">
+    <div class="footer__collapsible{% unless block.settings.show_footer_title %} footer_collapsible--disabled{% endunless %}">
+         {% if block.settings.logo %} 
+            <div class="new-cusfooter-logobox">
+              <span><img src="{{ block.settings.logo | img_url:'master' }}" alt=""/></span>
+              <span class="new-cusfooter-logocon">{{ block.settings.content }}</span>
+            </div>
+          {% endif %}
+        {% if block.settings.apple_download != blank %}
+          <div class="new-download new-download-fir">
+            {% if block.settings.apple_download_url != blank %}
+              <a href="{{ block.settings.apple_download_url }}" aria-label="link">
+            {% endif %}
+                {{ block.settings.apple_download }}
+            {% if block.settings.apple_download_url != blank %}
+              </a>
+            {% endif %}
+          </div>  
+        {% endif %}
+        {% if block.settings.goodle_download != blank %}
+          <div class="new-download">
+            {% if block.settings.goodle_download_url != blank %}
+              <a href="{{ block.settings.goodle_download_url }}" aria-label="link">
+            {% endif %}
+                {{ block.settings.goodle_download }}
+            {% if block.settings.goodle_download_url != blank %}
+              </a>
+            {% endif %}
+          </div> 
+        {% endif %}
+              <div class="new-text-box new-text-box01">
+            {% if block.settings.custom_icon1 != blank %}
+            <div class="new-icon">{{ block.settings.custom_icon1 }}</div>
+            {% endif %}         
+            <div class="new-text">{{ block.settings.text1 }}</div>
+        </div>    
+        <div class="new-text-box">
+            {% if block.settings.custom_icon2  != blank%}
+            <div class="new-icon">{{ block.settings.custom_icon2 }}</div>
+            {% endif %}           
+            <div class="new-text">{{ block.settings.text2 }}</div>
+        </div>
+           {% if block.settings.custom_icon3  != blank%}
+        <div class="new-text-box">
+       
+            <div class="new-icon">{{ block.settings.custom_icon3 }}</div>
+               
+            <div class="new-text">{{ block.settings.text3 }}</div>
+        </div>
+                {% endif %}     
+    </div>
+  </div>
+</div>
+<style>
+    .collapsible-content__inner .new-text-box{
+        display: flex;
+        align-items: flex-start;
+        flex-direction: row;
+        margin-bottom: 5px;
+    }
+
+
+</style>

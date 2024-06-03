@@ -1,0 +1,104 @@
+{% liquid
+  assign secid = section.id | split:"__" 
+  assign secidlast = secid[1] | replace: "-","_"
+%}
+<style>
+  #spmorepro-out-{{ secidlast }}{
+    {% if section.settings.bg_image %}
+      background: url("{{ section.settings.bg_image | image_url }}") no-repeat;
+      background-size: 100% auto;
+      background-position: center top;
+    {% endif %}
+  }
+
+ {% if section.settings.bg_imagemb %}
+  @media (max-width:768px){
+     #spmorepro-out-{{ secidlast }}{
+      background-image: url("{{ section.settings.bg_imagemb | image_url }}");
+      background-position: top;
+    background-size: auto;
+  } 
+  }
+ {% endif %}
+</style>
+
+<div id="spmorepro-out-{{ secidlast }}">
+<div class="contain-index">
+      {% if section.settings.toptitle != blank %}
+    <div class="spofmorepro-toptitle animate-ele">{{ section.settings.toptitle }}</div>
+    {% endif %}
+<div class="spofmorepro-wrapper" id="spofmorepro-{{ secidlast }}" >
+  {% if section.settings.image  %}
+      <div class="spofmorepro-img"><img class="{% if section.settings.imagemb  %}hide-mb{% endif %}"  src="{{ section.settings.image | img_url:'master' }}" alt="" /></div>
+     {% endif %}
+    {% if section.settings.imagemb  %}
+      <div class="spofmorepro-img"><img class="hide-pc"  src="{{ section.settings.imagemb | img_url:'master' }}"  alt="" /></div>
+   {% endif %}
+    <div class="spofmorepro-text">
+    {% if section.settings.title != blank %}
+    <div class="spofmorepro-title animate-ele">{{ section.settings.title }}</div>
+    {% endif %}
+    {% if section.settings.content != blank %}
+    <div class="spofmorepro-content animate-ele">{{ section.settings.content }}</div>
+    {% endif %}
+    {% if section.settings.btn != blank %}
+    <a class="spofmorepro-btn animate-ele bthho" href="{{ section.settings.btnurl }}"><span>{{ section.settings.btn }}</span></a>
+    {% endif %} 
+    </div>
+</div>
+</div>
+</div>
+{% schema %}
+  {
+    "name": "More Product",
+    "settings": [
+        {
+        "type": "text",
+        "id": "toptitle",
+        "label": "top title"
+         },{
+        "type": "image_picker",
+        "id": "image",
+        "label": "image"
+         },{
+        "type": "image_picker",
+        "id": "imagemb",
+        "label": "image(mobile)"
+         },{
+        "type": "text",
+        "id": "title",
+        "label": "title"
+         },{
+            "type": "richtext",
+            "id": "content",
+            "label": "content"
+          },{
+            "type": "text",
+            "id": "btn",
+            "label": "button text"
+          },{
+            "type": "url",
+            "id": "btnurl",
+            "label": "button url"
+          },
+    {
+      "type": "image_picker",
+      "id": "bg_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_imagemb",
+      "label": "Background Image(mobile)"
+    }
+    ],
+    "presets": [
+      {
+        "name": "More Product",
+        "category": "Ho-Advance"
+ 
+      }
+    ]
+  }
+{% endschema %}
+

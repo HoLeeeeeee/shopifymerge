@@ -1,0 +1,66 @@
+{% liquid
+  assign secid = section.id | split:"__" 
+  assign secidlast = secid[1] | replace: "-","_"
+%}
+<div class="contain-index">
+<div class="indexgethelp-wrapper" id="indexgethelp-{{ secidlast }}" >
+  {% if section.settings.image  %}
+      <div class="indexgethelp-img"><img class="{% if section.settings.imagemb  %}hide-mb{% endif %}"  src="{{ section.settings.image | img_url:'master' }}" alt="" /></div>
+     {% endif %}
+    {% if section.settings.imagemb  %}
+      <div class="indexgethelp-img"><img class="hide-pc"  src="{{ section.settings.imagemb | img_url:'master' }}"  alt="" /></div>
+   {% endif %}
+    <div class="indexgethelp-text">
+    {% if section.settings.title != blank %}
+    <div class="indexgethelp-title animate-ele">{{ section.settings.title }}</div>
+    {% endif %}
+    {% if section.settings.content != blank %}
+    <div class="indexgethelp-content animate-ele">{{ section.settings.content }}</div>
+    {% endif %}
+    {% if section.settings.btn != blank %}
+    <a class="indexgethelp-btn animate-ele bthho" href="{{ section.settings.btnurl }}"><span>{{ section.settings.btn }}</span></a>
+    {% endif %} 
+    </div>
+</div>
+</div>
+
+{% schema %}
+  {
+    "name": "Get Help",
+    "settings": [
+        {
+        "type": "image_picker",
+        "id": "image",
+        "label": "image"
+         },{
+        "type": "image_picker",
+        "id": "imagemb",
+        "label": "image(mobile)"
+         },{
+        "type": "text",
+        "id": "title",
+        "label": "title"
+         },{
+            "type": "richtext",
+            "id": "content",
+            "label": "content"
+          },{
+            "type": "text",
+            "id": "btn",
+            "label": "button text"
+          },{
+            "type": "url",
+            "id": "btnurl",
+            "label": "button url"
+          }
+    ],
+    "presets": [
+      {
+        "name": "Get Help",
+        "category": "Ho-Advance"
+ 
+      }
+    ]
+  }
+{% endschema %}
+

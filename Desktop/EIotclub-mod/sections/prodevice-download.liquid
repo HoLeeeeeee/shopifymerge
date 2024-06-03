@@ -1,0 +1,86 @@
+
+<div class="prodvsdownload-outbox animate-ele">
+  <div class="contain-index">
+        {%- if section.settings.title != blank -%}
+    <div class="prodvsdownload-title">{{ section.settings.title }}</div> 
+     {%- endif -%}
+  <div class="prodvsdownload-box">
+
+     <div class="prodvsdownload-imagebox">
+         {% if section.settings.image  %}
+            <img class="{% if section.settings.imagemb %} hide-mb{% endif %}" src="{{ section.settings.image | img_url:'master' }}" alt="" />
+              {% if section.settings.imagemb  %}
+              <img class="hide-pc" src="{{ section.settings.imagemb | img_url:'master' }}" alt="" />
+             {% endif %}
+          {% endif %}
+     </div>
+     <div class="prodvsdownload-textbox">
+       {% if section.settings.icon %}<img src="{{ section.settings.icon | image_url }}" alt="" />{% endif %}
+      {%- if section.settings.downloadtext != blank -%}
+    <div class="prodvsdownload-text-dw">{{ section.settings.downloadtext }}</div> 
+     {%- endif -%}
+     <div class="download-btnprobox">
+      {% if section.settings.download_url01 %}<a href="{{ section.settings.download_url01 }}">{% endif %}   
+        {% if section.settings.download_icon01 %}<div class="prodownload_icon01">{{ section.settings.download_icon01 }}</div>{% endif %}
+       {% if section.settings.download_url01 %}</a>{% endif %}  
+       {% if section.settings.download_url02 %}<a href="{{ section.settings.download_url02 }}">{% endif %}   
+        {% if section.settings.download_icon02 %}<div class="prodownload_icon01 prodownload_icon02">{{ section.settings.download_icon02 }}</div>{% endif %}
+       {% if section.settings.download_url02 %}</a>{% endif %}   
+      </div>
+
+     </div>
+
+    </div> 
+  </div>
+</div>
+
+{% schema %}
+  {
+   "name": "Product Download",
+  "settings": [
+    {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },{
+        "type": "image_picker",
+        "id": "imagemb",
+        "label": "Image(mobile)"
+      },{
+        "type": "text",
+        "id": "title",
+        "label": "title"
+      },{
+        "type": "image_picker",
+        "id": "icon",
+        "label": "icon"
+      },{
+        "type": "text",
+        "id": "downloadtext",
+        "label": "download text"
+      },{
+        "type": "html",
+        "id": "download_icon01",
+        "label": "download icon01"
+      },{
+        "type": "url",
+        "id": "download_url01",
+        "label": "download url01"
+      },{
+        "type": "html",
+        "id": "download_icon02",
+        "label": "download icon02"
+      },{
+        "type": "url",
+        "id": "download_url02",
+        "label": "download url02"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Product Download",
+        "category": "HO-layout"
+      }
+    ]
+  }
+{% endschema %}

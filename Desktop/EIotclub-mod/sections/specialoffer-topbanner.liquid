@@ -1,0 +1,289 @@
+{% liquid
+  assign product = all_products[section.settings.product]
+  assign current_variant = product.selected_or_first_available_variant
+  assign secid = section.id | split:"__" 
+  assign secidlast = secid[1] | replace: "-","_"
+%}
+<div class="spofferbanner-outbox" id="spofferbanner-{{ secidlast }}">
+
+<div class="spofferbanner-wrapper">
+
+      <div class="spofferbanner-img">
+  {% if section.settings.image  %}
+     <img class="{% if section.settings.imagemb  %}hide-mb{% endif %}"  src="{{ section.settings.image | img_url:'master' }}" alt="" />
+     {% endif %}
+    {% if section.settings.imagemb  %}
+     <img class="hide-pc"  src="{{ section.settings.imagemb | img_url:'master' }}"  alt="" />
+   {% endif %}
+    </div>
+
+  <div class="contain-index">
+  <div class="spofferbanner-text spofferbanner-text-posi{{ section.settings.align_position }} spofferbanner-text-align{{ section.settings.align_text }}">
+    {% for block in section.blocks %}
+     {% if block.type == 'tag' %}
+      <div class="spofferbanner-tag ">{% if block.settings.tagimg %}<img alt src="{{ block.settings.tagimg | img_url:'master' }}"/>{% endif %}{{ block.settings.title }}</div>
+    
+       {% elsif  block.type == 'title' %}
+       {%- if block.settings.title != blank -%}
+    <div class="spofferbanner-title "><a href="{{ product.url }}">{{ block.settings.title }}</a></div>
+     {% else %}
+      <div class="spofferbanner-title "><a href="{{ product.url }}">{{ product.title }}</a></div> 
+  {%- endif -%}
+       
+    {% elsif  block.type == 'discount' %} 
+   <div class="spofferbanner-discount " style="color:{{ block.settings.discountcolor }};background-color:{{ block.settings.discountcodebg }}"><span class="spofferleft-dicprice" style="background-color:{{ block.settings.discountpricebg }}">{{ block.settings.discountprice }}</span><span class="spofferright-dicode"><span class="spofferright-dicodemub">Code:<span>{{ block.settings.discountcode }}</span></span><span class="spoffer-dicodcopy">COPY</span></span></div>
+  <script src="https://cdn.shopify.com/s/files/1/0077/3953/9515/files/clipboard.min.js?v=1705547135"></script>
+       <script>
+         $(()=>{
+             $('.spoffer-dicodcopy').click(function(){
+                let text = $(this).siblings('.spofferright-dicodemub').find('span').text();
+                navigator.clipboard.writeText(text);
+               $(this).html('Done');
+                setTimeout(() => {
+                    $(this).html('COPY');
+                }, 2000);
+              })
+
+         })
+       </script>
+       {% elsif  block.type == 'content' %}   
+    <div class="spofferbanner-content ">{{ block.settings.content }}</div>
+       
+     {% elsif  block.type == 'price' %} 
+     <div class="spofferbanner-price "><span class="spofferbanner-original">{{ product.price | money }}</span>{% if product.price_varies %}<span class="spofferbanner-old">{{ product.compare_at_price | money }}</span>{% endif %}</div>
+     {% elsif  block.type == 'shopbtn' %}   
+           {% form 'product', product, id: 'spofferproform', class: 'product-single__form' %}
+
+    <div class="payment-buttons">
+    <span class="spoffer-ubybutton bthho" id="spoffer-payment-button"><span>Shop Now</span></span>
+    <button
+      {% if product.empty? %}type="button"{% else %}type="submit"{% endif %} 
+      data-product-id="{{ current_variant.id }}"
+      name="add"
+      data-add-to-cart
+      class="add-to-cart add-to-cartfeapro addcartcustom js-drawer-open-cart"
+      {% unless current_variant.available %} disabled="disabled"{% endunless %}>
+      <span data-add-to-cart-text>
+        Add To Cart
+      </span>
+    </button>
+      
+    </div>
+    
+      <select name="id" data-product-select class="product-single__variants no-js">
+        {%- for variant in product.variants -%}
+          {% if variant.available %}
+            <option {% if variant == product.selected_or_first_available_variant %}
+              selected="selected" {% endif %}
+              value="{{ variant.id }}">
+              {{ variant.title }} - {{ variant.price | money_with_currency }}
+            </option>
+          {% else %}
+            <option disabled="disabled">
+              {{ variant.title }} - {{ 'products.product.sold_out' | t }}
+            </option>
+          {% endif %}
+        {%- endfor -%}
+      </select>
+    {% endform %} 
+     {% endif %}
+    {% endfor %}
+
+    
+  </div>
+      
+
+      
+    </div>
+    </div>  
+</div>
+
+
+<script>
+  let shopify_features_script = document.querySelector("script[id='shopify-features']");
+  let shopify_features_json = JSON.parse(shopify_features_script.innerHTML);
+  var checkout_headers = {
+  'Accept': 'application/json',
+  'Content-Type': 'application/json',
+  'authorization': 'Basic ' + btoa(shopify_features_json.accessToken)
+  };
+  $("#spoffer-payment-button").click(function(){
+
+  let variant_id={{current_variant.id}};
+
+  let checkout_json={
+  "checkout": {
+  "line_items": [
+  {
+  "variant_id": variant_id,
+  "quantity": 1
+  }
+  ],
+  "secret": true,
+  "wallet_name": "Checkout",
+  "is_upstream_button": false,
+  "page_type": "product",
+  "has_selling_plans": false,
+  "presentment_currency": "{{ shop.currency }}",
+  "country": "{{shop.locale|upcase}}"
+  }
+  }
+  let data=JSON.stringify(checkout_json);
+  fetch("/wallets/checkouts.json",
+  {
+  method: 'POST',
+  headers: checkout_headers,
+  body: data
+  }
+  ).then(function(response) {
+  if (response.ok) {
+  return response.text();
+  }
+  }).then(function(strj) {
+  let checkout_json = JSON.parse(strj);
+  location.href = checkout_json.checkout.web_url;
+  }).catch(function(err) {
+  });
+  })
+</script>
+
+{% schema %}
+  {
+    "name": "Special Offer Banner",
+    "settings": [
+      {
+        "type": "product",
+        "id": "product",
+        "label": "product"
+      },{
+        "type": "image_picker",
+        "id": "image",
+        "label": "image"
+        },{
+        "type": "image_picker",
+        "id": "imagemb",
+        "label": "image(mobile)"
+        },
+        {
+          "type": "select",
+          "id": "align_position",
+          "label": "text position",
+          "default": "left",
+          "options": [
+            {
+              "value": "left",
+              "label": "left"
+            },
+            {
+              "value": "center",
+              "label": "center"
+            },
+            {
+              "value": "right",
+              "label": "right"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "align_text",
+          "label": "text align",
+          "default": "left",
+          "options": [
+            {
+              "value": "left",
+              "label": "left"
+            },
+            {
+              "value": "center",
+              "label": "center"
+            },
+            {
+              "value": "right",
+              "label": "right"
+            }
+          ]
+        }
+    ],
+        "blocks": [
+      {
+        "type": "tag",
+        "name": "tag",
+        "settings": [
+       {
+        "type": "image_picker",
+        "id": "tagimg",
+        "label": "image(tag)"
+        },{
+        "type": "text",
+        "id": "title",
+        "label": "title"
+      }
+        ]
+      },{
+        "type": "title",
+        "name": "title",
+        "settings": [
+       {
+        "type": "text",
+        "id": "title",
+        "label": "title"
+      }
+        ]
+      },{
+        "type": "discount",
+        "name": "discount",
+        "settings": [
+        {
+        "type": "color",
+        "id": "discountcolor",
+        "label": "discount color"
+         },{
+        "type": "text",
+        "id": "discountprice",
+        "label": "discount price"
+         },{
+        "type": "color",
+        "id": "discountpricebg",
+        "label": "discount price bgcolor",
+        "default": "#A6D3F0"
+         },{
+        "type": "text",
+        "id": "discountcode",
+        "label": "discount code"
+         },{
+        "type": "color",
+        "id": "discountcodebg",
+        "label": "discount code bgcolor",
+        "default": "#FFFFFF"
+         }
+        ]
+      },{
+        "type": "content",
+        "name": "content",
+        "settings": [
+       {
+        "type": "richtext",
+        "id": "content",
+        "label": "content"
+      }
+        ]
+      },{
+        "type": "price",
+        "name": "price",
+        "settings": [
+        ]
+      },{
+        "type": "shopbtn",
+        "name": "shop button",
+        "settings": [
+        ]
+      }
+    ],
+	"presets": [
+      {
+        "name": "Special Offer Banner","category": "Ho-Advance"
+      }
+    ]
+  }
+{% endschema %}

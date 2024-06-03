@@ -1,0 +1,114 @@
+.coverageforyou-container img {
+  vertical-align: top;
+}
+
+.inforyou-contsecitem {
+  display: none;
+  position: relative;
+}
+
+.coverageforyou-contsec .inforyou-contsecitem:first-child {
+  display: block;
+}
+
+.coverageforyou-container {
+  margin: 3vw 0 6.5vw;
+}
+
+.coverageforyou-title {
+  margin-bottom: 1.5vw;
+}
+
+.coverageforyou-navfir {
+  text-align: center;
+  margin-bottom: 1.7vw;
+}
+
+.coverageforyou-navfiritem {
+  color: #6A6A6A;
+  display: inline-block;
+  padding: 8px 1.5vw;
+  border-radius: 2vw;
+  border: 1px solid;
+  transition: .8s;
+  margin: 0 0.7vw;
+  cursor: pointer;
+  font-size: 0.84vw;
+  background: #fff;
+}
+
+.coverageforyou-navfiritem.active {
+  color: #fff;
+  font-weight: bold;
+  background: #282828;
+  border-color: #282828;
+}
+
+.coverageforyou-navsec {
+  text-align: center;
+  margin-bottom: 3vw;
+}
+
+.coverageforyou-navsecitem {
+  display: inline-block;
+  background: #E8E8E8;
+  padding: 6px 1.1vw;
+  transition: .8s;
+  cursor: pointer;
+  border-radius: 2vw;
+  font-size: 0.84vw;
+  margin: 0 0.7vw;
+}
+
+.coverageforyou-navsecitem.active {
+  background: #FFCC00;
+  font-weight: bold;
+  border-color: #FFCC00;
+}
+
+.coverageforyou-seccon {
+  display: none;
+}
+
+.coverageforyou-seccon01 {
+  display: block;
+}
+
+@media (max-width:1440px) {
+.coverageforyou-container .swiper-button-prev{ left:-3.5vw;}
+.coverageforyou-container .swiper-button-next{ right:-3.5vw;}
+}
+
+@media (max-width:1280px) {
+  .coverageforyou-container .swiper-button-prev{ left:-3vw;}
+  .coverageforyou-container .swiper-button-next{ right:-3vw;}
+}
+
+@media (max-width:993px) {
+  .coverageforyou-container .swiper-button-prev{ left:-5vw;}
+  .coverageforyou-container .swiper-button-next{ right:-5vw;}
+}
+
+@media (max-width:550px) {
+  .coverageforyou-container {
+    margin: 3vw 0 10vw;
+  }
+
+  .coverageforyou-title {
+    padding: 2vw 5vw 1vw;
+    margin-bottom: 3.7vw;
+  }
+
+  .coverageforyou-container>.contain-index {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .inforyou-contsecitem .foryoubtn {
+    display: none;
+  }
+
+  .coverageforyou-seccon {
+    padding: 0 0 0 5vw;
+  }
+}

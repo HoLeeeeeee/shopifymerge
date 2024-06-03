@@ -1,0 +1,74 @@
+{
+  "sections": {
+    "refill_con_H7Pztf": {
+      "type": "refill-con",
+      "blocks": {
+        "block_Pphn8b": {
+          "type": "block",
+          "settings": {
+            "title": "Why is the service not working after refill?",
+            "content": "<p>After renewal, the SIM card will resume service in several minutes, if not, please restart the device.<\/p><p>To avoid the service interruptions, suggestion you REFILL your data plan before your current plan expires<\/p>"
+          }
+        },
+        "block_zrE7fW": {
+          "type": "block",
+          "settings": {
+            "title": "I recharge the wrong ICCID number, how to solve it?",
+            "content": "<p>If you enter the wrong ICCID number, the payment won't recharge the payment successfully. If the payment was recharged, please contact us.<\/p>"
+          }
+        },
+        "block_z9PCda": {
+          "type": "block",
+          "settings": {
+            "title": "The payment is rejected, but the card is no problem, how do I recharge?",
+            "content": "<p>We accept below payment methods<\/p><p>• American Express<\/p><p>• China UnionPay (CUP)<\/p><p>• Discover & Diners<\/p><p>• Japan Credit Bureau (JCB)<\/p><p>• Mastercard<\/p><p>• Visa<\/p><p>•paypal<\/p><p>Change your email address and change your payment card. Try a different payment method from the list of accepted payment methods,If you're still having issues,<a href=\"https:\/\/www.eiotclub.com\/pages\/contact-us?spm=..page.header_1.1&spm_prev=..index.footer_1.1\" title=\"contact us\">contact us.<\/a><\/p>"
+          }
+        },
+        "block_JMp3XX": {
+          "type": "block",
+          "settings": {
+            "title": "Steps for Enabling Automatic Renewal",
+            "content": "<p>Step1: click https:\/\/sim.eiotclub.com\/eshop\/<\/p><p>Step 2: Enter SIM card ICCID number<\/p><p>Step 3: Choose the plan you want<\/p><p>Step 4: check the “Automatic renewal”<\/p>"
+          }
+        },
+        "block_nehYQY": {
+          "type": "block",
+          "settings": {
+            "title": "Steps for cancelling Automatic Renewal",
+            "content": "<p>Step 1: Visit: https:\/\/sim.eiotclub.com\/eshop<\/p><p>Step 2: Enter SIM card ICCID number<\/p><p>Step 3: tap \"orders\" on the bottom<\/p><p>Step 4: toggle off the \"Renewal\"<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "block_Pphn8b",
+        "block_zrE7fW",
+        "block_z9PCda",
+        "block_JMp3XX",
+        "block_nehYQY"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/refillimg_1.png",
+        "imagemb": "shopify:\/\/shop_images\/refillimg_1.png",
+        "topimage": "shopify:\/\/shop_images\/refillimg_2.png",
+        "iframe": "<iframe src=\"https:\/\/sim.eiotclub.com\/1\" style=\"width: 100%; height: 640px;\" scrolling=\"no\" frameborder=\"no\"><\/iframe>",
+        "title": "Quick refill service",
+        "content": "<p>Use EIOTCLUB quick refill service to replenish your account with a plan or add data.<\/p><p>You can also check your balance, see when your plan is set to expire, and more by logging in online to your EIOTCLUB account.<\/p>",
+        "button_text1": "Refill Now",
+        "button_url1": "",
+        "button_text2": "Check Your Balance",
+        "button_url2": "\/",
+        "steptitle": "Refill Your Card",
+        "step01": "<p><strong>Step 1:<\/strong>  Enter you correct ICCID in our rehcarge platform.<\/p>",
+        "step02": "<p><strong>Step 2:<\/strong>  Check the status of yourcard\/package expiry time\/traffic usage.<\/p>",
+        "step03": "<p><strong>Step 3:<\/strong>  Refresh your card\/bing email\/customer service\/change.<\/p>",
+        "step04": "<p><strong>Step 4:<\/strong>  No auto recharge monthly, choose the data plan as you needed.<\/p>",
+        "step05": "",
+        "bottomtitle": "frequently asked question",
+        "faqtitle": "FAQS"
+      }
+    }
+  },
+  "order": [
+    "refill_con_H7Pztf"
+  ]
+}

@@ -1,0 +1,24 @@
+{% if block.settings.image != blank %}
+    <div class="img-wrapper">
+      <img
+        class="product-img"
+        src="{{ block.settings.image |img_url: 'master' }}"
+        width="{{ block.settings.image.width}}"
+        height="{{ block.settings.image.height }}"
+        loading="lazy"
+        alt=""
+      >
+    </div>
+  {% endif %}
+  {% if block.settings.title != blank %}
+    <div class="reward-block-title">
+      {{ block.settings.title }}
+    </div>
+  {% endif %}
+
+  {% if block.settings.custom_price != blank or block.settings.custom_point != blank %}
+    <div class="custom_price_point">
+      <span class="custom_price">{{ block.settings.custom_price }}</span>
+      <span class="custom_point">{{ block.settings.custom_point }}</span>
+    </div>
+  {% endif %}

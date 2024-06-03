@@ -1,0 +1,135 @@
+{% liquid
+  assign secid = section.id | split:"__" 
+  assign secidlast = secid[1] | replace: "-","_"
+%}
+
+<div class="simnetsup-outbox">
+   {% if section.settings.title != blank %}
+    <div class="simnetsup-title prodvssimple-title animate-ele">{{ section.settings.title }}</div>
+   {% endif %}
+  <div class="simnetsup_elebox animate-ele">
+      {% for block in section.blocks limit:9 %}
+         <div class="simnetsup_item">
+          {% if block.settings.url %}
+          <a href="{{block.settings.url  }}">  
+          {% endif %}
+        {% if block.settings.image  %}
+          <img src="{{ block.settings.image | img_url:'master' }}" alt=" " />
+         {% endif %}
+          {% if block.settings.url %}
+           </a>  
+          {% endif %}
+         </div>  
+      {% endfor %}
+    {% if section.blocks.size >= 9 %} <div class="simnetsup_item"><span class="moresupport-ho">MORE +</span></div> {% endif %}
+  </div>
+   {% if section.blocks.size > 9 %}
+     <div class="simnetsup_fixbox">
+       <div class="simnetsup_fixitem">
+         <div class="simnetsup_fixitemtop">{{ settings.supporttext }} <span class="del-simnetsup">X</span></div>
+          <div class="simnetsup_fixitemimg">
+            {% if settings.networklogo01  %}
+              <span><img src="{{ settings.networklogo01 | image_url }}" alt=" " /></span> 
+            {% endif %}
+            {% if settings.networklogo02  %}
+              <span><img src="{{ settings.networklogo02 | image_url }}" alt=" " /></span> 
+            {% endif %}
+            {% if settings.networklogo03  %}
+              <span><img src="{{ settings.networklogo03 | image_url }}" alt=" " /></span> 
+            {% endif %}
+            {% if settings.networklogo04  %}
+              <span><img src="{{ settings.networklogo04 | image_url }}" alt=" " /></span> 
+            {% endif %}
+            {% if settings.networklogo05  %}
+              <span><img src="{{ settings.networklogo05 | image_url }}" alt=" " /></span> 
+            {% endif %}
+            {% if settings.networklogo06  %}
+              <span><img src="{{ settings.networklogo06 | image_url }}" alt=" " /></span> 
+            {% endif %}
+            {% if settings.networklogo07  %}
+              <span><img src="{{ settings.networklogo07 | image_url }}" alt=" " /></span> 
+            {% endif %}
+            {% if settings.networklogo08  %}
+              <span><img src="{{ settings.networklogo08 | image_url }}" alt=" " /></span> 
+            {% endif %}
+            {% if settings.networklogo09  %}
+              <span><img src="{{ settings.networklogo09 | image_url }}" alt=" " /></span> 
+            {% endif %}
+            {% if settings.networklogo10  %}
+              <span><img src="{{ settings.networklogo10 | image_url }}" alt=" " /></span> 
+            {% endif %}
+            {% if settings.networklogo11  %}
+              <span><img src="{{ settings.networklogo11 | image_url }}" alt=" " /></span> 
+            {% endif %}
+            {% if settings.networklogo12  %}
+              <span><img src="{{ settings.networklogo12 | image_url }}" alt=" " /></span> 
+            {% endif %}
+            {% if settings.networklogo13  %}
+              <span><img src="{{ settings.networklogo13 | image_url }}" alt=" " /></span> 
+            {% endif %}
+            {% if settings.networklogo14  %}
+              <span><img src="{{ settings.networklogo14 | image_url }}" alt=" " /></span> 
+            {% endif %}
+            {% if settings.networklogo15  %}
+              <span><img src="{{ settings.networklogo15 | image_url }}" alt=" " /></span> 
+            {% endif %}
+          </div>
+       </div>
+     </div>
+   {% endif %}
+</div>
+
+<script>
+  $(function(){
+   $("body").bind("click",function(evt){ 
+  if($(evt.target).closest(".simnetsup_fixitem").length==0&&$(evt.target).closest(".moresupport-ho").length==0)
+  { 
+   $(".simnetsup_fixbox").hide();
+  } 
+}); 
+    
+    $(".moresupport-ho").click(function(){
+      $(".simnetsup_fixbox").fadeIn();
+    })
+    $(".del-simnetsup").click(function(){
+   $(".simnetsup_fixbox").hide();
+    })
+  })
+</script>
+
+
+{% schema %}
+  {
+   "name": "Sim Network Support",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "title"
+    }
+    ],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "block",
+        "settings": [
+       {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },{
+        "type": "url",
+        "id": "url",
+        "label": "url"
+      }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Sim Network Support",
+        "category": "HO-layout"
+      }
+    ]
+  }
+{% endschema %}

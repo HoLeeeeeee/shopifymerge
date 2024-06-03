@@ -1,0 +1,512 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "faq": {
+      "type": "faq",
+      "blocks": {
+        "faq-1": {
+          "type": "question",
+          "settings": {
+            "title": "Where can I buy a EIOTCLUB SIM card?",
+            "text": "<p>You can order a EIOTCLUB SIM kit at eiotclub.com. We don't offer our SIMs at retail outlets, yet.<\/p>",
+            "expand_faq": false
+          }
+        },
+        "faq-2": {
+          "type": "question",
+          "settings": {
+            "title": "Can I keep my phone number?",
+            "text": "<p>You can keep your existing number, this sim kit only support wireless service data. Not support talk & text.<\/p>",
+            "expand_faq": false
+          }
+        },
+        "faq-4": {
+          "type": "question",
+          "settings": {
+            "title": "Will my device work with EIOTCLUB?",
+            "text": "<p>Any unlocked device that has a SIM card slot will most likely work with EIOTCLUB. Between our two networks, we support a wide variety of mobile phones, tablets, PCs, watches, pet trackers, security cameras, trail and game cameras for hunting, 4G routers, GPS devices, car locators and more.<\/p>",
+            "expand_faq": false
+          }
+        },
+        "a2fb00f2-78a2-4bed-91b8-c2239fb55e8c": {
+          "type": "question",
+          "settings": {
+            "title": "How do I activate my EIOTCLUB SIM card?",
+            "text": "<p>Activating your SIM card is straightforward and only takes a few minutes. Just plug in your device and it can be used WITHOUT activation.And then, insert the EIOTCLUB SIM card into your device and restart it. That's it! If you need help along the way, you can reach us right away on any page via the FAQ button in the bottom right corner.<\/p>",
+            "expand_faq": false
+          }
+        },
+        "912136de-de08-4020-8ced-11680607f99e": {
+          "type": "question",
+          "settings": {
+            "title": "How do I know if EIOTCLUB will work for me?",
+            "text": "<p>There are a few easy ways to check if EIOTCLUB is the perfect fit for you:<br>\n\n1.Check the coverage map to verify the service in your area. Please be aware that outside factors like terrain, building structures, weather, and other conditions may also interfere with the actual service available. When you intend to travel out from your regular location, consult the coverage map again to check for service in the areas to which you will travel.<br>\n2.If you are bringing your own phone, make sure your device is compatible with EIOTCLUB. It must be GSM, VoLTE, use our Bring Your Own Phone checker to confirm.<br>\n3.If you are bringing your own phone, make sure your device is unlocked.<\/p>",
+            "expand_faq": false
+          }
+        },
+        "9ad0c834-1666-44e6-a368-1f77956d28b5": {
+          "type": "question",
+          "settings": {
+            "title": "What are EIOTCLUB’s SIM card sizes?",
+            "text": "<p>Our SIM cards are triple pre-cut, standard, micro, and nano sized. Punch out the size you need for your wireless device.<\/p>",
+            "expand_faq": false
+          }
+        },
+        "d32b8d44-e342-4180-b1eb-b42d88a03dff": {
+          "type": "question",
+          "settings": {
+            "title": "What is a SIM card?",
+            "text": "<p>A SIM card, short for Subscriber Identity Module, is a small electronic chip used in mobile devices to identify and authenticate the user on a cellular network.<\/p>",
+            "expand_faq": false
+          }
+        },
+        "139929f6-d250-4774-81e5-da8ebb953d1c": {
+          "type": "question",
+          "settings": {
+            "title": "Can I buy SIM cards in bulk?",
+            "text": "<p>If you are interested in purchasing EIOTCLUB SIM cards in bulk, please submit a request through our EMAIL and a representative will be in touch ASAP.<\/p>",
+            "expand_faq": false
+          }
+        },
+        "4d4d4346-8411-44d2-9896-a3633caeb653": {
+          "type": "question",
+          "settings": {
+            "title": "Can I use a EIOTCLUB SIM card in my dual SIM phone?",
+            "text": "<p>Yes, you can. You can also use a SIM card from an alternative wireless provider in each slot. This will not affect your EIOTCLUB service.<\/p>",
+            "expand_faq": false
+          }
+        },
+        "4f33ae62-1cdf-4ea7-8703-63100d9fd6de": {
+          "type": "question",
+          "settings": {
+            "title": "Why are there different plans with different prices? What is the difference?",
+            "text": "<p>We have many plans with different prices and that’s because all of our plans come with different sizes of data. Also, each of our plans come with a different duration from 30 days, 180 days, a full year. If you are not sure which plan is best for you, we suggest you start with the plan you feel most comfortable with to get familiar with our service. You can always upgrade your EIOTCLUB plan at any time for no additional service charges. You will only be responsible for plan price adjustment.<\/p>",
+            "expand_faq": false
+          }
+        },
+        "897ce67d-a2ce-43d4-b07c-de34d15537a4": {
+          "type": "question",
+          "settings": {
+            "title": "How does data plan work? ",
+            "text": "<p>Each data plan has data limit and expiration date limit. For example: 24GB-360days. This data plan has 24GB which can last for 360 days. If the 24GB data was used up before the 360 days expire date, the data plan will expire. Or if the data has not been used up but the 360 days are up, the data plan will also expire..<\/p>",
+            "expand_faq": false
+          }
+        },
+        "ebec6e1a-bcd1-447c-ac99-3b659868b302": {
+          "type": "rich-text",
+          "disabled": true,
+          "settings": {
+            "title": "Coverage",
+            "text": "",
+            "align_text": "left"
+          }
+        },
+        "6da5a1f2-7f91-4571-b9de-6efdb33f1653": {
+          "type": "question",
+          "disabled": true,
+          "settings": {
+            "title": "Is EIOTCLUB available in my area?",
+            "text": "<p>We supports operators（AT&T & T-mobile &Verizon ）in the United States, and support 30 countries networks in Europe, so you can stream at remarkable speeds no matter where you are (in the US). You could contact our 24\/7 customer support for more details.<\/p>",
+            "expand_faq": false
+          }
+        },
+        "cac3e257-e25e-4835-aad0-585876413b11": {
+          "type": "question",
+          "disabled": true,
+          "settings": {
+            "title": "Will my device get 4G LTE data?",
+            "text": "<p>Both of our networks can provide 4G LTE connectivity to your device, as long as your device is 4G LTE compatible and there is coverage in your area. If you're not sure about your device you reach out to us 24\/7 and we'll be able to find out if your device is compatible.<\/p>",
+            "expand_faq": false
+          }
+        },
+        "4ad19b87-ad8d-4732-991a-bee65c8f19aa": {
+          "type": "question",
+          "disabled": true,
+          "settings": {
+            "title": "What internationals plans does EIOTCLUB offer?",
+            "text": "<p>We offer international roaming coverage at this time. Please contact us: info@eiotclub.com<\/p>",
+            "expand_faq": false
+          }
+        }
+      },
+      "block_order": [
+        "faq-1",
+        "faq-2",
+        "faq-4",
+        "a2fb00f2-78a2-4bed-91b8-c2239fb55e8c",
+        "912136de-de08-4020-8ced-11680607f99e",
+        "9ad0c834-1666-44e6-a368-1f77956d28b5",
+        "d32b8d44-e342-4180-b1eb-b42d88a03dff",
+        "139929f6-d250-4774-81e5-da8ebb953d1c",
+        "4d4d4346-8411-44d2-9896-a3633caeb653",
+        "4f33ae62-1cdf-4ea7-8703-63100d9fd6de",
+        "897ce67d-a2ce-43d4-b07c-de34d15537a4",
+        "ebec6e1a-bcd1-447c-ac99-3b659868b302",
+        "6da5a1f2-7f91-4571-b9de-6efdb33f1653",
+        "cac3e257-e25e-4835-aad0-585876413b11",
+        "4ad19b87-ad8d-4732-991a-bee65c8f19aa"
+      ],
+      "settings": {
+        "title": "FAQs"
+      }
+    },
+    "3160bb10-cbbc-4da1-945e-2363df0dabda": {
+      "type": "faq",
+      "blocks": {
+        "template--14577790320773__3160bb10-cbbc-4da1-945e-2363df0dabda-16854238452d687471-0": {
+          "type": "question",
+          "settings": {
+            "title": "Is EIOTCLUB available in my area?",
+            "text": "<p>We supports operators（AT&T & T-mobile &Verizon ）in the United States, and support 30 countries networks in Europe, so you can stream at remarkable speeds no matter where you are (in the US). You could contact our 24\/7 customer support for more details.<\/p>",
+            "expand_faq": false
+          }
+        },
+        "template--14577790320773__3160bb10-cbbc-4da1-945e-2363df0dabda-16854238452d687471-1": {
+          "type": "question",
+          "settings": {
+            "title": "Will my device get 4G LTE data?",
+            "text": "<p>Both of our networks can provide 4G LTE connectivity to your device, as long as your device is 4G LTE compatible and there is coverage in your area. If you're not sure about your device you reach out to us 24\/7 and we'll be able to find out if your device is compatible.<\/p>",
+            "expand_faq": false
+          }
+        },
+        "221c95b7-fa26-4ce1-8efb-c0fd829ceb6c": {
+          "type": "question",
+          "settings": {
+            "title": "What internationals plans does EIOTCLUB offer?",
+            "text": "<p>We offer international roaming coverage at this time. Please contact us: info@eiotclub.com<\/p>",
+            "expand_faq": false
+          }
+        }
+      },
+      "block_order": [
+        "template--14577790320773__3160bb10-cbbc-4da1-945e-2363df0dabda-16854238452d687471-0",
+        "template--14577790320773__3160bb10-cbbc-4da1-945e-2363df0dabda-16854238452d687471-1",
+        "221c95b7-fa26-4ce1-8efb-c0fd829ceb6c"
+      ],
+      "settings": {
+        "title": "Coverage"
+      }
+    },
+    "f589a4f0-78f5-484c-9c18-fbe62a428394": {
+      "type": "faq",
+      "blocks": {
+        "template--14564082811013__f589a4f0-78f5-484c-9c18-fbe62a428394-168224372315a2afce-0": {
+          "type": "question",
+          "settings": {
+            "title": "Why am I getting 'No Service' on devices?",
+            "text": "<p>Try powering your devices off, waiting 30 seconds, then powering back on again. If that doesn't help, try moving around or step outside for a bit to help your device regain signal. Click here to chat with our support team if you continue to face issues.<\/p>",
+            "expand_faq": false
+          }
+        },
+        "template--14564082811013__f589a4f0-78f5-484c-9c18-fbe62a428394-168224372315a2afce-1": {
+          "type": "question",
+          "settings": {
+            "title": "Steps for Enabling Automatic Renewal",
+            "text": "<p>\nStep1: click https:\/\/sim.eiotclub.com\/eshop\/\n<br>\nStep 2: Enter SIM card ICCID number<br>\nStep 3: Choose the plan you want<br>\nStep 4: check the “Automatic renewal”<\/p>",
+            "expand_faq": false
+          }
+        },
+        "066b67d8-60a7-41a2-a8ca-893f9f61528b": {
+          "type": "question",
+          "settings": {
+            "title": "Steps for cancelling Automatic Renewal",
+            "text": "<p>Step 1: Visit: https:\/\/sim.eiotclub.com\/eshop<br>\nStep 2: Enter SIM card ICCID number<br>\nStep 3: tap \"orders\" on the bottom<br>\nStep 4: toggle off the \"Renewal\"<\/p>",
+            "expand_faq": false
+          }
+        },
+        "61150707-69f7-465c-8a52-cac2592c9811": {
+          "type": "question",
+          "settings": {
+            "title": "Why am I not receiving EIOTCLUB emails?",
+            "text": "<p>Make sure that you leave the correct email address when you visit our website.<\/p>",
+            "expand_faq": false
+          }
+        },
+        "402ef2ae-d927-4014-b4a6-99f22da81570": {
+          "type": "rich-text",
+          "disabled": true,
+          "settings": {
+            "title": "Can I Use the Same Account for eiotclub.com and the eiotclub App?",
+            "text": "",
+            "align_text": "left"
+          }
+        },
+        "678f21be-52f6-44ed-a0f4-f8065271d067": {
+          "type": "question",
+          "settings": {
+            "title": "Can I Use the Same Account for eiotclub.com and the eiotclub App?",
+            "text": "<p>No, eiotclub.com and the Eiotclub app require separate accounts. They are distinct platforms within the eiotclub ecosystem, each designed for specific services and experiences..<\/p>",
+            "expand_faq": false
+          }
+        },
+        "993c3b66-4669-4db2-9285-38d7e83a52c1": {
+          "type": "question",
+          "disabled": true,
+          "settings": {
+            "title": "What should be the APN settings for my Android?",
+            "text": "<p>On an Android device, you can check and adjust your APN settings in the following location: Settings Tap More networks (under the Connections tab, or More, Wireless & networks, Wireless Controls, Wireless Manager, Phone Information). Select Mobile or Cellular networks. Choose Access Point Names. Tap the Menu icon. Tap the Access Point you would like to check. If you're adding a new APN, tap New APN and enter APN meassage Save the APN, restart the device, and test the service.<\/p>",
+            "expand_faq": false
+          }
+        },
+        "27a00085-5267-4125-9081-1f806df3fa93": {
+          "type": "question",
+          "disabled": true,
+          "settings": {
+            "title": "What should be the APN settings for my iOS?",
+            "text": "<p>On an iOS device, you can view or adjust your APN settings in one of the following locations: Settings > Cellular > Cellular Data Options > Cellular Network OR Settings > Mobile Data > Mobile Data Options > Mobile Data Network. enter the SIM card APN meassage, double-check that the iOS software is updated, restart your phone, and test the service again.<\/p>",
+            "expand_faq": false
+          }
+        },
+        "7cc00afc-f477-4e4c-8a8c-ed4c1888db87": {
+          "type": "rich-text",
+          "disabled": true,
+          "settings": {
+            "title": "Accepted payment methods",
+            "text": "",
+            "align_text": "left"
+          }
+        },
+        "42670396-f713-4bb5-bbce-e7f480dff18d": {
+          "type": "question",
+          "disabled": true,
+          "settings": {
+            "title": "What payment methods accepted ?",
+            "text": "<p>American Express\n\n• China UnionPay (CUP)\n\n• Discover & Diners\n\n• Japan Credit Bureau (JCB)\n\n• Mastercard\n\n• Visa\n\n• link\n\n• Apple pay\n\n• Google pay\n\n• Bancontact\n\n• EPS\n\n• Giropay\n\n• IDEAL\n\n• Przelewy24\n\n• Sofort\n\n• SEPA Debit\n\n• Canada Pre-Authorized Debit\n\n• Cartes Bancaires <br>\n\n• Paypal（Please contact the support and let us know the ICCID number, the data plan you want to order and your Paypal email address, we will send a payment request link to you. After you finished payment, we will refill the data plan for you）<\/p>",
+            "expand_faq": false
+          }
+        },
+        "ca23a132-60db-4a11-863f-ed2a5a141d91": {
+          "type": "question",
+          "disabled": true,
+          "settings": {
+            "title": "Why can't I purchase plans?",
+            "text": "<p>If you see this error message, try to add a different payment method. Try a different payment method from the list of accepted payment methods,If you're still having issues,contact us.<\/p>",
+            "expand_faq": false
+          }
+        }
+      },
+      "block_order": [
+        "template--14564082811013__f589a4f0-78f5-484c-9c18-fbe62a428394-168224372315a2afce-0",
+        "template--14564082811013__f589a4f0-78f5-484c-9c18-fbe62a428394-168224372315a2afce-1",
+        "066b67d8-60a7-41a2-a8ca-893f9f61528b",
+        "61150707-69f7-465c-8a52-cac2592c9811",
+        "402ef2ae-d927-4014-b4a6-99f22da81570",
+        "678f21be-52f6-44ed-a0f4-f8065271d067",
+        "993c3b66-4669-4db2-9285-38d7e83a52c1",
+        "27a00085-5267-4125-9081-1f806df3fa93",
+        "7cc00afc-f477-4e4c-8a8c-ed4c1888db87",
+        "42670396-f713-4bb5-bbce-e7f480dff18d",
+        "ca23a132-60db-4a11-863f-ed2a5a141d91"
+      ],
+      "settings": {
+        "title": "Common Issues"
+      }
+    },
+    "37c08e7d-428c-4411-91b5-60f89cfa5bdb": {
+      "type": "faq",
+      "blocks": {
+        "template--14577790320773__37c08e7d-428c-4411-91b5-60f89cfa5bdb-168542465477833bea-0": {
+          "type": "question",
+          "settings": {
+            "title": "What APN settings are needed with EIOTCLUB?",
+            "text": "<p>When you activate the service with EIOTCLUB, all your APN settings are usually set automatically. However, if you're having issues with data, you need to check your APN settings to make sure that they're correct. please check your user manual about APN setting information.<\/p>",
+            "expand_faq": false
+          }
+        },
+        "template--14577790320773__37c08e7d-428c-4411-91b5-60f89cfa5bdb-168542465477833bea-1": {
+          "type": "question",
+          "settings": {
+            "title": "What should be the APN settings for my Android?",
+            "text": "<p>On an Android device, you can check and adjust your APN settings in the following location: Settings Tap More networks (under the Connections tab, or More, Wireless & networks, Wireless Controls, Wireless Manager, Phone Information). Select Mobile or Cellular networks. Choose Access Point Names. Tap the Menu icon. Tap the Access Point you would like to check. If you're adding a new APN, tap New APN and enter APN meassage Save the APN, restart the device, and test the service.<\/p>",
+            "expand_faq": false
+          }
+        },
+        "15712dfd-6ff3-4b96-8820-43474087066d": {
+          "type": "question",
+          "settings": {
+            "title": "What should be the APN settings for my iOS?",
+            "text": "<p>On an iOS device, you can view or adjust your APN settings in one of the following locations: Settings > Cellular > Cellular Data Options > Cellular Network OR Settings > Mobile Data > Mobile Data Options > Mobile Data Network. enter the SIM card APN meassage, double-check that the iOS software is updated, restart your phone, and test the service again.<\/p>",
+            "expand_faq": false
+          }
+        }
+      },
+      "block_order": [
+        "template--14577790320773__37c08e7d-428c-4411-91b5-60f89cfa5bdb-168542465477833bea-0",
+        "template--14577790320773__37c08e7d-428c-4411-91b5-60f89cfa5bdb-168542465477833bea-1",
+        "15712dfd-6ff3-4b96-8820-43474087066d"
+      ],
+      "settings": {
+        "title": "APN Settings"
+      }
+    },
+    "0bd158ff-3fee-43f6-bd8c-77e9f2553fed": {
+      "type": "faq",
+      "blocks": {
+        "template--14577790320773__0bd158ff-3fee-43f6-bd8c-77e9f2553fed-168542465477833bea-0": {
+          "type": "question",
+          "settings": {
+            "title": "What payment methods accepted ?",
+            "text": "<p>American Express\n\n• China UnionPay (CUP)\n\n• Discover & Diners\n\n• Japan Credit Bureau (JCB)\n\n• Mastercard\n\n• Visa\n\n• link\n\n• Apple pay\n\n• Google pay\n\n• Bancontact\n\n• EPS\n\n• Giropay\n\n• IDEAL\n\n• Przelewy24\n\n• Sofort\n\n• SEPA Debit\n\n• Canada Pre-Authorized Debit\n\n• Cartes Bancaires \n\n• Paypal<br>（Please contact the support and let us know the ICCID number, the data plan you want to order and your Paypal email address, we will send a payment request link to you. After you finished payment, we will refill the data plan for you）<\/p>",
+            "expand_faq": false
+          }
+        },
+        "template--14577790320773__0bd158ff-3fee-43f6-bd8c-77e9f2553fed-168542465477833bea-1": {
+          "type": "question",
+          "settings": {
+            "title": "Why can't I purchase plans?",
+            "text": "<p>If you see this error message, try to add a different payment method. Try a different payment method from the list of accepted payment methods,If you're still having issues,contact us.<\/p>",
+            "expand_faq": false
+          }
+        }
+      },
+      "block_order": [
+        "template--14577790320773__0bd158ff-3fee-43f6-bd8c-77e9f2553fed-168542465477833bea-0",
+        "template--14577790320773__0bd158ff-3fee-43f6-bd8c-77e9f2553fed-168542465477833bea-1"
+      ],
+      "settings": {
+        "title": "Accepted payment methods"
+      }
+    },
+    "448bd83b-ad70-484a-8d69-4cfe29ff0a7c": {
+      "type": "text-with-icons",
+      "blocks": {
+        "template--14564082811013__448bd83b-ad70-484a-8d69-4cfe29ff0a7c-1682244351e9143bcb-0": {
+          "type": "text_block",
+          "settings": {
+            "icon": "free-shipping",
+            "html_svg": "<svg width=\"52\" height=\"52\" viewbox=\"0 0 52 52\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M9.26378 15.485C9.05118 15.544 8.85776 15.6577 8.70284 15.8148C8.51408 16.0452 8.40919 16.3328 8.40538 16.6307C7.60647 24.3053 7.58947 28.9118 8.40538 36.5303C8.40578 36.8013 8.48792 37.0658 8.64107 37.2893C8.79422 37.5128 9.01125 37.6849 9.26378 37.7831L25.4017 44.0655L25.8862 44.1998L26.3723 44.0638L42.5103 37.7848C42.761 37.6839 42.9762 37.5111 43.129 37.2882C43.2817 37.0653 43.3651 36.8022 43.3687 36.532C44.2186 28.82 44.2288 24.3733 43.3687 16.7327C43.3918 16.3987 43.2853 16.0687 43.0712 15.8114C42.9302 15.6148 42.7354 15.4631 42.5103 15.3745V15.3779\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M35.2371 20.2156L26.3726 23.6663H25.402L9.26406 17.3855C9.05243 17.3003 8.8654 17.1637 8.71995 16.988C8.57451 16.8123 8.47524 16.603 8.43115 16.3792C8.47381 16.1695 8.56719 15.9734 8.70312 15.808C8.85843 15.6522 9.05181 15.5397 9.26406 15.4817L17.333 12.3421M35.2371 20.2156L42.5123 17.3855C42.7258 17.3023 42.9146 17.1661 43.0609 16.9897C43.2072 16.8134 43.3062 16.6027 43.3486 16.3775H43.3452C43.3023 16.1684 43.2089 15.9729 43.0732 15.808C42.9319 15.6118 42.7372 15.4602 42.5123 15.3712L26.3743 9.2026C26.2215 9.13501 26.0562 9.1001 25.889 9.1001C25.7219 9.1001 25.5566 9.13501 25.4037 9.2026L17.333 12.3421M35.2371 20.2156L17.333 12.3421M25.8882 44.1999V23.6663M31.8375 35.0805L38.6367 32.5307\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<\/svg>",
+            "title": "Fast Shipping",
+            "header_color": "",
+            "header_size": 16,
+            "header_line_height": 36,
+            "header_letter_spacing": 0,
+            "header_font_weight": "400",
+            "header_size_mo": 16,
+            "header_line_height_mo": 36,
+            "header_letter_spacing_mo": 0,
+            "header_font_weight_mo": "400",
+            "text": "",
+            "content_color": "",
+            "content_size": 16,
+            "content_line_height": 36,
+            "content_letter_spacing": 0,
+            "content_font_weight": "400",
+            "content_size_mo": 16,
+            "content_line_height_mo": 36,
+            "content_letter_spacing_mo": 0,
+            "content_font_weight_mo": "400"
+          }
+        },
+        "template--14564082811013__448bd83b-ad70-484a-8d69-4cfe29ff0a7c-1682244351e9143bcb-1": {
+          "type": "text_block",
+          "settings": {
+            "icon": "wallet",
+            "html_svg": "<svg width=\"52\" height=\"52\" viewbox=\"0 0 52 52\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M32.5 35.104H45.5\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M44.75 27.8541V12.9375C44.75 11.1426 43.295 9.6875 41.5 9.6875H28.0833H10.75C8.95508 9.6875 7.5 11.1426 7.5 12.9375V40.8541C7.5 42.6491 8.95508 44.1041 10.75 44.1041H32.9265\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M37.9167 40.5208L32.5 35.1042L37.9162 29.6875\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M21.8182 16.6875V34.6875\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M26.3182 18.324C26.3182 18.324 22.2152 18.324 20.1818 18.324C18.1484 18.324 16.5 19.9724 16.5 22.0058C16.5 24.0392 18.1484 25.6876 20.1818 25.6876\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M17.3182 33.0511C17.3182 33.0511 21.4211 33.0511 23.4545 33.0511C25.488 33.0511 27.1364 31.4027 27.1364 29.3693C27.1364 27.3359 25.488 25.6875 23.4545 25.6875H20.1818\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<\/svg>",
+            "title": "30-Day Money-Back Guarantee",
+            "header_color": "",
+            "header_size": 16,
+            "header_line_height": 36,
+            "header_letter_spacing": 0,
+            "header_font_weight": "400",
+            "header_size_mo": 16,
+            "header_line_height_mo": 36,
+            "header_letter_spacing_mo": 0,
+            "header_font_weight_mo": "400",
+            "text": "",
+            "content_color": "",
+            "content_size": 16,
+            "content_line_height": 36,
+            "content_letter_spacing": 0,
+            "content_font_weight": "400",
+            "content_size_mo": 16,
+            "content_line_height_mo": 36,
+            "content_letter_spacing_mo": 0,
+            "content_font_weight_mo": "400"
+          }
+        },
+        "template--14564082811013__448bd83b-ad70-484a-8d69-4cfe29ff0a7c-1682244351e9143bcb-2": {
+          "type": "text_block",
+          "settings": {
+            "icon": "secure-payment",
+            "html_svg": "<svg width=\"52\" height=\"52\" viewbox=\"0 0 52 52\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M5.6665 12C5.6665 10.8954 6.56193 10 7.6665 10H43.6665C44.7711 10 45.6665 10.8954 45.6665 12V40C45.6665 41.1046 44.7711 42 43.6665 42H7.6665C6.56193 42 5.6665 41.1046 5.6665 40V12Z\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M5.6665 17.9995H45.6665\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"square\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M28.6665 34H37.6665\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<\/svg>",
+            "title": "We accept credit cards, PayPal,",
+            "header_color": "",
+            "header_size": 16,
+            "header_line_height": 36,
+            "header_letter_spacing": 0,
+            "header_font_weight": "400",
+            "header_size_mo": 16,
+            "header_line_height_mo": 36,
+            "header_letter_spacing_mo": 0,
+            "header_font_weight_mo": "400",
+            "text": "",
+            "content_color": "",
+            "content_size": 16,
+            "content_line_height": 36,
+            "content_letter_spacing": 0,
+            "content_font_weight": "400",
+            "content_size_mo": 16,
+            "content_line_height_mo": 36,
+            "content_letter_spacing_mo": 0,
+            "content_font_weight_mo": "400"
+          }
+        },
+        "dd45c8b2-ab1a-4575-aef6-92ceac1259b0": {
+          "type": "text_block",
+          "settings": {
+            "icon": "contact-us",
+            "html_svg": "<svg width=\"52\" height=\"52\" viewbox=\"0 0 52 52\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M25.9957 44C21.059 44 16.4519 42.0397 13.0286 38.4822C9.60532 34.9246 7.82388 30.2389 8.01375 25.2907C8.37116 15.9528 15.9604 8.36302 25.2921 8.01117C25.5266 8 25.7667 8 26.0013 8C35.9249 8 44 16.0757 44 26C44 30.8197 42.118 35.3546 38.6948 38.7558C37.2931 40.152 36.5224 41.9894 36.5224 43.9386V44H25.9957Z\" stroke=\"#07c160\" stroke-width=\"3\"><\/path>\n<path d=\"M18 26C18 26.5304 18.2107 27.0391 18.5858 27.4142C18.9609 27.7893 19.4696 28 20 28C20.5304 28 21.0391 27.7893 21.4142 27.4142C21.7893 27.0391 22 26.5304 22 26C22 25.7374 21.9483 25.4773 21.8478 25.2346C21.7473 24.992 21.5999 24.7715 21.4142 24.5858C21.2285 24.4001 21.008 24.2527 20.7654 24.1522C20.5227 24.0517 20.2626 24 20 24C19.7374 24 19.4773 24.0517 19.2346 24.1522C18.992 24.2527 18.7715 24.4001 18.5858 24.5858C18.4001 24.7715 18.2528 24.992 18.1522 25.2346C18.0517 25.4773 18 25.7374 18 26V26Z\" fill=\"#07c160\"><\/path>\n<path d=\"M24.2998 26C24.2998 26.5304 24.5105 27.0391 24.8856 27.4142C25.2607 27.7893 25.7694 28 26.2998 28C26.8302 28 27.3389 27.7893 27.714 27.4142C28.0891 27.0391 28.2998 26.5304 28.2998 26C28.2998 25.4696 28.0891 24.9609 27.714 24.5858C27.3389 24.2107 26.8302 24 26.2998 24C25.7694 24 25.2607 24.2107 24.8856 24.5858C24.5105 24.9609 24.2998 25.4696 24.2998 26V26Z\" fill=\"#07c160\"><\/path>\n<path d=\"M30.6001 26C30.6001 26.5304 30.8108 27.0391 31.1859 27.4142C31.561 27.7893 32.0697 28 32.6001 28C33.1305 28 33.6392 27.7893 34.0143 27.4142C34.3894 27.0391 34.6001 26.5304 34.6001 26C34.6001 25.4696 34.3894 24.9609 34.0143 24.5858C33.6392 24.2107 33.1305 24 32.6001 24C32.0697 24 31.561 24.2107 31.1859 24.5858C30.8108 24.9609 30.6001 25.4696 30.6001 26V26Z\" fill=\"#07c160\"><\/path>\n<\/svg>",
+            "title": "Order Service",
+            "header_color": "",
+            "header_size": 16,
+            "header_line_height": 36,
+            "header_letter_spacing": 0,
+            "header_font_weight": "400",
+            "header_size_mo": 16,
+            "header_line_height_mo": 36,
+            "header_letter_spacing_mo": 0,
+            "header_font_weight_mo": "400",
+            "text": "<p><a href=\"https:\/\/www.echatsoft.com\/visitor\/pc\/chat.html?companyId=525928&encryptVID=p5IO%2Fjo7uNbJgd%2Bh2l8Euw%3D%3D&chatVisitorId=3210873865&echatTag=shopify&enterUrl=https%3A%2F%2Fwww.eiotclub.com%2Fpages%2Ffrequently-asked-questions&enterTitle=Frequently%20asked%20Questions&firstUrl=https%3A%2F%2Fwww.eiotclub.com%2F&firstTitle=Eiotclub%C2%AE%20%7CSmart%20IoT%20Solutions%20for%20a%20Connected%20World.%20Transform%20Today!&fromHost=https%3A%2F%2Fwww.eiotclub.com&dataHost=https%3A%2F%2Fe.echatsoft.com\" target=\"_blank\" title=\"https:\/\/www.echatsoft.com\/visitor\/pc\/chat.html?companyId=525928&encryptVID=p5IO%2Fjo7uNbJgd%2Bh2l8Euw%3D%3D&chatVisitorId=3210873865&echatTag=shopify&enterUrl=https%3A%2F%2Fwww.eiotclub.com%2Fpages%2Ffrequently-asked-questions&enterTitle=Frequently%20asked%20Questions&firstUrl=https%3A%2F%2Fwww.eiotclub.com%2F&firstTitle=Eiotclub%C2%AE%20%7CSmart%20IoT%20Solutions%20for%20a%20Connected%20World.%20Transform%20Today!&fromHost=https%3A%2F%2Fwww.eiotclub.com&dataHost=https%3A%2F%2Fe.echatsoft.com\">Live chat<\/a><\/p>",
+            "content_color": "",
+            "content_size": 16,
+            "content_line_height": 36,
+            "content_letter_spacing": 0,
+            "content_font_weight": "400",
+            "content_size_mo": 16,
+            "content_line_height_mo": 36,
+            "content_letter_spacing_mo": 0,
+            "content_font_weight_mo": "400"
+          }
+        }
+      },
+      "block_order": [
+        "template--14564082811013__448bd83b-ad70-484a-8d69-4cfe29ff0a7c-1682244351e9143bcb-0",
+        "template--14564082811013__448bd83b-ad70-484a-8d69-4cfe29ff0a7c-1682244351e9143bcb-1",
+        "template--14564082811013__448bd83b-ad70-484a-8d69-4cfe29ff0a7c-1682244351e9143bcb-2",
+        "dd45c8b2-ab1a-4575-aef6-92ceac1259b0"
+      ],
+      "settings": {
+        "title": "",
+        "align_text": "center",
+        "desktop_columns_per_row": 3,
+        "icon_color": "#09c15f",
+        "button_label": "",
+        "button_link": "",
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "faq",
+    "3160bb10-cbbc-4da1-945e-2363df0dabda",
+    "f589a4f0-78f5-484c-9c18-fbe62a428394",
+    "37c08e7d-428c-4411-91b5-60f89cfa5bdb",
+    "0bd158ff-3fee-43f6-bd8c-77e9f2553fed",
+    "448bd83b-ad70-484a-8d69-4cfe29ff0a7c"
+  ]
+}

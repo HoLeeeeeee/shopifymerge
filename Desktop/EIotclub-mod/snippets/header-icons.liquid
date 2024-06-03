@@ -1,0 +1,68 @@
+<div class="site-nav site-nav--icons">
+  <div class="site-nav__icons">
+        {% if settings.search_enable %}
+      <a href="{{ routes.search_url }}" class="site-nav__link site-nav__link--icon js-search-header js-no-transition{% if section.settings.main_menu_alignment == 'center' or section.settings.main_menu_alignment == 'center-split' %} large-up--hide{% endif %}">
+        <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.5 17C15.366 17 18.5 13.866 18.5 10C18.5 6.13401 15.366 3 11.5 3C7.63401 3 4.5 6.13401 4.5 10C4.5 13.866 7.63401 17 11.5 17Z" stroke="currentColor" stroke-width="2"/>
+<path d="M16.5 15L19.5 18L16.5 15Z" fill="currentColor"/>
+<path d="M16.5 15L19.5 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+        <span class="icon__fallback-text">{{ 'general.search.title' | t }}</span>
+      </a>
+    {% endif %}
+    {% if shop.customer_accounts_enabled %}
+      <a class="site-nav__link site-nav__link--icon" href="{{ routes.account_url }}">
+       <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.5 11C13.7091 11 15.5 9.20914 15.5 7C15.5 4.79086 13.7091 3 11.5 3C9.29086 3 7.5 4.79086 7.5 7C7.5 9.20914 9.29086 11 11.5 11Z" stroke="currentColor" stroke-width="2"/>
+<path d="M4 19C5.421 16.026 8.247 14 11.5 14C14.753 14 17.579 16.026 19 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+</svg>
+
+        <span class="icon__fallback-text">
+          {% if customer %}
+            {{ 'layout.customer.account' | t }}
+          {% else %}
+            {{ 'layout.customer.log_in' | t }}
+          {% endif %}
+        </span>
+      </a>
+    {% endif %}
+
+
+
+
+
+    <a href="{{ routes.cart_url }}" class="site-nav__link site-nav__link--icon js-drawer-open-cart js-no-transition" aria-controls="CartDrawer" data-icon="{{ settings.cart_icon }}">
+      <span class="cart-link">
+        {%- if settings.cart_icon == 'bag' -%}
+          <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-bag" viewBox="0 0 64 64"><g fill="none" stroke="#000" stroke-width="2"><path d="M25 26c0-15.79 3.57-20 8-20s8 4.21 8 20"/><path d="M14.74 18h36.51l3.59 36.73h-43.7z"/></g></svg>
+        {%- elsif settings.cart_icon == 'bag-minimal' -%}
+          <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-bag-minimal" viewBox="0 0 64 64"><path stroke="null" id="svg_4" fill-opacity="null" stroke-opacity="null" fill="null" d="M11.375 17.863h41.25v36.75h-41.25z"/><path stroke="null" id="svg_2" d="M22.25 18c0-7.105 4.35-9 9.75-9s9.75 1.895 9.75 9"/></svg>
+        {%- else -%}
+        <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9 20C9.27614 20 9.5 19.7761 9.5 19.5C9.5 19.2239 9.27614 19 9 19C8.72386 19 8.5 19.2239 8.5 19.5C8.5 19.7761 8.72386 20 9 20Z" fill="currentColor" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18 20C18.2761 20 18.5 19.7761 18.5 19.5C18.5 19.2239 18.2761 19 18 19C17.7239 19 17.5 19.2239 17.5 19.5C17.5 19.7761 17.7239 20 18 20Z" fill="currentColor" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2.5 3H5.77273L7.96545 13.7117C8.04027 14.08 8.2452 14.4109 8.54436 14.6464C8.84351 14.8818 9.21784 15.0069 9.6018 14.9997H17.5545C17.9385 15.0069 18.3129 14.8818 18.612 14.6464C18.9112 14.4109 19.1161 14.08 19.1909 13.7117L20.5 6.9999H6.59091" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+        {%- endif -%}
+        <span class="icon__fallback-text">{{ 'layout.cart.title' | t }}</span>
+        <span class="cart-link__bubble{% if cart.item_count > 0 %} cart-link__bubble--visible{% endif %}"></span>
+      </span>
+    </a>
+      {% if section.settings.main_menu_alignment == 'left' or section.settings.main_menu_alignment == 'left-center' or section.settings.main_menu_alignment == 'left-drawer' %}
+      <button
+        type="button"
+        class="site-nav__link site-nav__link--icon js-drawer-open-nav{% if section.settings.main_menu_alignment == 'left' or section.settings.main_menu_alignment == 'left-center' %} large-up--hide{% endif %}"
+        aria-controls="NavDrawer">
+       <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 6H22" stroke="currentColor" stroke-width="2"/>
+<path d="M4 12H22" stroke="currentColor" stroke-width="2"/>
+<path d="M4 19H22" stroke="currentColor" stroke-width="2"/>
+</svg>
+
+        <span class="icon__fallback-text">{{ 'general.drawers.navigation' | t }}</span>
+      </button>
+    {% endif %}
+  </div>
+</div>

@@ -1,0 +1,128 @@
+{% liquid
+  assign secid = section.id | split:"__" 
+  assign secidlast = secid[1] | replace: "-","_"
+%}
+  <div class="contain-index simblogs-width">
+<div class="simblogs-outbox">
+    {% if section.settings.title != blank %}
+    <div class="simblogs-title animate-ele">{{ section.settings.title }}</div>
+   {% endif %}
+
+  <div class="simblogs_elebox animate-ele">
+         <div class="simblogs-{{ secidlast }} swiper">
+    <div class="swiper-wrapper">  
+      {% for block in section.blocks %}
+         <div class="swiper-slide">
+          <div class="simblogs_item">
+        {% if block.settings.image  %}
+      <div class="simblogs-img"><img class="{% if block.settings.imagemb  %}hide-mb{% endif %}"  src="{{ block.settings.image | img_url:'master' }}" alt=" " /></div>
+     {% endif %}
+    {% if block.settings.imagemb  %}
+     <div class="simblogs-img"><img class="hide-pc"  src="{{ block.settings.imagemb | img_url:'master' }}"  alt=" " /></div>
+   {% endif %}
+       <div class="simblogsr_item_text">
+           {% if block.settings.title != blank %}
+            <div class="simblogs_item_title">{{ block.settings.title }}</div>
+           {% endif %}
+         {% if block.settings.content != blank %}
+            <div class="simblogsitem_con">{{ block.settings.content }}</div>
+           {% endif %}
+       </div>
+
+      </div>  
+         </div>
+      {% endfor %}
+    </div>
+     </div>
+  </div>
+      {% if section.settings.btntext != blank %}
+        <a href="{{ section.settings.btnurl }}" class="simblogs-btn">{{ section.settings.btntext }}</a> 
+    {% endif %}
+</div>
+  </div>
+
+        <script>   
+  $(function(){
+      var simblogs_{{secidlast}} = new Swiper ('.simblogs-{{ secidlast }}', {
+    slidesPerView : 3,
+    spaceBetween: '3%',
+    observer: true,  //开启动态检查器，监测swiper和slide
+    observeParents: true, 
+ //    navigation: {
+	// 	nextEl: '.simblogs-{{ secidlast }}',
+	// 	prevEl: '.simblogs-{{ secidlast }}',
+	// },
+    breakpoints: { 
+      10: {  
+       slidesPerView : 1.5,
+         spaceBetween: '2.5%',
+      },
+      550: { 
+       slidesPerView : 2,
+      },
+      769: {  //当屏幕宽度大于等于769
+        slidesPerView: 3,
+      },
+      994: { 
+        slidesPerView : 3,
+      }
+    }
+
+  });
+
+  })
+
+</script>
+
+
+{% schema %}
+  {
+   "name": "SimCard Blog",
+  "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "title"
+      },{
+        "type": "text",
+        "id": "btntext",
+        "label": "btn text"
+      },{
+        "type": "url",
+        "id": "btnurl",
+        "label": "btn url"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "block",
+        "settings": [
+       {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },{
+        "type": "image_picker",
+        "id": "imagemb",
+        "label": "Image(mobile)"
+      },{
+        "type": "text",
+        "id": "title",
+        "label": "title"
+      },{
+        "type": "richtext",
+        "id": "content",
+        "label": "content"
+      }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "SimCard Blog",
+        "category": "HO-layout"
+      }
+    ]
+  }
+{% endschema %}

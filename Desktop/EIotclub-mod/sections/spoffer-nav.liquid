@@ -1,0 +1,132 @@
+
+{% liquid
+  assign secid = section.id | split:"__" 
+  assign secidlast = secid[1] | replace: "-","_"
+%}
+<div class="exhpronav-container" >
+    <div class="exhpronav-bar" style="color:{{ section.settings.color }};background-color:{{ section.settings.bgcolor }}">
+    <div class="exhpronav-list">
+   {% for block in section.blocks %}
+       {% if block.settings.title != blank %}
+        <span class="exhpronav-item exhpronav-item-{{ forloop.index }} {% if forloop.first %}active{% endif %}" data-jump="{{ block.settings.jump }}">{{ block.settings.title }}</span>   
+       {% endif %} 
+   {% endfor %}
+      {% if section.settings.manualurl %}<a target="_blank" class="exhpronav-btn" href="{{ section.settings.manualurl }}">{{ section.settings.manual }}</a>{% endif %}
+    </div>    
+    </div>
+
+</div>
+
+
+<script>
+  $(function(){
+    $(".exhpronav-item").each(function(){
+      $(this).click(function(){
+        $(this).addClass("active").siblings().removeClass("active");
+        if($(this).data("jump") && $(this).data("jump") != ''){
+         $("body,html").animate({
+          scrollTop: ($("."+$(this).data("jump")).offset().top -80 )
+        },500)
+        }
+      })
+    });
+
+
+
+  var firoffset = $(".exhpronav-item-1").offset().left; 
+ $(window).scroll(function(){
+   if($(window).scrollTop() > $(".exhpronav-container").offset().top - $(window).height()/2){
+   $("#HeaderWrapper").addClass("hidenav");
+   }else{
+     $("#HeaderWrapper").removeClass("hidenav"); 
+   }
+   
+   $(".exhpronav-item").each(function(){
+    if($(window).scrollTop() > $("."+$(this).data("jump")).offset().top - $(window).height()/2){
+   $(this).addClass("active").siblings().removeClass("active");
+   }
+   });
+   
+    if($(window).width() < 769){
+     $(".exhpronav-item").each(function(){  
+    if($(window).scrollTop() > $("."+$(this).data("jump")).offset().top - $(window).height()/2 && $(window).scrollTop() < $("."+$(this).data("jump")).offset().top - $(window).height()*2/5){
+  let childoff = $(this).offset().left;     
+  console.log(childoff+"||"+firoffset)
+  if(childoff) {
+    console.log("scroll");
+      $('.exhpronav-list').scrollLeft(childoff - firoffset); 
+  }
+   }
+ });
+
+  }
+ });
+
+ if($(window).width() < 769){
+   
+  $('.exhpronav-item').click(function(){
+    let childWidth = $(this).width(); 
+    {% comment %} let firoffset = $(".exhpronav-item-1").offset().left; {% endcomment %}
+    let childoff = $(this).offset().left; 
+    if(childoff) {
+      $('.exhpronav-list').scrollLeft(childoff - firoffset); 
+    }
+  })
+     
+   }
+
+
+  })
+</script>
+
+{% schema %}
+  {
+    "name": "SpecialOffer Nav","class": "SpecialOffer-Nav",
+      "settings": [
+        {
+        "type": "color",
+        "id": "bgcolor",
+        "label": "bgcolor",
+        "default": "#CDF3DF"
+         },{
+        "type": "color",
+        "id": "color",
+        "label": "color",
+        "default": "#282828"
+         },{
+        "type": "text",
+        "id": "manual",
+        "label": "manual",
+        "default": "Manual"
+         },{
+        "type": "url",
+        "id": "manualurl",
+        "label": "manual url"
+         }
+    ],
+    "blocks": [
+     {
+        "type": "block",
+        "name": "block",
+        "settings": [
+      {
+        "type":"text",
+        "id":"title",
+        "label":"Title"
+      },{
+        "type":"text",
+        "id":"jump",
+        "label":"Jump"
+      }
+          
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "SpecialOffer Nav",
+        "category": "HO-layout"
+      }
+    ]
+  }
+{% endschema %}

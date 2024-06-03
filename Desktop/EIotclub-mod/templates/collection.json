@@ -1,0 +1,129 @@
+{
+  "sections": {
+    "coll_banner_NLq8Qm": {
+      "type": "coll-banner",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/colbanner_1.png",
+        "imagemb": "shopify:\/\/shop_images\/colbanner_2.png",
+        "title": "SIM Card, No Monthly Fee",
+        "content": "<p>Lorem ipsum dolor sit amet consectetur. Faucibus amet ligula dignissim pretium et fringilla.<\/p>"
+      }
+    },
+    "main_collection_new_x6pwHa": {
+      "type": "main-collection-new",
+      "blocks": {
+        "filter_category_9Ci7tA": {
+          "type": "filter_category",
+          "settings": {
+            "category_name": "Product Category",
+            "tag_list": "All,Security Camera,Trail Camera,4G Router,Tracker,Industrial"
+          }
+        },
+        "filter_category_cPNLT3": {
+          "type": "filter_category",
+          "settings": {
+            "category_name": "Price",
+            "tag_list": "Under $100.00,$100.00~$500.00,$500.00~$19999,Under $9999"
+          }
+        },
+        "filter_category_fP74FL": {
+          "type": "filter_category",
+          "settings": {
+            "category_name": "Popular Areas",
+            "tag_list": "United States,Europe,United Kingdom,Canada,Global"
+          }
+        },
+        "filter_category_YAGFkF": {
+          "type": "filter_category",
+          "settings": {
+            "category_name": "operators",
+            "tag_list": "Verizon,AT&T,T-Mobile,Bell,Rogers,TELUS"
+          }
+        }
+      },
+      "block_order": [
+        "filter_category_9Ci7tA",
+        "filter_category_cPNLT3",
+        "filter_category_fP74FL",
+        "filter_category_YAGFkF"
+      ],
+      "settings": {
+        "title": "Stay connected, wherever you travel or work",
+        "grid": "3",
+        "rows": "2",
+        "price_color": "#e74300"
+      }
+    },
+    "main-collection": {
+      "type": "main-collection",
+      "blocks": {
+        "collection_description": {
+          "type": "collection_description",
+          "settings": {}
+        },
+        "product_grid": {
+          "type": "product_grid",
+          "settings": {
+            "collection_subnav_style": "inline",
+            "per_row": 4,
+            "mobile_flush_grid": false
+          }
+        }
+      },
+      "block_order": [
+        "collection_description",
+        "product_grid"
+      ],
+      "disabled": true,
+      "settings": {
+        "collection_image_enable": true,
+        "collection_image_height": 550,
+        "parallax": true,
+        "parallax_direction": "top",
+        "enable_sidebar": true,
+        "collapsed": true,
+        "enable_color_swatches": false,
+        "enable_sort": false
+      }
+    },
+    "a2bd889a-fc57-4bf6-bedd-bdac052eac1e": {
+      "type": "rich-text",
+      "blocks": {
+        "template--14604195627141__a2bd889a-fc57-4bf6-bedd-bdac052eac1e-heading-1": {
+          "type": "heading",
+          "settings": {
+            "title": "Experience the new life of 4G first"
+          }
+        },
+        "template--14604195627141__a2bd889a-fc57-4bf6-bedd-bdac052eac1e-text-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Upgrade your security camera system with our prepaid SIM cards designed for AT&T and T-Mobile networks. <br\/>With 24GB of data, you can now experience the new life of 4G connectivity firsthand. Say goodbye to Wi-Fi limitations and enjoy uninterrupted surveillance wherever you are.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--14604195627141__a2bd889a-fc57-4bf6-bedd-bdac052eac1e-heading-1",
+        "template--14604195627141__a2bd889a-fc57-4bf6-bedd-bdac052eac1e-text-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "padding_top_bottom": 0,
+        "padding_top_bottom_mobile": 0,
+        "bg_color": "",
+        "header_align_text": "center",
+        "content_align_text": "center",
+        "button_align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "coll_banner_NLq8Qm",
+    "main_collection_new_x6pwHa",
+    "main-collection",
+    "a2bd889a-fc57-4bf6-bedd-bdac052eac1e"
+  ]
+}

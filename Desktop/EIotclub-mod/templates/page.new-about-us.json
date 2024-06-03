@@ -1,0 +1,734 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "1facb854-a2c8-4443-b45c-7df335da34bb": {
+      "type": "slideshow",
+      "blocks": {
+        "template--14569608970373__1facb854-a2c8-4443-b45c-7df335da34bb-1682245009a805580b-0": {
+          "type": "image",
+          "settings": {
+            "title": "EIOTCLUB SIM Card:",
+            "title_color": "#1c1d1d",
+            "title_size": 48,
+            "subheading": "Perfect for Your IoT Devices",
+            "subheading_size": 20,
+            "subheading_color": "#1c1d1d",
+            "subheading_line_height": 24,
+            "subheading_letter_spacing": 0,
+            "link": "",
+            "link_text": "",
+            "link2": "",
+            "link_text2": "",
+            "text_align": "vertical-center horizontal-center",
+            "text_align_mo": "vertical-center-mo horizontal-center-mo",
+            "image": "shopify:\/\/shop_images\/3-1920x400-0408.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/brandstory01-375x460_2x_79ba755f-7742-4108-9502-e203e98f12d3.jpg",
+            "parallax_direction": "top",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "template--14569608970373__1facb854-a2c8-4443-b45c-7df335da34bb-1682245009a805580b-0"
+      ],
+      "settings": {
+        "section_height": "natural",
+        "mobile_height": "auto",
+        "parallax": false,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 5,
+        "lazyload_images": true
+      }
+    },
+    "44d1c6a5-f6f6-4eac-aa36-caeb9e1e3efc": {
+      "type": "rich-text",
+      "blocks": {
+        "template--14569608970373__44d1c6a5-f6f6-4eac-aa36-caeb9e1e3efc-1682245060ae55fedd-0": {
+          "type": "heading",
+          "settings": {
+            "title": "Perfect for Your IoT Devices"
+          }
+        },
+        "template--14569608970373__44d1c6a5-f6f6-4eac-aa36-caeb9e1e3efc-1682245060ae55fedd-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>In today's connected world, IoT devices rely on cellular technology, making a reliable wireless plan essential. At EIOTCLUB, we offer a variety of flexible wireless plans tailored to meet your specific needs.<\/p>"
+          }
+        },
+        "55d0c80a-8e79-494e-b20d-85ab88d1d7de": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>With EIOTCLUB, there are no contracts, extra fees, hidden fees, or activation fees. We believe in providing a transparent and hassle-free experience for our customers.<\/p>"
+          }
+        },
+        "33e82756-5dba-4404-b526-c5f6bab49d35": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Our SIM cards come pre-programmed with APN and internet settings in most manufacturers' devices, ensuring seamless connectivity. Connecting your IoT device to the internet is quick and effortless, saving you valuable time and effort.<\/p>"
+          }
+        },
+        "8b396379-4413-4bcc-b303-07ac5d7df2bf": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>At EIOTCLUB, we are committed to delivering top-notch service and support for all your IoT requirements. Join us today and experience the convenience and reliability of EIOTCLUB SIM Card for your IoT devices.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--14569608970373__44d1c6a5-f6f6-4eac-aa36-caeb9e1e3efc-1682245060ae55fedd-0",
+        "template--14569608970373__44d1c6a5-f6f6-4eac-aa36-caeb9e1e3efc-1682245060ae55fedd-1",
+        "55d0c80a-8e79-494e-b20d-85ab88d1d7de",
+        "33e82756-5dba-4404-b526-c5f6bab49d35",
+        "8b396379-4413-4bcc-b303-07ac5d7df2bf"
+      ],
+      "settings": {
+        "padding_top_bottom": 40,
+        "padding_top_bottom_mobile": 13,
+        "bg_color": "",
+        "header_align_text": "center",
+        "content_align_text": "center",
+        "button_align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "f99459a0-8743-4fda-81e7-a8bc87e2cf5a": {
+      "type": "text-columns",
+      "blocks": {
+        "template--14569608970373__f99459a0-8743-4fda-81e7-a8bc87e2cf5a-168224714514016358-1": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/brandstory02-700x490-0607_44f86e7b-d2ee-4068-ad6f-7aa115dc5f17.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "header-text": "",
+            "title": "Strong Signals, Seamless Connectivity",
+            "text": "<p>Enjoy seamless connectivity with EIOTCLUB's strong signals<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "template--14569608970373__f99459a0-8743-4fda-81e7-a8bc87e2cf5a-168224714514016358-2": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify:\/\/shop_images\/brandstory02-700x490-060701.jpg",
+            "image_mask": "none",
+            "image_width": 650,
+            "header-text": "",
+            "title": "Seamless Connectivity Across America",
+            "text": "<p>EIOTCLUB ensures connectivity wherever you go, covering every corner of America<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--14569608970373__f99459a0-8743-4fda-81e7-a8bc87e2cf5a-168224714514016358-1",
+        "template--14569608970373__f99459a0-8743-4fda-81e7-a8bc87e2cf5a-168224714514016358-2"
+      ],
+      "settings": {
+        "style": "style-1",
+        "bg_color": "#f6f6f6",
+        "title": "Better service",
+        "title-buttom": "",
+        "align_text": "center",
+        "content_align_text": "left",
+        "divider": false
+      }
+    },
+    "832ca1d8-1c2f-42a0-8f68-07d5704786bc": {
+      "type": "new-image-list",
+      "blocks": {
+        "99b04285-85f4-4847-935d-6c73506bf9e7": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/20231201163158.jpg",
+            "text": "",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        }
+      },
+      "block_order": [
+        "99b04285-85f4-4847-935d-6c73506bf9e7"
+      ],
+      "settings": {
+        "container": "container",
+        "bg_color": "",
+        "margin_bottom_mb": 40,
+        "margin_bottom_tab": 40,
+        "margin_bottom": 0,
+        "mg_top_mobile": 40,
+        "mg_top_tablet": 40,
+        "mg_top_desktop": 0,
+        "title": "Boost Your Signal with EIOTCLUB",
+        "color_title": "",
+        "fontsize_title": 32,
+        "fontsize_title_mo": 24,
+        "margin_bottom_title": 40,
+        "margin_bottom_title_mo": 24,
+        "text": "At EIOTCLUB, we go the extra mile to ensure that you have the best signal quality possible. Our advanced network infrastructure, coupled with strategic partnerships with leading carriers, allows us to provide exceptional signal strength and coverage for your IoT devices.",
+        "image_list_align": "center",
+        "row_box_num": "1",
+        "box_gap": 24,
+        "row_box_num_mobile": "1",
+        "box_gap_mobile": 24
+      }
+    },
+    "7171f46d-f528-425c-8d6f-838b5c734de0": {
+      "type": "new-image-text-banner",
+      "settings": {
+        "max_width": "",
+        "page-width": true,
+        "border-radius": false,
+        "image_pc": "shopify:\/\/shop_images\/aboutus-1920x540-030607_2601e938-1e37-437d-b473-d3b506423029.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/aboutus-720x480-030607.jpg",
+        "content": "",
+        "content_left": 10,
+        "content_top": 10,
+        "content_left_mobile": 10,
+        "content_top_mobile": 10
+      }
+    },
+    "eb9910c0-3a72-4eb0-b22d-58ab0584b00b": {
+      "type": "rich-text",
+      "blocks": {
+        "template--14584566022277__eb9910c0-3a72-4eb0-b22d-58ab0584b00b-16871528809724e6a4-0": {
+          "type": "heading",
+          "settings": {
+            "title": "Eiotclub User by Region"
+          }
+        },
+        "template--14584566022277__eb9910c0-3a72-4eb0-b22d-58ab0584b00b-16871528809724e6a4-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>At EIOTCLUB, we operate on the strongest and most reliable wireless network in the country, ensuring coast-to-coast coverage.<\/p><p>We have partnered with leading operators such as AT&T, T-Mobile, and Verizon in the United States, and we also support networks in 30 European countries. This allows us to deliver exceptional network coverage across Europe.<\/p><p>Moreover, we have collaborated with operators in Canada, the United Kingdom, Japan, Thailand, Australia, and more.<\/p><p>Wherever you are, our commitment remains the same: to deliver an outstanding connectivity experience.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--14584566022277__eb9910c0-3a72-4eb0-b22d-58ab0584b00b-16871528809724e6a4-0",
+        "template--14584566022277__eb9910c0-3a72-4eb0-b22d-58ab0584b00b-16871528809724e6a4-1"
+      ],
+      "settings": {
+        "padding_top_bottom": 0,
+        "padding_top_bottom_mobile": 0,
+        "bg_color": "",
+        "header_align_text": "center",
+        "content_align_text": "center",
+        "button_align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "72c9442a-cd78-48d1-80c9-12091b34e8d0": {
+      "type": "new-image-text-banner",
+      "settings": {
+        "max_width": "970",
+        "page-width": false,
+        "border-radius": false,
+        "image_pc": "shopify:\/\/shop_images\/aboutus_480x720_03_2x-06_090c02be-0d24-4291-a7c1-e7c76003c5b1.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/aboutus_480x720_03_2x-06_090c02be-0d24-4291-a7c1-e7c76003c5b1.jpg",
+        "content": "",
+        "content_left": 10,
+        "content_top": 10,
+        "content_left_mobile": 10,
+        "content_top_mobile": 10
+      }
+    },
+    "3586b19a-a687-4b45-ab7e-fb4da9d297ce": {
+      "type": "new-image-list",
+      "blocks": {
+        "80ff1f81-56f1-47b4-967b-405ae773e06c": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_195410.png",
+            "image_mobile": "shopify:\/\/shop_images\/Frame_195410.png",
+            "text": "",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "f31edf24-5b9a-4d6d-a7de-5d18dd8a190e": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_195411.png",
+            "image_mobile": "shopify:\/\/shop_images\/Frame_195411.png",
+            "text": "",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "f0176a09-2192-4557-a5b3-bfb81fb5c60e": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_195404.png",
+            "image_mobile": "shopify:\/\/shop_images\/Frame_195404.png",
+            "text": "",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "6b422e07-1133-47db-a096-0d643ec93e44": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_195412.png",
+            "image_mobile": "shopify:\/\/shop_images\/Frame_195412.png",
+            "text": "",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "1176a480-8bf8-47ac-8db0-a72da012c64b": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/three_logo.png",
+            "image_mobile": "shopify:\/\/shop_images\/three_logo.png",
+            "text": "",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "9261c14d-cf15-4f94-b338-37bff56f2480": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_195405.png",
+            "image_mobile": "shopify:\/\/shop_images\/Frame_195405.png",
+            "text": "",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "3ae9bc34-ed26-4cd2-96f4-fc8d3c9639ee": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_195406.png",
+            "image_mobile": "shopify:\/\/shop_images\/Frame_195406.png",
+            "text": "",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "f38b45cb-9551-434d-93c0-4d3acb138213": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_195407.png",
+            "image_mobile": "shopify:\/\/shop_images\/Frame_195407.png",
+            "text": "",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "86c19d42-b6a8-41fc-8a97-4f2fb8a8fcb6": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_195408.png",
+            "image_mobile": "shopify:\/\/shop_images\/Frame_195408.png",
+            "text": "",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "f48b8a1a-b282-4005-8082-f6505f45b693": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_195409.png",
+            "image_mobile": "shopify:\/\/shop_images\/Frame_195409.png",
+            "text": "",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 15,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        }
+      },
+      "block_order": [
+        "80ff1f81-56f1-47b4-967b-405ae773e06c",
+        "f31edf24-5b9a-4d6d-a7de-5d18dd8a190e",
+        "f0176a09-2192-4557-a5b3-bfb81fb5c60e",
+        "6b422e07-1133-47db-a096-0d643ec93e44",
+        "1176a480-8bf8-47ac-8db0-a72da012c64b",
+        "9261c14d-cf15-4f94-b338-37bff56f2480",
+        "3ae9bc34-ed26-4cd2-96f4-fc8d3c9639ee",
+        "f38b45cb-9551-434d-93c0-4d3acb138213",
+        "86c19d42-b6a8-41fc-8a97-4f2fb8a8fcb6",
+        "f48b8a1a-b282-4005-8082-f6505f45b693"
+      ],
+      "settings": {
+        "container": "container",
+        "bg_color": "rgba(0,0,0,0)",
+        "margin_bottom_mb": 40,
+        "margin_bottom_tab": 40,
+        "margin_bottom": 0,
+        "mg_top_mobile": 40,
+        "mg_top_tablet": 40,
+        "mg_top_desktop": 0,
+        "title": "Worldwide Partners",
+        "color_title": "",
+        "fontsize_title": 32,
+        "fontsize_title_mo": 24,
+        "margin_bottom_title": 40,
+        "margin_bottom_title_mo": 24,
+        "text": "",
+        "image_list_align": "center",
+        "row_box_num": "5",
+        "box_gap": 24,
+        "row_box_num_mobile": "3",
+        "box_gap_mobile": 24
+      }
+    },
+    "9222a9ea-261e-4432-b628-f57ec65d6608": {
+      "type": "new-image-list",
+      "blocks": {
+        "311e96af-6808-4615-9746-5d0db3237e66": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/aboutus-720x460-06.jpg",
+            "text": "",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        }
+      },
+      "block_order": [
+        "311e96af-6808-4615-9746-5d0db3237e66"
+      ],
+      "settings": {
+        "container": "fullwidth",
+        "bg_color": "",
+        "margin_bottom_mb": 40,
+        "margin_bottom_tab": 40,
+        "margin_bottom": 0,
+        "mg_top_mobile": 40,
+        "mg_top_tablet": 40,
+        "mg_top_desktop": 0,
+        "title": "Manage your account with the EIOTCLUB app",
+        "color_title": "",
+        "fontsize_title": 32,
+        "fontsize_title_mo": 24,
+        "margin_bottom_title": 40,
+        "margin_bottom_title_mo": 24,
+        "text": "",
+        "image_list_align": "center",
+        "row_box_num": "1",
+        "box_gap": 24,
+        "row_box_num_mobile": "1",
+        "box_gap_mobile": 24
+      }
+    },
+    "d0c3cf1e-0abf-428e-a78a-26ef38d088d6": {
+      "type": "New-Reviews-Block",
+      "blocks": {
+        "436b26b6-457a-42e3-8faa-0619cda1a466": {
+          "type": "reviews",
+          "settings": {
+            "margin_bottom_banner": 0,
+            "margin_bottom_banner_mo": 0,
+            "image02": "shopify:\/\/shop_images\/unnamed_1.jpg",
+            "name": "LifeHackster ",
+            "rating": "star5",
+            "title": "Unleash Security Anywhere with Reolink Duo & EIOTCLUB SIM Card",
+            "color_title": "#333333",
+            "font_size_title": 20,
+            "font_size_title_mo": 13,
+            "line_height_title": 45,
+            "margin_bottom_title": 0,
+            "line_height_title_mo": 20,
+            "margin_bottom_title_mo": 20,
+            "des": "With the EIOTCLUB SIM Card, you can harness the full potential of the Reolink Duo. Enjoy seamless cellular coverage and uninterrupted monitoring, even in remote areas with no access to power or internet. Simply insert the SIM card, and you're ready to go.",
+            "color_des": "#333333",
+            "font_size_des": 14,
+            "font_size_des_mo": 14,
+            "line_height_des": 21,
+            "margin_bottom_des": 33,
+            "line_height_des_mo": 21,
+            "margin_bottom_des_mo": 20,
+            "myproduct": "",
+            "product-button": "",
+            "product-url": ""
+          }
+        },
+        "d9c3c561-15bd-4d07-a110-f1cb0487ba12": {
+          "type": "reviews",
+          "settings": {
+            "margin_bottom_banner": 32,
+            "margin_bottom_banner_mo": 0,
+            "image02": "shopify:\/\/shop_images\/channels4_profile.jpg",
+            "name": "Dustin Warncke",
+            "rating": "star5",
+            "title": "Get SIM Cards Easily and Affordably with EIOTCLUB SIM Kit",
+            "color_title": "#333333",
+            "font_size_title": 20,
+            "font_size_title_mo": 13,
+            "line_height_title": 48,
+            "margin_bottom_title": 0,
+            "line_height_title_mo": 25,
+            "margin_bottom_title_mo": 20,
+            "des": "Looking for a hassle-free and cost-effective way to get a cellular data plan? Look no further! With the EIOTCLUB SIM Kit, you can effortlessly plug into your IoT devices without the need for activation. Experience seamless connectivity and enjoy the convenience of a reliable cellular data plan",
+            "color_des": "#333333",
+            "font_size_des": 14,
+            "font_size_des_mo": 14,
+            "line_height_des": 21,
+            "margin_bottom_des": 33,
+            "line_height_des_mo": 21,
+            "margin_bottom_des_mo": 20,
+            "myproduct": "",
+            "product-button": "",
+            "product-url": ""
+          }
+        },
+        "b8416341-fd0a-43db-96e4-0f46be8d3f67": {
+          "type": "reviews",
+          "settings": {
+            "margin_bottom_banner": 0,
+            "margin_bottom_banner_mo": 0,
+            "image02": "shopify:\/\/shop_images\/unnamed.jpg",
+            "name": "TNT - Try New Things",
+            "rating": "star5",
+            "title": "Wireless Communication That's Really Affordable",
+            "color_title": "#333333",
+            "font_size_title": 20,
+            "font_size_title_mo": 14,
+            "line_height_title": 45,
+            "margin_bottom_title": 0,
+            "line_height_title_mo": 20,
+            "margin_bottom_title_mo": 20,
+            "des": "It is almost unbelievable how affordable this system is.  I can get a year's service with plenty of data for around $200.  The google voice number also works really well.  It rings to the phone but also rings to a wall phone in the house and to my wife's cell phone as well. we love it.",
+            "color_des": "#333333",
+            "font_size_des": 14,
+            "font_size_des_mo": 14,
+            "line_height_des": 21,
+            "margin_bottom_des": 33,
+            "line_height_des_mo": 21,
+            "margin_bottom_des_mo": 20,
+            "myproduct": "",
+            "product-button": "",
+            "product-url": ""
+          }
+        },
+        "27847d79-0512-487d-9583-418c4ac4b163": {
+          "type": "reviews",
+          "settings": {
+            "margin_bottom_banner": 0,
+            "margin_bottom_banner_mo": 0,
+            "image02": "shopify:\/\/shop_images\/channels4_profile_1.jpg",
+            "name": "WindMule Acres",
+            "rating": "star5",
+            "title": "Experience Optimal Performance with Reolink GO PT and EIOTCLUB SIM Card",
+            "color_title": "#333333",
+            "font_size_title": 20,
+            "font_size_title_mo": 13,
+            "line_height_title": 45,
+            "margin_bottom_title": 0,
+            "line_height_title_mo": 20,
+            "margin_bottom_title_mo": 20,
+            "des": "Are you experiencing poor results with your Reolink GO PT camera due to inadequate network coverage? EIOTCLUB has the solution for you. Our SIM card operates on the Verizon network, providing superior coverage and optimal performance for your camera. Don't let the wrong network ruin your investment - switch to EIOTCLUB SIM card for reliable and uninterrupted connectivity. As a satisfied user of Reolink GO PT with EIOTCLUB SIM card, I highly recommend this combination for anyone looking for reliable and high-performance IoT devices.",
+            "color_des": "#333333",
+            "font_size_des": 14,
+            "font_size_des_mo": 14,
+            "line_height_des": 21,
+            "margin_bottom_des": 33,
+            "line_height_des_mo": 21,
+            "margin_bottom_des_mo": 20,
+            "myproduct": "",
+            "product-button": "",
+            "product-url": ""
+          }
+        },
+        "d2578cbc-de5d-4740-853b-e3aae995c840": {
+          "type": "reviews",
+          "disabled": true,
+          "settings": {
+            "margin_bottom_banner": 0,
+            "margin_bottom_banner_mo": 0,
+            "image02": "shopify:\/\/shop_images\/shutterstock_2205392875_2_1_25559ecd-7c6f-4757-9a94-9cd6a9d8c221.png",
+            "name": "Phil Stracchino",
+            "rating": "star5",
+            "title": "RESPECTS YOUR PRIVACY!",
+            "color_title": "#333333",
+            "font_size_title": 20,
+            "font_size_title_mo": 13,
+            "line_height_title": 45,
+            "margin_bottom_title": 0,
+            "line_height_title_mo": 20,
+            "margin_bottom_title_mo": 20,
+            "des": "I have two reolink camera, I try this company started with $5.99 trial plan sim card, I did the monthly plan for the first two months. No issues so I opted for the annual subscription after that. good service!",
+            "color_des": "#333333",
+            "font_size_des": 14,
+            "font_size_des_mo": 14,
+            "line_height_des": 21,
+            "margin_bottom_des": 33,
+            "line_height_des_mo": 21,
+            "margin_bottom_des_mo": 20,
+            "myproduct": "",
+            "product-button": "",
+            "product-url": ""
+          }
+        },
+        "6ea2a3fd-0264-40db-b2f3-a754fcc8ef96": {
+          "type": "reviews",
+          "disabled": true,
+          "settings": {
+            "margin_bottom_banner": 0,
+            "margin_bottom_banner_mo": 0,
+            "image02": "shopify:\/\/shop_images\/shutterstock_2205392875_2_1_25559ecd-7c6f-4757-9a94-9cd6a9d8c221.png",
+            "name": "Phil Stracchino",
+            "rating": "star5",
+            "title": "RESPECTS YOUR PRIVACY!",
+            "color_title": "#333333",
+            "font_size_title": 20,
+            "font_size_title_mo": 13,
+            "line_height_title": 45,
+            "margin_bottom_title": 0,
+            "line_height_title_mo": 20,
+            "margin_bottom_title_mo": 20,
+            "des": "I have two reolink camera, I try this company started with $5.99 trial plan sim card, I did the monthly plan for the first two months. No issues so I opted for the annual subscription after that. good service!",
+            "color_des": "#333333",
+            "font_size_des": 14,
+            "font_size_des_mo": 14,
+            "line_height_des": 21,
+            "margin_bottom_des": 33,
+            "line_height_des_mo": 21,
+            "margin_bottom_des_mo": 20,
+            "myproduct": "",
+            "product-button": "",
+            "product-url": ""
+          }
+        }
+      },
+      "block_order": [
+        "436b26b6-457a-42e3-8faa-0619cda1a466",
+        "d9c3c561-15bd-4d07-a110-f1cb0487ba12",
+        "b8416341-fd0a-43db-96e4-0f46be8d3f67",
+        "27847d79-0512-487d-9583-418c4ac4b163",
+        "d2578cbc-de5d-4740-853b-e3aae995c840",
+        "6ea2a3fd-0264-40db-b2f3-a754fcc8ef96"
+      ],
+      "settings": {
+        "bg_color": "#f6f6f6",
+        "margin_bottom_mb": 40,
+        "margin_bottom_tab": 40,
+        "margin_bottom": 40,
+        "mg_top_mobile": 40,
+        "mg_top_tablet": 40,
+        "mg_top_desktop": 60,
+        "title": "Listen to Their Voice",
+        "color_title": "#333333",
+        "font_size_title": 32,
+        "font_size_title_mo": 13,
+        "line_height_title": 0,
+        "margin_bottom_title": 45,
+        "line_height_title_mo": 20,
+        "margin_bottom_title_mo": 20,
+        "star_color": "#19a64f"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1facb854-a2c8-4443-b45c-7df335da34bb",
+    "44d1c6a5-f6f6-4eac-aa36-caeb9e1e3efc",
+    "f99459a0-8743-4fda-81e7-a8bc87e2cf5a",
+    "832ca1d8-1c2f-42a0-8f68-07d5704786bc",
+    "7171f46d-f528-425c-8d6f-838b5c734de0",
+    "eb9910c0-3a72-4eb0-b22d-58ab0584b00b",
+    "72c9442a-cd78-48d1-80c9-12091b34e8d0",
+    "3586b19a-a687-4b45-ab7e-fb4da9d297ce",
+    "9222a9ea-261e-4432-b628-f57ec65d6608",
+    "d0c3cf1e-0abf-428e-a78a-26ef38d088d6"
+  ]
+}

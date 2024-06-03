@@ -1,0 +1,88 @@
+{% liquid
+  assign secid = section.id | split:"__" 
+  assign secidlast = secid[1] | replace: "-","_"
+%}
+  <div class="contain-index">
+<div class="simlogoover-outbox">
+    {% if section.settings.image  %}
+      <div class="simlogoover-img"><img class="{% if section.settings.imagemb  %}hide-mb{% endif %}"  src="{{ section.settings.image | img_url:'master' }}" alt=" " /></div>
+     {% endif %}
+    {% if section.settings.imagemb  %}
+     <div class="simlogoover-img"><img class="hide-pc"  src="{{ section.settings.imagemb | img_url:'master' }}"  alt=" " /></div>
+   {% endif %}
+    {% if section.settings.title != blank %}
+    <div class="simlogoover-title animate-ele">{{ section.settings.title }}</div>
+   {% endif %}
+
+
+  <div class="simlogoover_elebox animate-ele">
+      {% for block in section.blocks %}
+         <div class="simlogoover_item">
+        {% if block.settings.image  %}
+          <span><img src="{{ block.settings.image | img_url:'master' }}" alt=" " /></span>
+         {% endif %}
+       <div class="simlogoover_item_text">
+           {% if block.settings.title != blank %}
+            <div class="simlogoover_item_title">{{ block.settings.title }}</div>
+           {% endif %}
+         {% if block.settings.subtitle != blank %}
+            <div class="simlogooveritem_subtitle">{{ block.settings.subtitle }}</div>
+           {% endif %}
+       </div>
+
+      </div>  
+      {% endfor %}
+  </div>
+  
+</div>
+  </div>
+
+
+
+{% schema %}
+  {
+   "name": "Sim LogoOverImage",
+  "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "title"
+      },{
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },{
+        "type": "image_picker",
+        "id": "imagemb",
+        "label": "Image(mobile)"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "block",
+        "settings": [
+       {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },{
+        "type": "text",
+        "id": "title",
+        "label": "title"
+      },{
+        "type": "text",
+        "id": "subtitle",
+        "label": "subtitle"
+      }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Sim LogoOverImage",
+        "category": "HO-layout"
+      }
+    ]
+  }
+{% endschema %}

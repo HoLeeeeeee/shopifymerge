@@ -1,0 +1,219 @@
+/*  Way to Earn Points  */
+.reward-waytoearnpoints {
+    padding: 6vw 0;
+}
+
+.reward-waytoearnpoints .waytoearnpoints-box {
+    padding-top: 2vw;
+    display: flex;
+    align-items: center;
+}
+
+.reward-waytoearnpoints .waytoearnpoints-box .earnpoints-leftbox {
+    flex: 0 1 30%;
+    width: 30%;
+    padding-right: 15px;
+    text-align: center;
+}
+
+.earnpoints-rightbox-items {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.reward-waytoearnpoints .waytoearnpoints-box .earnpoints-leftbox .leftbox-icon svg {
+    display: block;
+    max-width: 120px;
+    max-height: 120px;
+    margin: auto;
+}
+
+.reward-waytoearnpoints .waytoearnpoints-box .earnpoints-leftbox .leftbox-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.reward-waytoearnpoints .waytoearnpoints-box .earnpoints-leftbox .leftbox-title span {
+    color: #fff;
+}
+
+.reward-waytoearnpoints .waytoearnpoints-box .earnpoints-leftbox .leftbox-button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #e10800;
+    border-radius: 4px;
+    font-size: 20px;
+}
+
+.reward-waytoearnpoints .waytoearnpoints-box .earnpoints-leftbox .leftbox-button-link:hover {
+    background: rgba(255, 8, 0, 0.75);
+}
+
+.reward-waytoearnpoints .waytoearnpoints-box .earnpoints-rightbox {
+    flex: 0 1 70%;
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.reward-waytoearnpoints .waytoearnpoints-box .earnpoints-rightbox .ways-item {
+    flex: 0 1 25%;
+    width: 25%;
+    text-align: center;
+    padding: 1vw;
+}
+.reward-waytoearnpoints .waytoearnpoints-box .earnpoints-rightbox .ways-item-bg { 
+    background:#fff;
+    padding: 1.5vw 0;
+    border-radius: 20px;
+}
+
+.reward-waytoearnpoints .waytoearnpoints-box .earnpoints-rightbox .ways-item .ways-item-titlebox .ways-item-icontitle {
+    font-size: 20px;
+}
+
+.reward-waytoearnpoints .waytoearnpoints-box .earnpoints-rightbox .ways-item .ways-item-titlebox .ways-item-icontitle span {
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.reward-waytoearnpoints .waytoearnpoints-box .earnpoints-rightbox .ways-item .ways-item-titlebox .ways-item-iconsubtitle {
+    font-size: 16px;
+    margin-top:8px;
+}
+
+@media only screen and (max-width: 1600px) {
+    .reward-waytoearnpoints .waytoearnpoints-box .earnpoints-rightbox .ways-item {
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+
+    .reward-waytoearnpoints .waytoearnpoints-box .earnpoints-leftbox .leftbox-title,
+    .reward-waytoearnpoints .waytoearnpoints-box .earnpoints-rightbox .ways-item .ways-item-titlebox .ways-item-icontitle span {
+        font-size: 20px;
+    }
+
+    .reward-waytoearnpoints .waytoearnpoints-box .earnpoints-leftbox .leftbox-button-link,
+    .reward-waytoearnpoints .waytoearnpoints-box .earnpoints-rightbox .ways-item .ways-item-titlebox .ways-item-icontitle {
+        font-size: 18px;
+    }
+
+    .reward-waytoearnpoints .waytoearnpoints-box .earnpoints-rightbox .ways-item .ways-item-titlebox .ways-item-iconsubtitle {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .reward-waytoearnpoints .waytoearnpoints-box .earnpoints-leftbox .leftbox-title,
+    .reward-waytoearnpoints .waytoearnpoints-box .earnpoints-rightbox .ways-item .ways-item-titlebox .ways-item-icontitle span {
+        font-size: 16px;
+    }
+
+    .reward-waytoearnpoints .waytoearnpoints-box .earnpoints-leftbox .leftbox-button-link,
+    .reward-waytoearnpoints .waytoearnpoints-box .earnpoints-rightbox .ways-item .ways-item-titlebox .ways-item-icontitle {
+        font-size: 14px;
+    }
+
+    .reward-waytoearnpoints .waytoearnpoints-box .earnpoints-rightbox .ways-item .ways-item-titlebox .ways-item-iconsubtitle {
+        font-size: 12px;
+    }
+    /* .reward-waytoearnpoints .waytoearnpoints-box .earnpoints-rightbox .ways-item{ padding:5px;} */
+}
+
+@media only screen and (max-width: 950px) {
+    .reward-waytoearnpoints .waytoearnpoints-box{ flex-direction: column;}
+    .reward-waytoearnpoints .waytoearnpoints-box .earnpoints-rightbox {
+        flex: 0 1 100%;
+        width: 100%;
+    }
+    .reward-waytoearnpoints .waytoearnpoints-box .earnpoints-leftbox {
+        flex: 0 1 100%;
+        width: 100%;
+        padding: 10px 30px;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (min-width: 591px) and (max-width: 790px) {
+    .reward-waytoearnpoints .waytoearnpoints-box .earnpoints-leftbox .leftbox-title,
+    .reward-waytoearnpoints .waytoearnpoints-box .earnpoints-rightbox .ways-item .ways-item-titlebox .ways-item-icontitle span {
+        font-size: 22px;
+    }
+
+    .reward-waytoearnpoints .waytoearnpoints-box .earnpoints-leftbox .leftbox-button-link,
+    .reward-waytoearnpoints .waytoearnpoints-box .earnpoints-rightbox .ways-item .ways-item-titlebox .ways-item-icontitle {
+        font-size: 20px;
+    }
+
+    .reward-waytoearnpoints .waytoearnpoints-box .earnpoints-rightbox .ways-item .ways-item-titlebox .ways-item-iconsubtitle {
+        font-size: 16px;
+    }
+
+    .reward-waytoearnpoints .waytoearnpoints-box .earnpoints-leftbox {
+        padding: 10px 0;
+    }
+
+    .reward-waytoearnpoints .waytoearnpoints-box .earnpoints-leftbox .leftbox-icon svg {
+        max-width: 100px;
+        max-height: 100px;
+    }
+}
+
+@media only screen and (max-width: 790px) {
+    .reward-waytoearnpoints .waytoearnpoints-box {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .reward-waytoearnpoints .waytoearnpoints-box .earnpoints-leftbox .leftbox-icon svg {
+        display: inline-block;
+        max-width: 130px;
+        max-height: 130px;
+        margin: auto;
+    }
+
+    .reward-waytoearnpoints .waytoearnpoints-box .earnpoints-leftbox .leftbox-text-link {
+        margin-left: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .reward-waytoearnpoints .waytoearnpoints-box .earnpoints-rightbox {
+        flex: 0 1 100%;
+        width: 100%;
+    }
+    
+    .reward-waytoearnpoints .waytoearnpoints-box .earnpoints-rightbox .ways-item {
+        flex: 0 1 50%;
+        width: 50%;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    .reward-benefit-section .contain-index{ padding:0; }
+}
+
+@media only screen and (max-width: 590px) {
+    .reward-waytoearnpoints .waytoearnpoints-box .earnpoints-leftbox .leftbox-title,
+    .reward-waytoearnpoints .waytoearnpoints-box .earnpoints-leftbox .leftbox-button-link,
+    .reward-waytoearnpoints .waytoearnpoints-box .earnpoints-rightbox .ways-item .ways-item-titlebox .ways-item-iconsubtitle {
+        font-size: 14px;
+    }
+
+    .reward-waytoearnpoints .waytoearnpoints-box .earnpoints-rightbox .ways-item .ways-item-titlebox .ways-item-icontitle span {
+        font-size: 20px;
+    }
+
+    .reward-waytoearnpoints .waytoearnpoints-box .earnpoints-rightbox .ways-item .ways-item-titlebox .ways-item-icontitle {
+        font-size: 20px;
+    }
+    .reward-waytoearnpoints .waytoearnpoints-box .earnpoints-rightbox .ways-item{ padding: 5px;}
+    .reward-waytoearnpoints .waytoearnpoints-box .earnpoints-rightbox .ways-item-bg{ padding:15px 0;}
+
+}

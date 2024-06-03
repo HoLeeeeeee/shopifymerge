@@ -1,0 +1,206 @@
+{% liquid
+  assign secid = section.id | split:"__" 
+  assign secidlast = secid[1] | replace: "-","_"
+%}
+<style>
+  #sprecordfun-out-{{ secidlast }}{
+    {% if section.settings.bg_image %}
+      background: url("{{ section.settings.bg_image | image_url }}") no-repeat;
+      background-size: 100% auto;
+      background-position: center top;
+    {% endif %}
+  }
+
+ {% if section.settings.bg_imagemb %}
+  @media (max-width:768px){
+     #sprecordfun-out-{{ secidlast }}{
+      background-image: url("{{ section.settings.bg_imagemb | image_url }}");
+      background-position: top;
+    background-size: auto;
+  } 
+  }
+ {% endif %}
+</style>
+<div id="sprecordfun-out-{{ secidlast }}">
+<div class="sprecordfun-outbox">
+   
+  <div class="contain-index">
+    {% if section.settings.title != blank %}
+        <div class="sprecordfun-toptitle animate-ele">{{ section.settings.title }}</div> 
+        {% endif %}    
+    
+    <div class="sprecordfun-content animate-ele">
+
+       <div class="sprecordfun-{{ secidlast }} swiper">
+     <div class="swiper-scrollbar hide-pc swiper-scrollbar-{{ secidlast }}"></div>
+    <div class="swiper-wrapper">  
+        {% for block in section.blocks %} 
+          {% assign product = all_products[block.settings.product] %}
+      <div class="swiper-slide">
+       
+       <div class="sprecordfun-proitem">
+          <div class="sprecordfun-proitem-img">
+            {% if block.settings.image %}
+              <a href="{{ product.url }}"> <img src="{{ block.settings.image | img_url:'master' }}" /></a>
+            {% endif %}
+          </div>      
+         <div class="sprecordfun-itemtext">
+         {% if block.settings.hottext != blank %}
+              <span class="sprecordfun-tag-deal" style="color:{{ block.settings.hottextcolor }};background:{{ block.settings.hotcolor }}">{{ block.settings.hottext }}</span>
+         {% endif %}
+         {% if block.settings.title != blank %}
+         <div class="sprecordfun-title"> <a href="{{ product.url }}">{{  block.settings.title }}</a></div>
+          {% else %}
+            <div class="sprecordfun-title">{{ product.title }}</div>
+         {% endif %}
+       {% if block.settings.subtitle != blank %}
+         <div class="sprecordfun-subtitle">{{  block.settings.subtitle }}</div>
+         {% endif %}
+         <div class="mulcon-proitem-price">
+         {%- capture form_id -%}AddToCartForm-{{ product.id }}{%- endcapture -%}
+  {%- capture class_value -%}product-single__form{%- endcapture -%}
+  {% assign current_variant = product.selected_or_first_available_variant  %}
+  {% form 'product', product, id: form_id, class: class_value %}
+      <button
+        {% if product.empty? %}type="button"{% else %}type="submit"{% endif %}
+        name="add"
+        data-add-to-cart
+        class="add-to-cart-col addcartcustom js-drawer-open-cart" data-product-id="{{ current_variant.id }}"
+        {% unless current_variant.available %} disabled="disabled"{% endunless %}>
+        <span data-add-to-cart-text data-default-text="Add to cart">
+         <img alt="cart" src="https://cdn.shopify.com/s/files/1/0558/0708/2629/files/spcart02.png?v=1711511840"/>
+        </span>
+      </button>
+
+  
+    <select name="id" data-product-select class="product-single__variants no-js">
+      {%- for variant in product.variants -%}
+        {% if variant.available %}
+          <option {% if variant == product.selected_or_first_available_variant %}
+            selected="selected" {% endif %}
+            value="{{ variant.id }}">
+            {{ variant.title }} - {{ variant.price | money_with_currency }}
+          </option>
+        {% else %}
+          <option disabled="disabled">
+            {{ variant.title }} - {{ 'products.product.sold_out' | t }}
+          </option>
+        {% endif %}
+      {%- endfor -%}
+    </select>
+  {% endform %}
+         <span class="mulcon-price-original">{{ product.price | money }}</span>{% if product.price_varies %}<span class="mulcon-price-old">{{ product.compare_at_price | money }}</span>{% endif %}</div>
+         </div>
+         </div>
+
+      </div>
+          
+     {% endfor %}
+    </div>
+  </div>
+
+
+    </div>
+    
+
+  </div>
+</div>
+</div>
+        <script>   
+  $(function(){
+      var sprecordfun_{{secidlast}} = new Swiper ('.sprecordfun-{{secidlast}}', {
+    slidesPerView : 4,
+    spaceBetween: '2.2%',
+    observer: true, loop:true,
+    observeParents: true, 
+     scrollbar: {
+      el: '.swiper-scrollbar-{{ secidlast }}',dragSize:89
+    },
+    breakpoints: { 
+      10: {  
+       slidesPerView : 1.5,loop:false,
+         spaceBetween: '2.5%',
+      },
+      550: { 
+       slidesPerView : 2,loop:false,
+      },
+      769: {  //当屏幕宽度大于等于769
+        slidesPerView: 3,loop:true,
+      },
+      994: { 
+        slidesPerView : 4,loop:true,
+      }
+    }
+
+  });
+  })
+
+</script>
+{% schema %}
+  {
+   "name": "Record Your Spring Fun",
+  "settings": [
+     {
+        "type": "text",
+        "id": "title",
+        "label": "title?"
+      },
+    {
+      "type": "image_picker",
+      "id": "bg_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_imagemb",
+      "label": "Background Image(mobile)"
+    }
+    ],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "block",
+        "settings": [
+       {
+        "type": "product",
+        "id": "product",
+        "label": "product"
+      },{
+        "type": "image_picker",
+        "id": "image",
+        "label": "image"
+      },{
+        "type": "text",
+        "id": "title",
+        "label": "title"
+      },{
+        "type": "text",
+        "id": "subtitle",
+        "label": "subtitle"
+      },{
+        "type": "text",
+        "id": "hottext",
+        "label": "hottext",
+        "default": "Deal"
+      },{
+        "type": "color",
+        "id": "hotcolor",
+        "label": "Deal background color?",
+        "default": "#FFCC00"
+      },{
+        "type": "color",
+        "id": "hottextcolor",
+        "label": "Deal text color?",
+        "default": "#282828"
+      }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Record Your Spring Fun",
+        "category": "HO-layout"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,119 @@
+{% liquid
+  assign product = all_products[section.settings.product]
+  assign current_variant = product.selected_or_first_available_variant
+  assign secid = section.id | split:"__" 
+  assign secidlast = secid[1] | replace: "-","_"
+%}
+<div class="indexfeapro-outbox">
+    <div class="contain-index">
+<div class="indexfeapro-wrapper">
+  <div class="indexfeapro-text">
+   {%- if section.settings.toptitle != blank -%}
+    <div class="indexfeapro-text-toptitle animate-ele">{{ section.settings.toptitle }}</div>
+  {%- endif -%}
+    {%- if section.settings.newtag != blank and section.settings.shownewtag -%}
+    <div class="indexfeapro-text-newtag animate-ele">{{ section.settings.newtag }}</div>
+  {%- endif -%}
+    {%- if section.settings.title != blank -%}
+    <div class="indexfeapro-text-title animate-ele"><a href="{{ product.url }}">{{ section.settings.title }}</a></div>
+     {% else %}
+      <div class="indexfeapro-text-title animate-ele"><a href="{{ product.url }}">{{ product.title }}</a></div> 
+  {%- endif -%}
+   {%- if section.settings.content != blank -%}
+    <div class="indexfeapro-text-content animate-ele">{{ section.settings.content }}</div>
+  {%- endif -%}
+  <div class="indexfeapro-text-price animate-ele"><span class="feapro-price-original">{{ product.price | money }}</span>{% if product.price_varies %}<span class="feapro-price-old">{{ product.compare_at_price | money }}</span><span class="feapro-nowsave">Now Save {{  product.compare_at_price | minus:product.price | times:100 | round | divided_by:product.compare_at_price }}%</span>{% endif %}</div>
+    
+    {% form 'product', product, id: 'indexproform', class: 'product-single__form' %}
+
+    <div class="payment-buttons animate-ele">
+
+    <button
+      {% if product.empty? %}type="button"{% else %}type="submit"{% endif %}
+      name="add"
+      data-add-to-cart
+      class="add-to-cart add-to-cartfeapro bthho"
+      {% unless current_variant.available %} disabled="disabled"{% endunless %}>
+      <span data-add-to-cart-text>
+        Shop Now
+      </span>
+    </button>
+    </div>
+
+  <select name="id" data-product-select class="product-single__variants no-js">
+    {%- for variant in product.variants -%}
+      {% if variant.available %}
+        <option {% if variant == product.selected_or_first_available_variant %}
+          selected="selected" {% endif %}
+          value="{{ variant.id }}">
+          {{ variant.title }} - {{ variant.price | money_with_currency }}
+        </option>
+      {% else %}
+        <option disabled="disabled">
+          {{ variant.title }} - {{ 'products.product.sold_out' | t }}
+        </option>
+      {% endif %}
+    {%- endfor -%}
+  </select>
+{% endform %} 
+  </div>
+      
+    <div class="indexfeapro-img">
+  {% if section.settings.image  %}
+      <div class="indexfeapro-text-img"><a href="{{ product.url }}"><img class="{% if section.settings.imagemb  %}hide-mb{% endif %}"  src="{{ section.settings.image | img_url:'master' }}" alt="" /></a></div>
+     {% endif %}
+    {% if section.settings.imagemb  %}
+      <div class="indexfeapro-text-img"><a href="{{ product.url }}"><img class="hide-pc"  src="{{ section.settings.imagemb | img_url:'master' }}"  alt="" /></a></div>
+   {% endif %}
+    </div>
+      
+    </div>
+      
+    </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Index Feature Product",
+    "settings": [
+      {
+        "type": "product",
+        "id": "product",
+        "label": "product"
+      },{
+        "type": "image_picker",
+        "id": "image",
+        "label": "image"
+        },{
+        "type": "image_picker",
+        "id": "imagemb",
+        "label": "image(mobile)"
+        },{
+        "type": "text",
+        "id": "toptitle",
+        "label": "toptitle"
+      },{
+        "type": "checkbox",
+        "id": "shownewtag",
+        "label": "show tag?"
+      },{
+        "type": "text",
+        "id": "newtag",
+        "label": "new tag"
+      },{
+        "type": "text",
+        "id": "title",
+        "label": "title"
+      },{
+        "type": "richtext",
+        "id": "content",
+        "label": "content"
+      }
+    ],
+	"presets": [
+      {
+        "name": "Index Feature Product","category": "Ho-Advance"
+      }
+    ]
+  }
+{% endschema %}

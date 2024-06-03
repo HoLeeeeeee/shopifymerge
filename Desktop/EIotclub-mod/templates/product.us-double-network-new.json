@@ -1,0 +1,1165 @@
+{
+  "sections": {
+    "main_product02_T6qKQi": {
+      "type": "main-product02",
+      "blocks": {
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "button",
+            "product_dynamic_variants_enable": true,
+            "color_swatches": false,
+            "offer_icon": ""
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "surface_pickup_enable": true
+          }
+        },
+        "pay_and_logistics_NG6keC": {
+          "type": "pay_and_logistics",
+          "settings": {
+            "pay_title": "Pay with Ease",
+            "logistics_title": ""
+          }
+        },
+        "delivery_nqHjHc": {
+          "type": "delivery",
+          "settings": {
+            "title": "Trusted Delivery",
+            "image": "shopify:\/\/shop_images\/pic-1.png"
+          }
+        }
+      },
+      "block_order": [
+        "variant_picker",
+        "buy_buttons",
+        "pay_and_logistics_NG6keC",
+        "delivery_nqHjHc"
+      ],
+      "settings": {
+        "toptag": "",
+        "topdiscount": "",
+        "sku_enable": false,
+        "image_size": "medium",
+        "product_zoom_enable": true,
+        "thumbnail_position": "below",
+        "thumbnail_height": "flexible",
+        "thumbnail_arrows": true,
+        "enable_video_looping": true,
+        "product_video_style": "muted",
+        "shippinginfo": "<div class=\"sim-shipinfo-item\">\n          <img alt src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0558\/0708\/2629\/files\/sim-shipicon_2.png?v=1714358245\">\n          <div>Fast, Free Shipping<\/div>\n       <\/div>\n       <div class=\"sim-shipinfo-item\">\n        <img alt src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0558\/0708\/2629\/files\/sim-shipicon_1.png?v=1714358243\">\n        <div>10-Day Easy Returns<\/div>\n     <\/div>\n     <div class=\"sim-shipinfo-item\">\n        <img alt src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0558\/0708\/2629\/files\/sim-shipicon_3.png?v=1714358247\">\n        <div>10-Year Quality Guarantee<\/div>\n     <\/div>\n     <div class=\"sim-shipinfo-item\">\n        <img alt src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0558\/0708\/2629\/files\/sim-shipicon_4.png?v=1714358249\">\n        <div>24\/7 Customer Service<\/div>\n     <\/div>",
+        "tab01": "Features",
+        "tab01con": "<ul>\n  <li>\n    Support Verizon, AT&amp;T and T-Mobile.\n    <div class=\"promain-netsup-con\">\n        <span><img alt=\"\" src=\"\/\/www.eiotclub.com\/cdn\/shop\/files\/dvprosup_1.png?v=1714034508\"><\/span>\n        <span><img alt=\"\" src=\"\/\/www.eiotclub.com\/cdn\/shop\/files\/dvprosup_2.png?v=1714034510\"><\/span>\n        <span><img alt=\"\" src=\"\/\/www.eiotclub.com\/cdn\/shop\/files\/dvprosup_3.png?v=1714034513\"><\/span>\n        <span class=\"moresupport-ho\"><span>...<\/span>+<\/span>\n      <\/div>\n  <\/li>\n  <li>Fast and Reliable Data.<\/li>\n  <li>No Contracts, No Hidden Fees.<\/li>\n  <li>Flexible Plans for IoT Devices.<\/li>\n  <li>Secure Online Ordering and Support.<\/li>\n  <li>Your Satisfaction Guaranteed.<\/li>\n  <li>Data Only, Not support talk &amp; text service\n  (no phone number)<\/li>\n  <li>Easy Renewal Anytime.<\/li>\n<\/ul>",
+        "tab02": "Technical Specs",
+        "tab02con": "<ul><li><strong>Speed: <\/strong>4G \/ LTE<\/li><li><strong>Hotspot: <\/strong>share with others.<\/li><li><strong>Phone number:<\/strong> No<\/li><li><strong>Plan type: <\/strong>Prepaid<\/li><li><strong>SMS:<\/strong> No<\/li><li><strong>Delivery time:<\/strong> Shipping today, estimated delivery in 3-5 days!<\/li><li><strong>Networks:<\/strong> Verizon, AT&T and T-Mobile<\/li><li><strong>Compatibility: <\/strong>all smartphones with eSIM technology enabled. Operation on smartwatches and tablets is not guaranteed.<\/li><\/ul>",
+        "popunlabel": "Pick Your SIM Card Data Plan",
+        "popuntitle": "Lorem ipsum dolor sit amet",
+        "popuncon": "<p>Lorem ipsum dolor sit amet consectetur. In sollicitudin arcu urna sit pellentesque nisl purus. Nullam ultricies cras gravida etiam. Amet mauris pretium lacus felis at mauris. Ante massa justo pellentesque cras sagittis at cursus tincidunt non.<\/p>",
+        "date": "\"2024\/05\/20 23:59:59 UTC\""
+      }
+    },
+    "spoffer_nav_EV8PJT": {
+      "type": "spoffer-nav",
+      "blocks": {
+        "block_BAfycE": {
+          "type": "block",
+          "settings": {
+            "title": "Eiotclub Works",
+            "jump": "simlogoover-outbox"
+          }
+        },
+        "block_8HpxKt": {
+          "type": "block",
+          "settings": {
+            "title": "Coverage",
+            "jump": "simcoverage-outbox"
+          }
+        },
+        "block_AcN4Xn": {
+          "type": "block",
+          "settings": {
+            "title": "Advantages",
+            "jump": "simadvuse-outbox"
+          }
+        },
+        "block_b8iVfj": {
+          "type": "block",
+          "settings": {
+            "title": "Fast Connect",
+            "jump": "simnavsw-box"
+          }
+        },
+        "block_xtMEtA": {
+          "type": "block",
+          "settings": {
+            "title": "FAQs",
+            "jump": "prodvsfaqs-outbox"
+          }
+        },
+        "block_TzFdfi": {
+          "type": "block",
+          "settings": {
+            "title": "Reviews",
+            "jump": "jdgm-rev-widg__title"
+          }
+        }
+      },
+      "block_order": [
+        "block_BAfycE",
+        "block_8HpxKt",
+        "block_AcN4Xn",
+        "block_b8iVfj",
+        "block_xtMEtA",
+        "block_TzFdfi"
+      ],
+      "settings": {
+        "bgcolor": "#ffffff",
+        "color": "#282828",
+        "manual": "Manual",
+        "manualurl": "https:\/\/cdn.shopify.com\/s\/files\/1\/0558\/0708\/2629\/files\/EIOTCLUB_digital_brochure_V1.0_2404.pdf?v=1712112783"
+      }
+    },
+    "prosim_logooverimage_4bGwEz": {
+      "type": "prosim-logooverimage",
+      "blocks": {
+        "block_43qaGg": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/icon_3.png",
+            "title": "Data plans customized",
+            "subtitle": "For loT devices"
+          }
+        },
+        "block_e6pJQr": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/icon_2.png",
+            "title": "Plug and play",
+            "subtitle": "No activation"
+          }
+        },
+        "block_EBMTGK": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/icon_1.png",
+            "title": "Supports multiple carriers",
+            "subtitle": "T-Mobile | AT&T| Verizon"
+          }
+        }
+      },
+      "block_order": [
+        "block_43qaGg",
+        "block_e6pJQr",
+        "block_EBMTGK"
+      ],
+      "settings": {
+        "title": "Experience seamless connectivity",
+        "image": "shopify:\/\/shop_images\/dualBANNER_1920x740_240529.jpg",
+        "imagemb": "shopify:\/\/shop_images\/dualBANNER_668x1262_240529.jpg"
+      }
+    },
+    "prosim_networksupport_EzwfgK": {
+      "type": "prosim-networksupport",
+      "blocks": {
+        "block_dwNCgz": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logosm_3.png",
+            "url": ""
+          }
+        },
+        "block_bewfz9": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logosm_2.png",
+            "url": ""
+          }
+        },
+        "block_y4HrFp": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logosm_1.png",
+            "url": ""
+          }
+        },
+        "block_m7ajcA": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logosm_4.png",
+            "url": ""
+          }
+        },
+        "block_84L3wB": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logosm_5.png",
+            "url": ""
+          }
+        },
+        "block_3WeaRz": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logosm_5.png",
+            "url": ""
+          }
+        },
+        "block_mT9knj": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logosm_5.png",
+            "url": ""
+          }
+        },
+        "block_wmNFm7": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logosm_5.png",
+            "url": ""
+          }
+        },
+        "block_njgYwR": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logosm_5.png",
+            "url": ""
+          }
+        },
+        "block_4AfhXi": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logosm_5.png",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "block_dwNCgz",
+        "block_bewfz9",
+        "block_y4HrFp",
+        "block_m7ajcA",
+        "block_84L3wB",
+        "block_3WeaRz",
+        "block_mT9knj",
+        "block_wmNFm7",
+        "block_njgYwR",
+        "block_4AfhXi"
+      ],
+      "settings": {
+        "title": ""
+      }
+    },
+    "prosim_advantagesuse_EACVRB": {
+      "type": "prosim-advantagesuse",
+      "blocks": {
+        "block_Xe4tja": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/advicon_3.png",
+            "title": "Easily top up online",
+            "content": "<p>Eiotclub offers coverage in more than 165 countries around the  world and supports all currently available networks: 2G, 3G, 4G LTE,  CAT-1, CAT-M1 and soon NB-IoT. In particular, the 2G network is still an  optimal solution if you are not ready yet to switch to the 4G LTE  network.<\/p>"
+          }
+        },
+        "block_rf39Bp": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/advicon_4.png",
+            "title": "A clear plan",
+            "content": "<p>Eiotclub has unbeatable rates in all countries around the world and has no  initial, fixed or management costs: just pay what you use. In addition,  you can have custom plans built around your business needs.<\/p>"
+          }
+        },
+        "block_bKwjk7": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/advicon_6.png",
+            "title": "Multi-operator connectivity",
+            "content": "<p>Eiotclub connects to a network of more than 350 roaming operators, providing you  with the world's largest mobile telecommunications coverage, so that  your IoT or M2M devices can reach where they are needed. <\/p>"
+          }
+        },
+        "block_4ttfFk": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/advicon_2.png",
+            "title": "24\/7 customer support",
+            "content": "<p>The eSIM is easy to use, but if you have questions or experience  technical issues you can reach us by email or our 24 hour chat support.  We’re here to help.<\/p>"
+          }
+        },
+        "block_NYKgFg": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/advicon_5.png",
+            "title": "Very easy to use",
+            "content": "<p>Enjoy the convenience of seamless connectivity with our online top-up  services. With just a few clicks, you can  ensure uninterrupted connection, keeping you online without disruption.<\/p>"
+          }
+        },
+        "block_4aTzE9": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/advicon_1.png",
+            "title": "Seamless 5G for Global Business",
+            "content": "<p>Experience seamless international business travel with our prepaid  international SIM card. With fast and reliable 5G data in over 200  countries, stay efficiently connected across borders.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "block_Xe4tja",
+        "block_rf39Bp",
+        "block_bKwjk7",
+        "block_4ttfFk",
+        "block_NYKgFg",
+        "block_4aTzE9"
+      ],
+      "settings": {
+        "title": "Advantages of using Eiotclub SIM Card"
+      }
+    },
+    "prosim_quickinfo_w9aGKG": {
+      "type": "prosim-quickinfo",
+      "blocks": {
+        "block_rfgVgm": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/dual_securityplan_640x720_240529.png",
+            "imagemb": "shopify:\/\/shop_images\/dual_securityplan_640x720_240529.png",
+            "title": "for Security Camera",
+            "color": "#282828",
+            "text_position": "top"
+          }
+        },
+        "block_ADFtRm": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/dual_trackerplan_640x720_240529.png",
+            "imagemb": "shopify:\/\/shop_images\/dual_trackerplan_640x720_240529.png",
+            "title": "for GPS Tracker",
+            "color": "#282828",
+            "text_position": "top"
+          }
+        },
+        "block_a8kFed": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/dual_trailplan_400x450_240529.png",
+            "imagemb": "shopify:\/\/shop_images\/dual_trailplan_400x450_240529.png",
+            "title": "for Hunting Camera",
+            "color": "#282828",
+            "text_position": "top"
+          }
+        }
+      },
+      "block_order": [
+        "block_rfgVgm",
+        "block_ADFtRm",
+        "block_a8kFed"
+      ],
+      "settings": {
+        "title": "Double Networks Data Plan"
+      }
+    },
+    "prosim_coverage_N6UyYy": {
+      "type": "prosim-coverage",
+      "blocks": {
+        "block_M4XVcP": {
+          "type": "block",
+          "settings": {
+            "title": "United States",
+            "content": "<p>Alabama, Alaska, Arizona, Arkansas, California, Colorado, Connecticut, Delaware, Florida, Georgia, Hawaii, Idaho, Illinois, Indiana, Iowa, Kansas, Kentucky, Louisiana, Maine, Maryland, Massachusetts, Michigan, Minnesota, Mississippi, Missouri, Montana, Nebraska, Nevada, New Hampshir,e New Jersey, New Mexico, New York, North Carolina, North Dakota, Ohio, Oklahoma, Oregon, Pennsylvania, Rhode Island, South Carolina, South Dakota, Tennessee, Texas, Utah, Vermont, Virginia, Washington, West Virginia, Wisconsin, Wyoming<\/p>"
+          }
+        },
+        "block_HrdtXL": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "title": "Canada",
+            "content": "<p>Alabama, Alaska, Arizona, Arkansas, California, Colorado, Connecticut, Delaware, Florida, Georgia, Hawaii, Idaho, Illinois, Indiana, Iowa, Kansas, Kentucky, Louisiana, Maine, Maryland, Massachusetts, Michigan, Minnesota, Mississippi, Missouri, Montana, Nebraska, Nevada, New Hampshir,e New Jersey, New Mexico, New York, North Carolina, North Dakota, Ohio, Oklahoma, Oregon, Pennsylvania, Rhode Island, South Carolina, South Dakota, Tennessee, Texas, Utah, Vermont, Virginia, Washington, West Virginia, Wisconsin, Wyoming02<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "block_M4XVcP",
+        "block_HrdtXL"
+      ],
+      "settings": {
+        "title": "Coverage",
+        "content": "<p>In every corner of the world we provide you the best coverage and  signal. What makes our IoT network so special is that it always on the  move and available even in places with difficult access.<\/p>",
+        "btntext": "Check Coverage",
+        "url": "shopify:\/\/collections"
+      }
+    },
+    "prodevice_textwithimage_xiNWzF": {
+      "type": "prodevice-textwithimage",
+      "blocks": {
+        "item_Tamkbi": {
+          "type": "item",
+          "settings": {
+            "position": "left",
+            "image": "shopify:\/\/shop_images\/dual_plug_700x500_240510.jpg",
+            "textbgcolor": "#ffffff",
+            "title": "What makes a Eiotclub SIM unique?",
+            "content": "<h2><\/h2><p>The Eiotclub SIM card stands out by combining multiple operators' functions into one card. Extend your coverage and enjoy affordable rates with ease. Compatible with major carriers like AT&T, and T-Mobile, our SIM card offers convenience, flexibility, and unlocks enhanced connectivity options.<\/p>",
+            "btntext": "",
+            "btnurl": "",
+            "top_dis": 0,
+            "bottom_dis": 44
+          }
+        },
+        "item_c8rRcb": {
+          "type": "item",
+          "settings": {
+            "position": "right",
+            "image": "shopify:\/\/shop_images\/Double_network_Plan.jpg",
+            "textbgcolor": "#ffffff",
+            "title": "Budget-friendly 4G IoT SIM Card",
+            "content": "<h2><\/h2><p>Discover our 4G IoT SIM card for affordable connectivity.Stay connected without spending a fortune, ensuring seamless data transmission for your loT devices.Get yours today and enjoy budget-friendly loT connectivity!<\/p>",
+            "btntext": "",
+            "btnurl": "",
+            "top_dis": 0,
+            "bottom_dis": 44
+          }
+        },
+        "item_RNK3mf": {
+          "type": "item",
+          "settings": {
+            "position": "left",
+            "image": "shopify:\/\/shop_images\/Double_network_price.jpg",
+            "textbgcolor": "#ffffff",
+            "title": "On-demand, flexible pricing",
+            "content": "<p>No Contracts. No extra fees. No hidden fees. No activation fees. During the use process you simply fill in the correct email address and you will have a chance to choose different levels of our service plans.<\/p>",
+            "btntext": "",
+            "btnurl": "",
+            "top_dis": 0,
+            "bottom_dis": 44
+          }
+        },
+        "item_jeAWhg": {
+          "type": "item",
+          "settings": {
+            "position": "right",
+            "image": "shopify:\/\/shop_images\/Shared_Plan.jpg",
+            "textbgcolor": "#ffffff",
+            "title": "Family & Business Shared Plan: 10 SIMs, One Bill!",
+            "content": "<h2><\/h2><p>Get our all-in-one Shared Plan, tailored for US families and small businesses. Connect up to 10 SIM cards with one data plan, making it simple to keep everyone online. Enjoy streamlined billing and stay connected without the hassle. Perfect for the on-the-go lifestyle! Sign up now and simplify your mobile life!<\/p>",
+            "btntext": "",
+            "btnurl": "",
+            "top_dis": 0,
+            "bottom_dis": 44
+          }
+        }
+      },
+      "block_order": [
+        "item_Tamkbi",
+        "item_c8rRcb",
+        "item_RNK3mf",
+        "item_jeAWhg"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": ""
+      }
+    },
+    "prosim_cardoperate_kKDJyi": {
+      "type": "prosim-cardoperate",
+      "blocks": {
+        "block_njrjhF": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/opera_2.png",
+            "imagemb": "shopify:\/\/shop_images\/opera_2.png",
+            "title": "1. Check your phone is compatible with eSIM",
+            "content": "<p><a href=\"\/collections\" title=\"All collections\">Check Compatible<\/a><\/p>"
+          }
+        },
+        "block_cBjfqn": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/opera_3.png",
+            "imagemb": "shopify:\/\/shop_images\/opera_3.png",
+            "title": "2. Buy your prepaid eSIM",
+            "content": "<p>Pick any data pack<\/p>"
+          }
+        },
+        "block_8tPnKK": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/opera_1.png",
+            "imagemb": "shopify:\/\/shop_images\/opera_1.png",
+            "title": "3. Scan the QR code according to Email",
+            "content": "<p>Easy installation via QR code<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "block_njrjhF",
+        "block_cBjfqn",
+        "block_8tPnKK"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "How Does a eSIM Card Operate?"
+      }
+    },
+    "prosim_gridimage_4w3EAM": {
+      "type": "prosim-gridimage",
+      "blocks": {
+        "block_mXRJTC": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/device_01_330x552_240529.png",
+            "imagemb": "shopify:\/\/shop_images\/device_01_330x552_240529.png",
+            "title": "Lorem ipsum dolor",
+            "url": "",
+            "color": "#ffffff"
+          }
+        },
+        "block_U3PUrP": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/device_02_526x270_240529.png",
+            "imagemb": "shopify:\/\/shop_images\/device_02_526x270_240529.png",
+            "title": "Lorem ipsum dolor",
+            "url": "",
+            "color": "#ffffff"
+          }
+        },
+        "block_DKmDDa": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/device_03_380x270_240529.png",
+            "imagemb": "shopify:\/\/shop_images\/device_03_380x270_240529.png",
+            "title": "Lorem ipsum dolor",
+            "url": "",
+            "color": "#ffffff"
+          }
+        },
+        "block_cFT8K7": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/device_04_294x255_240529.png",
+            "imagemb": "shopify:\/\/shop_images\/device_04_294x255_240529.png",
+            "title": "Lorem ipsum dolor",
+            "url": "",
+            "color": "#ffffff"
+          }
+        },
+        "block_CVm6K9": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/device_05_294x255_240529.png",
+            "imagemb": "shopify:\/\/shop_images\/blank_1.png",
+            "title": "Lorem ipsum dolor",
+            "url": "",
+            "color": "#ffffff"
+          }
+        },
+        "block_FmfDaj": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/device_06_294x255_240529.png",
+            "imagemb": "shopify:\/\/shop_images\/device_06_294x255_240529.png",
+            "title": "Lorem ipsum dolor",
+            "url": "",
+            "color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "block_mXRJTC",
+        "block_U3PUrP",
+        "block_DKmDDa",
+        "block_cFT8K7",
+        "block_CVm6K9",
+        "block_FmfDaj"
+      ],
+      "settings": {
+        "title": "What devices does Prepaid SIM Card support?",
+        "content": "<p>Our Prepaid SIM Card simplifies connecting IoT and M2M devices.<\/p><p>\u2028It caters to various needs, such as solar cameras, trail cameras, routers, GPS trackers, and more. <\/p><p>Our strong network coverage ensures high performance globally.<\/p>",
+        "btntext": "Check Compatibility",
+        "url": "shopify:\/\/collections"
+      }
+    },
+    "prosim_navswitch_ncrz3C": {
+      "type": "prosim-navswitch",
+      "blocks": {
+        "block_8mx9Pk": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/scene_01_664x600_240529.jpg",
+            "imagemb": "shopify:\/\/shop_images\/scene_07_664x600_240529.jpg",
+            "title": "Outdoor",
+            "content": "<p>Lorem ipsum dolor sit amet consectetur. Sed lacus gravida mi metus. Massa egestas vitae tellus dignissim. Odio nibh venenatis quam lacus aliquet aliquam rhoncus. Turpis malesuada tempus lorem elementum quisque ornare dui eget mauris.<\/p>"
+          }
+        },
+        "block_LQyCfY": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/scene_05_664x600_240529.jpg",
+            "imagemb": "shopify:\/\/shop_images\/scene_05_664x600_240529_bc50a2aa-e13e-4520-b262-9e7783dbb0a7.jpg",
+            "title": "At Home",
+            "content": "<p>Lorem ipsum dolor sit amet consectetur. Sed lacus gravida mi metus. Massa egestas vitae tellus dignissim. Odio nibh venenatis quam lacus aliquet aliquam rhoncus. Turpis malesuada tempus lorem elementum quisque ornare dui eget mauris02.<\/p>"
+          }
+        },
+        "block_inJnNb": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/scene_04_664x600_240529.jpg",
+            "imagemb": "shopify:\/\/shop_images\/scene_08_664x600_240529.jpg",
+            "title": "Travel",
+            "content": "<p>Lorem ipsum dolor sit amet consectetur. Sed lacus gravida mi metus. Massa egestas vitae tellus dignissim. Odio nibh venenatis quam lacus aliquet aliquam rhoncus. Turpis malesuada tempus lorem elementum quisque ornare dui eget mauris03.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "block_8mx9Pk",
+        "block_LQyCfY",
+        "block_inJnNb"
+      ],
+      "settings": {
+        "title": "Doubly Fast Connect Everywhere"
+      }
+    },
+    "prodevice_simple_nfzPRX": {
+      "type": "prodevice-simple",
+      "blocks": {
+        "block_7XWBFw": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/simppro_2.png",
+            "imagemb": "shopify:\/\/shop_images\/simppro_2.png",
+            "title": "Insert the card into the device correctly",
+            "url": "\/"
+          }
+        },
+        "block_8fcfBd": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/simppro_3.png",
+            "imagemb": "shopify:\/\/shop_images\/simppro_3.png",
+            "title": "Restart the device",
+            "url": ""
+          }
+        },
+        "block_MYdj8m": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/simppro_1.png",
+            "imagemb": "shopify:\/\/shop_images\/simppro_1.png",
+            "title": "Activate successful",
+            "url": ""
+          }
+        },
+        "block_xeRYLJ": {
+          "type": "block",
+          "settings": {
+            "title": "",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "block_7XWBFw",
+        "block_8fcfBd",
+        "block_MYdj8m",
+        "block_xeRYLJ"
+      ],
+      "settings": {
+        "title": "Simple Activation"
+      }
+    },
+    "prosim_videolist_DtWnDq": {
+      "type": "prosim-videolist",
+      "blocks": {
+        "block_dJ9R8X": {
+          "type": "block",
+          "settings": {
+            "video": "shopify:\/\/files\/videos\/test.mp4",
+            "image": "shopify:\/\/shop_images\/videocover_01_400x313_240530.jpg",
+            "playicon": "shopify:\/\/shop_images\/simvideolist_2.png",
+            "title": "Lorem ipsum dolor sit amet conse"
+          }
+        },
+        "block_7tiKDV": {
+          "type": "block",
+          "settings": {
+            "video": "shopify:\/\/files\/videos\/test.mp4",
+            "image": "shopify:\/\/shop_images\/videocover_02_400x313_240530.jpg",
+            "playicon": "shopify:\/\/shop_images\/simvideolist_2.png",
+            "title": "Lorem ipsum dolor sit amet conse"
+          }
+        },
+        "block_bQyFQf": {
+          "type": "block",
+          "settings": {
+            "video": "shopify:\/\/files\/videos\/test.mp4",
+            "image": "shopify:\/\/shop_images\/videocover_03_400x313_240530.jpg",
+            "playicon": "shopify:\/\/shop_images\/simvideolist_2.png",
+            "title": "Lorem ipsum dolor sit amet conse"
+          }
+        }
+      },
+      "block_order": [
+        "block_dJ9R8X",
+        "block_7tiKDV",
+        "block_bQyFQf"
+      ],
+      "settings": {
+        "title": "Unboxing & Reviews",
+        "btntext": "View More",
+        "btnurl": "shopify:\/\/collections"
+      }
+    },
+    "prosim_appdown_RenUDG": {
+      "type": "prosim-appdown",
+      "blocks": {
+        "block_94Pjrp": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/login_900x1025_240530.png",
+            "imagemb": "shopify:\/\/shop_images\/login_900x1025_240530.png",
+            "title": "Lorem ipsum dolor sit",
+            "content": "<p>Lorem ipsum dolor sit amet consectetur. Sed lacus gravida mi metus. Massa egestas vitae tellus dignissim. Odio nibh venenatis quam lacus aliquet aliquam rhoncus. Turpis malesuada tempus lorem elementum quisque ornare dui eget mauris.<\/p>"
+          }
+        },
+        "block_jxPPtB": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/addcard_900x1025_240530.png",
+            "imagemb": "shopify:\/\/shop_images\/addcard_900x1025_240530.png",
+            "title": "Lorem ipsum dolor sit",
+            "content": "<p>Lorem ipsum dolor sit amet consectetur. Sed lacus gravida mi metus. Massa egestas vitae tellus dignissim. Odio nibh venenatis quam lacus aliquet aliquam rhoncus. Turpis malesuada tempus lorem elementum quisque ornare dui eget mauris02.<\/p>"
+          }
+        },
+        "block_BAHQLe": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/dual_900x1025_240530.png",
+            "imagemb": "shopify:\/\/shop_images\/dual_900x1025_240530.png",
+            "title": "Lorem ipsum dolor sit",
+            "content": "<p>Lorem ipsum dolor sit amet consectetur. Sed lacus gravida mi metus. Massa egestas vitae tellus dignissim. Odio nibh venenatis quam lacus aliquet aliquam rhoncus. Turpis malesuada tempus lorem elementum quisque ornare dui eget mauris03.<\/p>"
+          }
+        },
+        "block_V6EDKP": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/shareplan_900x1025_240530.png",
+            "imagemb": "shopify:\/\/shop_images\/shareplan_900x1025_240530.png",
+            "title": "Lorem ipsum dolor sit",
+            "content": "<p>Lorem ipsum dolor sit amet consectetur. Sed lacus gravida mi metus. Massa egestas vitae tellus dignissim. Odio nibh venenatis quam lacus aliquet aliquam rhoncus. Turpis malesuada tempus lorem elementum quisque ornare dui eget mauris04.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "block_94Pjrp",
+        "block_jxPPtB",
+        "block_BAHQLe",
+        "block_V6EDKP"
+      ],
+      "settings": {
+        "title": "Manage Your Account With The EIOTCLUB APP",
+        "content": "<p>Lorem ipsum dolor sit amet consectetur. Sed lacus gravida mi metus.<\/p>",
+        "apptext": "Download EIOTCLUB app",
+        "appurl": "shopify:\/\/collections",
+        "bg_image": "shopify:\/\/shop_images\/sim-app_2.png",
+        "bg_imagemb": "shopify:\/\/shop_images\/mbbgpro.png"
+      }
+    },
+    "prosim_compare_xndg8d": {
+      "type": "prosim-compare",
+      "blocks": {
+        "block_zLH4iU": {
+          "type": "block",
+          "settings": {
+            "product": "security-camera-sim-card-att-tmobile-24gb",
+            "image": "shopify:\/\/shop_images\/compicon_1.png",
+            "title": "Double Network",
+            "viewmore": "Learn More",
+            "specs03": "Network Support",
+            "specs04": "Price",
+            "specs05": "Data",
+            "specs06": "Scenario",
+            "specs07": "Network Band",
+            "specs08": "Country",
+            "specs09": "",
+            "specs10": "",
+            "specs11": "",
+            "specs12": "",
+            "specs13": "",
+            "specs14": "",
+            "specs15": "",
+            "specs16": "",
+            "specs17": "",
+            "specs18": "",
+            "specs19": "",
+            "specs20": ""
+          }
+        },
+        "block_irm3BE": {
+          "type": "block",
+          "settings": {
+            "product": "security-camera-sim-card-att-tmobile-24gb",
+            "image": "shopify:\/\/shop_images\/compicon_1.png",
+            "title": "Double Network",
+            "viewmore": "Learn More",
+            "specs03": "ATT \/ T-mobie",
+            "specs04": "<b>$5\/$15\/$109<\/b>",
+            "specs05": "300MB\/2GB\/24GB",
+            "specs06": "Common household, outdoor, construction,etc",
+            "specs07": "B2, B4, B5, B12, B14, B17, B25, B26, B30, B66, B71",
+            "specs08": "United States",
+            "specs09": "",
+            "specs10": "",
+            "specs11": "",
+            "specs12": "",
+            "specs13": "",
+            "specs14": "",
+            "specs15": "",
+            "specs16": "",
+            "specs17": "",
+            "specs18": "",
+            "specs19": "",
+            "specs20": ""
+          }
+        },
+        "block_7VNRDU": {
+          "type": "block",
+          "settings": {
+            "product": "security-camera-sim-card-att-tmobile-24gb",
+            "image": "shopify:\/\/shop_images\/compicon_2.png",
+            "title": "Triple-play Network",
+            "viewmore": "Learn More",
+            "specs03": "ATT \/ T-mobile\/ Verizon",
+            "specs04": "<b>$5.99\/$19.9\/$139.99<\/b>",
+            "specs05": "100MB\/2GB\/24GB",
+            "specs06": "Involve more remote places like jungle",
+            "specs07": "B2, B4, B5, B12, B13, B14, B17, B25, B26, B30, B66, B71",
+            "specs08": "United States",
+            "specs09": "",
+            "specs10": "",
+            "specs11": "",
+            "specs12": "",
+            "specs13": "",
+            "specs14": "",
+            "specs15": "",
+            "specs16": "",
+            "specs17": "",
+            "specs18": "",
+            "specs19": "",
+            "specs20": ""
+          }
+        },
+        "block_xCYenJ": {
+          "type": "block",
+          "settings": {
+            "product": "security-camera-sim-card-att-tmobile-24gb",
+            "image": "shopify:\/\/shop_images\/compicon_1.png",
+            "title": "Double Network",
+            "viewmore": "Learn More",
+            "specs03": "ATT \/ T-mobie",
+            "specs04": "<b>$5\/$15\/$109<\/b>",
+            "specs05": "300MB\/2GB\/24GB",
+            "specs06": "Common household, outdoor, construction,etc",
+            "specs07": "B2, B4, B5, B12, B14, B17, B25, B26, B30, B66, B71",
+            "specs08": "United States",
+            "specs09": "",
+            "specs10": "",
+            "specs11": "",
+            "specs12": "",
+            "specs13": "",
+            "specs14": "",
+            "specs15": "",
+            "specs16": "",
+            "specs17": "",
+            "specs18": "",
+            "specs19": "",
+            "specs20": ""
+          }
+        }
+      },
+      "block_order": [
+        "block_zLH4iU",
+        "block_irm3BE",
+        "block_7VNRDU",
+        "block_xCYenJ"
+      ],
+      "settings": {
+        "title": "Product Comparison",
+        "bg_color": "",
+        "text_color": ""
+      }
+    },
+    "simpro_specs_xHyDj7": {
+      "type": "simpro-specs",
+      "blocks": {
+        "block_taXPLJ": {
+          "type": "block",
+          "settings": {
+            "title": "APN",
+            "subtitle": "mobile.three.com.hk"
+          }
+        },
+        "block_KpnPmP": {
+          "type": "block",
+          "settings": {
+            "title": "cover ground",
+            "subtitle": "United States"
+          }
+        },
+        "block_7xftBU": {
+          "type": "block",
+          "settings": {
+            "title": "Operator",
+            "subtitle": "AT&T,T-Mobile"
+          }
+        }
+      },
+      "block_order": [
+        "block_taXPLJ",
+        "block_KpnPmP",
+        "block_7xftBU"
+      ],
+      "settings": {
+        "title": "Specifications"
+      }
+    },
+    "prodevice_faqs_L8aetw": {
+      "type": "prodevice-faqs",
+      "blocks": {
+        "block_fhrQrW": {
+          "type": "block",
+          "settings": {
+            "faqtype": "type1",
+            "title": "What is a prepaid SIM card?",
+            "content": "<p>A prepaid SIM card allows you to pay for a carrier's service upfront — by having it ready to go with a certain amount. A postpaid SIM card is tied to a carrier's plan and is billed to you monthly, depending on your usage. In short, prepaid SIM cards operate much like a debit card or a metro card — your usage depends on how much money you have on the card.  <\/p>"
+          }
+        },
+        "block_YbmAwF": {
+          "type": "block",
+          "settings": {
+            "faqtype": "type1",
+            "title": "whats a 4G sim card?",
+            "content": "<p>A 4G SIM card is a type of subscriber identity module card designed to operate on fourth-generation (4G) mobile networks. It facilitates high-speed data transmission, improved network performance, and enhanced connectivity for compatible devices, enabling faster internet speeds and better overall mobile user experience.<\/p>"
+          }
+        },
+        "block_gbAtdB": {
+          "type": "block",
+          "settings": {
+            "faqtype": "type1",
+            "title": "How does a prepaid SlM card work?",
+            "content": "<p>A prepaid SIM card works by loading credit or \"topping up\" your account with a specific amount of money. This credit is then used to pay for data usage. When your credit runs out, you can recharge or top up your account with more money.<\/p>"
+          }
+        },
+        "block_pkTCdE": {
+          "type": "block",
+          "settings": {
+            "faqtype": "type1",
+            "title": "What is a data-only SlM?",
+            "content": "<p>A data-only SIM is a type of SIM card that provides internet access to devices but does not include traditional voice call or text message services. It's typically used in tablets, mobile hotspots, and other connected devices that require mobile data.<\/p>"
+          }
+        },
+        "block_7nTwim": {
+          "type": "block",
+          "settings": {
+            "faqtype": "type2",
+            "title": "Why are various subscription options available at distinct price points, and what distinguishes each package?",
+            "content": "<p>We offer a diverse range of plans to cater to different data usage needs. Each plan not only includes a specific data allowance but also varies in duration—ranging from 30 days to 180 days, up to a full year. To help you decide which plan best suits your requirements, we recommend starting with one that aligns with your initial comfort level. Our service is designed for flexibility, allowing you to upgrade your EIOTCLUB plan anytime without extra service fees. Upgrading simply involves paying the difference to move to a higher-tier plan.<\/p>"
+          }
+        },
+        "block_z7CfRY": {
+          "type": "block",
+          "settings": {
+            "faqtype": "type3",
+            "title": "Do l need a data plan for the SlM card in my camera?",
+            "content": "<p>Yes, it is possible to use a prepaid SIM card in a camera. Prepaid SIM cards offer flexibility and control over your data usage and expenses. However, ensure that the prepaid SIM card you choose is compatible with your camera and supports the required network frequencies.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "block_fhrQrW",
+        "block_YbmAwF",
+        "block_gbAtdB",
+        "block_pkTCdE",
+        "block_7nTwim",
+        "block_z7CfRY"
+      ],
+      "settings": {
+        "title": "FAQs",
+        "type1": "About Prepaid SIM card",
+        "type2": "About price",
+        "type3": "About device",
+        "type4": "",
+        "type5": "",
+        "type6": "",
+        "type7": "",
+        "type8": "",
+        "type9": ""
+      }
+    },
+    "simpro_relatedblog_9c8m3K": {
+      "type": "simpro-relatedblog",
+      "blocks": {
+        "block_Nz3QgX": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/simblog_1.png",
+            "imagemb": "shopify:\/\/shop_images\/simblog_1.png",
+            "title": "Lorem ipsum dolor sit amet conse",
+            "content": "<p>Lorem ipsum dolor sit amet consectetur. Nunc lectus aliquam scelerisque nibh quisque id.<\/p>"
+          }
+        },
+        "block_YAaRRW": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/simblog_2.png",
+            "imagemb": "shopify:\/\/shop_images\/simblog_2.png",
+            "title": "Lorem ipsum dolor sit amet conse",
+            "content": "<p>Lorem ipsum dolor sit amet consectetur. Nunc lectus aliquam scelerisque nibh quisque id.<\/p>"
+          }
+        },
+        "block_zK6FrD": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/simblog_3.png",
+            "imagemb": "shopify:\/\/shop_images\/simblog_3.png",
+            "title": "Lorem ipsum dolor sit amet conse",
+            "content": "<p>Lorem ipsum dolor sit amet consectetur. Nunc lectus aliquam scelerisque nibh quisque id.<\/p>"
+          }
+        },
+        "block_3PUtUb": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/simblog_1.png",
+            "imagemb": "shopify:\/\/shop_images\/simblog_1.png",
+            "title": "Lorem ipsum dolor sit amet conse",
+            "content": "<p>Lorem ipsum dolor sit amet consectetur. Nunc lectus aliquam scelerisque nibh quisque id.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "block_Nz3QgX",
+        "block_YAaRRW",
+        "block_zK6FrD",
+        "block_3PUtUb"
+      ],
+      "settings": {
+        "title": "Related Blog",
+        "btntext": "View More",
+        "btnurl": "shopify:\/\/blogs\/community"
+      }
+    },
+    "1682675971f684f111": {
+      "type": "apps",
+      "blocks": {
+        "95df2e24-a890-4352-b778-8b08ed8acf88": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "95df2e24-a890-4352-b778-8b08ed8acf88"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "product_recommendations_heading": "You may also like",
+        "related_count": 6,
+        "products_per_row": 3
+      }
+    },
+    "product_recommendations_ho_66LjUg": {
+      "type": "product-recommendations-ho",
+      "settings": {
+        "product_recommendations_heading": "You may also like",
+        "collection": "device",
+        "related_count": 6,
+        "products_per_row": 4
+      }
+    },
+    "index_shippinginfo_x3dwVC": {
+      "type": "index-shippinginfo",
+      "blocks": {
+        "block_pF4F4x": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/shipinfo_2.png",
+            "title": "Fast Shipping",
+            "url": ""
+          }
+        },
+        "block_timii7": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/shipinfo_3.png",
+            "title": "7*24h Monday to Sunday",
+            "url": ""
+          }
+        },
+        "block_mPBTQc": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/shipinfo_4.png",
+            "title": "10-Day Money-Back Guarantee",
+            "url": ""
+          }
+        },
+        "block_Y9ycAT": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/shipinfo_1.png",
+            "title": "Secure payment",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "block_pF4F4x",
+        "block_timii7",
+        "block_mPBTQc",
+        "block_Y9ycAT"
+      ],
+      "settings": {
+        "show_block": true
+      }
+    }
+  },
+  "order": [
+    "main_product02_T6qKQi",
+    "spoffer_nav_EV8PJT",
+    "prosim_logooverimage_4bGwEz",
+    "prosim_networksupport_EzwfgK",
+    "prosim_advantagesuse_EACVRB",
+    "prosim_quickinfo_w9aGKG",
+    "prosim_coverage_N6UyYy",
+    "prodevice_textwithimage_xiNWzF",
+    "prosim_cardoperate_kKDJyi",
+    "prosim_gridimage_4w3EAM",
+    "prosim_navswitch_ncrz3C",
+    "prodevice_simple_nfzPRX",
+    "prosim_videolist_DtWnDq",
+    "prosim_appdown_RenUDG",
+    "prosim_compare_xndg8d",
+    "simpro_specs_xHyDj7",
+    "prodevice_faqs_L8aetw",
+    "simpro_relatedblog_9c8m3K",
+    "1682675971f684f111",
+    "product-recommendations",
+    "product_recommendations_ho_66LjUg",
+    "index_shippinginfo_x3dwVC"
+  ]
+}

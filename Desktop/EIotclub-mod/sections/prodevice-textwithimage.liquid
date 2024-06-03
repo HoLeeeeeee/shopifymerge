@@ -1,0 +1,138 @@
+{% liquid
+  assign secid = section.id | split:"__" 
+  assign secidlast = secid[1] | replace: "-","_"
+%}
+
+<div class="prodestextimg-container prodestextimg-{{ secidlast }}" >
+  <div class="contain-index">
+    {% if section.settings.title != blank %}
+    <div class="indexmoreabout-toptitle animate-ele">
+    {{ section.settings.title }}
+    </div>
+  {% endif %}
+ {% for block in section.blocks %}
+ <div class="prodestextimg-wp prodestextimg-{{ block.settings.position }}" id="prodestextimg-wp-{{ block.id }}">
+   <style>
+  #prodestextimg-wp-{{ block.id }}{
+    padding-top:{{  block.settings.top_dis | divided_by: 19.2 }}vw;
+    padding-bottom:{{  block.settings.bottom_dis | divided_by: 19.2 }}vw;
+  }
+</style>
+  <div class="prodestextimg-img">
+    {% if block.settings.image %}<img class="lazyload {% if block.settings.imagemb %}hide-mb{% endif %}" alt src="{{ block.settings.image | img_url:'master' }}" />{% endif %}
+    {% if block.settings.imagemb %}<img class="lazyload hide-pc" alt src="{{ block.settings.imagemb | img_url:'master' }}"/>{% endif %}
+  </div>
+  
+  <div class="prodestextimg-text" style="background-color:{{ block.settings.textbgcolor }}">
+   {% if block.settings.title != blank %}
+    <div class="indexmoreabout-title animate-ele">
+    {{ block.settings.title }}
+    </div>
+  {% endif %}
+  {% if block.settings.content != blank %}
+    <div class="indexmoreabout-content animate-ele">
+    {{ block.settings.content }}
+    </div>
+  {% endif %}  
+   {% if block.settings.btntext != blank %}
+    <a class="indexmoreabout-btn bthho animate-ele" href="{{ block.settings.btnurl }}">
+    <span>{{ block.settings.btntext }}</span>
+    </a>
+  {% endif %} 
+  </div>
+  
+</div>
+  {% endfor %}
+    </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Product TextWithImage",
+    "settings": [
+      {
+        "type":"text",
+        "id":"title",
+        "label":"title"
+      }
+      
+	],
+        "blocks": [
+        {
+            "type": "item",
+            "name": "item",
+            "settings": [
+                {
+        "type": "select",
+        "id": "position",
+        "label": "Image Position",
+        "options": [
+          {
+            "value": "left",
+            "label": "left"
+          },{
+            "value": "right",
+            "label": "right"
+          }
+        ],
+        "default": "left"
+      },{
+        "type":"image_picker",
+        "id":"image",
+        "label":"Image"
+      },{
+        "type":"image_picker",
+        "id":"imagemb",
+        "label":"Image(mobile)"
+      },{
+        "type":"color",
+        "id":"textbgcolor",
+        "label":"text backgroundcolor",
+        "default":"#ffffff"
+      },{
+        "type":"text",
+        "id":"title",
+        "label":"title"
+      },{
+        "type":"richtext",
+        "id":"content",
+        "label":"content"
+      },{
+        "type":"text",
+        "id":"btntext",
+        "label":"btntext"
+      },{
+        "type":"url",
+        "id":"btnurl",
+        "label":"btnurl"
+      },{
+        "id": "top_dis",
+        "type": "range",
+        "label": "Top Distence",
+        "default": 0,
+        "min": 0,
+        "max": 200,
+        "step": 2,
+        "unit": "px"
+      },
+      {
+        "id": "bottom_dis",
+        "type": "range",
+        "label": "Botttom Distence",
+        "default": 44,
+        "min": 0,
+        "max": 200,
+        "step": 2,
+        "unit": "px"
+      }
+            ]
+        }
+    ],
+	"presets": [
+      {
+        "name": "Product TextWithImage","category": "Ho-Advance"
+      }
+    ]
+  }
+{% endschema %}

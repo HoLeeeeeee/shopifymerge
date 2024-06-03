@@ -1,0 +1,119 @@
+{{ 'section-reward-waytoearnpoints.css' | asset_url | stylesheet_tag }}
+<div class="reward-waytoearnpoints reward-waytoearnpoints-{{ section.id }}">
+  <div class="contain-index">
+    {% if section.settings.title != blank %}
+      <div class="common-title">{{ section.settings.title }}</div>
+    {% endif %}
+    <div class="waytoearnpoints-box">
+      <div class="earnpoints-leftbox">
+        {% if section.settings.left_icon != blank %}
+          <div class="leftbox-icon">{{ section.settings.left_icon }}</div>
+        {% endif %}
+        {% if section.settings.left_text != blank %}
+          <div class="leftbox-text-link">
+            <div class="leftbox-title">{{ section.settings.left_text }}</div>
+            {% if section.settings.left_button_text != blank %}
+              <a class="bthho" href="{{ section.settings.left_button_url }}"><span>{{ section.settings.left_button_text }}</span></a>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+      {% if section.blocks.size > 0 %}
+        <div class="earnpoints-rightbox">
+          <div class="earnpoints-rightbox-items">
+            {% for block in section.blocks %}
+              <div class="ways-item">
+                <div class="ways-item-bg">
+                  {% if block.settings.icon_html != blank %}
+                    <div class="ways-item-iconbox">{{ block.settings.icon_html }}</div>
+                  {% endif %}
+                  {% if block.settings.icon_title != blank or block.settings.title != blank %}
+                    <div class="ways-item-titlebox">
+                      {% if block.settings.icon_title != blank %}
+                        <div class="ways-item-icontitle">{{ block.settings.icon_title }}</div>
+                      {% endif %}
+                      {% if block.settings.title != blank %}
+                        <div class="ways-item-iconsubtitle">{{ block.settings.title }}</div>
+                      {% endif %}
+                    </div>
+                  {% endif %}
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+
+    {% comment %} <div class="text-center" style="margin:20px auto;">
+      <a class="btn font24" href="#smile-points-activity-rules">Earn Points Now</a>
+    </div> {% endcomment %}
+
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Way to Earn Points",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "Ways to Earn  EiotclubCredits"
+    },
+    {
+      "type": "html",
+      "id": "left_icon",
+      "label": "Left Icon Html"
+    },
+    {
+      "type": "html",
+      "id": "left_text",
+      "label": "Left Text",
+      "default": "Get POINTS PER <span>$1</span> SPENT"
+    },
+    {
+      "type": "text",
+      "id": "left_button_text",
+      "label": "Left Button Text",
+      "default": "Make a purchase"
+    },
+    {
+      "type": "url",
+      "id": "left_button_url",
+      "label": "Left Button Link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "ways_block",
+      "name": "ways_block",
+      "settings": [
+        {
+          "type": "html",
+          "id": "icon_html",
+          "label": "Icon Html"
+        },
+        {
+          "type": "html",
+          "id": "icon_title",
+          "label": "Icon Title",
+          "default": "<span>+200</span> Points"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Icon Subtitle"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Way to Earn Points",
+      "category": "HO-layout"
+    }
+  ]
+}
+{% endschema %}

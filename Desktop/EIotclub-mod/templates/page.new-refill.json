@@ -1,0 +1,341 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "c5faf4a0-d224-4bd9-8e2a-f3b8f1034194": {
+      "type": "rich-text",
+      "blocks": {
+        "template--14565676482693__c5faf4a0-d224-4bd9-8e2a-f3b8f1034194-1681204546c63111a0-0": {
+          "type": "heading",
+          "settings": {
+            "title": "Refill"
+          }
+        },
+        "template--14565676482693__c5faf4a0-d224-4bd9-8e2a-f3b8f1034194-1681204546c63111a0-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Use EIOTCLUB quick refill service to replenish your account with a plan or add data.<\/p><p>You can also check your balance, see when your plan is set to expire, and more by logging in online to your EIOTCLUB account<\/p><p>*ENTER YOUR OWN ICCID NUMBER ON BELOW FORM TO GET A QUICK REFILL*<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--14565676482693__c5faf4a0-d224-4bd9-8e2a-f3b8f1034194-1681204546c63111a0-0",
+        "template--14565676482693__c5faf4a0-d224-4bd9-8e2a-f3b8f1034194-1681204546c63111a0-1"
+      ],
+      "custom_css": [
+        "p {margin-bottom: 5px;}"
+      ],
+      "settings": {
+        "padding_top_bottom": 60,
+        "padding_top_bottom_mobile": 32,
+        "bg_color": "",
+        "header_align_text": "center",
+        "content_align_text": "center",
+        "button_align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "a9b805cb-119d-4ebe-83e8-2af47879c69d": {
+      "type": "new-refill",
+      "blocks": {
+        "3afe9d75-be71-478c-94eb-5973f8defd65": {
+          "type": "images",
+          "settings": {
+            "right-header": "Enter  ICCID",
+            "right-text": "Enter your correct ICCID in ourrehcarge platform",
+            "image": "shopify:\/\/shop_images\/201-480x830_3x-0505.jpg"
+          }
+        },
+        "f60da11e-edb6-4fbd-9cd3-f855d5510d76": {
+          "type": "images",
+          "settings": {
+            "right-header": "Check the status",
+            "right-text": "Check the status of your card\/package expiry time\/traffic usage",
+            "image": "shopify:\/\/shop_images\/202-480x830-0505.png"
+          }
+        },
+        "5af60a6d-4ead-4b15-a4ed-86575ebecfb0": {
+          "type": "images",
+          "settings": {
+            "right-header": "Refresh",
+            "right-text": "Refresh your card\/bing email\/customer service\/change",
+            "image": "shopify:\/\/shop_images\/203-480x830-0505.png"
+          }
+        },
+        "818f926b-611a-4204-8703-5ffbf44bf5c4": {
+          "type": "images",
+          "settings": {
+            "right-header": "choose the data plan",
+            "right-text": "choose the data plan as you needed",
+            "image": "shopify:\/\/shop_images\/204-480x830-0505.png"
+          }
+        },
+        "f5f46166-dc95-44be-91b7-07c4f1040587": {
+          "type": "images",
+          "settings": {
+            "right-header": "Automatic renewal",
+            "right-text": "Check the \"Automatic renewal\" box",
+            "image": "shopify:\/\/shop_images\/205-480x830-0505.png"
+          }
+        },
+        "f090f8f9-15c0-4fe5-bf54-b941198db9d6": {
+          "type": "images",
+          "settings": {
+            "right-header": "",
+            "right-text": "",
+            "image": "shopify:\/\/shop_images\/206-480x830-0505.png"
+          }
+        }
+      },
+      "block_order": [
+        "3afe9d75-be71-478c-94eb-5973f8defd65",
+        "f60da11e-edb6-4fbd-9cd3-f855d5510d76",
+        "5af60a6d-4ead-4b15-a4ed-86575ebecfb0",
+        "818f926b-611a-4204-8703-5ffbf44bf5c4",
+        "f5f46166-dc95-44be-91b7-07c4f1040587",
+        "f090f8f9-15c0-4fe5-bf54-b941198db9d6"
+      ],
+      "settings": {
+        "left-header": "REFILL",
+        "left-text": "",
+        "refill": "<div class=\"main_image_width\" style=\"text-align: center;\"><iframe style=\"width: 100%; height: 100%;min-height:660px; border-radius: 20px;\" frameborder=\"no\" scrolling=\"no\" src=\"https:\/\/sim.eiotclub.com\/1\"><\/iframe><\/div>\n<div class=\"main_image_width\" style=\"text-align: center;\"><\/div>\n<\/div>",
+        "bg-refill-left": "shopify:\/\/shop_images\/1-1280x750-0505_19ac5b8e-9529-43bb-a106-ae03e4016760.jpg",
+        "bg-refill-left-moblie": "shopify:\/\/shop_images\/mobile1-750x1200-0505.jpg",
+        "bg-refill-right": "shopify:\/\/shop_images\/bg-white-750x1200.png",
+        "bg-refill-right-moblie": "shopify:\/\/shop_images\/bg-white-750x1200.png"
+      }
+    },
+    "6699fe6b-2b7f-4226-94ed-cf94c3355c7a": {
+      "type": "rich-text",
+      "blocks": {
+        "template--14565676482693__6699fe6b-2b7f-4226-94ed-cf94c3355c7a-1681204546c63111a0-0": {
+          "type": "heading",
+          "settings": {
+            "title": "7\/24 support"
+          }
+        },
+        "3a783727-1427-447e-ae59-2e085a7651d6": {
+          "type": "button",
+          "settings": {
+            "link": "https:\/\/www.echatsoft.com\/visitor\/pc\/chat.html?companyId=525928&echatTag=shopify&lan=en",
+            "link_text": "Contact us"
+          }
+        },
+        "015a34bc-1f6f-4d9e-86b5-42ef42d90030": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "link": "",
+            "link_text": "Button"
+          }
+        }
+      },
+      "block_order": [
+        "template--14565676482693__6699fe6b-2b7f-4226-94ed-cf94c3355c7a-1681204546c63111a0-0",
+        "3a783727-1427-447e-ae59-2e085a7651d6",
+        "015a34bc-1f6f-4d9e-86b5-42ef42d90030"
+      ],
+      "custom_css": [
+        ".page-width--narrow {padding: 100px 0; flex-wrap: wrap; justify-content: center;}",
+        ".page-width--narrow > div:first-child {width: 100%;}",
+        ".page-width--narrow > div:nth-child(n + 2) {margin: 10px auto;}",
+        ".page-width--narrow a {min-width: 200px;}"
+      ],
+      "settings": {
+        "padding_top_bottom": 100,
+        "padding_top_bottom_mobile": 32,
+        "bg_image_pc": "shopify:\/\/shop_images\/PART4-1920x400-0424.jpg",
+        "bg_image_mobile": "shopify:\/\/shop_images\/bg-white-750x1200.png",
+        "bg_color": "#ffffff",
+        "header_align_text": "center",
+        "content_align_text": "center",
+        "button_align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "3f70dcc6-00d3-4a6c-8145-69ea42a01f75": {
+      "type": "faq",
+      "blocks": {
+        "template--14565676482693__3f70dcc6-00d3-4a6c-8145-69ea42a01f75-1681205619b1ad8af1-0": {
+          "type": "question",
+          "settings": {
+            "title": "Why is the service not working after refill?",
+            "text": "<p>After renewal, the SIM card will resume service in several minutes, if not, please restart the device.<br>\nTo avoid the service interruptions, suggestion you REFILL your data plan before your current plan expires<\/p>"
+          }
+        },
+        "template--14565676482693__3f70dcc6-00d3-4a6c-8145-69ea42a01f75-1681205619b1ad8af1-1": {
+          "type": "question",
+          "settings": {
+            "title": "Why expiration date not changed after refill?",
+            "text": "<p>According to system rule, the new plan will be in \"PLANS-Unused”, and it will start when your current plan is used up or expires.<\/p>"
+          }
+        },
+        "5bf8725a-3c51-4c47-839d-534b314cb7c2": {
+          "type": "question",
+          "settings": {
+            "title": "I recharge the wrong ICCID number, how to solve it?",
+            "text": "<p>If you enter the wrong ICCID number, the payment won't recharge the payment successfully. If the payment was recharged, please contact us.<\/p>"
+          }
+        },
+        "d7fc4565-707c-473d-94c5-a78fc430c11c": {
+          "type": "question",
+          "settings": {
+            "title": "The payment is rejected, but the card is no problem, how do I recharge?",
+            "text": "<p>We accept below payment methods\n\n• American Express<br>\n\n• China UnionPay (CUP)<br>\n\n• Discover & Diners<br>\n\n• Japan Credit Bureau (JCB)<br>\n\n• Mastercard<br>\n\n• Visa<br>\n\nChange your email address and change your payment card. Try a different payment method from the list of accepted payment methods,If you're still having issues,contact us..<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--14565676482693__3f70dcc6-00d3-4a6c-8145-69ea42a01f75-1681205619b1ad8af1-0",
+        "template--14565676482693__3f70dcc6-00d3-4a6c-8145-69ea42a01f75-1681205619b1ad8af1-1",
+        "5bf8725a-3c51-4c47-839d-534b314cb7c2",
+        "d7fc4565-707c-473d-94c5-a78fc430c11c"
+      ],
+      "settings": {
+        "title": "FAQs"
+      }
+    },
+    "44407299-f85e-45c9-8b02-01b7868dd05a": {
+      "type": "text-with-icons",
+      "blocks": {
+        "template--14565676482693__44407299-f85e-45c9-8b02-01b7868dd05a-1681205641a050f6dd-0": {
+          "type": "text_block",
+          "settings": {
+            "icon": "free-shipping",
+            "html_svg": "<svg width=\"52\" height=\"52\" viewbox=\"0 0 52 52\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M9.26378 15.485C9.05118 15.544 8.85776 15.6577 8.70284 15.8148C8.51408 16.0452 8.40919 16.3328 8.40538 16.6307C7.60647 24.3053 7.58947 28.9118 8.40538 36.5303C8.40578 36.8013 8.48792 37.0658 8.64107 37.2893C8.79422 37.5128 9.01125 37.6849 9.26378 37.7831L25.4017 44.0655L25.8862 44.1998L26.3723 44.0638L42.5103 37.7848C42.761 37.6839 42.9762 37.5111 43.129 37.2882C43.2817 37.0653 43.3651 36.8022 43.3687 36.532C44.2186 28.82 44.2288 24.3733 43.3687 16.7327C43.3918 16.3987 43.2853 16.0687 43.0712 15.8114C42.9302 15.6148 42.7354 15.4631 42.5103 15.3745V15.3779\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M35.2371 20.2156L26.3726 23.6663H25.402L9.26406 17.3855C9.05243 17.3003 8.8654 17.1637 8.71995 16.988C8.57451 16.8123 8.47524 16.603 8.43115 16.3792C8.47381 16.1695 8.56719 15.9734 8.70312 15.808C8.85843 15.6522 9.05181 15.5397 9.26406 15.4817L17.333 12.3421M35.2371 20.2156L42.5123 17.3855C42.7258 17.3023 42.9146 17.1661 43.0609 16.9897C43.2072 16.8134 43.3062 16.6027 43.3486 16.3775H43.3452C43.3023 16.1684 43.2089 15.9729 43.0732 15.808C42.9319 15.6118 42.7372 15.4602 42.5123 15.3712L26.3743 9.2026C26.2215 9.13501 26.0562 9.1001 25.889 9.1001C25.7219 9.1001 25.5566 9.13501 25.4037 9.2026L17.333 12.3421M35.2371 20.2156L17.333 12.3421M25.8882 44.1999V23.6663M31.8375 35.0805L38.6367 32.5307\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<\/svg>",
+            "title": "Fast Shipping",
+            "header_color": "",
+            "header_size": 16,
+            "header_line_height": 22,
+            "header_letter_spacing": 0,
+            "header_font_weight": "400",
+            "header_size_mo": 16,
+            "header_line_height_mo": 22,
+            "header_letter_spacing_mo": 0,
+            "header_font_weight_mo": "400",
+            "text": "",
+            "content_color": "",
+            "content_size": 16,
+            "content_line_height": 20,
+            "content_letter_spacing": 0,
+            "content_font_weight": "400",
+            "content_size_mo": 16,
+            "content_line_height_mo": 20,
+            "content_letter_spacing_mo": 0,
+            "content_font_weight_mo": "400"
+          }
+        },
+        "template--14565676482693__44407299-f85e-45c9-8b02-01b7868dd05a-1681205641a050f6dd-1": {
+          "type": "text_block",
+          "settings": {
+            "icon": "customer-service",
+            "html_svg": "<svg width=\"52\" height=\"52\" viewbox=\"0 0 52 52\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M9 29.6819C9 23.0729 13.4066 21.4219 15.6108 21.4219C19.5738 21.4219 20.5654 24.7273 20.5654 26.3766V32.9873C20.5654 36.9504 17.2601 37.942 15.6091 37.942C13.4066 37.942 9 36.2893 9 29.6819V29.6819ZM43.693 29.6819C43.693 23.0729 39.2864 21.4219 37.0822 21.4219C33.1191 21.4219 32.1292 24.7273 32.1292 26.3766V32.9873C32.1292 36.9504 35.4346 37.942 37.0839 37.942C39.2864 37.942 43.693 36.2893 43.693 29.6819Z\" stroke=\"#07c160\" stroke-width=\"3\"><\/path>\n<path d=\"M10.123 24.8254C10.3659 16.8554 14.4217 8 26.3464 8C38.2525 8 42.3134 16.8233 42.5646 24.7815M42.7434 34.3368C42.7434 34.3368 42.9694 39.5292 40.3032 41.7907C37.6386 44.0438 30.9098 43.9999 30.9098 43.9999\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\"><\/path>\n<\/svg>",
+            "title": "7\/24 Custom support",
+            "header_color": "",
+            "header_size": 16,
+            "header_line_height": 22,
+            "header_letter_spacing": 0,
+            "header_font_weight": "400",
+            "header_size_mo": 16,
+            "header_line_height_mo": 22,
+            "header_letter_spacing_mo": 0,
+            "header_font_weight_mo": "400",
+            "text": "",
+            "content_color": "",
+            "content_size": 16,
+            "content_line_height": 20,
+            "content_letter_spacing": 0,
+            "content_font_weight": "400",
+            "content_size_mo": 16,
+            "content_line_height_mo": 20,
+            "content_letter_spacing_mo": 0,
+            "content_font_weight_mo": "400"
+          }
+        },
+        "template--14565676482693__44407299-f85e-45c9-8b02-01b7868dd05a-1681205641a050f6dd-2": {
+          "type": "text_block",
+          "settings": {
+            "icon": "secure-payment",
+            "html_svg": "<svg width=\"52\" height=\"52\" viewbox=\"0 0 52 52\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M32.5 35.104H45.5\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M44.75 27.8541V12.9375C44.75 11.1426 43.295 9.6875 41.5 9.6875H28.0833H10.75C8.95508 9.6875 7.5 11.1426 7.5 12.9375V40.8541C7.5 42.6491 8.95508 44.1041 10.75 44.1041H32.9265\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M37.9167 40.5208L32.5 35.1042L37.9162 29.6875\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M21.8182 16.6875V34.6875\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M26.3182 18.324C26.3182 18.324 22.2152 18.324 20.1818 18.324C18.1484 18.324 16.5 19.9724 16.5 22.0058C16.5 24.0392 18.1484 25.6876 20.1818 25.6876\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M17.3182 33.0511C17.3182 33.0511 21.4211 33.0511 23.4545 33.0511C25.488 33.0511 27.1364 31.4027 27.1364 29.3693C27.1364 27.3359 25.488 25.6875 23.4545 25.6875H20.1818\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<\/svg>",
+            "title": "10 day money back guarantee",
+            "header_color": "",
+            "header_size": 16,
+            "header_line_height": 22,
+            "header_letter_spacing": 0,
+            "header_font_weight": "400",
+            "header_size_mo": 16,
+            "header_line_height_mo": 22,
+            "header_letter_spacing_mo": 0,
+            "header_font_weight_mo": "400",
+            "text": "",
+            "content_color": "",
+            "content_size": 16,
+            "content_line_height": 20,
+            "content_letter_spacing": 0,
+            "content_font_weight": "400",
+            "content_size_mo": 16,
+            "content_line_height_mo": 20,
+            "content_letter_spacing_mo": 0,
+            "content_font_weight_mo": "400"
+          }
+        },
+        "a716d276-e837-443c-8eeb-db92eda7c36e": {
+          "type": "text_block",
+          "settings": {
+            "icon": "bills",
+            "html_svg": "<svg width=\"52\" height=\"52\" viewbox=\"0 0 52 52\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M5.6665 12C5.6665 10.8954 6.56193 10 7.6665 10H43.6665C44.7711 10 45.6665 10.8954 45.6665 12V40C45.6665 41.1046 44.7711 42 43.6665 42H7.6665C6.56193 42 5.6665 41.1046 5.6665 40V12Z\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M5.6665 17.9995H45.6665\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"square\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M28.6665 34H37.6665\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<\/svg>",
+            "title": "We accept credit cards, PayPal",
+            "header_color": "",
+            "header_size": 16,
+            "header_line_height": 22,
+            "header_letter_spacing": 0,
+            "header_font_weight": "400",
+            "header_size_mo": 16,
+            "header_line_height_mo": 22,
+            "header_letter_spacing_mo": 0,
+            "header_font_weight_mo": "400",
+            "text": "",
+            "content_color": "",
+            "content_size": 16,
+            "content_line_height": 20,
+            "content_letter_spacing": 0,
+            "content_font_weight": "400",
+            "content_size_mo": 16,
+            "content_line_height_mo": 20,
+            "content_letter_spacing_mo": 0,
+            "content_font_weight_mo": "400"
+          }
+        }
+      },
+      "block_order": [
+        "template--14565676482693__44407299-f85e-45c9-8b02-01b7868dd05a-1681205641a050f6dd-0",
+        "template--14565676482693__44407299-f85e-45c9-8b02-01b7868dd05a-1681205641a050f6dd-1",
+        "template--14565676482693__44407299-f85e-45c9-8b02-01b7868dd05a-1681205641a050f6dd-2",
+        "a716d276-e837-443c-8eeb-db92eda7c36e"
+      ],
+      "settings": {
+        "title": "",
+        "align_text": "center",
+        "desktop_columns_per_row": 3,
+        "icon_color": "#19a64f",
+        "button_label": "",
+        "button_link": "",
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "c5faf4a0-d224-4bd9-8e2a-f3b8f1034194",
+    "a9b805cb-119d-4ebe-83e8-2af47879c69d",
+    "6699fe6b-2b7f-4226-94ed-cf94c3355c7a",
+    "3f70dcc6-00d3-4a6c-8145-69ea42a01f75",
+    "44407299-f85e-45c9-8b02-01b7868dd05a"
+  ]
+}

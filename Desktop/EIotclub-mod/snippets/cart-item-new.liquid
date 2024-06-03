@@ -1,0 +1,180 @@
+{% liquid
+  assign on_sale = false
+  if product.variant.compare_at_price > product.variant.price
+    assign on_sale = true
+  endif
+%}
+<cart-item class="cart-item-element" data-variant="{{ product.variant.id }}">
+  <div class="cart-item-element-delte" data-delete>
+    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+      <path d="M4.27344 3.97278L4.97657 15.2227C5.00996 15.8728 5.48281 16.3478 6.10157 16.3478H12.5703C13.1915 16.3478 13.6556 15.8728 13.6953 15.2227L14.3985 3.97278" stroke="#7B7B7B" stroke-width="0.9375" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M3.14844 3.97278H15.5234" stroke="#7B7B7B" stroke-width="0.9375" stroke-miterlimit="10" stroke-linecap="round"/>
+      <path d="M11.8672 6.22278L11.5859 14.0978M9.33594 6.22278V14.0978M6.80469 6.22278L7.08594 14.0978M7.08594 3.97278V2.56654C7.08562 2.45565 7.10722 2.34577 7.14951 2.24326C7.1918 2.14074 7.25393 2.0476 7.33235 1.96919C7.41076 1.89077 7.5039 1.82863 7.60642 1.78635C7.70894 1.74406 7.8188 1.72246 7.92969 1.72278H10.7422C10.8531 1.72246 10.963 1.74406 11.0655 1.78635C11.168 1.82863 11.2611 1.89077 11.3395 1.96919C11.418 2.0476 11.4801 2.14074 11.5224 2.24326C11.5647 2.34577 11.5863 2.45565 11.5859 2.56654V3.97278H7.08594Z" stroke="#7B7B7B" stroke-width="0.9375" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+  <div class="cart__item" data-key="{{ product.key }}">
+    <div class="cart__item--image" data-aos>
+      <a
+        href="{{ product.url }}"
+        class="image-wrap"
+        style="display: block; height: 0; padding-bottom: {{ 100 | divided_by: product.image.aspect_ratio }}%;"
+      >
+        {%- render 'image-element',
+          img: product,
+          alt: product.product.title,
+          sizes: sizes,
+          sizeVariable: sizeVariable,
+          fallback: fallback,
+          widths: '180, 360, 540'
+        -%}
+      </a>
+    </div>
+
+    <div class="cart__item--details">
+      <div class="cart__item--name">
+        <a href="{{ product.url }}" class="cart__product-name">
+          {{ product.product.title }}
+        </a>
+
+        {%- unless product.product.has_only_default_variant -%}
+          <div class="cart__variant-meta">
+            {{ product.variant.title }}
+          </div>
+        {%- endunless -%}
+        <div class="{% if product.selling_plan_allocation == empty %}hide {% endif %}">
+          {{ product.selling_plan_allocation.selling_plan.name }}
+        </div>
+
+        {%- assign property_size = product.properties | size -%}
+        {%- if property_size > 0 -%}
+          {%- for p in product.properties -%}
+            {%- assign first_character_in_key = p.first | truncate: 1, '' -%}
+            {%- unless p.last == blank or first_character_in_key == '_' -%}
+              {{ p.first }}:
+
+              {%- if p.last contains '/uploads/' -%}
+                <a href="{{ p.last }}">{{ p.last | split: '/' | last }}</a>
+              {%- else -%}
+                {{ p.last }}
+              {%- endif -%}
+
+              <br>
+            {%- endunless -%}
+          {%- endfor -%}
+        {%- endif -%}
+      </div>
+      <div class="cart__item--qty">
+        <div class="js-qty__wrapper">
+          <label for="cart_updates_{{ product.key }}" class="hidden-label">{{ 'cart.label.quantity' | t }}</label>
+          <input
+            type="text"
+            id="cart_updates_{{ product.key }}"
+            name="updates[]"
+            class="js-qty__num"
+            value="{{ product.quantity }}"
+            min="0"
+            pattern="[0-9]*"
+            data-id="{{ product.key }}"
+          >
+          <button
+            type="button"
+            class="js-qty__adjust js-qty__adjust--minus"
+            aria-label="{{ 'cart.general.reduce_quantity' | t }}"
+          >
+            <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-minus" viewBox="0 0 20 20">
+              <path fill="#444" d="M17.543 11.029H2.1A1.032 1.032 0 0 1 1.071 10c0-.566.463-1.029 1.029-1.029h15.443c.566 0 1.029.463 1.029 1.029 0 .566-.463 1.029-1.029 1.029z"/>
+            </svg>
+            <span class="icon__fallback-text" aria-hidden="true">&minus;</span>
+          </button>
+          <button
+            type="button"
+            class="js-qty__adjust js-qty__adjust--plus"
+            aria-label="{{ 'cart.general.increase_quantity' | t }}"
+          >
+            <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-plus" viewBox="0 0 20 20">
+              <path fill="#444" d="M17.409 8.929h-6.695V2.258c0-.566-.506-1.029-1.071-1.029s-1.071.463-1.071 1.029v6.671H1.967C1.401 8.929.938 9.435.938 10s.463 1.071 1.029 1.071h6.605V17.7c0 .566.506 1.029 1.071 1.029s1.071-.463 1.071-1.029v-6.629h6.695c.566 0 1.029-.506 1.029-1.071s-.463-1.071-1.029-1.071z"/>
+            </svg>
+            <span class="icon__fallback-text" aria-hidden="true">+</span>
+          </button>
+        </div>
+      </div>
+      <div class="cart__item--price {% unless on_sale %} normal-price {% endunless %} cart__item-price-col text-right">
+        {% comment %}
+          {%- if product.original_price != product.final_price -%}
+            <span class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
+            <small class="cart__price cart__price--strikethrough">{{ product.original_price | money }}</small>
+            <span class="visually-hidden">{{ 'products.general.sale_price' | t }}</span>
+            <span class="cart__price cart__discount">{{ product.final_price | money }}</span>
+          {%- else -%}
+            <span class="cart__price">{{ product.original_price | money }}</span>
+          {%- endif -%}
+        {% endcomment %}
+
+        {% comment %} price s {% endcomment %}
+
+        <span
+          {% if on_sale %}
+            class="sale-price"
+          {% endif %}
+        >
+          {{ product.variant.price | money }}
+        </span>
+        {%- if on_sale -%}
+          <span class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
+          <span class="grid-product__price--original">{{ product.variant.compare_at_price | money }}</span>
+          <span class="visually-hidden">{{ 'products.general.sale_price' | t }}</span>
+        {%- endif -%}
+        {%- if on_sale -%}
+          {% comment %} <div class="flex-1"></div> {% endcomment %}
+          <div class="cart__item--saved-price">
+            Save ${{ product.variant.compare_at_price | minus: product.variant.price | divided_by: 100 }}
+          </div>
+        {%- endif -%}
+        {% comment %} price e {% endcomment %}
+
+        {%- if product.line_level_discount_allocations != blank -%}
+          {%- for discount_allocation in product.line_level_discount_allocations -%}
+            <small class="cart__discount">
+              {{- discount_allocation.discount_application.title }} (-{{ discount_allocation.amount | money }})</small
+            >
+          {%- endfor -%}
+        {%- endif -%}
+
+        {%- if product.unit_price_measurement -%}
+          {%- capture unit_price_base_unit -%}
+          <span class="unit-price-base">
+            {%- if product.unit_price_measurement -%}
+              {%- if product.unit_price_measurement.reference_value != 1 -%}
+                {{ product.unit_price_measurement.reference_value }}
+              {%- endif -%}
+              {{ product.unit_price_measurement.reference_unit }}
+            {%- endif -%}
+          </span>
+        {%- endcapture -%}
+
+          <div class="product__unit-price">{{ product.unit_price | money }}/{{ unit_price_base_unit }}</div>
+        {%- endif -%}
+      </div>
+
+      {%- if on_sale -%}
+        {% comment %}
+          <div class="cart__item--saved-price lg:hidden">
+            Save ${{ product.product.compare_at_price | minus: product.product.price | divided_by: 100 }}
+          </div>
+        {% endcomment %}
+      {%- endif -%}
+      <!-- save price {{ product.original_price }} {{ product.final_price }} -->
+      {% comment %}
+        {%- if product.original_price != product.final_price -%}
+          <div class="cart__item--saved-price">
+            Save ${{ product.original_price | minus: product.final_price | divided_by: 100 }}
+          </div>
+        {% else %}
+          {%- if product.product.compare_at_price != product.product.price -%}
+            Save ${{ product.product.compare_at_price | minus: product.product.price | divided_by: 100 }}
+          {% endif %}
+        {% endif %}
+      {% endcomment %}
+    </div>
+  </div>
+</cart-item>

@@ -1,0 +1,209 @@
+.coveragefun-tag-deal {
+    font-size: 14px;
+    font-weight: 700;
+    padding: 2px 3px;
+    margin-bottom: calc(4px + 0.3vw);
+    display: inline-block;
+    border-radius: 3px;
+}
+
+.coveragefun-proitem .mulcon-proitem-price>img {
+    vertical-align: top;
+}
+
+.coveragefun-outbox {
+    margin: 5.5vw 0;
+}
+
+.coveragefun-proitem-img .img-bg {
+    border-radius: 1vw;
+    vertical-align: top;
+    width: 100%;
+}
+
+.coveragefun-toptitle {
+    margin-bottom: 1vw;
+    /* padding: 0 12vw; */
+    line-height: 1.5;
+}
+
+.coveragefun-text-wrapper {
+    text-align: center;
+    margin-bottom: 3vw;
+}
+
+.coveragefun-proitem {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1vw;
+}
+
+.coveragefun-title {
+    font-size: 1.1vw;
+    font-weight: bold;
+    margin-bottom: calc(4px + 0.3vw);
+}
+
+.coveragefun-subtitle {
+    font-size: 14px;
+}
+
+.coveragefun-proitem .mulcon-price-old {
+    color: #CFCFCF;
+}
+
+.coveragefun-proitem-img {
+    position: relative;
+}
+
+.coveragefun-cart-btn {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    border-radius: 50%;
+    background: #fff;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-sizing: content-box;
+    transition: .2s ease-in;
+}
+
+.coveragefun-cart-btn:hover {
+    transform: scale(1.05);
+}
+
+.coveragefun-itemtext {
+    padding: 15px;
+}
+
+.coveragefun-content .swiper-button-prev,
+.coveragefun-content .swiper-button-next {
+    top: 40%;
+}
+
+@media (min-width: 769px) {
+    .coveragefun-text-wrapper {
+        font-size: calc(12px + 0.3vw);
+    }
+    
+}
+@media (min-width: 1920px) {
+    .coveragefun-subtitle {
+        font-size: calc(12px + .2vw);
+    }
+}
+
+@media (max-width: 1550px) {
+    .coveragefun-cart-btn {
+        width: 1.6vw;
+        height: 1.6vw;
+    }
+
+    .coveragefun-title {
+        font-size: 1.4vw;
+    }
+}
+
+@media (max-width: 1280px) {
+    .coveragefun-cart-btn {
+        width: 2vw;
+        height: 2vw;
+    }
+
+    .coveragefun-itemtext {
+        padding: 15px 0;
+    }
+
+    .coveragefun-title {
+        font-size: 1.6vw;
+    }
+
+}
+
+@media (max-width: 993px) {
+    .coveragefun-cart-btn {
+        width: 2.6vw;
+        height: 2.6vw;
+    }
+
+    .coveragefun-title {
+        font-size: 2vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .coveragefun-title {
+        font-size: 3vw;
+        margin-bottom: 1.5vw;
+    }
+
+    .coveragefun-subtitle {
+        font-size: 2.5vw;
+    }
+
+    .coveragefun-cart-btn {
+        width: 6vw;
+        height: 6vw;
+    }
+
+    .coveragefun-outbox .swiper {
+        padding-bottom: 30px;
+    }
+
+    .coveragefun-content .pc-show {
+        display: none;
+    }
+}
+
+@media (max-width: 550px) {
+    .coveragefun-toptitle {
+        padding: 0;
+        margin-bottom: 3vw;
+    }
+
+    .coveragefun-text-wrapper {
+        margin-bottom: 8vw;
+    }
+
+    .coveragefun-tag-deal {
+        font-size: 12px;
+        margin-bottom: calc(4px + 1vw);
+    }
+
+    .coveragefun-title {
+        font-size: 4.8vw;
+        margin-bottom: 2vw;
+    }
+
+    .coveragefun-subtitle {
+        font-size: 3.7vw;
+    }
+
+    .coveragefun-outbox .contain-index {
+        padding-right: 0;
+    }
+
+    .coveragefun-outbox .swiper>.swiper-scrollbar {
+        left: 8%;
+        width: 80%;
+    }
+
+    .coveragefun-outbox {
+        margin: 7vw 0 13vw;
+    }
+
+    .coveragefun-toptitle {
+        line-height: 1.2;
+    }
+
+    .coveragefun-cart-btn {
+        width: 7vw;
+        height: 7vw;
+    }
+}

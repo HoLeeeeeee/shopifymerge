@@ -1,0 +1,275 @@
+<!doctype html>
+<html class="no-js" lang="{{ request.locale.iso_code }}" dir="{{ settings.text_direction }}">
+  <head>
+  <script>window.uetq = window.uetq || [];window.uetq.push('event', 'purchase', {"revenue_value":Replace_with_Variable_Revenue_Function(),"currency":"USD"});</script>
+    <script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"97086703", enableAutoSpaTracking: true};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script>
+    <meta name="google-site-verification" content="oKpcGPzhwyQ-_XmovkNxJsMyEpf2JTHwWpMiiL_NHPA">
+    <meta name="google-site-verification" content="rt5nuOE_DG05NL3fvS7u5s1jDiz34NrbYCwXyY1owSI">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="{{ settings.color_button }}">
+    <link rel="preload" as="style" href=" {{ 'theme.css' | asset_url }}">
+    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css">
+    <link rel="preload" as="script" href="https://code.jquery.com/jquery-3.6.0.min.js">
+    <link rel="preload" as="script" href="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js">
+    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.min.css">
+    <link rel="preload" as="script" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js">
+    <link rel="preload" as="style" href="https://unpkg.com/swiper@8.4.7/swiper-bundle.min.css">
+    <link rel="preload" as="script" href="https://unpkg.com/swiper@8.4.7/swiper-bundle.min.js">
+
+    {{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag: preload: true }}
+    <script src="{{ "swiper-bundle.min.js" | asset_url}}" async></script>
+    <link rel="canonical" href="{{ canonical_url | remove: "/en-ca"}}">
+    <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+    <link rel="dns-prefetch" href="https://productreviews.shopifycdn.com">
+    <link rel="dns-prefetch" href="https://ajax.googleapis.com">
+    <link rel="dns-prefetch" href="https://maps.googleapis.com">
+    <link rel="dns-prefetch" href="https://maps.gstatic.com">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    >
+    {%- if settings.favicon != blank -%}
+      <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png">
+    {%- endif -%}
+
+    {%- render 'seo-title' -%}
+
+    {%- if page_description -%}
+      <meta name="description" content="{{ page_description | escape }}">
+    {% else %}
+      <meta name="description" content="{{ page_title }}">
+    {%- endif -%}
+
+    {%- render 'social-meta-tags' -%}
+    {% render 'app-youhua' %}
+    {%- render 'font-face' -%} 
+    {{ 'theme.css' | asset_url | stylesheet_tag: preload: true }}
+    {{ 'global.css' | asset_url | stylesheet_tag: preload: true }}
+    {{ 'new-cart-drawer.css' | asset_url | stylesheet_tag: preload: true }}
+    {{ 'new.css' | asset_url | stylesheet_tag: preload: true }}
+    {%- render 'css-variables' -%}
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    {% comment %} <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.css">   {% endcomment %}
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8.4.7/swiper-bundle.min.css">
+    {% comment %} <script src="https://unpkg.com/swiper@8/swiper-bundle.js"> </script>  {% endcomment %}
+    <script src="https://unpkg.com/swiper@8.4.7/swiper-bundle.min.js"></script>
+
+    <script>
+      document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+
+      window.theme = window.theme || {};
+      theme.routes = {
+        home: "{{ routes.root_url }}",
+        cart: "{{ routes.cart_url | append: '.js' }}",
+        cartPage: "{{ routes.cart_url }}",
+        cartAdd: "{{ routes.cart_add_url | append: '.js' }}",
+        cartChange: "{{ routes.cart_change_url | append: '.js' }}",
+        search: "{{ routes.search_url }}"
+      };
+      theme.strings = {
+        soldOut: {{ 'products.product.sold_out' | t | json }},
+        unavailable: {{ 'products.product.unavailable' | t | json }},
+        inStockLabel: {{ 'products.product.in_stock_label' | t | json }},
+        oneStockLabel: {{ 'products.product.stock_label.one' | t: count: '[count]' | json }},
+        otherStockLabel: {{ 'products.product.stock_label.other' | t: count: '[count]' | json }},
+        willNotShipUntil: {{ 'products.product.will_not_ship_until' | t: date: '[date]' | json }},
+        willBeInStockAfter: {{ 'products.product.will_be_in_stock_after' | t: date: '[date]' | json }},
+        waitingForStock: {{ 'products.product.waiting_for_stock' | t | json }},
+        cartSavings: {{ 'cart.general.savings_html' | t: savings: '[savings]' | json }},
+        cartEmpty: {{ 'cart.general.empty' | t | json }},
+        cartTermsConfirmation: {{ 'cart.general.terms_confirm' | t | json }},
+        searchCollections: {{ 'general.search.collections' | t | json }},
+        searchPages: {{ 'general.search.pages' | t | json }},
+        searchArticles: {{ 'general.search.articles' | t | json }},
+        maxQuantity: {{ 'cart.general.max_quantity' | t: quantity: '[quantity]', title: '[title]' | json }}
+      };
+      theme.settings = {
+        cartType: {{ settings.cart_type | json }},
+        isCustomerTemplate: {% if request.page_type contains 'customers/' %}true{% else %}false{% endif %},
+        moneyFormat: {{ shop.money_format | json }},
+        predictiveSearch: {{ settings.predictive_search_enabled }},
+        predictiveSearchType: {{ settings.search_type | json }},
+        quickView: {{ settings.quick_shop_enable }},
+        themeName: 'Motion',
+        themeVersion: "10.3.1"
+      };
+    </script>
+    {{ new_url }}
+    {% comment %} {{ content_for_header }}  {% endcomment %}
+    {% render 'content_for_Header' %}
+
+    <script src="{{ 'vendor-scripts-v14.js' | asset_url | split: '?' | first }}" defer="defer"></script>
+
+    {%- if shop.enabled_currencies.size > 1 -%}
+      <link rel="stylesheet" href="{{ 'country-flags.css' | asset_url | split: '?' | first }}">
+    {%- endif -%}
+
+    <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
+
+    {%- if request.page_type contains 'customers/' -%}
+      <script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer="defer"></script>
+    {%- endif -%}
+
+    {% if request.design_mode %}
+      <script src="https://api.archetypethemes.co/design-mode.js" defer="defer"></script>
+    {% endif %}
+
+    {% render 'gsf-conversion-pixels' %}
+    <style>
+      .hero__image-wrapper .lazyloaded,
+      .grid-product__image-mask .lazyloaded,
+      .product-main-slide .lazyloaded,
+      .flickity-viewport,
+      .transition-body,
+      .article__image-wrap .article__image img,
+      .product__thumb-item img,
+      main .page-width .image-wrap img {
+        transition: 0s;
+        animation-duration: 0s !important;
+        opacity: 1 !important;
+      }
+      .product__thumb-item img {
+        width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 1 !important;
+      }
+      @media screen and (max-width: 589px) {
+        .product__thumbs--scroller {
+          min-height: 80px;
+        }
+      }
+    </style>
+  </head>
+  <style>
+    {% if template | handle == 'article' %}
+       .template-article #MainContent article{
+          max-width: 920px;
+        }
+    {% endif %}
+  </style>
+  {% comment %} {{ page.template_suffix }},{{ template | handle }} {% endcomment %}
+  <body
+    class="{% if template.name == 'product' %}tempro-all tempro-{{ product.template_suffix }} {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}{% if request.path == '/challenge' %} template-challange{% endif %}"
+    data-transitions="{{ settings.animate_page_transitions }}"
+    data-type_header_capitalize="{{ settings.type_header_capitalize }}"
+    data-type_base_accent_transform="{{ settings.type_base_accent_transform }}"
+    data-type_header_accent_transform="{{ settings.type_header_accent_transform }}"
+    data-animate_sections="{{ settings.animate_sections }}"
+    data-animate_underlines="{{ settings.animate_underlines }}"
+    data-animate_buttons="{{ settings.animate_buttons }}"
+    data-animate_images="{{ settings.animate_images }}"
+    data-animate_page_transition_style="{{ settings.animate_page_transition_style }}"
+    data-type_header_text_alignment="{{ settings.type_headers_align_text }}"
+    data-animate_images_style="{{ settings.animate_images_style | default: "zoom-fade" }}"
+  >
+    {% if settings.animate_page_transitions %}
+      <script type="text/javascript">
+        (function () {
+          document.body.className += ' loaded';
+        })();
+      </script>
+    {% endif %}
+    <a class="in-page-link visually-hidden skip-link" href="#MainContent">
+      {{- 'general.accessibility.skip_to_content' | t -}}
+    </a>
+
+    <div id="PageContainer" class="page-container">
+      <div class="transition-body">
+        {%- sections 'header-group' -%}
+        {%- sections 'popup-group' -%}
+
+        <main class="main-content" id="MainContent">
+          {{ content_for_layout }}
+        </main>
+        {%- sections 'footer-group' -%}
+      </div>
+    </div>
+
+    {%- liquid
+      render 'video-modal'
+      render 'photoswipe-template'
+      render 'tool-tip'
+    -%}
+
+    {% comment %} Image markup used when building product grid item via JS {% endcomment %}
+    <template id="predictiveImageMarkup">
+      <image-element>
+        <img class="lazyload" width height src loading="lazy" sizes="(min-width: 769px) 100px, 60px">
+      </image-element>
+    </template>
+
+    {% comment %} <div id="ECHAT_icon" class="echat echat-icon echat-right-center" style="display: block; margin: 127.5px 0px auto auto; width: 60px; height: 60px;"><a target="_blank" id="ECHAT_icon_link" class="echat-icon-link" href="https://www.echatsoft.com/visitor/pc/chat.html?companyId=525928&amp;encryptVID=zWAz6YEeJotpFzrBWXwzlQ%3D%3D&amp;chatVisitorId=3221490018&amp;echatTag=shopify&amp;enterUrl=https%3A%2F%2Fwww.eiotclub.com%2F%3F_ab%3D0%26_fd%3D0%26_sc%3D1&amp;enterTitle=Eiotclub%C2%AE%20%7CSmart%20IoT%20Solutions%20for%20a%20Connected%20World.%20Transform%20Today!&amp;firstUrl=https%3A%2F%2Fwww.eiotclub.com%2F%3F_ab%3D0%26_fd%3D0%26_sc%3D1&amp;firstTitle=Eiotclub%C2%AE%20%7CSmart%20IoT%20Solutions%20for%20a%20Connected%20World.%20Transform%20Today!&amp;fromHost=https%3A%2F%2Fwww.eiotclub.com&amp;dataHost=https%3A%2F%2Fe.echatsoft.com" onclick="return ECHAT.iconChat(this)" style="width: 81px; height: 81px;"><img id="ECHAT_icon_img" alt="对话图标" class="echat-icon-img" src="https://vfile.rainbowred.com/group1/M00/AA/33/wKhCBGRA-_uAI1BjAAAIkUU3QMw148.png"><span class="echat-mini-num"></span></a></div> {% endcomment %}
+    {% section 'app-optimization' %}
+
+    <script type="text/javascript">
+       var _echatServer = ['e.echatsoft.com'];
+      window._echat=window._echat||function(){(_echat.q=_echat.q||[]).push(arguments)};_echat.l=+new Date;
+      _echat('initParam', { companyId: 525928, echatTag: 'shopify'}); //自定义echatTag 参数值
+      window.addEventListener('scroll',function () {
+          var echat = document.createElement('script');
+          echat.type = 'text/javascript';
+          echat.defer = true;
+          echat.id = 'echatmodulejs';
+          echat.setAttribute('charset','UTF-8');
+          echat.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'www.echatsoft.com/visitor/echat.js';
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(echat, s);
+      });
+      {% comment %} (function () {
+          var echat = document.createElement('script');
+          echat.type = 'text/javascript';
+          echat.defer = true;
+          echat.id = 'echatmodulejs';
+          echat.setAttribute('charset','UTF-8');
+          echat.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'www.echatsoft.com/visitor/echat.js';
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(echat, s);
+      })(); {% endcomment %}
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10832325683"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'AW-10832325683');
+    </script>
+
+    {% render 'automizely-recommendations' %}
+  </body>
+  <script>
+    function upgradeDataSrcToSrc() {
+      var scriptTags = document.querySelectorAll('script[data-src]');
+
+      for (var i = 0; i < scriptTags.length; i++) {
+        var scriptTag = scriptTags[i];
+        scriptTag.src = scriptTag.getAttribute('data-src');
+        scriptTag.removeAttribute('data-src');
+      }
+    }
+
+    var loadJS = function () {
+      upgradeDataSrcToSrc();
+      setTimeout(function () {
+        document.dispatchEvent(event);
+      }, 2000);
+    };
+    var event = new CustomEvent('StartAsyncLoading');
+    document.addEventListener('mousemove', loadJS, { once: true });
+    document.addEventListener('touchstart', loadJS, { once: true });
+  </script>
+</html>

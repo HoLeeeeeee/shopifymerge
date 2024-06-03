@@ -1,0 +1,527 @@
+<div
+  class="New-Accordion"
+  id="new-accordion-{{ section.id }}"
+  {% if section.blocks.size > 1 %}
+    data-loader-script="{{ 'new-accordion.js' | asset_url }}"
+  {% endif %}
+>
+  <div
+    class="{% if section.settings.container == 'fullwidth' %}page-width{% elsif section.settings.container == '1770' %}container-1770{% elsif section.settings.container == '1170' %}container-1170{% else %}container{% endif %}"
+  >
+    {% if section.settings.title != blank %}
+      <div class="new-block-header text-center">
+        {% if section.settings.title != blank %}
+          <h3 class="title">
+            <span class="text">
+              {{ section.settings.title }}
+            </span>
+          </h3>
+        {% endif %}
+        {% if section.settings.des != blank %}
+          <span class="des">
+            {{ section.settings.des }}
+          </span>
+        {% endif %}
+      </div>
+    {% endif %}
+    <div class="new-accordion-container">
+      <div class="new-accordion-frame new-scroll scroll-snap-mobile disable-srollbar">
+        {% for block in section.blocks %}
+          <div class="new-accordion-box {% if forloop.first == true %}active{% endif %}">
+            <div class="new-accordion-image">
+              {% if block.settings.image != blank %}
+                {%- assign preview_img = block.settings.image -%}
+                <img
+                  class="show-pc"
+                  loading="lazy"
+                  src=" {{ preview_img | img_url: 'master' }} "
+                  alt="{{ shop.name }}"
+                >
+                <img
+                  class="show-mobile"
+                  loading="lazy"
+                  src=" {% if block.settings.image_mo != blank %} {{ block.settings.image_mo | img_url: 'master' }} {% else %} {{ preview_img | img_url: 'master' }} {% endif %} "
+                  alt="{{ shop.name }}"
+                >
+                {% if settings.enable_lazyload -%}
+                  <span
+                    class="data-lazy-loading"
+                  ></span>
+                {%- endif %}
+              {% else %}
+                <div class="not_img" style="--height_not_img: 220px">120 x 220px</div>
+              {% endif %}
+            </div>
+            <div class="new-accordion-content">
+              <div class="new-accordion-contents">
+                <h3 class="title">{{ block.settings.title }}</h3>
+                <span class="des">{{ block.settings.description }}</span>
+              </div>
+              {% if block.settings.myproduct != blank %}
+                <div class="new-accordion-product">
+                  {% for image in block.settings.myproduct.images limit: 1 %}
+                    <img loading="lazy" src="{{ image | img_url: 'large' }}" alt="{{ image.alt }}">
+                  {% endfor %}
+                  <h3>{{ block.settings.myproduct.title }}</h3>
+                  <a class="btn" href="{{ block.settings.myproduct.url }}">Shop Now</a>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+{%- liquid
+  assign mg_top_desktop = section.settings.mg_top_desktop
+  assign mg_top_tablet = section.settings.mg_top_tablet
+  assign mg_top_mobile = section.settings.mg_top_mobile
+
+  assign mg_bottom_desktop = section.settings.margin_bottom
+  assign mg_bottom_tablet = section.settings.margin_bottom_tab
+  assign mg_bottom_mobile = section.settings.margin_bottom_mb
+
+  assign color_bg = section.settings.bg_color
+-%}
+
+<style>
+  @media (max-width: 767px) {
+      #new-accordion-{{ section.id }} .show-pc {
+          display: none;
+      }
+  }
+
+  @media (min-width: 768px) {
+      #new-accordion-{{ section.id }} .show-mobile {
+          display: none;
+      }
+  }
+
+  #new-accordion-{{ section.id }} {
+      background-color: {{ color_bg }};
+  }
+
+  @media (max-width: 767px) {
+      #new-accordion-{{ section.id }} {
+          padding-top: {{ mg_top_mobile | append: 'px' }};
+          padding-bottom: {{ mg_bottom_mobile | append: 'px' }};
+      }
+
+  }
+
+  @media (min-width: 1200px) {
+      #new-accordion-{{ section.id }} {
+          padding-top: {{ mg_top_desktop | append: 'px' }};
+          padding-bottom: {{ mg_bottom_desktop | append: 'px' }};
+      }
+  }
+
+
+  @media (min-width: 768px) and (max-width: 1199px) {
+      #new-accordion-{{ section.id }} {
+          padding-top: {{ mg_top_tablet | append: 'px' }};
+          padding-bottom: {{ mg_bottom_tablet | append: 'px' }};
+      }
+  }
+
+  #new-accordion-{{ section.id }} .new-accordion-product {
+      padding: 10px;
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: center;
+      background-color: #f6f6f6;
+      border-radius: 5px;
+      margin: 10px 20px;
+  }
+
+  #new-accordion-{{ section.id }} .new-accordion-product img {
+      width: 15%;
+      border-radius: 5px;
+  }
+
+  #new-accordion-{{ section.id }} .new-accordion-product h3 {
+      width: 43%;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px;
+      margin-bottom: 0;
+      padding: 0 15px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2; /* 显示2行 */
+      -webkit-box-orient: vertical;
+  }
+
+  #new-accordion-{{ section.id }} .new-accordion-product a {
+      background-color: #07c160;
+      color: #fff;
+      border-radius: 25px;
+      border: 1px solid #07c160;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 14px;
+      font-weight: 400;
+  }
+
+  .new-accordion-frame {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: stretch;
+      gap: 1.25rem;
+      grid-column: 1/span 12;
+      width: 100%;
+      max-width: 1280px;
+  }
+
+  .new-accordion-box {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: stretch;
+      overflow: hidden;
+      border-radius: 10px;
+  }
+
+  .new-accordion-image {
+      cursor: pointer;
+      max-width: 180px;
+      height: 282px;
+      cursor: pointer;
+      border-radius: 12px;
+      overflow: hidden;
+  }
+
+  .new-accordion-image img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+  }
+
+  .new-accordion-content {
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-direction: column;
+      box-sizing: border-box;
+      height: 282px;
+      overflow: hidden;
+      background: #fff;
+      transition: width .7s ease;
+  }
+
+
+  .new-accordion-contents {
+      padding: 0 24px 0 24px;
+      min-height: 150px;
+  }
+
+  .new-accordion-content .title {
+      font-weight: 600;
+      font-size: 24px;
+      margin-bottom: 10px;
+  }
+
+  .new-accordion-content .des {
+      line-height: 1.2;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 6; /* 显示4行 */
+      -webkit-box-orient: vertical;
+  }
+
+  @media (min-width: 1024px) {
+      .new-accordion-frame {
+          overflow: hidden;
+      }
+
+      .new-accordion-content {
+          width: 0vw;
+          opacity: 0;
+          transform: translateX(-10%) translateZ(0px);
+      }
+
+      .new-accordion-box.active .new-accordion-image {
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+      }
+
+      .new-accordion-box.active .new-accordion-content {
+          width: 30vw;
+          opacity: 1;
+          transform: translateX(0%) translateZ(0px);
+      }
+
+      .new-accordion-content .title {
+          font-size: 18px;
+      }
+  }
+
+  .new-block-header .title {
+      color: #232323;
+      font-size: 32px;
+      margin-bottom: 32px;
+      line-height: 32px;
+  }
+
+  @media (max-width: 1024px) {
+      #new-accordion-{{ section.id }} .page-width {
+          padding-right: 0;
+      }
+
+      #new-accordion-{{ section.id }} .new-accordion-product {
+          flex-wrap: wrap;
+      }
+
+      #new-accordion-{{ section.id }} .new-accordion-product h3 {
+          width: 80%;
+      }
+
+      .new-accordion-content .des {
+          line-height: 1.2;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 4; /* 显示4行 */
+          -webkit-box-orient: vertical;
+      }
+
+      #new-accordion-{{ section.id }} .new-accordion-product a {
+          width: 100%;
+          margin-top: 10px;
+      }
+
+      #new-accordion-{{ section.id }} .new-accordion-image {
+          height: auto;
+      }
+
+      .new-block-header .title {
+          font-size: 24px;
+      }
+
+      .new-accordion-frame {
+          display: flex;
+          padding-bottom: 16px;
+          gap: 0;
+          overflow-y: auto;
+      }
+
+      .new-accordion-box {
+          flex-wrap: wrap;
+      }
+
+      .new-accordion-image {
+          width: 100%;
+          max-width: 100%;
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+      }
+
+      .new-scroll .new-accordion-box {
+          padding-left: 0;
+          padding-right: 0;
+          margin-right: 15px;
+          max-width: 400px !important;
+          -webkit-box-flex: 0;
+          -ms-flex: 0 0 85%;
+          flex: 0 0 85%;
+          scroll-snap-align: start;
+          scroll-snap-stop: always;
+          flex-direction: column;
+      }
+
+      .new-accordion-content {
+          height: auto;
+      }
+
+      .new-accordion-contents {
+          padding: 24px;
+          min-height: 150px;
+      }
+
+      .new-accordion-content .title {
+          font-size: 14px;
+          font-weight: 600;
+          margin-bottom: 10px;
+          line-height: 1.1;
+      }
+  }
+</style>
+<script>
+  let new_acc_box = document.querySelectorAll('.new-accordion-box');
+  let new_acc_img = document.querySelectorAll('.new-accordion-image');
+  let new_acc_content = document.querySelectorAll('.new-accordion-content');
+  for (let i = 0; i <= new_acc_box.length; i++) {
+    new_acc_box[i].index = i;
+    new_acc_box[i].onmouseover = function () {
+      //遍历清除每个button所有样式如果不清除则会重复
+      for (var i = 0; i < new_acc_box.length; i++) {
+        new_acc_box[i].className = 'new-accordion-box';
+        // new_acc_content[i].style.display = "none";
+      }
+      this.className = 'new-accordion-box active'; //设置点击的当前样式
+
+      // new_acc_img[this.index].style.display = "block";//this代表的是当前的button
+      // console.log(new_acc_img[this.index])
+    };
+  }
+</script>
+{% schema %}
+{
+  "name": "New Accordion",
+  "class": "index-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "container",
+      "label": "Layout:",
+      "default": "container",
+      "options": [
+        {
+          "value": "container",
+          "label": "Container"
+        },
+        {
+          "value": "1170",
+          "label": "Container 1170"
+        },
+        {
+          "value": "1770",
+          "label": "Container 1770"
+        },
+        {
+          "value": "fullwidth",
+          "label": "Full Width"
+        }
+      ]
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "header",
+      "content": "Margin Bottom:"
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom_mb",
+      "label": "Mobile",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom_tab",
+      "label": "Tablet",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "label": "Desktop",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Margin Top"
+    },
+    {
+      "type": "range",
+      "id": "mg_top_mobile",
+      "label": "Mobile",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "mg_top_tablet",
+      "label": "Tablet",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "mg_top_desktop",
+      "label": "Desktop",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 0
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "des",
+      "label": "Description"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "accordion",
+      "name": "Accordion",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Select Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_mo",
+          "label": "Select Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "header",
+          "content": "product"
+        },
+        {
+          "type": "product",
+          "id": "myproduct",
+          "label": "product"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "New Accordion"
+    }
+  ]
+}
+{% endschema %}

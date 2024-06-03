@@ -1,0 +1,140 @@
+{{ 'section-coverage-resources.css' | asset_url | stylesheet_tag }}
+{% liquid
+  assign secid = section.id | split: '__'
+  assign secidlast = secid[1] | replace: '-', '_'
+%}
+<div class="contain-index coverage-resourcesmb">
+  <div class="coverage-resources-outbox">
+    {% if section.settings.title != blank %}
+      <div class="coverage-resources-title animate-ele common-title">{{ section.settings.title }}</div>
+    {% endif %}
+
+    <div class="coverage-resources_elebox animate-ele common-swiper-container">
+      <div class="coverage-resources-{{ secidlast }} swiper">
+        <div class="swiper-wrapper">
+          {% for block in section.blocks %}
+            <div class="swiper-slide">
+              <div class="coverage-resources_item">
+                {% if block.settings.image %}
+                  <img src="{{ block.settings.image | img_url:'master' }}" alt=" ">
+                {% endif %}
+                <div class="coverage-resources-itemtext">
+                  {% if block.settings.title != blank %}
+                    <div class="coverage-resources-itemtitle">{{ block.settings.title }}</div>
+                  {% endif %}
+                  {% if block.settings.content != blank %}
+                    <div class="coverage-resources-itemcon">
+                      {{ block.settings.content }}
+                    </div>
+                  {% endif %}
+                  {% if block.settings.url != blank %}
+                    <a class="coverage-resources-btn" href="{{ block.settings.url }}">{{ block.settings.link_text }}</a>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="swiper-scrollbar swiper-scrollbar-{{ secidlast }}"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(function(){
+    function sameHeight(selector) {
+      let maxheight = 0;
+      $(selector).each(function () {
+        if (maxheight < $(this).height()) maxheight = $(this).height();
+      });
+      $(selector).css({ height: maxheight + 'px' });
+    }
+
+    var coverage_resources_{{secidlast}} = new Swiper ('.coverage-resources-{{ secidlast }}', {
+      slidesPerView : 2,
+      spaceBetween: 15,
+      observer: true,  //开启动态检查器，监测swiper和slide
+      observeParents: true,
+      {% comment %} autoHeight:true, {% endcomment %}
+      scrollbar: {
+        el: '.swiper-scrollbar-{{ secidlast }}',
+        dragSize:89
+      },
+      breakpoints: {
+        10: {
+            slidesPerView : 1.5,
+            spaceBetween: 15,
+        },
+        550: {
+            slidesPerView : 2,
+            spaceBetween: 20,
+        },
+        769: {
+            slidesPerView : 3,
+            spaceBetween: 30,
+        }
+      }
+    });
+
+    // item 统一高度 
+    sameHeight('.coverage-resources-itemcon');
+    $(window).resize(function(){
+      sameHeight('.coverage-resources-itemcon');
+    });
+
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Coverage Resources",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "title"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "block",
+      "name": "block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "title"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "content"
+        },
+        {
+          "type": "text",
+          "id": "link_text",
+          "label": "Link Text",
+          "default": "Continue reading"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Text Url"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Coverage Resources",
+      "category": "HO-layout"
+    }
+  ]
+}
+{% endschema %}

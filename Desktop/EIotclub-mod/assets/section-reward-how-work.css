@@ -1,0 +1,190 @@
+.reward-program-threebar {
+    padding-top: 6vw
+}
+
+.reward-program-threebar .reward-program-threebar-boxs {
+    padding: 2vw 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 5vw;
+}
+
+.reward-program-threebar-boxs .reward-program-threebar-item {
+    position: relative;
+    flex: 0 1 31%;
+    background: #DCF3EB;
+    padding: 15px 4vw 30px 30px;
+    border-radius: 20px;
+}
+
+.reward-program-threebartopimg {
+    display: flex;
+    align-items: center;
+}
+
+.reward-program-threebartopimg svg {
+    width: 5vw;
+    vertical-align: middle;
+    height: auto;
+}
+
+.reward-program-threebartopimg span {
+    vertical-align: middle;
+    margin-left: 1vw;
+    font-size: 1.3vw;
+    font-weight: bold;
+}
+
+.reward-program-threebar-subtitle {
+    line-height: 1.6;
+}
+
+.reward-work-btn {
+    text-decoration: underline;
+    font-weight: 700;
+    margin-top: 10px;
+    padding-top: 2px;
+    display: inline-block;
+}
+
+.reward-program-threebar-subtitle,
+.reward-work-btn {
+    font-size: 1vw;
+}
+
+@media (min-width: 1921px) {
+    .reward-program-threebartopimg svg {
+        width: 90px;
+    }
+
+    .reward-program-threebartopimg span {
+        font-size: 24px;
+        margin-left: 20px;
+    }
+
+    .reward-program-threebar-subtitle,
+    .reward-work-btn {
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width: 1600px) {
+    .reward-program-threebar-boxs .reward-program-threebar-item {
+        padding: 15px 7vw 30px 30px;
+    }
+}
+
+@media (max-width: 1450px) {
+    .reward-program-threebar-boxs .reward-program-threebar-item {
+        padding: 15px 6vw 30px 30px;
+    }
+
+    .reward-program-threebar-subtitle {
+        font-size: 1vw;
+    }
+}
+
+@media (max-width: 1280px) {
+    .reward-program-threebar-boxs .reward-program-threebar-item {
+        padding: 15px 6vw 30px 30px;
+    }
+
+    .reward-program-threebar-subtitle,
+    .reward-work-btn {
+        font-size: 1.2vw;
+    }
+}
+
+@media only screen and (max-width: 790px) {
+    .reward-program-threebar .reward-program-threebar-boxs {
+        flex-direction: column;
+    }
+
+    .reward-program-threebar .reward-program-threebar-boxs .reward-program-threebar-item .reward-program-threebartopimg .mb-reward-program-threebar-subtitle {
+        margin-left: 2vw;
+        width: 70%;
+        font-size: 3vw
+    }
+
+    .reward-program-threebartopimg span {
+        vertical-align: top;
+        margin-left: 2vw;
+    }
+
+    .reward-program-threebartopimg svg {
+        width: 17vw;
+    }
+
+    .reward-program-threebartopimg {
+        margin-left: -10px;
+    }
+
+}
+
+@media only screen and (max-width: 790px)and (min-width: 591px) {
+    .reward-program-threebar .reward-program-threebar-boxs .reward-program-threebar-item .reward-program-threebartopimg svg {
+        width: 90px;
+    }
+
+    .reward-program-threebar-boxs .reward-program-threebar-item {
+        margin-bottom: 20px;
+    }
+
+    .reward-program-threebartopimg span {
+        font-size: 2.8vw;
+    }
+
+    .reward-program-threebar-subtitle,
+    .reward-work-btn {
+        font-size: 2.4vw;
+    }
+
+    .reward-program-threebar-boxs .reward-program-threebar-item {
+        padding: 15px 6vw 20px 30px;
+    }
+}
+
+@media only screen and (max-width: 590px) {
+    .reward-program-threebar-boxs .reward-program-threebar-item {
+        margin-bottom: 15px;
+        padding: 10px 4vw 20px 25px;
+    }
+
+    .reward-program-threebar-subtitle,
+    .reward-work-btn {
+        font-size: 3.2vw;
+    }
+
+    .reward-program-threebartopimg span {
+        font-size: 4.4vw;
+    }
+
+    .reward-program-threebartopimg svg {
+        width: 15vw;
+    }
+
+    .reward-program-threebar {
+        padding-top: 50px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .reward-program-threebar-subtitle,
+    .reward-work-btn {
+        font-size: 3.7vw;
+    }
+
+    .reward-program-threebartopimg span {
+        font-size: 4.8vw;
+    }
+
+    .reward-program-threebartopimg svg {
+        width: 16vw;
+    }
+
+    .reward-program-threebar {
+        padding-top: 35px;
+    }
+}

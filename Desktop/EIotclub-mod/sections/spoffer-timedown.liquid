@@ -1,0 +1,376 @@
+{% liquid
+  assign secid = section.id | split:"__" 
+  assign secidlast = secid[1] | replace: "-","_"
+%}
+<style>
+  #spcountdown-{{ secidlast }}{
+    {% if section.settings.bg_image %}
+      background: url("{{ section.settings.bg_image | image_url }}") no-repeat;
+      background-size: 100% auto;
+      background-position: center top;
+    {% endif %}
+  }
+
+ {% if section.settings.bg_imagemb %}
+  @media (max-width:768px){
+     #spcountdown-{{ secidlast }}{
+      background-image: url("{{ section.settings.bg_imagemb | image_url }}");
+      background-position: top;
+    background-size: auto;
+  } 
+  }
+ {% endif %}
+    #spcountdown-{{ secidlast }} .divtime-tem{
+    background: url("{{ section.settings.datebg | image_url }}") no-repeat;
+  }
+</style>
+
+<div id="spcountdown-{{ secidlast }}">
+<div class="spcountdown-outbox">
+   
+  <div class="contain-index">
+    {% if section.settings.toptitle != blank %}
+        <div class="spcountdown-toptitle animate-ele">{{ section.settings.toptitle }}</div> 
+        {% endif %}    
+       {%if section.settings.date%}
+      <div id="divtime" class="animate-ele">
+        <div class="divtime-tem"><span id="times_day02"></span><div class="divtime-temlabel">Days</div></div><span class="divtime-tempo"><img alt src="https://cdn.shopify.com/s/files/1/0558/0708/2629/files/pointer.png?v=1716605628"/></span>
+        <div class="divtime-tem"><span id="times_hour02"></span><div class="divtime-temlabel">Hours</div></div><span class="divtime-tempo"><img alt src="https://cdn.shopify.com/s/files/1/0558/0708/2629/files/pointer.png?v=1716605628"/></span>
+        <div class="divtime-tem"><span id="times_minute02"></span><div class="divtime-temlabel">Minutes</div></div><span class="divtime-tempo"><img alt src="https://cdn.shopify.com/s/files/1/0558/0708/2629/files/pointer.png?v=1716605628"/></span>
+        <div class="divtime-tem"><span id="second02"></span><div class="divtime-temlabel">Seconds</div></div>
+      </div>
+      {%endif%}
+        {% if section.settings.title != blank %}
+        <div class="spcountdown-title animate-ele">{{ section.settings.title }}</div> 
+        {% endif %}
+    
+        {% if section.settings.content != blank %}
+        <div class="spcountdown-con animate-ele">{{ section.settings.content }}</div> 
+        {% endif %}
+    
+    <div class="spcountdown-content animate-ele">
+
+    <div class="spcountdown-probox">  
+       {% for block in section.blocks %} 
+       {% liquid
+            assign product = all_products[block.settings.product]
+            assign current_variant = product.selected_or_first_available_variant
+          assign salelastpro = block.settings.totalpro | minus: block.settings.soldpro
+          %}
+       <div class="spcountdown-proitem{% if salelastpro == 0 %} sold{% else %} active{% endif %}">
+    
+         <div class="spcountdow-itemtext">
+             
+           {% if block.settings.save != blank %}
+             <span class="spcountdown-prosave" style="{% if salelastpro == 0 %}background:#DDDDDD{% else %}background:{{ block.settings.savecolor }}{% endif %}">SAVE<span>{{ block.settings.save }}</span></span>
+            {% endif %}
+            <div class="spcountdow-itleft">
+              {% if block.settings.slogan != blank %}
+             <div class="spcountdown-proslogan">{{ block.settings.slogan }}</div> 
+            {% endif %}
+          {% if block.settings.title != blank %}
+             <div class="spcountdown-protitle">{{ block.settings.title }}</div> 
+            {% endif %}
+         {% if block.settings.content != blank %}
+             <div class="spcountdown-procon"> 
+            {% if block.settings.image %}
+            <a href="{{ product.url }}"><img src="{{ block.settings.image | img_url:'master' }}" /></a>
+            {% else %}
+             <a href="{{ product.url }}"><img src="{{ product.featured_image | img_url:'master' }}" /></a>
+            {% endif %}
+             {{ block.settings.content }}</div> 
+            {% endif %}
+          {% if block.settings.soldpro != blank %}
+            <div class="spcountdown-jindutiaobox">
+            
+              <div class="spcountdown-rangebox"><div class="spcountdown-rangeitem" style="width:{{   salelastpro | times: 100 | divided_by: block.settings.totalpro }}%"></div></div>
+              {% if salelastpro != 0 %}<span>{{ block.settings.soldpro }}/{{ block.settings.totalpro }} pcs sold</span>{% else %}<span class="sp-soldout">Sold Out</span>{% endif %}
+            </div> 
+           {% endif %}
+            <div class="spcountdown-proitem-price"><span class="spcountdown-proitem-original">{{ product.price | money }}</span>{% if product.price_varies %}<span class="spcountdown-proitem-old">{{ product.compare_at_price | money }}</span>{% endif %}</div>
+            {% if block.settings.code %}
+             <div class="spcountdow-dicode"><span class="spcountdow-dicodemub">Code:<span>{{block.settings.code}}</span></span><span class="spcountdow-dicodcopy">COPY</span></div>
+           {% endif %}
+            </div> 
+         <div class="spcountdow-itright">
+            <div class="spcountdown-proitem-img">
+            {% if block.settings.image %}
+            <a href="{{ product.url }}"><img src="{{ block.settings.image | img_url:'master' }}" /></a>
+            {% else %}
+             <a href="{{ product.url }}"><img src="{{ product.featured_image | img_url:'master' }}" /></a>
+            {% endif %}
+          </div>  
+           
+           {% if block.settings.soldpro != block.settings.totalpro %}
+{% assign idvalue = block.id | prepend:'spofdevform' %}
+{% form 'product', product, id: idvalue, class: 'product-single__form' %}
+
+    <div class="payment-buttons">
+    <span class="spoffer-ubybutton spoffer-ubybutton04">Shop Now</span>     
+    </div>
+    
+      <select name="id" data-product-select class="product-single__variants no-js">
+        {%- for variant in product.variants -%}
+          {% if variant.available %}
+            <option {% if variant == product.selected_or_first_available_variant %}
+              selected="selected" {% endif %}
+              value="{{ variant.id }}">
+              {{ variant.title }} - {{ variant.price | money_with_currency }}
+            </option>
+          {% else %}
+            <option disabled="disabled">
+              {{ variant.title }} - {{ 'products.product.sold_out' | t }}
+            </option>
+          {% endif %}
+        {%- endfor -%}
+      </select>
+    {% endform %} 
+       <script>
+   if(shopify_features_script){
+   }else{let shopify_features_script = document.querySelector("script[id='shopify-features']"); let shopify_features_json = JSON.parse(shopify_features_script.innerHTML);}
+         
+  
+ 
+  var checkout_headers = {
+  'Accept': 'application/json',
+  'Content-Type': 'application/json',
+  'authorization': 'Basic ' + btoa(shopify_features_json.accessToken)
+  };
+  $(".spoffer-ubybutton04").click(function(){
+
+  let variant_id={{current_variant.id}};
+
+  let checkout_json={
+  "checkout": {
+  "line_items": [
+  {
+  "variant_id": variant_id,
+  "quantity": 1
+  }
+  ],
+  "secret": true,
+  "wallet_name": "Checkout",
+  "is_upstream_button": false,
+  "page_type": "product",
+  "has_selling_plans": false,
+  "presentment_currency": "{{ shop.currency }}",
+  "country": "{{shop.locale|upcase}}"
+  }
+  }
+  let data=JSON.stringify(checkout_json);
+  fetch("/wallets/checkouts.json",
+  {
+  method: 'POST',
+  headers: checkout_headers,
+  body: data
+  }
+  ).then(function(response) {
+  if (response.ok) {
+  return response.text();
+  }
+  }).then(function(strj) {
+  let checkout_json = JSON.parse(strj);
+  location.href = checkout_json.checkout.web_url;
+  }).catch(function(err) {
+  });
+  })
+</script>    
+           {% else %}
+            <a href="{{ product.url }}" class="spoffer-ubybutton04">Learn More</a>      
+           {% endif %}
+         </div>
+           
+          
+ 
+
+         </div>
+         
+         </div>
+          
+     {% endfor %}
+    </div>
+  </div>
+
+      
+    </div> 
+    
+
+</div>
+</div>
+   <script>
+         $(()=>{
+             $('.spoffer-dicodcopy').click(function(){
+                let text = $(this).siblings('.spofferright-dicodemub').find('span').text();
+                navigator.clipboard.writeText(text);
+               $(this).html('Done');
+               // 设置计时器
+                setTimeout(() => {
+                    $(this).html('COPY');
+                }, 2000);
+              })
+         })
+       </script>
+       {% if section.settings.date %}
+       <script type="text/javascript"  language="javascript">
+  var time_day02 = document.getElementById("times_day02");
+  var time_hour02 = document.getElementById("times_hour02");
+  var time_minute02 = document.getElementById("times_minute02");
+  var time_second02 = document.getElementById("second02");
+  var time_end02 = new Date({{ section.settings.date }}); 
+  time_end02 = time_end02.getTime();
+          var nowTime = new Date();
+    var zone = nowTime.getTimezoneOffset()/60;
+    if(zone){
+    time_end02 +=zone*60*60*1000;
+    }
+
+  setInterval("count_down02()",1000);
+  
+
+   
+  function count_down02(){ 
+    var time_now02 = new Date();  
+    time_now02 = time_now02.getTime();
+    var time_distance02 = time_end02 - time_now02;  
+    var int_day02, int_hour02, int_minute02, int_second02; 
+    if(time_distance02 < 0){
+      {% comment %} var tgeshu = -parseInt(time_distance02/(8*24*60*60*1000));
+      time_end02=time_end02+1*24*60*60*1000*(tgeshu+1); {% endcomment %}
+      time_end02 = time_now02 + 1*24*60*60*1000;
+    }
+    int_day02 = Math.floor(time_distance02/86400000)
+    time_distance02 -= int_day02 * 86400000; 
+
+    int_hour02 = Math.floor(time_distance02/3600000) 
+    time_distance02 -= int_hour02 * 3600000;  
+
+    int_minute02 = Math.floor(time_distance02/60000)    
+    time_distance02 -= int_minute02 * 60000; 
+
+    int_second02 = Math.floor(time_distance02/1000)    
+    if(int_day02 < 10) 
+      int_day02 = "0" + int_day02;  
+    if(int_hour02 < 10) 
+      int_hour02 = "0" + int_hour02;    
+
+    if(int_minute02 < 10)    
+      int_minute02 = "0" + int_minute02;  
+
+    if(int_second02 < 10) 
+      int_second02 = "0" + int_second02;        
+
+    time_day02.innerHTML = int_day02;
+    time_hour02.innerHTML = int_hour02; 
+    time_minute02.innerHTML = int_minute02; 
+    time_second02.innerHTML = int_second02;           
+  }
+
+</script>
+{% endif %}
+   <script>
+         $(()=>{
+             $('.spcountdow-dicodcopy').click(function(){
+                let text = $(this).siblings('.spcountdow-dicodemub').find('span').text();
+                navigator.clipboard.writeText(text);
+               $(this).html('Done');
+               // 设置计时器
+                setTimeout(() => {
+                    $(this).html('COPY');
+                }, 2000);
+              })
+         })
+       </script>
+{% schema %}
+  {
+   "name": "Deals Countdown",
+  "settings": [
+     {
+        "type": "text",
+        "id": "toptitle",
+        "label": "toptitle"
+      },{
+        "type": "text",
+        "id": "date",
+        "label": "date?"
+      },{
+        "type": "image_picker",
+        "id": "datebg",
+        "label": "date bgcolor"
+      },{
+        "type": "text",
+        "id": "title",
+        "label": "title"
+      },{
+        "type": "richtext",
+        "id": "content",
+        "label": "content"
+      },
+    {
+      "type": "image_picker",
+      "id": "bg_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_imagemb",
+      "label": "Background Image(mobile)"
+    }
+    ],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "block",
+        "settings": [
+       {
+        "type": "text",
+        "id": "save",
+        "label": "save"
+      },{
+        "type": "color",
+        "id": "savecolor",
+        "label": "save bgcolor",
+        "default": "#07C160"
+      },{
+        "type": "product",
+        "id": "product",
+        "label": "product"
+      },{
+        "type": "text",
+        "id": "slogan",
+        "label": "slogan"
+      },{
+        "type": "text",
+        "id": "title",
+        "label": "title"
+      },{
+        "type": "richtext",
+        "id": "content",
+        "label": "content"
+      },{
+        "type": "number",
+        "id": "soldpro",
+        "label": "sold product"
+      },{
+        "type": "number",
+        "id": "totalpro",
+        "label": "total products"
+      },{
+        "type": "image_picker",
+        "id": "image",
+        "label": "image"
+      },{
+        "type": "text",
+        "id": "code",
+        "label": "code"
+      }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Deals Countdown",
+        "category": "HO-layout"
+      }
+    ]
+  }
+{% endschema %}

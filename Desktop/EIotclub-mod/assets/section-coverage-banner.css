@@ -1,0 +1,149 @@
+.coverage-banner-wrapper {
+    position: relative;
+}
+
+.coverage-banner-box {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+.coverage-banner-text {
+    width: 28vw;
+}
+
+.coverage-banner-wrapper img {
+    vertical-align: top;
+    width: 100%;
+}
+
+.coverage-banner-title {
+    font-size: 2.5vw;
+    font-weight: bold;
+    margin-bottom: 1vw;
+}
+
+.coverage-banner-content {
+    font-size: 0.9375vw;
+    line-height: 1.5;
+}
+
+.coverage-banner-content p {
+    margin-bottom: 0
+}
+
+.coverage-banner-text .bthho {
+    padding: 0.6vw 2vw;
+    margin-top: 1.3vw;
+    background: #282828;
+    color: #fff;
+}
+
+.coverage-banner-text .bthho:hover{
+    background: var(--colorThemeCustom);
+    color: #282828;
+}
+.coverage-banner-text .bthho:before {
+    background: var(--colorThemeCustom);
+    display: none;
+}
+
+.coverage-banner-text {
+    margin-left: 39%;
+}
+
+
+@media (max-width: 1550px) and (min-width: 769px) {
+    .coverage-banner-text {
+        margin-left: 41%;
+    }
+}
+
+@media (max-width: 1550px) {
+    .coverage-banner-text .bthho {
+        padding: 0.8vw 2vw;
+    }
+
+    .coverage-banner-text {
+        width: 29vw;
+    }
+
+    .coverage-banner-content {
+        font-size: 1vw;
+    }
+}
+
+@media (max-width: 1199px) {
+    .coverage-banner-text {
+        width: 32vw;
+    }
+
+    .coverage-banner-title {
+        font-size: 2.5vw;
+    }
+
+    .coverage-banner-content {
+        font-size: 1.1vw;
+    }
+}
+
+@media (max-width: 993px) {
+    .coverage-banner-text {
+        width: 36vw;
+    }
+
+    .coverage-banner-title {
+        font-size: 2.8vw;
+    }
+
+    .coverage-banner-content {
+        font-size: 1.3vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .coverage-banner-box {
+        width: 90%;
+        top: 8%;
+        left: 5%;
+        transform: translateY(0%);
+    }
+
+    .coverage-banner-text {
+        width: 100%;
+        margin-left:0;
+    }
+
+    .coverage-banner-title {
+        font-size: 5.5vw;
+    }
+
+    .coverage-banner-content {
+        font-size: 4vw;
+    }
+
+    .coverage-banner-text .bthho {
+        padding: 3vw 8vw;
+        font-size: 4vw;
+        font-weight: 400;
+    }
+}
+
+@media (max-width: 550px) {
+    .coverage-banner-box {
+        top: 5.5%;
+    }
+
+    .coverage-banner-title {
+        font-size: 6.3vw;
+        line-height: 1.5;
+        margin-bottom: 3vw;
+    }
+
+    .coverage-banner-content {
+        font-size: 3.7vw;
+        margin-bottom: 3vw;
+    }
+}

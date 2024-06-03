@@ -1,0 +1,31 @@
+@media (min-width:750px) {
+    .lg\:hidden {
+        display: none !important;
+    }
+}
+
+@media (min-width:590px) and (max-width:749px) {
+    .md\:hidden {
+        display: none !important;
+    }
+
+}
+
+@media (max-width:589px) {
+    .sm\:hidden {
+        display: none !important;
+    }
+}
+
+
+.js-drawer-open .main-content:after {
+    z-index: 1000;
+}
+.flex-1{
+    flex:1;
+}
+
+.cart__discount, .cart__savings {
+    font-weight: 600;
+    color: #07c160;
+}

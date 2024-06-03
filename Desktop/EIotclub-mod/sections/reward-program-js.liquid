@@ -1,0 +1,100 @@
+<script>
+{% comment %} function sameHeight(selector) {
+    let maxheight = 0;
+    $(selector).each(function () {
+      if (maxheight < $(this).height()) maxheight = $(this).height();
+    });
+    $(selector).css({ height: maxheight + 'px' });
+  }
+   {% endcomment %}
+  $(function () {
+    // reward coupon section点击每个item的rules出现弹窗
+    $('.reward-coupon-section .rules-link').click(function () {
+      let link_index = $(this).data('index');
+      $('.reward-coupon-section .rules-notice-bg').addClass('active');
+      $('.reward-coupon-section .rules-notice-bg .rules-notice-box').removeClass('active');
+      $(`.reward-coupon-section .rules-notice-bg .rules-notice-box[data-index=${link_index}]`).addClass('active');
+    });
+
+    $('.reward-coupon-section .rules-close-btn,.rules-notice-bg').click(function () {
+      $('.reward-coupon-section .rules-notice-bg').removeClass('active');
+      $('.reward-coupon-section .rules-notice-bg .rules-notice-box').removeClass('active');
+    });
+
+    // reward product section点击每个item的rules出现弹窗 
+    $('.reward-product-section .rules-link').click(function () {
+      let link_index = $(this).data('index');
+      $('.reward-product-section .rules-notice-bg').addClass('active');
+      $('.reward-product-section .rules-notice-bg .rules-notice-box').removeClass('active');
+      $(`.reward-product-section .rules-notice-bg .rules-notice-box[data-index=${link_index}]`).addClass('active');
+    });
+
+    $('.reward-product-section .rules-close-btn,.rules-notice-bg').click(function () {
+      $('.reward-product-section .rules-notice-bg').removeClass('active');
+      $('.reward-product-section .rules-notice-bg .rules-notice-box').removeClass('active');
+    });
+    
+    // item 统一高度 
+    {% comment %} sameHeight('.reward-product-section .reward-coupon-product-box');
+    $(window).resize(function(){
+      sameHeight('.reward-product-section .reward-coupon-product-box');
+    }); {% endcomment %}
+  
+    // 页面导航条点击滚动到对应模块 
+    $(".reward-nav-item").click(function(){
+      $(".reward-nav-item").removeClass('active');
+      $(this).addClass('active');
+      let goto = $(this).data("goto");
+      let header_fix_height = 0;
+      if($('.StickyHeaderWrap').hasClass('header-fix')){
+          header_fix_height = $('.header-fix').height();
+      }
+      $("html, body").animate({
+          scrollTop: $(`.${goto}`).offset().top - header_fix_height + "px"
+      });
+
+      if($(window).width() < 769){
+          //父盒子活动距离
+          let scrollLeft = $(this).parent().scrollLeft();
+          let item_offsetLeft = $(this).offset().left;
+          let item_width = $(this).outerWidth();
+          let index= $(".reward-nav-item").index(this)
+          if(index<1){
+            $(this).parent().scrollLeft(0)
+          }else if (item_offsetLeft<0){
+            // 靠左时，计算向左的偏移量
+            $(this).parent().scrollLeft(scrollLeft+item_offsetLeft)
+          }else{
+            // 靠右时，计算右边被隐藏的盒子宽度
+            $(this).parent().scrollLeft(scrollLeft+(item_width-($(window).width()-item_offsetLeft)))
+          }
+        }
+    });
+
+    // 往下滚动冻结页面导航条在顶部
+      let nav_offset_top = $(".reward-nav-div").offset().top;
+      $(window).scroll(function(){
+        let scroll_top = $(window).scrollTop();
+        if(scroll_top > nav_offset_top){
+          $(".reward-nav-div").addClass("fixed");
+          $("#SiteHeader").removeClass("site-header--stuck site-header--opening");
+        }else{
+          $(".reward-nav-div").removeClass("fixed");
+          $("#SiteHeader").removeClass("site-header--stuck site-header--opening");
+        }
+      });
+
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Reward Js",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Reward Js"
+    }
+  ]
+}
+{% endschema %}

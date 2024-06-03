@@ -1,0 +1,207 @@
+<link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+<script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+{% liquid
+  assign secid = section.id | split:"__" 
+  assign secidlast = secid[1] | replace: "-","_"
+%}
+<div class="indexvideoho-wrapper" id="indexvideoho-{{ secidlast }}" >
+  {% if section.settings.image  %}
+      <div class="indexvideoho-img"><img class="{% if section.settings.imagemb  %}hide-mb{% endif %}"  src="{{ section.settings.image | img_url:'master' }}" alt="" /></div>
+     {% endif %}
+    {% if section.settings.imagemb  %}
+      <div class="indexvideoho-img"><img class="hide-pc"  src="{{ section.settings.imagemb | img_url:'master' }}"  alt="" /></div>
+   {% endif %}
+    <div class="indexvideoho-text">
+    {% if section.settings.title != blank %}
+    <div class="indexvideoho-title animate-ele">{{ section.settings.title }}</div>
+    {% endif %}
+    {% if section.settings.content != blank %}
+    <div class="indexvideoho-content animate-ele">{{ section.settings.content }}</div>
+    {% endif %}
+    {% if section.settings.btn != blank %}
+    <span class="indexvideoho-btn animate-ele">{{ section.settings.btn }} <img alt="{{ section.settings.btn }}" src="https://cdn.shopify.com/s/files/1/0558/0708/2629/files/sxarrow.png?v=1709086748"/></span>
+    {% endif %} 
+    </div>
+</div>
+
+ <div class="indexvideoho-outbox"> 
+   
+    <div class="indexvideoho-inbox"> 
+      <span class="indexvideoho-del">X</span>
+   {% if section.settings.youtubeurl != blank %}     
+    <div id="player-{{section.id|replace:'-','_'}}" class="hide-mb" data-plyr-provider="youtube" data-plyr-embed-id="{{section.settings.youtubeurl.id }}"></div>
+      <div id="playermb-{{section.id|replace:'-','_'}}" class="hide-pc" data-plyr-provider="youtube" data-plyr-embed-id="{{section.settings.youtubeurlmb.id }}"></div>
+   {% else %}
+     <video  id="player-{{section.id|replace:'-','_'}}"  class="hide-mb"   playsinline="" data-video-element="" data-html5-video=""   draggable="true"> <source src="{{section.settings.video_mp4url}}" type="video/mp4"></video>
+     <video  id="playermb-{{section.id|replace:'-','_'}}"  class="hide-pc"   playsinline="" data-video-element="" data-html5-video=""   draggable="true"> <source src="{{section.settings.video04url_mb}}" type="video/mp4"></video>
+    {% endif %}
+   </div>    
+ </div> 
+   {% if section.settings.youtubeurl != blank or section.settings.video_mp4url != blank %}
+      <script>
+        $(function(){
+
+        if($(window).width() > 768){
+        setTimeout(function(){
+        // This is the bare minimum JavaScript. You can opt to pass no arguments to setup.
+  const player_{{section.id|replace:'-','_'}} = new Plyr('#player-{{section.id|replace:'-','_'}}',{
+    muted: true,
+    autoplay: false,
+    controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'captions', 'settings', 'pip', 'airplay', 'fullscreen'], 
+      loop: {
+        active: true
+      },
+      playsinline:true,
+      youtube:{
+        autoplay:0,
+        muted:1,
+      },
+      tooltips:{
+        controls: true, 
+        seek: true
+      },
+      // ratio:"1920:980",
+      quality: 
+        { default: 1080, options: [4320, 2880, 2160, 1440, 1080, 720, 576, 480, 360, 240] }
+  });
+  
+  // Expose
+  window.player_{{section.id|replace:'-','_'}} = player_{{section.id|replace:'-','_'}}; 
+        player_{{section.id|replace:'-','_'}}.on('ready', (event) => {
+           player_{{section.id|replace:'-','_'}}.muted=true;
+          // player_{{section.id|replace:'-','_'}}.forward(0);
+           // player_{{section.id|replace:'-','_'}}.pause();
+      })      
+},1000);
+
+       $(function(){
+         $("body").bind("click",function(evt){ 
+  if($(evt.target).closest(".indexvideoho-inbox").length==0&&$(evt.target).closest(".indexvideoho-btn").length==0)
+  { 
+   $(".indexvideoho-outbox").hide();
+    player_{{section.id|replace:'-','_'}}.pause();
+  } 
+}); 
+       })
+        $(".indexvideoho-del").click(function(){
+         $(".indexvideoho-outbox").hide(); 
+          player_{{section.id|replace:'-','_'}}.forward(0);
+          player_{{section.id|replace:'-','_'}}.pause();
+        })
+          $(".indexvideoho-btn").click(function(){
+         $(".indexvideoho-outbox").fadeIn(500); 
+          player_{{section.id|replace:'-','_'}}.play();
+        })
+          
+}else{
+  setTimeout(function(){
+    // This is the bare minimum JavaScript. You can opt to pass no arguments to setup.
+const playermb_{{section.id|replace:'-','_'}} = new Plyr('#playermb-{{section.id|replace:'-','_'}}',{
+muted: true,
+autoplay: false,
+controls: false, 
+  loop: {
+    active: true
+  },
+  playsinline:true,
+  youtube:{
+    autoplay:0,
+    muted:1,
+  },
+  tooltips:{
+    controls: false, 
+    seek: true
+  },
+  // ratio:"750:1240",
+  quality: 
+    { default: 1080, options: [4320, 2880, 2160, 1440, 1080, 720, 576, 480, 360, 240] }
+});
+
+// Expose
+window.playermb_{{section.id|replace:'-','_'}} = playermb_{{section.id|replace:'-','_'}};
+           playermb_{{section.id|replace:'-','_'}}.on('ready', (event) => {
+           playermb_{{section.id|replace:'-','_'}}.muted=true;
+           // playermb_{{section.id|replace:'-','_'}}.play();
+      }) 
+},1000);
+
+
+       $(function(){
+         $("body").bind("click",function(evt){ 
+  if($(evt.target).closest(".indexvideoho-inbox").length==0&&$(evt.target).closest(".indexvideoho-btn").length==0)
+  { 
+   $(".indexvideoho-outbox").hide();
+    playermb_{{section.id|replace:'-','_'}}.pause();
+  } 
+}); 
+       })
+        $(".indexvideoho-del").click(function(){
+         $(".indexvideoho-outbox").hide(); 
+          playermb_{{section.id|replace:'-','_'}}.pause();
+        })
+           $(".indexvideoho-btn").click(function(){
+         $(".indexvideoho-outbox").fadeIn(500); 
+          playermb_{{section.id|replace:'-','_'}}.play();
+        })   
+
+}
+});
+ </script>
+
+
+     
+{% endif %}
+{% schema %}
+  {
+    "name": "Index Video",
+    "settings": [
+        {
+        "type": "image_picker",
+        "id": "image",
+        "label": "image"
+         },{
+        "type": "image_picker",
+        "id": "imagemb",
+        "label": "image(mobile)"
+         },{
+        "type": "text",
+        "id": "title",
+        "label": "title"
+         },{
+            "type": "richtext",
+            "id": "content",
+            "label": "content"
+          },{
+            "type": "text",
+            "id": "btn",
+            "label": "button"
+          },{
+            "type": "video_url",
+            "id": "youtubeurl",
+            "label": "youtube link",
+            "accept": ["youtube"]
+          },{
+            "type": "video_url",
+            "id": "youtubeurlmb",
+            "label": "youtube link_mb",
+            "accept": ["youtube"]
+          },{
+        "type": "text",
+        "id": "video_mp4url",
+        "label": "video_mp4url"
+         },{
+          "type": "text",
+          "id": "video04url_mb",
+          "label": "video04url_mb"
+           }
+    ],
+    "presets": [
+      {
+        "name": "Index Video",
+        "category": "Ho-Advance"
+ 
+      }
+    ]
+  }
+{% endschema %}
+

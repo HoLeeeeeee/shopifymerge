@@ -1,0 +1,219 @@
+{%- liquid
+    assign swatch_file_extension = 'png'
+    assign option_index = forloop.index
+  -%}
+  
+  {%- capture size_chart_title -%}
+    {{ 'products.general.size_chart' | t }} <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-size-chart" viewBox="0 0 64 64"><defs><style>.a{fill:none;stroke:#000;stroke-width:2px}</style></defs><path class="a" d="M22.39 33.53c-7.46 0-13.5-3.9-13.5-8.72s6-8.72 13.5-8.72 13.5 3.9 13.5 8.72a12 12 0 0 1-.22 1.73"/><ellipse cx="22.39" cy="24.81" rx="3.28" ry="2.12"/><path class="a" d="M8.89 24.81V38.5c0 7.9 6.4 9.41 14.3 9.41h31.92V33.53H22.39M46.78 33.53v7.44M38.65 33.53v7.44M30.52 33.53v7.44M22.39 33.53v7.44"/></svg>
+  {%- endcapture -%}
+  
+  {%- liquid
+    assign is_size = false
+    assign size_trigger = 'products.general.size_trigger' | t | downcase
+    assign downcased_option = option.name | downcase
+  
+    if downcased_option contains size_trigger
+      assign is_size = true
+    endif
+  -%}
+  
+  <div class="variant-wrapper js{% if downcased_option == 'plan' %} variant-plans-wrapper{%else%} variant-other-wrapper{% endif %}" data-type="button">
+    {% unless downcased_option == 'plan'  %}
+    <label class="variant__label{% if option.name == 'Default' or option.name == 'Title' %} hidden-label{% endif %}{% unless variant_labels %} hidden-label{% endunless %}"
+      for="ProductSelect-{{ section_id }}-{{ product.id }}-option-{{ forloop.index0 }}">
+      {{ option.name }}
+      {%- if connect_to_sizechart and is_size -%}
+        <span class="variant__label-info">
+          &mdash;
+          {%- render
+            'tool-tip-trigger',
+            title: size_chart_title,
+            content: section.blocks[sizechart_index].settings.size_chart.content,
+            context: 'size-chart'
+          -%}
+        </span>
+      {%- endif -%}
+      {%- if is_color -%}
+        <span class="variant__label-info">
+          &mdash;
+          <span
+            data-variant-color-label
+            data-index="{{ forloop.index0 }}"
+            data-option-index="{{ color_option_index }}">
+            {{ option.selected_value }}
+          </span>
+        </span>
+      {%- endif -%}
+    </label>
+
+  {% else %}  
+
+  <div class="planlabel-popunbox">
+   {% if popunlabel != blank %}<div class="planlabel-title">{{ popunlabel }}<span class="clk-popun-btn">?</span></div>{% endif %}
+
+   <div class="product-block product-block--price">
+    {%- assign hide_sale_price = true -%}
+    {%- if product.compare_at_price_max > product.price -%}
+      {%- if current_variant.compare_at_price -%}
+        {%- assign hide_sale_price = false -%}
+      {%- endif -%}
+      <span
+        data-a11y-price
+        class="visually-hidden"
+        aria-hidden="{{ hide_sale_price }}"
+      >
+        {{ 'products.general.regular_price' | t }}
+      </span>
+      <span data-product-price-wrap class="hosim-oldprice {% if hide_sale_price %}hide{% endif %}">
+        <span data-compare-price class="product__price product__price--compare">
+          {%- if current_variant.compare_at_price > current_variant.price -%}
+            {{ current_variant.compare_at_price | money }}
+          {%- endif -%}
+        </span>
+      </span>
+      <span data-compare-price-a11y class="visually-hidden">
+        {{- 'products.general.sale_price' | t -}}
+      </span>
+    {%- else -%}
+      <span data-a11y-price class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
+    {%- endif -%}
+
+    <span
+      data-product-price
+      class="product__price{% if current_variant.compare_at_price > current_variant.price %} sale-price{% endif %}"
+    >
+      {%- unless product.empty? -%}
+        {{ current_variant.price | money }}
+      {%- else -%}
+        {{ 1999 | money }}
+      {%- endunless -%}
+    </span>
+
+    <div
+      data-unit-price-wrapper
+      class="product__unit-price{% unless current_variant.unit_price_measurement %} hide{% endunless %}"
+    >
+      {%- capture unit_price_base_unit -%}
+        <span data-unit-base>
+          {%- if current_variant.unit_price_measurement -%}
+            {%- if current_variant.unit_price_measurement.reference_value != 1 -%}
+              {{ current_variant.unit_price_measurement.reference_value }}
+            {%- endif -%}
+            {{ current_variant.unit_price_measurement.reference_unit }}
+          {%- endif -%}
+        </span>
+      {%- endcapture -%}
+
+      <span data-unit-price>{{ current_variant.unit_price | money }}</span>/{{ unit_price_base_unit }}
+    </div>
+  </div>
+
+    </div>
+
+    <div class="clkpopun_fixbox">
+        <div class="clkpopun_fixitem">
+          <div class="clkpopun_fixitemtop">{{ popuntitle }} <span class="del-clkpopun">X</span></div>
+           <div class="clkpopun_fixitemimg">
+            {{ popuncon }}
+          </div>
+    
+         </div>
+        </div>
+      <script>
+        $(function(){
+         $("body").bind("click",function(evt){ 
+        if($(evt.target).closest(".clkpopun_fixitem").length==0&&$(evt.target).closest(".clk-popun-btn").length==0)
+        { 
+         $(".clkpopun_fixbox").hide();
+        } 
+      }); 
+          
+          $(".clk-popun-btn").click(function(){
+            $(".clkpopun_fixbox").fadeIn();
+          })
+          $(".del-clkpopun").click(function(){
+         $(".clkpopun_fixbox").hide();
+          })
+        })
+      </script>
+      
+
+  {% endunless %}
+  
+    <fieldset class="variant-input-wrap"
+      name="{{ option.name }}"
+      data-index="option{{ option_index }}"
+      data-handle="{{ option.name | handleize }}"
+      id="ProductSelect-{{ section_id }}-{{ product.id }}-option-{{ forloop.index0 }}">
+      <legend class="hide">{{ option.name }}</legend>
+      {%- for value in option.values -%}
+        {%- liquid
+          assign product_available = true
+          if product.options.size == 1
+            assign product_available = product.variants[forloop.index0].available
+          endif
+        -%}
+        <div
+          class="variant-input"
+          data-index="option{{ option_index }}"
+          data-value="{{ value | escape }}">
+          <input type="radio"
+            {% if option.selected_value == value %} checked="checked"{% endif %}
+            form="{{ form_id }}"
+            value="{{ value | escape }}"
+            data-index="option{{ option_index }}"
+            name="{{ option.name }}"
+            data-variant-input
+            class="{% unless product_available %} disabled{% endunless %}{% if is_color %} variant__input--color-swatch{% endif %}"
+            {% if is_color %} data-color-name="{{ value | escape }}"{% endif %}
+            {% if is_color %} data-color-index="{{ color_option_index }}"{% endif %}
+            id="ProductSelect-{{ section_id }}-{{ product.id }}-option-{{ option.name | handleize }}-{{ value | url_encode }}">
+          {%- if is_color -%}
+            {%- liquid
+              assign color_file_name = value | handle | append: '.' | append: swatch_file_extension
+              assign color_image = color_file_name | file_img_url: '50x50' | prepend: 'https:' | split: '?' | first
+              assign color_swatch_fallback = value | split: ' ' | last | handle
+            -%}
+            <label
+              for="ProductSelect-{{ section_id }}-{{ product.id }}-option-{{ option.name | handleize }}-{{ value | url_encode }}"
+              class="color-swatch color-swatch--{{ value | handle }}{% unless product_available %} disabled{% endunless %}"
+              style="background-color: {{ color_swatch_fallback }};{% if images[color_file_name] != blank %}  background-image: url({{ color_image }});{% endif %}"
+            >
+              {{ value | escape }}
+            </label>
+          {%- else -%}
+            {% if downcased_option == 'plan' %}
+              {%- liquid
+                assign trindexho = forloop.index0 | times: forsize
+                assign currvariant = product.variants[trindexho]
+              -%}
+            <label for="ProductSelect-{{ section_id }}-{{ product.id }}-option-{{ option.name | handleize }}-{{ value | url_encode }}" class="varoption-ho{% unless product_available %} disabled{% endunless %}">
+              <div class="pro-variant-box02">
+                 <div class="pro-variant-title">{{ value | escape }}</div>
+                 <span class="prova-greenponter"></span>
+                 {% if product.variants[forloop.index0].metafields.custom.data != blank %}<div class="pro-variant-item pro-variant-data"><span>Data</span><span>{{ product.variants[forloop.index0].metafields.custom.data }}</span></div> {% endif %}
+                 {% if product.variants[forloop.index0].metafields.custom.validity != blank %}<div class="pro-variant-item pro-variant-validity"><span>Validity</span><span>{{ product.variants[forloop.index0].metafields.custom.validity }}</span></div> {% endif %}
+                 <div class="pro-variant-item pro-vaprice-box"><span>Price</span><div class="pro-variant-price">{% if  product.variants[forloop.index0].compare_at_price %}<span class="pv-oldprice">{{ product.variants[forloop.index0].compare_at_price | money }}</span>{% endif %}<span class="pv-nowprice">{{ product.variants[forloop.index0].price | money }}</span></div></div>
+ 
+                {% if product.variants[forloop.index0].metafields.custom.tag != blank %}
+                 <span class="pro-variant-tag">{{ product.variants[forloop.index0].metafields.custom.tag }}</span>
+                {% endif %}
+                {% if product.variants[forloop.index0].metafields.custom.yellow_tag != blank %}
+                    <span class="pro-variant-tag pro-variant-yellowtag">{{ product.variants[forloop.index0].metafields.custom.yellow_tag }}</span>
+                   {% endif %}
+                
+              </div>
+              
+            </label>
+            {% else %}
+            <label for="ProductSelect-{{ section_id }}-{{ product.id }}-option-{{ option.name | handleize }}-{{ value | url_encode }}" class="varoption-ho{% unless product_available %} disabled{% endunless %}">
+              {{ value | escape }}
+         
+            </label>
+            {% endif %}
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+    </fieldset>
+  </div>
+  

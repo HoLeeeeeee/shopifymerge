@@ -1,0 +1,1574 @@
+
+{{ 'collectionnew.css' | asset_url | stylesheet_tag: preload: true }}
+{% paginate collection.products by 1000 %}
+  {%- capture contentForQuerystring -%}{{ content_for_header }}{%- endcapture -%}
+  {% comment %} or 筛选逻辑 {% endcomment %}
+  {% liquid
+    comment
+      拿到 URL 中的问号之后的参数内容
+      - pageParamList: 网页链接的携带参数列表
+      - isShowInstockOnly: 是否只显示有库存商品
+      - pageParamTagGroups: 未分离的标签筛选组，例如 ['color:white,blue', 'wirelesswrist-rest:no']
+      - currentPage: 当前页码
+    endcomment
+    assign pageParamStr = contentForQuerystring | split: '"pageurl":"' | last | split: '"' | first | url_decode | split: '?' | last | replace: '\/', '/' | replace: '%20', ' ' | replace: '\u0026', '&'
+    assign pageParamList = pageParamStr | split: '&' | compact
+    assign isShowInstockOnly = false
+    assign currentPage = 1
+    assign _cachePageParamTagGroups = ''
+    for _pageParam in pageParamList
+      assign _parma_down = _param | downcase
+      assign _paramKey = _pageParam | split: '=' | first | downcase
+      assign _paramValue = _pageParam | split: '=' | last | downcase
+      if _paramKey == 'filter.tag'
+        assign _cachePageParamTagGroups = _cachePageParamTagGroups | append: _paramValue | append: '?'
+      endif
+      if _paramKey == 'filter.page'
+        assign currentPage = _paramValue
+      endif
+      if _paramKey == 'code' and _paramValue == 'instock'
+        assign isShowInstockOnly = true
+      endif
+    endfor
+    assign pageParamTagGroups = _cachePageParamTagGroups | split: '?'
+  %}
+
+  {% assign _cachedSeparatedPageParamTagGroupsParamTagGroups = '' %}
+  {% liquid
+    for _tagGroup in pageParamTagGroups
+      if _tagGroup == blank
+        continue
+      endif
+      assign _groupKey = _tagGroup | split: ':' | first
+      assign _groupValues = _tagGroup | split: ':' | last | split: ','
+      for _value in _groupValues
+        assign _tag = _groupKey | append: ':' | append: _value
+        assign _cachedSeparatedPageParamTagGroupsParamTagGroups = _cachedSeparatedPageParamTagGroupsParamTagGroups | append: _tag | append: '?'
+      endfor
+    endfor
+  %}
+  {% comment %} 分离后的筛选组，例：["color:white", "color:blue", "wirelesswrist-rest:no"]，可以转换成 handle tag形式 {% endcomment %}
+  {% assign separatedPageParamTagGroups = _cachedSeparatedPageParamTagGroupsParamTagGroups | split: '?' %}
+
+  {% comment %} 存储最终产品列表结果索引，字符串形式 {% endcomment %}
+  {% assign resultIndexListStr = value %}
+
+  {% for product in collection.products %}
+    {% assign productIndex = forloop.index0 %}
+    {% comment %} 该产品是否符合筛选条件 {% endcomment %}
+    {% assign isProductCorrespond = true %}
+
+    {%- liquid
+      # 遍历筛选项组
+      for paramTagOption in pageParamTagGroups
+        comment
+          paramTagOption:     Url中Tag筛选的选项，例如 'Color:White,Black'
+          paramTagKey:        处理过的选项键名，例如 'color'、'keyboard-type'
+          paramTagValueList:  未处理过的选项值列表，例如 '["White", "Black"]'
+          isOptionCorrespond: 产品是否符合该选项要求
+        endcomment
+        assign paramTagKey = paramTagOption | split: ':' | first | handle
+        assign paramTagValueList = paramTagOption | split: ':' | last | split: ','
+        assign isOptionCorrespond = false
+        if paramTagKey == blank or paramTagValueList == blank
+          continue
+        endif
+        # 遍历产品标签，存在与筛选相符合的标签即为符合要求
+        for productTag in product.tags
+          assign handleProductTag = productTag | handle
+          # 区分出产品tag的键和值
+          assign productTagKey = productTag | replace: '-', '_' | split: '_' | first | handle
+          assign productTagValues = productTag | replace: '-', '_' | split: '_' | last | handle
+          comment
+            筛选项是单选
+            筛选项是多选，符合其中一条即可
+            [代码两者通用]
+          endcomment
+          for paramTagValue in paramTagValueList
+            assign handleParamTagValue = paramTagValue | handle
+            assign composedParamTag = paramTagKey | append: '-' | append: handleParamTagValue
+            if handleProductTag == composedParamTag and composedParamTag != blank
+              assign isOptionCorrespond = true
+              break
+            endif
+          endfor
+        endfor
+        # 产品不符合筛选结果
+        if isOptionCorrespond == false
+          assign isProductCorrespond = false
+          break
+        endif
+      endfor
+    -%}
+
+    {% if isProductCorrespond %}
+      {% assign resultIndexListStr = resultIndexListStr | append: forloop.index0 | append: ',' %}
+    {% endif %}
+  {% endfor %}
+
+  {% comment %} 最终筛选的结果列表（索引下标的形式） {% endcomment %}
+  {% assign resultProductIndexList = resultIndexListStr | handle | split: '-' %}
+
+  {% comment %}
+    处理分页相关
+    - limit: 限制每页显示的商品数量
+    - pageSize: 总页码
+    - currentPage: 当前页码，不能超过总页码数
+    - currentPaginatedProductIndexList: 当前分页下的产品索引列表
+  {% endcomment %}
+  {%- liquid
+    assign limit = section.settings.grid | times: section.settings.rows | default: 16 
+
+    assign pageSize = resultProductIndexList.size | divided_by: 1.0 | divided_by: limit | ceil
+    assign currentPage = currentPage | divided_by: 1.0
+    if currentPage > pageSize
+      assign currentPage = pageSize
+    endif
+
+    assign _firstIndex = currentPage | minus: 1 | times: limit
+    assign _lastIndex = _firstIndex | plus: limit | minus: 1
+    if _lastIndex >= resultProductIndexList.size
+      assign _lastIndex = resultProductIndexList.size | minus: 1
+    endif
+    assign _cachedCurrentPaginatedProductIndexList = ''
+    for _resultProductIndex in resultProductIndexList
+      if forloop.index0 >= _firstIndex and forloop.index0 <= _lastIndex
+        assign _cachedCurrentPaginatedProductIndexList = _cachedCurrentPaginatedProductIndexList | append: _resultProductIndex | append: ','
+      endif
+    endfor
+    assign currentPaginatedProductIndexList = _cachedCurrentPaginatedProductIndexList | split: ',' | compact
+  -%}
+     
+  <div
+    class="collection-tempate coltempate-outbox"
+    data-section-id="{{ section.id }}"
+    data-section-type="collection-template"
+    data-collection="{{ collection.handle }}"
+  >
+    <div class="contain-index">
+      {% if section.settings.title != blank %}<div class="toptitle-col">{{ section.settings.title }}</div>{% endif %}
+     <div class="coll-topsearchbox">
+       <div class="topsearchbox-form">
+        <input type="text" class="topsearchbox-input" placeholder="Search data packs for 200+ countries and regions"/>
+        <span class="topsearchbox-button"><svg width="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11 17C14.866 17 18 13.866 18 10C18 6.13401 14.866 3 11 3C7.13401 3 4 6.13401 4 10C4 13.866 7.13401 17 11 17Z" stroke="#282828" stroke-width="2"/>
+          <path d="M16 15L19 18L16 15Z" fill="#282828"/>
+          <path d="M16 15L19 18" stroke="#282828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>  </span>
+      </div>
+      {% liquid
+        assign flaghas = false
+        for ntag in collection.all_tags
+        if ntag contains "Popular Areas-"
+         assign flaghas = true
+         break
+        endif
+        endfor
+      %}
+
+      {% if flaghas %}
+      <div class="searchbox-conrtrycon">
+           
+          {% for ntag in collection.all_tags %}
+            {% if ntag contains "Popular Areas-" %}
+               {% liquid
+                  assign splstr = ntag | split: "-"
+                  assign curhd = "flag-" | append:splstr[1] | handleize | append: ".png"
+                  assign curhdurl = curhd | file_url
+               %}
+              <span class="conrtrycon-item{% if current_tags contains ntag %} active{% endif %}">
+                <img alt  src="{{ curhdurl }}"/>
+                {% if current_tags contains ntag %}
+              {{ '' | link_to_remove_tag: ntag }}
+              {% else %}
+              {{ '' | link_to_add_tag: ntag }}
+                {% endif %}
+            </span>
+              
+            {% endif %}
+          {% endfor %}     
+       </div>
+      {% endif %}
+
+     </div>
+    <div class="filter-flex-layout">
+      <div class="filtercol-leftbox filtercol-leftpchide">
+        <span class="filtercol-title">{{collection.title }}<span> \ </span></span>
+       <span class="collection-pronumber">
+         {% if isShowInstockOnly %}
+           {% assign available_product_count = 0 %}
+           {% for product in collection.products %}
+             {% assign forloopIndex0Str = forloop.index0 | strip %}
+             {% if resultProductIndexList contains forloopIndex0Str and product.available %}
+               {% assign available_product_count = available_product_count | plus: 1 %}
+             {% endif %}
+           {% endfor %}
+           {{ available_product_count }}
+         {% else %}
+           {{ resultProductIndexList.size }}
+         {% endif %}
+       Item{% if resultProductIndexList.size > 1 %}s{% endif %} Found 
+       </span>
+        </div>
+      {% comment %} 筛选侧边栏 {% endcomment %}
+      <div class="filter-new-container">
+        <div class="colleftbar-header"><label><svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 6H3" stroke="black" stroke-width="2"/>
+          <path d="M16 11H3" stroke="black" stroke-width="2"/>
+          <path d="M16 1H3" stroke="black" stroke-width="2"/>
+          <path d="M2 6H0" stroke="black" stroke-width="2"/>
+          <path d="M2 11H0" stroke="black" stroke-width="2"/>
+          <path d="M2 1H0" stroke="black" stroke-width="2"/>
+          </svg><span>Filter</span>
+          </label><a class="tag-clear-col" href="{{collection.url}}"><span class="tag-clear-coltext">Clear All</span><span class="tag-clear-colxx">X</span></a></div>
+        {%- render 'collection-filter-toolbar', 
+          blocks: section.blocks,
+          isShowInstockOnly: isShowInstockOnly,
+          pageParamTagGroups: pageParamTagGroups,
+          separatedParamTagGroups: separatedPageParamTagGroups,
+          resultProductIndexList: resultProductIndexList
+        -%}
+      </div>
+
+      <div class="filter-flex-layout-right">
+        {% comment %} 列出已选的条件 {% endcomment %}
+    {% comment %} 顶栏 {% endcomment %}
+    <div class="filters-toolbar-wrapper">
+      {% assign currenttag = current_tags | handleize | split: '-' | first %}
+      <div class="filters-toolbar__item filters-toolbarprice">
+        <div class="filters-toolbar__flex-layout">
+          <div class="filter-toolbar__mobile-bottom">
+            <div class="filter-toolbar__mobile-bottom-button">
+              {% comment %} <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.5 1.62061H0V3.70756H13.5V5.17391H15V3.70756H18V1.62061H15V0H13.5V1.62061Z" fill="black"/>                <path d="M8.25 7.53365H0V9.6206L8.25 9.60869V11.0366L9.75 11.0365V9.60869L18 9.6206V7.53365H9.75V5.91304H8.25V7.53365Z" fill="black"/><path d="M5 13.5L18 13.4467V15.5336H5V17H3.5V15.5L0 15.5336V13.4467L3.5 13.5V11.8261H5V13.5Z" fill="black"/></svg> {% endcomment %}
+              <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 6H3" stroke="black" stroke-width="2"></path>
+                <path d="M16 11H3" stroke="black" stroke-width="2"></path>
+                <path d="M16 1H3" stroke="black" stroke-width="2"></path>
+                <path d="M2 6H0" stroke="black" stroke-width="2"></path>
+                <path d="M2 11H0" stroke="black" stroke-width="2"></path>
+                <path d="M2 1H0" stroke="black" stroke-width="2"></path>
+                </svg>Filter</div>
+            <div class="filter-number">
+              <div class="filtercol-leftbox filtercol-leftmbhide">
+               <span class="filtercol-title">{{collection.title }}<span> \ </span></span>
+              <span class="collection-pronumber">
+                {% if isShowInstockOnly %}
+                  {% assign available_product_count = 0 %}
+                  {% for product in collection.products %}
+                    {% assign forloopIndex0Str = forloop.index0 | strip %}
+                    {% if resultProductIndexList contains forloopIndex0Str and product.available %}
+                      {% assign available_product_count = available_product_count | plus: 1 %}
+                    {% endif %}
+                  {% endfor %}
+                  {{ available_product_count }}
+                {% else %}
+                  {{ resultProductIndexList.size }}
+                {% endif %}
+              Item{% if resultProductIndexList.size > 1 %}s{% endif %} Found 
+              </span>
+               </div>
+              {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
+              <div class="colsortby_box">
+                <span>Sort by</span>
+              <select name="SortBy" id="SortByOr" class="filters-toolbar__input filters-toolbar__input--sort">
+                {% if sort_by == collection.default_sort_by %}
+                  {% if collection.default_sort_by != 'manual' %}
+                    <option value="manual" {% if sort_by == 'manual' %}selected="selected"{% endif %}>Most Recommended </option>
+                  {% endif %}
+                  {% if collection.default_sort_by != 'best-selling' %}
+                    <option value="best-selling" {% if sort_by == 'best-selling' %}selected="selected" {% endif %} >Best selling</option>
+                  {% endif %}
+                  {% if collection.default_sort_by != 'price-ascending' %}
+                    <option value="price-ascending" {% if sort_by == 'price-ascending' %}selected="selected" {% endif %}>Price ascending</option>
+                  {% endif %}
+                  {% if collection.default_sort_by != 'price-descending' %}
+                    <option value="price-descending" {% if sort_by == 'price-descending' %}selected="selected" {% endif %}>Price descending</option>
+                  {% endif %}
+                  {% if collection.default_sort_by != 'created-descending' %}
+                    <option value="created-descending" {% if sort_by == 'created-descending' %}selected="selected" {% endif %}>Date descending</option>
+                  {% endif %}
+                  <!--
+                    {% if collection.default_sort_by != 'created-ascending' %}
+                    <option value="created-ascending"{% if sort_by == "created-ascending" %} selected="selected"{% endif %}>{{ 'collections.sorting.date_ascending' | t }}</option>
+                    {% endif %}
+                  -->
+                {% else %}
+                  <option value="manual" {% if sort_by == 'manual' %}selected="selected"{% endif %}>Most Recommended </option>
+                  <option value="best-selling" {% if sort_by == 'best-selling' %}selected="selected"{% endif %}>Best selling</option>
+                  <option value="price-ascending" {% if sort_by == 'price-ascending' %}selected="selected"{% endif %}>Price ascending</option>
+                  <option value="price-descending" {% if sort_by == 'price-descending' %}selected="selected"{% endif %}>Price descending</option>
+                  <option value="created-descending" {% if sort_by == 'created-descending' %}selected="selected"{% endif %}>Date descending</option>
+                  <!--
+                    <option value="created-ascending"{% if sort_by == "created-ascending" %} selected="selected"{% endif %}>{{ 'collections.sorting.date_ascending' | t }}</option>
+                  -->
+                {% endif %}
+              </select>
+              </div>
+              <input id="DefaultSortByOr" type="hidden" value="{{ collection.default_sort_by }}">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <div class="filter-flex-layout-current-tag-pc">
+          {%- assign paramTagGroups = pageParamTagGroups -%}
+          <div class="filter-current-tag-outer-container">
+            <div class="filter-current-tag-outer-wrapper">
+              {% for _tagGroup in paramTagGroups %}
+                {% assign _tagGroupName = _tagGroup | split: ':' | first | handle %}
+                {% assign _tagGroupValuesStr = _tagGroup | split: ':' | last %}
+                {% assign _tagGroupValues = _tagGroupValuesStr | split: ',' %}
+                {% comment %} Filter group {% endcomment %}
+                <div class="filter-current-tag-item">
+                  {% comment %} Filter group name {% endcomment %}
+                  {% for _originTag in collection.all_tags %}
+                    {% assign _originTagKeyHandle = _originTag | split: '-' |  first | handle %}
+                    {% if _originTagKeyHandle == _tagGroupName %}
+                      <div class="filter-current-tag-category" data-handle="{{ _originTagKeyHandle }}">{{ _originTag | split: '-' |  first }}:</div>
+                      {% break %}
+                    {% endif %}
+                  {% endfor %}
+
+                  <div class="filter-current-tag-container">
+                    <div class="filter-current-tag-wrapper">
+                      {% for _tagGroupValue in _tagGroupValues %}
+                        {% assign _tagGroupValueHandle = _tagGroupValue | handle %}
+                        {% assign _paramSubTagHandle = _tagGroupName | append: '-' | append: _tagGroupValueHandle %}
+                        {% for _originTag in collection.all_tags %}
+                          {% assign _originTagHandle = _originTag | handle %}
+                          {% if _originTagHandle == _paramSubTagHandle %}
+                            {% comment %} Filter group item {% endcomment %}
+                            {% assign _originTagValue = _originTag | split: '-' | last %}
+                            <div class="filter-current-tag-name function-js-tag" data-handle="{{ _originTagValue | handle }}">
+                              <a href="javascript:;" title="Remove tag {{ _originTag }}">{{ _originTagValue }}</a>
+                              <span class="filter-current-tag-name-close">
+                                <svg width="10" height="10" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.05261 0.646454L6.39605 5.98989" stroke="black" stroke-linecap="round"/><path d="M1 5.99194L6.34548 0.646452" stroke="black" stroke-linecap="round"/></svg>
+                              </span>
+                              <span class="filter-current-tag-name-close-hover">
+                                <svg width="10" height="10" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 7C14 10.866 10.866 14 7 14C3.13401 14 0 10.866 0 7C0 3.13401 3.13401 0 7 0C10.866 0 14 3.13401 14 7Z" fill="black"/><path d="M3.41431 3L11.0001 11" stroke="white" stroke-width="2" stroke-linecap="round"/><path d="M3.00005 11.1671L10.5001 2.99998" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+                              </span>
+                            </div>
+                          {% endif %}
+                        {% endfor %}
+                      {% endfor %}
+                    </div>
+                  </div>
+                </div>
+              {% endfor %}
+              <div class="function-js-tag">
+                <a class="filter-current-tag-clear" href="{{collection.url}}">Clear All</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {% comment %} 产品列表容器 {% endcomment %}
+        <div class="collection_list_box" id="Collection">
+          <div class="grid grid--uniform{% if collection.products_count > 0 %} grid--view-items{% endif %} grid--view-items-top {{ show_holiday_banner01 }}">
+            {% for product in collection.products %}
+              {% assign forloopIndex0Str = forloop.index0 | strip %}
+              {% if currentPaginatedProductIndexList contains forloopIndex0Str %}
+              {% comment %} 产品项 {% endcomment %}
+              {% render 'collection-grid-new', product: product,pricecolor: section.settings.price_color %}
+              {% endif %}
+            {% endfor %}
+          </div>
+
+          {% comment %} 筛选结果为空时 {% endcomment %}
+          {% if resultProductIndexList.size == 0 %}
+            <div class="grid__item small--text-center">
+              <p class="text-center">{{ 'collections.general.no_matches' | t }}</p>
+            </div>
+          {% endif %}
+
+          {% comment %} 
+            分页模块，可直接抽离作为单独模块
+              - pageSize: 总页码数量
+              - currentPage: 当前页码
+          {% endcomment %}
+          {% if resultProductIndexList.size > limit %}
+            <ul class="list--inline pagination">
+            {% comment %} 上一页按钮 {% endcomment %}
+            {% assign prevPage = currentPage | minus: 1  %}
+            {% if currentPage == '1' or currentPage == 1 %}
+              {% assign prevPage = 1  %}
+            {% endif %}
+            <li class="pagination-prev" data-page="{{ prevPage }}">
+              {% if currentPage == '1' or currentPage == 1 %}
+                <div class="btn--narrow btn--disabled">
+                  &#139      &#139
+                  <span class="icon__fallback-text">{{ 'general.pagination.previous' | t }}</span>
+                </div>
+              {% else %}
+                <a href="javascript:;" class="btn--narrow">
+                  &#139      &#139
+                  <span class="icon__fallback-text">{{ 'general.pagination.previous' | t }}</span>
+                </a>
+              {% endif %}
+            </li>
+            {% comment %} 各个页码按钮 {% endcomment %}
+            {% for i in (1..pageSize) %}
+              {% assign i_str = i | append: ''  %}
+              {% if i == currentPage or i_str == currentPage %}
+                  <li class="pagination-item active" data-page="{{ i }}"><span>{{ i }}</span></li>
+                  {% comment %} <li class="pagination-item"><span>{{ i }}</span></li> {% endcomment %}
+              {% else %}
+                <li class="pagination-item" data-page="{{ i }}">
+                    <a href="javascript:;" title="">{{ i }}</a>
+                </li>
+              {% endif %}
+            {% endfor %}
+            {% comment %} 下一页按钮 {% endcomment %}
+            {% assign nextPage = currentPage | plus: 1  %}
+            {% if currentPage == pageSize or currentPage == pageSizeStr  %}
+              {% assign nextPage = pageSize  %}
+            {% endif %}
+            <li class="pagination-next" data-page="{{ nextPage }}">
+              {% assign pageSizeStr = pageSize | append: ''  %}
+              {% if currentPage == pageSize or currentPage == pageSizeStr %}
+                <div class="btn--narrow btn--disabled">
+                    &#155      &#155
+                  <span class="icon__fallback-text">{{ 'general.pagination.next' | t }}</span>
+                </div>
+              {% else %}
+                <a href="javascript:;" class="btn--narrow">
+                    &#155      &#155
+                  <span class="icon__fallback-text">{{ 'general.pagination.next' | t }}</span>
+                </a>
+              {% endif %}
+            </li>
+            </ul>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+{% endpaginate %}
+
+{% comment %} 整体样式 {% endcomment %}
+<style>
+  .collection-tempate[data-section-id="{{ section.id }}"] .collection_list_box > .grid.grid--uniform  {
+    display: grid;
+    grid-template-columns: repeat({{ section.settings.grid }}, 1fr);
+  }
+
+  .collection_list_box > .grid.grid--uniform >.grid-product {
+    float: none;
+    width: auto;
+  }
+
+  @media (max-width: 680px) {
+    .collection-tempate[data-section-id="{{ section.id }}"] .collection_list_box > .grid.grid--uniform  {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .filter-flex-layout {
+    display: flex;
+    margin: auto;
+  }
+  
+  .filter-new-container {
+    padding: 0;
+    width: auto;
+    margin-right: calc(14px + 0.8vw);
+    min-width: 300px;
+  }
+    
+  .filter-box .filter-type {
+    margin-top: 20px;
+  }
+  
+  .filter-box .filter-type>span {
+    float: none;
+    width: 97.3%;
+    display: flex;
+    justify-content: space-between;
+    background: none;
+    font-weight: bold;
+    font-size: calc(12px + 0.22vw);
+    padding: 0;
+  }
+    
+  .filter-box ul {
+    display: none;
+    position: relative;
+    top: unset;
+    padding: 22px 0 0 0;
+    margin: 0;
+    z-index: 1;
+  }
+  
+  .standard-spacer {
+    flex: 1;
+  }
+  
+  .filters-toolbar__flex-layout {
+    display: flex;
+    align-items: center;
+  }
+  
+  .filters-toolbar__flex-layout .icon-arrow {
+    height: auto;
+  }
+  
+  .filters-toolbar__flex-layout .filter-arrow {
+    top: unset !important;
+  }
+
+  .active-filter .tag-close:before {
+    background: #e10800;
+  }
+
+  
+  
+  .filter-box ul {
+    background: none;
+    width: 100%;
+  }
+  
+  .filter-box .active-filter {
+    padding: 0;
+  }
+  
+  .filter-box li.advanced-filter .advanced-filter-product-count {
+    margin-left: 4px;
+  }
+  
+  .filter-box li { 
+    cursor: auto;
+    padding: 0;
+    display: flex;
+    font-size: calc(12px + 0.2vw);    margin-bottom: 0;
+    justify-content: space-between;
+  }
+  
+  .filter-type-title {
+    cursor: pointer;
+  }
+
+  .filter-type.active .advanced-filters {
+    display: flex !important;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  
+  .filter-type.active .advanced-filters.color-advanced-filters {
+    flex-direction: row !important;
+    flex-wrap: wrap;
+  }
+  
+  .filter-type:not(.active) .filter-type-svg-up {
+    display: none;
+  }
+  
+  .filter-type.active .filter-type-svg-down {
+    display: none;
+  }
+  
+  .active-filter .tag-close:before,
+  .tag-close:before {
+    display: none;
+  }
+  
+  .advanced-filter .tag-close {
+    pointer-events: none;
+  }
+  
+  .tag-close {
+    margin-right: 10px;
+    width: auto;
+    height: auto;
+    display: flex;
+  }
+  
+  .color-advanced-filter.tag-close {
+    margin-right: 0;
+  }
+  
+  .advanced-filter>a {
+    display: flex;
+    align-items: center;
+  }
+  
+  .advanced-filter:not(.color-advanced-filter) .tag-close.checked {
+    display: inline-flex;
+    width: 20px;
+    height: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .color-advanced-filter .tag-close {
+    display: inline-flex;
+    width: 20px;
+    height: 20px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+  
+  .color-advanced-filter .tag-close {
+    border: 1px solid #666;
+  }
+  
+  .color-advanced-filter .tag-close.checked {
+    border-radius: 50%;
+  }
+  
+  .color-advanced-filter .tag-close.checked svg line {
+    stroke: gray;
+  }
+  
+  .color-advanced-filter.color-background-black .tag-close.checked svg line {
+    stroke: #666;
+  }
+  
+  .filter-type-svg-down {
+    transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+  }
+  
+  .filter-type {
+    {% comment %} border: 0px #ccc solid; {% endcomment %}
+    border-bottom-width: 1px;
+    padding-bottom: 25px;
+  }
+  
+  .filters-toolbar__item .filter-type:last-child {
+    border-bottom-width: 0;
+  }
+  
+  .filter-flex-layout-right {
+    flex: 1;
+    padding: 0;
+  }
+  
+  .filter-flex-layout .mb {
+    display: none;
+  }
+  
+  @media (max-width: 1200px) and (min-width: 1000px) {
+    .filters-toolbar__flex-layout {
+      width: 100%;
+    }
+  
+    .filter-flex-layout {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 1100px) {
+    .filter-flex-layout .pc {
+      display: none;
+    }
+  
+    .filter-flex-layout .mb {
+      display: block;
+    }
+  }
+  
+  .template-collection .grid-view-item .product-variant {
+    right: 10px;
+    left: unset;
+  }
+  
+  @media (max-width: 999px) {  
+    .filters-toolbar__flex-layout {
+      padding: 0;
+    }
+  
+    .filter-box .filter-type>span {
+      width: 98.7%;
+    }
+  }
+  
+  .filters-toolbar__logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .filter-toolbar__mobile-bottom {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    flex: 1;
+    justify-content: flex-end;
+  }
+  
+  .filter-number {
+    display: flex;
+    align-items: center;
+  }
+   
+  .filter-toolbar__mobile-bottom-button {
+    display: none;
+  }
+  
+  @media (max-width: 999px) {
+    .filter-toolbar__mobile-bottom-button {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+      cursor: pointer;
+    }
+  
+    .filters-toolbar__flex-layout {
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+  
+    .filter-toolbar__mobile-bottom {
+      width: 100%;
+      justify-content: space-between;
+    }
+  
+  }
+  
+  /* Current Tag start  */
+  .filter-current-tag-outer-wrapper {
+    display: flex;
+    width: 100%;
+    column-gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 15px;
+  }
+  
+  .filter-current-tag-clear {
+    display: none;
+    text-decoration: underline;
+  }
+  
+  .filter-current-tag-outer-wrapper:has(.filter-current-tag-item) .filter-current-tag-clear {
+    display: block;
+  }
+  
+  .filter-current-tag-item {
+    display: flex;
+    padding: 10px 12px;
+    border: 1px solid;
+    border-radius: 5px;
+    column-gap: 10px;
+    border-color: #ccc;
+  }
+  
+  .filter-current-tag-wrapper {
+    display: flex;
+    column-gap: 10px;
+  }
+  
+  .filter-current-tag-name {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+  }
+  
+  .filter-current-tag-name-close {
+    display: flex;
+    align-items: center;
+  }
+  
+  .filter-current-tag-name:hover {
+    text-decoration: underline;
+  }
+  
+  .filter-current-tag-name-close-hover {
+    display: none;
+    align-items: center;
+  }
+  
+  .filter-current-tag-name:hover .filter-current-tag-name-close {
+    display: none;
+  }
+  
+  .filter-current-tag-name:hover .filter-current-tag-name-close-hover {
+    display: flex;
+  }
+  
+  .filter-new-mobile-drawer-head-title {
+    display: none;
+  }
+  
+  .filter-toolbar__mobile-bottom-button {
+    font-weight: bold;
+  }
+  
+  .filter-flex-layout-current-tag-mb {
+    display: none;
+  }
+  
+  .filter-new-mobile-drawer-head-title {
+    font-size: 30px;
+  }
+  
+  .filter-box .filter-type>span {
+    font-size: calc(12px + 0.22vw);
+  }
+    
+  .filter-new-mobile-drawer-head {
+    display: none;
+  }
+  
+  @media (max-width: 999px) {
+    .filter-flex-layout-current-tag-mb {
+      display: flex;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    .filter-current-tag-outer-wrapper {
+      row-gap: 8px;
+  }
+    .filter-current-tag-outer-container {
+      width: 100%;
+    }
+  
+    .filter-current-tag-clear {
+      order: 1;
+    }
+  
+    .filter-current-tag-item {
+      order: 2;
+      flex-direction: column;
+    }
+  
+    .filter-current-tag-outer-wrapper {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .filter-current-tag-wrapper {
+      flex-wrap: wrap;
+    }
+  
+    .filter-current-tag-item {
+      width: 100%;
+      flex-wrap: wrap;
+    }
+  
+    .filter-current-tag-category {
+      width: 100%;
+    }
+  
+    .filter-new-container {
+      position: fixed;
+      left: 0;
+      top: 0;
+      height: 100vh;
+      z-index: 99;
+      width: 100vw;
+      display: flex;
+      padding: 0;
+      flex-direction: column;
+      background: white;
+      transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+      -moz-transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      -o-transform: translateX(-100%);
+      transition: 0.4s ease-in-out;
+      overflow-y: scroll;
+    }
+  
+    .filter-new-container .filters-toolbar .filters-toolbar__item {
+      padding: 0 5vw;
+    }
+  
+    .filter-new-container .filters-toolbar {
+      align-items: start;
+      padding: 30px 0;
+    }
+  
+    .filter-new-container .filter-type {
+      width: 100%;
+    }
+  
+    .filter-new-mobile-drawer-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  
+    .filter-new-mobile-drawer-head-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: bold;
+    }
+  
+    .filter-new-mobile-drawer-head-close {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .filter-new-mobile-drawer-head-close {
+      cursor: pointer;
+    }
+  
+    .filter-new-container.entered {
+      transform: translateX(0);
+      -ms-transform: translateX(0);
+      -moz-transform: translateX(0);
+      -webkit-transform: translateX(0);
+      -o-transform: translateX(0);
+    }
+  
+    .filter-new-container.entered2 {
+      transform: translateX(0);
+      -ms-transform: translateX(0);
+      -moz-transform: translateX(0);
+      -webkit-transform: translateX(0);
+      -o-transform: translateX(0);
+      transition: 0s ease-in-out;
+    }
+  
+  
+    .filter-box ul.filter-collection-list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 5px;
+    }
+  
+    .filter-collection-item.active a {
+      font-weight: bold;
+      color: #e10800;
+    }
+  }
+  
+  /* Current Tag end */
+  
+  @media (max-width: 590px) {
+    .filter-new-mobile-drawer-head-title {
+      font-size: 24px;
+    }
+  
+    .filter-box .filter-type>span {
+      font-size: 16px;
+    }
+  
+    .advanced-filter a {
+      font-size: 16px;
+    }
+  
+    .collection-pronumber {
+      font-size: 12px;
+    }
+  
+    .filter-toolbar__mobile-bottom-button {
+      font-size: 4.1vw;    column-gap: 8px;
+    }
+  
+    .filter-current-tag-category,
+    .filter-current-tag-clear {
+      font-size: 12px;
+    }
+    
+    .filter-current-tag-name a {
+      font-size: 13px;
+    }
+  
+    .collection-hero {
+      margin-bottom: 5px;
+    }
+    .filter-new-mobile-drawer-head-title {
+      display: none;
+  }
+  .filter-new-mobile-drawer-head-close {
+    right: 7vw;position: absolute;
+    top: 7vw;
+}
+.filter-box .filter-type {
+    margin-top: 10px;
+}
+.filter-new-container .filters-toolbar {
+    padding: 10px 0;
+}
+.filter-new-container .filters-toolbar .filters-toolbar__item {
+  padding: 0 5vw 0 9vw;
+}
+
+  }
+  
+  .grid-view-item__title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: calc(1rem * 1 * 1.5);
+    line-height: 1.5;
+    min-height: calc(12px * 1 * 1.5);
+  }
+  
+  @media (max-width: 768px) {  
+    .grid-view-item__title {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      height: calc(1rem * 2 * 1.5);
+      line-height: 1.5;
+      min-height: calc(12px * 2 * 1.5);
+    }
+  }
+  
+  @media (max-width: 590px) {  
+    .filters-toolbar__item {
+      padding: 0 0px;
+    }
+    .bottom-cart .icon-cart+.hide {
+      font-size: 12px;
+    }
+  
+    .bottom-cart .icon-cart {
+      height: 20px !important;
+      width: 20px !important;
+    }
+  
+    .btn-addcard {
+      padding-top: 0;
+    }
+  
+    .words-bottom {
+      padding-bottom: 0px;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .bottom-cart .icon-cart {
+      height: 15px !important;
+      width: 15px !important;
+    }
+  }
+  
+  .advanced-filter:not(.color-advanced-filter) .instock_option .hidecheck {
+    display: none;
+  }
+</style>
+
+{% comment %} 分页模块的样式 {% endcomment %}
+<style>
+  .pagination {
+    text-align: center;
+    list-style: none;
+    font-size: .94118em;
+    padding-top:23px;
+  }
+  .pagination li {
+    display: inline-block;
+    margin: 0 2px;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;    transition: 0.5s;
+    text-align: center;    border-radius: 50%;
+    vertical-align: middle;
+    font-size: 14px;
+    background: transparent;
+  }
+  .pagination .btn--narrow {
+    font-size: 20px;
+    position: relative;
+    top: -2px;
+    padding: 0;
+    letter-spacing: 0;
+  }
+  .pagination-item>a {
+    padding: 0;
+  }
+  .btn--disabled {
+    opacity: .5;
+    cursor: default;
+  }
+  .btn--narrow {
+    display: inline-block;
+  }
+  .icon__fallback-text {
+    position: absolute!important;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+  }
+  .pagination li.active {
+    background: #07C160;    font-weight: 700;
+  }
+</style>
+
+{% comment %} Javascript {% endcomment %}
+<script>
+  let filterNewContainerScrollTop = 0;
+  let filterNewContainerIsOpen = false;
+  listenAdvancedFilterClick();
+  listenSelector();
+  listenPagination();
+
+  function listenAdvancedFilterClick() {
+    // 筛选项的点击事件
+    document.querySelectorAll('.filters-toolbar .advanced-filter.function-js-tag a').forEach(ele => {
+      ele.onclick = function (e) {
+        filterNewContainerScrollTop = document.querySelector('.filter-new-container').scrollTop;
+        filterNewContainerIsOpen = document.querySelector('.filter-new-container').classList.contains('entered') || document.querySelector('.filter-new-container').classList.contains('entered2');
+        var currentUrl = new URL(window.location.href);
+        let newUrl;
+        let $el = $(ele);
+        let $advancedFilterEl = $el.closest("li.advanced-filter");
+        const handleTag = $advancedFilterEl.attr("data-handle"); // full tag
+        const handleTagKey = $el.closest(".filter-type").find(".filter-type-title").attr("data-handle");
+        const handleTagValue = $advancedFilterEl.attr("data-value");
+        const isActived = $advancedFilterEl.hasClass("active-filter");
+
+        if (ele.classList.contains('instock-tag')) {
+          // In stockr
+          newUrl = isActived ? _removeUrlParam(window.location.href, "code")
+            : _addUrlParam(window.location.href, "code", "instock");
+        } else if ($el.parent().hasClass('filter-current-tag-name')) {
+          // 清除单个或者一整组筛选项（clear 组件）
+          // newUrl = window.location.origin + e.target.getAttribute('href');
+          console.log()
+        } else {
+          // 添加或者移除单个筛选项
+          newUrl = isActived ? _removeValueToFilter(handleTagKey, handleTagValue)
+            : _addValueToFilter(handleTagKey, handleTagValue);
+        }
+        if (newUrl) requestFilter(newUrl);
+        return false;
+      }
+    })
+    document.querySelectorAll('.filter-current-tag-item .filter-current-tag-name.function-js-tag').forEach(ele => {
+      ele.onclick = function (e) {
+        const $el = $(ele);
+        const handleTagKey = $el.closest(".filter-current-tag-item").find(".filter-current-tag-category").attr("data-handle");
+        const handleTagValue = $el.attr("data-handle");
+        const newUrl = _removeValueToFilter(handleTagKey, handleTagValue);
+        if (newUrl) requestFilter(newUrl);
+        return false;
+      }
+    });
+  }
+
+  function listenTypeClick() {
+    $('.filter-type').off();
+    $('.filter-type-title').click(function () {
+      $(this).parent('.filter-type').toggleClass('active');
+    })
+    $('.filter-toolbar__mobile-bottom-button').click(function () {
+      $('.filter-new-container').addClass('entered');
+    })
+    $('.filter-new-mobile-drawer-head-close').click(function () {
+      $('.filter-new-container').removeClass('entered');
+      $('.filter-new-container').removeClass('entered2');
+    })
+  }
+
+  function listenSelector() {
+    $("#SortByOr").css('opacity', '1');
+    $("#SortByOr").unbind("change");
+    $("#SortByOr").change(function (e) {
+      const newUrl = _addUrlParam(window.location.href, "sort_by", e.target.value);
+      requestFilter(newUrl);
+    })
+  }
+
+  function listenPagination() {
+    function paginate() {
+      const page = $(this).attr("data-page");
+      const queryPage = _getUrlQueryString(window.location.href, "filter.page");
+      if (!queryPage) {
+        // Url不存在页码，新建页码
+        const newUrl = _addUrlParam(window.location.href, "filter.page", page);
+        requestFilter(newUrl);
+      } else if (page != queryPage) {
+        // Url存在页码，且页码不同，替换新页码
+        const newUrl = _replaceUrlParamValue(window.location.href, "filter.page", page);
+        requestFilter(newUrl);
+      }
+    }
+    $('.pagination>.pagination-prev').click(paginate);
+    $('.pagination>.pagination-next').click(paginate);
+    $('.pagination>.pagination-item').click(paginate);
+  }
+
+  /** 请求数据 */
+  function requestFilter(newUrl) {
+    history.pushState('', '', newUrl);
+    const filterNewContainerScrollTop = document.querySelector('.filter-new-container').scrollTop;
+    const filterNewContainerIsOpen = document.querySelector('.filter-new-container').classList.contains('entered') || document.querySelector('.filter-new-container').classList.contains('entered2');
+    fetch(newUrl, {
+      credentials: 'same-origin',
+      method: 'GET'
+    })
+      .then(function (response) {
+        response.text().then(function (content) {
+          console.log('content', content);
+          var tempElement = document.createElement('div');
+          tempElement.innerHTML = content;
+          document.querySelector('.filters-toolbar__flex-layout').innerHTML = tempElement.querySelector('.filters-toolbar__flex-layout').innerHTML;
+          document.querySelector('.filter-flex-layout').innerHTML = tempElement.querySelector('.filter-flex-layout').innerHTML;
+          if (window.innerWidth < 1000 && filterNewContainerIsOpen) {
+            document.querySelector('.filter-new-container').classList.add('entered2');
+            document.querySelector('.filter-new-container').scrollTo(0, filterNewContainerScrollTop);
+          }
+          //获取url链接中的某个参数
+          function getQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null)
+              return unescape(r[2]);
+            return null;
+          }
+          console.log(getQueryString('code'), 'code参数')
+          if (getQueryString('code') == 'instock') {
+            //选中状态，勾选，添加类，使下次请求会移除code参数
+            $('.instock_option').parent().addClass('active-filter')
+            $('.instock_option').find('.checked').css('display', 'inline-flex')
+            $('.instock_option').find('.unchecked').css('display', 'none')
+          } else {
+            $('.instock_option').parent().removeClass('active-filter')
+            $('.instock_option').find('.checked').css('display', 'none')
+            $('.instock_option').find('.unchecked').css('display', 'inline-flex')
+          }
+        }).then(function () {
+          listenAdvancedFilterClick();
+          listenTypeClick();
+          listenSelector();
+          listenPagination();
+        })
+      })
+  }
+
+  /**
+  * 为Url添加单个筛选项（传参数必须 handle 处理过）
+  * 例如从 color:white 中添加 blue 项，亦或者从无到有
+  * @return {String} newUrl
+  */
+  function _addValueToFilter(filterName, filterOneValue) {
+    const url = window.location.href;
+    const urlSearch = window.location.search;
+    let newUrl = url;
+    if (url.indexOf(`filter.tag=${filterName}`) >= 0) {
+      // 已经存在该筛选组名，修改
+      const params = urlSearch.split("?")[1].split("&");
+      newUrl = window.location.origin + window.location.pathname;
+      // 遍历并重新组合
+      let index = 0;
+      for (let param of params) {
+        if (param.indexOf(`filter.tag=${filterName}:`) >= 0) {
+          const filterValues = param.split("=")[1].split(":")[1].split(",");
+          // 不存在该值才可以追加
+          if (filterValues.length == 0) {
+            param += `${filterOneValue}`
+          } else if (!filterValues.includes(filterOneValue)) {
+            param += `,${filterOneValue}`
+          }
+        }
+        if (index == 0) newUrl += `?${param}`;
+        else newUrl += `&${param}`;
+        index++;
+      }
+    } else {
+      // 不存在该筛选组名，新增
+      if (urlSearch.indexOf(`?`) < 0) newUrl += `?`
+      else newUrl += `&`
+      newUrl += `filter.tag=${filterName}:${filterOneValue}`
+    }
+    return newUrl;
+  }
+
+  /**
+  * 为Url删除单个筛选项（传参数必须 handle 处理过）
+  * 例如从 color:white,blue 中只删除 blue 项
+  * @return {String} newUrl
+  */
+  function _removeValueToFilter(filterName, filterOneValue) {
+    const urlSearch = window.location.search;
+    let newUrl = window.location.origin + window.location.pathname;
+    if (urlSearch.length <= 1) return newUrl;
+
+    const params = urlSearch.split("?")[1].split("&");
+    newUrl = window.location.origin + window.location.pathname;
+    // 遍历找出单个筛选项，并删除，重新组合 url params
+    let index = 0;
+    for (let param of params) {
+      const paramKey = param.split('=')[0];
+      if (paramKey == `filter.tag`) {
+        const paramfilterName = param.split('=')[1].split(':')[0];
+        if (paramfilterName == filterName) {
+          // 找到你所在的筛选组了
+          const paramfilterValues = param.split('=')[1].split(':')[1];
+          let newFilterValuesStr = '';
+          let n = 0;
+          for (let value of paramfilterValues.split(",")) {
+            if (value == filterOneValue) continue; // 就是你了，不带你玩了（就等同于把它删了）
+            if (n != 0) newFilterValuesStr += ",";
+            newFilterValuesStr += value;
+            n++;
+          }
+          // 有可能删除后筛选组是空的，那这个param就可以消失了
+          if (n == 0) continue;
+          else param = `${paramKey}=${paramfilterName}:${newFilterValuesStr}`;
+        }
+      }
+      if (index == 0) newUrl += `?${param}`;
+      else newUrl += `&${param}`;
+      index++;
+    }
+    return newUrl;
+  }
+
+
+  /**
+  * 获取Url参数值
+  * @param {String} url 
+  * @param {String} paramKey 
+  * @returns {String} new url
+  */
+  function _getUrlQueryString(url, paramKey) {
+    let urlObj = new URL(url);
+    var reg = new RegExp("(^|&)" + paramKey + "=([^&]*)(&|$)", "i");
+    var r = urlObj.search.substr(1).match(reg);
+    if (r != null) {
+      return (r[2]);
+    }
+    return null;
+  }
+
+  /** 添加Url参数 */
+  function _addUrlParam(url, paramKey, paramValue) {
+    var pattern = paramKey + '=([^&]*)';
+    var replaceText = paramKey + '=' + paramValue;
+    if (url.match(pattern)) {
+      var tmp = '/(' + paramKey + '=)([^&]*)/gi';
+      tmp = url.replace(eval(tmp), replaceText);
+      return tmp;
+    } else {
+      if (url.match('[\?]')) {
+        return url + '&' + replaceText;
+      } else {
+        return url + '?' + replaceText;
+      }
+    }
+  }
+
+  /** 替换Url参数值 */
+  function _replaceUrlParamValue(url, paramKey, paramValue) {
+    let oUrl = url.toString();
+    let re = eval('/(' + paramKey + '=)([^&]*)/gi');
+    let nUrl = oUrl.replace(re, paramKey + '=' + paramValue);
+    return nUrl;
+  }
+
+  /** 删除Url参数 */
+  function _removeUrlParam(url, paramKey) {
+    let str = "";
+    if (url.indexOf('?') != -1) {
+      str = url.substr(url.indexOf('?') + 1);
+    }
+    else {
+      return url;
+    }
+    let arr = "";
+    let returnurl = "";
+    let setparam = "";
+    if (str.indexOf('&') != -1) {
+      arr = str.split('&');
+      for (let i in arr) {
+        if (arr[i].split('=')[0] != paramKey) {
+          returnurl = returnurl + arr[i].split('=')[0] + "=" + arr[i].split('=')[1] + "&";
+        }
+      }
+      return url.substr(0, url.indexOf('?')) + "?" + returnurl.substr(0, returnurl.length - 1);
+    }
+    else {
+      arr = str.split('=');
+      if (arr[0] == paramKey) {
+        return url.substr(0, url.indexOf('?'));
+      }
+      else {
+        return url;
+      }
+    }
+  }
+</script>
+
+
+
+<script type="text/javascript">
+  $(".topsearchbox-button").height($(".topsearchbox-input").outerHeight());
+  $('.topsearchbox-input').keypress(function(e) {    
+     if(e.which == 13) {  
+    manualpageSearch();  
+     }  
+  }); 
+$(".topsearchbox-button").click(function(){
+  manualpageSearch(); 
+});
+
+function manualpageSearch(){
+    console.log("run");
+  var txt=$('.topsearchbox-input').val().toLowerCase();
+  var blank = true;
+  if (txt != ""){
+  var t = txt.split(" ");
+    $('.collection_list_box .mulca-conitsp-proitem').css("display","none");
+       $('.collection_list_box .mulca-conitsp-proitem').each(function(){
+
+       for (var i=0; i<t.length; i++){
+      if(t[i]!=""){
+        blank =false;
+        if ($(this).data("title").toLowerCase().indexOf(t[i])>=0 || $(this).data("tags").toLowerCase().indexOf(t[i])>=0){     
+                
+       $(this).css("display","block");
+                }
+        }
+       }
+       
+      });
+
+      var lastnumber = $('.collection_list_box .mulca-conitsp-proitem').filter(":visible").length;
+      if(lastnumber<=1){
+        $(".collection-pronumber").html(lastnumber+" Item Found")
+      }else{
+        $(".collection-pronumber").html(lastnumber+" Items Found")
+      }
+    if ( blank == true){
+              $('.collection_list_box .mulca-conitsp-proitem').css("display","block");
+            if({{ collection.products_count }}<=1){
+                $(".collection-pronumber").html("{{collection.products_count}} Item Found")
+              }else{
+                $(".collection-pronumber").html("{{collection.products_count}} Items Found")
+              }
+      }
+}else{
+      $('.collection_list_box .mulca-conitsp-proitem').css("display","block");
+      if({{collection.products_count}}<=1){
+        $(".collection-pronumber").html("{{collection.products_count}} Item Found")
+      }else{
+        $(".collection-pronumber").html("{{collection.products_count}} Items Found")
+      }
+}
+
+var lastnumber = $('.collection_list_box .mulca-conitsp-proitem').filter(":visible").length;
+ if(lastnumber >= {{ section.settings.rows | times:section.settings.grid  }}){
+  $(".collection_list_box .pagination").show();
+}else{
+  $(".collection_list_box .pagination").hide();
+}
+
+  
+}
+
+if($(window).width() < 551){
+ $(".topsearchbox-input").attr("placeholder","Search data packs");
+} 
+
+</script>
+
+
+{% schema %}
+{
+  "name": "Collection pages (or)",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "title",
+      "default": "Stay connected, wherever you travel or work"
+    },{
+      "type": "select",
+      "id": "grid",
+      "label": "Products per row (grid only)",
+      "default": "3",
+      "options": [
+        {
+          "value": "2",
+          "label": "2"
+        },
+        {
+          "value": "3",
+          "label": "3"
+        },
+        {
+          "value": "4",
+          "label": "4"
+        },
+        {
+          "value": "5",
+          "label": "5"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "rows",
+      "label": "Rows per page (grid only)",
+      "default": "2",
+      "options": [
+        {
+          "value": "2",
+          "label": "2"
+        },
+        {
+          "value": "3",
+          "label": "3"
+        },
+        {
+          "value": "4",
+          "label": "4"
+        },
+        {
+          "value": "5",
+          "label": "5"
+        },
+        {
+          "value": "6",
+          "label": "6"
+        },
+        {
+          "value": "7",
+          "label": "7"
+        },
+        {
+          "value": "8",
+          "label": "8"
+        }
+      ]
+    }, {
+      "type": "color",
+      "id": "price_color",
+      "label": "price color"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "filter_category",
+      "name": "Filter Category",
+      "settings": [
+        {
+          "type": "text",
+          "id": "category_name",
+          "label": "Category Name",
+          "default": "category"
+        },
+        {
+          "type": "text",
+          "id": "tag_list",
+          "label": "Tag List",
+          "info": "Divide Tags with ',' "
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

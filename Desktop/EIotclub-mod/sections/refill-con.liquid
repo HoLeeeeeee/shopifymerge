@@ -1,0 +1,232 @@
+{% liquid
+    assign secid = section.id | split:"__" 
+    assign secidlast = secid[1] | replace: "-","_"
+  %}
+    <div class="refillcon-outbox" id="refillcon-{{ secidlast }}">
+
+     <div class="refillcon-left">
+        {% if section.settings.image  %}
+            <div class="refillcon-leftimg{% if section.settings.image  %} hide-mb{% endif %}"><img src="{{ section.settings.image | img_url:'master' }}" alt=" " /></div>
+        {% endif %}
+       {% if section.settings.imagemb  %}
+        <div class="refillcon-leftimg hide-pc"><img  src="{{ section.settings.imagemb | img_url:'master' }}"  alt=" " /></div>
+      {% endif %}
+      <div class="refillcon-leftiframe">
+        {% if section.settings.imagemb != blank %}
+         {{ section.settings.iframe }}
+        {% endif %}
+        {% if section.settings.topimage  %}
+            <div class="refillcon-liftopimg"><img  src="{{ section.settings.topimage | img_url:'master' }}"  alt=" " /></div>
+        {% endif %}
+      </div>  
+    </div>    
+
+    <div class="refillcon-right">
+      <div class="refillcon-rightbotbox">
+        <div class="refillcon-rbotbox-text">
+            {% if section.settings.title != blank %}
+                <div class="refillcon-rbotbox-title">{{ section.settings.title }}</div> 
+            {% endif %}
+            {% if section.settings.content != blank %}
+                <div class="refillcon-rbotbox-cont">{{ section.settings.content }}</div> 
+            {% endif %}
+            <div class="refillcon-rbotboxbtns">
+             {% if section.settings.button_text1 != blank %}<span class="refillcon-btn01 bthho"><span>{{ section.settings.button_text1 }}</span></span>{% endif %}
+             {% if section.settings.button_url2 %}<a href="{{ section.settings.button_url2 }}" class="refillcon-btn02">{{ section.settings.button_text2 }}</a>{% endif %}
+            </div>
+        </div>
+     
+       <div class="refillcon-rbotbox-fixed">
+        <div class="refillcon-rbfixedarrow"><img alt src="https://cdn.shopify.com/s/files/1/0558/0708/2629/files/refillicon_1.png?v=1715913247"/></div>
+        <div class="refillcon-rbfixedcon">{{ section.settings.bottomtitle }}<img alt src="https://cdn.shopify.com/s/files/1/0558/0708/2629/files/refillicon_2.png?v=1715913249"/></div> 
+       </div>
+
+      </div>
+      <div class="refillcon-rbotbox-outsteps">
+      <div class="refillcon-rbotbox-steps">
+        {% if section.settings.steptitle != blank %}
+            <div class="refillcon-rbsteptitle">{{ section.settings.steptitle }}</div> 
+        {% endif %}
+        <div class="refillcon-rbstep-con">
+            {% if section.settings.step01 != blank %}
+             <div class="refillcon-rbstep-constep">{{ section.settings.step01 }}</div> 
+            {% endif %}
+            {% if section.settings.step02 != blank %}
+                <div class="refillcon-rbstep-constep">{{ section.settings.step02 }}</div> 
+               {% endif %}
+               {% if section.settings.step03 != blank %}
+                <div class="refillcon-rbstep-constep">{{ section.settings.step03 }}</div> 
+               {% endif %}
+               {% if section.settings.step04 != blank %}
+                <div class="refillcon-rbstep-constep">{{ section.settings.step04 }}</div> 
+               {% endif %}
+               {% if section.settings.step05 != blank %}
+                <div class="refillcon-rbstep-constep">{{ section.settings.step05 }}</div> 
+               {% endif %}
+        </div>
+        <span class="refill-stepdel">X</span>
+      </div>
+      </div>
+
+      <div class="refillcon-rbotbox-outfaqs">
+      <div class="refillcon-rbotbox-faqs">
+        {% if section.settings.faqtitle != blank %}
+            <div class="refillcon-rbfaqs-title">{{ section.settings.faqtitle }}</div> 
+           {% endif %}
+           <div class="refillcon-rbfaqsotb"> 
+        {% for block in section.blocks %} 
+         <div class="refillcon-rbfaqs-item">
+            {% if block.settings.title != blank %}
+                <div class="refillcon-rbfaqs-itemtitle">{{ block.settings.title }}<img alt="" src="https://cdn.shopify.com/s/files/1/0558/0708/2629/files/bkaiirgi.png?v=1713173182"></div> 
+            {% endif %}
+            {% if block.settings.content != blank %}
+                <div class="refillcon-rbfaqs-itemcon">{{ block.settings.content }}</div> 
+            {% endif %}
+        </div>
+        {% endfor %}
+        </div>
+        <span class="refill-stepdel">X</span>
+      </div>
+      </div>
+
+    </div>
+   
+        
+
+
+</div>
+
+  <script>
+  $(function(){
+    $("body #MainContent").bind("click",function(evt){ 
+     if($(evt.target).closest(".refillcon-rbotbox-faqs").length==0&&$(evt.target).closest(".refillcon-rbotbox-steps").length==0&&$(evt.target).closest(".refillcon-rightbotbox").length==0)
+        { 
+        $(".refillcon-rbotbox-outfaqs,.refillcon-rbotbox-outsteps").hide();   
+        } 
+      }); 
+
+  $(".refillcon-rbfaqs-itemtitle").click(function(){
+    $(".refillcon-rbfaqs-itemcon").hide();
+    $(this).parent().siblings().find(".refillcon-rbfaqs-itemtitle").removeClass("active");
+   $(this).addClass("active").next(".refillcon-rbfaqs-itemcon").stop().slideDown();
+});
+  $(".refillcon-btn01").click(function(){
+     $(".refillcon-rbotbox-outsteps").show();
+  });
+  $(".refillcon-rbotbox-fixed").click(function(){
+    $(".refillcon-rbotbox-outfaqs").show();
+ });
+  $(".refill-stepdel").click(function(){
+    $(".refillcon-rbotbox-outfaqs,.refillcon-rbotbox-outsteps").hide();   
+ });
+
+});
+
+</script>
+  
+  {% schema %}
+  {
+    "name": "Refill Content",
+    "settings": [
+       {
+        "type": "image_picker",
+        "id": "image",
+        "label": "image"
+      },{
+        "type": "image_picker",
+        "id": "imagemb",
+        "label": "image(mobile)"
+      },{
+        "type": "image_picker",
+        "id": "topimage",
+        "label": "topbar image"
+      },{
+        "type": "html",
+        "id": "iframe",
+        "label": "iframe"
+      },{
+        "type": "text",
+        "id": "title",
+        "label": "title"
+      },{
+          "type": "richtext",
+          "id": "content",
+          "label": "content"
+        },{
+          "type": "text",
+          "id": "button_text1",
+          "label": "button_text1"
+        },{
+          "type": "url",
+          "id": "button_url1",
+          "label": "button_url1"
+        },{
+            "type": "text",
+            "id": "button_text2",
+            "label": "button_text2"
+          },{
+            "type": "url",
+            "id": "button_url2",
+            "label": "button_url2"
+          },{
+            "type": "header",
+            "content": "Steps"
+          },{
+            "type": "text",
+            "id": "steptitle",
+            "label": "step title"
+          },{
+              "type": "richtext",
+              "id": "step01",
+              "label": "step01"
+            },{
+                "type": "richtext",
+                "id": "step02",
+                "label": "step02"
+              },{
+                "type": "richtext",
+                "id": "step03",
+                "label": "step03"
+              },{
+                "type": "richtext",
+                "id": "step04",
+                "label": "step04"
+              },{
+                "type": "richtext",
+                "id": "step05",
+                "label": "step05"
+              },{
+                "type": "text",
+                "id": "bottomtitle",
+                "label": "bottom title"
+              },{
+                "type": "text",
+                "id": "faqtitle",
+                "label": "faq title"
+              }
+    ],
+        "blocks": [
+        {
+          "type": "block",
+          "name": "block",
+          "settings": [
+         {
+          "type": "text",
+          "id": "title",
+          "label": "title"
+        },{
+          "type": "richtext",
+          "id": "content",
+          "label": "content"
+        }
+          ]
+        }
+      ],
+      "presets": [
+        {
+          "name": "Refill Content",
+          "category": "HO-layout"
+        }
+      ]
+  }
+  {% endschema %}

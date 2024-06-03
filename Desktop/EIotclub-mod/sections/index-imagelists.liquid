@@ -1,0 +1,141 @@
+{% liquid
+  assign secid = section.id | split:"__" 
+  assign secidlast = secid[1] | replace: "-","_"
+%}
+
+<div class="indexbloglist-outbox">
+  <div class="contain-index">
+  <div class="indexbloglist-box">
+
+  <div class="indexbloglist-box-top animate-ele"> 
+  <div class="indexbloglist-tibox">
+  {%- if section.settings.title != blank -%}
+    <div class="indexbloglist-title">{{ section.settings.title }}  {%- if section.settings.btntext != blank -%}
+    <a class="indexbloglist-btn" href="{{ section.settings.btnurl }}">{{ section.settings.btntext }}</a>
+  {%- endif -%}</div> 
+  {%- endif -%}
+
+  <div class="blogindsbtn-box">
+ 
+        <div class="swiper-button-prev blogindsbtn blogprev-{{ secidlast }}"><svg width="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="25" cy="25" r="24" stroke="currentColor" stroke-width="2"/>
+<path d="M26.2939 19.2939L20.2939 25.2939L26.2939 31.2939" stroke="currentColor" stroke-width="2"/>
+</svg>
+</div>
+       <div class="swiper-button-next blogindsbtn blognext-{{ secidlast }}"><svg width="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="25" cy="25" r="24" transform="matrix(-1 0 0 1 50 0)" stroke="currentColor" stroke-width="2"/>
+<path d="M23.7061 19.2939L29.7061 25.2939L23.7061 31.2939" stroke="currentColor" stroke-width="2"/>
+</svg>
+</div>
+  </div>
+  
+    </div> 
+  </div>
+    <div class="indexbloglist-box-bottom swiper animate-ele" id="ibl-boxbottom-{{ secidlast }}">
+          <div class="swiper-scrollbar hide-pc swiper-scrollbar-{{ secidlast }}"></div>
+          <div class="swiper-wrapper">
+      {% for block in section.blocks %}
+       <div class="swiper-slide">        
+         <div class="ibl-boxbottom-item">
+        {% if block.settings.url  %}
+        <a href="{{  block.settings.url  }}">
+        {% endif %}
+        {% if block.settings.title != blank %}
+        <div class="ibl-boxbottom-title">{{ block.settings.title }}</div> 
+        {% endif %}
+        {% if block.settings.content != blank %}
+        <div class="ibl-boxbottom-content">{{ block.settings.content }}</div> 
+        {% endif %}
+        {% if block.settings.image  %}
+          <div class="ibl-boxbottom-image"><img src="{{ block.settings.image | img_url:'master' }}" alt="" /></div>
+         {% endif %}
+        {% if block.settings.url  %}
+        </a>
+        {% endif %}
+         </div>
+       </div>
+      {% endfor %}
+          </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+
+
+<script> 
+  var ibl_{{ secidlast }} = new Swiper('#ibl-boxbottom-{{ secidlast }}',{
+    slidesPerView : 3,
+    spaceBetween: '2.2%',
+    navigation: {
+		nextEl: '.blognext-{{ secidlast }}',
+		prevEl: '.blogprev-{{ secidlast }}',
+	},
+     scrollbar: {
+      el: '.swiper-scrollbar-{{ secidlast }}',dragSize:89
+    },
+    breakpoints: { 
+      10: {  
+       slidesPerView : 1.5, spaceBetween: '3.5%',
+      },
+      550: {  
+       slidesPerView : 2,
+      },
+      769: { 
+        slidesPerView: 3,
+      }
+    }
+  })
+  
+</script>
+{% schema %}
+  {
+   "name": "Image List",
+  "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "title"
+      },{
+        "type": "text",
+        "id": "btntext",
+        "label": "btntext"
+      },{
+        "type": "url",
+        "id": "btnurl",
+        "label": "btnurl"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "block",
+        "settings": [
+       {
+        "type": "text",
+        "id": "title",
+        "label": "title"
+      },{
+        "type": "richtext",
+        "id": "content",
+        "label": "content"
+      },{
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },{
+        "type": "url",
+        "id": "url",
+        "label": "url"
+      }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Image List",
+        "category": "HO-layout"
+      }
+    ]
+  }
+{% endschema %}

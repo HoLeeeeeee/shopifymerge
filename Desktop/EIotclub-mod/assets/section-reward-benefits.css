@@ -1,0 +1,251 @@
+.benefits_block-wrapper {
+    display: grid;
+    justify-content: space-between;
+    padding-top: 6vw;
+    grid-template-rows: 1fr;
+    gap: 8px;
+}
+
+@media (min-width: 800px) {
+    .benefits_block-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.benefits-item {
+    background: #E8E8E8;
+}
+
+.reward-benefits-left .benefits-item01 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px 0px 0px 0px;
+    padding: 3vw 4vw 2vw;
+    margin-bottom: 8px;
+}
+
+.reward-benefits-left .benefits-item01 .text-wrapper {
+    width: 53%;
+}
+
+.reward-benefits-left .benefits-item01 .img-wrapper {
+    width: 42%;
+    margin-top: -5.8vw;
+}
+
+.reward-benefits-left .benefits-left-bottom {
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+.reward-benefits-left .benefits-item02 {
+    border-radius: 0px 0px 0px 20px;
+    background: linear-gradient(270deg, #89E0B3 0%, #51D28F 51%, #51D28F 100%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.reward-benefits-left .benefits-item02 .text-wrapper {
+    margin-top: 1.5vw;
+}
+
+.reward-benefits-left .benefits-item02 img {
+    vertical-align: top;
+    /* border-radius: 0px 0px 0px 20px; */
+    max-width: 86%;
+}
+
+.reward-benefits-left .benefits-left-bottom-right {
+    display: grid;
+}
+
+.reward-benefits-left .benefits-left-bottom-right .benefits-item {
+    display: flex;
+    padding: 1.5vw;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reward-benefits-left .benefits-left-bottom-right .benefits-item .text-wrapper {
+    width: 60%;
+}
+
+.reward-benefits-left .benefits-left-bottom-right .benefits-item03 {
+    margin-bottom: 8px;
+}
+
+.reward-benefits-right {
+    display: grid;
+    gap: 8px;
+    grid-template-rows: 3fr 4fr;
+}
+
+.reward-benefits-right .benefits-right-top {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+.reward-benefits-right .benefits-right-top .benefits-item {
+    text-align: center;
+    padding: 1.2vw 1.8vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.reward-benefits-right .benefits-right-top .benefits-item .text-wrapper {
+    margin-bottom: 10%;
+}
+
+.reward-benefits-right .benefits-right-top .benefits-item02 {
+    border-radius: 0px 20px 0px 0px;
+}
+
+.reward-benefits-right .benefits-right-top .benefits-item02 .item-tip {
+    color: #959595;
+    font-size: 16px;
+}
+
+.reward-benefits-right .benefits-right-bottom {
+    background: #e8e8e8;
+    border-radius: 0px 0px 20px 0px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.reward-benefits-right .benefits-right-bottom .benefits-item03 .text-wrapper {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 1.5vw;
+}
+
+.reward-benefits-right .benefits-right-bottom .benefits-item03 .text-wrapper .item-text {
+    font-weight: 500;
+}
+
+.reward-benefits-right .benefits-right-bottom .benefits-item03 .img-wrapper {
+    width: 35%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.reward-benefits-right .benefits-right-bottom .benefits-item03 .img-wrapper img {
+    border-radius: 0px 0px 20px 0px;
+    vertical-align: top;
+    width: 100%;
+}
+
+.benefits_block-wrapper .benefits-item .item-title {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.benefits_block-wrapper .benefits-item .item-text {
+    font-size: 18px;
+    padding: 0.5vw 0;
+    line-height: 1.5;
+    font-weight: 600;
+}
+
+@media (max-width: 1700px) {
+    .benefits_block-wrapper .benefits-item .item-title {
+        font-size: 1.46vw;
+    }
+
+    .benefits_block-wrapper .benefits-item .item-text {
+        font-size: 1vw;
+    }
+
+    .reward-benefits-right .benefits-right-top .benefits-item02 .item-tip {
+        font-size: 0.9vw;
+    }
+}
+
+@media (max-width: 1280px) {
+    .benefits_block-wrapper .benefits-item .item-text {
+        font-size: 1.2vw;
+    }
+
+    .reward-benefits-right .benefits-right-top .benefits-item02 .item-tip {
+        font-size: 1.1vw;
+    }
+}
+
+@media (max-width: 1000px) {
+    .reward-benefits-right .benefits-right-top .benefits-item {
+        padding: 1vw 2vw 0;
+    }
+
+    .reward-benefits-right .benefits-right-top .benefits-item img {
+        max-height: 70%;
+    }
+
+    .reward-benefits-left .benefits-left-bottom-right .benefits-item .img-wrapper {
+        text-align: center;
+    }
+
+    .reward-benefits-left .benefits-left-bottom-right .benefits-item .img-wrapper img {
+        max-width: 70%;
+    }
+}
+
+@media (max-width: 799px) {
+    .reward-benefits-left .benefits-item01 {
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    .benefits_block-wrapper .benefits-item .item-text,
+    .benefits_block-wrapper .benefits-item .item-title {
+        font-size: 3.3vw;
+    }
+
+    .reward-benefits-left .benefits-left-bottom-right .benefits-item {
+        padding: 2.5vw;
+    }
+
+    .reward-benefits-left .benefits-left-bottom-right .benefits-item .text-wrapper {
+        width: 70%;
+    }
+
+    .reward-benefits-left .benefits-item01 .text-wrapper {
+        width: 56%;
+    }
+
+    .reward-benefits-left .benefits-item01 .img-wrapper {
+        width: 34%;
+        margin-top: -8vw;
+    }
+
+    .reward-benefits-left .benefits-item01 .item-title{font-size: 4.5vw;}
+
+    .reward-benefits-right .benefits-right-top .benefits-item02 .item-tip {
+        font-size: 3vw;
+    }
+    .reward-benefits-right .benefits-right-bottom .benefits-item03 .text-wrapper .item-text{ font-size: 2.6vw;}
+
+    .reward-benefits-right .benefits-right-bottom .benefits-item03 .text-wrapper{ padding-left:2.5vw;}
+    .reward-benefits-left .benefits-item02,
+    .reward-benefits-right .benefits-right-top .benefits-item02{ border-radius: 0;}
+}
+
+@media (max-width: 799px) and (min-width: 551px) {
+    .reward-benefits-left .benefits-left-bottom-right .benefits-item .img-wrapper img {
+        max-width: 100%;
+    }
+    .reward-benefits-right .benefits-right-top .benefits-item img {
+        max-height: 80%;
+    }
+}

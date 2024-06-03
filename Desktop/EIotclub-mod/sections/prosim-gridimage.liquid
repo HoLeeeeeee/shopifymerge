@@ -1,0 +1,147 @@
+{% liquid
+  assign secid = section.id | split:"__" 
+  assign secidlast = secid[1] | replace: "-","_"
+%}
+  <div class="contain-index">
+<div class="simgridimg-outbox">
+   {% if section.settings.title != blank %}
+    <div class="simgridimg-title animate-ele">{{ section.settings.title }}</div>
+   {% endif %}
+   {% if section.settings.content != blank %}
+    <div class="simgridimg-content animate-ele">{{ section.settings.content }}</div>
+   {% endif %}
+   {% if section.settings.url %}
+    <a href="{{ section.settings.url }}" class="simgridimg-btn animate-ele">{{ section.settings.btntext }}</a>
+   {% endif %}
+  <div class="simgridimg_botbox animate-ele hide-mb">
+      {% for block in section.blocks %}
+       <div class="simgridimg_conitem simgridimgitem-{{ forloop.index }}">
+      {% if forloop.first %}   
+     {% if block.settings.image  %}
+      <div class="simgridimgitem-img simgridimgitem-imgfir"><img src="{{ block.settings.image | img_url:'master' }}" alt=" " /></div>
+     {% endif %}
+      {% else %}
+     {% if block.settings.image  %}
+      <div class="simgridimgitem-img simgridimgitem-imgnofir" style="background-image:url({{ block.settings.image | img_url:'master' }})"></div>
+     {% endif %}
+     {% endif %}
+         
+       {% if block.settings.title != blank %}
+    <div class="simgridimgitem-title" style="color:{{ block.settings.color }}">{{ block.settings.title }}</div>
+   {% endif %}   
+      </div>  
+      {% endfor %}
+  </div>
+
+  <div class="simgridimg_botmbbox animate-ele hide-pc">
+    <div class="ssimgridimg-{{ secidlast }} swiper">
+      <div class="swiper-scrollbar hide-pc swiper-scrollbar-{{ secidlast }}"></div>
+      <div class="swiper-wrapper"> 
+    {% for block in section.blocks %}
+    <div class="swiper-slide">
+     <div class="simgridimg_conitem">
+   {% if block.settings.imagemb  %}
+    <div class="simgridimgitem-img simgridimgitem-imgfir"><img src="{{ block.settings.imagemb | img_url:'master' }}" alt=" " /></div>
+   {% endif %}      
+   {% if block.settings.title != blank %}
+  <div class="simgridimgitem-title" style="color:{{ block.settings.color }}">{{ block.settings.title }}</div>
+ {% endif %}   
+    </div>  
+    </div>
+    {% endfor %}
+    </div>
+    </div>
+</div>
+
+
+  
+</div>
+</div>
+
+<script>   
+$(function(){
+  if($(window).width() < 769){
+    var ssimgridimg_{{secidlast}} = new Swiper ('.ssimgridimg-{{ secidlast }}', {
+  slidesPerView : 2,
+  spaceBetween: 9,
+  observer: true,  //开启动态检查器，监测swiper和slide
+  observeParents: true, 
+  autoHeight:true,
+   scrollbar: {
+    el: '.swiper-scrollbar-{{ secidlast }}',dragSize:89
+  },
+  breakpoints: { 
+    10: {  
+     slidesPerView : 1.5, spaceBetween: 9,
+    },
+    550: { 
+     slidesPerView : 2, spaceBetween: 20,
+    }
+  }
+
+});
+  
+}
+})
+
+</script>
+{% schema %}
+  {
+   "name": "Grid Block",
+  "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "title"
+      },{
+        "type": "richtext",
+        "id": "content",
+        "label": "content"
+      },{
+        "type": "text",
+        "id": "btntext",
+        "label": "button text"
+      },{
+        "type": "url",
+        "id": "url",
+        "label": "button url"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "block",
+        "name": "block",
+        "settings": [
+       {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },{
+        "type": "image_picker",
+        "id": "imagemb",
+        "label": "Image(mobile)"
+      },{
+        "type": "text",
+        "id": "title",
+        "label": "title"
+      },{
+        "type": "url",
+        "id": "url",
+        "label": "url"
+      },{
+        "type": "color",
+        "id": "color",
+        "label": "title color",
+        "default": "#282828"
+      }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Grid Block",
+        "category": "HO-layout"
+      }
+    ]
+  }
+{% endschema %}

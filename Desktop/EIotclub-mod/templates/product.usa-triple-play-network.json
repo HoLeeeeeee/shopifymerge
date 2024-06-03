@@ -1,0 +1,1371 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "aa227a16-9093-46cc-a70c-47d7b1f7d41f": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_logistics_policy": false
+          }
+        },
+        "b303c7cf-b133-44aa-8935-2b127ee43d47": {
+          "type": "new-discount",
+          "disabled": true,
+          "settings": {
+            "text": "1",
+            "discount": "2",
+            "show_product_variant": ""
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "button",
+            "product_dynamic_variants_enable": true,
+            "color_swatches": false,
+            "offer_icon": ""
+          }
+        },
+        "91f72013-96b8-48a3-ba6a-7a2af9ee3e7a": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "surface_pickup_enable": true
+          }
+        },
+        "sales_point": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "tag",
+            "text": "10-Day Easy Returns, 10-Year Quality Guarantee"
+          }
+        },
+        "inventory_status": {
+          "type": "inventory_status",
+          "disabled": true,
+          "settings": {
+            "inventory_threshold": 10,
+            "inventory_transfers_enable": true
+          }
+        },
+        "separator": {
+          "type": "separator",
+          "settings": {}
+        },
+        "5c7182c1-686e-436e-81d9-32755c13d6cd": {
+          "type": "text",
+          "settings": {
+            "text": "📦 🚀 Shipping today, estimated delivery in 3-5 days!"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "is_tab": false
+          }
+        },
+        "tab": {
+          "type": "tab",
+          "disabled": true,
+          "settings": {
+            "title": "Order Now for Fast 2-3 Day Delivery!",
+            "content": "",
+            "page": ""
+          }
+        },
+        "contact": {
+          "type": "contact",
+          "disabled": true,
+          "settings": {
+            "title": "Ask a question",
+            "phone": false
+          }
+        },
+        "share": {
+          "type": "share",
+          "disabled": true,
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "aa227a16-9093-46cc-a70c-47d7b1f7d41f",
+        "price",
+        "b303c7cf-b133-44aa-8935-2b127ee43d47",
+        "variant_picker",
+        "91f72013-96b8-48a3-ba6a-7a2af9ee3e7a",
+        "buy_buttons",
+        "sales_point",
+        "inventory_status",
+        "separator",
+        "5c7182c1-686e-436e-81d9-32755c13d6cd",
+        "description",
+        "tab",
+        "contact",
+        "share"
+      ],
+      "settings": {
+        "sku_enable": false,
+        "image_size": "medium",
+        "product_zoom_enable": true,
+        "thumbnail_position": "below",
+        "thumbnail_height": "flexible",
+        "thumbnail_arrows": true,
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "b1362342-b3a7-4960-b540-4e649fe4c9b3": {
+      "type": "new-image-list",
+      "blocks": {
+        "5fe6154d-dff7-4ed1-b06b-c186882bf18a": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/icon-03-52x52-0428.png",
+            "image_mobile": "shopify:\/\/shop_images\/icon-03-52x52-0428.png",
+            "text": "Triple Play Network",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "9c7674e4-755e-486f-a2f4-516d3a978910": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/icon-02-52x52-0428.png",
+            "image_mobile": "shopify:\/\/shop_images\/icon-02-52x52-0428.png",
+            "text": "4G High-Speed Data",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "ecd85ff6-5f46-4ecf-95fe-b566c0e6402d": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/icon-01-52x52-0428.png",
+            "image_mobile": "shopify:\/\/shop_images\/icon-01-52x52-0428.png",
+            "text": "No Extra Fees",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "5d0471a8-0b9c-47f7-965d-43e2bae5b5ca": {
+          "type": "large_banner",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/icon-04-52x52-0428.png",
+            "image_mobile": "shopify:\/\/shop_images\/icon-04-52x52-0428.png",
+            "text": "Compatible and Convenient",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 15,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        }
+      },
+      "block_order": [
+        "5fe6154d-dff7-4ed1-b06b-c186882bf18a",
+        "9c7674e4-755e-486f-a2f4-516d3a978910",
+        "ecd85ff6-5f46-4ecf-95fe-b566c0e6402d",
+        "5d0471a8-0b9c-47f7-965d-43e2bae5b5ca"
+      ],
+      "settings": {
+        "container": "1170",
+        "bg_color": "#f6f6f6",
+        "margin_bottom_mb": 32,
+        "margin_bottom_tab": 60,
+        "margin_bottom": 60,
+        "mg_top_mobile": 32,
+        "mg_top_tablet": 60,
+        "mg_top_desktop": 60,
+        "mobile_scroll": false,
+        "title": "",
+        "color_title": "",
+        "fontsize_title": 32,
+        "fontsize_title_mo": 24,
+        "margin_bottom_title": 40,
+        "margin_bottom_title_mo": 24,
+        "text": "",
+        "image_list_align": "center",
+        "row_box_num": "5",
+        "box_gap": 24,
+        "row_box_num_mobile": "3",
+        "box_gap_mobile": 24
+      }
+    },
+    "c21d6292-a45a-462d-86da-0e66b9caeb92": {
+      "type": "new-image-text-banner",
+      "settings": {
+        "max_width": "1300",
+        "page-width": false,
+        "border-radius": true,
+        "image_pc": "shopify:\/\/shop_images\/PC-topposter1200-0620.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/mobile-topposter1200-0620.jpg",
+        "content": "",
+        "content_left": 10,
+        "content_top": 10,
+        "content_left_mobile": 10,
+        "content_top_mobile": 10
+      }
+    },
+    "59df1900-a7e6-4b5f-9428-ce84805a1e83": {
+      "type": "featured-video",
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "divider": false
+      }
+    },
+    "sub": {
+      "type": "product-full-width",
+      "disabled": true,
+      "settings": {
+        "max_width": true
+      }
+    },
+    "ac195402-4ceb-475e-af0b-5886eb2d4c84": {
+      "type": "new-image-list",
+      "blocks": {
+        "b23818b2-7daf-4f1a-bd5b-4f84c8a23732": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_195410.png",
+            "text": "",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "a36a6cac-686b-4314-b299-8b502e7424df": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_195404.png",
+            "text": "",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "e663510b-ab8b-4bf2-8f81-e965fa93062f": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Frame_195411.png",
+            "text": "",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "c8529803-e330-4639-aa4d-c61fbb2d1f6d": {
+          "type": "large_banner",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/devices-brands4-3000616.jpg",
+            "text": "",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        }
+      },
+      "block_order": [
+        "b23818b2-7daf-4f1a-bd5b-4f84c8a23732",
+        "a36a6cac-686b-4314-b299-8b502e7424df",
+        "e663510b-ab8b-4bf2-8f81-e965fa93062f",
+        "c8529803-e330-4639-aa4d-c61fbb2d1f6d"
+      ],
+      "settings": {
+        "container": "container",
+        "bg_color": "",
+        "margin_bottom_mb": 0,
+        "margin_bottom_tab": 0,
+        "margin_bottom": 0,
+        "mg_top_mobile": 0,
+        "mg_top_tablet": 0,
+        "mg_top_desktop": 0,
+        "mobile_scroll": false,
+        "title": "Network Support by EIOTCLUB SIM Card",
+        "color_title": "",
+        "fontsize_title": 32,
+        "fontsize_title_mo": 24,
+        "margin_bottom_title": 40,
+        "margin_bottom_title_mo": 24,
+        "text": "",
+        "image_list_align": "center",
+        "row_box_num": "5",
+        "box_gap": 24,
+        "row_box_num_mobile": "3",
+        "box_gap_mobile": 24
+      }
+    },
+    "text-and-image": {
+      "type": "text-and-image",
+      "settings": {
+        "margin_bottom": 0,
+        "margin_bottom_mobile": 0,
+        "image": "shopify:\/\/shop_images\/01700500-0620.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "Superior Network Coverage",
+        "text": "<p>Experience exceptional network coverage with our 4G Data-Only Prepaid IoT SIM card. Stay reliably connected, even in remote and challenging industrial environments. Our SIM card ensures continuous, high-quality communication services worldwide. Rely on our robust and stable network connection wherever you are.<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "left",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "7e87da54-5271-41be-a457-8954b49ac77a": {
+      "type": "text-and-image",
+      "settings": {
+        "margin_bottom": 0,
+        "margin_bottom_mobile": 0,
+        "image": "shopify:\/\/shop_images\/700500-0720_2ece5797-27cf-440b-abd3-be920e20f54a.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "Data plans customized",
+        "text": "<p>Tailor your data plan with EIOTCLUB to meet your specific needs. Unlock a generous 24GB of high-speed data, valid for a year, ensuring seamless connectivity throughout. Experience 4G speeds on our reliable network. Stay effortlessly connected with EIOTCLUB, fulfilling all your diverse data requirements<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "right",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "170efe63-4f82-419e-a4a5-4ca2077bf548": {
+      "type": "text-and-image",
+      "settings": {
+        "margin_bottom": 0,
+        "margin_bottom_mobile": 0,
+        "image": "shopify:\/\/shop_images\/700500-0721.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "Flexible Prepaid SIM Cards",
+        "text": "<p>EIOTCLUB offers a flexible and convenient 4G data-only prepaid SIM card. Say goodbye to long-term contracts and monthly bills, and enjoy the freedom to stay connected on your terms. Whether you're a frequent traveler, or student, or prefer prepaid convenience, EIOTCLUB provides a stable connection with full control over usage and costs. <\/p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "left",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "text-and-image2": {
+      "type": "text-and-image",
+      "disabled": true,
+      "settings": {
+        "margin_bottom": 0,
+        "margin_bottom_mobile": 0,
+        "image": "shopify:\/\/shop_images\/PC-P2041-600x450-0426.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "Compatible and Convenient Data Service",
+        "text": "<p>Our SIM cards have been tested are a great choice for a variety of IoT devices, plus we offer easy-to-manage and affordable plans for various devices and you can easily renew your data plan anywhere anytime! This SIM kit is pre-cut in 3 sizes to fit any device: Standard, Micro and Nano sizes.<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "right",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "81a03bcb-8061-4cfd-b87c-9c6b0fbef019": {
+      "type": "text-and-image",
+      "disabled": true,
+      "settings": {
+        "margin_bottom": 0,
+        "margin_bottom_mobile": 0,
+        "image": "shopify:\/\/shop_images\/PC-P205-600x450-0426.jpg",
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "Online Support Provided",
+        "text": "<p>We will provide professional online ordering and online customer support to solve issues you encounter. Your satisfaction is our priority! Please message us if you have any questions and provide your SIM card number(Keep it) so we may better assist.<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "50",
+        "layout": "left",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "0fc87d58-ef57-4b43-97a6-d585f47d9072": {
+      "type": "new-image-text-banner",
+      "disabled": true,
+      "settings": {
+        "max_width": "970",
+        "page-width": false,
+        "border-radius": false,
+        "image_pc": "shopify:\/\/shop_images\/A_07_970600_0606.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/A_07_970600_0606.jpg",
+        "content": "",
+        "content_left": 10,
+        "content_top": 10,
+        "content_left_mobile": 10,
+        "content_top_mobile": 10
+      }
+    },
+    "86a3db03-9722-4d9d-9493-6c50e037998e": {
+      "type": "new-image-text-banner",
+      "disabled": true,
+      "settings": {
+        "max_width": "",
+        "page-width": false,
+        "border-radius": false,
+        "image_pc": "shopify:\/\/shop_images\/A_08_970300_0608.jpg",
+        "content": "",
+        "content_left": 10,
+        "content_top": 10,
+        "content_left_mobile": 10,
+        "content_top_mobile": 10
+      }
+    },
+    "bfa1124d-cfdb-49ec-b552-dba8ca0390a9": {
+      "type": "new-image-list",
+      "blocks": {
+        "a60a9109-cf61-42d2-ad44-8de254d7eac5": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/devices-1200-0620_5ce592f6-803c-4255-8c77-dc5e7d6a161b.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/mobile-devices1200742-0621_a809ea54-c188-4279-a099-ca2fb3171edb.jpg",
+            "text": "",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        }
+      },
+      "block_order": [
+        "a60a9109-cf61-42d2-ad44-8de254d7eac5"
+      ],
+      "settings": {
+        "container": "container",
+        "bg_color": "",
+        "margin_bottom_mb": 0,
+        "margin_bottom_tab": 40,
+        "margin_bottom": 0,
+        "mg_top_mobile": 0,
+        "mg_top_tablet": 40,
+        "mg_top_desktop": 20,
+        "mobile_scroll": false,
+        "title": "What devices does Prepaid SIM Card support?",
+        "color_title": "",
+        "fontsize_title": 32,
+        "fontsize_title_mo": 24,
+        "margin_bottom_title": 20,
+        "margin_bottom_title_mo": 20,
+        "text": "Our Prepaid SIM Card simplifies connecting IoT and M2M devices. <br>\nIt caters to various needs, such as solar cameras, trail cameras, routers, GPS trackers, and more. Our strong network coverage ensures high performance globally.",
+        "image_list_align": "center",
+        "row_box_num": "1",
+        "box_gap": 24,
+        "row_box_num_mobile": "1",
+        "box_gap_mobile": 24
+      }
+    },
+    "ad90730f-4770-4c60-99f8-15c71b82ca6b": {
+      "type": "new-image-text-banner",
+      "disabled": true,
+      "settings": {
+        "max_width": "1300",
+        "page-width": false,
+        "border-radius": true,
+        "image_pc": "shopify:\/\/shop_images\/A_04_970300_0615_02.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/customer-servive-7500621_ab1072cd-a196-491f-b017-18ba8903f77c.jpg",
+        "content": "",
+        "content_left": 0,
+        "content_top": 0,
+        "content_left_mobile": 0,
+        "content_top_mobile": 0
+      }
+    },
+    "4460c154-7087-40ac-96b7-310f13ac93f2": {
+      "type": "new-image-list",
+      "blocks": {
+        "84a8e90f-5fc3-4a78-aca1-c81bacfb2f61": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1686795603469.png",
+            "text": "1 card, 3 sizes. Punch out the right fit for your device.",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "eb0d4d13-3795-4265-9708-184ae8fdd147": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/A_03_step2_300.png",
+            "text": "Power off. Insert SIM. Switch on. Wait seconds.",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "ef285320-eea4-4389-9f65-9fd38f1a63e3": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/A_03_step3_300.png",
+            "text": "Customize your ideal data plan. Activate instantly and start using the service.",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "e1b50d41-86a2-4dec-9bb9-6076789f8437": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/A_03_step4_300.png",
+            "text": "Stay connected without interruption. Refill your data plan before it expires",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        }
+      },
+      "block_order": [
+        "84a8e90f-5fc3-4a78-aca1-c81bacfb2f61",
+        "eb0d4d13-3795-4265-9708-184ae8fdd147",
+        "ef285320-eea4-4389-9f65-9fd38f1a63e3",
+        "e1b50d41-86a2-4dec-9bb9-6076789f8437"
+      ],
+      "disabled": true,
+      "settings": {
+        "container": "container",
+        "bg_color": "",
+        "margin_bottom_mb": 40,
+        "margin_bottom_tab": 40,
+        "margin_bottom": 0,
+        "mg_top_mobile": 40,
+        "mg_top_tablet": 40,
+        "mg_top_desktop": 0,
+        "mobile_scroll": false,
+        "title": "Simple Activation",
+        "color_title": "",
+        "fontsize_title": 32,
+        "fontsize_title_mo": 24,
+        "margin_bottom_title": 40,
+        "margin_bottom_title_mo": 24,
+        "text": "",
+        "image_list_align": "center",
+        "row_box_num": "5",
+        "box_gap": 24,
+        "row_box_num_mobile": "3",
+        "box_gap_mobile": 24
+      }
+    },
+    "b1e2164d-49c9-4a42-95b9-8ed6763350fd": {
+      "type": "new-image-list",
+      "blocks": {
+        "e705b58d-a632-48a0-b04b-c704c8576444": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/app_1200_742-0802.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/aboutus-720x460-06.jpg",
+            "text": "",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        }
+      },
+      "block_order": [
+        "e705b58d-a632-48a0-b04b-c704c8576444"
+      ],
+      "settings": {
+        "container": "container",
+        "bg_color": "",
+        "margin_bottom_mb": 40,
+        "margin_bottom_tab": 40,
+        "margin_bottom": 0,
+        "mg_top_mobile": 40,
+        "mg_top_tablet": 40,
+        "mg_top_desktop": 0,
+        "mobile_scroll": false,
+        "title": "Manage your account with the EIOTCLUB app",
+        "color_title": "",
+        "fontsize_title": 32,
+        "fontsize_title_mo": 24,
+        "margin_bottom_title": 10,
+        "margin_bottom_title_mo": 24,
+        "text": "",
+        "image_list_align": "center",
+        "row_box_num": "1",
+        "box_gap": 24,
+        "row_box_num_mobile": "1",
+        "box_gap_mobile": 24
+      }
+    },
+    "801d87af-9793-4c59-bcf3-12abdedb9dcc": {
+      "type": "new-image-list",
+      "blocks": {
+        "070b1982-d908-41ca-8a16-3f8307f4d248": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PC-P401-600x540-0426.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/PC-P401-600x540-0426.jpg",
+            "text": "Insert the card into the device correctly",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "89ac2674-695b-4a4e-8651-ae763f033016": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PC-P402-600x540-0426.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/PC-P402-600x540-0426.jpg",
+            "text": "Restart the device",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "8a373407-7863-43a2-ae88-d332a5b2ae86": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/PC-P403-600x540-0426.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/PC-P403-600x540-0426.jpg",
+            "text": "Activate successful",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        }
+      },
+      "block_order": [
+        "070b1982-d908-41ca-8a16-3f8307f4d248",
+        "89ac2674-695b-4a4e-8651-ae763f033016",
+        "8a373407-7863-43a2-ae88-d332a5b2ae86"
+      ],
+      "settings": {
+        "container": "container",
+        "bg_color": "#f6f6f6",
+        "margin_bottom_mb": 32,
+        "margin_bottom_tab": 60,
+        "margin_bottom": 60,
+        "mg_top_mobile": 32,
+        "mg_top_tablet": 60,
+        "mg_top_desktop": 60,
+        "mobile_scroll": false,
+        "title": "Simple Activation",
+        "color_title": "",
+        "fontsize_title": 32,
+        "fontsize_title_mo": 24,
+        "margin_bottom_title": 40,
+        "margin_bottom_title_mo": 24,
+        "text": "",
+        "image_list_align": "center",
+        "row_box_num": "3",
+        "box_gap": 24,
+        "row_box_num_mobile": "1",
+        "box_gap_mobile": 24
+      }
+    },
+    "19a90b87-bfa8-4d25-8f05-e5d6e27d5ef3": {
+      "type": "new-image-list",
+      "blocks": {
+        "de71c8e1-0085-41a2-95c0-db80dab0d619": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1-500x500-0504.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/1-500x500-0504.jpg",
+            "text": "PTZ Camera",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "f89671d1-e1cd-43ff-af09-a00b6a6e51aa": {
+          "type": "large_banner",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/6-500x500-0504.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/6-500x500-0504.jpg",
+            "text": "Bullet Camera",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "58e78670-869f-4d10-83b9-34a98ad1a44c": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2-500x500-0504.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/2-500x500-0504.jpg",
+            "text": "PTZ Camera",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "57990966-b794-4e36-acd3-1f3596ac40e3": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/9-500x500-0515.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/9-500x500-0515.jpg",
+            "text": "PoC Radio",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "03f7783d-783a-4b13-ad2d-edc696ba0715": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/4-500x500-0504.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/4-500x500-0504.jpg",
+            "text": "4G Router",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "1cc3c4e1-6d41-4299-9acf-80a5b969aab6": {
+          "type": "large_banner",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/3-500x500-0504.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/3-500x500-0504.jpg",
+            "text": "Tracker",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        },
+        "9caceea6-5d37-4b35-a91b-1c20b69c86be": {
+          "type": "large_banner",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/8-500x500-0504.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/8-500x500-0504.jpg",
+            "text": "Industrial",
+            "link": "",
+            "content_font_size_pc": 16,
+            "content_line_height_pc": 16,
+            "content_letter_spacing_pc": 0,
+            "content_font_weight_pc": "400",
+            "content_font_size_mobile": 16,
+            "content_line_height_mobile": 16,
+            "content_letter_spacing_mobile": 0,
+            "content_font_weight_mobile": "400"
+          }
+        }
+      },
+      "block_order": [
+        "de71c8e1-0085-41a2-95c0-db80dab0d619",
+        "f89671d1-e1cd-43ff-af09-a00b6a6e51aa",
+        "58e78670-869f-4d10-83b9-34a98ad1a44c",
+        "57990966-b794-4e36-acd3-1f3596ac40e3",
+        "03f7783d-783a-4b13-ad2d-edc696ba0715",
+        "1cc3c4e1-6d41-4299-9acf-80a5b969aab6",
+        "9caceea6-5d37-4b35-a91b-1c20b69c86be"
+      ],
+      "settings": {
+        "container": "container",
+        "bg_color": "#ffffff",
+        "margin_bottom_mb": 0,
+        "margin_bottom_tab": 0,
+        "margin_bottom": 0,
+        "mg_top_mobile": 0,
+        "mg_top_tablet": 0,
+        "mg_top_desktop": 0,
+        "mobile_scroll": false,
+        "title": "Support Multiple Devices",
+        "color_title": "",
+        "fontsize_title": 32,
+        "fontsize_title_mo": 24,
+        "margin_bottom_title": 40,
+        "margin_bottom_title_mo": 24,
+        "text": "",
+        "image_list_align": "center",
+        "row_box_num": "5",
+        "box_gap": 24,
+        "row_box_num_mobile": "3",
+        "box_gap_mobile": 24
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "product_recommendations_heading": "You may also like",
+        "related_count": 6,
+        "products_per_row": 3
+      }
+    },
+    "collection-return": {
+      "type": "collection-return",
+      "disabled": true,
+      "settings": {}
+    },
+    "8a14e423-efa0-4e85-9a30-4c0668ebd37c": {
+      "type": "new-slider-table",
+      "blocks": {
+        "6c20f788-0a06-4095-a0ec-9a0f4851f804": {
+          "type": "table_thead",
+          "settings": {
+            "thead_text": "",
+            "image1": "shopify:\/\/shop_images\/056916f25a3d36b928f382daf8b96786.webp",
+            "button1": "Double Network",
+            "button_link1": "https:\/\/www.eiotclub.com\/products\/4g-lte-prepaid-sim-card-tmobile-att",
+            "image2": "shopify:\/\/shop_images\/950f07fd30eabd74964b0387d8332fca.webp",
+            "button2": "Triple-play Network",
+            "button_link2": "https:\/\/www.eiotclub.com\/products\/4g-data-only-prepaid-iot-sim-card",
+            "button3": "",
+            "button_link3": ""
+          }
+        },
+        "d83e83c3-9092-4a82-9c1f-f9dd555d0a0a": {
+          "type": "table_tbody",
+          "settings": {
+            "bg_color": "",
+            "tbody_text1": "Network Support",
+            "tbody_text2": "ATT \/ T-mobie",
+            "tbody_text3": "ATT \/ T-mobile\/ Verizon",
+            "tbody_text4": ""
+          }
+        },
+        "b96d794f-c019-483e-acf9-e25ecdc883ff": {
+          "type": "table_tbody",
+          "disabled": true,
+          "settings": {
+            "bg_color": "",
+            "tbody_text1": "MNC",
+            "tbody_text2": "03",
+            "tbody_text3": "00",
+            "tbody_text4": ""
+          }
+        },
+        "9f08db30-9a56-4966-a45e-e941d7989637": {
+          "type": "table_tbody",
+          "disabled": true,
+          "settings": {
+            "bg_color": "",
+            "tbody_text1": "MCC",
+            "tbody_text2": "454",
+            "tbody_text3": "454",
+            "tbody_text4": ""
+          }
+        },
+        "305c4f88-e51f-4d6e-a79b-252a1d1908b6": {
+          "type": "table_tbody",
+          "settings": {
+            "bg_color": "",
+            "tbody_text1": "Price",
+            "tbody_text2": "$5\/$15\/$109",
+            "tbody_text3": "$5.99\/$19.9\/$139.99",
+            "tbody_text4": ""
+          }
+        },
+        "5a8740c9-f8a2-4d73-9096-800391cc7241": {
+          "type": "table_tbody",
+          "settings": {
+            "bg_color": "",
+            "tbody_text1": "Data",
+            "tbody_text2": "300MB\/2GB\/24GB",
+            "tbody_text3": "100MB\/2GB\/24GB",
+            "tbody_text4": ""
+          }
+        },
+        "2467f7d7-3ec9-428d-bfe4-d857722d43d4": {
+          "type": "table_tbody",
+          "settings": {
+            "bg_color": "",
+            "tbody_text1": "Scenario",
+            "tbody_text2": "Common household, outdoor, construction, etc",
+            "tbody_text3": "Involve more remote places like jungle",
+            "tbody_text4": ""
+          }
+        },
+        "8f67dc7c-60e4-4aa4-9bd2-d86af840f0ee": {
+          "type": "table_tbody",
+          "settings": {
+            "bg_color": "",
+            "tbody_text1": "Network Band",
+            "tbody_text2": "B2,B4,B5,B12,B14,B17, B25,B26,B30,B66,B71",
+            "tbody_text3": "B2,B4,B5,B12,B13,B14, B17,B25,B26,B30,B66,B71",
+            "tbody_text4": ""
+          }
+        },
+        "5b0fd561-ef80-4987-8c13-c0a2e1a36d2b": {
+          "type": "table_tbody",
+          "settings": {
+            "bg_color": "",
+            "tbody_text1": "Country",
+            "tbody_text2": "United States",
+            "tbody_text3": "United States",
+            "tbody_text4": ""
+          }
+        }
+      },
+      "block_order": [
+        "6c20f788-0a06-4095-a0ec-9a0f4851f804",
+        "d83e83c3-9092-4a82-9c1f-f9dd555d0a0a",
+        "b96d794f-c019-483e-acf9-e25ecdc883ff",
+        "9f08db30-9a56-4966-a45e-e941d7989637",
+        "305c4f88-e51f-4d6e-a79b-252a1d1908b6",
+        "5a8740c9-f8a2-4d73-9096-800391cc7241",
+        "2467f7d7-3ec9-428d-bfe4-d857722d43d4",
+        "8f67dc7c-60e4-4aa4-9bd2-d86af840f0ee",
+        "5b0fd561-ef80-4987-8c13-c0a2e1a36d2b"
+      ],
+      "settings": {
+        "container": "container",
+        "bg_color": "",
+        "margin_bottom_mb": 40,
+        "margin_bottom_tab": 40,
+        "margin_bottom": 40,
+        "mg_top_mobile": 40,
+        "mg_top_tablet": 40,
+        "mg_top_desktop": 40,
+        "title": "Pick the right one for you",
+        "heading_color": "",
+        "heading_color_mobile": "",
+        "heading_size": 32,
+        "heading_size_mobile": 24,
+        "heading_margin_bottom": 32,
+        "heading_margin_bottom_mobile": 24,
+        "button_background_color": "#07c160"
+      }
+    },
+    "1c054fad-af9b-438d-9c7e-9f8ef83cc786": {
+      "type": "faq",
+      "blocks": {
+        "50094f6c-64b6-4037-bf72-6db11cdef8ab": {
+          "type": "rich-text",
+          "disabled": true,
+          "settings": {
+            "title": "",
+            "text": "Use this section for any descriptive text you need to fill out your pages or to add introductory headings between other blocks.",
+            "align_text": "center"
+          }
+        },
+        "5290356e-ef8c-4120-bb76-105a5ceebc66": {
+          "type": "question",
+          "settings": {
+            "title": "What is a prepaid SIM card?",
+            "text": "<p>A prepaid SIM card is a SIM card that allows users to pay for mobile services in advance. Unlike traditional postpaid plans where the user pays at the end of the billing cycle, prepaid SIM cards require the user to purchase credit up front. This credit is then only used to access data services. Prepaid SIM cards offer flexibility and control over usage, as users can top up credit as needed to monitor and manage their spending. They are typically used by travelers, individuals on a budget, or those who don't want to be tied down to a long-term contract.<\/p>",
+            "expand_faq": false
+          }
+        },
+        "template--14564082581637__1c054fad-af9b-438d-9c7e-9f8ef83cc786-16809196117e528771-0": {
+          "type": "question",
+          "settings": {
+            "title": "Can I monitor my data usage with the SIM card?",
+            "text": "Yes, you can easily monitor your data usage through our online portal https:\/\/www.eiotclub.com\/pages\/refill or EIOTCLUB APP. This enables you to stay informed about your usage patterns and manage your data effectively.",
+            "expand_faq": false
+          }
+        },
+        "template--14564082581637__1c054fad-af9b-438d-9c7e-9f8ef83cc786-16809196117e528771-1": {
+          "type": "question",
+          "disabled": true,
+          "settings": {
+            "title": "What frequency bands are supported?",
+            "text": "When it comes to the validity period of a SIM card, our 4G Data-Only Prepaid IoT SIM Card offers flexible options for both time and data limits. The length of the validity period depends on the plan or package you choose. Typically, we provide different options for monthly, quarterly, or annual payment, allowing you to select the appropriate validity period based on your device usage needs.<br>\n\nAdditionally, our 4G Data-Only Prepaid IoT SIM Card also offers data limit options. Once you have used up your allocated data, you will need to purchase a new package or recharge to continue using data services. Our recharge process is straightforward, and you can conveniently top up your SIM card through our online platform or designated recharge points, ensuring your device maintains a continuous connection to meet your business requirements.<br>\n\n<br>With our flexible package options and convenient recharge services, you can adjust your data usage and validity period according to your specific needs, providing continuous and stable connectivity for your IoT devices.",
+            "expand_faq": false
+          }
+        },
+        "30431904-2c96-48e6-bfce-6ac553354b41": {
+          "type": "question",
+          "settings": {
+            "title": "How do I activate my EIOTCLUB SIM card?",
+            "text": "Activating your SIM card is a simple process that only takes a few minutes. Just plug in your device, and it can be used without prior activation. Then, insert the ELOT CLUB SIM card into your device and restart it. That's it! If you need assistance along the way, feel free to reach out to us using the customer service button at the bottom right corner of the page",
+            "expand_faq": false
+          }
+        },
+        "97374034-486c-4a48-8aed-5746b586f41f": {
+          "type": "question",
+          "disabled": true,
+          "settings": {
+            "title": "Will there be any changes to data plans and rates?",
+            "text": "<p>Our SIM cards offer unlimited data speeds without any limitations. Rest assured, you can enjoy seamless connectivity and high-speed internet access.<\/p>",
+            "expand_faq": false
+          }
+        },
+        "322bb76e-d5c7-48d9-9cb3-39e7380d9812": {
+          "type": "question",
+          "settings": {
+            "title": "Does the service auto switch between networks(t-mobile ,at&t,verizon ) or does it have to be done manually?",
+            "text": "<p>Our SIM cards automatically select the best local network for optimal connectivity. However, if you prefer to use a specific network such as AT&T or T-Mobile, you can easily contact our customer service to request a switch. We are here to ensure you have the network that best suits your needs.<\/p>",
+            "expand_faq": false
+          }
+        },
+        "d9b25cae-7f4a-41b1-babd-95405d51a570": {
+          "type": "question",
+          "settings": {
+            "title": "Can data be added to your SIM card online, or is it necessary to remove the SIM card for each update?",
+            "text": "<p>You can conveniently add data to your SIM card online without the need to remove the SIM card. Our user-friendly online platform allows you to effortlessly manage and top up your data plan. Experience hassle-free data updates and stay connected whenever you need it, all without the inconvenience of removing your SIM card.<\/p>",
+            "expand_faq": false
+          }
+        },
+        "56e9b1e3-aa36-40ba-991c-0ae7c53a9be5": {
+          "type": "question",
+          "settings": {
+            "title": "Will I still need to pay T-Mobile or AT&T separately if I purchase the camera with this SIM card?",
+            "text": "<p>\nNo, with EIOTCLUB, you can enjoy significantly lower costs compared to T-Mobile. <br>While T-Mobile charges $50 per month, you only need to purchase $10 for a 2GB data plan that lasts for one month with EIOTCLUB. <br>The highest amount you'll pay in a month with EIOTCLUB is $20. <br>The best part is, you'll receive the same coverage as you did with T-Mobile. <br>Experience affordable pricing and reliable coverage with EIOTCLUB for your camera SIM card needs..<\/p>",
+            "expand_faq": false
+          }
+        }
+      },
+      "block_order": [
+        "50094f6c-64b6-4037-bf72-6db11cdef8ab",
+        "5290356e-ef8c-4120-bb76-105a5ceebc66",
+        "template--14564082581637__1c054fad-af9b-438d-9c7e-9f8ef83cc786-16809196117e528771-0",
+        "template--14564082581637__1c054fad-af9b-438d-9c7e-9f8ef83cc786-16809196117e528771-1",
+        "30431904-2c96-48e6-bfce-6ac553354b41",
+        "97374034-486c-4a48-8aed-5746b586f41f",
+        "322bb76e-d5c7-48d9-9cb3-39e7380d9812",
+        "d9b25cae-7f4a-41b1-babd-95405d51a570",
+        "56e9b1e3-aa36-40ba-991c-0ae7c53a9be5"
+      ],
+      "settings": {
+        "title": "FAQs"
+      }
+    },
+    "1682675971f684f111": {
+      "type": "apps",
+      "blocks": {
+        "95df2e24-a890-4352-b778-8b08ed8acf88": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "95df2e24-a890-4352-b778-8b08ed8acf88"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "268770bf-647e-43a2-88ee-5982ce38e45d": {
+      "type": "text-with-icons",
+      "blocks": {
+        "template--14564082581637__268770bf-647e-43a2-88ee-5982ce38e45d-16809489265e4023f6-0": {
+          "type": "text_block",
+          "settings": {
+            "icon": "free-shipping",
+            "html_svg": "<svg width=\"52\" height=\"52\" viewbox=\"0 0 52 52\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M9.26378 15.485C9.05118 15.544 8.85776 15.6577 8.70284 15.8148C8.51408 16.0452 8.40919 16.3328 8.40538 16.6307C7.60647 24.3053 7.58947 28.9118 8.40538 36.5303C8.40578 36.8013 8.48792 37.0658 8.64107 37.2893C8.79422 37.5128 9.01125 37.6849 9.26378 37.7831L25.4017 44.0655L25.8862 44.1998L26.3723 44.0638L42.5103 37.7848C42.761 37.6839 42.9762 37.5111 43.129 37.2882C43.2817 37.0653 43.3651 36.8022 43.3687 36.532C44.2186 28.82 44.2288 24.3733 43.3687 16.7327C43.3918 16.3987 43.2853 16.0687 43.0712 15.8114C42.9302 15.6148 42.7354 15.4631 42.5103 15.3745V15.3779\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M35.2371 20.2156L26.3726 23.6663H25.402L9.26406 17.3855C9.05243 17.3003 8.8654 17.1637 8.71995 16.988C8.57451 16.8123 8.47524 16.603 8.43115 16.3792C8.47381 16.1695 8.56719 15.9734 8.70312 15.808C8.85843 15.6522 9.05181 15.5397 9.26406 15.4817L17.333 12.3421M35.2371 20.2156L42.5123 17.3855C42.7258 17.3023 42.9146 17.1661 43.0609 16.9897C43.2072 16.8134 43.3062 16.6027 43.3486 16.3775H43.3452C43.3023 16.1684 43.2089 15.9729 43.0732 15.808C42.9319 15.6118 42.7372 15.4602 42.5123 15.3712L26.3743 9.2026C26.2215 9.13501 26.0562 9.1001 25.889 9.1001C25.7219 9.1001 25.5566 9.13501 25.4037 9.2026L17.333 12.3421M35.2371 20.2156L17.333 12.3421M25.8882 44.1999V23.6663M31.8375 35.0805L38.6367 32.5307\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<\/svg>",
+            "title": "Fast Shipping",
+            "header_color": "",
+            "header_size": 16,
+            "header_line_height": 36,
+            "header_letter_spacing": 0,
+            "header_font_weight": "400",
+            "header_size_mo": 16,
+            "header_line_height_mo": 36,
+            "header_letter_spacing_mo": 0,
+            "header_font_weight_mo": "400",
+            "text": "",
+            "content_color": "",
+            "content_size": 16,
+            "content_line_height": 36,
+            "content_letter_spacing": 0,
+            "content_font_weight": "400",
+            "content_size_mo": 16,
+            "content_line_height_mo": 36,
+            "content_letter_spacing_mo": 0,
+            "content_font_weight_mo": "400"
+          }
+        },
+        "template--14564082581637__268770bf-647e-43a2-88ee-5982ce38e45d-16809489265e4023f6-1": {
+          "type": "text_block",
+          "settings": {
+            "icon": "customer-service",
+            "html_svg": "<svg width=\"52\" height=\"52\" viewbox=\"0 0 52 52\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M9 29.6819C9 23.0729 13.4066 21.4219 15.6108 21.4219C19.5738 21.4219 20.5654 24.7273 20.5654 26.3766V32.9873C20.5654 36.9504 17.2601 37.942 15.6091 37.942C13.4066 37.942 9 36.2893 9 29.6819V29.6819ZM43.693 29.6819C43.693 23.0729 39.2864 21.4219 37.0822 21.4219C33.1191 21.4219 32.1292 24.7273 32.1292 26.3766V32.9873C32.1292 36.9504 35.4346 37.942 37.0839 37.942C39.2864 37.942 43.693 36.2893 43.693 29.6819Z\" stroke=\"#07c160\" stroke-width=\"3\"><\/path>\n<path d=\"M10.123 24.8254C10.3659 16.8554 14.4217 8 26.3464 8C38.2525 8 42.3134 16.8233 42.5646 24.7815M42.7434 34.3368C42.7434 34.3368 42.9694 39.5292 40.3032 41.7907C37.6386 44.0438 30.9098 43.9999 30.9098 43.9999\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\"><\/path>\n<\/svg>",
+            "title": "7\/24 custom support",
+            "header_color": "",
+            "header_size": 16,
+            "header_line_height": 36,
+            "header_letter_spacing": 0,
+            "header_font_weight": "400",
+            "header_size_mo": 16,
+            "header_line_height_mo": 36,
+            "header_letter_spacing_mo": 0,
+            "header_font_weight_mo": "400",
+            "text": "",
+            "content_color": "",
+            "content_size": 16,
+            "content_line_height": 36,
+            "content_letter_spacing": 0,
+            "content_font_weight": "400",
+            "content_size_mo": 16,
+            "content_line_height_mo": 36,
+            "content_letter_spacing_mo": 0,
+            "content_font_weight_mo": "400"
+          }
+        },
+        "template--14564082581637__268770bf-647e-43a2-88ee-5982ce38e45d-16809489265e4023f6-2": {
+          "type": "text_block",
+          "settings": {
+            "icon": "secure-payment",
+            "html_svg": "<svg width=\"52\" height=\"52\" viewbox=\"0 0 52 52\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M32.5 35.104H45.5\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M44.75 27.8541V12.9375C44.75 11.1426 43.295 9.6875 41.5 9.6875H28.0833H10.75C8.95508 9.6875 7.5 11.1426 7.5 12.9375V40.8541C7.5 42.6491 8.95508 44.1041 10.75 44.1041H32.9265\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M37.9167 40.5208L32.5 35.1042L37.9162 29.6875\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M21.8182 16.6875V34.6875\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M26.3182 18.324C26.3182 18.324 22.2152 18.324 20.1818 18.324C18.1484 18.324 16.5 19.9724 16.5 22.0058C16.5 24.0392 18.1484 25.6876 20.1818 25.6876\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M17.3182 33.0511C17.3182 33.0511 21.4211 33.0511 23.4545 33.0511C25.488 33.0511 27.1364 31.4027 27.1364 29.3693C27.1364 27.3359 25.488 25.6875 23.4545 25.6875H20.1818\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<\/svg>",
+            "title": "30-Day Money Back",
+            "header_color": "",
+            "header_size": 16,
+            "header_line_height": 36,
+            "header_letter_spacing": 0,
+            "header_font_weight": "400",
+            "header_size_mo": 16,
+            "header_line_height_mo": 36,
+            "header_letter_spacing_mo": 0,
+            "header_font_weight_mo": "400",
+            "text": "",
+            "content_color": "",
+            "content_size": 16,
+            "content_line_height": 36,
+            "content_letter_spacing": 0,
+            "content_font_weight": "400",
+            "content_size_mo": 16,
+            "content_line_height_mo": 36,
+            "content_letter_spacing_mo": 0,
+            "content_font_weight_mo": "400"
+          }
+        },
+        "731caf94-9e45-43df-b0c9-3a77c1ca99e2": {
+          "type": "text_block",
+          "settings": {
+            "icon": "secure-payment",
+            "html_svg": "<svg width=\"52\" height=\"52\" viewbox=\"0 0 52 52\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n<path d=\"M5.6665 12C5.6665 10.8954 6.56193 10 7.6665 10H43.6665C44.7711 10 45.6665 10.8954 45.6665 12V40C45.6665 41.1046 44.7711 42 43.6665 42H7.6665C6.56193 42 5.6665 41.1046 5.6665 40V12Z\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M5.6665 17.9995H45.6665\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"square\" stroke-linejoin=\"round\"><\/path>\n<path d=\"M28.6665 34H37.6665\" stroke=\"#07c160\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><\/path>\n<\/svg>",
+            "title": "Secure Payment",
+            "header_color": "",
+            "header_size": 16,
+            "header_line_height": 36,
+            "header_letter_spacing": 0,
+            "header_font_weight": "400",
+            "header_size_mo": 16,
+            "header_line_height_mo": 36,
+            "header_letter_spacing_mo": 0,
+            "header_font_weight_mo": "400",
+            "text": "",
+            "content_color": "",
+            "content_size": 16,
+            "content_line_height": 36,
+            "content_letter_spacing": 0,
+            "content_font_weight": "400",
+            "content_size_mo": 16,
+            "content_line_height_mo": 36,
+            "content_letter_spacing_mo": 0,
+            "content_font_weight_mo": "400"
+          }
+        }
+      },
+      "block_order": [
+        "template--14564082581637__268770bf-647e-43a2-88ee-5982ce38e45d-16809489265e4023f6-0",
+        "template--14564082581637__268770bf-647e-43a2-88ee-5982ce38e45d-16809489265e4023f6-1",
+        "template--14564082581637__268770bf-647e-43a2-88ee-5982ce38e45d-16809489265e4023f6-2",
+        "731caf94-9e45-43df-b0c9-3a77c1ca99e2"
+      ],
+      "settings": {
+        "title": "",
+        "align_text": "center",
+        "desktop_columns_per_row": 3,
+        "icon_color": "#19a64f",
+        "button_label": "",
+        "button_link": "",
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "b1362342-b3a7-4960-b540-4e649fe4c9b3",
+    "c21d6292-a45a-462d-86da-0e66b9caeb92",
+    "59df1900-a7e6-4b5f-9428-ce84805a1e83",
+    "sub",
+    "ac195402-4ceb-475e-af0b-5886eb2d4c84",
+    "text-and-image",
+    "7e87da54-5271-41be-a457-8954b49ac77a",
+    "170efe63-4f82-419e-a4a5-4ca2077bf548",
+    "text-and-image2",
+    "81a03bcb-8061-4cfd-b87c-9c6b0fbef019",
+    "0fc87d58-ef57-4b43-97a6-d585f47d9072",
+    "86a3db03-9722-4d9d-9493-6c50e037998e",
+    "bfa1124d-cfdb-49ec-b552-dba8ca0390a9",
+    "ad90730f-4770-4c60-99f8-15c71b82ca6b",
+    "4460c154-7087-40ac-96b7-310f13ac93f2",
+    "b1e2164d-49c9-4a42-95b9-8ed6763350fd",
+    "801d87af-9793-4c59-bcf3-12abdedb9dcc",
+    "19a90b87-bfa8-4d25-8f05-e5d6e27d5ef3",
+    "product-recommendations",
+    "collection-return",
+    "8a14e423-efa0-4e85-9a30-4c0668ebd37c",
+    "1c054fad-af9b-438d-9c7e-9f8ef83cc786",
+    "1682675971f684f111",
+    "268770bf-647e-43a2-88ee-5982ce38e45d"
+  ]
+}

@@ -1,0 +1,778 @@
+{
+  "sections": {
+    "coverage_banner_Xeqnwi": {
+      "type": "coverage-banner",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/coverage-banner.png",
+        "imagemb": "shopify:\/\/shop_images\/coverage-banner-mb.png",
+        "title": "Putting excellent 5G coverage on the map",
+        "content": "<p>5G and\/or 4G LTE access requires a capable device and SIM within an  appropriate coverage area. 5G capability offered at no additional cost.  Actual availability speed, and coverage may vary. Other taxes, fees, and  restrictions apply.<\/p>",
+        "btn": "Check Coverage",
+        "btnurl": ""
+      }
+    },
+    "coverage_nationwide_qBz6AJ": {
+      "type": "coverage-nationwide",
+      "blocks": {
+        "block_Cjjrir": {
+          "type": "block",
+          "settings": {
+            "title": "What Is 5G?",
+            "content": "<p>5G is the fifth generation of wireless network technology. On T-Mobile’s  5G network, you can experience 5G coverage on our reliable network,  enhanced connectivity, and innovative technologies that keep you  connected to your world!<\/p>",
+            "link_text": "Check Coverage",
+            "url": "#"
+          }
+        },
+        "block_ymwx34": {
+          "type": "block",
+          "settings": {
+            "title": "How Do I Get 5G?",
+            "content": "<p>5G is available for free on all plans on all 5G-capable device. \u2028\u2028<\/p><p>If you are unable to get 5G, you can still experience excellent coverage and fast speeds on our 4G LTE network.<\/p>",
+            "link_text": "Shop Now",
+            "url": "#"
+          }
+        }
+      },
+      "block_order": [
+        "block_Cjjrir",
+        "block_ymwx34"
+      ],
+      "settings": {
+        "title": "Nationwide 5G • 4G LTE coverage",
+        "content": "Enter your address to see if you have 5G • 4G LTE coverage in your area.",
+        "image": "shopify:\/\/shop_images\/map-img.png",
+        "imagemb": "shopify:\/\/shop_images\/map-img-mb.png"
+      }
+    },
+    "coverage_custom_image_NEWR93": {
+      "type": "coverage-custom-image",
+      "blocks": {
+        "block_a8kFed": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/netwosu_2.png",
+            "imagemb": "shopify:\/\/shop_images\/netwosu_2.png",
+            "title": "Dual Cameras for Ultra-ClearViews at Up to 8x Zoom",
+            "color": "#282828",
+            "text_position": "center"
+          }
+        },
+        "block_ADFtRm": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/netwosu_2.png",
+            "imagemb": "shopify:\/\/shop_images\/netwosu_2.png",
+            "title": "Dual Cameras for Ultra-ClearViews at Up to 8x Zoom",
+            "color": "#282828",
+            "text_position": "top"
+          }
+        },
+        "block_rfgVgm": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/netwosu_2.png",
+            "imagemb": "shopify:\/\/shop_images\/netwosu_2.png",
+            "title": "Dual Cameras for Ultra-ClearViews at Up to 8x Zoom",
+            "color": "#282828",
+            "text_position": "bottom"
+          }
+        },
+        "block_F7CdQ6": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/netwosu_2.png",
+            "imagemb": "shopify:\/\/shop_images\/netwosu_2.png",
+            "title": "Dual Cameras for Ultra-ClearViews at Up to 8x Zoom",
+            "color": "#282828",
+            "text_position": "center"
+          }
+        }
+      },
+      "block_order": [
+        "block_a8kFed",
+        "block_ADFtRm",
+        "block_rfgVgm",
+        "block_F7CdQ6"
+      ],
+      "settings": {
+        "title": "Do More With Eiotclub's 5G Network."
+      }
+    },
+    "coverage_plan_7qgBLA": {
+      "type": "coverage-plan",
+      "blocks": {
+        "block_FcHi3A": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/globe-network.png",
+            "title": "Fast",
+            "content": "<p>Lorem ipsum dolor sit amet consectetur. Metus magna ultricies posuere nec bibendum at quis pharetra.<\/p>",
+            "link_text": "",
+            "url": ""
+          }
+        },
+        "block_9DhNhN": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/globe-network.png",
+            "title": "Reliable",
+            "content": "<p>Lorem ipsum dolor sit amet consectetur. Metus magna ultricies posuere nec bibendum at quis pharetra.<\/p>",
+            "link_text": "",
+            "url": ""
+          }
+        },
+        "block_eNqgpC": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/globe-network.png",
+            "title": "Secure",
+            "content": "<p>Lorem ipsum dolor sit amet consectetur. Metus magna ultricies posuere nec bibendum at quis pharetra.<\/p>",
+            "link_text": "",
+            "url": ""
+          }
+        },
+        "block_BWk6iU": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/globe-network.png",
+            "title": "Lorem",
+            "content": "<p>Lorem ipsum dolor sit amet consectetur. Metus magna ultricies posuere nec bibendum at quis pharetra.<\/p>",
+            "link_text": "",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "block_FcHi3A",
+        "block_9DhNhN",
+        "block_eNqgpC",
+        "block_BWk6iU"
+      ],
+      "settings": {
+        "title": "Top Features Included With Every Unlimited Plan"
+      }
+    },
+    "coverage_resources_ynRife": {
+      "type": "coverage-resources",
+      "blocks": {
+        "block_excCwm": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/resource01.png",
+            "title": "Lorem ipsum dolor sit",
+            "content": "<p>Lorem ipsum dolor sit amet consectetur. Odio facilisi ornare turpis ultrices et. Etiam tincidunt ut quisque tortor ac porttitor vitae. Ipsum vitae aliquet libero quisque vestibulum nulla a. Volutpat potenti bibendum lacus tellus volutpat quam consectetur elementum.<\/p>",
+            "link_text": "Continue reading",
+            "url": "#"
+          }
+        },
+        "block_8rgEA8": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/resource02.png",
+            "title": "Lorem ipsum dolor sit",
+            "content": "<p>Lorem ipsum dolor sit amet consectetur. Odio facilisi ornare turpis ultrices et. Etiam tincidunt ut quisque tortor ac porttitor vitae. Ipsum vitae aliquet libero quisque vestibulum nulla a. Volutpat potenti bibendum lacus tellus volutpat quam consectetur elementum. Ipsum vitae aliquet libero quisque vestibulum nulla a. Volutpat potenti bibendum lacus tellus volutpat quam consectetur elementum.<\/p>",
+            "link_text": "Continue reading",
+            "url": "#"
+          }
+        },
+        "block_PBAggJ": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/resource03.png",
+            "title": "Lorem ipsum dolor sit",
+            "content": "<p>Lorem ipsum dolor sit amet consectetur. Odio facilisi ornare turpis ultrices et. Etiam tincidunt ut quisque tortor ac porttitor vitae. Ipsum vitae aliquet libero quisque vestibulum nulla a. Volutpat potenti bibendum lacus tellus volutpat quam consectetur elementum. Etiam tincidunt ut quisque tortor ac porttitor vitae. <\/p>",
+            "link_text": "Continue reading",
+            "url": "#"
+          }
+        }
+      },
+      "block_order": [
+        "block_excCwm",
+        "block_8rgEA8",
+        "block_PBAggJ"
+      ],
+      "settings": {
+        "title": "More Articles And Resources"
+      }
+    },
+    "coverage_att_5g_BCkADL": {
+      "type": "coverage-att-5g",
+      "blocks": {
+        "block_pLQdmV": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/att-5g-icon.png",
+            "title": "Confirm AT&T 5G coverage",
+            "content": "<p>See if 5G has arrived in your area.<\/p>",
+            "link_text": "Check 5G availability",
+            "url": "#"
+          }
+        },
+        "block_n6bj8j": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/att-5g-icon.png",
+            "title": "Choose a 5G-capable phone",
+            "content": "<p>New and existing customers get our best deals on all 5G smartphones.<\/p>",
+            "link_text": "Shop 5G Device",
+            "url": "#"
+          }
+        },
+        "block_RJMnWb": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/att-5g-icon.png",
+            "title": "Select an Eiotclub Plan",
+            "content": "<p>Eiotclub plans include 5G at no extra charge.<\/p>",
+            "link_text": "Shop All Plan",
+            "url": "#"
+          }
+        }
+      },
+      "block_order": [
+        "block_pLQdmV",
+        "block_n6bj8j",
+        "block_RJMnWb"
+      ],
+      "settings": {
+        "title": "Get Started With AT&T 5G"
+      }
+    },
+    "coverage_prorecforyou_wERhxY": {
+      "type": "coverage-prorecforyou",
+      "blocks": {
+        "simcard_7bKUzB": {
+          "type": "simcard",
+          "settings": {
+            "country": "US",
+            "icon01": "shopify:\/\/shop_images\/ctyicon_2.png",
+            "icon02": "shopify:\/\/shop_images\/ctyicon_1.png",
+            "color_1": "#bcf4f8",
+            "color_2": "#70d4db",
+            "title": "<p>Trial plan <strong>300<\/strong>MB<\/p>",
+            "price": "$5.00",
+            "content": "<p>Supports AT&T and T-mobile networks.<\/p><p>Affordable 4G IoT SIM card.<\/p><p>Reliable IoT Data Solutions.<\/p><p>No contracts, extra fees or activation fees.<\/p>",
+            "shopbtn": "Shop Now",
+            "shopurl": "shopify:\/\/products\/security-camera-sim-card-verizon-att-tmobile-6g"
+          }
+        },
+        "simcard_wRWkYi": {
+          "type": "simcard",
+          "settings": {
+            "country": "US",
+            "icon01": "shopify:\/\/shop_images\/ctyicon_2.png",
+            "color_1": "#e3fabe",
+            "color_2": "#abebc9",
+            "title": "<p><strong>2<\/strong>GB <strong>30<\/strong>Days<\/p>",
+            "price": "$15.00",
+            "content": "<p>Support Verizon, AT&T and T-Mobile.<\/p><p>Fast and Reliable Data.<\/p><p>No Contracts, No Hidden Fees.<\/p><p>Flexible Plans for IoT Devices.<\/p>",
+            "shopbtn": "Shop Now",
+            "shopurl": "shopify:\/\/products\/security-camera-sim-card-verizon-att-tmobile-6g"
+          }
+        },
+        "simcard_Pxfmte": {
+          "type": "simcard",
+          "settings": {
+            "country": "Global",
+            "icon01": "shopify:\/\/shop_images\/ctyicon_3.png",
+            "color_1": "#fcce89",
+            "color_2": "#fce572",
+            "title": "<p>Trial plan <strong>100<\/strong>MB<\/p>",
+            "price": "$7.99",
+            "content": "<p>High Speed 4G LTE Data Prepaid SIM Card.<\/p><p>No contracts. No activation fees.<\/p><p>Compatible with a variety of IoT devices.<\/p><p>Easily renew online anytime.<\/p>",
+            "shopbtn": "Shop Now",
+            "shopurl": "shopify:\/\/products\/router-plans-30gb"
+          }
+        },
+        "simcard_NeX9nY": {
+          "type": "simcard",
+          "settings": {
+            "country": "Europe",
+            "icon01": "shopify:\/\/shop_images\/ctyicon_3.png",
+            "color_1": "#bcf4f8",
+            "color_2": "#70d4db",
+            "title": "<p>Trial plan <strong>100<\/strong>MB<\/p>",
+            "price": "$7.99",
+            "content": "<p>High Speed 4G LTE Data Prepaid SIM Card.<\/p><p>No contracts. No activation fees.<\/p><p>Compatible with a variety of IoT devices.<\/p><p>Easily renew online anytime.<\/p>",
+            "shopbtn": "Shop Now",
+            "shopurl": "shopify:\/\/products\/router-plans-30gb"
+          }
+        },
+        "simcard_G8aKWb": {
+          "type": "simcard",
+          "settings": {
+            "country": "UK",
+            "icon01": "shopify:\/\/shop_images\/ctyicon_3.png",
+            "color_1": "#bcf4f8",
+            "color_2": "#70d4db",
+            "title": "<p>Trial plan <strong>100<\/strong>MB<\/p>",
+            "price": "$7.99",
+            "content": "<p>High Speed 4G LTE Data Prepaid SIM Card.<\/p><p>No contracts. No activation fees.<\/p><p>Compatible with a variety of IoT devices.<\/p><p>Easily renew online anytime.<\/p>",
+            "shopbtn": "Shop Now",
+            "shopurl": "shopify:\/\/products\/router-plans-30gb"
+          }
+        },
+        "simcard_7p7K83": {
+          "type": "simcard",
+          "settings": {
+            "country": "Canada",
+            "icon01": "shopify:\/\/shop_images\/ctyicon_3.png",
+            "color_1": "#bcf4f8",
+            "color_2": "#70d4db",
+            "title": "<p>Trial plan <strong>100<\/strong>MB<\/p>",
+            "price": "$7.99",
+            "content": "<p>High Speed 4G LTE Data Prepaid SIM Card.<\/p><p>No contracts. No activation fees.<\/p><p>Compatible with a variety of IoT devices.<\/p><p>Easily renew online anytime.<\/p>",
+            "shopbtn": "Shop Now",
+            "shopurl": "shopify:\/\/products\/router-plans-30gb"
+          }
+        },
+        "simcard_3UckEe": {
+          "type": "simcard",
+          "settings": {
+            "country": "US",
+            "icon01": "shopify:\/\/shop_images\/ctyicon_2.png",
+            "color_1": "#bcf4f8",
+            "color_2": "#70d4db",
+            "title": "<p>Trial plan <strong>100<\/strong>MB<\/p>",
+            "price": "$5.00",
+            "content": "<p>Support Verizon, AT&T and T-Mobile.<\/p><p>Fast and Reliable Data.<\/p><p>No Contracts, No Hidden Fees.<\/p><p>Flexible Plans for IoT Devices.<\/p>",
+            "shopbtn": "Shop Now",
+            "shopurl": "shopify:\/\/products\/security-camera-sim-card-verizon-att-tmobile-6g"
+          }
+        },
+        "simcard_gWGC4F": {
+          "type": "simcard",
+          "settings": {
+            "country": "US",
+            "icon01": "shopify:\/\/shop_images\/ctyicon_2.png",
+            "color_1": "#bcf4f8",
+            "color_2": "#70d4db",
+            "title": "<p>Trial plan <strong>100<\/strong>MB<\/p>",
+            "price": "$5.00",
+            "content": "<p>Support Verizon, AT&T and T-Mobile.<\/p><p>Fast and Reliable Data.<\/p><p>No Contracts, No Hidden Fees.<\/p><p>Flexible Plans for IoT Devices.<\/p>",
+            "shopbtn": "Shop Now",
+            "shopurl": "shopify:\/\/products\/security-camera-sim-card-verizon-att-tmobile-6g"
+          }
+        },
+        "desimcard_rwX3KK": {
+          "type": "desimcard",
+          "settings": {
+            "country": "US",
+            "icon01": "shopify:\/\/shop_images\/ctyicon_2.png",
+            "icon02": "shopify:\/\/shop_images\/ctyicon_1.png",
+            "color_1": "#bcf4f8",
+            "color_2": "#70d4db",
+            "title": "<p>Trial plan <strong>100<\/strong>MB<\/p>",
+            "price": "$5.00",
+            "content": "<p>Supports AT&T and T-mobile networks.<\/p><p>Affordable 4G IoT SIM card.<\/p><p>Reliable IoT Data Solutions.<\/p><p>No contracts, extra fees or activation fees.<\/p>",
+            "shopbtn": "Shop Now",
+            "shopurl": "shopify:\/\/collections\/all-product"
+          }
+        },
+        "desimcard_etLrdU": {
+          "type": "desimcard",
+          "settings": {
+            "country": "Canada",
+            "icon01": "shopify:\/\/shop_images\/ctyicon_1.png",
+            "color_1": "#bcf4f8",
+            "color_2": "#70d4db",
+            "title": "<p>Trial plan <strong>100<\/strong>MB<\/p>",
+            "price": "$5.00",
+            "content": "<p>Supports AT&T and T-mobile networks.<\/p><p>Affordable 4G IoT SIM card.<\/p><p>Reliable IoT Data Solutions.<\/p><p>No contracts, extra fees or activation fees.<\/p>",
+            "shopbtn": "Shop Now",
+            "shopurl": "shopify:\/\/collections\/all-product"
+          }
+        },
+        "desimcard_8imNxc": {
+          "type": "desimcard",
+          "settings": {
+            "country": "Europe",
+            "icon01": "shopify:\/\/shop_images\/ctyicon_1.png",
+            "color_1": "#bcf4f8",
+            "color_2": "#70d4db",
+            "title": "<p>Trial plan <strong>100<\/strong>MB<\/p>",
+            "price": "$5.00",
+            "content": "<p>Supports AT&T and T-mobile networks.<\/p><p>Affordable 4G IoT SIM card.<\/p><p>Reliable IoT Data Solutions.<\/p><p>No contracts, extra fees or activation fees.<\/p>",
+            "shopbtn": "Shop Now",
+            "shopurl": "shopify:\/\/collections\/all-product"
+          }
+        },
+        "desimcard_GnMqAr": {
+          "type": "desimcard",
+          "settings": {
+            "country": "Europe",
+            "icon01": "shopify:\/\/shop_images\/ctyicon_1.png",
+            "color_1": "#bcf4f8",
+            "color_2": "#70d4db",
+            "title": "<p>Trial plan <strong>100<\/strong>MB<\/p>",
+            "price": "$5.00",
+            "content": "<p>Supports AT&T and T-mobile networks.<\/p><p>Affordable 4G IoT SIM card.<\/p><p>Reliable IoT Data Solutions.<\/p><p>No contracts, extra fees or activation fees.<\/p>",
+            "shopbtn": "Shop Now",
+            "shopurl": "shopify:\/\/collections\/all-product"
+          }
+        }
+      },
+      "block_order": [
+        "simcard_7bKUzB",
+        "simcard_wRWkYi",
+        "simcard_Pxfmte",
+        "simcard_NeX9nY",
+        "simcard_G8aKWb",
+        "simcard_7p7K83",
+        "simcard_3UckEe",
+        "simcard_gWGC4F",
+        "desimcard_rwX3KK",
+        "desimcard_etLrdU",
+        "desimcard_8imNxc",
+        "desimcard_GnMqAr"
+      ],
+      "settings": {
+        "title": "5G Network Prepaid SIM Card For You",
+        "type1": "",
+        "type2": "",
+        "autoplay": false,
+        "interval": "5"
+      }
+    },
+    "coverage_recordfun_r9ALyq": {
+      "type": "coverage-recordfun",
+      "blocks": {
+        "block_PTTWkm": {
+          "type": "block",
+          "settings": {
+            "product": "security-camera-sim-card-att-tmobile-24gb",
+            "image": "shopify:\/\/shop_images\/coverage-product-img01.png",
+            "title": "Reolink Go Ultra",
+            "subtitle": "4K 8MP Smart 4G LTE Battery",
+            "hottext": "",
+            "hotcolor": "#ffcc00",
+            "hottextcolor": "#282828"
+          }
+        },
+        "block_YRa33G": {
+          "type": "block",
+          "settings": {
+            "product": "security-camera-sim-card-att-tmobile-24gb",
+            "image": "shopify:\/\/shop_images\/coverage-product-img02.png",
+            "title": "Argus Eco Ultra",
+            "subtitle": "With 360° All-Around View",
+            "hottext": "",
+            "hotcolor": "#ffcc00",
+            "hottextcolor": "#282828"
+          }
+        },
+        "block_FWpUUk": {
+          "type": "block",
+          "settings": {
+            "product": "security-camera-sim-card-att-tmobile-24gb",
+            "image": "shopify:\/\/shop_images\/coverage-product-img03.png",
+            "title": "Argus Track",
+            "subtitle": "4K Dual-Lens Wi-Fi Solar",
+            "hottext": "",
+            "hotcolor": "#ffcc00",
+            "hottextcolor": "#282828"
+          }
+        },
+        "block_jMNDzM": {
+          "type": "block",
+          "settings": {
+            "product": "security-camera-sim-card-att-tmobile-24gb",
+            "image": "shopify:\/\/shop_images\/coverage-product-img04.png",
+            "title": "Argus PT Ultra",
+            "subtitle": "Lorem ipsum dolor sit amet",
+            "hottext": "",
+            "hotcolor": "#ffcc00",
+            "hottextcolor": "#282828"
+          }
+        },
+        "block_Gn3Fy4": {
+          "type": "block",
+          "settings": {
+            "product": "trail-camera-sim-card",
+            "image": "shopify:\/\/shop_images\/coverage-product-img04.png",
+            "title": "tests",
+            "subtitle": "test",
+            "hottext": "",
+            "hotcolor": "#ffcc00",
+            "hottextcolor": "#282828"
+          }
+        }
+      },
+      "block_order": [
+        "block_PTTWkm",
+        "block_YRa33G",
+        "block_FWpUUk",
+        "block_jMNDzM",
+        "block_Gn3Fy4"
+      ],
+      "settings": {
+        "title": "Compatible Device For You",
+        "content": "You need a compatible device to take advantage of 5G. We got you."
+      }
+    },
+    "common_faqs_9md7Hm": {
+      "type": "common-faqs",
+      "blocks": {
+        "block_fhrQrW": {
+          "type": "block",
+          "settings": {
+            "faqtype": "type1",
+            "title": "What is a prepaid SIM card?",
+            "content": "<p>A prepaid SIM card is a SIM card that allows users to pay for mobile services in advance. Unlike traditional postpaid plans where the user pays at the end of the billing cycle, prepaid SIM cards require the user to purchase credit up front. This credit is then only used to access data services. Prepaid SIM cards offer flexibility and control over usage, as users can top up credit as needed to monitor and manage their spending. They are typically used by travelers, individuals on a budget, or those who don't want to be tied down to a long-term contract.<\/p>"
+          }
+        },
+        "block_YbmAwF": {
+          "type": "block",
+          "settings": {
+            "faqtype": "type1",
+            "title": "Can I monitor my data usage with the SIM card?",
+            "content": "<p>A prepaid SIM card is a SIM card that allows users to pay for mobile services in advance. Unlike traditional postpaid plans where the user pays at the end of the billing cycle, prepaid SIM cards require the user to purchase credit up front. This credit is then only used to access data services. Prepaid SIM cards offer flexibility and control over usage, as users can top up credit as needed to monitor and manage their spending. They are typically used by travelers, individuals on a budget, or those who don't want to be tied down to a long-term contract.<\/p>"
+          }
+        },
+        "block_bDrjVi": {
+          "type": "block",
+          "settings": {
+            "faqtype": "type1",
+            "title": "How do I activate my EIOTCLUB SIM card?",
+            "content": "<p>A prepaid SIM card is a SIM card that allows users to pay for mobile services in advance. Unlike traditional postpaid plans where the user pays at the end of the billing cycle, prepaid SIM cards require the user to purchase credit up front. This credit is then only used to access data services. Prepaid SIM cards offer flexibility and control over usage, as users can top up credit as needed to monitor and manage their spending. They are typically used by travelers, individuals on a budget, or those who don't want to be tied down to a long-term contract.<\/p>"
+          }
+        },
+        "block_6TqmKb": {
+          "type": "block",
+          "settings": {
+            "faqtype": "type1",
+            "title": "Does the service auto switch between networks(t-mobile ,at&t,verizon ) or does it have to be done manually?",
+            "content": "<p>A prepaid SIM card is a SIM card that allows users to pay for mobile services in advance. Unlike traditional postpaid plans where the user pays at the end of the billing cycle, prepaid SIM cards require the user to purchase credit up front. This credit is then only used to access data services. Prepaid SIM cards offer flexibility and control over usage, as users can top up credit as needed to monitor and manage their spending. They are typically used by travelers, individuals on a budget, or those who don't want to be tied down to a long-term contract.<\/p>"
+          }
+        },
+        "block_jzBE4t": {
+          "type": "block",
+          "settings": {
+            "faqtype": "type1",
+            "title": "Can data be added to your SIM card online, or is it necessary to remove the SIM card for each update?",
+            "content": "<p>A prepaid SIM card is a SIM card that allows users to pay for mobile services in advance. Unlike traditional postpaid plans where the user pays at the end of the billing cycle, prepaid SIM cards require the user to purchase credit up front. This credit is then only used to access data services. Prepaid SIM cards offer flexibility and control over usage, as users can top up credit as needed to monitor and manage their spending. They are typically used by travelers, individuals on a budget, or those who don't want to be tied down to a long-term contract.<\/p>"
+          }
+        },
+        "block_6HV4fN": {
+          "type": "block",
+          "settings": {
+            "faqtype": "type1",
+            "title": "Will I still need to pay T-Mobile or AT&T separately if I purchase the camera with this SIM card?",
+            "content": "<p>A prepaid SIM card is a SIM card that allows users to pay for mobile services in advance. Unlike traditional postpaid plans where the user pays at the end of the billing cycle, prepaid SIM cards require the user to purchase credit up front. This credit is then only used to access data services. Prepaid SIM cards offer flexibility and control over usage, as users can top up credit as needed to monitor and manage their spending. They are typically used by travelers, individuals on a budget, or those who don't want to be tied down to a long-term contract.<\/p>"
+          }
+        },
+        "block_4iiCgB": {
+          "type": "block",
+          "settings": {
+            "faqtype": "type2",
+            "title": "What is a prepaid SIM card?",
+            "content": "<p>A prepaid SIM card is a SIM card that allows users to pay for mobile services in advance. Unlike traditional postpaid plans where the user pays at the end of the billing cycle, prepaid SIM cards require the user to purchase credit up front. This credit is then only used to access data services. Prepaid SIM cards offer flexibility and control over usage, as users can top up credit as needed to monitor and manage their spending. They are typically used by travelers, individuals on a budget, or those who don't want to be tied down to a long-term contract.<\/p>"
+          }
+        },
+        "block_LR8wWj": {
+          "type": "block",
+          "settings": {
+            "faqtype": "type2",
+            "title": "What is a prepaid SIM card?",
+            "content": "<p>A prepaid SIM card is a SIM card that allows users to pay for mobile services in advance. Unlike traditional postpaid plans where the user pays at the end of the billing cycle, prepaid SIM cards require the user to purchase credit up front. This credit is then only used to access data services. Prepaid SIM cards offer flexibility and control over usage, as users can top up credit as needed to monitor and manage their spending. They are typically used by travelers, individuals on a budget, or those who don't want to be tied down to a long-term contract.<\/p>"
+          }
+        },
+        "block_dJEKE8": {
+          "type": "block",
+          "settings": {
+            "faqtype": "type2",
+            "title": "What is a prepaid SIM card?",
+            "content": "<p>A prepaid SIM card is a SIM card that allows users to pay for mobile services in advance. Unlike traditional postpaid plans where the user pays at the end of the billing cycle, prepaid SIM cards require the user to purchase credit up front. This credit is then only used to access data services. Prepaid SIM cards offer flexibility and control over usage, as users can top up credit as needed to monitor and manage their spending. They are typically used by travelers, individuals on a budget, or those who don't want to be tied down to a long-term contract.<\/p>"
+          }
+        },
+        "block_GaP9xN": {
+          "type": "block",
+          "settings": {
+            "faqtype": "type2",
+            "title": "What is a prepaid SIM card?",
+            "content": "<p>A prepaid SIM card is a SIM card that allows users to pay for mobile services in advance. Unlike traditional postpaid plans where the user pays at the end of the billing cycle, prepaid SIM cards require the user to purchase credit up front. This credit is then only used to access data services. Prepaid SIM cards offer flexibility and control over usage, as users can top up credit as needed to monitor and manage their spending. They are typically used by travelers, individuals on a budget, or those who don't want to be tied down to a long-term contract.<\/p>"
+          }
+        },
+        "block_a3dwBz": {
+          "type": "block",
+          "settings": {
+            "faqtype": "type2",
+            "title": "What is a prepaid SIM card?",
+            "content": "<p>A prepaid SIM card is a SIM card that allows users to pay for mobile services in advance. Unlike traditional postpaid plans where the user pays at the end of the billing cycle, prepaid SIM cards require the user to purchase credit up front. This credit is then only used to access data services. Prepaid SIM cards offer flexibility and control over usage, as users can top up credit as needed to monitor and manage their spending. They are typically used by travelers, individuals on a budget, or those who don't want to be tied down to a long-term contract.<\/p>"
+          }
+        },
+        "block_QKrizm": {
+          "type": "block",
+          "settings": {
+            "faqtype": "type3",
+            "title": "What is a prepaid SIM card?",
+            "content": "<p>A prepaid SIM card is a SIM card that allows users to pay for mobile services in advance. Unlike traditional postpaid plans where the user pays at the end of the billing cycle, prepaid SIM cards require the user to purchase credit up front. This credit is then only used to access data services. Prepaid SIM cards offer flexibility and control over usage, as users can top up credit as needed to monitor and manage their spending. They are typically used by travelers, individuals on a budget, or those who don't want to be tied down to a long-term contract.<\/p>"
+          }
+        },
+        "block_NzTnBN": {
+          "type": "block",
+          "settings": {
+            "faqtype": "type3",
+            "title": "What is a prepaid SIM card?",
+            "content": "<p>A prepaid SIM card is a SIM card that allows users to pay for mobile services in advance. Unlike traditional postpaid plans where the user pays at the end of the billing cycle, prepaid SIM cards require the user to purchase credit up front. This credit is then only used to access data services. Prepaid SIM cards offer flexibility and control over usage, as users can top up credit as needed to monitor and manage their spending. They are typically used by travelers, individuals on a budget, or those who don't want to be tied down to a long-term contract.<\/p>"
+          }
+        },
+        "block_6bnHjM": {
+          "type": "block",
+          "settings": {
+            "faqtype": "type3",
+            "title": "What is a prepaid SIM card?",
+            "content": "<p>A prepaid SIM card is a SIM card that allows users to pay for mobile services in advance. Unlike traditional postpaid plans where the user pays at the end of the billing cycle, prepaid SIM cards require the user to purchase credit up front. This credit is then only used to access data services. Prepaid SIM cards offer flexibility and control over usage, as users can top up credit as needed to monitor and manage their spending. They are typically used by travelers, individuals on a budget, or those who don't want to be tied down to a long-term contract.<\/p>"
+          }
+        },
+        "block_UyHat6": {
+          "type": "block",
+          "settings": {
+            "faqtype": "type4",
+            "title": "What is a prepaid SIM card?",
+            "content": "<p>A prepaid SIM card is a SIM card that allows users to pay for mobile services in advance. Unlike traditional postpaid plans where the user pays at the end of the billing cycle, prepaid SIM cards require the user to purchase credit up front. This credit is then only used to access data services. Prepaid SIM cards offer flexibility and control over usage, as users can top up credit as needed to monitor and manage their spending. They are typically used by travelers, individuals on a budget, or those who don't want to be tied down to a long-term contract.<\/p>"
+          }
+        },
+        "block_8Rn7AB": {
+          "type": "block",
+          "settings": {
+            "faqtype": "type4",
+            "title": "What is a prepaid SIM card?",
+            "content": "<p>A prepaid SIM card is a SIM card that allows users to pay for mobile services in advance. Unlike traditional postpaid plans where the user pays at the end of the billing cycle, prepaid SIM cards require the user to purchase credit up front. This credit is then only used to access data services. Prepaid SIM cards offer flexibility and control over usage, as users can top up credit as needed to monitor and manage their spending. They are typically used by travelers, individuals on a budget, or those who don't want to be tied down to a long-term contract.<\/p>"
+          }
+        },
+        "block_qgiEy7": {
+          "type": "block",
+          "settings": {
+            "faqtype": "type4",
+            "title": "What is a prepaid SIM card?",
+            "content": "<p>A prepaid SIM card is a SIM card that allows users to pay for mobile services in advance. Unlike traditional postpaid plans where the user pays at the end of the billing cycle, prepaid SIM cards require the user to purchase credit up front. This credit is then only used to access data services. Prepaid SIM cards offer flexibility and control over usage, as users can top up credit as needed to monitor and manage their spending. They are typically used by travelers, individuals on a budget, or those who don't want to be tied down to a long-term contract.<\/p>"
+          }
+        },
+        "block_QzmPed": {
+          "type": "block",
+          "settings": {
+            "faqtype": "type5",
+            "title": "What is a prepaid SIM card?",
+            "content": "<p>A prepaid SIM card is a SIM card that allows users to pay for mobile services in advance. Unlike traditional postpaid plans where the user pays at the end of the billing cycle, prepaid SIM cards require the user to purchase credit up front. This credit is then only used to access data services. Prepaid SIM cards offer flexibility and control over usage, as users can top up credit as needed to monitor and manage their spending. They are typically used by travelers, individuals on a budget, or those who don't want to be tied down to a long-term contract.<\/p>"
+          }
+        },
+        "block_LUWq4a": {
+          "type": "block",
+          "settings": {
+            "faqtype": "type5",
+            "title": "What is a prepaid SIM card?",
+            "content": "<p>A prepaid SIM card is a SIM card that allows users to pay for mobile services in advance. Unlike traditional postpaid plans where the user pays at the end of the billing cycle, prepaid SIM cards require the user to purchase credit up front. This credit is then only used to access data services. Prepaid SIM cards offer flexibility and control over usage, as users can top up credit as needed to monitor and manage their spending. They are typically used by travelers, individuals on a budget, or those who don't want to be tied down to a long-term contract.<\/p>"
+          }
+        },
+        "block_EFNkfp": {
+          "type": "block",
+          "settings": {
+            "faqtype": "type5",
+            "title": "What is a prepaid SIM card?",
+            "content": "<p>A prepaid SIM card is a SIM card that allows users to pay for mobile services in advance. Unlike traditional postpaid plans where the user pays at the end of the billing cycle, prepaid SIM cards require the user to purchase credit up front. This credit is then only used to access data services. Prepaid SIM cards offer flexibility and control over usage, as users can top up credit as needed to monitor and manage their spending. They are typically used by travelers, individuals on a budget, or those who don't want to be tied down to a long-term contract.<\/p>"
+          }
+        },
+        "block_qC7Rqa": {
+          "type": "block",
+          "settings": {
+            "faqtype": "type5",
+            "title": "What is a prepaid SIM card?",
+            "content": "<p>A prepaid SIM card is a SIM card that allows users to pay for mobile services in advance. Unlike traditional postpaid plans where the user pays at the end of the billing cycle, prepaid SIM cards require the user to purchase credit up front. This credit is then only used to access data services. Prepaid SIM cards offer flexibility and control over usage, as users can top up credit as needed to monitor and manage their spending. They are typically used by travelers, individuals on a budget, or those who don't want to be tied down to a long-term contract.<\/p>"
+          }
+        },
+        "block_EABJ3x": {
+          "type": "block",
+          "settings": {
+            "faqtype": "type5",
+            "title": "What is a prepaid SIM card?",
+            "content": "<p>A prepaid SIM card is a SIM card that allows users to pay for mobile services in advance. Unlike traditional postpaid plans where the user pays at the end of the billing cycle, prepaid SIM cards require the user to purchase credit up front. This credit is then only used to access data services. Prepaid SIM cards offer flexibility and control over usage, as users can top up credit as needed to monitor and manage their spending. They are typically used by travelers, individuals on a budget, or those who don't want to be tied down to a long-term contract.<\/p>"
+          }
+        },
+        "block_KdEYtG": {
+          "type": "block",
+          "settings": {
+            "faqtype": "type6",
+            "title": "What is a prepaid SIM card?",
+            "content": "<p>A prepaid SIM card is a SIM card that allows users to pay for mobile services in advance. Unlike traditional postpaid plans where the user pays at the end of the billing cycle, prepaid SIM cards require the user to purchase credit up front. This credit is then only used to access data services. Prepaid SIM cards offer flexibility and control over usage, as users can top up credit as needed to monitor and manage their spending. They are typically used by travelers, individuals on a budget, or those who don't want to be tied down to a long-term contract.<\/p>"
+          }
+        },
+        "block_DzcifC": {
+          "type": "block",
+          "settings": {
+            "faqtype": "type6",
+            "title": "What is a prepaid SIM card?",
+            "content": "<p>A prepaid SIM card is a SIM card that allows users to pay for mobile services in advance. Unlike traditional postpaid plans where the user pays at the end of the billing cycle, prepaid SIM cards require the user to purchase credit up front. This credit is then only used to access data services. Prepaid SIM cards offer flexibility and control over usage, as users can top up credit as needed to monitor and manage their spending. They are typically used by travelers, individuals on a budget, or those who don't want to be tied down to a long-term contract.<\/p>"
+          }
+        },
+        "block_hJgjEa": {
+          "type": "block",
+          "settings": {
+            "faqtype": "type6",
+            "title": "What is a prepaid SIM card?",
+            "content": "<p>A prepaid SIM card is a SIM card that allows users to pay for mobile services in advance. Unlike traditional postpaid plans where the user pays at the end of the billing cycle, prepaid SIM cards require the user to purchase credit up front. This credit is then only used to access data services. Prepaid SIM cards offer flexibility and control over usage, as users can top up credit as needed to monitor and manage their spending. They are typically used by travelers, individuals on a budget, or those who don't want to be tied down to a long-term contract.<\/p>"
+          }
+        },
+        "block_7Gb4Ab": {
+          "type": "block",
+          "settings": {
+            "faqtype": "type6",
+            "title": "What is a prepaid SIM card?",
+            "content": "<p>A prepaid SIM card is a SIM card that allows users to pay for mobile services in advance. Unlike traditional postpaid plans where the user pays at the end of the billing cycle, prepaid SIM cards require the user to purchase credit up front. This credit is then only used to access data services. Prepaid SIM cards offer flexibility and control over usage, as users can top up credit as needed to monitor and manage their spending. They are typically used by travelers, individuals on a budget, or those who don't want to be tied down to a long-term contract.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "block_fhrQrW",
+        "block_YbmAwF",
+        "block_bDrjVi",
+        "block_6TqmKb",
+        "block_jzBE4t",
+        "block_6HV4fN",
+        "block_4iiCgB",
+        "block_LR8wWj",
+        "block_dJEKE8",
+        "block_GaP9xN",
+        "block_a3dwBz",
+        "block_QKrizm",
+        "block_NzTnBN",
+        "block_6bnHjM",
+        "block_UyHat6",
+        "block_8Rn7AB",
+        "block_qgiEy7",
+        "block_QzmPed",
+        "block_LUWq4a",
+        "block_EFNkfp",
+        "block_qC7Rqa",
+        "block_EABJ3x",
+        "block_KdEYtG",
+        "block_DzcifC",
+        "block_hJgjEa",
+        "block_7Gb4Ab"
+      ],
+      "settings": {
+        "title": "FAQ",
+        "type1": "Lorem ipsum dolor sit",
+        "type2": "Lorem ipsum dolor sit",
+        "type3": "Lorem ipsum dolor sit",
+        "type4": "Lorem ipsum dolor sit",
+        "type5": "Lorem ipsum dolor sit",
+        "type6": "Lorem ipsum dolor sit",
+        "type7": "",
+        "type8": "",
+        "type9": ""
+      }
+    }
+  },
+  "order": [
+    "coverage_banner_Xeqnwi",
+    "coverage_nationwide_qBz6AJ",
+    "coverage_custom_image_NEWR93",
+    "coverage_plan_7qgBLA",
+    "coverage_resources_ynRife",
+    "coverage_att_5g_BCkADL",
+    "coverage_prorecforyou_wERhxY",
+    "coverage_recordfun_r9ALyq",
+    "common_faqs_9md7Hm"
+  ]
+}
