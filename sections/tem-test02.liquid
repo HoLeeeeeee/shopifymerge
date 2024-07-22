@@ -13,7 +13,7 @@
   #shopify-section-header,.breadcrumb,#shopify-section-footer-copy{
     display:none;
   }
-  canvas,.demoimg {
+  canvas,#demoimg {
     position: fixed;
     left: 50%;
     top: 50%;
@@ -22,7 +22,43 @@
     max-height: 100vh;
 }
 </style>
-<img class="demoimg" alt="" src="https://cdn.shopify.com/s/files/1/0077/3953/9515/files/Installmopsblack_1.webp?v=1693292435"/>
+<img id="demoimg" alt="" src="https://cdn.shopify.com/s/files/1/0077/3953/9515/files/Installmopsblack_1.webp?v=1693292435"/>
+    <script>
+      const frameCount = 42;
+      const currentFrame = (index) => {
+        return  `https://cdn.shopify.com/s/files/1/0077/3953/9515/files/testproduct_${index}.jpg`;
+      }
+       
+      const preloadImages = () => {
+        for (let i = 1; i < frameCount; i++) {
+          const img = new Image();
+          img.src = currentFrame(i);
+        }
+      };
+
+      const updateImage = (index) => {
+        img.src = currentFrame(index);
+        $("#myImage").attr("src", "path/to/new/image.jpg");
+      };
+
+      window.addEventListener("scroll", () => {
+        const scrollTop = html.scrollTop;
+        const maxScrollTop = html.scrollHeight - window.innerHeight; // 总共可以滚动的距离
+        const scrollFraction = scrollTop / maxScrollTop; // 当前滚动距离 / 总滚动距离
+        // 当前图片帧 index = 滚动比例 * 总图片帧数
+        const frameIndex = Math.min(
+          frameCount - 1,
+          Math.ceil(scrollFraction * frameCount)
+        );
+
+        requestAnimationFrame(() => updateImage(frameIndex + 1));
+      });
+
+      preloadImages();
+    </script>
+  
+</canvas>
+
 <canvas id="democg" width="1377" height="774">
     <script>
       const html = document.documentElement;
@@ -93,5 +129,4 @@
       preloadImages();
     </script>
   
-
 </canvas>
