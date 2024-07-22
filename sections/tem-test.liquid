@@ -23,18 +23,24 @@
                 $('#videoId').attr('src', url);
             }
       });
-      let playbackConst = 200;
-      let videoEl = document.getElementById("videId");
-      // Use requestAnimationFrame for smooth playback
-      function scrollPlay() {
-        // 设置当前视频播放位置 = 页面滚动距离 / playbackConst 常量 // 多少 s
-        // 常量值越小，单位滚动距离，播放的视频时长越长。有可能滚动一小段视频就结束了。
-        var frameNumber = window.pageYOffset / playbackConst;
-        videoEl.currentTime = frameNumber;
-        // console.log(videoEl.currentTime);
-        window.requestAnimationFrame(scrollPlay);
-      }
-      window.requestAnimationFrame(scrollPlay);
+      const videoEl = document.getElementById("videoId");
+      // pause video on load
+      videoEl.pause();
+    // pause video on document scroll (stops autoplay once scroll started)
+  
+     const updatevideo = (value) => {
+        videoEl.currentTime = value;
+      }; 
+      
+      window.onscroll = function () {
+         let newsec = window.pageYOffset / 300;
+        updatevideo(newsec);
+        videoEl.pause();
+      };
+      // setInterval(function () {
+      //   videoEl.currentTime = window.pageYOffset / 300;
+      //   console.log(videoEl.currentTime, window.pageYOffset)
+      // }, 20);
     </script>
 
 
