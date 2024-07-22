@@ -1,7 +1,7 @@
 {% comment %} 视频滚动按帧切换 {% endcomment %}
 <style>
  body{
-   height:3200px;
+   height:1500px;
  }   .page-container {
     transform: none;
 }
@@ -20,8 +20,8 @@
       };
       // refresh video frames on interval for smoother playback
       setInterval(function () {
-        videoEl.currentTime = window.pageYOffset / 400;
-        // console.log(videoEl.currentTime, window.pageYOffset)
+        videoEl.currentTime = window.pageYOffset / 200;
+        console.log(videoEl.currentTime, window.pageYOffset)
       }, 40);
     </script>
 
