@@ -1,4 +1,35 @@
-{%- capture contentForQuerystring -%}{{ content_for_header }}{%- endcapture -%}
+{% comment %} 视频滚动按帧切换 {% endcomment %}
+<style>
+ body{
+   height:5000px;
+ } 
+video{
+     position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+</style>
+    <video id="videoId" muted="" src="./devstories.webm" style="position: fixed;top: 0;left: 0;width: 100%;"></video>
+    <script>
+      const videoEl = document.getElementById("videoId");
+      // pause video on load
+      videoEl.pause();
+      // pause video on document scroll (stops autoplay once scroll started)
+      window.onscroll = function () {
+        videoEl.pause();
+      };
+      // refresh video frames on interval for smoother playback
+      setInterval(function () {
+        videoEl.currentTime = window.pageYOffset / 400;
+        // console.log(videoEl.currentTime, window.pageYOffset)
+      }, 40);
+    </script>
+
+
+
+<!-- Launch Request 进度条 -->
+{% comment %} {%- capture contentForQuerystring -%}{{ content_for_header }}{%- endcapture -%}
 {% liquid
     assign pageParamStr = contentForQuerystring | split: '"pageurl":"' | last | split: '"' | first | url_decode | split: '?' | last | replace: '\/', '/' | replace: '%20', ' ' | replace: '\u0026', '&'
     assign pageParamStr02 =  contentForQuerystring | split: '"pageurl":"' | last | split: '"' | first | url_decode | split: '?'
@@ -89,6 +120,6 @@
     }
 
   </script>
-
+ {% endcomment %}
 
 
