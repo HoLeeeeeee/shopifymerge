@@ -1,7 +1,7 @@
 {% comment %} 视频滚动按帧切换 {% endcomment %}
 <style>
  body{
-   height:3000px;
+   height:2600px;
  }   .page-container {
     transform: none;
 }
@@ -22,7 +22,7 @@
       setInterval(function () {
         videoEl.currentTime = window.pageYOffset / 300;
         console.log(videoEl.currentTime, window.pageYOffset)
-      }, 40);
+      }, 20);
     </script>
 
 
