@@ -10,37 +10,39 @@
   }
 </style>
     <video id="videoId" preload="auto" muted="" src="https://cdn.shopify.com/videos/c/o/v/b73f572d6eac466ca9495791c7611e4f.mp4" style="position: fixed;top: 0;left: 0;width: 100%;"></video>
-    <script>
-      $.ajax({
-            url: 'https://cdn.shopify.com/videos/c/o/v/b73f572d6eac466ca9495791c7611e4f.mp4',
-            method: 'GET',
-            xhrFields: {
-                responseType: 'blob'
-            },
-            success: function(data) {
-                var url = URL.createObjectURL(data);
-              console.log("");
-                $('#videoId').attr('src', url);
-            }
-      });
-      const videoEl = document.getElementById("videoId");
-      // pause video on load
-      videoEl.pause();
-    // pause video on document scroll (stops autoplay once scroll started)
-  
-     const updatevideo = (value) => {
-        videoEl.currentTime = value;
-      }; 
-      
-      window.onscroll = function () {
-         let newsec = window.pageYOffset / 300;
-        window.requestAnimationFrame(updatevideo(newsec));
-        videoEl.pause();
-      };
-      // setInterval(function () {
-      //   videoEl.currentTime = window.pageYOffset / 300;
-      //   console.log(videoEl.currentTime, window.pageYOffset)
-      // }, 20);
+<script>
+        $(document).ready(function() {
+            $.ajax({
+                url: 'https://cdn.shopify.com/videos/c/o/v/b73f572d6eac466ca9495791c7611e4f.mp4',
+                method: 'GET',
+                xhrFields: {
+                    responseType: 'blob'
+                },
+                success: function(data) {
+                    var url = URL.createObjectURL(data);
+                    $('#videoId').attr('src', url);
+                }
+            });
+
+            const videoEl = document.getElementById("videoId");
+            videoEl.pause();  // pause video on load
+
+            let isScrolling;
+            const updateVideo = (value) => {
+                videoEl.currentTime = value;
+            };
+
+            window.onscroll = function () {
+                clearTimeout(isScrolling);
+                let newsec = window.pageYOffset / 300;
+                window.requestAnimationFrame(() => updateVideo(newsec));
+
+                // Set a timeout to run after scrolling ends
+                isScrolling = setTimeout(() => {
+                    videoEl.pause();
+                }, 66);  // roughly 15 frames per second
+            };
+        });
     </script>
 
 
