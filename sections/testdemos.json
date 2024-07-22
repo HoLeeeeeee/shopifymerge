@@ -1,9 +1,19 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "type": "header",
   "name": "Test Group",
   "sections": {
     "product-template": {
       "type": "product-template",
+      "disabled": true,
       "settings": {
         "image_size": "large",
         "show_quantity_selector": true,
@@ -16,6 +26,7 @@
     },
     "62fc7f50-9b24-4d8c-b84d-9ebeb56eef30": {
       "type": "rich-text",
+      "disabled": true,
       "settings": {
         "full_width": false,
         "section_title": "Talk about your brand",
