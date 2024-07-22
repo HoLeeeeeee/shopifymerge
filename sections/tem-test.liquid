@@ -34,7 +34,7 @@
       
       window.onscroll = function () {
          let newsec = window.pageYOffset / 300;
-        updatevideo(newsec);
+        window.requestAnimationFrame(updatevideo(newsec));
         videoEl.pause();
       };
       // setInterval(function () {
