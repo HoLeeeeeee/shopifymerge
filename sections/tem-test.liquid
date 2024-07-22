@@ -1,7 +1,7 @@
 {% comment %} 视频滚动按帧切换 {% endcomment %}
 <style>
  body{
-   height:3600px;
+   height:14000px;
  }   .page-container {
     transform: none;
 }
@@ -9,11 +9,11 @@
     display:none;
   }
 </style>
-    <video id="videoId" preload="auto" muted="" src="https://cdn.shopify.com/videos/c/o/v/b73f572d6eac466ca9495791c7611e4f.mp4" style="position: fixed;top: 0;left: 0;width: 100%;"></video>
+    <video id="videoId" preload="auto" muted="" src="https://www.apple.com/media/us/mac-pro/2013/16C1b6b5-1d91-4fef-891e-ff2fc1c1bb58/videos/macpro_main_desktop.mp4" style="position: fixed;top: 0;left: 0;width: 100%;"></video>
 <script>
         $(document).ready(function() {
             $.ajax({
-                url: 'https://cdn.shopify.com/videos/c/o/v/b73f572d6eac466ca9495791c7611e4f.mp4',
+                url: 'https://www.apple.com/media/us/mac-pro/2013/16C1b6b5-1d91-4fef-891e-ff2fc1c1bb58/videos/macpro_main_desktop.mp4',
                 method: 'GET',
                 xhrFields: {
                     responseType: 'blob'
@@ -34,7 +34,7 @@
 
             window.onscroll = function () {
                 clearTimeout(isScrolling);
-                let newsec = window.pageYOffset / 300;
+                let newsec = window.pageYOffset / 200;
                 window.requestAnimationFrame(() => updateVideo(newsec));
 
                 // Set a timeout to run after scrolling ends
