@@ -1,7 +1,7 @@
 {% comment %} 视频滚动按帧切换 {% endcomment %}
 <style>
  body{
-   height:3600px;
+   height:2000px;
  }   .page-container {
     transform: none;
 }
@@ -23,18 +23,17 @@
                 $('#videoId').attr('src', url);
             }
       });
-      const videoEl = document.getElementById("videoId");
-      // pause video on load
-      videoEl.pause();
-      // pause video on document scroll (stops autoplay once scroll started)
-      window.onscroll = function () {
-         videoEl.currentTime = window.pageYOffset / 300;
-        videoEl.pause();
-      };
-      // setInterval(function () {
-      //   videoEl.currentTime = window.pageYOffset / 300;
-      //   console.log(videoEl.currentTime, window.pageYOffset)
-      // }, 20);
+      let playbackConst = 200;
+      let videoEl = document.getElementById("videId");
+      // Use requestAnimationFrame for smooth playback
+      function scrollPlay() {
+        // 设置当前视频播放位置 = 页面滚动距离 / playbackConst 常量 // 多少
+        var frameNumber = window.pageYOffset / playbackConst;
+        videoEl.currentTime = frameNumber;
+        // console.log(videoEl.currentTime);
+        window.requestAnimationFrame(scrollPlay);
+      }
+      window.requestAnimationFrame(scrollPlay);
     </script>
 
 
