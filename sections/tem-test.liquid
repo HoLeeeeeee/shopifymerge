@@ -27,13 +27,14 @@
       videoEl.pause();
       // pause video on document scroll (stops autoplay once scroll started)
       window.onscroll = function () {
+         videoEl.currentTime = window.pageYOffset / 300;
         videoEl.pause();
       };
       // refresh video frames on interval for smoother playback
-      setInterval(function () {
-        videoEl.currentTime = window.pageYOffset / 300;
-        console.log(videoEl.currentTime, window.pageYOffset)
-      }, 20);
+      // setInterval(function () {
+      //   videoEl.currentTime = window.pageYOffset / 300;
+      //   console.log(videoEl.currentTime, window.pageYOffset)
+      // }, 20);
     </script>
 
 
