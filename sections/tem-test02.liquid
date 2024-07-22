@@ -37,8 +37,7 @@
       };
 
       const updateImage = (index) => {
-        img.src = currentFrame(index);
-        $("#myImage").attr("src", "path/to/new/image.jpg");
+        $("#demoimg").attr("src", currentFrame(index));
       };
 
       window.addEventListener("scroll", () => {
