@@ -1,6 +1,58 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
+
+<style>
+  .page-container {
+    transform: none;
+}
+  body{
+       height: 100vh;
   }
-{% endschema %}
+  #MainContent{
+        height: 500vh;
+    background: #000;
+  }
+  #shopify-section-header,.breadcrumb,#shopify-section-footer-copy{
+    display:none;
+  }
+  canvas,#demoimg {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100vw;
+    max-height: 100vh;
+}
+</style>
+<img id="demoimg" alt="" src="https://cdn.shopify.com/s/files/1/0077/3953/9515/files/Installmopsblack_1.webp?v=1693292435"/>
+    <script>
+       const html = document.documentElement;
+      const frameCount = 42;
+      const currentFrame = (index) => {
+        return  `https://cdn.shopify.com/s/files/1/0077/3953/9515/files/testproduct_${index}.jpg`;
+      }
+       
+      const preloadImages = () => {
+        for (let i = 1; i < frameCount; i++) {
+          const img = new Image();
+          img.src = currentFrame(i);
+        }
+      };
+
+      const updateImage = (index) => {
+        $("#demoimg").attr("src", currentFrame(index));
+      };
+
+      window.addEventListener("scroll", () => {
+        const scrollTop = html.scrollTop;
+        const maxScrollTop = html.scrollHeight - window.innerHeight; // 总共可以滚动的距离
+        const scrollFraction = scrollTop / maxScrollTop; // 当前滚动距离 / 总滚动距离
+        // 当前图片帧 index = 滚动比例 * 总图片帧数
+        const frameIndex = Math.min(
+          frameCount - 1,
+          Math.ceil(scrollFraction * frameCount)
+        );
+
+        requestAnimationFrame(() => updateImage(frameIndex + 1));
+      });
+
+      preloadImages();
+    </script>
