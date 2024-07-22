@@ -1,7 +1,7 @@
 {% comment %} 视频滚动按帧切换 {% endcomment %}
 <style>
  body{
-   height:2000px;
+   height:3600px;
  }   .page-container {
     transform: none;
 }
@@ -19,15 +19,16 @@
             },
             success: function(data) {
                 var url = URL.createObjectURL(data);
-              console.log("get");
+              console.log("");
                 $('#videoId').attr('src', url);
             }
       });
       let playbackConst = 200;
-      let videoEl = document.getElementById("videoId");
+      let videoEl = document.getElementById("videId");
       // Use requestAnimationFrame for smooth playback
       function scrollPlay() {
-        // 设置当前视频播放位置 = 页面滚动距离 / playbackConst 常量 // 多少
+        // 设置当前视频播放位置 = 页面滚动距离 / playbackConst 常量 // 多少 s
+        // 常量值越小，单位滚动距离，播放的视频时长越长。有可能滚动一小段视频就结束了。
         var frameNumber = window.pageYOffset / playbackConst;
         videoEl.currentTime = frameNumber;
         // console.log(videoEl.currentTime);
