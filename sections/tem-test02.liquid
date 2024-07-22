@@ -41,15 +41,39 @@
 
       const img = new Image();
       img.src = currentFrame(1);
-      canvas.width = img.width;
-      canvas.height = width.height;
+       const imgWidth = img.width;
+        const imgHeight = img.height;
+
+            // 计算绘制的宽高比例
+            const canvasAspect = canvas.width / canvas.height;
+            const imageAspect = imgWidth / imgHeight;
+
+            let drawWidth, drawHeight;
+            let offsetX = 0, offsetY = 0;
+
+            if (imageAspect > canvasAspect) {
+                // 图片宽高比大于画布宽高比，图片宽度较大，按照宽度缩放
+                drawWidth = canvas.width;
+                drawHeight = canvas.width / imageAspect;
+                offsetY = (canvas.height - drawHeight) / 2;  // 垂直居中
+            } else {
+                // 图片宽高比小于或等于画布宽高比，图片高度较大，按照高度缩放
+                drawWidth = canvas.height * imageAspect;
+                drawHeight = canvas.height;
+                offsetX = (canvas.width - drawWidth) / 2;  // 水平居中
+            }
+
+            // 绘制图片
+            ctx.drawImage(image, offsetX, offsetY, drawWidth, drawHeight);
       img.onload = function () {
-        context.drawImage(img, 0, 0);
+        // context.drawImage(img, 0, 0);
+        ctx.drawImage(img, offsetX, offsetY, drawWidth, drawHeight);
       };
 
       const updateImage = (index) => {
         img.src = currentFrame(index);
-        context.drawImage(img, 0, 0);
+        // context.drawImage(img, 0, 0);
+         ctx.drawImage(img, offsetX, offsetY, drawWidth, drawHeight);
       };
 
       window.addEventListener("scroll", () => {
