@@ -9,7 +9,7 @@
     display:none;
   }
 </style>
-    <video id="videoId" muted="" src="https://cdn.shopify.com/videos/c/o/v/b73f572d6eac466ca9495791c7611e4f.mp4" style="position: fixed;top: 0;left: 0;width: 100%;"></video>
+    <video id="videoId" preload="auto" muted="" src="https://cdn.shopify.com/videos/c/o/v/b73f572d6eac466ca9495791c7611e4f.mp4" style="position: fixed;top: 0;left: 0;width: 100%;"></video>
     <script>
       $.ajax({
             url: 'https://cdn.shopify.com/videos/c/o/v/b73f572d6eac466ca9495791c7611e4f.mp4',
@@ -19,6 +19,7 @@
             },
             success: function(data) {
                 var url = URL.createObjectURL(data);
+              console.log("");
                 $('#videoId').attr('src', url);
             }
       });
