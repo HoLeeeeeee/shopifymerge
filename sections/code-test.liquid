@@ -1,6 +1,39 @@
+{%- liquid
+  assign section_blocks = section.blocks
+-%}
+<div
+  data-section-id="{{ section.id }}"
+  data-section-type="index-banner"
+  id="index-banner"
+  class="index-banner"
+>
+
+</div>
+<div class="index-banner-placeholder"></div>
+<script>
+   let indexBannerContent;
+    // /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+    if (window.innerWidth < 768) {
+        // 判断是移动端时，引入移动端模板
+        {% capture mobile_index_banner %}{% render "mobile_index_banner" %}{% endcapture %}
+          indexBannerContent = {{ mobile_index_banner | json }};
+        
+    }else{
+        {% capture pc_index_banner %}{% render "pc_index_banner" %}{% endcapture %}
+          indexBannerContent = {{ pc_index_banner | json }};
+      {% comment %} console.log(indexBannerContent); {% endcomment %}
+    }
+    $('#index-banner').html(indexBannerContent);
+</script>
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Test Demo",
+    "presets": [
+      {
+        "name": "Test Demo",
+          "category": "HO-layout"
+      }
+    ]
   }
 {% endschema %}
