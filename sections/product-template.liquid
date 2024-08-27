@@ -1,9 +1,16 @@
-{% comment %} {% if product.template_suffix == blank %}
+{% if product.template_suffix == blank %}
    111
 {% else %}
    22
 {% endif %}
- {% endcomment %}
+{% if template.name == 'product' %}
+  <!-- 这是默认产品模板 -->
+  <p>This is the default product template.</p>
+{% else %}
+  <!-- 这是自定义模板 -->
+  <p>This is a custom product template.</p>
+{% endif %}
+
 <div class="product-template__container page-width" id="ProductSection-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="product" data-enable-history-state="true">
   {% comment %}
     Get first variant, or deep linked one
