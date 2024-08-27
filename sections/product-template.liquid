@@ -1,4 +1,4 @@
-{{ template.name }}
+{% comment %} 
 {% if product.template_suffix == blank %}
    111
 {% else %}
@@ -10,7 +10,7 @@
 {% else %}
   <!-- 这是自定义模板 -->
   <p>This is a custom product template.</p>
-{% endif %}
+{% endif %} {% endcomment %}
 
 <div class="product-template__container page-width" id="ProductSection-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="product" data-enable-history-state="true">
   {% comment %}
