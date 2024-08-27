@@ -4,7 +4,7 @@
 {% else %}
    22
 {% endif %}
-{% if template.name == 'product' %}
+{% if template.name == 'product' and template.suffix == blank %}
   <!-- 这是默认产品模板 -->
   <p>This is the default product template.</p>
 {% else %}
