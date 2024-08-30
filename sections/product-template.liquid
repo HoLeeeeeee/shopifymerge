@@ -14,6 +14,28 @@
 {{ product.metafields.my_fields.demoimage.value }}
 ==
 {{ product.metafields.custom.testmedia.value.sources[1].url }}
+
+
+  {% if product.metafields.custom.testmedia.value.sources[1].url contains '.mp4' or product.metafields.custom.testmedia.value.sources[1].url contains '.ogg' or product.metafields.custom.testmedia.value.sources[1].url contains '.webm' %}  
+          <gif-video>
+              <div class="icongif-videoplays" tabindex="0" role="button"> 
+              <svg role="img" aria-label="Play video" class="icon " aria-hidden="true" aria-labelledby="videoplay-icon-title" data-prefix="fal" data-icon="play-circle" style="fill:#fff;" viewBox="0 0 24 24"><title id="videoplay-icon-title">Video pause</title><g><path d="M0 0h24v24H0z" fill="none"/><path d="M6 5h2v14H6V5zm10 0h2v14h-2V5z"/></g></svg>
+              <span class="sr-only">Video pause</span>
+              </div>
+                  <video class="gif-video" webkit-playsinline playsinline muted="trun">
+                      <source src="{{ product.metafields.custom.testmedia.value.sources[1].url }}" type="video/ogg">
+                      <source src="{{ product.metafields.custom.testmedia.value.sources[1].url  }}" type="video/mp4">
+                      Your browser does not support the video
+                  </video>
+              <noscript>
+                  <iframe width="100%"  src="{{customDesc.overview_video.value.sources[1].url }}"  frameborder="0" type="video/mp4" autoplay loop controls muted webkit-playsinline playsinline></iframe>
+              </noscript>
+          </gif-video>
+   {% else %}
+         <img alt src="{{ product.metafields.custom.testmedia.value }}">         
+   {% endif %}
+
+                          
 <div class="product-template__container page-width" id="ProductSection-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="product" data-enable-history-state="true">
   {% comment %}
     Get first variant, or deep linked one
