@@ -25,15 +25,13 @@
                         'Content-Type': 'application/json'
                     },
                     body: JSON.stringify({
-                        attributes: {
-                            discount_code: code
-                        }
+                        note: code
                     })
                 })
                 .then(response => response.json())
                 .then(data => {
-                    if (data.attributes && data.attributes.discount_code === code) {
-                      console.log(data.attributes.discount_code);
+                    if (data.note === code) {
+                        console.log(data.note);
                     } else {
                         document.getElementById('discount-message').textContent = 'Failed to apply discount.';
                     }
