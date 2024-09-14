@@ -1,5 +1,3 @@
-
-
 <div class="cart-container">
     <h2>Your Cart</h2>
     <!-- Cart items would be dynamically listed here -->
@@ -18,17 +16,30 @@
     });
 
     function applyDiscountCode(code) {
-        fetch('/discount/' + code)
-            .then(response => {
-                if (response.ok) {
-                    document.getElementById('discount-message').textContent = 'Discount applied successfully!';
-                } else {
-                    document.getElementById('discount-message').textContent = 'Invalid discount code.';
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                document.getElementById('discount-message').textContent = 'Error applying discount.';
+        fetch('/cart.js')
+            .then(response => response.json())
+            .then(cart => {
+                fetch('/cart/update.js', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        note: code
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.note === code) {
+                        document.getElementById('discount-message').textContent = 'Discount applied successfully!';
+                    } else {
+                        document.getElementById('discount-message').textContent = 'Failed to apply discount.';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    document.getElementById('discount-message').textContent = 'Error applying discount.';
+                });
             });
     }
 </script>
