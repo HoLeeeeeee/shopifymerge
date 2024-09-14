@@ -419,7 +419,15 @@
       "b74e0eaa-d53b-4dc8-a560-01ac54c0f8a4",
       "21ed7dc0-230f-4487-b850-fba31d38c95a",
       "test002_jJ8WA8"
-    ]
+    ],
+    "blocks": {
+      "6174324309569838175": {
+        "type": "shopify:\/\/apps\/smile-io\/blocks\/smile-shopify-app\/2fae4e25-1841-4ea2-bc02-bd548478c4f6",
+        "disabled": false,
+        "settings": {
+        }
+      }
+    }
   },
   "presets": {
     "Default": {
