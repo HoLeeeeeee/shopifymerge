@@ -162,6 +162,51 @@
  </head>
 
 <body class="template-{{ template | split: '.' | first }} {% if template.suffix %}page-{{ template.suffix }}{% endif %}">
+  <div class="cart-container">
+    <h2>Your Cart</h2>
+    <!-- Cart items would be dynamically listed here -->
+
+    <div class="discount-container">
+        <input type="text" id="discount-code" placeholder="Enter discount code">
+        <button id="apply-discount">Apply Discount</button>
+        <p id="discount-message"></p>
+    </div>
+</div>
+
+<script>
+    document.getElementById('apply-discount').addEventListener('click', function() {
+        const discountCode = document.getElementById('discount-code').value;
+        applyDiscountCode(discountCode);
+    });
+
+    function applyDiscountCode(code) {
+        fetch('/cart.js')
+            .then(response => response.json())
+            .then(cart => {
+                fetch('/cart/update.js', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        note: code
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.note === code) {
+                        console.log(data)
+                    } else {
+                        document.getElementById('discount-message').textContent = 'Failed to apply discount.';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    document.getElementById('discount-message').textContent = 'Error applying discount.';
+                });
+            });
+    }
+</script>
   <a class="in-page-link visually-hidden skip-link" href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a>
 <!-- <img src="https://cdn.shopify.com/s/files/1/0077/3953/9515/files/student-bean_1500x_fee48f81-779a-4333-b6be-03e78a27a3a6.webp?v=1670479327"> -->
   <div id="SearchDrawer" class="search-bar drawer drawer--top" role="dialog" aria-modal="true" aria-label="{{ 'general.search.placeholder' | t }}">
