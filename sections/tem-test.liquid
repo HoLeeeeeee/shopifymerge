@@ -33,7 +33,7 @@
                 .then(response => response.json())
                 .then(data => {
                     if (data.attributes && data.attributes.discount_code === code) {
-                        document.getElementById('discount-message').textContent = 'Discount applied successfully!';
+                      console.log(data.attributes.discount_code);
                     } else {
                         document.getElementById('discount-message').textContent = 'Failed to apply discount.';
                     }
