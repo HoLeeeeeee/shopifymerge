@@ -163,6 +163,7 @@
 
 <body class="template-{{ template | split: '.' | first }} {% if template.suffix %}page-{{ template.suffix }}{% endif %}">
   <a class="in-page-link visually-hidden skip-link" href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a>
+  {{- product.featured_media | image_url: width: product.featured_media.width | image_tag: loading: 'lazy', sizes: sizes, widths: '200,300,400,500,600,700,800,1000,1200,1400,1600,1800' -}}
 <!-- <img src="https://cdn.shopify.com/s/files/1/0077/3953/9515/files/student-bean_1500x_fee48f81-779a-4333-b6be-03e78a27a3a6.webp?v=1670479327"> -->
   <div id="SearchDrawer" class="search-bar drawer drawer--top" role="dialog" aria-modal="true" aria-label="{{ 'general.search.placeholder' | t }}">
     <div class="search-bar__table">
