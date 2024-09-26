@@ -1,7 +1,10 @@
 <!doctype html>
 <!--[if IE 9]> <html class="ie9 no-js" lang="{{ shop.locale }}"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="{{ shop.locale }}"> <!--<![endif]-->
-<head>{% render 'structuredDataV2' %}{% render 'SEO-Master' %}
+<head>
+	<!-- Added by AVADA SEO Suite -->
+	{% include 'avada-seo' %}
+	<!-- /Added by AVADA SEO Suite -->{% render 'structuredDataV2' %}{% render 'SEO-Master' %}
 
 {% comment %}test888git {% endcomment %}
 {% include 'kiwiSizing' %}
