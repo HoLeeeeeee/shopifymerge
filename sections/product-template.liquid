@@ -15,15 +15,7 @@
 ==
 {{ product.metafields.custom.testmedia.value.sources[1].url }}
 
-  {% form 'customer', class: 'contact-form newsletter-form--newsletter-section', id: 'newsletter_form' %}
-                    <input type="hidden" name="contact[tags]" value="prospect,newsletter"/>
-                   <input type="hidden" name="challenge" value="false" />
-                      <input name="return_to" type="hidden" value="/">
-                    <input  type="email" name="contact[email]" placeholder="Email*" required="">
-                  <button type="submit" class="button  is-within-form">Subscirbe&Shop</button>
-                 
-                 
-                   {% endform %}
+
   {% if product.metafields.custom.testmedia.value.sources[1].url contains '.mp4' or product.metafields.custom.testmedia.value.sources[1].url contains '.ogg' or product.metafields.custom.testmedia.value.sources[1].url contains '.webm' %}  
           <gif-video>
               <div class="icongif-videoplays" tabindex="0" role="button"> 
