@@ -289,26 +289,6 @@
           "text_size": "medium"
         }
       },
-      "1546567160197": {
-        "type": "newsletter",
-        "settings": {
-          "section_title": "Subscribe to our newsletter",
-          "subheading": "<p>A short sentence describing what someone will receive by subscribing</p>",
-          "show_background": true
-        }
-      },
-      "1546568645183": {
-        "type": "featured-blog",
-        "settings": {
-          "title": "FEATURED BLOG",
-          "blog": "featured-blog",
-          "post_limit": 3,
-          "blog_show_author": false,
-          "blog_show_descri": false,
-          "blog_show_date": false,
-          "show_view_all": true
-        }
-      },
       "footer-copy": {
         "type": "footer-copy",
         "blocks": {
@@ -346,14 +326,6 @@
           "1546581033772"
         ],
         "settings": {
-        }
-      },
-      "b74e0eaa-d53b-4dc8-a560-01ac54c0f8a4": {
-        "type": "newsletter",
-        "settings": {
-          "section_title": "Subscribe to our newsletter",
-          "subheading": "<p>A short sentence describing what someone will receive by subscribing</p>",
-          "show_background": true
         }
       },
       "21ed7dc0-230f-4487-b850-fba31d38c95a": {
@@ -407,6 +379,18 @@
         "settings": {
           "title": ""
         }
+      },
+      "1546568645183": {
+        "type": "featured-blog",
+        "settings": {
+          "title": "FEATURED BLOG",
+          "blog": "featured-blog",
+          "post_limit": 3,
+          "blog_show_author": false,
+          "blog_show_descri": false,
+          "blog_show_date": false,
+          "show_view_all": true
+        }
       }
     },
     "content_for_index": [
@@ -415,8 +399,6 @@
       "1534836415831",
       "featured-collections",
       "1546568645183",
-      "1546567160197",
-      "b74e0eaa-d53b-4dc8-a560-01ac54c0f8a4",
       "21ed7dc0-230f-4487-b850-fba31d38c95a",
       "test002_jJ8WA8"
     ],
