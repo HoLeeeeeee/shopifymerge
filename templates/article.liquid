@@ -1,7 +1,7 @@
-
+{% comment %}
 {% capture commentsplus %}{% render "comments-plus" %}{% endcapture %}
 {% unless commentsplus contains "Liquid error" %}{{ commentsplus }}{% endunless %}
-{% comment %}
+
   Comments will not appear right after they are submitted, either to be checked for spam
   or to await moderation. When a comment is submitted, the browser is redirected to a page
   that includes the new comment id in its URL.
