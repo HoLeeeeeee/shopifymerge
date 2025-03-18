@@ -1,0 +1,405 @@
+{% assign settings = shop.metafields.commentsplus.settings.value %}
+
+{% capture comments_plus %}
+    {% assign metafields = articles[article.handle].metafields.commentsplus.easyDISQUS %}
+    {% assign metafields_like = articles[article.handle].metafields.commentsplus.easyDISQUS_like %}
+    {% assign metafields_deleted_comments = articles[article.handle].metafields.commentsplus.comments_remove %}
+    
+      <script>
+        window.nm_easydisqus = {
+          customer: {
+            customer_id: undefined,
+            customer_email: undefined,
+            customer_name: undefined,
+          },
+          metafields: undefined,
+          metafields_like: undefined,
+          metafields_deleted_comments: undefined, 
+          myshopify: "{{ shop.permanent_domain }}",
+          shopify_domain: "{{ shop.domain }}",
+          blog_id: {{ blog.id }},
+          article_id: {{ article.id }},
+          article_handle: "{{ article.handle }}",
+          blog_handle: "{{ blog.handle }}",
+          template_name: "{{ template.name }}",
+          comments: {
+              comments_enabled: false,
+              moderated: false
+          },
+          routes: {
+              worker: "/tools/disqus"
+          }
+        };
+        
+        window.nm_easydisqus.theme_design = "{{ settings.comments_plus.theme_design }}";
+        window.nm_appSettings = {{ shop.metafields.commentsplus.settings.value.comments_plus | json }};
+        
+        {% if metafields %}
+            window.nm_easydisqus.metafields = '{{ metafields }}'
+        {% endif %}
+        
+        {% if metafields_like %}
+            window.nm_easydisqus.metafields_like = '{{ metafields_like }}'
+        {% endif %}
+        
+        {% if metafields_deleted_comments %}
+            window.nm_easydisqus.metafields_deleted_comments = '{{ metafields_deleted_comments }}'
+        {% endif %}
+    
+        {% if customer %}
+            window.nm_easydisqus.customer.customer_id = {{ customer.id }};
+            window.nm_easydisqus.customer.customer_email = "{{ customer.email }}";
+            window.nm_easydisqus.customer.customer_name = "{{ customer.first_name }}";
+        {% endif %}
+        
+        {% if blog.comments_enabled? %}
+            window.nm_easydisqus.comments.comments_enabled = true;
+        {% endif %}
+        
+        {% if blog.moderated? %}
+            window.nm_easydisqus.comments.moderated = true;
+        {% endif %}
+      </script>
+    
+      <div class="EasyDISQUS-comments {% if settings.comments_plus.theme_design == 'dark' %}EasyDISQUS-comments-dark{% endif %}">
+        <div id="EasyDISQUS-container">
+            <div id="EasyDISQUS" class="EasyDISQUS">
+              <div id="nm-ed-customer-block" class="nm-ed-customer-block hide">
+                <div class="nm-ed-comment-avatar">
+                    <div class="nm-ed-comment-avatar-letters">
+    
+                    </div>
+                </div>
+                <div class="nm-ed-parentName"></div>
+                <div class="nm-ed-logout">
+                  <button class="nm-ed-logout-button" id="nm-ed-logout-button">
+                    <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4.89362 11.25H2.27444C1.92711 11.25 1.59401 11.1271 1.34841 10.9083C1.10282 10.6895 0.964844 10.3928 0.964844 10.0833V1.91667C0.964844 1.60725 1.10282 1.3105 1.34841 1.09171C1.59401 0.872916 1.92711 0.75 2.27444 0.75H4.89362" stroke="#45535C" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M9.47754 8.91683L12.7515 6.00016L9.47754 3.0835" stroke="#45535C" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M12.7511 6H4.89355" stroke="#45535C" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <form>
+                <div class="parent-info hide">
+                    <input disabled id="parentName" value="" placeholder="parent name">
+                    <input disabled id="parentID" value="" placeholder="parentID">
+                </div>
+                <div class="hide">
+                    <input id="disqus_name" name="name" type="text" placeholder="Name" value="{{ customer.first_name }}">
+                    <input id="disqus_email" type="email" name="email" placeholder="Email" value="{{ customer.email }}">
+                </div>
+                
+                   <textarea id="disqus_message" name="body" placeholder="Join the discussion..." value=""></textarea>
+                      
+                <div class="nm-ed-verify_email">
+    
+                </div>
+                <div class="nm-ed-errors-container">
+    
+                </div>
+                <div id="nm-ed-form-button-container" class="nm-ed-form-button-container">
+                  <div class="nm-ed-post-comment hide">
+                    <input id="submit_disqus" data-blog.id="{{ blog.id }}" data-article.id="{{ article.id }}" type="submit" class="nm-ed-btn" value="Post comment">
+                  </div>
+                  <div class="nm-ed-open-form hide">
+                    <input id="nm_ed_sign_up" class="nm-ed-btn-transparent" type="submit" value="Sign Up">
+                    <input id="nm_ed_sign_in" class="nm-ed-btn" type="submit" value="Log In">
+                  </div>
+                </div>
+              </form>
+              <div id="renderLoginContainerMain" class="renderLoginContainer"></div>
+            </div>
+        </div>
+        
+        <div id="comments" class="nm-ed-comments">
+         <div class="spinner-container">
+           <div class="loadingio-spinner-rolling-k5uwhnrf38">
+                <div class="ldio-bhxkii60xzi">
+                    <div></div>
+                </div>
+           </div>
+         </div>
+         <ul id="nm-ed-comments-list" class="comments"></ul>
+         <div class="nm-disqus-pagination hide">
+           <button id="nm-disqus-prev" class="nm-disqus-pagination-button nm-disqus-pagination-left nm-ed-button-disable">
+            <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.0002 10.9399V6.93994H13.9202L13.9502 4.92994H5.0002V0.939941L0.000195503 5.93994L5.0002 10.9399Z" fill="#0078CB"/>
+            </svg>
+           </button>
+           <div class="nm-disqus-info">
+             <span id="nm-disqus-commentsNamberPage">1</span>
+             <span>out of</span>
+             <span id="nm-disqus-commentsCountPage">...</span>
+           </div>
+           <button id="nm-disqus-next" class="nm-disqus-pagination-button nm-disqus-pagination-right nm-ed-button-disable">
+            <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.9998 10.9399V6.93994H0.0798044L0.0498047 4.92994H8.9998V0.939941L13.9998 5.93994L8.9998 10.9399Z" fill="#0078CB"/>
+            </svg>
+           </button>
+         </div>
+          
+          <div class="nm-ed-login-hidden-form" style="display: none;">
+            <div id="CustomerLoginForm" class="form_load">
+    
+              {% form 'customer_login', novalidate: 'novalidate' %}
+                {%- if form.errors -%}
+                  <div class="form-message form-message--error">
+                    <h2 class="h3 form-message__title " tabindex="-1" data-form-status>{{ 'contact.form.error_heading' | t }}</h2>
+                    {{ form.errors | default_errors }}
+                  </div>
+                {%- endif -%}
+    
+                <div data-type="email" class="nm-ed-input-container">
+                    <input
+                  placeholder=" "
+                  class="nm-ed-form-control"
+                  type="email"
+                  name="customer[email]"
+                  id="CustomerEmail"
+                  autocomplete="email"
+                  autocorrect="off"
+                  autocapitalize="off"
+                  {%- if form.errors contains 'form' -%}
+                    class="input--error"
+                    aria-invalid="true"
+                  {%- endif -%}
+                  >
+                  <div class="nm-ed-placeholder">Email <span class="nm-ed-red">*</span></div>
+                </div>
+    
+                {% if form.password_needed %}
+              <div data-type="password" class="nm-ed-input-container">
+                <input
+                    placeholder=" "
+                    class="nm-ed-form-control"
+                    type="password"
+                    value=""
+                    name="customer[password]"
+                    id="CustomerPassword"
+                    {%- if form.errors contains 'form' -%}
+                      class="input--error"
+                      aria-invalid="true"
+                    {%- endif -%}
+                  >
+                <div class="nm-ed-placeholder">Password <span class="nm-ed-red">*</span></div>
+              </div>
+                {% endif %}
+              <input type="hidden" name="checkout_url" value="{{ article.url }}">
+    
+                <div class="nm-ed-button-container">
+                  <div>
+                    <input id="nm-ed-log-in-button" type="submit" class="nm-ed-btn nm-ed-login-btn" value="Log in">
+                  </div>
+                </div>
+    
+              {% endform %}
+    
+              <div class="button-a">
+                <span>Don't have an account? </span>
+                <input id="nm-ed-button-a-sign-up" type="submit" class="nm-ed-btn-a" value="Sign up">
+              </div>
+            </div>
+          </div>   
+        </div> 
+      </div>
+    
+    <script src="https://cdn.shopify.com/s/files/1/0875/2064/files/commentsplus-storefront-v1.0.1.min.js?v=1722416714" defer></script>
+{% endcapture %}
+
+{% capture disqus %}
+    {% assign siteName = settings.disqus.site_name %}{% if template contains "product" %}
+        {% assign disqus_id = product.id %}
+        {% assign temp = "product" %}
+    {% elsif template contains "article" %}
+        {% assign disqus_id = article.id %}
+        {% assign temp = "article" %}
+    {% elsif template contains "blog" %}
+        {% assign disqus_id = blog.id %}
+        {% assign temp = "blog" %}
+    {% elsif template contains "collection" %}
+        {% assign disqus_id = collection.id %}
+        {% assign temp = "collection" %}
+    {% elsif template contains "page" %}
+        {% assign disqus_id = page.id %}
+        {% assign temp = "page" %}
+    {% else %}
+        {% assign disqus_id = "" %}
+        {% assign temp = template | split: "." | first %}
+    {% endif %}
+    <div id="disqus_thread"></div>
+    <script src="/tools/disqus/disqus_code.php?n={{ siteName }}&id={{ temp }}-{{ disqus_id }}&url={{ canonical_url | url_param_escape }}" async></script>
+    <script id="dsq-count-scr" src="//{{ siteName }}.disqus.com/count.js" async></script>
+{% endcapture %}
+
+{%- if settings.comments_plus.is_enabled and settings.disqus.is_enabled == false and settings -%}
+  {%- if template.name == 'article' and blog.comments_enabled? -%}
+    {{ comments_plus }}
+  {% else %}
+    {% if request.design_mode %}
+      {% if template.name != 'article' %}
+        Comments Plus are based on native Shopify comments system, so it works on the article pages only!
+      {% endif %}  
+      {% if blog.comments_enabled? == false %}
+        Comments are disabled on this blog!
+      {% endif %}  
+    {% endif %}  
+  {% endif %}    
+{%- endif -%}
+
+{%- if settings.disqus.is_enabled and settings.comments_plus.is_enabled == false and settings -%}
+  {% if settings.disqus.site_name != "" %}
+    <style>
+      .easydisqus-container{
+        margin: 20px auto;
+        width: calc(100% - 40px);
+        max-width: 1220px;
+      }
+    </style>
+    <div class="easydisqus-container">
+      {{ disqus }}
+    </div>
+    <script>
+      window.nm_easydisqus = {
+        template_name: "{{ template.name }}",
+        comments: {
+              comments_enabled: false,
+              moderated: false
+          },
+      }
+      {% if blog.comments_enabled? %}
+          window.nm_easydisqus.comments.comments_enabled = true;
+      {% endif %}
+    </script>
+    <script src="https://cdn.shopify.com/s/files/1/0875/2064/files/commentsplus_native_comments_v3.1.1.min.js" defer></script>
+  {% else %}
+    {% if request.design_mode %}
+      DISQUS is not configured,  please enter DISQUS Site Shortname in the <a target="_blank" href="https://{{ shop.name }}.myshopify.com/admin/apps/{{ settings.api_key }}">app settings</a>!
+    {% endif %}
+  {% endif %}  
+{%- endif -%}
+
+{%- if settings.comments_plus.is_enabled and settings.disqus.is_enabled and settings -%}
+    {%- if template.name == 'article' and blog.comments_enabled? and settings.disqus.site_name != "" -%}
+      <style type="text/css">
+        .easydisqus-body .easydisqus-tab-menu ul{
+        	display: flex;
+        }
+        
+        .easydisqus-body .easydisqus-tab-menu ul li{
+        	cursor: pointer;
+        	list-style: none;
+        }
+        
+        .easydisqus-body .easydisqus-tab-menu ul li span{
+        	font-family: SF Pro Text, -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 14px;
+          color: rgba(0, 0, 0, 0.5);
+          padding: 10px 20px 19px 20px;
+          display: block;
+        }
+        
+        .easydisqus-tab-active span{
+        	color: #3D464C !important;
+          border-bottom: 3px solid #3d464c !important;
+        }
+        
+        .easydisqus-tab-menu {
+        	margin-top: 20px !important;
+        }
+        
+        .easydisqus-comment-hidden{
+        	display: none;
+        }
+        
+        .easydisqus-tab-menu-dark ul li span{
+          color: #808080 !important;
+        }
+        
+        .easydisqus-tab-menu-dark .easydisqus-tab-active span{
+          color: #ccc !important;
+          border-bottom: 3px solid #FFFFFF;
+        }
+      </style>
+      <div class="easydisqus-body">
+    	<div class="easydisqus-tab-menu {% if settings.comments_plus.theme_design == 'dark' %}easydisqus-tab-menu-dark{% endif %}">
+          <ul role="tablist">
+            <li class="easydisqus-tab-active">
+              <span>Comments</span>
+            </li>
+            <li>
+              <span>DISQUS</span>
+            </li>
+          </ul>
+    	</div>
+      	
+        <div class="easydisqus-comments">
+          <div>
+            {{ comments_plus }}
+          </div>
+          <div class="easydisqus-comment-hidden">
+            {{ disqus }}
+          </div>
+        </div>
+    </div>
+    <script>
+    (function () {
+        "use strict";
+        document.addEventListener("DOMContentLoaded", ready);
+        function ready(){
+          let tabs = document.querySelectorAll('.easydisqus-tab-menu li');
+          let comments = document.querySelectorAll('.easydisqus-comments > div');
+          
+          tabs[0].addEventListener('click', function(event){
+            event.preventDefault();
+            if(!tabs[0].classList.contains('easydisqus-tab-active')){
+                tabs[0].classList.add('easydisqus-tab-active');
+                tabs[1].classList.remove('easydisqus-tab-active');
+              
+                comments[0].classList.remove('easydisqus-comment-hidden');
+                comments[1].classList.add('easydisqus-comment-hidden');
+            }
+          });
+          
+          tabs[1].addEventListener('click', function(event){
+            event.preventDefault();
+            if(!tabs[1].classList.contains('easydisqus-tab-active')){
+                tabs[1].classList.add('easydisqus-tab-active');
+                tabs[0].classList.remove('easydisqus-tab-active');
+              
+                comments[1].classList.remove('easydisqus-comment-hidden');
+                comments[0].classList.add('easydisqus-comment-hidden');
+            }
+          });   
+        }
+    })();    
+    </script>
+    {% else %}
+      
+      {% if request.design_mode %}
+        {%- if template.name != 'article' %}
+          Comments Plus are based on native Shopify comments system, so it works on the article pages only!
+        {% endif %}
+        {% if blog.comments_enabled? == false %}
+          Comments are disabled on this blog!
+        {% endif %}
+        {% if settings.disqus.site_name == "" %}
+          DISQUS is not configured,  please enter DISQUS Site Shortname in the <a target="_blank" href="https://{{ shop.name }}.myshopify.com/admin/apps/{{ settings.api_key }}">app settings</a>!
+        {% endif %}  
+      {% endif %}  
+      
+      {% if template.name == 'article' and blog.comments_enabled? != false %}
+          {{ comments_plus }}
+      {% endif %}
+
+      {% if settings.disqus.site_name != ""%}
+        {{ disqus }}
+      {%- endif -%}  
+      
+    {%- endif -%}
+
+{%- endif -%}
