@@ -14,8 +14,7 @@
       <div class="contact-form form-vertical">
         {%- assign formId = 'ContactForm' -%}
         {% form 'contact', id: formId %}
-          <input type="hidden" name="Livestream Form" value="Livestream Form02" >
-           <input type="hidden" name="user_id" value="12345" />
+          <input type="checkbox" checked  name="Current Form" value="Livestream Form" style="display:none" />
           {% include 'form-status', formId %}
 
           <div class="grid grid--half-gutters">
