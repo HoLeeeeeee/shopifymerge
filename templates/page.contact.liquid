@@ -14,7 +14,8 @@
       <div class="contact-form form-vertical">
         {%- assign formId = 'ContactForm' -%}
         {% form 'contact', id: formId %}
-          <input type="hidden" id="Contatext-{{ section.id }}" name="contact[name]" value="Livestream Form" >
+          <input type="hidden" name="Livestream Form" value="Livestream Form02" >
+           <input type="hidden" name="user_id" value="12345" />
           {% include 'form-status', formId %}
 
           <div class="grid grid--half-gutters">
