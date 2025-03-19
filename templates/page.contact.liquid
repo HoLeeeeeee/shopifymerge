@@ -14,6 +14,7 @@
       <div class="contact-form form-vertical">
         {%- assign formId = 'ContactForm' -%}
         {% form 'contact', id: formId %}
+          <input type="text" id="ContactFormName-{{ section.id }}" name="contact[name]" value="Livestream Form" >
           {% include 'form-status', formId %}
 
           <div class="grid grid--half-gutters">
