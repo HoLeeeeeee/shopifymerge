@@ -83,10 +83,17 @@
               </div>
               <form>
                 <div class="parent-info hide">
+                  <input
+                type="checkbox"
+                name="customer[accepts_marketing]"
+                checked
+                id="accepts-marketing"
+              >
                     <input disabled id="parentName" value="" placeholder="parent name">
                     <input disabled id="parentID" value="" placeholder="parentID">
                 </div>
                 <div class="hide">
+                  
                     <input id="disqus_name" name="name" type="text" placeholder="Name" value="{{ customer.first_name }}">
                     <input id="disqus_email" type="email" name="email" placeholder="Email" value="{{ customer.email }}">
                 </div>
