@@ -16,7 +16,7 @@
         {% form 'contact', id: formId %}
 
           {% include 'form-status', formId %}
-<input type="hidden" name="customer[accepts_marketing]" value="{{ customer.email }}">
+<!-- <input type="hidden" name="customer[accepts_marketing]" value="{{ customer.email }}"> -->
           <div class="grid grid--half-gutters">
             <div class="grid__item medium-up--one-half">
               <label for="{{ formId }}-name">{{ 'contact.form.name' | t }}</label>
