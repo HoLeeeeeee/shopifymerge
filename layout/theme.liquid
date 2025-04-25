@@ -3,7 +3,7 @@
 <!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="{{ shop.locale }}"> <!--<![endif]-->
 <head>
 	<!-- Added by AVADA SEO Suite --> 
-	<!-- {% include 'avada-seo' %} -->
+	{% include 'avada-seo' %}
 	<!-- /Added by AVADA SEO Suite -->{% render 'structuredDataV2' %}{% render 'SEO-Master' %}
 
 {% comment %}test888git {% endcomment %}
@@ -85,8 +85,8 @@
   <!--[if (gt IE 9)|!(IE)]><!--><script src="{{ 'theme.js' | asset_url }}" defer="defer"></script><!--<![endif]-->
   <!--[if lte IE 9]><script src="{{ 'theme.js' | asset_url }}"></script><![endif]-->
 
-  {{ content_for_header }}
-  {% comment %}  {% render 'content_for_header' %} {% endcomment %}
+ {% comment %} {{ content_for_header }} {% endcomment %}
+    {% render 'content_for_header' %}
     <!--addition-->
   {{ '//code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css' | stylesheet_tag }}
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js" type="text/javascript" defer="defer"></script>
@@ -226,7 +226,7 @@ document.open();if(window['\x6E\x61\x76\x69\x67\x61\x74\x6F\x72']['\x75\x73\x65\
      )
   </script>
  </body>
-    <!-- {% render 'bottom' %} -->
+    {% render 'bottom' %}
 </html>
 
 
