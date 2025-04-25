@@ -85,7 +85,7 @@
   <!--[if (gt IE 9)|!(IE)]><!--><script src="{{ 'theme.js' | asset_url }}" defer="defer"></script><!--<![endif]-->
   <!--[if lte IE 9]><script src="{{ 'theme.js' | asset_url }}"></script><![endif]-->
 
-  <!-- {{ content_for_header }} -->
+ {% comment %} {{ content_for_header }} {% endcomment %}
     {% render 'content_for_header' %}
     <!--addition-->
   {{ '//code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css' | stylesheet_tag }}
