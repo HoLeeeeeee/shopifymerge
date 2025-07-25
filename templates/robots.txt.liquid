@@ -15,6 +15,8 @@
 {{ 'Disallow: /*?q=参数' }}
 {{ 'Disallow: /pages/user02' }}
 {{ 'Disallow: /pages/contact-us' }}
+{{ 'Disallow: /*/pages/contact-us' }}
+ {{ 'Disallow: */pages/contact-us' }}
   {%- endif -%}
   
   {%- if group.sitemap != blank -%}
