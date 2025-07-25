@@ -14,6 +14,7 @@
   {%- if group.user_agent.value == '*' -%}
 {{ 'Disallow: /*?q=参数' }}
 {{ 'Disallow: /pages/user02' }}
+{{ 'Disallow: /pages/contact-us' }}
   {%- endif -%}
   
   {%- if group.sitemap != blank -%}
