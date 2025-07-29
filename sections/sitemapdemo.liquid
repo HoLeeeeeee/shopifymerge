@@ -1,4 +1,10 @@
-
+{% assign pages = pages | sort: 'published_at' %}
+{% for page in pages %}
+  <url>
+    <loc>{{ page.url | prepend: shop.url }}</loc>
+    <lastmod>{{ page.updated_at | date: "%Y-%m-%dT%H:%M:%S%:z" }}</lastmod>
+  </url>
+{% endfor %}
 
 {% schema %}
   {
