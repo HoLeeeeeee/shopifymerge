@@ -17,13 +17,12 @@
 {{ 'Disallow: /pages/contact-us' }}
 {{ 'Disallow: /*/pages/contact-us' }}
  {{ 'Disallow: */pages/contact-us' }}
-     {{ 'Sitemap: https://hourlishop.myshopify.com/pages/sitemapdemo' }}
-  {% if forloop.last %}  
- {{ 'Sitemap: https://hourlishop.myshopify.com/pages/sitemapdemo' }}
-    {% endif %}
   {%- endif -%}
   
   {%- if group.sitemap != blank -%}
     {{ group.sitemap }}
   {%- endif -%}
+    {% if forloop.last %}  
+ {{ 'Sitemap: https://hourlishop.myshopify.com/pages/sitemapdemo' }}
+    {% endif %}
 {% endfor %}
