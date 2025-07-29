@@ -17,6 +17,9 @@
 {{ 'Disallow: /pages/contact-us' }}
 {{ 'Disallow: /*/pages/contact-us' }}
  {{ 'Disallow: */pages/contact-us' }}
+  {% if forloop.last %}  
+ {{ 'Sitemap: https://hourlishop.myshopify.com/pages/sitemapdemo' }}
+    {% endif %}
   {%- endif -%}
   
   {%- if group.sitemap != blank -%}
