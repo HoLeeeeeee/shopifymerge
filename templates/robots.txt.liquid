@@ -21,8 +21,6 @@
   
   {%- if group.sitemap != blank -%}
     {{ group.sitemap }}
+    {{ 'Sitemap: https://hourlishop.myshopify.com/pages/sitemapdemo' }}
   {%- endif -%}
-    {% if forloop.last %}  
- {{ 'Sitemap: https://hourlishop.myshopify.com/pages/sitemapdemo' }}
-    {% endif %}
 {% endfor %}
