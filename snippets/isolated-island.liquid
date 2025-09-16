@@ -1,0 +1,50 @@
+ <a href="/" style="font-size:0;height: 0;display: block;">Home Link</a>
+     <div aria-hidden="true" class="sitemap-container sr-only" style="font-size:0;height: 0;display: block;z-index:-1;    position: relative;visibility: hidden;">
+          <div class="sitemap-items">
+            <div class="sitemap-item-title">All Pages</div>
+            <div class="sitemap-item-content">
+
+               {% for pageitem in pages %}
+              <div class="sitemaplink-bo"><a  href="{{ pageitem.url }}">{{ pageitem.title }}</a></div>
+              {% endfor %}
+            </div>
+           </div>
+          
+          <div class="sitemap-items">
+            <div class="sitemap-item-title">All Collections</div>
+            <div class="sitemap-item-content">
+
+                {% for collection in collections %}
+              <div class="sitemaplink-bo"><a  href="{{ collection.url }}">{{ collection.title }}</a></div>
+              {% endfor %}
+
+            </div>
+           </div>
+           <div class="sitemap-items">
+            <div class="sitemap-item-title">All Articles</div>
+            <div class="sitemap-item-content">
+
+          {% for article in blogs["news"].articles %}
+              <div class="sitemaplink-bo"><a  href="{{ article.url }}">{{ article.title }}</a></div>
+              {% endfor %}
+            </div>
+           </div> 
+      
+            <div class="sitemap-items">
+            <div class="sitemap-item-title">All Product</div>
+            <div class="sitemap-item-content">
+              {% paginate collections.discount-for-referral-candy.products %}
+                  {% for product in collections.discount-for-referral-candy.products %}    
+                    <div class="sitemaplink-bo">      <a href="{{ product.url }}">{{ product.title }}</a>  </div>    
+                    {% endfor %}
+               {% endpaginate %}
+            </div>
+           </div>
+
+        </div>
+
+
+
+
+
+
