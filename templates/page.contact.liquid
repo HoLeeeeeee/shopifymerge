@@ -17,7 +17,8 @@
         {% form 'contact', id: formId %}
 
           {% include 'form-status', formId %}
-<!-- <input type="hidden" name="customer[accepts_marketing]" value="{{ customer.email }}"> -->
+          <input type="hidden" name="customer[accepts_marketing]" value="{{ customer.email }}"> 
+          <input type="hidden" name="customer[Page]" value="TEST">
           <input
                 type="checkbox"
                 name="customer[accepts_marketing]"
