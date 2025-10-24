@@ -86,7 +86,78 @@
   <!--[if (gt IE 9)|!(IE)]><!--><script src="{{ 'theme.js' | asset_url }}" defer="defer"></script><!--<![endif]-->
   <!--[if lte IE 9]><script src="{{ 'theme.js' | asset_url }}"></script><![endif]-->
 
- {{ content_for_header }}
+ {% comment %} {{ content_for_header }} {% endcomment %}
+  {% comment %}
+  ⚡ Enhanced Shopioso Speed Boost (App-safe version)
+  适用于 Shopify Online Store 2.0，兼容 App Blocks 与 Theme Extensions。
+  功能：
+  - 延迟加载非关键脚本
+  - 保留第三方 App 的运行逻辑
+  - 优化 LCP 与加载顺序
+{% endcomment %}
+
+<!-- Start of Enhanced Shopioso Speed Boost -->
+{% capture modified_content_for_header %}
+  {{ content_for_header }}
+{% endcapture %}
+
+{%- comment -%}
+  定义事件替换目标
+{%- endcomment -%}
+{% assign domcontentloada = "document.addEventListener('DOMContentLoaded'" %}
+{% assign startasyncloada = "document.addEventListener('StartAsyncLoading'" %}
+{% assign domcontentload = "e.addEventListener('DOMContentLoaded'" %}
+{% assign startasyncloading = "e.addEventListener('StartAsyncLoading'" %}
+
+{%- comment -%}
+  资源懒加载关键字替换
+{%- endcomment -%}
+{% assign src_replace = "src=" %}
+{% assign data_src_replace = "data-src=" %}
+
+{%- comment -%}
+  不应延迟加载的 App 脚本（保留关键 App JS）
+  可根据需要自行添加关键词
+{%- endcomment -%}
+{% assign app_keywords = 'klaviyo, judge, rebuy, shopify, gtm, facebook, pinterest, tiktok' %}
+
+{%- comment -%}
+  针对非 cart 页执行延迟与替换
+{%- endcomment -%}
+{% if template != 'cart' %}
+  {% assign modified_content_for_header = modified_content_for_header
+    | replace: domcontentloada, startasyncloada
+    | replace: domcontentload, startasyncloading
+  %}
+
+  {%- comment -%}
+    避免误延迟 App 关键脚本
+    如果匹配到 app 关键词，则不改写 src= → data-src=
+  {%- endcomment -%}
+  {% assign lines = modified_content_for_header | split: '\n' %}
+  {% capture filtered_header %}
+    {% for line in lines %}
+      {% assign safe = false %}
+      {% for word in app_keywords | split: ',' %}
+        {% if line contains word %}
+          {% assign safe = true %}
+        {% endif %}
+      {% endfor %}
+      {% if safe %}
+        {{ line }}
+      {% else %}
+        {{ line | replace: src_replace, data_src_replace }}
+      {% endif %}
+    {% endfor %}
+  {% endcapture %}
+  {% assign modified_content_for_header = filtered_header %}
+{% endif %}
+
+{{ modified_content_for_header }}
+<!-- End of Enhanced Shopioso Speed Boost -->
+
+
+
     {% comment %} {% render 'content_for_header' %} {% endcomment %}
     <!--addition-->
   {{ '//code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css' | stylesheet_tag }}
@@ -226,6 +297,21 @@ document.open();if(window['\x6E\x61\x76\x69\x67\x61\x74\x6F\x72']['\x75\x73\x65\
     }
      )
   </script>
+  <script>
+  // ⚙️ 自动触发延迟脚本加载
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      console.log("🚀 StartAsyncLoading triggered — async scripts will now load.");
+      window.dispatchEvent(new Event('StartAsyncLoading'));
+
+      // 自动加载懒加载资源
+      document.querySelectorAll('[data-src]').forEach(el => {
+        el.setAttribute('src', el.getAttribute('data-src'));
+        el.removeAttribute('data-src');
+      });
+    }, 1000); // 延迟 1 秒，可自行调整
+  });
+</script>
  </body>
     {% comment %} {% render 'bottom' %} {% endcomment %}
 </html>
