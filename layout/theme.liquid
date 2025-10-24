@@ -86,7 +86,67 @@
   <!--[if (gt IE 9)|!(IE)]><!--><script src="{{ 'theme.js' | asset_url }}" defer="defer"></script><!--<![endif]-->
   <!--[if lte IE 9]><script src="{{ 'theme.js' | asset_url }}"></script><![endif]-->
 
- {{ content_for_header }}
+ {% comment %} {{ content_for_header }} {% endcomment %}
+  {% comment %}
+  ⚡ Shopioso Speed Boost
+  通过延迟非关键脚本与资源加载，加速首屏渲染。
+  原理：替换 DOMContentLoaded → StartAsyncLoading，自定义延迟执行时机。
+{% endcomment %}
+
+<!-- Start of Shopioso Speed Boost -->
+{% capture modified_content_for_header %}
+  {{ content_for_header }}
+{% endcapture %}
+
+{%- comment -%}
+  定义事件字符串，用于替换 DOMContentLoaded 为 StartAsyncLoading
+{%- endcomment -%}
+{% assign domcontentloada = "document.addEventListener('DOMContentLoaded'" %}
+{% assign startasyncloada = "document.addEventListener('StartAsyncLoading'" %}
+{% assign domcontentload = "e.addEventListener('DOMContentLoaded'" %}
+{% assign startasyncloading = "e.addEventListener('StartAsyncLoading'" %}
+
+{%- comment -%}
+  定义替换关键字，防止脚本被提前执行
+{%- endcomment -%}
+{% assign rapp = ", 'asyncLoad'" %}
+{% assign napp = ", function(){}" %}
+{% assign rappload = "if(window.attachEvent)" %}
+{% assign nappload = "document.addEventListener('StartAsyncLoading',function(event){asyncLoad()})" %}
+
+{%- comment -%}
+  处理 document.write 阻塞问题，将其封装成安全函数
+{%- endcomment -%}
+{% assign rstorefrontload = "var customDocumentWrite = function(content)" %}
+{% assign nstorefrontload = "document.addEventListener('StartKernelLoading', function(){});" %}
+
+{%- comment -%}
+  替换事件附加方式，避免脚本在 head 中立即执行
+{%- endcomment -%}
+{% assign rstorefront = "document.getElementsByTagName('head')[0].appendChild(eventsListenerScript);" %}
+{% assign nstorefront = "document.getElementsByTagName('head')[0].appendChild(eventsListenerScript);" %}
+
+{%- comment -%}
+  针对购物车模板和其他页面使用不同策略
+{%- endcomment -%}
+{% if template == 'cart' %}
+  {% assign modified_content_for_header = modified_content_for_header
+    | replace: 'src=', 'data-src='
+    | replace: domcontentloada, startasyncloada
+    | replace: domcontentload, startasyncloading %}
+{% else %}
+  {% assign modified_content_for_header = modified_content_for_header
+    | replace: 'src=', 'data-src='
+    | replace: domcontentloada, startasyncloada
+    | replace: domcontentload, startasyncloading
+    | replace: rappload, nappload
+    | replace: rstorefrontload, nstorefrontload
+    | replace: rstorefront, nstorefront %}
+{% endif %}
+
+{{ modified_content_for_header }}
+<!-- End of Shopioso Speed Boost -->
+
     {% comment %} {% render 'content_for_header' %} {% endcomment %}
     <!--addition-->
   {{ '//code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css' | stylesheet_tag }}
