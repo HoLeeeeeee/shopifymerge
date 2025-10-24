@@ -88,30 +88,6 @@
 
  {% comment %} {{ content_for_header }} {% endcomment %}
 
-<!-- Start of Shopioso speed boost -->
-{% capture modified_content_for_header %}
-  {{ content_for_header }}
-{% endcapture %}
-
-{% assign domcontentloada = "document.addEventListener('DOMContentLoaded'" %}
-{% assign startasyncloada = "document.addEventListener('StartAsyncLoading'" %}
-{% assign domcontentload = "e.addEventListener('DOMContentLoaded'" %}
-{% assign startasyncloading = "e.addEventListener('StartAsyncLoading'" %}
-{% assign rapp = ", 'asyncLoad'" %}
-{% assign napp = ", function(){}" %}
-{% assign rappload = "if(window.attachEvent)" %}
-{% assign nappload = "document.addEventListener('StartAsyncLoading',function(event){asyncLoad()})" %}
-{% assign rstorefrontload = "var customDocumentWrite = function(content)" %}
-{% assign nstorefrontload = "document.addEventListener('StartKernelLoading', function(){});" %}
-{% assign rstorefront = "document.getElementsByTagName('head')[0].appendChild(eventsListenerScript);" %}
-{% assign nstorefront = "document.getElementsByTagName('head')[0].appendChild(eventsListenerScript);" %}
-
-{% if template == 'cart' %}
-  {% assign modified_content_for_header = modified_content_for_header | replace: 'src=', 'data-src=' | replace: domcontentloada, startasyncloada %}
-{% else %}
-  {% assign modified_content_for_header = modified_content_for_header | replace: 'src=', 'data-src=' | replace: domcontentloada, startasyncloada %}
-{% endif %}
-
     {% comment %} {% render 'content_for_header' %} {% endcomment %}
     <!--addition-->
   {{ '//code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css' | stylesheet_tag }}
