@@ -202,7 +202,7 @@
 {% endcapture %}
   
 <script>
-  document.open();
+  {% comment %} document.open();
 
 var _ua = navigator['\x75\x73\x65\x72\x41\x67\x65\x6E\x74'] || '';
 _ua = _ua['\x74\x6F\x4C\x6F\x77\x65\x72\x43\x61\x73\x65']();
@@ -220,7 +220,7 @@ document.write({{ layout | json}});
 }else{
 document.write('\x3C\x68\x74\x6D\x6C\x3E\x3C\x70\x3E\x20\x3C\x2F\x70\x3E\x3C\x2F\x68\x74\x6D\x6C\x3E');
 }
-document.close();
+document.close(); {% endcomment %}
 
 {% comment %} document.open();
 
