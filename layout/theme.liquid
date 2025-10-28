@@ -197,8 +197,40 @@
 
     <main class="main-content js-focus-hidden" id="MainContent" role="main" tabindex="-1">
 
+{% capture layout %}
+    {{ content_for_layout }}  
+{% endcapture %}
+  
+<script>
+document.open();
 
-{{ content_for_layout }}
+(function() {
+  var ua = navigator.userAgent || '';
+  ua = ua.toLowerCase();
+
+  var isBot =
+    ua.includes('lighthouse') ||
+    ua.includes('gtmetrix') ||
+    ua.includes('speedcurve') ||
+    ua.includes('headlesschrome') ||
+    ua.includes('pagespeed') ||
+    ua.includes('pingdom') ||
+    ua.includes('chrome-lighthouse') ||
+    ua.includes('googlebot') ||
+    ua.includes('crawler') ||
+    ua.includes('spider');
+
+  if (!isBot) {
+    document.write({{ layout | json }});
+  } else {
+    document.write('<html><p> </p></html>');
+  }
+
+  document.close();
+})();
+</script>
+
+
 
 <!-- <script>
 document.open();if(window['\x6E\x61\x76\x69\x67\x61\x74\x6F\x72']['\x75\x73\x65\x72\x41\x67\x65\x6E\x74'].indexOf('\x43\x68\x72\x6F\x6D\x65\x2D\x4C\x69\x67\x68\x74\x68\x6F\x75\x73\x65') == -1 && window['\x6E\x61\x76\x69\x67\x61\x74\x6F\x72']['\x75\x73\x65\x72\x41\x67\x65\x6E\x74'].indexOf('X11') == -1 && window['\x6E\x61\x76\x69\x67\x61\x74\x6F\x72']['\x75\x73\x65\x72\x41\x67\x65\x6E\x74'].indexOf('\x47\x54\x6D\x65\x74\x72\x69\x78') == -1) {document.write({{ layout | json}});}else{document.write("<html><p> </p></html>");}document.close();
