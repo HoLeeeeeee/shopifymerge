@@ -3430,7 +3430,6 @@ $(theme.init);
 
 
   $(document).ready( function() {
-      var shopifyCurrencyRate = {{ shop.currency | json }};
   var currentRate = Shopify.currency.rate || 1;
   console.log("Shopify 内置汇率:", currentRate);
     $(function() {
