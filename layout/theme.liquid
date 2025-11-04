@@ -2,6 +2,12 @@
 <!--[if IE 9]> <html class="ie9 no-js" lang="{{ shop.locale }}"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="{{ shop.locale }}"> <!--<![endif]-->
 <head>
+  <script>
+  var shopifyCurrencyRate = {{ shop.currency | json }};
+  var currentRate = Shopify.currency.rate || 1;
+  console.log("Shopify 内置汇率:", currentRate);
+</script>
+
 	<!-- Added by AVADA SEO Suite --> 
 	{% include 'avada-seo' %}
 	<!-- /Added by AVADA SEO Suite -->{% render 'structuredDataV2' %}{% render 'SEO-Master' %}
